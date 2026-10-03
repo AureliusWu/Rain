@@ -12,6 +12,7 @@ errors.txt
 lint.txt
 dist/
 reports/
+tests/screenshots/
 .runtime/
 .venv/
 *.zip

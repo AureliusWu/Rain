@@ -245,13 +245,14 @@ screen quick_menu():
             yalign 1.0
 
             textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
+            textbutton _("History") id "history_open" action ShowMenu('history')
             textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Save") action ShowMenu('save')
+            textbutton _("Save") id "save_open" action ShowMenu('save')
+            textbutton _("Load") id "load_open" action ShowMenu('load')
             textbutton _("Q.Save") action QuickSave()
             textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
+            textbutton _("Prefs") id "preferences_open" action ShowMenu('preferences')
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -292,15 +293,15 @@ screen navigation():
 
         if main_menu:
 
-            textbutton _("Start") action Start()
+            textbutton _("Start") id "menu_start" action Start()
 
         else:
 
-            textbutton _("History") action ShowMenu("history")
+            textbutton _("History") id "history_open" action ShowMenu("history")
 
-            textbutton _("Save") action ShowMenu("save")
+            textbutton _("Save") id "save_open" action ShowMenu("save")
 
-        textbutton _("Load") action ShowMenu("load")
+        textbutton _("Load") id "load_open" action ShowMenu("load")
 
         textbutton _("Preferences") action ShowMenu("preferences")
 
@@ -463,6 +464,7 @@ screen game_menu(title, scroll=None):
     use navigation
 
     textbutton _("Return"):
+        id "game_return"
         style "return_button"
 
         action Return()
@@ -859,6 +861,7 @@ screen preferences():
                         null height gui.pref_spacing
 
                         textbutton _("Mute All"):
+                            id "mute_all"
                             action Preference("all mute", "toggle")
                             style "mute_all_button"
 
@@ -1222,7 +1225,7 @@ screen confirm(message, yes_action, no_action):
                 xalign 0.5
                 spacing 100
 
-                textbutton _("Yes") action yes_action
+                textbutton _("Yes") id "confirm_yes" action yes_action
                 textbutton _("No") action no_action
 
     ## Right-click and escape answer "no".

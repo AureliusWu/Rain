@@ -17,7 +17,7 @@ python -m tools.compile_tests --check
 
 ```bash
 SDK/renpy.sh . lint --error-code --all-problems
-SDK/renpy.sh . test global --report-detailed --overwrite_screenshots
+SDK/renpy.sh . test global --report-detailed --overwrite-screenshots
 SDK/renpy.sh launcher distribute . --package windows --destination dist
 ```
 

@@ -3,13 +3,14 @@ testsuite global:
     setup:
         $ _test.transition_timeout = 0.05
         $ _test.timeout = 15.0
+        $ _test.screenshot_directory = "reports/screenshots"
         $ preferences.text_cps = 0
         pause until screen "main_menu"
         screenshot "main-menu"
     before testcase:
         if not screen "main_menu":
             run MainMenu(confirm=False)
-        click "开始游戏"
+        click id "menu_start"
     teardown:
         exit
 
@@ -41,40 +42,40 @@ testcase save_load_and_restart:
     advance until screen "choice"
     screenshot "first-choice"
     $ renpy.unlink_save("1-1")
-    click "保存"
+    click id "save_open"
     pause until screen "save"
     click id "slot_1"
     assert eval renpy.can_load("1-1")
-    click "返回"
+    click id "game_return"
     pause until screen "choice"
     click "和她共撑一把伞"
     advance
     $ trust = -99
-    click "读取"
+    click id "load_open"
     pause until screen "load"
     click id "slot_1"
     if screen "confirm":
-        click "是"
+        click id "confirm_yes"
     pause until screen "choice"
     assert eval (current_scene == 'bootstrap_choice')
     assert eval (affection == 0 and trust == 0 and not truth_known)
     run MainMenu(confirm=False)
-    click "开始游戏"
+    click id "menu_start"
     advance until screen "choice"
     assert eval (affection == 0 and trust == 0 and not truth_known)
 
 testcase history_preferences_and_audio:
     advance
     advance
-    click "历史"
+    click id "history_open"
     assert screen "history"
     screenshot "history"
-    click "返回"
-    click "设置"
+    click id "game_return"
+    click id "preferences_open"
     assert screen "preferences"
     screenshot "settings"
-    click "静音"
-    click "静音"
-    click "返回"
+    click id "mute_all"
+    click id "mute_all"
+    click id "game_return"
     assert eval renpy.music.get_playing(channel="music") is not None
     assert eval renpy.music.get_playing(channel="ambient") is not None

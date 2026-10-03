@@ -20,6 +20,7 @@ jobs:
     runs-on: windows-latest
     timeout-minutes: 20
     env:
+      PYTHONUTF8: "1"
       SDL_AUDIODRIVER: dummy
       RENPY_RENDERER: angle2
     steps:
@@ -27,7 +28,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-          cache: pip
       - name: Install authoring dependencies
         run: python -m pip install -r requirements-dev.txt
       - name: Validate graph, prose, assets, and generated scripts
@@ -44,7 +44,7 @@ jobs:
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Run actual Windows interaction tests
         run: |
-          & .\.runtime\renpy-8.5.3-sdk\lib\py3-windows-x86_64\python.exe .\.runtime\renpy-8.5.3-sdk\renpy.py . test global --report-detailed --overwrite_screenshots --savedir "$env:RUNNER_TEMP\renpy-source-saves"
+          & .\.runtime\renpy-8.5.3-sdk\lib\py3-windows-x86_64\python.exe .\.runtime\renpy-8.5.3-sdk\renpy.py . test global --report-detailed --overwrite-screenshots --savedir "$env:RUNNER_TEMP\renpy-source-saves"
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Build standalone Windows ZIP
         run: |
@@ -54,14 +54,7 @@ jobs:
         run: |
           $zip = Get-ChildItem dist -Filter '*-win.zip' | Select-Object -First 1
           if (-not $zip) { throw 'Windows ZIP missing' }
-          Expand-Archive $zip.FullName "$env:RUNNER_TEMP\package"
-          $exe = Get-ChildItem "$env:RUNNER_TEMP\package" -Recurse -Filter 'BeforeTheRainStops.exe' | Select-Object -First 1
-          if (-not $exe) { throw 'Standalone EXE missing' }
-          $gameDirectory = Join-Path $exe.Directory.FullName 'game'
-          if (Test-Path (Join-Path $gameDirectory 'testcases.rpy')) { throw 'Tests leaked into release' }
-          if (Test-Path (Join-Path $gameDirectory 'data')) { throw 'Authoring data leaked into release' }
-          Copy-Item game/testcases.rpy (Join-Path $gameDirectory 'testcases.rpy')
-          & $exe.FullName test global --report-detailed --overwrite_screenshots --savedir "$env:RUNNER_TEMP\renpy-package-saves"
+          python -m tools.build.verify_package --zip $zip.FullName
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           Get-ChildItem dist -Filter '*.zip' | Get-FileHash -Algorithm SHA256 | ForEach-Object { "$($_.Hash.ToLower())  $(Split-Path $_.Path -Leaf)" } | Set-Content dist/SHA256SUMS.txt
       - name: Upload test evidence
@@ -72,7 +65,7 @@ jobs:
           if-no-files-found: warn
           path: |
             reports/
-            game/tests/screenshots/
+            reports/screenshots/
             log.txt
             errors.txt
             traceback.txt
