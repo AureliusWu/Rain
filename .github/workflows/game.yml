@@ -48,7 +48,7 @@ jobs:
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Build standalone Windows ZIP
         run: |
-          & .\.runtime\renpy-8.5.3-sdk\lib\py3-windows-x86_64\python.exe .\.runtime\renpy-8.5.3-sdk\renpy.py launcher distribute . --package windows --destination dist
+          python -m tools.build.package --sdk .\.runtime\renpy-8.5.3-sdk
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Verify and boot EXE extracted from distribution
         run: |
