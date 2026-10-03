@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "version": "0.1.0",
+  "title": "雨停之前",
+  "status": "engineering_placeholder",
+  "entry": "bootstrap_arrival",
+  "initial_state": {
+    "affection": 0,
+    "trust": 0,
+    "truth_known": false
+  },
+  "expected_routes": 2,
+  "nodes": [
+    {
+      "id": "bootstrap_arrival",
+      "location": "old_station",
+      "time": "21:40",
+      "lines": [
+        {
+          "id": "bootstrap_arrival_l001",
+          "speaker": "n",
+          "text": "雨从旧车站的檐边落下来。我看了一眼停运告示，把手机收进口袋。"
+        },
+        {
+          "id": "bootstrap_arrival_l002",
+          "speaker": "n",
+          "text": "站台另一头有人抬起了伞。"
+        },
+        {
+          "id": "bootstrap_arrival_l003",
+          "speaker": "h",
+          "text": "你也是来等最后一班车的吗？"
+        },
+        {
+          "id": "bootstrap_arrival_l004",
+          "speaker": "p",
+          "text": "看起来，我们都来晚了。"
+        }
+      ],
+      "background": "station",
+      "sprite": "normal",
+      "bgm": "rain_theme",
+      "ambient": "rain_ambience",
+      "next": "bootstrap_choice"
+    },
+    {
+      "id": "bootstrap_choice",
+      "location": "old_station",
+      "time": "21:40",
+      "lines": [
+        {
+          "id": "bootstrap_choice_l001",
+          "speaker": "h",
+          "text": "出口还有一段露天的路。要一起走吗？"
+        }
+      ],
+      "choices": [
+        {
+          "id": "share_umbrella",
+          "text": "和她共撑一把伞",
+          "effects": {
+            "affection": 1,
+            "trust": 1,
+            "truth_known": true
+          },
+          "next": "bootstrap_true"
+        },
+        {
+          "id": "wait_alone",
+          "text": "留下来等雨停",
+          "effects": {
+            "trust": -1
+          },
+          "next": "bootstrap_normal"
+        }
+      ]
+    },
+    {
+      "id": "bootstrap_true",
+      "location": "old_station",
+      "time": "21:40",
+      "lines": [
+        {
+          "id": "bootstrap_true_l001",
+          "speaker": "p",
+          "text": "谢谢。我来拿伞吧。"
+        },
+        {
+          "id": "bootstrap_true_l002",
+          "speaker": "h",
+          "text": "好。路上，正好有件事想问你。"
+        },
+        {
+          "id": "bootstrap_true_l003",
+          "speaker": "n",
+          "text": "我们并肩走下站台。湿漉漉的路灯，在两个人的脚边亮了起来。"
+        }
+      ],
+      "ending": "true",
+      "ending_title": "工程样片 · 一起走"
+    },
+    {
+      "id": "bootstrap_normal",
+      "location": "old_station",
+      "time": "21:40",
+      "lines": [
+        {
+          "id": "bootstrap_normal_l001",
+          "speaker": "p",
+          "text": "我再等等。你先走吧。"
+        },
+        {
+          "id": "bootstrap_normal_l002",
+          "speaker": "h",
+          "text": "嗯。希望这场雨不会太久。"
+        },
+        {
+          "id": "bootstrap_normal_l003",
+          "speaker": "n",
+          "text": "她的脚步声消失在雨里。我打开了手机，重新寻找回家的路。"
+        }
+      ],
+      "ending": "normal",
+      "ending_title": "工程样片 · 等雨停"
+    }
+  ]
+}
