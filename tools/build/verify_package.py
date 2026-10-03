@@ -24,7 +24,7 @@ def main():
                 raise SystemExit(f"Authoring data leaked into package: {forbidden}")
         # Inject tests only into the temporary extraction, never the release ZIP.
         shutil.copy2("game/testcases.rpy", game / "testcases.rpy")
-        result = subprocess.run([str(exe), "test", "global", "--report-detailed", "--overwrite-screenshots", "--savedir", str(destination / "saves")], cwd=exe.parent, capture_output=True, encoding="utf-8", errors="replace", timeout=180)
+        result = subprocess.run([str(exe), str(exe.parent), "test", "global", "--report-detailed", "--overwrite-screenshots", "--savedir", str(destination / "saves")], cwd=exe.parent, capture_output=True, encoding="utf-8", errors="replace", timeout=180)
         evidence = Path("reports/package")
         evidence.mkdir(parents=True, exist_ok=True)
         (evidence / "stdout.txt").write_text(result.stdout, encoding="utf-8")
