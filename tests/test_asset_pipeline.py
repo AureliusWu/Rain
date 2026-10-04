@@ -17,7 +17,7 @@ class PipelineTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
-        self.root = Path(self.temp.name)
+        self.root = Path(self.temp.name).resolve()
         for directory in ['assets_source/character', 'assets_source/ui', 'prompts/character', 'game/data']:
             (self.root / directory).mkdir(parents=True)
         self.source = 'assets_source/character/heroine_v1.png'
@@ -124,7 +124,7 @@ class PipelineTests(unittest.TestCase):
         replace = os.replace
 
         def fail_manifest(source, destination):
-            if Path(destination) == self.manifest:
+            if Path(destination).resolve() == self.manifest.resolve():
                 raise OSError('simulated manifest write failure')
             return replace(source, destination)
 
@@ -138,7 +138,7 @@ class PipelineTests(unittest.TestCase):
         replace = os.replace
 
         def fail_manifest(source, destination):
-            if Path(destination) == self.manifest:
+            if Path(destination).resolve() == self.manifest.resolve():
                 raise OSError('simulated failure')
             return replace(source, destination)
 
