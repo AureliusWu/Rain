@@ -17,20 +17,38 @@ testsuite global:
         exit
 
 testcase route_01:
+    pause until "序章 ： 雨夜"
+    assert "序章 ： 雨夜"
+    pause 0.2
+    screenshot "chapter-prologue"
     advance until screen "choice"
     click "把干燥的位置让给她，问候近况"
-    advance until eval current_scene == 's03_letter'
-    advance
+    advance until "还有一样东西，应该也是你的。"
+    pause 0.2
+    assert eval not renpy.showing("heroine")
     screenshot "cg-letter"
     advance until screen "choice"
     click "告诉她：这封信是我写的"
+    advance until "你这次回来，原本只安排了取东西？"
+    pause 0.2
+    screenshot "branch-s04_open"
+    advance until "第四章 ： 今天"
+    assert "第四章 ： 今天"
+    pause 0.2
+    screenshot "chapter-today"
+    advance until screen "choice"
+    screenshot "revisit-choice"
+    advance until screen "choice"
+    click "把信里的意思和今天的打算说清楚"
     advance until screen "choice"
     click "和她一起走，继续聊一会儿"
     advance until screen "ending_card"
     assert eval (last_ending == 'true')
-    assert eval (affection == 2)
-    assert eval (trust == 2)
+    assert eval (affection == 3)
+    assert eval (trust == 4)
     assert eval (truth_known == True)
+    assert eval (visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter', 's03_honest', 's03_archive', 's04_gate', 's04_open', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_repair', 's05_departure', 's05_shared_path', 's06_resolution', 's07_true'])
+    assert eval (current_chapter == 'ch05')
     screenshot "route-01-true"
     click id "ending_return"
     pause until screen "main_menu"
@@ -41,12 +59,16 @@ testcase route_02:
     advance until screen "choice"
     click "告诉她：这封信是我写的"
     advance until screen "choice"
+    click "把信里的意思和今天的打算说清楚"
+    advance until screen "choice"
     click "今晚先各自回家，改天再联系"
     advance until screen "ending_card"
     assert eval (last_ending == 'normal')
-    assert eval (affection == 1)
-    assert eval (trust == 1)
+    assert eval (affection == 2)
+    assert eval (trust == 3)
     assert eval (truth_known == True)
+    assert eval (visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter', 's03_honest', 's03_archive', 's04_gate', 's04_open', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_repair', 's05_departure', 's05_separate_path', 's08_normal'])
+    assert eval (current_chapter == 'ch05')
     screenshot "route-02-normal"
     click id "ending_return"
     pause until screen "main_menu"
@@ -55,15 +77,19 @@ testcase route_03:
     advance until screen "choice"
     click "把干燥的位置让给她，问候近况"
     advance until screen "choice"
-    click "先收好信，暂时不解释"
+    click "告诉她：这封信是我写的"
+    advance until screen "choice"
+    click "先约定下一次联系，旧事慢慢谈"
     advance until screen "choice"
     click "和她一起走，继续聊一会儿"
     advance until screen "ending_card"
-    assert eval (last_ending == 'normal')
+    assert eval (last_ending == 'true')
     assert eval (affection == 2)
-    assert eval (trust == 0)
-    assert eval (truth_known == False)
-    screenshot "route-03-normal"
+    assert eval (trust == 3)
+    assert eval (truth_known == True)
+    assert eval (visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter', 's03_honest', 's03_archive', 's04_gate', 's04_open', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_concrete', 's05_departure', 's05_shared_path', 's06_resolution', 's07_true'])
+    assert eval (current_chapter == 'ch05')
+    screenshot "route-03-true"
     click id "ending_return"
     pause until screen "main_menu"
 
@@ -71,79 +97,262 @@ testcase route_04:
     advance until screen "choice"
     click "把干燥的位置让给她，问候近况"
     advance until screen "choice"
-    click "先收好信，暂时不解释"
+    click "告诉她：这封信是我写的"
+    advance until screen "choice"
+    click "先约定下一次联系，旧事慢慢谈"
     advance until screen "choice"
     click "今晚先各自回家，改天再联系"
     advance until screen "ending_card"
     assert eval (last_ending == 'normal')
     assert eval (affection == 1)
-    assert eval (trust == -1)
-    assert eval (truth_known == False)
+    assert eval (trust == 2)
+    assert eval (truth_known == True)
+    assert eval (visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter', 's03_honest', 's03_archive', 's04_gate', 's04_open', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_concrete', 's05_departure', 's05_separate_path', 's08_normal'])
+    assert eval (current_chapter == 'ch05')
     screenshot "route-04-normal"
     click id "ending_return"
     pause until screen "main_menu"
 
 testcase route_05:
     advance until screen "choice"
-    click "先确认取物时间，把事情办完"
+    click "把干燥的位置让给她，问候近况"
     advance until screen "choice"
-    click "告诉她：这封信是我写的"
+    click "先收好信，暂时不解释"
+    advance until "椅面已经收拾干净，许澄却没有继续往我这边挪。她看了看出口，把纸袋提起来又放下。"
+    pause 0.2
+    screenshot "branch-s04_reserved"
+    advance until screen "choice"
+    click "把信里的意思和今天的打算说清楚"
     advance until screen "choice"
     click "和她一起走，继续聊一会儿"
     advance until screen "ending_card"
-    assert eval (last_ending == 'normal')
-    assert eval (affection == 1)
-    assert eval (trust == 0)
+    assert eval (last_ending == 'true')
+    assert eval (affection == 3)
+    assert eval (trust == 2)
     assert eval (truth_known == True)
-    screenshot "route-05-normal"
+    assert eval (visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter', 's03_deferred', 's03_archive', 's04_gate', 's04_reserved', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_repair', 's05_departure', 's05_shared_path', 's06_resolution', 's07_true'])
+    assert eval (current_chapter == 'ch05')
+    screenshot "route-05-true"
     click id "ending_return"
     pause until screen "main_menu"
 
 testcase route_06:
     advance until screen "choice"
-    click "先确认取物时间，把事情办完"
+    click "把干燥的位置让给她，问候近况"
     advance until screen "choice"
-    click "告诉她：这封信是我写的"
+    click "先收好信，暂时不解释"
+    advance until screen "choice"
+    click "把信里的意思和今天的打算说清楚"
     advance until screen "choice"
     click "今晚先各自回家，改天再联系"
     advance until screen "ending_card"
     assert eval (last_ending == 'normal')
-    assert eval (affection == 0)
-    assert eval (trust == -1)
+    assert eval (affection == 2)
+    assert eval (trust == 1)
     assert eval (truth_known == True)
+    assert eval (visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter', 's03_deferred', 's03_archive', 's04_gate', 's04_reserved', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_repair', 's05_departure', 's05_separate_path', 's08_normal'])
+    assert eval (current_chapter == 'ch05')
     screenshot "route-06-normal"
     click id "ending_return"
     pause until screen "main_menu"
 
 testcase route_07:
     advance until screen "choice"
-    click "先确认取物时间，把事情办完"
+    click "把干燥的位置让给她，问候近况"
     advance until screen "choice"
     click "先收好信，暂时不解释"
+    advance until screen "choice"
+    click "先约定下一次联系，旧事慢慢谈"
     advance until screen "choice"
     click "和她一起走，继续聊一会儿"
     advance until screen "ending_card"
     assert eval (last_ending == 'normal')
-    assert eval (affection == 1)
-    assert eval (trust == -2)
+    assert eval (affection == 2)
+    assert eval (trust == 1)
     assert eval (truth_known == False)
+    assert eval (visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter', 's03_deferred', 's03_archive', 's04_gate', 's04_reserved', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_concrete', 's05_departure', 's05_shared_path', 's06_resolution', 's08_normal'])
+    assert eval (current_chapter == 'ch05')
     screenshot "route-07-normal"
     click id "ending_return"
     pause until screen "main_menu"
 
 testcase route_08:
     advance until screen "choice"
-    click "先确认取物时间，把事情办完"
+    click "把干燥的位置让给她，问候近况"
     advance until screen "choice"
     click "先收好信，暂时不解释"
+    advance until screen "choice"
+    click "先约定下一次联系，旧事慢慢谈"
+    advance until screen "choice"
+    click "今晚先各自回家，改天再联系"
+    advance until screen "ending_card"
+    assert eval (last_ending == 'normal')
+    assert eval (affection == 1)
+    assert eval (trust == 0)
+    assert eval (truth_known == False)
+    assert eval (visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter', 's03_deferred', 's03_archive', 's04_gate', 's04_reserved', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_concrete', 's05_departure', 's05_separate_path', 's08_normal'])
+    assert eval (current_chapter == 'ch05')
+    screenshot "route-08-normal"
+    click id "ending_return"
+    pause until screen "main_menu"
+
+testcase route_09:
+    advance until screen "choice"
+    click "先确认取物时间，把事情办完"
+    advance until screen "choice"
+    click "告诉她：这封信是我写的"
+    advance until screen "choice"
+    click "把信里的意思和今天的打算说清楚"
+    advance until screen "choice"
+    click "和她一起走，继续聊一会儿"
+    advance until screen "ending_card"
+    assert eval (last_ending == 'true')
+    assert eval (affection == 2)
+    assert eval (trust == 2)
+    assert eval (truth_known == True)
+    assert eval (visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_business', 's02_boxes', 's03_letter', 's03_honest', 's03_archive', 's04_gate', 's04_reserved', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_repair', 's05_departure', 's05_shared_path', 's06_resolution', 's07_true'])
+    assert eval (current_chapter == 'ch05')
+    screenshot "route-09-true"
+    click id "ending_return"
+    pause until screen "main_menu"
+
+testcase route_10:
+    advance until screen "choice"
+    click "先确认取物时间，把事情办完"
+    advance until screen "choice"
+    click "告诉她：这封信是我写的"
+    advance until screen "choice"
+    click "把信里的意思和今天的打算说清楚"
+    advance until screen "choice"
+    click "今晚先各自回家，改天再联系"
+    advance until screen "ending_card"
+    assert eval (last_ending == 'normal')
+    assert eval (affection == 1)
+    assert eval (trust == 1)
+    assert eval (truth_known == True)
+    assert eval (visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_business', 's02_boxes', 's03_letter', 's03_honest', 's03_archive', 's04_gate', 's04_reserved', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_repair', 's05_departure', 's05_separate_path', 's08_normal'])
+    assert eval (current_chapter == 'ch05')
+    screenshot "route-10-normal"
+    click id "ending_return"
+    pause until screen "main_menu"
+
+testcase route_11:
+    advance until screen "choice"
+    click "先确认取物时间，把事情办完"
+    advance until screen "choice"
+    click "告诉她：这封信是我写的"
+    advance until screen "choice"
+    click "先约定下一次联系，旧事慢慢谈"
+    advance until screen "choice"
+    click "和她一起走，继续聊一会儿"
+    advance until screen "ending_card"
+    assert eval (last_ending == 'normal')
+    assert eval (affection == 1)
+    assert eval (trust == 1)
+    assert eval (truth_known == True)
+    assert eval (visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_business', 's02_boxes', 's03_letter', 's03_honest', 's03_archive', 's04_gate', 's04_reserved', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_concrete', 's05_departure', 's05_shared_path', 's06_resolution', 's08_normal'])
+    assert eval (current_chapter == 'ch05')
+    screenshot "route-11-normal"
+    click id "ending_return"
+    pause until screen "main_menu"
+
+testcase route_12:
+    advance until screen "choice"
+    click "先确认取物时间，把事情办完"
+    advance until screen "choice"
+    click "告诉她：这封信是我写的"
+    advance until screen "choice"
+    click "先约定下一次联系，旧事慢慢谈"
     advance until screen "choice"
     click "今晚先各自回家，改天再联系"
     advance until screen "ending_card"
     assert eval (last_ending == 'normal')
     assert eval (affection == 0)
-    assert eval (trust == -3)
+    assert eval (trust == 0)
+    assert eval (truth_known == True)
+    assert eval (visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_business', 's02_boxes', 's03_letter', 's03_honest', 's03_archive', 's04_gate', 's04_reserved', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_concrete', 's05_departure', 's05_separate_path', 's08_normal'])
+    assert eval (current_chapter == 'ch05')
+    screenshot "route-12-normal"
+    click id "ending_return"
+    pause until screen "main_menu"
+
+testcase route_13:
+    advance until screen "choice"
+    click "先确认取物时间，把事情办完"
+    advance until screen "choice"
+    click "先收好信，暂时不解释"
+    advance until screen "choice"
+    click "把信里的意思和今天的打算说清楚"
+    advance until screen "choice"
+    click "和她一起走，继续聊一会儿"
+    advance until screen "ending_card"
+    assert eval (last_ending == 'normal')
+    assert eval (affection == 2)
+    assert eval (trust == 0)
+    assert eval (truth_known == True)
+    assert eval (visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_business', 's02_boxes', 's03_letter', 's03_deferred', 's03_archive', 's04_gate', 's04_reserved', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_repair', 's05_departure', 's05_shared_path', 's06_resolution', 's08_normal'])
+    assert eval (current_chapter == 'ch05')
+    screenshot "route-13-normal"
+    click id "ending_return"
+    pause until screen "main_menu"
+
+testcase route_14:
+    advance until screen "choice"
+    click "先确认取物时间，把事情办完"
+    advance until screen "choice"
+    click "先收好信，暂时不解释"
+    advance until screen "choice"
+    click "把信里的意思和今天的打算说清楚"
+    advance until screen "choice"
+    click "今晚先各自回家，改天再联系"
+    advance until screen "ending_card"
+    assert eval (last_ending == 'normal')
+    assert eval (affection == 1)
+    assert eval (trust == -1)
+    assert eval (truth_known == True)
+    assert eval (visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_business', 's02_boxes', 's03_letter', 's03_deferred', 's03_archive', 's04_gate', 's04_reserved', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_repair', 's05_departure', 's05_separate_path', 's08_normal'])
+    assert eval (current_chapter == 'ch05')
+    screenshot "route-14-normal"
+    click id "ending_return"
+    pause until screen "main_menu"
+
+testcase route_15:
+    advance until screen "choice"
+    click "先确认取物时间，把事情办完"
+    advance until screen "choice"
+    click "先收好信，暂时不解释"
+    advance until screen "choice"
+    click "先约定下一次联系，旧事慢慢谈"
+    advance until screen "choice"
+    click "和她一起走，继续聊一会儿"
+    advance until screen "ending_card"
+    assert eval (last_ending == 'normal')
+    assert eval (affection == 1)
+    assert eval (trust == -1)
     assert eval (truth_known == False)
-    screenshot "route-08-normal"
+    assert eval (visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_business', 's02_boxes', 's03_letter', 's03_deferred', 's03_archive', 's04_gate', 's04_reserved', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_concrete', 's05_departure', 's05_shared_path', 's06_resolution', 's08_normal'])
+    assert eval (current_chapter == 'ch05')
+    screenshot "route-15-normal"
+    click id "ending_return"
+    pause until screen "main_menu"
+
+testcase route_16:
+    advance until screen "choice"
+    click "先确认取物时间，把事情办完"
+    advance until screen "choice"
+    click "先收好信，暂时不解释"
+    advance until screen "choice"
+    click "先约定下一次联系，旧事慢慢谈"
+    advance until screen "choice"
+    click "今晚先各自回家，改天再联系"
+    advance until screen "ending_card"
+    assert eval (last_ending == 'normal')
+    assert eval (affection == 0)
+    assert eval (trust == -2)
+    assert eval (truth_known == False)
+    assert eval (visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_business', 's02_boxes', 's03_letter', 's03_deferred', 's03_archive', 's04_gate', 's04_reserved', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_concrete', 's05_departure', 's05_separate_path', 's08_normal'])
+    assert eval (current_chapter == 'ch05')
+    screenshot "route-16-normal"
     click id "ending_return"
     pause until screen "main_menu"
 
@@ -170,15 +379,19 @@ testcase save_load_and_restart:
         click id "confirm_yes"
     pause until screen "choice"
     assert eval (current_scene == 's02_reunion')
+    assert eval (current_chapter == 'ch01')
+    assert eval (visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion'])
     assert eval (affection == 0 and trust == 0 and not truth_known)
     assert eval renpy.get_attributes("heroine") == ('normal',)
     run MainMenu(confirm=False)
     click id "menu_start"
     advance until screen "choice"
     assert eval (affection == 0 and trust == 0 and not truth_known)
+    assert eval (visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion'] and current_chapter == 'ch01')
 
 testcase history_preferences_and_audio:
     advance until eval renpy.music.get_playing(channel="voice") is not None
+    pause 0.2
     screenshot "first-dialogue"
     click id "history_open"
     assert screen "history"
@@ -228,14 +441,14 @@ testcase auto_and_skip:
     $ preferences.skip_unseen = False
 
 testcase character_expressions_in_story:
-    advance until eval renpy.get_attributes("heroine") == ('normal',)
-    pause 0.2
-    assert eval renpy.showing("heroine normal")
-    screenshot "expression-normal"
     advance until eval renpy.get_attributes("heroine") == ('smile',)
     pause 0.2
     assert eval renpy.showing("heroine smile")
     screenshot "expression-smile"
+    advance until eval renpy.get_attributes("heroine") == ('normal',)
+    pause 0.2
+    assert eval renpy.showing("heroine normal")
+    screenshot "expression-normal"
     advance until eval renpy.get_attributes("heroine") == ('embarrassed',)
     pause 0.2
     assert eval renpy.showing("heroine embarrassed")

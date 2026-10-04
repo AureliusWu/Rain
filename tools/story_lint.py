@@ -1,10 +1,23 @@
 """Mechanical prose checks. Character intent and timeline still require review."""
 from collections import Counter
-from tools.story_model import load_story, validate_structure, scene_lines
+import hashlib
+import re
+from tools.story_model import ROOT, load_story, validate_structure, scene_lines
 
 
 def lint(story):
     errors = validate_structure(story)
+    version = (ROOT / "VERSION").read_text().strip()
+    options = (ROOT / "game/options.rpy").read_text(encoding="utf-8")
+    declared = re.search(r'define config.version = "([^"]+)"', options)
+    if story.get("version") != version or not declared or declared.group(1) != version:
+        errors.append("Story / VERSION / config.version mismatch")
+    for node in story["nodes"]:
+        if not node.get("lines"):
+            continue
+        prompt = ROOT / node.get("draft_prompt", "missing")
+        if not prompt.is_file() or hashlib.sha256(prompt.read_bytes()).hexdigest() != node.get("draft_prompt_sha256"):
+            errors.append(f"{node['id']}: missing/stale Scene Prompt")
     texts = [line["text"] for n in story["nodes"] for line in scene_lines(n)]
     warnings = []
     for text, count in Counter(texts).items():

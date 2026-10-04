@@ -37,3 +37,9 @@ python -m tools.character_validator --report reports/characters.json
 ```
 
 修改已追踪文件后重新更新 Manifest 哈希、编译剧情并完整验证。几何指标可以发现位置和轮廓漂移，无法证明面部身份或剧情情绪正确。
+
+## v0.4 已实际使用
+
+章节目标 → 26 节点场景表 → 17 次独立 Scene Draft → 逐场审阅知识、物品与立绘姿态 → 保存逐场 Prompt、SHA-256 与候选审阅状态 → JSON 编译章节卡和原生路线 → 自动枚举 16 条状态路径 → 为每条生成实际选择交互与完整 visited_scenes 断言。
+
+校验器新增章节与 HH:MM 顺序、状态边界、全局选择 ID、无效效果、独立后果场景、空稿、条件 fallback、Prompt 哈希和版本一致性。曾发现 story.json 版本停在旧版本，现与 VERSION/config.version 联合校验。机械时间检查只核验声明，内容矛盾仍需编辑审阅。

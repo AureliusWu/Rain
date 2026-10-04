@@ -1,16 +1,72 @@
 {
   "schema_version": 1,
-  "version": "0.2.0",
+  "version": "0.4.0",
   "title": "雨停之前",
-  "status": "vertical_slice_candidate_user_review",
-  "entry": "s01_arrival",
+  "status": "chapter_route_candidate_user_review",
+  "entry": "p00_entry",
   "initial_state": {
     "affection": 0,
     "trust": 0,
     "truth_known": false
   },
-  "expected_routes": 8,
+  "expected_routes": 16,
   "nodes": [
+    {
+      "id": "p00_entry",
+      "location": "old_station",
+      "lines": [
+        {
+          "id": "p00_entry_l001",
+          "speaker": "n",
+          "text": "清库通知是下午收到的：旧站最后一天开放，未领取的寄存物会统一移交。我从外地回来，把今晚留给这一箱书。"
+        },
+        {
+          "id": "p00_entry_l002",
+          "speaker": "n",
+          "text": "订票时我算过时间。取东西，找住处，明早离开，安排得很满，几乎没给临时的事留位置。"
+        },
+        {
+          "id": "p00_entry_l003",
+          "speaker": "n",
+          "text": "出租车停在路口。雨棚的灯还亮着，售票窗里却已经空了，只剩一块写着停运的牌子。"
+        },
+        {
+          "id": "p00_entry_l004",
+          "speaker": "n",
+          "text": "通知末尾说，值班的人会把箱子放在出口。我把柜号重新核对一遍，才发现备忘录仍用着三年前的标题。"
+        },
+        {
+          "id": "p00_entry_l005",
+          "speaker": "p",
+          "text": "书应该还在吧。"
+        },
+        {
+          "id": "p00_entry_l006",
+          "speaker": "n",
+          "text": "我想起夹在展览留言册里的那封信。那时写完没有送出去，后来也没有回来找过。"
+        },
+        {
+          "id": "p00_entry_l007",
+          "speaker": "n",
+          "text": "如果这次找不到，就算了。这句话刚冒出来，我便把手机按灭：今天至少要把该拿的东西拿走。"
+        },
+        {
+          "id": "p00_entry_l008",
+          "speaker": "n",
+          "text": "雨水从檐角落到鞋上。我没有带伞，只能拎着空布袋，往檐下那条窄窄的干地走。"
+        }
+      ],
+      "chapter": "ch00",
+      "time": "21:38",
+      "dramatic_purpose": "交代取物而非追寻女主的到站目的。",
+      "next": "s01_arrival",
+      "background": "station",
+      "bgm": "rain_theme",
+      "ambient": "rain_ambience",
+      "draft_prompt": "prompts/script/v04/p00_entry_v1.md",
+      "draft_prompt_sha256": "32bc0b7891dcdf7550a53457f8b40048d42c45ef50b345b5207c6eaa63139980",
+      "review_status": "agent_reviewed_candidate"
+    },
     {
       "id": "s01_arrival",
       "location": "old_station",
@@ -81,11 +137,79 @@
           "text": "她没有靠近。我也停在原地，隔着半根柱子的距离，听雨落了一会儿。"
         }
       ],
-      "background": "station",
-      "sprite": "normal",
       "bgm": "rain_theme",
       "ambient": "rain_ambience",
-      "next": "s02_reunion"
+      "next": "s01_platform",
+      "chapter": "ch00",
+      "dramatic_purpose": "由声音认出久未联系的旧友。",
+      "draft_prompt": "prompts/script/scene_v1.md",
+      "draft_prompt_sha256": "bc5cc48b7fe000f5a42b11fae33438d79e09af6d71f9790bd3c338e35f6c2ea4",
+      "review_status": "preserved_v03_dialogue_with_route_revision"
+    },
+    {
+      "id": "s01_platform",
+      "location": "old_station",
+      "lines": [
+        {
+          "id": "s01_platform_l001",
+          "speaker": "n",
+          "text": "她的纸袋贴着椅背，底下垫了一张报纸。雨飘进来时，她先扶住袋口，才看我一眼。"
+        },
+        {
+          "id": "s01_platform_l002",
+          "speaker": "p",
+          "text": "里面没湿吧？"
+        },
+        {
+          "id": "s01_platform_l003",
+          "speaker": "h",
+          "text": "底下是干的。比你那只袋子可靠。",
+          "expression": "normal"
+        },
+        {
+          "id": "s01_platform_l004",
+          "speaker": "n",
+          "text": "我低头看了看手里的布袋，边角正往下滴水。为了少淋两步，我刚才把它顶在了头上。"
+        },
+        {
+          "id": "s01_platform_l005",
+          "speaker": "p",
+          "text": "本来是拿来装书的。"
+        },
+        {
+          "id": "s01_platform_l006",
+          "speaker": "h",
+          "text": "那等会儿别把书放进去。",
+          "expression": "smile"
+        },
+        {
+          "id": "s01_platform_l007",
+          "speaker": "n",
+          "text": "我拧了一下袋角，把水滴到雨棚外。她往旁边让出一点，替我避开那块松动的地砖。"
+        },
+        {
+          "id": "s01_platform_l008",
+          "speaker": "n",
+          "text": "以前走到这里，我不必抬头也知道她会往哪边站。这次我等她站稳，才跨过地砖。"
+        },
+        {
+          "id": "s01_platform_l009",
+          "speaker": "p",
+          "text": "谢谢。"
+        },
+        {
+          "id": "s01_platform_l010",
+          "speaker": "n",
+          "text": "她点了点头。出口那边有推车经过，轮子在接缝上响了两声。我终于找到了一个能开口的问题。"
+        }
+      ],
+      "chapter": "ch00",
+      "time": "21:42",
+      "dramatic_purpose": "让重逢后的沉默有具体行动，避免立即长篇解释。",
+      "next": "s02_reunion",
+      "draft_prompt": "prompts/script/v04/s01_platform_v1.md",
+      "draft_prompt_sha256": "3d71249f7ad68f73a43bfc5065c7451ecb4e045e8b4995bc9526db3e2cc89644",
+      "review_status": "agent_reviewed_candidate"
     },
     {
       "id": "s02_reunion",
@@ -165,7 +289,7 @@
             "affection": 1,
             "trust": 1
           },
-          "next": "s03_letter",
+          "next": "s02_care",
           "response": [
             {
               "id": "q01_care_l001",
@@ -181,7 +305,7 @@
             {
               "id": "q01_care_l003",
               "speaker": "n",
-              "text": "她把袖口往上卷了一点，终于在我旁边坐下。"
+              "text": "她把袖口往上卷了一点，挪到我身边干燥的位置。"
             }
           ]
         },
@@ -191,7 +315,7 @@
           "effects": {
             "trust": -1
           },
-          "next": "s03_letter",
+          "next": "s02_business",
           "response": [
             {
               "id": "q01_business_l001",
@@ -211,7 +335,220 @@
             }
           ]
         }
-      ]
+      ],
+      "chapter": "ch01",
+      "dramatic_purpose": "在近况与事务之间做第一次选择。",
+      "draft_prompt": "prompts/script/scene_v1.md",
+      "draft_prompt_sha256": "bc5cc48b7fe000f5a42b11fae33438d79e09af6d71f9790bd3c338e35f6c2ea4",
+      "review_status": "preserved_v03_dialogue_with_route_revision",
+      "background": "station",
+      "sprite": "normal"
+    },
+    {
+      "id": "s02_care",
+      "location": "old_station",
+      "lines": [
+        {
+          "id": "s02_care_l001",
+          "speaker": "p",
+          "text": "还在原来那条街吗？"
+        },
+        {
+          "id": "s02_care_l002",
+          "speaker": "h",
+          "text": "搬到街口了。小一点，窗户倒比以前大。",
+          "expression": "normal"
+        },
+        {
+          "id": "s02_care_l003",
+          "speaker": "p",
+          "text": "那张总晃的桌子也搬了？"
+        },
+        {
+          "id": "s02_care_l004",
+          "speaker": "h",
+          "text": "没搬。老板终于同意，它不适合当收银台。",
+          "expression": "happy"
+        },
+        {
+          "id": "s02_care_l005",
+          "speaker": "n",
+          "text": "我记得桌脚塞着一本旧杂志。有一回零钱掉进缝里，我们拆了半天抽屉，也没想过换张桌子。"
+        },
+        {
+          "id": "s02_care_l006",
+          "speaker": "p",
+          "text": "听起来现在省心一些。"
+        },
+        {
+          "id": "s02_care_l007",
+          "speaker": "h",
+          "text": "也没有。新架子很高，最上层的书每天都有人要。只是麻烦换了一种。",
+          "expression": "smile"
+        },
+        {
+          "id": "s02_care_l008",
+          "speaker": "n",
+          "text": "她说到这里，拿手机给我看店里新拍的照片。窗边放着一盆薄荷，叶子在白色桌面上投了很小的影子。"
+        },
+        {
+          "id": "s02_care_l009",
+          "speaker": "p",
+          "text": "这张拍得很正。"
+        },
+        {
+          "id": "s02_care_l010",
+          "speaker": "h",
+          "text": "练了三年。不能一直怪相机。",
+          "expression": "smile"
+        },
+        {
+          "id": "s02_care_l011",
+          "speaker": "n",
+          "text": "我没有把手机里的书店当作一条让我放心的证据。我只是记住了地址，问她哪天不用值晚班。"
+        }
+      ],
+      "chapter": "ch01",
+      "time": "21:45",
+      "dramatic_purpose": "认真询问现在的工作，建立关心选择的具体后果。",
+      "next": "s02_boxes",
+      "draft_prompt": "prompts/script/v04/s02_care_v1.md",
+      "draft_prompt_sha256": "819dcc86940aef5e31d684a97c7cb33bea85795f9279498f58404329441cd9e9",
+      "review_status": "agent_reviewed_candidate"
+    },
+    {
+      "id": "s02_business",
+      "location": "old_station",
+      "lines": [
+        {
+          "id": "s02_business_l001",
+          "speaker": "p",
+          "text": "出口那边还要登记吗？"
+        },
+        {
+          "id": "s02_business_l002",
+          "speaker": "h",
+          "text": "签一下名字就行。箱子上写了柜号。",
+          "expression": "normal"
+        },
+        {
+          "id": "s02_business_l003",
+          "speaker": "n",
+          "text": "我把通知翻出来，指尖在柜号上停了一下。许澄看完，把纸袋往自己那边挪回去。"
+        },
+        {
+          "id": "s02_business_l004",
+          "speaker": "p",
+          "text": "你也要签？"
+        },
+        {
+          "id": "s02_business_l005",
+          "speaker": "h",
+          "text": "我已经签好了。怕下雨，就在这里整理。"
+        },
+        {
+          "id": "s02_business_l006",
+          "speaker": "n",
+          "text": "接下来似乎只剩过去拿箱子。我看了一眼出口，又看了一眼她的袖口，不知道先说哪一件合适。"
+        },
+        {
+          "id": "s02_business_l007",
+          "speaker": "p",
+          "text": "你这边还没弄完？"
+        },
+        {
+          "id": "s02_business_l008",
+          "speaker": "h",
+          "text": "照片背面有几个日期，要分清。你要赶时间，可以先办你的。",
+          "expression": "sad"
+        },
+        {
+          "id": "s02_business_l009",
+          "speaker": "p",
+          "text": "没有那么急。我帮你照一下？这里有点暗。"
+        },
+        {
+          "id": "s02_business_l010",
+          "speaker": "n",
+          "text": "她没有把纸袋递给我，只指了指靠柱子的地方。我打开手机电筒，照着袋口，让她自己把东西排好。"
+        },
+        {
+          "id": "s02_business_l011",
+          "speaker": "n",
+          "text": "能帮上的事很小。我把光往下压了压，没有趁她看日期时继续问私人问题。"
+        }
+      ],
+      "chapter": "ch01",
+      "time": "21:45",
+      "dramatic_purpose": "先把取物安排说清，保留私人话题的距离。",
+      "next": "s02_boxes",
+      "draft_prompt": "prompts/script/v04/s02_business_v1.md",
+      "draft_prompt_sha256": "d74b1154096d3562cfcf37f4ee4d724a4b7f696ad9406c84fb5fb0ec2c1bbec6",
+      "review_status": "agent_reviewed_candidate"
+    },
+    {
+      "id": "s02_boxes",
+      "location": "old_station",
+      "lines": [
+        {
+          "id": "s02_boxes_l001",
+          "speaker": "n",
+          "text": "出口的推车停住了。我的柜号贴在最上面的纸箱上，胶带已经换过，底部干干净净。"
+        },
+        {
+          "id": "s02_boxes_l002",
+          "speaker": "n",
+          "text": "我过去签了字，把箱子搬到长椅旁。工作人员留下了一截新胶带，关门前还可以重新封好。"
+        },
+        {
+          "id": "s02_boxes_l003",
+          "speaker": "p",
+          "text": "比记得的重。"
+        },
+        {
+          "id": "s02_boxes_l004",
+          "speaker": "h",
+          "text": "你当时说只有几本。",
+          "expression": "normal"
+        },
+        {
+          "id": "s02_boxes_l005",
+          "speaker": "n",
+          "text": "我掀开箱盖。展览用的书、空相框，还有那本厚留言册，都按大小放着。最上面夹了一张移交清单。"
+        },
+        {
+          "id": "s02_boxes_l006",
+          "speaker": "p",
+          "text": "原来都留着。"
+        },
+        {
+          "id": "s02_boxes_l007",
+          "speaker": "h",
+          "text": "照片是书店借出去的。我来拿走，下次做展览还能用。"
+        },
+        {
+          "id": "s02_boxes_l008",
+          "speaker": "n",
+          "text": "她在清单上找到书店的名字，把相框挑了出来。我把其余的书重新码平，给她的纸袋留出空间。"
+        },
+        {
+          "id": "s02_boxes_l009",
+          "speaker": "p",
+          "text": "这些字还看得清。"
+        },
+        {
+          "id": "s02_boxes_l010",
+          "speaker": "n",
+          "text": "留言册封皮上是我当年的号码。我没急着翻页，许澄却把手伸进纸袋，摸到了一件刚才没摆出来的东西。"
+        }
+      ],
+      "chapter": "ch01",
+      "time": "21:46",
+      "dramatic_purpose": "把各自物品和旧展览联系起来，过渡到信。",
+      "next": "s03_letter",
+      "draft_prompt": "prompts/script/v04/s02_boxes_v1.md",
+      "draft_prompt_sha256": "80be0d70f08f1b0f7eb168e567c5877646326f0f5098a3540a837880c0d349d8",
+      "review_status": "agent_reviewed_candidate"
     },
     {
       "id": "s03_letter",
@@ -289,7 +626,7 @@
             "trust": 1,
             "truth_known": true
           },
-          "next": "s04_waiting",
+          "next": "s03_honest",
           "response": [
             {
               "id": "q02_honest_l001",
@@ -319,7 +656,7 @@
             {
               "id": "q02_honest_l006",
               "speaker": "n",
-              "text": "她没有马上笑。我把信封放在膝上，第一次让这件事有了一个明确的答案。"
+              "text": "她没有马上笑。我把信封平放在纸箱上，第一次让这件事有了一个明确的答案。"
             }
           ]
         },
@@ -329,7 +666,7 @@
           "effects": {
             "trust": -1
           },
-          "next": "s04_waiting",
+          "next": "s03_deferred",
           "response": [
             {
               "id": "q02_defer_l001",
@@ -348,17 +685,348 @@
             }
           ]
         }
+      ],
+      "chapter": "ch02",
+      "dramatic_purpose": "交还未拆的信，选择是否承认作者。",
+      "draft_prompt": "prompts/script/scene_v1.md",
+      "draft_prompt_sha256": "bc5cc48b7fe000f5a42b11fae33438d79e09af6d71f9790bd3c338e35f6c2ea4",
+      "review_status": "preserved_v03_dialogue_with_route_revision"
+    },
+    {
+      "id": "s03_honest",
+      "location": "old_station",
+      "lines": [
+        {
+          "id": "s03_honest_l001",
+          "speaker": "p",
+          "text": "里面写的是那时候的打算。有些后来没有做到。"
+        },
+        {
+          "id": "s03_honest_l002",
+          "speaker": "h",
+          "text": "那就别让我拿三年前的打算，猜你现在要说什么。"
+        },
+        {
+          "id": "s03_honest_l003",
+          "speaker": "n",
+          "text": "信封压在箱盖上，封口仍旧平整。我伸出的手又收了回来，没有用拆信代替回答。"
+        },
+        {
+          "id": "s03_honest_l004",
+          "speaker": "p",
+          "text": "我会重新说。你也不用今天就给我答复。"
+        },
+        {
+          "id": "s03_honest_l005",
+          "speaker": "h",
+          "text": "我还不知道你写了什么。要不要看，也得让我自己决定。"
+        },
+        {
+          "id": "s03_honest_l006",
+          "speaker": "p",
+          "text": "好。我先把信收好，等我们都愿意谈的时候再拿出来。"
+        },
+        {
+          "id": "s03_honest_l007",
+          "speaker": "n",
+          "text": "她把纸袋拉近一些，给我让出整理箱子的地方。刚才那一点停顿还在，我没有把它当作拒绝。"
+        },
+        {
+          "id": "s03_honest_l008",
+          "speaker": "h",
+          "text": "还有，别把所有没做到的事都算成一件。有的已经过去了，有的现在还能说明白。"
+        },
+        {
+          "id": "s03_honest_l009",
+          "speaker": "n",
+          "text": "我看着箱子里的书，慢慢点了点头。今晚能先做的一件，是不再替她决定什么时候听。"
+        }
+      ],
+      "chapter": "ch02",
+      "time": "21:49",
+      "dramatic_purpose": "承认回避，不要求女主当场给出答复。",
+      "next": "s03_archive",
+      "draft_prompt": "prompts/script/v04/s03_honest_v1.md",
+      "draft_prompt_sha256": "f158e45b0272f42f6cff10666dce8c9ccbc618a708882de1ce160fa99a3ec479",
+      "review_status": "agent_reviewed_candidate"
+    },
+    {
+      "id": "s03_deferred",
+      "location": "old_station",
+      "lines": [
+        {
+          "id": "s03_deferred_l001",
+          "speaker": "n",
+          "text": "信封沉到口袋底部。我用手掌隔着布料压了一下，怕边角折起来，也怕自己又把它拿出来。"
+        },
+        {
+          "id": "s03_deferred_l002",
+          "speaker": "h",
+          "text": "你认识那上面的字吗？"
+        },
+        {
+          "id": "s03_deferred_l003",
+          "speaker": "p",
+          "text": "认识。只是现在还没想好怎么说。"
+        },
+        {
+          "id": "s03_deferred_l004",
+          "speaker": "n",
+          "text": "我终于停在这句话上，没有再说“可能”，也没有找一个关于年代太久的理由。"
+        },
+        {
+          "id": "s03_deferred_l005",
+          "speaker": "h",
+          "text": "那就先不说。"
+        },
+        {
+          "id": "s03_deferred_l006",
+          "speaker": "p",
+          "text": "你不会觉得很奇怪吗？"
+        },
+        {
+          "id": "s03_deferred_l007",
+          "speaker": "h",
+          "text": "会。但我可以等你说，不用替你猜一个答案。"
+        },
+        {
+          "id": "s03_deferred_l008",
+          "speaker": "n",
+          "text": "她把纸袋里的照片叠齐，仍然把封口朝上留着。我们之间多出一段空白，谁也没有假装它已经填好了。"
+        },
+        {
+          "id": "s03_deferred_l009",
+          "speaker": "p",
+          "text": "至少，这次我记得它在哪。"
+        },
+        {
+          "id": "s03_deferred_l010",
+          "speaker": "n",
+          "text": "这句话听上去还算诚实，却不足以让她知道更多。我把手从口袋里拿出来，继续整理眼前的箱子。"
+        }
+      ],
+      "chapter": "ch02",
+      "time": "21:49",
+      "dramatic_purpose": "女主接受暂停但没有把沉默理解成解释。",
+      "next": "s03_archive",
+      "draft_prompt": "prompts/script/v04/s03_deferred_v1.md",
+      "draft_prompt_sha256": "a5c2cd80df920da4f675a02c34761bea451c48699f285f8318092396b2fb491b",
+      "review_status": "agent_reviewed_candidate"
+    },
+    {
+      "id": "s03_archive",
+      "location": "old_station",
+      "lines": [
+        {
+          "id": "s03_archive_l001",
+          "speaker": "n",
+          "text": "我把信放进口袋里干燥的那一侧，又把留言册装回箱子。胶带没有贴死，搬走前还能再看一眼。"
+        },
+        {
+          "id": "s03_archive_l002",
+          "speaker": "h",
+          "text": "这本书你带走吧。书店不用了。",
+          "expression": "normal"
+        },
+        {
+          "id": "s03_archive_l003",
+          "speaker": "p",
+          "text": "照片都找齐了吗？"
+        },
+        {
+          "id": "s03_archive_l004",
+          "speaker": "h",
+          "text": "齐了。相框没必要全拿，有两个边角已经坏了。"
+        },
+        {
+          "id": "s03_archive_l005",
+          "speaker": "n",
+          "text": "她抽出一张旧清单，在不要的相框旁做了记号。保留什么、丢掉什么，她都分得很清楚。"
+        },
+        {
+          "id": "s03_archive_l006",
+          "speaker": "p",
+          "text": "我好像每一件都觉得还能用。"
+        },
+        {
+          "id": "s03_archive_l007",
+          "speaker": "h",
+          "text": "那就先带回去。不过你的布袋现在只能装空相框。",
+          "expression": "smile"
+        },
+        {
+          "id": "s03_archive_l008",
+          "speaker": "n",
+          "text": "我摸了摸袋子的外层，果然还是湿的。最后还是把书留在纸箱里，空袋挂在手腕上。"
+        },
+        {
+          "id": "s03_archive_l009",
+          "speaker": "n",
+          "text": "整理完以后，椅面空出了一大块。雨棚外没有车经过，广播也不再报站，我们终于不用和别的声音抢着说话。"
+        }
+      ],
+      "chapter": "ch02",
+      "time": "21:50",
+      "dramatic_purpose": "把旧物与眼前生活分开，结束旧信的第一轮讨论。",
+      "next": "s04_gate",
+      "background": "station",
+      "sprite": "normal",
+      "draft_prompt": "prompts/script/v04/s03_archive_v1.md",
+      "draft_prompt_sha256": "77f641901b87d481bc68cbab77de9353c042fc2e49fb50b712ea540baf85b331",
+      "review_status": "agent_reviewed_candidate"
+    },
+    {
+      "id": "s04_gate",
+      "location": "old_station",
+      "lines": [],
+      "chapter": "ch03",
+      "time": "21:51",
+      "dramatic_purpose": "以已有信任选择不同的谈话入口。",
+      "background": "station",
+      "sprite": "normal",
+      "routes": [
+        {
+          "when": {
+            "trust": {
+              "gte": 1
+            }
+          },
+          "next": "s04_open"
+        },
+        {
+          "next": "s04_reserved"
+        }
       ]
+    },
+    {
+      "id": "s04_open",
+      "location": "old_station",
+      "lines": [
+        {
+          "id": "s04_open_l001",
+          "speaker": "h",
+          "text": "你这次回来，原本只安排了取东西？",
+          "expression": "normal"
+        },
+        {
+          "id": "s04_open_l002",
+          "speaker": "p",
+          "text": "嗯。明早的车票也买好了。"
+        },
+        {
+          "id": "s04_open_l003",
+          "speaker": "h",
+          "text": "那现在还有一点时间。你想怎么用？"
+        },
+        {
+          "id": "s04_open_l004",
+          "speaker": "n",
+          "text": "我看了眼手机，没有未接来电。先前排得满满的晚上，取完箱子以后，忽然空出了一小段。"
+        },
+        {
+          "id": "s04_open_l005",
+          "speaker": "p",
+          "text": "想跟你说说话。如果你不急着走。"
+        },
+        {
+          "id": "s04_open_l006",
+          "speaker": "h",
+          "text": "我不急。不过也不是为了让你把三年一次说完。",
+          "expression": "smile"
+        },
+        {
+          "id": "s04_open_l007",
+          "speaker": "p",
+          "text": "我可能还是会说得很慢。"
+        },
+        {
+          "id": "s04_open_l008",
+          "speaker": "h",
+          "text": "慢一点可以。你说到哪，我就听到哪。"
+        },
+        {
+          "id": "s04_open_l009",
+          "speaker": "n",
+          "text": "她把手机放进纸袋的侧袋，留出一只手整理袖口。我把箱盖盖好，决定让今晚剩下的时间慢一点过。"
+        }
+      ],
+      "chapter": "ch03",
+      "time": "21:52",
+      "dramatic_purpose": "信任较高时主动问玩家现在能说清什么。",
+      "next": "s04_waiting",
+      "draft_prompt": "prompts/script/v04/s04_open_v1.md",
+      "draft_prompt_sha256": "3db919e9a7807ab1dc0104fb2a125dcd4cea7a228bb3b4dd17c52e1a645d1867",
+      "review_status": "agent_reviewed_candidate"
+    },
+    {
+      "id": "s04_reserved",
+      "location": "old_station",
+      "lines": [
+        {
+          "id": "s04_reserved_l001",
+          "speaker": "n",
+          "text": "椅面已经收拾干净，许澄却没有继续往我这边挪。她看了看出口，把纸袋提起来又放下。"
+        },
+        {
+          "id": "s04_reserved_l002",
+          "speaker": "p",
+          "text": "你要走了吗？"
+        },
+        {
+          "id": "s04_reserved_l003",
+          "speaker": "h",
+          "text": "一会儿。我想先确认，你是要聊，还是只想安静等雨小一点。",
+          "expression": "normal"
+        },
+        {
+          "id": "s04_reserved_l004",
+          "speaker": "p",
+          "text": "两个都想。只是有些话，我一时找不到开头。"
+        },
+        {
+          "id": "s04_reserved_l005",
+          "speaker": "h",
+          "text": "可以。但你没说的部分，我不会当作已经知道。"
+        },
+        {
+          "id": "s04_reserved_l006",
+          "speaker": "n",
+          "text": "我刚才几次开口，都只讲了事情的边缘。让她从这些边缘拼出答案，确实不公平。"
+        },
+        {
+          "id": "s04_reserved_l007",
+          "speaker": "p",
+          "text": "那我先不让你猜。"
+        },
+        {
+          "id": "s04_reserved_l008",
+          "speaker": "h",
+          "text": "也不用为了填空，随便答应什么。今天能说哪一件，就说哪一件。",
+          "expression": "sad"
+        },
+        {
+          "id": "s04_reserved_l009",
+          "speaker": "n",
+          "text": "这不是她替我把话接下去。她只是留出了一个位置，要不要走进去，还得由我自己决定。"
+        }
+      ],
+      "chapter": "ch03",
+      "time": "21:52",
+      "dramatic_purpose": "信任较低时先明确不猜、不替对方决定。",
+      "next": "s04_waiting",
+      "draft_prompt": "prompts/script/v04/s04_reserved_v1.md",
+      "draft_prompt_sha256": "82eece127e5484a841cef3c9942df62f6a5bfa8d8e80dec9a455ecabead36a27",
+      "review_status": "agent_reviewed_candidate"
     },
     {
       "id": "s04_waiting",
       "location": "old_station",
-      "time": "21:52",
+      "time": "21:55",
       "lines": [
         {
           "id": "s04_waiting_l001",
           "speaker": "n",
-          "text": "站台尽头的灯灭了一盏。我们一起往靠近出口的长椅挪，重新坐到灯下。"
+          "text": "站台尽头的灯灭了一盏。我们一起往靠近出口的长椅挪，在灯下停了下来。"
         },
         {
           "id": "s04_waiting_l002",
@@ -385,7 +1053,7 @@
         {
           "id": "s04_waiting_l006",
           "speaker": "p",
-          "text": "我知道。"
+          "text": "我知道你要问的是什么。"
         },
         {
           "id": "s04_waiting_l007",
@@ -477,12 +1145,396 @@
       ],
       "background": "station",
       "sprite": "normal",
-      "next": "s05_departure"
+      "next": "s04_memory",
+      "chapter": "ch03",
+      "dramatic_purpose": "女主表达独立生活和对明确联系的需求。",
+      "draft_prompt": "prompts/script/scene_v1.md",
+      "draft_prompt_sha256": "bc5cc48b7fe000f5a42b11fae33438d79e09af6d71f9790bd3c338e35f6c2ea4",
+      "review_status": "preserved_v03_dialogue_with_route_revision"
+    },
+    {
+      "id": "s04_memory",
+      "location": "old_station",
+      "lines": [
+        {
+          "id": "s04_memory_l001",
+          "speaker": "p",
+          "text": "另一张照片，是什么时候拍的？"
+        },
+        {
+          "id": "s04_memory_l002",
+          "speaker": "h",
+          "text": "收展那天。你说这次一定拍正，又把相机垫在了报纸上。",
+          "expression": "smile"
+        },
+        {
+          "id": "s04_memory_l003",
+          "speaker": "n",
+          "text": "我想起来了。报纸被风掀起一角，定时快门已经响起来，我伸手按它，差点没站进画面。"
+        },
+        {
+          "id": "s04_memory_l004",
+          "speaker": "p",
+          "text": "结果正了吗？"
+        },
+        {
+          "id": "s04_memory_l005",
+          "speaker": "h",
+          "text": "正了。你倒是只剩半边肩膀。"
+        },
+        {
+          "id": "s04_memory_l006",
+          "speaker": "n",
+          "text": "她把那张照片从袋子里抽出一点，只给我看了边缘。我的外套在画面最左侧，袖口有一团模糊的雨水。"
+        },
+        {
+          "id": "s04_memory_l007",
+          "speaker": "p",
+          "text": "我都不记得还有这张。"
+        },
+        {
+          "id": "s04_memory_l008",
+          "speaker": "h",
+          "text": "你可以不记得。我留着，是因为那天的展览很好，不想连同车站一起忘掉。",
+          "expression": "normal"
+        },
+        {
+          "id": "s04_memory_l009",
+          "speaker": "n",
+          "text": "照片属于她，也属于那个下午。我曾经急着从旧物里找一句原谅，这时才认真看了看它拍下的地方。"
+        },
+        {
+          "id": "s04_memory_l010",
+          "speaker": "p",
+          "text": "那天你摆了好久的书。"
+        },
+        {
+          "id": "s04_memory_l011",
+          "speaker": "h",
+          "text": "下次摆展的时候，我可不想再拿报纸垫相机。",
+          "expression": "smile"
+        },
+        {
+          "id": "s04_memory_l012",
+          "speaker": "n",
+          "text": "她把照片收回去。我没有伸手要，想着以后可以给她现在工作的书店也拍一张。"
+        }
+      ],
+      "chapter": "ch04",
+      "time": "22:01",
+      "dramatic_purpose": "确认旧照片承载双方记忆，不把保存误读为等待。",
+      "next": "s04_boundary",
+      "background": "station",
+      "sprite": "normal",
+      "draft_prompt": "prompts/script/v04/s04_memory_v1.md",
+      "draft_prompt_sha256": "4ffba29e3ebf61c10c1fa5f23329795f0c0f4f4d683aa2c67017d48d6f09832c",
+      "review_status": "agent_reviewed_candidate"
+    },
+    {
+      "id": "s04_boundary",
+      "location": "old_station",
+      "lines": [
+        {
+          "id": "s04_boundary_l001",
+          "speaker": "p",
+          "text": "我有时候分不清，什么现在说还来得及，什么说了只会添麻烦。"
+        },
+        {
+          "id": "s04_boundary_l002",
+          "speaker": "h",
+          "text": "你可以先问我愿不愿意听。",
+          "expression": "normal"
+        },
+        {
+          "id": "s04_boundary_l003",
+          "speaker": "p",
+          "text": "问完以后呢？"
+        },
+        {
+          "id": "s04_boundary_l004",
+          "speaker": "h",
+          "text": "听了不一定能马上回答。这个也得允许。"
+        },
+        {
+          "id": "s04_boundary_l005",
+          "speaker": "n",
+          "text": "我以前总把她的回答预先写好。有时是拒绝，有时是原谅，最后连真正的问题都没问。"
+        },
+        {
+          "id": "s04_boundary_l006",
+          "speaker": "p",
+          "text": "我以为不说就不会让你为难。"
+        },
+        {
+          "id": "s04_boundary_l007",
+          "speaker": "h",
+          "text": "不说，也不能替我决定我会不会为难。",
+          "expression": "angry"
+        },
+        {
+          "id": "s04_boundary_l008",
+          "speaker": "n",
+          "text": "她把话停在那里，没有提高声音。我伸手扶住箱盖，没拿“为你好”把自己的犹豫遮过去。"
+        },
+        {
+          "id": "s04_boundary_l009",
+          "speaker": "p",
+          "text": "那今晚可以再听一点吗？不是要你马上答应什么。"
+        },
+        {
+          "id": "s04_boundary_l010",
+          "speaker": "h",
+          "text": "可以。只说你自己能确定的部分。",
+          "expression": "normal"
+        },
+        {
+          "id": "s04_boundary_l011",
+          "speaker": "n",
+          "text": "雨棚下一滴水落在胶带上。我用袖口擦掉，想了想三年前写下的话，也想了想明天回去以后能做的事。"
+        }
+      ],
+      "chapter": "ch04",
+      "time": "22:04",
+      "dramatic_purpose": "划清表达与要求回报的界限，允许暂不回答。",
+      "next": "s04_revisit",
+      "draft_prompt": "prompts/script/v04/s04_boundary_v1.md",
+      "draft_prompt_sha256": "5c78a74b15b6ceb743091b81abed9f5a282c113b8e487babe6126fab3a06f387",
+      "review_status": "agent_reviewed_candidate"
+    },
+    {
+      "id": "s04_revisit",
+      "location": "old_station",
+      "lines": [
+        {
+          "id": "s04_revisit_l001",
+          "speaker": "n",
+          "text": "手机的屏幕又亮起来，是明早的乘车提醒。我把到站时间看了一遍，没有将提醒划掉。"
+        },
+        {
+          "id": "s04_revisit_l002",
+          "speaker": "p",
+          "text": "明天还是得走。"
+        },
+        {
+          "id": "s04_revisit_l003",
+          "speaker": "h",
+          "text": "嗯。车票不用因为今晚变掉。",
+          "expression": "normal"
+        },
+        {
+          "id": "s04_revisit_l004",
+          "speaker": "n",
+          "text": "口袋里的信封没有动。写信那天，我把每一句话都写成以后：以后回来，以后带她去看另一次展览。"
+        },
+        {
+          "id": "s04_revisit_l005",
+          "speaker": "n",
+          "text": "现在能确定的事情很少。我明早上车，下午到家；她明天去书店，休息时才方便看消息。"
+        },
+        {
+          "id": "s04_revisit_l006",
+          "speaker": "p",
+          "text": "你通常几点能歇一会儿？"
+        },
+        {
+          "id": "s04_revisit_l007",
+          "speaker": "h",
+          "text": "四点左右。不一定每天准时。"
+        },
+        {
+          "id": "s04_revisit_l008",
+          "speaker": "n",
+          "text": "我把这个时间记下，没有设成每天响的闹钟。约定可以改，但改动也应该让对方知道。"
+        },
+        {
+          "id": "s04_revisit_l009",
+          "speaker": "n",
+          "text": "还剩两种说法。一种从那封信开始，把当时没交出去的话带回现在；另一种先约好下一次，不急着处理所有旧事。"
+        },
+        {
+          "id": "s04_revisit_l010",
+          "speaker": "n",
+          "text": "她看着我，留了几秒。我这次没有用一个句号占住空白。"
+        }
+      ],
+      "chapter": "ch04",
+      "time": "22:08",
+      "dramatic_purpose": "选择补充旧信意思，或先落实下一次联系。",
+      "choices": [
+        {
+          "id": "q04_revisit",
+          "text": "把信里的意思和今天的打算说清楚",
+          "effects": {
+            "affection": 1,
+            "trust": 2,
+            "truth_known": true
+          },
+          "next": "s04_repair"
+        },
+        {
+          "id": "q04_concrete",
+          "text": "先约定下一次联系，旧事慢慢谈",
+          "effects": {
+            "trust": 1
+          },
+          "next": "s04_concrete"
+        }
+      ],
+      "draft_prompt": "prompts/script/v04/s04_revisit_v1.md",
+      "draft_prompt_sha256": "d5a40e799e661efd4639d2bcbfa30c3647912e499d4cee3bf648006e9640d8e5",
+      "review_status": "agent_reviewed_candidate"
+    },
+    {
+      "id": "s04_repair",
+      "location": "old_station",
+      "lines": [
+        {
+          "id": "s04_repair_l001",
+          "speaker": "p",
+          "text": "那封信，是我出发前写给你的。里面说我想再回来，也想跟你继续见面。"
+        },
+        {
+          "id": "s04_repair_l002",
+          "speaker": "n",
+          "text": "这一次，句子没有停在“以后”。我看着她，把信里属于自己的那一部分重新说了一遍。"
+        },
+        {
+          "id": "s04_repair_l003",
+          "speaker": "p",
+          "text": "现在也一样。但你不需要替我保证这件事会变成什么。"
+        },
+        {
+          "id": "s04_repair_l004",
+          "speaker": "h",
+          "text": "你想继续见面，和你能够什么时候回来，是两件事。",
+          "expression": "normal"
+        },
+        {
+          "id": "s04_repair_l005",
+          "speaker": "p",
+          "text": "我知道。下一次假期还没定，我不会先给一个日期。明天到家以后，我会告诉你。"
+        },
+        {
+          "id": "s04_repair_l006",
+          "speaker": "h",
+          "text": "如果计划变了呢？"
+        },
+        {
+          "id": "s04_repair_l007",
+          "speaker": "p",
+          "text": "说计划变了。不是等到都安排好了，才敢联系。"
+        },
+        {
+          "id": "s04_repair_l008",
+          "speaker": "n",
+          "text": "她看了我一会儿，伸手把纸袋卷好的袋口压平。刚才没说完的话，终于不需要她去猜作者。"
+        },
+        {
+          "id": "s04_repair_l009",
+          "speaker": "h",
+          "text": "那我也说清楚。见面我愿意，什么时候有空，我会自己告诉你。",
+          "expression": "embarrassed"
+        },
+        {
+          "id": "s04_repair_l010",
+          "speaker": "p",
+          "text": "好。还有那封旧信，要看之前，我会再问你。"
+        },
+        {
+          "id": "s04_repair_l011",
+          "speaker": "h",
+          "text": "你把现在的写在后面吧。别拿旧日期当借口。",
+          "expression": "smile"
+        },
+        {
+          "id": "s04_repair_l012",
+          "speaker": "n",
+          "text": "我把到家时间发过去，后面补上“你有空再回”。消息停在屏幕上，这次比一个句号长得多。"
+        }
+      ],
+      "chapter": "ch04",
+      "time": "22:10",
+      "dramatic_purpose": "补充过去与现在的意思，修复一次早期回避。",
+      "next": "s05_departure",
+      "draft_prompt": "prompts/script/v04/s04_repair_v1.md",
+      "draft_prompt_sha256": "559d2d70f68517b36df7dcf8b88b723241a2f46b73b56a0d786a086abe6525da",
+      "review_status": "agent_reviewed_candidate"
+    },
+    {
+      "id": "s04_concrete",
+      "location": "old_station",
+      "lines": [
+        {
+          "id": "s04_concrete_l001",
+          "speaker": "p",
+          "text": "旧事慢一点说。明天下午我到了，先给你发消息，可以吗？"
+        },
+        {
+          "id": "s04_concrete_l002",
+          "speaker": "h",
+          "text": "可以。我四点不一定看得到，忙完了会回。",
+          "expression": "normal"
+        },
+        {
+          "id": "s04_concrete_l003",
+          "speaker": "p",
+          "text": "不用按点。你忙的时候，我也不会一直问。"
+        },
+        {
+          "id": "s04_concrete_l004",
+          "speaker": "n",
+          "text": "我打开刚才的聊天，把预计到家的时间写上。写完又检查了一遍，删掉“肯定”，改成车次正常时的大概时间。"
+        },
+        {
+          "id": "s04_concrete_l005",
+          "speaker": "h",
+          "text": "这样就够了。你晚一点也可以说，不必等到晚上才解释。"
+        },
+        {
+          "id": "s04_concrete_l006",
+          "speaker": "p",
+          "text": "如果我又不知道该说什么呢？"
+        },
+        {
+          "id": "s04_concrete_l007",
+          "speaker": "h",
+          "text": "从今天读了什么开始。书店新到了几本，我还没看完。",
+          "expression": "smile"
+        },
+        {
+          "id": "s04_concrete_l008",
+          "speaker": "n",
+          "text": "我把箱子上那本书翻给她看，封面边缘已经卷了。她报出书名，问里面是不是还夹着那张旧车票。"
+        },
+        {
+          "id": "s04_concrete_l009",
+          "speaker": "p",
+          "text": "回去找找。有的话，拍给你看。"
+        },
+        {
+          "id": "s04_concrete_l010",
+          "speaker": "h",
+          "text": "没有也能说没有。",
+          "expression": "normal"
+        },
+        {
+          "id": "s04_concrete_l011",
+          "speaker": "n",
+          "text": "关于口袋里的信，我们没再往下谈。我没有把这一点具体的约定当作所有问题都已经解决，只把她的消息置顶了一晚。"
+        }
+      ],
+      "chapter": "ch04",
+      "time": "22:10",
+      "dramatic_purpose": "把下一次联系落实，保留尚未讨论的旧事。",
+      "next": "s05_departure",
+      "draft_prompt": "prompts/script/v04/s04_concrete_v1.md",
+      "draft_prompt_sha256": "0241ca85e8ca9c8e47a1d0dbbebec9d5f6a8d678856ece47114d3f79ed6e3bff",
+      "review_status": "agent_reviewed_candidate"
     },
     {
       "id": "s05_departure",
       "location": "old_station",
-      "time": "21:56",
+      "time": "22:13",
       "lines": [
         {
           "id": "s05_departure_l001",
@@ -535,7 +1587,7 @@
           "effects": {
             "affection": 1
           },
-          "next": "s06_resolution",
+          "next": "s05_shared_path",
           "response": [
             {
               "id": "q03_walk_l001",
@@ -561,7 +1613,7 @@
           "effects": {
             "trust": -1
           },
-          "next": "s06_resolution",
+          "next": "s05_separate_path",
           "response": [
             {
               "id": "q03_leave_l001",
@@ -581,12 +1633,127 @@
             }
           ]
         }
-      ]
+      ],
+      "chapter": "ch05",
+      "dramatic_purpose": "决定同行还是各自回家。",
+      "draft_prompt": "prompts/script/scene_v1.md",
+      "draft_prompt_sha256": "bc5cc48b7fe000f5a42b11fae33438d79e09af6d71f9790bd3c338e35f6c2ea4",
+      "review_status": "preserved_v03_dialogue_with_route_revision",
+      "background": "station",
+      "sprite": "normal"
+    },
+    {
+      "id": "s05_shared_path",
+      "location": "old_station",
+      "lines": [
+        {
+          "id": "s05_shared_path_l001",
+          "speaker": "n",
+          "text": "纸箱底角擦过椅背，响了一声。我检查胶带有没有贴牢，握稳左手的伞，许澄绕过那块松动的地砖。"
+        },
+        {
+          "id": "s05_shared_path_l002",
+          "speaker": "h",
+          "text": "别照着以前走。门口那级台阶拆了。",
+          "expression": "normal"
+        },
+        {
+          "id": "s05_shared_path_l003",
+          "speaker": "p",
+          "text": "难怪看着少了点什么。"
+        },
+        {
+          "id": "s05_shared_path_l004",
+          "speaker": "n",
+          "text": "走到出口，雨棚忽然窄了一截。她把纸袋换到里面那只手，我停下来，等她调整好再往前。"
+        },
+        {
+          "id": "s05_shared_path_l005",
+          "speaker": "p",
+          "text": "这样拿得住吗？"
+        },
+        {
+          "id": "s05_shared_path_l006",
+          "speaker": "h",
+          "text": "拿得住。你箱子别碰栏杆就好。"
+        },
+        {
+          "id": "s05_shared_path_l007",
+          "speaker": "n",
+          "text": "我的脚步还是比她快半步。我往回收了一点，让箱子在两个人身前留出同样的距离。"
+        },
+        {
+          "id": "s05_shared_path_l008",
+          "speaker": "n",
+          "text": "小店的灯就在街角，门口也有一段能避雨的檐。走过去不远，但走到那里以后，我们仍可以各自决定要不要再留一会儿。"
+        }
+      ],
+      "chapter": "ch05",
+      "time": "22:16",
+      "dramatic_purpose": "共同走到出口，保持双方行动与边界。",
+      "next": "s06_resolution",
+      "draft_prompt": "prompts/script/v04/s05_shared_path_v1.md",
+      "draft_prompt_sha256": "e53bda76a883e89ad3f3047e07893bd6b92f142e29fecea2a7669add817da4ce",
+      "review_status": "agent_reviewed_candidate"
+    },
+    {
+      "id": "s05_separate_path",
+      "location": "old_station",
+      "lines": [
+        {
+          "id": "s05_separate_path_l001",
+          "speaker": "n",
+          "text": "我把箱盖的胶带压牢，打开叫车页面。排队数已经清零，车会停在出口旁边，牌号最后两位是七六。"
+        },
+        {
+          "id": "s05_separate_path_l002",
+          "speaker": "p",
+          "text": "车快到了。你不用陪我等。"
+        },
+        {
+          "id": "s05_separate_path_l003",
+          "speaker": "h",
+          "text": "好。我往街角走，那边有路灯。",
+          "expression": "normal"
+        },
+        {
+          "id": "s05_separate_path_l004",
+          "speaker": "n",
+          "text": "我们把纸箱和纸袋分别提起来。许澄撑开自己的伞，先跨过出口外那道积水。"
+        },
+        {
+          "id": "s05_separate_path_l005",
+          "speaker": "p",
+          "text": "明天下午我发消息。"
+        },
+        {
+          "id": "s05_separate_path_l006",
+          "speaker": "h",
+          "text": "看到了会回。今天先各自平安到家。"
+        },
+        {
+          "id": "s05_separate_path_l007",
+          "speaker": "n",
+          "text": "她往小店的方向走，我留在出口的檐下。叫车页面上的预计时间又延长了几分钟，我把箱子放下，让它靠住腿。"
+        },
+        {
+          "id": "s05_separate_path_l008",
+          "speaker": "n",
+          "text": "信还在口袋里。没有因为这次道别消失，也没有替我改变刚才说出的决定。车灯还没拐进路口，我又看了一眼雨棚。"
+        }
+      ],
+      "chapter": "ch05",
+      "time": "22:16",
+      "dramatic_purpose": "明确今晚分别，避免数值把玩家强制带入同行结局。",
+      "next": "s08_normal",
+      "draft_prompt": "prompts/script/v04/s05_separate_path_v1.md",
+      "draft_prompt_sha256": "2ae867cb9f60c70427d97bd585c8b24e5065df92a88be95a32e48c5e2f785372",
+      "review_status": "agent_reviewed_candidate"
     },
     {
       "id": "s06_resolution",
       "location": "old_station",
-      "time": "22:00",
+      "time": "22:17",
       "lines": [],
       "routes": [
         {
@@ -595,22 +1762,26 @@
               "gte": 2
             },
             "trust": {
-              "gte": 1
+              "gte": 2
             },
             "truth_known": true
           },
           "next": "s07_true"
         },
         {
-          "when": {},
           "next": "s08_normal"
         }
-      ]
+      ],
+      "chapter": "ch05",
+      "dramatic_purpose": "在同行前提下以关系、信任和已知事实判定结局。",
+      "draft_prompt": "prompts/script/scene_v1.md",
+      "draft_prompt_sha256": "bc5cc48b7fe000f5a42b11fae33438d79e09af6d71f9790bd3c338e35f6c2ea4",
+      "review_status": "preserved_v03_dialogue_with_route_revision"
     },
     {
       "id": "s07_true",
-      "location": "old_station",
-      "time": "22:01",
+      "location": "nearby_cafe",
+      "time": "22:20",
       "lines": [
         {
           "id": "s07_true_l001",
@@ -696,27 +1867,32 @@
       ],
       "ending": "true",
       "ending_title": "True / 把今天说清楚",
-      "clear_scene": true
+      "clear_scene": true,
+      "chapter": "ch05",
+      "dramatic_purpose": "小店里把今天说清楚并约定下一次联系。",
+      "draft_prompt": "prompts/script/scene_v1.md",
+      "draft_prompt_sha256": "bc5cc48b7fe000f5a42b11fae33438d79e09af6d71f9790bd3c338e35f6c2ea4",
+      "review_status": "preserved_v03_dialogue_with_route_revision"
     },
     {
       "id": "s08_normal",
-      "location": "old_station",
-      "time": "22:06",
+      "location": "station_exit",
+      "time": "22:26",
       "lines": [
         {
           "id": "s08_normal_l001",
           "speaker": "n",
-          "text": "十分钟后，我站在车站外，看着最后几滴雨落进路边的积水。旧箱子靠着腿，信封还放在口袋里。"
+          "text": "道别以后，我站在车站外，看着最后几滴雨落进路边的积水。旧箱子靠着腿，信封还放在口袋里。"
         },
         {
           "id": "s08_normal_l002",
           "speaker": "n",
-          "text": "刚才的话，有些说了，有些没有说。有些本来只要一句，到了嘴边，却被我换成另一句。"
+          "text": "刚才的话，有些已经说清，有些还留着。下一次联系的时间，也要由我们各自确认。"
         },
         {
           "id": "s08_normal_l003",
           "speaker": "n",
-          "text": "许澄没有替我把这些空白填好。我也没有权利把她的沉默，理解成一切都已经过去。"
+          "text": "许澄没有替我作答。我也没有把一张旧照片，理解成她必须给我的承诺。"
         },
         {
           "id": "s08_normal_l004",
@@ -754,9 +1930,84 @@
           "text": "雨停了。这个晚上没有给出所有答案，但我们已经重新有了彼此的号码。"
         }
       ],
-      "background": "station",
       "ending": "normal",
-      "ending_title": "Normal / 留给下一次的话"
+      "ending_title": "Normal / 留给下一次的话",
+      "chapter": "ch05",
+      "dramatic_purpose": "分别后保留联系，承认仍有事情留给下一次。",
+      "draft_prompt": "prompts/script/scene_v1.md",
+      "draft_prompt_sha256": "bc5cc48b7fe000f5a42b11fae33438d79e09af6d71f9790bd3c338e35f6c2ea4",
+      "review_status": "preserved_v03_dialogue_with_route_revision",
+      "clear_scene": true
     }
-  ]
+  ],
+  "chapters": [
+    {
+      "id": "ch00",
+      "title": "序章 ： 雨夜",
+      "entry": "p00_entry",
+      "goal": "交代取物目的，走进将关闭的旧车站。"
+    },
+    {
+      "id": "ch01",
+      "title": "第一章 ： 重逢",
+      "entry": "s02_reunion",
+      "goal": "第一次选择决定从近况还是事务开始交流。"
+    },
+    {
+      "id": "ch02",
+      "title": "第二章 ： 旧信",
+      "entry": "s03_letter",
+      "goal": "是否承认旧信来历，产生可被后续记住的事实。"
+    },
+    {
+      "id": "ch03",
+      "title": "第三章 ： 空白",
+      "entry": "s04_gate",
+      "goal": "按先前信任进入开放或保留的谈话，澄清独立生活与边界。"
+    },
+    {
+      "id": "ch04",
+      "title": "第四章 ： 今天",
+      "entry": "s04_memory",
+      "goal": "为早期犹豫提供一次明确表达的补救机会。"
+    },
+    {
+      "id": "ch05",
+      "title": "第五章 ： 雨停之前",
+      "entry": "s05_departure",
+      "goal": "同行或分别，进入与行动和状态一致的结局。"
+    }
+  ],
+  "state_definitions": {
+    "affection": {
+      "type": "int",
+      "meaning": "互相关心与愿意继续交流的进展",
+      "min": 0,
+      "max": 3
+    },
+    "trust": {
+      "type": "int",
+      "meaning": "能否把现在的需求说清楚",
+      "min": -2,
+      "max": 4
+    },
+    "truth_known": {
+      "type": "bool",
+      "meaning": "许澄已明确知道旧信由玩家写给她；玩家从开场就知道作者"
+    }
+  },
+  "world_facts": {
+    "past_years": 3,
+    "heroine_age": 23,
+    "player_age": 25,
+    "letter_author": "player",
+    "letter_opened_at_entry": false,
+    "photo_subjects": [
+      "heroine",
+      "player"
+    ],
+    "last_train_cancelled": true,
+    "belongings_ready_at_exit": true,
+    "heroine_has_independent_life": true
+  }
 }

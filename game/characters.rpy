@@ -4,6 +4,8 @@ default affection = 0
 default trust = 0
 default truth_known = False
 default current_scene = ""
+default current_chapter = ""
+default visited_scenes = []
 default last_ending = ""
 
 init python:

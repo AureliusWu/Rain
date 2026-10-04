@@ -2,15 +2,15 @@
 
 一部可离线游玩的中文 Ren'Py 视觉小说。雨夜的旧车站，两位久未联系的旧友，和一封没有寄出的信。
 
-当前为 **v0.3.0 角色表情版**：8 个场景、3 次关键选择、Normal / True 两个片段结局，包含七种 AI 女主表情立绘、雨夜背景、关键 CG、6 句 AI 语音、原创音乐与雨声。主题、成年女主许澄和画风为待用户审阅的创作方案。
+当前为 **v0.4.0 章节路线版**：六章、26 个节点（含 2 个状态路由节点）、4 次关键选择、Normal / True 两个片段结局，包含七种 AI 女主表情立绘、雨夜背景、关键 CG、6 句 AI 语音、原创音乐与雨声。主题、成年女主许澄和画风为待用户审阅的创作方案。
 
-单路线约 1,740–1,900 汉字。按每分钟 250–350 汉字、另计选择和画面停留，预估 6–9 分钟；尚未经过真人计时。完整 30–60 分钟作品属于后续版本。
+单路线约 5,050–5,350 字。按每分钟 250–350 字、另计选择和画面停留，预估 17–24 分钟；尚未经过真人计时。完整 30–60 分钟作品属于后续版本。
 
 ## 下载与运行
 
 [Windows 发布版本](https://github.com/AureliusWu/Test/releases) · [构建与运行证据](https://github.com/AureliusWu/Test/actions) · [阶段记录](docs/STATUS.md)
 
-1. 下载 Release 中的 `BeforeTheRainStops-0.3.0-win.zip`。
+1. 下载 Release 中的 `BeforeTheRainStops-0.4.0-win.zip`。
 2. 完整解压到可写目录。不要直接在 ZIP 内启动。
 3. 双击 `BeforeTheRainStops.exe`，选择“开始游戏”。无需安装 Python、Ren'Py 或模型，无需联网。
 
@@ -18,7 +18,7 @@
 
 各阶段使用独立存档目录；旧存档保留，不跨版本加载。v0.1 是可运行的临时资产测试片段，不计入正式剧情。
 
-![开心表情的实际游戏画面](docs/images/expression-happy-v03.png)
+![v0.3 开心表情的实际游戏画面，当前版沿用相同资产](docs/images/expression-happy-v03.png)
 
 ## 开发与验证
 
@@ -39,7 +39,7 @@ $sdk = ".runtime/renpy-8.5.3-sdk"
 & "$sdk/lib/py3-windows-x86_64/python.exe" "$sdk/renpy.py" . lint --error-code --all-problems
 & "$sdk/lib/py3-windows-x86_64/python.exe" "$sdk/renpy.py" . test global --report-detailed --overwrite-screenshots
 python -m tools.build.package --sdk $sdk
-python -m tools.build.verify_package --zip dist/BeforeTheRainStops-0.3.0-win.zip
+python -m tools.build.verify_package --zip dist/BeforeTheRainStops-0.4.0-win.zip
 ```
 
 Linux/macOS 可用 SDK 的 `renpy.sh` 运行 lint/test。Linux 无桌面时需要 Xvfb。Windows Actions 先做数据校验与原生交互测试，再构建 ZIP，直接启动解压后的独立 EXE 重跑测试。测试通过才发布预发行版本，附 SHA256SUMS。
@@ -61,4 +61,6 @@ Linux/macOS 可用 SDK 的 `renpy.sh` 运行 lint/test。Linux 无桌面时需�
 
 ## 下一阶段
 
-七种一致表情已完成并接入 20 处台词。源图、固定 Prompt 和检查结果见 [表情审阅记录](docs/EXPRESSION_REVIEW.md)。下一阶段 v0.4 完善章节、场景图与选择影响；重大剧情和最终美术继续由用户决定。大系统保持在 [Future Ideas](docs/FUTURE_IDEAS.md)。
+章节标题、独立选择后果和早期犹豫的补救已接入原生 Ren'Py。16 条路线中四条 True、十二条 Normal，最后选择分别始终进入 Normal。仅三个剧情状态；章节与访问记录用于存档和验收，不增加关系数值。详见 [场景 Outline](docs/STORY_OUTLINE_V04.md) 与 [路线审阅](docs/STORY_REVIEW_V04.md)。
+
+下一阶段 v0.5 完善现有资产导入、Prompt Registry 和 Manifest 校验；重大剧情和最终美术继续由用户决定。大系统保持在 [Future Ideas](docs/FUTURE_IDEAS.md)。
