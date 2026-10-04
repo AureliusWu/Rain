@@ -7,8 +7,10 @@
 - 原生章节卡，存读档恢复章节、实际路径、关系状态与表情。
 - 沿用七种 AI 女主表情、雨夜背景、旧信 CG、6 句 AI 语音、原创音乐与雨声。
 - 支持历史、快进、自动播放、音量、全屏/窗口及重新开始。
-- 发布前执行 28 个 Python 用例、数据校验、Ren'Py lint、21 个原生交互用例，以及解压后的独立 Windows EXE 同套测试。Actions 留存逐路线与章节、分支、表情截图。
+- 发布前执行 28 个 Python 用例、数据校验、Ren'Py lint、21 个原生交互用例 / 132 个断言，以及解压后的独立 Windows EXE 同套测试，均通过。Actions 留存逐路线与章节、分支、表情截图。
 
 下载 BeforeTheRainStops-0.4.0-win.zip，完整解压后双击 BeforeTheRainStops.exe。无需 Python、Ren'Py、模型或联网。SHA256SUMS.txt 用于核验。
 
 本阶段独立存档目录，旧存档保留。单路线约 5,050–5,350 字，预估 17–24 分钟，尚未真人计时；完整 30–60 分钟及更多背景/CG 在后续阶段。主题、形象与结局仍为可试玩审阅的候选。下一阶段 v0.5 完善现有资产导入、Prompt Registry 与 Manifest 校验。
+
+最终 CI：https://github.com/AureliusWu/Test/actions/runs/37191065889 。独立 EXE 的必需截图完整解码，下载的 68 张验收 PNG 已全部解码并抽查新章节与分支画面。

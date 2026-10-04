@@ -46,13 +46,21 @@ Windows 最终 CI 已通过：Python 12 个用例；Windows 原生引擎 12 个�
 
 发布提交：c3d09d8e8c9c906f8de3ba5b2e1cae7249d2fc8e。ZIP：39,436,278 字节。SHA-256：f064f4407e6ed0a62b3356f153124cb716accc9bc1164d01b502d36bdd0c13d6。Release 附 SHA256SUMS.txt；Actions 保留源码引擎与独立 EXE 的日志、表情截图、路线和几何报告。仓库继续只维护 main，阶段使用 tag。
 
-## v0.4.0 — Windows 验收中
+## v0.4.0 — 已验收并发布
 
 六章、26 节点（含两个纯状态路由）、四次选择、16 条完整路线。17 个新叙事场景逐一起草与保存 Prompt；四条 True、十二条 Normal，早期回避可补救，最终分别始终 Normal。章节卡采用原生 centered；三个剧情状态不增加，访问路径与章节随原生存档恢复。
 
 28 个 Python 用例通过；路线、资产、文本、Scene Prompt、版本一致性与编译检查 0 错误。Ren'Py lint 通过。Linux 首轮 21 用例 / 129 断言通过（85.434 秒）；修正标题分隔符缺字与截图停在过场问题后，路线 1 专项 1 用例 / 9 断言通过（8.508 秒），直接查看章节卡、实际 CG 与补充选择画面。
 
-发现并修复：story.json 的旧版本字段、部分分支合流后物品或知识状态矛盾、章节标题缺字、过早截图。此后使用版本联合检查、逐场事实审阅、中文冒号与显示文字等待条件。最终 Windows CI 与独立 EXE 结果将在完成后补充，不把配置视为验收。
+发现并修复：story.json 的旧版本字段、部分分支合流后物品或知识状态矛盾、章节标题缺字、过早截图。此后使用版本联合检查、逐场事实审阅、中文冒号与显示文字等待条件。最终 Windows CI 已通过，结果与独立 EXE 证据如下。
+
+最终 Windows 验收：28 个 Python 用例；源码引擎 21 个交互用例 / 132 个断言（160.390 秒）；ZIP 解压后的独立 EXE 21 个用例 / 132 个断言（104.382 秒）。16 条真实选择路径逐项匹配访问记录，两个结局、章节与表情存读档、重新开始、历史、音频通道、全屏、快进和自动播放均通过。
+
+已下载验收证据，SHA-256：703504cb236b7ec7829b03bf933b3d3b92a4ece8af8e585f5e274e5883976cf5；全部 68 张 PNG 完整解码。直接查看独立 EXE 的序章、第四章标题、两种信任分支、CG、补充选择、True 与 Normal 结局截图，中文字形、立绘、CG 与 UI 正常。独立 EXE 的必需截图通过完整解码门槛；发布 ZIP 不包含开发剧情数据、测试脚本或存档。
+
+[成功 CI 37191065889](https://github.com/AureliusWu/Test/actions/runs/37191065889) · [v0.4.0 Release](https://github.com/AureliusWu/Test/releases/tag/v0.4.0) · [Windows ZIP](https://github.com/AureliusWu/Test/releases/download/v0.4.0/BeforeTheRainStops-0.4.0-win.zip)
+
+发布提交：98d5d8e2bec642e8a94063dc5df9729842d22240。ZIP：39,469,538 字节。SHA-256：44cecf41f9146e5b244f43406d9e5424c214e6ebc371b2ca43a16e0148898fcd。Release 附 SHA256SUMS.txt，Actions 保留全部报告、日志与截图。仓库只维护 main，阶段使用 tag，最终创作选择继续由用户审阅。
 
 ## 限制与下一阶段
 
