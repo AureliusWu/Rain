@@ -13,3 +13,5 @@
 - 关键语音：Kokoro-82M v1.1-zh，zf_001，speed 0.95；模型 Apache-2.0，许可证见 licenses/Kokoro-model-Apache-2.0.txt。[官方模型](https://huggingface.co/hexgrad/Kokoro-82M-v1.1-zh)；[ONNX 导出](https://github.com/thewh1teagle/kokoro-onnx/releases/tag/model-files-v1.1)。开发工具 kokoro-onnx 使用 MIT，Misaki 中文前处理使用 Apache-2.0。模型和推理依赖不随游戏分发。
 - 语音为项目台词的本地合成，未克隆现实人物。6 句合计 19.759 秒。ONNX Runtime 在导入前设置 ORT_DISABLE_TELEMETRY=1，并关闭事件 API；游戏仅播放离线 OGG。
 - 全部视觉和声音是本轮可试玩候选；最终美术与声音选择仍待用户审阅。MIT 适用于原创代码及程序图元，第三方许可保留；不对 AI 输出主张独占版权。
+
+- v0.5 生产流程：版本化请求索引 prompts/registry.json；图片、语音与场景通过 ID、路径及 SHA-256 绑定。新增导入配方、像素元数据与复用/参考来源，原有图片和音频内容沿用前阶段。

@@ -43,3 +43,9 @@ python -m tools.character_validator --report reports/characters.json
 章节目标 → 26 节点场景表 → 17 次独立 Scene Draft → 逐场审阅知识、物品与立绘姿态 → 保存逐场 Prompt、SHA-256 与候选审阅状态 → JSON 编译章节卡和原生路线 → 自动枚举 16 条状态路径 → 为每条生成实际选择交互与完整 visited_scenes 断言。
 
 校验器新增章节与 HH:MM 顺序、状态边界、全局选择 ID、无效效果、独立后果场景、空稿、条件 fallback、Prompt 哈希和版本一致性。曾发现 story.json 版本停在旧版本，现与 VERSION/config.version 联合校验。机械时间检查只核验声明，内容矛盾仍需编辑审阅。
+
+## v0.5 已实际使用
+
+全部版本化请求 → Registry 固定 ID 与哈希 → 场景/语音/资产三类绑定 → 源图和参考图预检 → 内存变换与 dry-run → PNG 与 Manifest 替换及失败回滚 → 相同输入重复导入 → 30 个图片配方内存复现 → 完整 PNG 解码、像素哈希和类型校验 → 现有原生交互及独立 EXE 验收。
+
+UI 导入按原尺寸，背景式菜单需要显式配方。基础音频补齐源 WAV，主菜单复用和 CG 两个输入参考可追踪。现有 66 个游戏文件 SHA-256 未改变。不同 PNG 压缩器可能产生不同文件字节，相同显示像素时保持已经发布的文件。工具不保证重新生成相同 AI 输出，只复现固定源资产的导入。CLI 操作、元数据结构与能力边界见 ASSET_PIPELINE_V05.md。

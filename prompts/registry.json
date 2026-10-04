@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "prompts": [
+    {
+      "id": "background_station_rain_v1",
+      "version": 1,
+      "kind": "background",
+      "file": "prompts/background/station_rain_v1.md",
+      "sha256": "b6380c85f29b6bfe7c800d363cb61596f4858872ec30419a844aac8c888a1d83"
+    },
+    {
+      "id": "cg_unsent_letter_v1",
+      "version": 1,
+      "kind": "cg",
+      "file": "prompts/cg/unsent_letter_v1.md",
+      "sha256": "460289891050f42b73fcb88faafd8092a99d5da4630edc6fd78a0e58bec9a32e"
+    },
+    {
+      "id": "character_heroine_angry_v1",
+      "version": 1,
+      "kind": "character",
+      "file": "prompts/character/heroine_angry_v1.md",
+      "sha256": "4d1ee12bb9b80bbaea8b7a82399954b03220ad13ac36ef1aa5ccb87a17c2bea9",
+      "components": [
+        "character_heroine_expressions_v1"
+      ]
+    },
+    {
+      "id": "character_heroine_clean_v2",
+      "version": 2,
+      "kind": "character",
+      "file": "prompts/character/heroine_clean_v2.md",
+      "sha256": "2936787c199df7e315c5b7429152c76af29c859f44979a3e269f12dc2b9ad2c0"
+    },
+    {
+      "id": "character_heroine_embarrassed_v1",
+      "version": 1,
+      "kind": "character",
+      "file": "prompts/character/heroine_embarrassed_v1.md",
+      "sha256": "24c1015db73282b017494d5d6bf7b50ff2d50af79b78793028918e241b8f014e",
+      "components": [
+        "character_heroine_expressions_v1"
+      ]
+    },
+    {
+      "id": "character_heroine_expressions_v1",
+      "version": 1,
+      "kind": "character",
+      "file": "prompts/character/heroine_expressions_v1.json",
+      "sha256": "3c3551add03df65b70bcf964aac0959403f2b104e2cb3de1efd493c935a7b42d"
+    },
+    {
+      "id": "character_heroine_happy_v1",
+      "version": 1,
+      "kind": "character",
+      "file": "prompts/character/heroine_happy_v1.md",
+      "sha256": "6c326cea45594a5330ad4d71d9905a6e9e45a18ed33c0b91b48100778cffc8f7",
+      "components": [
+        "character_heroine_expressions_v1"
+      ]
+    },
+    {
+      "id": "character_heroine_sad_v1",
+      "version": 1,
+      "kind": "character",
+      "file": "prompts/character/heroine_sad_v1.md",
+      "sha256": "e761d1a3e6c5e8a214a1a837943f4ebde43edb9b903038f48b3d2d9892705677",
+      "components": [
+        "character_heroine_expressions_v1"
+      ]
+    },
+    {
+      "id": "character_heroine_smile_v1",
+      "version": 1,
+      "kind": "character",
+      "file": "prompts/character/heroine_smile_v1.md",
+      "sha256": "3052d436b05e028b187b27cc36a0cb7fd6cab826a0b7f0234b2d7e77a5334c86",
+      "components": [
+        "character_heroine_expressions_v1"
+      ]
+    },
+    {
+      "id": "character_heroine_surprised_v1",
+      "version": 1,
+      "kind": "character",
+      "file": "prompts/character/heroine_surprised_v1.md",
+      "sha256": "60facdd431d2566dd7fe661a1f993c152b7b07e52f7028010a682d3e158e0d4b",
+      "components": [
+        "character_heroine_expressions_v1"
+      ]
+    },
+    {
+      "id": "character_heroine_v1",
+      "version": 1,
+      "kind": "character",
+      "file": "prompts/character/heroine_v1.md",
+      "sha256": "1133588ab90004afd7b79f4ce4792d93e177ec9af9b68a469c7d488ba9876875"
+    },
+    {
+      "id": "negative_art_v1",
+      "version": 1,
+      "kind": "negative",
+      "file": "prompts/negative/art_v1.md",
+      "sha256": "5745bb8b222e79bf6faea8ecc33b41846446f061947530d2b26b963e398c8606"
+    },
+    {
+      "id": "script_scene_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/scene_v1.md",
+      "sha256": "bc5cc48b7fe000f5a42b11fae33438d79e09af6d71f9790bd3c338e35f6c2ea4"
+    },
+    {
+      "id": "script_v04_p00_entry_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v04/p00_entry_v1.md",
+      "sha256": "32bc0b7891dcdf7550a53457f8b40048d42c45ef50b345b5207c6eaa63139980"
+    },
+    {
+      "id": "script_v04_s01_platform_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v04/s01_platform_v1.md",
+      "sha256": "3d71249f7ad68f73a43bfc5065c7451ecb4e045e8b4995bc9526db3e2cc89644"
+    },
+    {
+      "id": "script_v04_s02_boxes_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v04/s02_boxes_v1.md",
+      "sha256": "80be0d70f08f1b0f7eb168e567c5877646326f0f5098a3540a837880c0d349d8"
+    },
+    {
+      "id": "script_v04_s02_business_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v04/s02_business_v1.md",
+      "sha256": "d74b1154096d3562cfcf37f4ee4d724a4b7f696ad9406c84fb5fb0ec2c1bbec6"
+    },
+    {
+      "id": "script_v04_s02_care_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v04/s02_care_v1.md",
+      "sha256": "819dcc86940aef5e31d684a97c7cb33bea85795f9279498f58404329441cd9e9"
+    },
+    {
+      "id": "script_v04_s03_archive_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v04/s03_archive_v1.md",
+      "sha256": "77f641901b87d481bc68cbab77de9353c042fc2e49fb50b712ea540baf85b331"
+    },
+    {
+      "id": "script_v04_s03_deferred_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v04/s03_deferred_v1.md",
+      "sha256": "a5c2cd80df920da4f675a02c34761bea451c48699f285f8318092396b2fb491b"
+    },
+    {
+      "id": "script_v04_s03_honest_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v04/s03_honest_v1.md",
+      "sha256": "f158e45b0272f42f6cff10666dce8c9ccbc618a708882de1ce160fa99a3ec479"
+    },
+    {
+      "id": "script_v04_s04_boundary_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v04/s04_boundary_v1.md",
+      "sha256": "5c78a74b15b6ceb743091b81abed9f5a282c113b8e487babe6126fab3a06f387"
+    },
+    {
+      "id": "script_v04_s04_concrete_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v04/s04_concrete_v1.md",
+      "sha256": "0241ca85e8ca9c8e47a1d0dbbebec9d5f6a8d678856ece47114d3f79ed6e3bff"
+    },
+    {
+      "id": "script_v04_s04_memory_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v04/s04_memory_v1.md",
+      "sha256": "4ffba29e3ebf61c10c1fa5f23329795f0c0f4f4d683aa2c67017d48d6f09832c"
+    },
+    {
+      "id": "script_v04_s04_open_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v04/s04_open_v1.md",
+      "sha256": "3db919e9a7807ab1dc0104fb2a125dcd4cea7a228bb3b4dd17c52e1a645d1867"
+    },
+    {
+      "id": "script_v04_s04_repair_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v04/s04_repair_v1.md",
+      "sha256": "559d2d70f68517b36df7dcf8b88b723241a2f46b73b56a0d786a086abe6525da"
+    },
+    {
+      "id": "script_v04_s04_reserved_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v04/s04_reserved_v1.md",
+      "sha256": "82eece127e5484a841cef3c9942df62f6a5bfa8d8e80dec9a455ecabead36a27"
+    },
+    {
+      "id": "script_v04_s04_revisit_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v04/s04_revisit_v1.md",
+      "sha256": "d5a40e799e661efd4639d2bcbfa30c3647912e499d4cee3bf648006e9640d8e5"
+    },
+    {
+      "id": "script_v04_s05_separate_path_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v04/s05_separate_path_v1.md",
+      "sha256": "2ae867cb9f60c70427d97bd585c8b24e5065df92a88be95a32e48c5e2f785372"
+    },
+    {
+      "id": "script_v04_s05_shared_path_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v04/s05_shared_path_v1.md",
+      "sha256": "e53bda76a883e89ad3f3047e07893bd6b92f142e29fecea2a7669add817da4ce"
+    },
+    {
+      "id": "voice_heroine_v1",
+      "version": 1,
+      "kind": "voice",
+      "file": "prompts/voice/heroine_v1.md",
+      "sha256": "43f1470aac01e5a527fcff5ab7ceac230c675ba172c124090526d6b00343e909"
+    }
+  ]
+}

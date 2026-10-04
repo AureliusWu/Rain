@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "version": "0.4.0",
+  "version": "0.5.0",
   "title": "雨停之前",
   "status": "chapter_route_candidate_user_review",
   "entry": "p00_entry",
@@ -65,7 +65,8 @@
       "ambient": "rain_ambience",
       "draft_prompt": "prompts/script/v04/p00_entry_v1.md",
       "draft_prompt_sha256": "32bc0b7891dcdf7550a53457f8b40048d42c45ef50b345b5207c6eaa63139980",
-      "review_status": "agent_reviewed_candidate"
+      "review_status": "agent_reviewed_candidate",
+      "draft_prompt_id": "script_v04_p00_entry_v1"
     },
     {
       "id": "s01_arrival",
@@ -144,7 +145,8 @@
       "dramatic_purpose": "由声音认出久未联系的旧友。",
       "draft_prompt": "prompts/script/scene_v1.md",
       "draft_prompt_sha256": "bc5cc48b7fe000f5a42b11fae33438d79e09af6d71f9790bd3c338e35f6c2ea4",
-      "review_status": "preserved_v03_dialogue_with_route_revision"
+      "review_status": "preserved_v03_dialogue_with_route_revision",
+      "draft_prompt_id": "script_scene_v1"
     },
     {
       "id": "s01_platform",
@@ -209,7 +211,8 @@
       "next": "s02_reunion",
       "draft_prompt": "prompts/script/v04/s01_platform_v1.md",
       "draft_prompt_sha256": "3d71249f7ad68f73a43bfc5065c7451ecb4e045e8b4995bc9526db3e2cc89644",
-      "review_status": "agent_reviewed_candidate"
+      "review_status": "agent_reviewed_candidate",
+      "draft_prompt_id": "script_v04_s01_platform_v1"
     },
     {
       "id": "s02_reunion",
@@ -342,7 +345,8 @@
       "draft_prompt_sha256": "bc5cc48b7fe000f5a42b11fae33438d79e09af6d71f9790bd3c338e35f6c2ea4",
       "review_status": "preserved_v03_dialogue_with_route_revision",
       "background": "station",
-      "sprite": "normal"
+      "sprite": "normal",
+      "draft_prompt_id": "script_scene_v1"
     },
     {
       "id": "s02_care",
@@ -414,7 +418,8 @@
       "next": "s02_boxes",
       "draft_prompt": "prompts/script/v04/s02_care_v1.md",
       "draft_prompt_sha256": "819dcc86940aef5e31d684a97c7cb33bea85795f9279498f58404329441cd9e9",
-      "review_status": "agent_reviewed_candidate"
+      "review_status": "agent_reviewed_candidate",
+      "draft_prompt_id": "script_v04_s02_care_v1"
     },
     {
       "id": "s02_business",
@@ -484,7 +489,8 @@
       "next": "s02_boxes",
       "draft_prompt": "prompts/script/v04/s02_business_v1.md",
       "draft_prompt_sha256": "d74b1154096d3562cfcf37f4ee4d724a4b7f696ad9406c84fb5fb0ec2c1bbec6",
-      "review_status": "agent_reviewed_candidate"
+      "review_status": "agent_reviewed_candidate",
+      "draft_prompt_id": "script_v04_s02_business_v1"
     },
     {
       "id": "s02_boxes",
@@ -548,7 +554,8 @@
       "next": "s03_letter",
       "draft_prompt": "prompts/script/v04/s02_boxes_v1.md",
       "draft_prompt_sha256": "80be0d70f08f1b0f7eb168e567c5877646326f0f5098a3540a837880c0d349d8",
-      "review_status": "agent_reviewed_candidate"
+      "review_status": "agent_reviewed_candidate",
+      "draft_prompt_id": "script_v04_s02_boxes_v1"
     },
     {
       "id": "s03_letter",
@@ -690,7 +697,8 @@
       "dramatic_purpose": "交还未拆的信，选择是否承认作者。",
       "draft_prompt": "prompts/script/scene_v1.md",
       "draft_prompt_sha256": "bc5cc48b7fe000f5a42b11fae33438d79e09af6d71f9790bd3c338e35f6c2ea4",
-      "review_status": "preserved_v03_dialogue_with_route_revision"
+      "review_status": "preserved_v03_dialogue_with_route_revision",
+      "draft_prompt_id": "script_scene_v1"
     },
     {
       "id": "s03_honest",
@@ -748,7 +756,8 @@
       "next": "s03_archive",
       "draft_prompt": "prompts/script/v04/s03_honest_v1.md",
       "draft_prompt_sha256": "f158e45b0272f42f6cff10666dce8c9ccbc618a708882de1ce160fa99a3ec479",
-      "review_status": "agent_reviewed_candidate"
+      "review_status": "agent_reviewed_candidate",
+      "draft_prompt_id": "script_v04_s03_honest_v1"
     },
     {
       "id": "s03_deferred",
@@ -811,7 +820,8 @@
       "next": "s03_archive",
       "draft_prompt": "prompts/script/v04/s03_deferred_v1.md",
       "draft_prompt_sha256": "a5c2cd80df920da4f675a02c34761bea451c48699f285f8318092396b2fb491b",
-      "review_status": "agent_reviewed_candidate"
+      "review_status": "agent_reviewed_candidate",
+      "draft_prompt_id": "script_v04_s03_deferred_v1"
     },
     {
       "id": "s03_archive",
@@ -873,7 +883,8 @@
       "sprite": "normal",
       "draft_prompt": "prompts/script/v04/s03_archive_v1.md",
       "draft_prompt_sha256": "77f641901b87d481bc68cbab77de9353c042fc2e49fb50b712ea540baf85b331",
-      "review_status": "agent_reviewed_candidate"
+      "review_status": "agent_reviewed_candidate",
+      "draft_prompt_id": "script_v04_s03_archive_v1"
     },
     {
       "id": "s04_gate",
@@ -956,7 +967,8 @@
       "next": "s04_waiting",
       "draft_prompt": "prompts/script/v04/s04_open_v1.md",
       "draft_prompt_sha256": "3db919e9a7807ab1dc0104fb2a125dcd4cea7a228bb3b4dd17c52e1a645d1867",
-      "review_status": "agent_reviewed_candidate"
+      "review_status": "agent_reviewed_candidate",
+      "draft_prompt_id": "script_v04_s04_open_v1"
     },
     {
       "id": "s04_reserved",
@@ -1016,7 +1028,8 @@
       "next": "s04_waiting",
       "draft_prompt": "prompts/script/v04/s04_reserved_v1.md",
       "draft_prompt_sha256": "82eece127e5484a841cef3c9942df62f6a5bfa8d8e80dec9a455ecabead36a27",
-      "review_status": "agent_reviewed_candidate"
+      "review_status": "agent_reviewed_candidate",
+      "draft_prompt_id": "script_v04_s04_reserved_v1"
     },
     {
       "id": "s04_waiting",
@@ -1150,7 +1163,8 @@
       "dramatic_purpose": "女主表达独立生活和对明确联系的需求。",
       "draft_prompt": "prompts/script/scene_v1.md",
       "draft_prompt_sha256": "bc5cc48b7fe000f5a42b11fae33438d79e09af6d71f9790bd3c338e35f6c2ea4",
-      "review_status": "preserved_v03_dialogue_with_route_revision"
+      "review_status": "preserved_v03_dialogue_with_route_revision",
+      "draft_prompt_id": "script_scene_v1"
     },
     {
       "id": "s04_memory",
@@ -1228,7 +1242,8 @@
       "sprite": "normal",
       "draft_prompt": "prompts/script/v04/s04_memory_v1.md",
       "draft_prompt_sha256": "4ffba29e3ebf61c10c1fa5f23329795f0c0f4f4d683aa2c67017d48d6f09832c",
-      "review_status": "agent_reviewed_candidate"
+      "review_status": "agent_reviewed_candidate",
+      "draft_prompt_id": "script_v04_s04_memory_v1"
     },
     {
       "id": "s04_boundary",
@@ -1299,7 +1314,8 @@
       "next": "s04_revisit",
       "draft_prompt": "prompts/script/v04/s04_boundary_v1.md",
       "draft_prompt_sha256": "5c78a74b15b6ceb743091b81abed9f5a282c113b8e487babe6126fab3a06f387",
-      "review_status": "agent_reviewed_candidate"
+      "review_status": "agent_reviewed_candidate",
+      "draft_prompt_id": "script_v04_s04_boundary_v1"
     },
     {
       "id": "s04_revisit",
@@ -1382,7 +1398,8 @@
       ],
       "draft_prompt": "prompts/script/v04/s04_revisit_v1.md",
       "draft_prompt_sha256": "d5a40e799e661efd4639d2bcbfa30c3647912e499d4cee3bf648006e9640d8e5",
-      "review_status": "agent_reviewed_candidate"
+      "review_status": "agent_reviewed_candidate",
+      "draft_prompt_id": "script_v04_s04_revisit_v1"
     },
     {
       "id": "s04_repair",
@@ -1458,7 +1475,8 @@
       "next": "s05_departure",
       "draft_prompt": "prompts/script/v04/s04_repair_v1.md",
       "draft_prompt_sha256": "559d2d70f68517b36df7dcf8b88b723241a2f46b73b56a0d786a086abe6525da",
-      "review_status": "agent_reviewed_candidate"
+      "review_status": "agent_reviewed_candidate",
+      "draft_prompt_id": "script_v04_s04_repair_v1"
     },
     {
       "id": "s04_concrete",
@@ -1529,7 +1547,8 @@
       "next": "s05_departure",
       "draft_prompt": "prompts/script/v04/s04_concrete_v1.md",
       "draft_prompt_sha256": "0241ca85e8ca9c8e47a1d0dbbebec9d5f6a8d678856ece47114d3f79ed6e3bff",
-      "review_status": "agent_reviewed_candidate"
+      "review_status": "agent_reviewed_candidate",
+      "draft_prompt_id": "script_v04_s04_concrete_v1"
     },
     {
       "id": "s05_departure",
@@ -1640,7 +1659,8 @@
       "draft_prompt_sha256": "bc5cc48b7fe000f5a42b11fae33438d79e09af6d71f9790bd3c338e35f6c2ea4",
       "review_status": "preserved_v03_dialogue_with_route_revision",
       "background": "station",
-      "sprite": "normal"
+      "sprite": "normal",
+      "draft_prompt_id": "script_scene_v1"
     },
     {
       "id": "s05_shared_path",
@@ -1694,7 +1714,8 @@
       "next": "s06_resolution",
       "draft_prompt": "prompts/script/v04/s05_shared_path_v1.md",
       "draft_prompt_sha256": "e53bda76a883e89ad3f3047e07893bd6b92f142e29fecea2a7669add817da4ce",
-      "review_status": "agent_reviewed_candidate"
+      "review_status": "agent_reviewed_candidate",
+      "draft_prompt_id": "script_v04_s05_shared_path_v1"
     },
     {
       "id": "s05_separate_path",
@@ -1748,7 +1769,8 @@
       "next": "s08_normal",
       "draft_prompt": "prompts/script/v04/s05_separate_path_v1.md",
       "draft_prompt_sha256": "2ae867cb9f60c70427d97bd585c8b24e5065df92a88be95a32e48c5e2f785372",
-      "review_status": "agent_reviewed_candidate"
+      "review_status": "agent_reviewed_candidate",
+      "draft_prompt_id": "script_v04_s05_separate_path_v1"
     },
     {
       "id": "s06_resolution",
@@ -1776,7 +1798,8 @@
       "dramatic_purpose": "在同行前提下以关系、信任和已知事实判定结局。",
       "draft_prompt": "prompts/script/scene_v1.md",
       "draft_prompt_sha256": "bc5cc48b7fe000f5a42b11fae33438d79e09af6d71f9790bd3c338e35f6c2ea4",
-      "review_status": "preserved_v03_dialogue_with_route_revision"
+      "review_status": "preserved_v03_dialogue_with_route_revision",
+      "draft_prompt_id": "script_scene_v1"
     },
     {
       "id": "s07_true",
@@ -1872,7 +1895,8 @@
       "dramatic_purpose": "小店里把今天说清楚并约定下一次联系。",
       "draft_prompt": "prompts/script/scene_v1.md",
       "draft_prompt_sha256": "bc5cc48b7fe000f5a42b11fae33438d79e09af6d71f9790bd3c338e35f6c2ea4",
-      "review_status": "preserved_v03_dialogue_with_route_revision"
+      "review_status": "preserved_v03_dialogue_with_route_revision",
+      "draft_prompt_id": "script_scene_v1"
     },
     {
       "id": "s08_normal",
@@ -1937,7 +1961,8 @@
       "draft_prompt": "prompts/script/scene_v1.md",
       "draft_prompt_sha256": "bc5cc48b7fe000f5a42b11fae33438d79e09af6d71f9790bd3c338e35f6c2ea4",
       "review_status": "preserved_v03_dialogue_with_route_revision",
-      "clear_scene": true
+      "clear_scene": true,
+      "draft_prompt_id": "script_scene_v1"
     }
   ],
   "chapters": [

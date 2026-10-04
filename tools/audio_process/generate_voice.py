@@ -6,6 +6,7 @@ import os
 from pathlib import Path
 import subprocess
 from tools.story_model import ROOT
+from tools.prompt_registry import prompt_by_file
 
 # Must precede every import that can initialize ONNX Runtime. The API alone
 # cannot suppress the provider's initialization event on non-Windows systems.
@@ -50,7 +51,10 @@ def main():
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(source), "-af", "afade=t=in:d=0.015", "-c:a", "libvorbis", "-q:a", "5", str(output)], check=True)
         voice.update(text_sha256=text_hash, sample_rate=rate, duration_seconds=round(len(samples)/rate, 3), source_file=source.relative_to(ROOT).as_posix(), model_sha256=MODEL_HASH, voice_bank_sha256=VOICES_HASH)
         prompt = ROOT / voice["prompt"]
+        prompt_id = prompt_by_file(ROOT, voice["prompt"])["id"]
+        voice["prompt_id"] = prompt_id
         entry = {"id": voice["voice_id"], "type": "voice", "file": voice["file"], "character": "heroine", "source": "Kokoro-82M v1.1-zh; ONNX export model-files-v1.1; zf_001; generated from project dialogue", "source_file": source.relative_to(ROOT).as_posix(), "source_sha256": hashlib.sha256(source.read_bytes()).hexdigest(), "license": "Model Apache-2.0; authoring wrapper MIT; synthesized project dialogue; see CREDITS.md", "version": voice["version"], "approved": True, "status": "candidate_user_review", "prompt": voice["prompt"], "prompt_sha256": hashlib.sha256(prompt.read_bytes()).hexdigest(), "sha256": hashlib.sha256(output.read_bytes()).hexdigest()}
+        entry.update(prompt_id=prompt_id, approval_scope="Agent integration review; user final voice choice pending")
         manifest["assets"] = [a for a in manifest["assets"] if a["id"] != entry["id"]] + [entry]
         print(f"Generated {voice['voice_id']}: {voice['duration_seconds']}s", flush=True)
     voice_path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

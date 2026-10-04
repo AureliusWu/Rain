@@ -19,7 +19,8 @@
       "duration_seconds": 3.704,
       "source_file": "assets_source/audio/voice/heroine_s01_arrival_l005_v1.wav",
       "model_sha256": "11751c087b4bbeed031e2b687b11dda698bd27ba0509472f960b57f835a999f7",
-      "voice_bank_sha256": "14cb6186c99e4f6016871405f62046c5df863ae27465cbdc4ee08be7dd703acd"
+      "voice_bank_sha256": "14cb6186c99e4f6016871405f62046c5df863ae27465cbdc4ee08be7dd703acd",
+      "prompt_id": "voice_heroine_v1"
     },
     {
       "voice_id": "heroine_s02_reunion_l008_v1",
@@ -39,7 +40,8 @@
       "duration_seconds": 3.835,
       "source_file": "assets_source/audio/voice/heroine_s02_reunion_l008_v1.wav",
       "model_sha256": "11751c087b4bbeed031e2b687b11dda698bd27ba0509472f960b57f835a999f7",
-      "voice_bank_sha256": "14cb6186c99e4f6016871405f62046c5df863ae27465cbdc4ee08be7dd703acd"
+      "voice_bank_sha256": "14cb6186c99e4f6016871405f62046c5df863ae27465cbdc4ee08be7dd703acd",
+      "prompt_id": "voice_heroine_v1"
     },
     {
       "voice_id": "heroine_s03_letter_l011_v1",
@@ -59,7 +61,8 @@
       "duration_seconds": 2.037,
       "source_file": "assets_source/audio/voice/heroine_s03_letter_l011_v1.wav",
       "model_sha256": "11751c087b4bbeed031e2b687b11dda698bd27ba0509472f960b57f835a999f7",
-      "voice_bank_sha256": "14cb6186c99e4f6016871405f62046c5df863ae27465cbdc4ee08be7dd703acd"
+      "voice_bank_sha256": "14cb6186c99e4f6016871405f62046c5df863ae27465cbdc4ee08be7dd703acd",
+      "prompt_id": "voice_heroine_v1"
     },
     {
       "voice_id": "heroine_s04_waiting_l013_v1",
@@ -79,7 +82,8 @@
       "duration_seconds": 4.841,
       "source_file": "assets_source/audio/voice/heroine_s04_waiting_l013_v1.wav",
       "model_sha256": "11751c087b4bbeed031e2b687b11dda698bd27ba0509472f960b57f835a999f7",
-      "voice_bank_sha256": "14cb6186c99e4f6016871405f62046c5df863ae27465cbdc4ee08be7dd703acd"
+      "voice_bank_sha256": "14cb6186c99e4f6016871405f62046c5df863ae27465cbdc4ee08be7dd703acd",
+      "prompt_id": "voice_heroine_v1"
     },
     {
       "voice_id": "heroine_s05_departure_l007_v1",
@@ -99,7 +103,8 @@
       "duration_seconds": 2.006,
       "source_file": "assets_source/audio/voice/heroine_s05_departure_l007_v1.wav",
       "model_sha256": "11751c087b4bbeed031e2b687b11dda698bd27ba0509472f960b57f835a999f7",
-      "voice_bank_sha256": "14cb6186c99e4f6016871405f62046c5df863ae27465cbdc4ee08be7dd703acd"
+      "voice_bank_sha256": "14cb6186c99e4f6016871405f62046c5df863ae27465cbdc4ee08be7dd703acd",
+      "prompt_id": "voice_heroine_v1"
     },
     {
       "voice_id": "heroine_s07_true_l014_v1",
@@ -119,7 +124,8 @@
       "duration_seconds": 3.336,
       "source_file": "assets_source/audio/voice/heroine_s07_true_l014_v1.wav",
       "model_sha256": "11751c087b4bbeed031e2b687b11dda698bd27ba0509472f960b57f835a999f7",
-      "voice_bank_sha256": "14cb6186c99e4f6016871405f62046c5df863ae27465cbdc4ee08be7dd703acd"
+      "voice_bank_sha256": "14cb6186c99e4f6016871405f62046c5df863ae27465cbdc4ee08be7dd703acd",
+      "prompt_id": "voice_heroine_v1"
     }
   ]
 }

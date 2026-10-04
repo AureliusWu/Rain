@@ -3,6 +3,7 @@ from collections import Counter
 import hashlib
 import re
 from tools.story_model import ROOT, load_story, validate_structure, scene_lines
+from tools.prompt_registry import prompt_by_file
 
 
 def lint(story):
@@ -18,6 +19,11 @@ def lint(story):
         prompt = ROOT / node.get("draft_prompt", "missing")
         if not prompt.is_file() or hashlib.sha256(prompt.read_bytes()).hexdigest() != node.get("draft_prompt_sha256"):
             errors.append(f"{node['id']}: missing/stale Scene Prompt")
+        try:
+            if prompt_by_file(ROOT, node.get("draft_prompt"))["id"] != node.get("draft_prompt_id"):
+                errors.append(f"{node['id']}: Scene Prompt Registry binding mismatch")
+        except (ValueError, OSError) as exc:
+            errors.append(f"{node['id']}: Scene Prompt Registry: {exc}")
     texts = [line["text"] for n in story["nodes"] for line in scene_lines(n)]
     warnings = []
     for text, count in Counter(texts).items():

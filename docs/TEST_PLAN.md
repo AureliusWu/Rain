@@ -32,6 +32,14 @@ v0.4 按全部 16 条状态路径生成交互用例，逐项选择后核对实�
 
 章节与 CG 截图以显示文字为等待条件，避免 current_scene 已更新但过场还未完成。独立 EXE 的章节卡、两种信任分支、补充选择、CG 和七种表情截图均必须完整解码。
 
+## v0.5 管线
+
+用临时目录测试新导入、重复执行、UI 原尺寸与 alpha、dry-run 不写入、缺参考/改 Prompt、透明度拒绝、版本与输出冲突、Manifest I/O 失败恢复旧图、首次失败清理、跨平台路径、解析后软链接、损坏 PNG、错误类型与 Registry 绑定。Windows 没有软链接权限时模拟其解析目标，Linux 使用真实软链接。
+
+CI 新增 Prompt Registry 检查、assets.json 报告与 30 个配方重建；57 张 PNG 必须完整解码，不能用匹配文件哈希代替解码。语音同时检查台词绑定、文本哈希、Prompt ID、来源、采样率与源 WAV 时长，OGG 头部检查与原生播放另行记录。
+
+本地 45 个 Python 用例通过；31 份 Registry、66 个资产、57 张图片解码、30 个配方与作者检查均 0 错误。Ren'Py lint 通过；Linux 实际引擎全集 21 用例 / 132 断言通过（103.301 秒）。最终 Windows 与 ZIP 独立 EXE 结果完成后记录于 STATUS.md。
+
 ## Windows
 
 GitHub Actions 在 Windows runner 上运行原生 Ren'Py，测试和构建后从 ZIP 解压的分发程序再次运行同一测试集合。开发 testcases 在分发包中排除；包测试时仅临时注入测试脚本，不改变发行版。

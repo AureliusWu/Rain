@@ -5,6 +5,7 @@ from pathlib import Path
 import shutil
 from PIL import Image, ImageDraw
 from tools.story_model import ROOT
+from tools.image_process.metadata import image_metadata
 
 
 def main():
@@ -20,6 +21,8 @@ def main():
         shutil.copy2(source, target)
         entry = by_file["gui/" + relative]
         entry.update(source="Original procedural GUI; tools/image_process/create_ui.py", license="Project MIT", version=2, status="candidate_user_review", source_file=source.relative_to(ROOT).as_posix(), source_sha256=hashlib.sha256(source.read_bytes()).hexdigest(), sha256=hashlib.sha256(target.read_bytes()).hexdigest())
+        with Image.open(source) as decoded:
+            entry.update(image=image_metadata(decoded), image_recipe={"method": "copy_png_v1"}, approval_scope="Agent integration review; user final visual choice pending")
 
     for name in ["main_menu", "game_menu"]:
         image = Image.new("RGBA", (1280, 720), (0, 0, 0, 0))
