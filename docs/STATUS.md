@@ -62,7 +62,7 @@ Windows 最终 CI 已通过：Python 12 个用例；Windows 原生引擎 12 个�
 
 发布提交：98d5d8e2bec642e8a94063dc5df9729842d22240。ZIP：39,469,538 字节。SHA-256：44cecf41f9146e5b244f43406d9e5424c214e6ebc371b2ca43a16e0148898fcd。Release 附 SHA256SUMS.txt，Actions 保留全部报告、日志与截图。仓库只维护 main，阶段使用 tag，最终创作选择继续由用户审阅。
 
-## v0.5.0 — Windows 验收中
+## v0.5.0 — 已验收并发布
 
 31 份 Prompt 登记稳定 ID、版本、文件与哈希；图片、语音和场景均绑定 Registry。66 个资产追踪补全，57 张 PNG 记录显示元数据并完整解码，30 个导入配方可从源图重建。主菜单复用站台背景、CG 原始参考、normal 清理参考与基础音频源 WAV 均可追踪。
 
@@ -70,7 +70,15 @@ Windows 最终 CI 已通过：Python 12 个用例；Windows 原生引擎 12 个�
 
 发现并修复：UI 导入被统一放大、缺参考/组件时可能先覆盖游戏图片、输出归属与版本缺少保护、复用主菜单缺少来源哈希，以及匹配文件哈希仍不能证明 PNG 可解码。加入先预检后写入、原尺寸 UI、dry-run、版本与路径检查、Manifest 正常 I/O 失败回滚、重复导入与完整解码门槛。保留已有字体 ID 的大小写，不重命名已登记资产。
 
-Windows 首轮 CI 37214662059 的两个回滚用例未注入预期错误：临时目录短路径别名与解析后的文件名被当作不同路径。已将测试根目录与故障注入目标统一解析；这次尚未执行引擎或发布。最终 Windows 源码引擎与 ZIP 独立 EXE 验收在完成后补充；CI 配置不记为通过。所有新管线工具均留在开发仓库，不加入运行时模型或新框架。
+Windows 首轮 CI 37214662059 的两个回滚用例未注入预期错误：临时目录短路径别名与解析后的文件名被当作不同路径。已将测试根目录与故障注入目标统一解析；首轮在 Python 检查处停止，未执行引擎或发布。修正后全部 45 个 Windows Python 用例通过，固定 Pillow 11.3.0 下 Registry、资产、30 个配方重建与 Ren'Py lint 均通过。所有新管线工具均留在开发仓库。
+
+最终 Windows 源码引擎 21 个交互用例 / 132 个断言通过（154.067 秒）；ZIP 解压后的独立 EXE 同为 21 个用例 / 132 个断言（96.154 秒），均无跳过。16 条路线、两个结局、章节及表情存读档、重新开始、历史、音频通道、全屏、快进和自动播放均通过。
+
+已下载验收证据（24,099,325 字节），SHA-256：ebd955adbe101d950a07ea28828c5959f6af07b094526a673ba002614a7c56db；全部 68 张 PNG 完整解码。直接查看独立 EXE 的 v0.5.0 主菜单、首个选择、CG、设置、happy 表情与第四章标题，中文字形、透明立绘、CG 和 UI 正常。发布 ZIP 不包含开发剧情数据、测试脚本或存档。
+
+[成功 CI 37214804210](https://github.com/AureliusWu/Test/actions/runs/37214804210) · [v0.5.0 Release](https://github.com/AureliusWu/Test/releases/tag/v0.5.0) · [Windows ZIP](https://github.com/AureliusWu/Test/releases/download/v0.5.0/BeforeTheRainStops-0.5.0-win.zip)
+
+发布提交及 tag：8cf379d78c1f5ea82c97bdd31ed229ba1f133441。ZIP：39,470,025 字节。GitHub 发行资产 SHA-256：d304f11cb8cba794c8cd1a36a616b23299b241ac97c2a4d944e3302775c5c07c。Release 附 SHA256SUMS.txt；Actions 保留全部报告、日志与截图。仓库只维护 main，阶段使用 tag。
 
 ## 限制与下一阶段
 

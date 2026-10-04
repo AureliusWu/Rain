@@ -49,7 +49,7 @@ python -m tools.image_process.import_asset --check
 
 30 个配方覆盖背景、CG、七种立绘、复用主菜单和 20 个程序 UI 图元。`--check` 从登记源图重建到内存，核对像素与元数据，不修改游戏文件。相同输入重复执行不会重排记录或改写文件。已实际重建 heroine_smile，返回 changed=false。
 
-SHA-256 校验文件字节；image.pixel_sha256 以尺寸和 RGBA 像素为输入，检测显示内容。不同 Pillow/PNG 编码器可能输出不同压缩字节；显示像素一致时保留原发行 PNG。开发依赖固定 Pillow 11.3.0，最终 Windows CI 还会执行全部重建检查。
+SHA-256 校验文件字节；image.pixel_sha256 以尺寸和 RGBA 像素为输入，检测显示内容。不同 Pillow/PNG 编码器可能输出不同压缩字节；显示像素一致时保留原发行 PNG。开发依赖固定 Pillow 11.3.0，最终 Windows CI 已通过全部 30 个重建检查。
 
 所有图片记录 width/height/mode/format/has_alpha 与 pixel_sha256，并必须完整解码。主菜单记录 reused_from=station；normal 的清理参考与 CG 的两个原始参考也保留哈希。基础 BGM/雨声补齐源 WAV；6 句语音继续核对台词、来源、Prompt ID、文本哈希、采样率和源 WAV 时长。OGG 检查头部与运行时播放，完整编码分析在音频阶段完善。
 
