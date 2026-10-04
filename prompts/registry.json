@@ -2,6 +2,13 @@
   "schema_version": 1,
   "prompts": [
     {
+      "id": "audio_soundtrack_v1",
+      "version": 1,
+      "kind": "audio",
+      "file": "prompts/audio/soundtrack_v1.json",
+      "sha256": "9a1395f5b3d6fcb8a2aa2785f0f7e4fc857eaa7fb68626d57cb1eb762ac88a52"
+    },
+    {
       "id": "background_station_rain_v1",
       "version": 1,
       "kind": "background",
@@ -235,6 +242,13 @@
       "kind": "voice",
       "file": "prompts/voice/heroine_v1.md",
       "sha256": "43f1470aac01e5a527fcff5ab7ceac230c675ba172c124090526d6b00343e909"
+    },
+    {
+      "id": "voice_heroine_v2",
+      "version": 2,
+      "kind": "voice",
+      "file": "prompts/voice/heroine_v2.md",
+      "sha256": "273970b73a1aca7d9baaaee5a45faa1f68b63322c19be5c63fbe290b16a2c8d2"
     }
   ]
 }

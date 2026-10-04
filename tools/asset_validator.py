@@ -9,6 +9,8 @@ from tools.asset_paths import ASSET_ID, project_file, sha256
 from tools.image_process.metadata import image_metadata
 from tools.prompt_registry import validate_registry, REGISTRY
 from tools.story_model import ROOT, load_story, scene_lines
+from tools.audio_validator import validate_audio
+from tools.audio_process.generate_voice import request_fingerprint, MODEL_HASH, VOICES_HASH, CONFIG_HASH
 
 IMAGE_TYPES = {'background', 'sprite', 'cg', 'ui'}
 EXTENSIONS = {**{kind: {'.png'} for kind in IMAGE_TYPES}, 'audio': {'.ogg'}, 'voice': {'.ogg'}, 'font': {'.ttf', '.otf'}}
@@ -131,6 +133,11 @@ def validate_assets(root=ROOT, story=None, manifest=None, voices=None):
         name = voice['voice_id']
         if sha256(voice['text'].encode('utf-8')) != voice.get('text_sha256'):
             errors.append(f'Voice text hash mismatch: {name}')
+        prompt = prompts.get(voice.get('prompt_id'), {})
+        if voice.get('generation_sha256') != request_fingerprint(voice, prompt.get('sha256')):
+            errors.append(f'Voice request fingerprint mismatch: {name}')
+        if (voice.get('model_sha256'), voice.get('voice_bank_sha256'), voice.get('config_sha256')) != (MODEL_HASH, VOICES_HASH, CONFIG_HASH):
+            errors.append(f'Voice model/config provenance mismatch: {name}')
         asset = lookup.get(name)
         if not asset or (asset.get('file'), asset.get('prompt_id'), asset.get('source_file')) != (voice.get('file'), voice.get('prompt_id'), voice.get('source_file')):
             errors.append(f'Voice provenance binding mismatch: {name}')
@@ -145,6 +152,8 @@ def validate_assets(root=ROOT, story=None, manifest=None, voices=None):
             errors.append(f'Invalid source voice: {name}: {exc}')
     for voice_id in set(voice_ids) - bound:
         errors.append(f'Unbound voice: {voice_id}')
+    audio_errors, _ = validate_audio(root, assets, story)
+    errors.extend(audio_errors)
     return errors
 
 

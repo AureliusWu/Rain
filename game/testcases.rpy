@@ -383,6 +383,8 @@ testcase save_load_and_restart:
     assert eval (visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion'])
     assert eval (affection == 0 and trust == 0 and not truth_known)
     assert eval renpy.get_attributes("heroine") == ('normal',)
+    assert eval renpy.music.get_playing(channel="music") == "audio/bgm/rain_theme.ogg"
+    assert eval renpy.music.get_playing(channel="ambient") == "audio/sfx/rain_ambience.ogg"
     run MainMenu(confirm=False)
     click id "menu_start"
     advance until screen "choice"
@@ -402,6 +404,8 @@ testcase history_preferences_and_audio:
     screenshot "settings"
     click id "mute_all"
     assert eval preferences.get_mute("music")
+    assert eval preferences.get_mute("sfx")
+    assert eval preferences.get_mute("voice")
     click id "mute_all"
     assert eval not preferences.get_mute("music")
     click id "game_return"
@@ -476,3 +480,73 @@ testcase character_expressions_in_story:
     pause 0.2
     assert eval renpy.showing("heroine happy")
     screenshot "expression-happy"
+
+testcase key_voice_and_sound_cues:
+    advance until screen "choice"
+    click "把干燥的位置让给她，问候近况"
+    advance until "她从纸袋里抽出一只没有邮票的信封。边角被压平，纸已经有些发黄。"
+    pause 0.1
+    assert eval renpy.music.get_playing(channel='sound') == 'audio/sfx/paper_rustle.ogg'
+    advance until screen "choice"
+    click "告诉她：这封信是我写的"
+    advance until "……那为什么没给我？"
+    pause 0.1
+    assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_q02_honest_l002_v1.ogg'
+    advance until "我拿出手机，给她发了一个句号。她的屏幕亮起来，头像还是当年那只画得有点歪的猫。"
+    pause 0.1
+    assert eval renpy.music.get_playing(channel='sound') == 'audio/sfx/message_ping.ogg'
+
+testcase audio_true_ending:
+    advance until screen "choice"
+    click "把干燥的位置让给她，问候近况"
+    advance until "还有一样东西，应该也是你的。"
+    pause until eval renpy.music.get_playing(channel="music") == "audio/bgm/unspoken_theme.ogg"
+    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/unspoken_theme.ogg'
+    advance until screen "choice"
+    click "告诉她：这封信是我写的"
+    advance until "另一张照片，是什么时候拍的？"
+    pause until eval renpy.music.get_playing(channel="music") == "audio/bgm/rain_theme.ogg"
+    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/rain_theme.ogg'
+    advance until screen "choice"
+    click "把信里的意思和今天的打算说清楚"
+    advance until "雨小了一些。出口的保安敲了敲玻璃，示意我们该收东西了。"
+    pause until eval renpy.music.get_playing(channel="music") == "audio/bgm/next_message_theme.ogg"
+    pause until eval renpy.music.get_playing(channel="ambient") == "audio/sfx/rain_light_ambience.ogg"
+    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/next_message_theme.ogg'
+    assert eval renpy.music.get_playing(channel='ambient') == 'audio/sfx/rain_light_ambience.ogg'
+    advance until screen "choice"
+    click "和她一起走，继续聊一会儿"
+    advance until "小店的灯还亮着。桌上有水杯、纸巾，和一碟并不特别好吃的饼干。我们坐下，没有谁急着给今晚取名字。"
+    pause until eval renpy.music.get_playing(channel="ambient") is None
+    assert eval renpy.music.get_playing(channel="ambient") is None
+    advance until "嗯。这次记得交给我。"
+    pause 0.1
+    assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s07_true_l010_v1.ogg'
+    screenshot "audio-true-voice"
+    advance until screen "ending_card"
+    pause until eval renpy.music.get_playing(channel="music") is None
+    assert eval renpy.music.get_playing(channel="music") is None
+    assert eval renpy.music.get_playing(channel="ambient") is None
+
+testcase audio_normal_ending:
+    advance until screen "choice"
+    click "把干燥的位置让给她，问候近况"
+    advance until screen "choice"
+    click "告诉她：这封信是我写的"
+    advance until screen "choice"
+    click "把信里的意思和今天的打算说清楚"
+    advance until screen "choice"
+    click "今晚先各自回家，改天再联系"
+    advance until "手机亮起来。她发来一张旧照片，下面只有一行字。"
+    pause 0.1
+    assert eval renpy.music.get_playing(channel='sound') == 'audio/sfx/message_ping.ogg'
+    advance until "这张没有拍歪。你回去以后，慢慢看。"
+    pause 0.1
+    assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s08_normal_l005_v1.ogg'
+    screenshot "audio-normal-voice"
+    advance until "雨停了。这个晚上没有给出所有答案，但我们已经重新有了彼此的号码。"
+    pause until eval renpy.music.get_playing(channel="ambient") is None
+    assert eval renpy.music.get_playing(channel="ambient") is None
+    advance until screen "ending_card"
+    pause until eval renpy.music.get_playing(channel="music") is None
+    assert eval renpy.music.get_playing(channel="music") is None

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "direction": "Original restrained bell motifs, quieter rain and two everyday cues for Before The Rain Stops. AI-assisted composition implemented as procedural synthesis, not output from a music-generation model. No sampled recordings, reference songs or imitated artist. Final listening review pending.",
+  "sample_rate": 24000,
+  "assets": [
+    {"id": "unspoken_theme", "kind": "music", "role": "bgm", "duration_seconds": 40, "amplitude": 0.1, "notes": [57, 60, 64, 60, 55, 59, 62, 59, 53, 57, 60, 57, 55, 59, 62, 64], "source_file": "assets_source/audio/unspoken_theme_v1.wav", "file": "audio/bgm/unspoken_theme.ogg"},
+    {"id": "next_message_theme", "kind": "music", "role": "bgm", "duration_seconds": 40, "amplitude": 0.1, "notes": [60, 64, 67, 64, 62, 65, 69, 65, 64, 67, 71, 67, 62, 65, 67, 60], "source_file": "assets_source/audio/next_message_theme_v1.wav", "file": "audio/bgm/next_message_theme.ogg"},
+    {"id": "rain_light_ambience", "kind": "rain", "role": "ambient", "duration_seconds": 32, "amplitude": 0.1, "seed": 260605, "source_file": "assets_source/audio/rain_light_ambience_v1.wav", "file": "audio/sfx/rain_light_ambience.ogg"},
+    {"id": "paper_rustle", "kind": "paper", "role": "sfx", "duration_seconds": 0.7, "amplitude": 0.28, "seed": 260603, "source_file": "assets_source/audio/paper_rustle_v1.wav", "file": "audio/sfx/paper_rustle.ogg"},
+    {"id": "message_ping", "kind": "notification", "role": "sfx", "duration_seconds": 0.65, "amplitude": 0.15, "source_file": "assets_source/audio/message_ping_v1.wav", "file": "audio/sfx/message_ping.ogg"}
+  ]
+}

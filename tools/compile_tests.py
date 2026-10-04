@@ -1,6 +1,7 @@
 """Generate Ren'Py interaction tests from the actual graph's route witnesses."""
 import argparse
-from tools.story_model import ROOT, load_story, enumerate_routes
+import json
+from tools.story_model import ROOT, load_story, enumerate_routes, scene_lines
 from tools.compile_story import quote
 
 
@@ -94,6 +95,8 @@ def render_tests(story):
         f"    assert eval (visited_scenes == {saved_path!r})",
         '    assert eval (affection == 0 and trust == 0 and not truth_known)',
         f'    assert eval renpy.get_attributes("heroine") == ({saved_expression!r},)',
+        '    assert eval renpy.music.get_playing(channel="music") == "audio/bgm/rain_theme.ogg"',
+        '    assert eval renpy.music.get_playing(channel="ambient") == "audio/sfx/rain_ambience.ogg"',
         '    run MainMenu(confirm=False)',
         '    click id "menu_start"',
         '    advance until screen "choice"',
@@ -113,6 +116,8 @@ def render_tests(story):
         '    screenshot "settings"',
         '    click id "mute_all"',
         '    assert eval preferences.get_mute("music")',
+        '    assert eval preferences.get_mute("sfx")',
+        '    assert eval preferences.get_mute("voice")',
         '    click id "mute_all"',
         '    assert eval not preferences.get_mute("music")',
         '    click id "game_return"',
@@ -178,6 +183,60 @@ def render_tests(story):
             f'    screenshot "expression-{expression}"',
         ]
     lines.append("")
+    dialogue = {line['id']: line for node in story['nodes'] for line in scene_lines(node)}
+    recordings = {voice['voice_id']: voice['file'] for voice in json.loads((ROOT / 'game/data/voice_manifest.json').read_text(encoding='utf-8'))['voices']}
+
+    def at_line(identity):
+        return f'    advance until {quote(dialogue[identity]["text"])}'
+
+    def choose(identity):
+        return ['    advance until screen "choice"', f'    click {quote(choices[identity]["text"])}']
+
+    def playing(channel, file):
+        return f'    assert eval renpy.music.get_playing(channel={channel!r}) == {file!r}'
+
+    lines += ['testcase key_voice_and_sound_cues:'] + choose('q01_care')
+    lines += [at_line('s03_letter_l002'), '    pause 0.1', playing('sound', 'audio/sfx/paper_rustle.ogg')]
+    lines += choose('q02_honest')
+    lines += [at_line('q02_honest_l002'), '    pause 0.1',
+              playing('voice', recordings[dialogue['q02_honest_l002']['voice']]),
+              at_line('s04_waiting_l019'), '    pause 0.1', playing('sound', 'audio/sfx/message_ping.ogg'), '']
+
+    lines += ['testcase audio_true_ending:'] + choose('q01_care')
+    lines += [at_line('s03_letter_l001'),
+              '    pause until eval renpy.music.get_playing(channel="music") == "audio/bgm/unspoken_theme.ogg"',
+              playing('music', 'audio/bgm/unspoken_theme.ogg')]
+    lines += choose('q02_honest')
+    lines += [at_line('s04_memory_l001'),
+              '    pause until eval renpy.music.get_playing(channel="music") == "audio/bgm/rain_theme.ogg"',
+              playing('music', 'audio/bgm/rain_theme.ogg')]
+    lines += choose('q04_revisit')
+    lines += [at_line('s05_departure_l001'),
+              '    pause until eval renpy.music.get_playing(channel="music") == "audio/bgm/next_message_theme.ogg"',
+              '    pause until eval renpy.music.get_playing(channel="ambient") == "audio/sfx/rain_light_ambience.ogg"',
+              playing('music', 'audio/bgm/next_message_theme.ogg'),
+              playing('ambient', 'audio/sfx/rain_light_ambience.ogg')]
+    lines += choose('q03_walk')
+    lines += [at_line('s07_true_l006'), '    pause until eval renpy.music.get_playing(channel="ambient") is None',
+              '    assert eval renpy.music.get_playing(channel="ambient") is None',
+              at_line('s07_true_l010'), '    pause 0.1',
+              playing('voice', recordings[dialogue['s07_true_l010']['voice']]),
+              '    screenshot "audio-true-voice"',
+              '    advance until screen "ending_card"',
+              '    pause until eval renpy.music.get_playing(channel="music") is None',
+              '    assert eval renpy.music.get_playing(channel="music") is None',
+              '    assert eval renpy.music.get_playing(channel="ambient") is None', '']
+
+    lines += ['testcase audio_normal_ending:'] + choose('q01_care') + choose('q02_honest') + choose('q04_revisit') + choose('q03_leave')
+    lines += [at_line('s08_normal_l004'), '    pause 0.1', playing('sound', 'audio/sfx/message_ping.ogg'),
+              at_line('s08_normal_l005'), '    pause 0.1',
+              playing('voice', recordings[dialogue['s08_normal_l005']['voice']]),
+              '    screenshot "audio-normal-voice"',
+              at_line('s08_normal_l010'), '    pause until eval renpy.music.get_playing(channel="ambient") is None',
+              '    assert eval renpy.music.get_playing(channel="ambient") is None',
+              '    advance until screen "ending_card"',
+              '    pause until eval renpy.music.get_playing(channel="music") is None',
+              '    assert eval renpy.music.get_playing(channel="music") is None', '']
     return "\n".join(lines)
 
 

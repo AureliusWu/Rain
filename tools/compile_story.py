@@ -47,10 +47,14 @@ def render_story(story, assets, voices):
         if node.get("sprite"):
             lines.append(f"    show heroine {node['sprite']} at heroine_position with dissolve")
         if node.get("bgm"):
-            lines.append(f"    play music {quote(by_asset[node['bgm']]['file'])} fadein 1.0")
+            lines.append(f"    play music {quote(by_asset[node['bgm']]['file'])} fadeout 1.0 fadein 1.0 if_changed")
         if node.get("ambient"):
-            lines.append(f"    play ambient {quote(by_asset[node['ambient']]['file'])} fadein 1.0")
+            lines.append(f"    play ambient {quote(by_asset[node['ambient']]['file'])} fadeout 1.0 fadein 1.0 if_changed")
         for line in node.get("lines", []):
+            if line.get("sound"):
+                lines.append(f"    play sound {quote(by_asset[line['sound']]['file'])}")
+            if line.get("stop_ambient"):
+                lines.append("    stop ambient fadeout 1.0")
             if line.get("expression"):
                 lines.append(f"    show heroine {line['expression']} at heroine_position")
             if line.get("voice"):
@@ -66,6 +70,10 @@ def render_story(story, assets, voices):
                 for k, v in c["effects"].items():
                     lines.append(f"            $ {k} {'=' if type(v) is bool else '+='} {v!r}")
                 for response in c.get("response", []):
+                    if response.get("sound"):
+                        lines.append(f"            play sound {quote(by_asset[response['sound']]['file'])}")
+                    if response.get("stop_ambient"):
+                        lines.append("            stop ambient fadeout 1.0")
                     if response.get("expression"):
                         lines.append(f"            show heroine {response['expression']} at heroine_position")
                     if response.get("voice"):

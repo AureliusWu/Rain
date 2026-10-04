@@ -41,7 +41,8 @@ def main():
         if result.returncode:
             raise SystemExit(result.returncode)
         required = ["first-choice", "settings", "chapter-prologue", "chapter-today",
-                    "cg-letter", "branch-s04_open", "branch-s04_reserved", "revisit-choice"] + ["expression-" + name for name in
+                    "cg-letter", "branch-s04_open", "branch-s04_reserved", "revisit-choice",
+                    "audio-true-voice", "audio-normal-voice"] + ["expression-" + name for name in
             ("normal", "smile", "happy", "sad", "angry", "surprised", "embarrassed")]
         for name in required:
             file = screenshots / (name + ".png")

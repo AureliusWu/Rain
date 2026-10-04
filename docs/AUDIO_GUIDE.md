@@ -24,3 +24,9 @@ python -m tools.validate
 ONNX Runtime 1.30 的非 Windows 官方构建默认启用联网遥测。本项目在任何相关导入前固定 ORT_DISABLE_TELEMETRY=1，并调用 disable_telemetry_events；使用官方完整关闭机制，不依赖网络请求被拒绝来实现离线。依据：[官方隐私说明](https://github.com/microsoft/onnxruntime/blob/main/docs/Privacy.md)。模型下载是独立步骤；台词合成不需要在线服务。播放器包不含推理库。
 
 自动检查覆盖文本绑定、音频存在、哈希、非零时长、播放通道和静音切换。无削波源文件峰值已检查；最终发音、混音听感和情绪仍需要真人试听。
+
+## v0.6 音频完善
+
+新增 11 句关键台词，同一 zf_001 / speed 0.95；现有六句录音保留。17 句合计 58.048 秒，覆盖两个结局和信任分支。新增两首原创程序 BGM、渐弱雨声及纸张／消息音效；三首音乐、两种环境声、两种一次性音效按已有剧情切换。音乐与环境配置重复时使用原生 if_changed，雨停或进入小店时淡出环境声。
+
+24 个游戏 OGG 与源 WAV 均完整解码；检查 PCM_16 / Vorbis、采样率、声道、帧数、峰值 < .99 和语音 RMS -30～-18 dBFS。RMS 是未加权信号量，不能代替 LUFS、发音或混音试听。默认 music=.4、sfx=.3、voice=.8，使用原生音量与静音设置。工具及试听清单见 [AUDIO_V06.md](AUDIO_V06.md)。

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "version": "0.5.0",
+  "version": "0.6.0",
   "title": "雨停之前",
   "status": "chapter_route_candidate_user_review",
   "entry": "p00_entry",
@@ -570,7 +570,8 @@
         {
           "id": "s03_letter_l002",
           "speaker": "n",
-          "text": "她从纸袋里抽出一只没有邮票的信封。边角被压平，纸已经有些发黄。"
+          "text": "她从纸袋里抽出一只没有邮票的信封。边角被压平，纸已经有些发黄。",
+          "sound": "paper_rustle"
         },
         {
           "id": "s03_letter_l003",
@@ -643,7 +644,8 @@
             {
               "id": "q02_honest_l002",
               "speaker": "h",
-              "text": "……那为什么没给我？"
+              "text": "……那为什么没给我？",
+              "voice": "heroine_q02_honest_l002_v1"
             },
             {
               "id": "q02_honest_l003",
@@ -698,7 +700,8 @@
       "draft_prompt": "prompts/script/scene_v1.md",
       "draft_prompt_sha256": "bc5cc48b7fe000f5a42b11fae33438d79e09af6d71f9790bd3c338e35f6c2ea4",
       "review_status": "preserved_v03_dialogue_with_route_revision",
-      "draft_prompt_id": "script_scene_v1"
+      "draft_prompt_id": "script_scene_v1",
+      "bgm": "unspoken_theme"
     },
     {
       "id": "s03_honest",
@@ -727,7 +730,8 @@
         {
           "id": "s03_honest_l005",
           "speaker": "h",
-          "text": "我还不知道你写了什么。要不要看，也得让我自己决定。"
+          "text": "我还不知道你写了什么。要不要看，也得让我自己决定。",
+          "voice": "heroine_s03_honest_l005_v1"
         },
         {
           "id": "s03_honest_l006",
@@ -796,7 +800,8 @@
         {
           "id": "s03_deferred_l007",
           "speaker": "h",
-          "text": "会。但我可以等你说，不用替你猜一个答案。"
+          "text": "会。但我可以等你说，不用替你猜一个答案。",
+          "voice": "heroine_s03_deferred_l007_v1"
         },
         {
           "id": "s03_deferred_l008",
@@ -953,7 +958,8 @@
         {
           "id": "s04_open_l008",
           "speaker": "h",
-          "text": "慢一点可以。你说到哪，我就听到哪。"
+          "text": "慢一点可以。你说到哪，我就听到哪。",
+          "voice": "heroine_s04_open_l008_v1"
         },
         {
           "id": "s04_open_l009",
@@ -998,7 +1004,8 @@
         {
           "id": "s04_reserved_l005",
           "speaker": "h",
-          "text": "可以。但你没说的部分，我不会当作已经知道。"
+          "text": "可以。但你没说的部分，我不会当作已经知道。",
+          "voice": "heroine_s04_reserved_l005_v1"
         },
         {
           "id": "s04_reserved_l006",
@@ -1056,7 +1063,8 @@
           "id": "s04_waiting_l004",
           "speaker": "h",
           "text": "我不是问你能留多久。",
-          "expression": "angry"
+          "expression": "angry",
+          "voice": "heroine_s04_waiting_l004_v1"
         },
         {
           "id": "s04_waiting_l005",
@@ -1136,13 +1144,15 @@
         {
           "id": "s04_waiting_l019",
           "speaker": "n",
-          "text": "我拿出手机，给她发了一个句号。她的屏幕亮起来，头像还是当年那只画得有点歪的猫。"
+          "text": "我拿出手机，给她发了一个句号。她的屏幕亮起来，头像还是当年那只画得有点歪的猫。",
+          "sound": "message_ping"
         },
         {
           "id": "s04_waiting_l020",
           "speaker": "h",
           "text": "句号不算消息。",
-          "expression": "surprised"
+          "expression": "surprised",
+          "voice": "heroine_s04_waiting_l020_v1"
         },
         {
           "id": "s04_waiting_l021",
@@ -1243,7 +1253,8 @@
       "draft_prompt": "prompts/script/v04/s04_memory_v1.md",
       "draft_prompt_sha256": "4ffba29e3ebf61c10c1fa5f23329795f0c0f4f4d683aa2c67017d48d6f09832c",
       "review_status": "agent_reviewed_candidate",
-      "draft_prompt_id": "script_v04_s04_memory_v1"
+      "draft_prompt_id": "script_v04_s04_memory_v1",
+      "bgm": "rain_theme"
     },
     {
       "id": "s04_boundary",
@@ -1284,7 +1295,8 @@
           "id": "s04_boundary_l007",
           "speaker": "h",
           "text": "不说，也不能替我决定我会不会为难。",
-          "expression": "angry"
+          "expression": "angry",
+          "voice": "heroine_s04_boundary_l007_v1"
         },
         {
           "id": "s04_boundary_l008",
@@ -1450,7 +1462,8 @@
           "id": "s04_repair_l009",
           "speaker": "h",
           "text": "那我也说清楚。见面我愿意，什么时候有空，我会自己告诉你。",
-          "expression": "embarrassed"
+          "expression": "embarrassed",
+          "voice": "heroine_s04_repair_l009_v1"
         },
         {
           "id": "s04_repair_l010",
@@ -1660,7 +1673,9 @@
       "review_status": "preserved_v03_dialogue_with_route_revision",
       "background": "station",
       "sprite": "normal",
-      "draft_prompt_id": "script_scene_v1"
+      "draft_prompt_id": "script_scene_v1",
+      "bgm": "next_message_theme",
+      "ambient": "rain_light_ambience"
     },
     {
       "id": "s05_shared_path",
@@ -1834,7 +1849,8 @@
         {
           "id": "s07_true_l006",
           "speaker": "n",
-          "text": "小店的灯还亮着。桌上有水杯、纸巾，和一碟并不特别好吃的饼干。我们坐下，没有谁急着给今晚取名字。"
+          "text": "小店的灯还亮着。桌上有水杯、纸巾，和一碟并不特别好吃的饼干。我们坐下，没有谁急着给今晚取名字。",
+          "stop_ambient": true
         },
         {
           "id": "s07_true_l007",
@@ -1854,12 +1870,14 @@
         {
           "id": "s07_true_l010",
           "speaker": "h",
-          "text": "嗯。这次记得交给我。"
+          "text": "嗯。这次记得交给我。",
+          "voice": "heroine_s07_true_l010_v1"
         },
         {
           "id": "s07_true_l011",
           "speaker": "n",
-          "text": "她从纸袋里抽出那张照片，放到桌子中间。拍得确实有些歪。雨棚、长椅，还有并肩站着的两个人，都在里面。"
+          "text": "她从纸袋里抽出那张照片，放到桌子中间。拍得确实有些歪。雨棚、长椅，还有并肩站着的两个人，都在里面。",
+          "sound": "paper_rustle"
         },
         {
           "id": "s07_true_l012",
@@ -1921,12 +1939,14 @@
         {
           "id": "s08_normal_l004",
           "speaker": "n",
-          "text": "手机亮起来。她发来一张旧照片，下面只有一行字。"
+          "text": "手机亮起来。她发来一张旧照片，下面只有一行字。",
+          "sound": "message_ping"
         },
         {
           "id": "s08_normal_l005",
           "speaker": "h",
-          "text": "这张没有拍歪。你回去以后，慢慢看。"
+          "text": "这张没有拍歪。你回去以后，慢慢看。",
+          "voice": "heroine_s08_normal_l005_v1"
         },
         {
           "id": "s08_normal_l006",
@@ -1951,7 +1971,8 @@
         {
           "id": "s08_normal_l010",
           "speaker": "n",
-          "text": "雨停了。这个晚上没有给出所有答案，但我们已经重新有了彼此的号码。"
+          "text": "雨停了。这个晚上没有给出所有答案，但我们已经重新有了彼此的号码。",
+          "stop_ambient": true
         }
       ],
       "ending": "normal",

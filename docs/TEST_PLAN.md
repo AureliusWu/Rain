@@ -40,6 +40,14 @@ CI 新增 Prompt Registry 检查、assets.json 报告与 30 个配方重建；57
 
 本地与 Windows 各 45 个 Python 用例通过；31 份 Registry、66 个资产、57 张图片解码、30 个配方与作者检查均 0 错误。Ren'Py lint 通过；Linux 实际引擎全集 21 用例 / 132 断言通过（103.301 秒）。Windows 源码引擎与 ZIP 独立 EXE 各 21 用例 / 132 断言通过（154.067 秒 / 96.154 秒），无跳过；完整发行证据记录于 STATUS.md。
 
+## v0.6 音频
+
+完整解码全部 24 个 OGG 及源 WAV，核对 PCM_16 / Vorbis、采样率、声道、帧数、峰值、RMS 与来源绑定；错误 OGG 头、静音、削波、非有限样本、长度和元数据差异必须拒绝。语音生成请求指纹覆盖台词、文字、声音、语速、模型配置、Prompt 和处理策略；改变声音请求或源文件不得误用缓存。十五个新增 Python 用例使全集达到 60 个，已全部通过。
+
+三个新增原生用例实际推进旧信、两个结局，核对 BGM 切换、两种一次性音效、坦白与结局语音和雨声淡出；读档追加 music / ambient 恢复，全静音追加 sfx / voice 断言。独立 EXE 还必须输出 audio-true-voice 与 audio-normal-voice 的完整可解码截图。
+
+本地 Ren'Py lint 与 Linux 原生全集 24 用例 / 151 断言通过（133.014 秒）。Windows 最终结果与发行证据记录于 STATUS.md；自动测试使用 dummy 音频输出，不能代替真人听感。
+
 ## Windows
 
 GitHub Actions 在 Windows runner 上运行原生 Ren'Py，测试和构建后从 ZIP 解压的分发程序再次运行同一测试集合。开发 testcases 在分发包中排除；包测试时仅临时注入测试脚本，不改变发行版。

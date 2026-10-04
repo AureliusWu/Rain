@@ -10,6 +10,7 @@ def main():
         ["-m", "tools.story_lint"],
         ["-m", "tools.prompt_registry", "--check"],
         ["-m", "tools.asset_validator", "--report", "reports/assets.json"],
+        ["-m", "tools.audio_validator", "--report", "reports/audio.json"],
         ["-m", "tools.image_process.import_asset", "--check"],
         ["-m", "tools.character_validator", "--report", "reports/characters.json"],
         ["-m", "tools.compile_story", "--check"],
