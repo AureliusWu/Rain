@@ -1,6 +1,16 @@
 # 当前状态
 
-2026-10-04。仓库：[AureliusWu/Test](https://github.com/AureliusWu/Test)，仅 main。
+2026-10-05（北京时间）。仓库：[AureliusWu/Test](https://github.com/AureliusWu/Test)，仅 main。
+
+## 本次规划更新
+
+以 `b519a051cd53ad0c8579ef7a34dfd89996c1d594` 为基线核对 GitHub：最新 Release 和 VERSION 仍为 v0.5.0，CI 37214804210 的结论为 success；v0.6 尚未发布。
+
+新增 [v0.7–v1.0 执行计划](RELEASE_PLAN_V07_V10.md)，同步 [ROADMAP](../ROADMAP.md)、测试计划和 README。顺序为 v0.6 收尾 → v0.7 完整剧情 → v0.8 回归加固 → v0.9 文本、1080p 和声音打磨 → v1.0 普通电脑验收及正式发布。
+
+核对出的缺口：当前原生 GUI 为 1280×720；完整字数与真人时长、最终创作定案、真实听感及普通 Windows 电脑验收仍待完成。既有 CI 在 main 验证通过后自动创建预发行 Release，后续需分离验证与发布并增加正式版验收记录。
+
+本次仅修改文档，已核对 Markdown 本地链接、任务 ID、版本与变更范围；未执行游戏或重新运行发行测试，不改变下列既有运行证据。未来里程碑全部保持待办。
 
 ## v0.1.0 — 已发布
 

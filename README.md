@@ -66,3 +66,5 @@ Linux/macOS 可用 SDK 的 `renpy.sh` 运行 lint/test。Linux 无桌面时需�
 31 份 Prompt 已登记，66 个资产记录补全追踪，57 张 PNG 完整解码；30 个图片配方可以从源文件重建。导入包含预检、dry-run、版本与路径检查、正常 I/O 失败回滚和重复执行检查。UI 按原尺寸导入；现有图像与音频文件校验和保持一致。详见 [v0.5 资产操作文档](docs/ASSET_PIPELINE_V05.md)。
 
 六章、16 条路线及两个结局继续可玩，说明见 [场景 Outline](docs/STORY_OUTLINE_V04.md) 与 [路线审阅](docs/STORY_REVIEW_V04.md)。下一阶段 v0.6 完善关键语音、音乐和环境音；重大剧情和最终美术继续由用户决定。大系统保持在 [Future Ideas](docs/FUTURE_IDEAS.md)。
+
+[版本路线](ROADMAP.md) 与 [v0.7–v1.0 执行计划](docs/RELEASE_PLAN_V07_V10.md) 已列出完整剧情、回归加固、1080p 适配和正式发布的范围、依赖与验收。该计划为后续待办，当前下载版本仍为 v0.5.0。
