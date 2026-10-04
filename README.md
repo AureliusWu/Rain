@@ -70,4 +70,6 @@ v0.6 新增 11 句配音与 5 个程序音频，17 句合计 58.048 秒。音乐
 
 六章、16 条路线及两个结局继续可玩，说明见 [场景 Outline](docs/STORY_OUTLINE_V04.md) 与 [路线审阅](docs/STORY_REVIEW_V04.md)。下一阶段 v0.7 补齐完整短篇剧情及对应场景资产；重大剧情和最终美术继续由用户决定。大系统保持在 [Future Ideas](docs/FUTURE_IDEAS.md)。
 
-[版本路线](ROADMAP.md) 与 [v0.7–v1.0 执行计划](docs/RELEASE_PLAN_V07_V10.md) 列出完整剧情、回归加固、1080p 适配和正式发布的范围、依赖与验收。当前 v0.6 候选包正在完成 Windows 验收，实际已发布版本以 Release 为准。
+[版本路线](ROADMAP.md) 与 [v0.7–v1.0 执行计划](docs/RELEASE_PLAN_V07_V10.md) 列出完整剧情、回归加固、1080p 适配和正式发布的范围、依赖与验收。[v0.6.0 已发布](https://github.com/AureliusWu/Test/releases/tag/v0.6.0)：Windows 源码和独立 EXE 各通过 24 个用例 / 151 个断言，无失败或跳过。
+
+按 v0.1–v1.0 的 10 个发布里程碑统计，已完成 6 个，当前进度为 **60%**。此比例只统计版本节点，不代表工时或最终内容的完成比例；v0.7–v1.0 仍待完成。
