@@ -30,7 +30,7 @@ Windows 最终 CI 已通过：Python 12 个用例；Windows 原生引擎 12 个�
 
 仓库只有 main；阶段版本使用 tag。源码、Prompt 和原始资产已提交，SDK、模型、缓存和中间报告保持在版本库之外。
 
-## v0.3.0 — Windows 验收中
+## v0.3.0 — 已验收并发布
 
 新增六种表情，与 normal 共七种透明立绘；每张分别编辑同一基础图，固定 Prompt 组件与精确请求均已保存。源图、参考图、组件和游戏文件可追踪；七种接入 20 处现有台词与选择回应，剧情文本、状态效果和八条路线与 v0.2 相同。
 
@@ -38,7 +38,13 @@ Windows 最终 CI 已通过：Python 12 个用例；Windows 原生引擎 12 个�
 
 游戏图全部 540×700；六张新图与基础轮廓 IoU 0.993–0.998，包围盒偏差最多 1 像素。已人工查看七种生成结果与实际剧情画面；最终形象选择待用户审阅。审阅记录见 EXPRESSION_REVIEW.md。
 
-本轮发现本地临时运行环境需要恢复，以及部分原生截图写入不完整。已从固定 SDK 恢复 Linux 运行库，增加独立 EXE 截图完整解码门槛。Windows 原生、分发 EXE 和发布正在执行，尚未记为通过。
+本轮发现本地临时运行环境需要恢复，以及部分本地原生截图写入不完整。已从固定 SDK 恢复 Linux 运行库，增加独立 EXE 截图完整解码门槛。
+
+最终 Windows CI 已通过：16 个 Python 用例；源码引擎 13 个交互用例 / 62 个断言（45.089 秒）；ZIP 解压后的独立 EXE 同为 13 个用例 / 62 个断言（31.223 秒）。全部七种表情截图通过完整解码；已下载验收证据、核验 SHA-256 并解码全部 42 张 PNG，直接看过 Windows 独立 EXE 的七种表情，中文、透明边缘、服装、位置与 UI 均正常。
+
+[成功 CI 37180677754](https://github.com/AureliusWu/Test/actions/runs/37180677754) · [v0.3.0 Release](https://github.com/AureliusWu/Test/releases/tag/v0.3.0) · [Windows ZIP](https://github.com/AureliusWu/Test/releases/download/v0.3.0/BeforeTheRainStops-0.3.0-win.zip)
+
+发布提交：c3d09d8e8c9c906f8de3ba5b2e1cae7249d2fc8e。ZIP：39,436,278 字节。SHA-256：f064f4407e6ed0a62b3356f153124cb716accc9bc1164d01b502d36bdd0c13d6。Release 附 SHA256SUMS.txt；Actions 保留源码引擎与独立 EXE 的日志、表情截图、路线和几何报告。仓库继续只维护 main，阶段使用 tag。
 
 ## 限制与下一阶段
 

@@ -26,4 +26,4 @@ Agent 检查了生成结果和七种实际剧情画面：成年脸型、蓝黑�
 
 ![不悦：原生剧情截图](images/expression-angry-v03.png)
 
-Windows 源码引擎与独立 EXE 的全部表情截图保留在对应 Actions 测试证据中；发布验收结果见 [STATUS.md](STATUS.md)。本地截图曾出现截断，独立 EXE 验收已增加完整 PNG 解码检查，文件存在不能单独视为证据通过。
+Windows 源码引擎与独立 EXE 均通过 13 个用例 / 62 个断言；验收证据 SHA-256 已核验，42 张 PNG 完整解码，Agent 直接看过独立 EXE 的七种表情。全部截图保留在对应 Actions 测试证据中；发布验收结果见 [STATUS.md](STATUS.md)。本地截图曾出现截断，独立 EXE 验收已增加完整 PNG 解码检查，文件存在不能单独视为证据通过。
