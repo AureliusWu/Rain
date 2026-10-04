@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "use_case": "identity-preserve",
+  "provider": "Built-in imagegen; model identifier not exposed by tool",
+  "edit_target": "assets_source/character/heroine_clean_v2.png",
+  "edit_target_sha256": "8fcbdda633d97b143003a05e270a42c5a0c1c7ef8901ccf4c5c0d08a25706739",
+  "identity": "Xu Cheng, the same clearly adult 23-year-old woman in the input. Preserve her facial identity, gray-blue eyes, blue-black shoulder-length bob and wispy bangs, silver raindrop hair clip on her right (viewer left).",
+  "costume": "Keep the identical muted blue-gray knitted cardigan, ivory blouse and navy skirt, including every fold, button and knit pattern.",
+  "pose_camera": "Keep exactly the input pose, hands loosely clasped at the waist, body proportions, head angle, eye size, hair silhouette, knee-up framing, character scale and pixel placement on the 1024 x 1536 canvas. Do not move, zoom, turn, crop or redraw the body.",
+  "style": "Match the input clean original 2D visual novel illustration, linework, colors, and cool light with subtle warm rim light.",
+  "constraints": "Edit only eyebrows, eyelids, gaze and mouth inside the existing face; a tiny cheek blush is allowed only for embarrassed. Keep all other pixels visually unchanged. Output one full character RGBA PNG on genuine alpha-zero transparent surroundings. No background haze, glow outside the silhouette, checkerboard, props, symbols, text or watermark. No tears, childish exaggeration, new pose or additional character.",
+  "expressions": {
+    "normal": {
+      "prompt": "prompts/character/heroine_clean_v2.md",
+      "direction": "Existing unchanged baseline."
+    },
+    "smile": {
+      "prompt": "prompts/character/heroine_smile_v1.md",
+      "direction": "A warm subtle closed-mouth smile, with gently softened eyes. Calm and approachable; keep it understated."
+    },
+    "happy": {
+      "prompt": "prompts/character/heroine_happy_v1.md",
+      "direction": "A distinct brief genuine laugh: a brighter smile, gently smiling eyes and a slightly open smiling mouth. Mature and restrained, visibly happier than the subtle smile variant."
+    },
+    "sad": {
+      "prompt": "prompts/character/heroine_sad_v1.md",
+      "direction": "Quiet sadness: slightly raised inner eyebrows, subdued eyelids and a small downturned closed mouth. No tears, no crying, no head tilt."
+    },
+    "angry": {
+      "prompt": "prompts/character/heroine_angry_v1.md",
+      "direction": "Restrained displeasure: eyebrows drawn slightly inward, focused eyes, a firm closed mouth. She is expressing a boundary, not shouting. No cartoon fury."
+    },
+    "surprised": {
+      "prompt": "prompts/character/heroine_surprised_v1.md",
+      "direction": "Mild surprise: slightly lifted eyebrows, attentive widened eyes and a small parted mouth. Preserve the original eye and face proportions; no exaggerated shock."
+    },
+    "embarrassed": {
+      "prompt": "prompts/character/heroine_embarrassed_v1.md",
+      "direction": "A little embarrassed: a subtle natural blush on the cheeks, a shy small closed-mouth smile and a very slight eye aversion. Keep the same head angle and pose; no bashful hand gestures."
+    }
+  },
+  "source_canvas": [
+    1024,
+    1536
+  ],
+  "game_canvas": [
+    540,
+    700
+  ],
+  "min_silhouette_iou": 0.97,
+  "max_bbox_delta": 4
+}

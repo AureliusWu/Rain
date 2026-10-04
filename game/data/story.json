@@ -40,7 +40,8 @@
           "id": "s01_arrival_l005",
           "speaker": "h",
           "text": "你还是和以前一样，出门不看天气。",
-          "voice": "heroine_s01_arrival_l005_v1"
+          "voice": "heroine_s01_arrival_l005_v1",
+          "expression": "smile"
         },
         {
           "id": "s01_arrival_l006",
@@ -55,7 +56,8 @@
         {
           "id": "s01_arrival_l008",
           "speaker": "h",
-          "text": "嗯。你倒是记得名字。"
+          "text": "嗯。你倒是记得名字。",
+          "expression": "smile"
         },
         {
           "id": "s01_arrival_l009",
@@ -70,7 +72,8 @@
         {
           "id": "s01_arrival_l011",
           "speaker": "h",
-          "text": "三年。差两个月。"
+          "text": "三年。差两个月。",
+          "expression": "normal"
         },
         {
           "id": "s01_arrival_l012",
@@ -117,7 +120,8 @@
         {
           "id": "s02_reunion_l006",
           "speaker": "h",
-          "text": "你按了定时快门，又跑回来。照片还是斜了，大半张都是雨棚。"
+          "text": "你按了定时快门，又跑回来。照片还是斜了，大半张都是雨棚。",
+          "expression": "embarrassed"
         },
         {
           "id": "s02_reunion_l007",
@@ -128,7 +132,8 @@
           "id": "s02_reunion_l008",
           "speaker": "h",
           "text": "我知道。你还给照片起了个很长的名字。",
-          "voice": "heroine_s02_reunion_l008_v1"
+          "voice": "heroine_s02_reunion_l008_v1",
+          "expression": "smile"
         },
         {
           "id": "s02_reunion_l009",
@@ -143,7 +148,8 @@
         {
           "id": "s02_reunion_l011",
           "speaker": "h",
-          "text": "站务的人说，寄存柜里的东西都搬到出口了。已经替你留好，不用赶。"
+          "text": "站务的人说，寄存柜里的东西都搬到出口了。已经替你留好，不用赶。",
+          "expression": "normal"
         },
         {
           "id": "s02_reunion_l012",
@@ -169,7 +175,8 @@
             {
               "id": "q01_care_l002",
               "speaker": "h",
-              "text": "还好。书店换了新书架，我少了一项修桌子的工作。"
+              "text": "还好。书店换了新书架，我少了一项修桌子的工作。",
+              "expression": "smile"
             },
             {
               "id": "q01_care_l003",
@@ -194,7 +201,8 @@
             {
               "id": "q01_business_l002",
               "speaker": "h",
-              "text": "能。我刚问过。"
+              "text": "能。我刚问过。",
+              "expression": "normal"
             },
             {
               "id": "q01_business_l003",
@@ -355,7 +363,8 @@
         {
           "id": "s04_waiting_l002",
           "speaker": "h",
-          "text": "你明天还要走？"
+          "text": "你明天还要走？",
+          "expression": "sad"
         },
         {
           "id": "s04_waiting_l003",
@@ -365,7 +374,8 @@
         {
           "id": "s04_waiting_l004",
           "speaker": "h",
-          "text": "我不是问你能留多久。"
+          "text": "我不是问你能留多久。",
+          "expression": "angry"
         },
         {
           "id": "s04_waiting_l005",
@@ -380,7 +390,8 @@
         {
           "id": "s04_waiting_l007",
           "speaker": "h",
-          "text": "以前你说要走的时候，我正想着把照片洗出来。还有一张拍得比较端正，没来得及给你。"
+          "text": "以前你说要走的时候，我正想着把照片洗出来。还有一张拍得比较端正，没来得及给你。",
+          "expression": "sad"
         },
         {
           "id": "s04_waiting_l008",
@@ -390,7 +401,8 @@
         {
           "id": "s04_waiting_l009",
           "speaker": "h",
-          "text": "那是我自己也在里面的一张照片。当然要留。"
+          "text": "那是我自己也在里面的一张照片。当然要留。",
+          "expression": "embarrassed"
         },
         {
           "id": "s04_waiting_l010",
@@ -400,7 +412,8 @@
         {
           "id": "s04_waiting_l011",
           "speaker": "h",
-          "text": "我后来换了工作，也搬了家。这几年，不是在这里等一班早就开走的车。"
+          "text": "我后来换了工作，也搬了家。这几年，不是在这里等一班早就开走的车。",
+          "expression": "normal"
         },
         {
           "id": "s04_waiting_l012",
@@ -436,7 +449,8 @@
         {
           "id": "s04_waiting_l018",
           "speaker": "h",
-          "text": "那就记着。别再拿手机没电当理由。"
+          "text": "那就记着。别再拿手机没电当理由。",
+          "expression": "smile"
         },
         {
           "id": "s04_waiting_l019",
@@ -446,7 +460,8 @@
         {
           "id": "s04_waiting_l020",
           "speaker": "h",
-          "text": "句号不算消息。"
+          "text": "句号不算消息。",
+          "expression": "surprised"
         },
         {
           "id": "s04_waiting_l021",
@@ -456,7 +471,8 @@
         {
           "id": "s04_waiting_l022",
           "speaker": "n",
-          "text": "她很轻地笑了一声，又把手机收好。这一次，我没有急着替这声笑解释什么。"
+          "text": "她很轻地笑了一声，又把手机收好。这一次，我没有急着替这声笑解释什么。",
+          "expression": "happy"
         }
       ],
       "background": "station",
@@ -481,7 +497,8 @@
         {
           "id": "s05_departure_l003",
           "speaker": "h",
-          "text": "外面那家小店还开着。雨太大时，我会进去坐一会儿。"
+          "text": "外面那家小店还开着。雨太大时，我会进去坐一会儿。",
+          "expression": "smile"
         },
         {
           "id": "s05_departure_l004",
@@ -502,7 +519,8 @@
           "id": "s05_departure_l007",
           "speaker": "h",
           "text": "要一起走到那边吗？",
-          "voice": "heroine_s05_departure_l007_v1"
+          "voice": "heroine_s05_departure_l007_v1",
+          "expression": "embarrassed"
         },
         {
           "id": "s05_departure_l008",
@@ -527,7 +545,8 @@
             {
               "id": "q03_walk_l002",
               "speaker": "h",
-              "text": "你拿左边。我不想再湿一次袖口。"
+              "text": "你拿左边。我不想再湿一次袖口。",
+              "expression": "smile"
             },
             {
               "id": "q03_walk_l003",
@@ -552,7 +571,8 @@
             {
               "id": "q03_leave_l002",
               "speaker": "h",
-              "text": "好。我听见了。"
+              "text": "好。我听见了。",
+              "expression": "normal"
             },
             {
               "id": "q03_leave_l003",

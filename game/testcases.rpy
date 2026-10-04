@@ -150,6 +150,7 @@ testcase route_08:
 testcase save_load_and_restart:
     advance until screen "choice"
     screenshot "first-choice"
+    assert eval renpy.get_attributes("heroine") == ('normal',)
     $ renpy.unlink_save("1-1")
     click id "save_open"
     pause until screen "save"
@@ -160,6 +161,8 @@ testcase save_load_and_restart:
     click "把干燥的位置让给她，问候近况"
     advance
     $ trust = -99
+    $ renpy.show("heroine angry", at_list=[heroine_position])
+    assert eval renpy.get_attributes("heroine") == ("angry",)
     click id "load_open"
     pause until screen "load"
     click id "slot_1"
@@ -168,6 +171,7 @@ testcase save_load_and_restart:
     pause until screen "choice"
     assert eval (current_scene == 's02_reunion')
     assert eval (affection == 0 and trust == 0 and not truth_known)
+    assert eval renpy.get_attributes("heroine") == ('normal',)
     run MainMenu(confirm=False)
     click id "menu_start"
     advance until screen "choice"
@@ -222,3 +226,40 @@ testcase auto_and_skip:
     $ config.skipping = None
     $ preferences.afm_time = 15.0
     $ preferences.skip_unseen = False
+
+testcase character_expressions_in_story:
+    advance until eval renpy.get_attributes("heroine") == ('normal',)
+    pause 0.2
+    assert eval renpy.showing("heroine normal")
+    screenshot "expression-normal"
+    advance until eval renpy.get_attributes("heroine") == ('smile',)
+    pause 0.2
+    assert eval renpy.showing("heroine smile")
+    screenshot "expression-smile"
+    advance until eval renpy.get_attributes("heroine") == ('embarrassed',)
+    pause 0.2
+    assert eval renpy.showing("heroine embarrassed")
+    screenshot "expression-embarrassed"
+    advance until screen "choice"
+    click "把干燥的位置让给她，问候近况"
+    advance until eval current_scene == "s03_letter"
+    advance
+    assert eval not renpy.showing("heroine")
+    advance until screen "choice"
+    click "告诉她：这封信是我写的"
+    advance until eval renpy.get_attributes("heroine") == ('sad',)
+    pause 0.2
+    assert eval renpy.showing("heroine sad")
+    screenshot "expression-sad"
+    advance until eval renpy.get_attributes("heroine") == ('angry',)
+    pause 0.2
+    assert eval renpy.showing("heroine angry")
+    screenshot "expression-angry"
+    advance until eval renpy.get_attributes("heroine") == ('surprised',)
+    pause 0.2
+    assert eval renpy.showing("heroine surprised")
+    screenshot "expression-surprised"
+    advance until eval renpy.get_attributes("heroine") == ('happy',)
+    pause 0.2
+    assert eval renpy.showing("heroine happy")
+    screenshot "expression-happy"

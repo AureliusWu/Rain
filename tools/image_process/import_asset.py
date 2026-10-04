@@ -16,6 +16,8 @@ def main():
     p.add_argument("--prompt", required=True, type=Path)
     p.add_argument("--version", type=int, default=1)
     p.add_argument("--expression", default="normal")
+    p.add_argument("--reference-source", type=Path, help="Original edit target under assets_source")
+    p.add_argument("--prompt-components", type=Path, help="Versioned shared components under prompts")
     args = p.parse_args()
     source = args.source.resolve()
     source_relative = source.relative_to(ROOT / "assets_source")
@@ -48,6 +50,15 @@ def main():
     if args.type == "sprite":
         entry["expression"] = args.expression
         entry["character"] = "heroine"
+    for argument, file_key, hash_key, folder in [
+        (args.reference_source, "reference_source_file", "reference_sha256", "assets_source"),
+        (args.prompt_components, "prompt_components", "prompt_components_sha256", "prompts"),
+    ]:
+        if argument is not None:
+            file = argument.resolve()
+            file.relative_to(ROOT / folder)
+            entry[file_key] = file.relative_to(ROOT).as_posix()
+            entry[hash_key] = hashlib.sha256(file.read_bytes()).hexdigest()
     path = ROOT / "game/data/asset_manifest.json"
     manifest = json.loads(path.read_text(encoding="utf-8"))
     manifest["assets"] = [a for a in manifest["assets"] if a["id"] != args.id] + [entry]

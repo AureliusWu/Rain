@@ -36,6 +36,14 @@ def validate_assets(root=ROOT, story=None):
             source = root / a["source_file"]
             if not source.is_file() or hashlib.sha256(source.read_bytes()).hexdigest() != a.get("source_sha256"):
                 errors.append(f"Source asset missing/changed: {a['id']}")
+        if a.get("reference_source_file"):
+            reference = root / a["reference_source_file"]
+            if not reference.is_file() or hashlib.sha256(reference.read_bytes()).hexdigest() != a.get("reference_sha256"):
+                errors.append(f"Reference asset missing/changed: {a['id']}")
+        if a.get("prompt_components"):
+            components = root / a["prompt_components"]
+            if not components.is_file() or hashlib.sha256(components.read_bytes()).hexdigest() != a.get("prompt_components_sha256"):
+                errors.append(f"Prompt components missing/changed: {a['id']}")
     sprite_expressions = {a["expression"] for a in assets if a["type"] == "sprite"}
     for n in story["nodes"]:
         for k in ("background", "bgm", "ambient"):

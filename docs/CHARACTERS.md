@@ -1,4 +1,4 @@
-# Character Bible v1（待用户审阅）
+# Character Bible v2（形象候选，待用户最终选择）
 
 ## 许澄 / heroine
 
@@ -19,8 +19,8 @@
 | 关系 | 三年前认识的旧友，彼此有未说出的好感 |
 | 成长弧线 | 从试探、保留，走向主动表达需求 |
 | 禁止行为 | 无缘无故献媚、儿童化、被动服从、突然长篇哲理告白 |
-| 表情 | normal / smile / sad / surprised / embarrassed，后续增加 angry / happy |
-| AI 图像 | `prompts/character/heroine_v1.md`，固定人物、服装、画风、构图 |
+| 表情 | normal / smile / happy / sad / angry / surprised / embarrassed，七种均已导入并在样片中显示 |
+| AI 图像 | 初始身份 `prompts/character/heroine_v1.md`；表情固定组件 `prompts/character/heroine_expressions_v1.json`，逐表情精确 Prompt 见同目录 |
 | AI 配音 | Kokoro-82M v1.1-zh / zf_001，speed 0.95，24kHz；不支持直接情绪条件，calm 是制作方向；最终音色待试听确认 |
 
 ## 玩家 / p
@@ -29,4 +29,6 @@
 
 语言自然，行动由选择体现。不以施舍、诊断或“拯救女主”为关系前提。
 
-v0.2 仅导入一张透明基础立绘。表情列表是后续制作要求，不代表已经完成；在基础形象确认后再局部编辑五种以上表情。
+v0.3 沿用 v0.2 的 normal 基础图，六张变体分别编辑同一张 `assets_source/character/heroine_clean_v2.png`，不逐代相互引用。源画布 1024×1536，游戏画布 540×700，姿势、服装与位置固定。七种表情对应自然台词，生气只表示克制的不悦，不突然暴怒；难过不增加哭泣；害羞不增加手势。
+
+选择和状态由原生 Ren'Py 管理；存读档会恢复当时显示的表情。几何校验不能替代身份与情绪的人工审阅。资产和实际截图见 [表情审阅记录](EXPRESSION_REVIEW.md)。

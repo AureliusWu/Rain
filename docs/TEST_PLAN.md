@@ -7,11 +7,12 @@ python -m unittest discover -s tests -v
 python -m tools.route_validator --report reports/routes.json
 python -m tools.story_lint
 python -m tools.asset_validator
+python -m tools.character_validator --report reports/characters.json
 python -m tools.compile_story --check
 python -m tools.compile_tests --check
 ```
 
-路线校验遍历状态路径，检查缺失目标、死节点、不可达结局、循环和全部选择。负面测试使用损坏图验证检查器确实拒绝错误。资产验证 SHA-256、路径、来源、许可证、Prompt、表情、语音文本绑定。
+路线校验遍历状态路径，检查缺失目标、死节点、不可达结局、循环和全部选择。负面测试使用损坏图验证检查器确实拒绝错误。资产验证 SHA-256、路径、来源、许可证、Prompt、表情、语音文本绑定。角色校验检查七种齐全、都被剧情使用、统一尺寸与 alpha、相同参考图、轮廓 IoU 和包围盒位置；几何校验无法判定脸部身份或情绪含义。负面测试删掉 happy、移除 angry 台词提示、平移立绘，必须拒绝这些退化。
 
 ## Ren'Py 实际运行
 
@@ -22,6 +23,8 @@ python -m tools.build.package --sdk /absolute/path/to/renpy-8.5.3-sdk
 ```
 
 Linux 无桌面时使用 Xvfb 和软件渲染。测试实际点击开始、选择、保存槽位、读取槽位、确认、历史、设置和返回主菜单。每条完整路线都检查结局与变量，保存/读取必须恢复选择之前的状态，新游戏必须清零。v0.2 还点击全屏/窗口、语音试听、静音、自动播放和快进；自动播放必须实际推进台词，快进必须在第一个选择处停下。
+
+v0.3 新增七种实际剧情表情的显示断言和截图，CG 不叠加普通立绘；存档前 normal、存档后显示 angry，再读档，必须恢复 normal。独立 EXE 的七张表情截图必须存在且可完整解码，不能接受截断文件。
 
 Ren'Py 8.5.3 构建包名是 win；launcher 必须使用 SDK 内绝对路径。辅助工具同时检查实际 ZIP 存在，避免工具退出成功却未生成所需平台文件。
 
@@ -37,6 +40,7 @@ GitHub Actions 在 Windows runner 上运行原生 Ren'Py，测试和构建后从
 
 - v0.1.0：12 个 Python 用例；Linux 与 Windows 原生引擎、独立 Windows EXE 均通过 4 个交互用例 / 16 个断言；已发布。
 - v0.2.0：12 个 Python 用例；8 场景 / 8 完整路线 / 2 结局；资产、语音与编译检查 0 错误；Linux、Windows 原生引擎、独立 Windows EXE 各 12 个交互用例 / 51 个断言通过。已发布，最终证据见 STATUS.md。
+- v0.3.0：16 个 Python 用例；角色、路线、资产、文本和编译检查 0 错误；Ren'Py lint 通过；Linux 全集 13 个交互用例 / 62 个断言通过（30.859 秒），追加表情用例 1 个 / 8 个断言通过。Windows 原生与独立 EXE 验收中。
 - 视觉检查：主菜单、对话、选择、CG、历史和设置；已修正遮脸选择栏、模板署名、蓝色控件和不支持的分隔符。
 
 ## 报告原则

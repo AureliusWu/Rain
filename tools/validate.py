@@ -9,6 +9,7 @@ def main():
         ["-m", "tools.route_validator", "--report", "reports/routes.json"],
         ["-m", "tools.story_lint"],
         ["-m", "tools.asset_validator"],
+        ["-m", "tools.character_validator", "--report", "reports/characters.json"],
         ["-m", "tools.compile_story", "--check"],
         ["-m", "tools.compile_tests", "--check"],
     ]:

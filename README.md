@@ -2,7 +2,7 @@
 
 一部可离线游玩的中文 Ren'Py 视觉小说。雨夜的旧车站，两位久未联系的旧友，和一封没有寄出的信。
 
-当前为 **v0.2.0 Vertical Slice**：8 个场景、3 次关键选择、Normal / True 两个片段结局，包含 AI 女主立绘、雨夜背景、关键 CG、6 句 AI 语音、原创音乐与雨声。主题、成年女主许澄和画风为待用户审阅的创作方案。
+当前为 **v0.3.0 角色表情版**：8 个场景、3 次关键选择、Normal / True 两个片段结局，包含七种 AI 女主表情立绘、雨夜背景、关键 CG、6 句 AI 语音、原创音乐与雨声。主题、成年女主许澄和画风为待用户审阅的创作方案。
 
 单路线约 1,740–1,900 汉字。按每分钟 250–350 汉字、另计选择和画面停留，预估 6–9 分钟；尚未经过真人计时。完整 30–60 分钟作品属于后续版本。
 
@@ -10,15 +10,15 @@
 
 [Windows 发布版本](https://github.com/AureliusWu/Test/releases) · [构建与运行证据](https://github.com/AureliusWu/Test/actions) · [阶段记录](docs/STATUS.md)
 
-1. 下载 Release 中的 `BeforeTheRainStops-0.2.0-win.zip`。
+1. 下载 Release 中的 `BeforeTheRainStops-0.3.0-win.zip`。
 2. 完整解压到可写目录。不要直接在 ZIP 内启动。
 3. 双击 `BeforeTheRainStops.exe`，选择“开始游戏”。无需安装 Python、Ren'Py 或模型，无需联网。
 
 左键、空格或 Enter 推进；右键或 Esc 打开菜单。画面下方可存档、读档、查看历史、快进、自动播放和进入设置。设置含音量、文字速度与全屏/窗口切换。结局页可返回主菜单，再从头走另一条路线。
 
-v0.1 工程片段与 v0.2 使用不同存档目录；旧存档保留，但不跨版本加载。v0.1 是可运行的临时资产测试片段，不计入正式剧情。
+各阶段使用独立存档目录；旧存档保留，不跨版本加载。v0.1 是可运行的临时资产测试片段，不计入正式剧情。
 
-![样片对话画面](docs/images/dialogue.png)
+![开心表情的实际游戏画面](docs/images/expression-happy-v03.png)
 
 ## 开发与验证
 
@@ -39,7 +39,7 @@ $sdk = ".runtime/renpy-8.5.3-sdk"
 & "$sdk/lib/py3-windows-x86_64/python.exe" "$sdk/renpy.py" . lint --error-code --all-problems
 & "$sdk/lib/py3-windows-x86_64/python.exe" "$sdk/renpy.py" . test global --report-detailed --overwrite-screenshots
 python -m tools.build.package --sdk $sdk
-python -m tools.build.verify_package --zip dist/BeforeTheRainStops-0.2.0-win.zip
+python -m tools.build.verify_package --zip dist/BeforeTheRainStops-0.3.0-win.zip
 ```
 
 Linux/macOS 可用 SDK 的 `renpy.sh` 运行 lint/test。Linux 无桌面时需要 Xvfb。Windows Actions 先做数据校验与原生交互测试，再构建 ZIP，直接启动解压后的独立 EXE 重跑测试。测试通过才发布预发行版本，附 SHA256SUMS。
@@ -61,4 +61,4 @@ Linux/macOS 可用 SDK 的 `renpy.sh` 运行 lint/test。Linux 无桌面时需�
 
 ## 下一阶段
 
-先试玩样片并确认主题、女主、画风与结局方向，再制作至少五种一致表情和扩展完整路线。大系统保持在 [Future Ideas](docs/FUTURE_IDEAS.md)。
+七种一致表情已完成并接入 20 处台词。源图、固定 Prompt 和检查结果见 [表情审阅记录](docs/EXPRESSION_REVIEW.md)。下一阶段 v0.4 完善章节、场景图与选择影响；重大剧情和最终美术继续由用户决定。大系统保持在 [Future Ideas](docs/FUTURE_IDEAS.md)。

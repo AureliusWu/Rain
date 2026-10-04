@@ -20,7 +20,7 @@ class AssetTests(unittest.TestCase):
 
     def test_character_asset_alpha(self):
         from PIL import Image
-        assets = json.loads((ROOT / "game/data/asset_manifest.json").read_text())["assets"]
+        assets = json.loads((ROOT / "game/data/asset_manifest.json").read_text(encoding="utf-8"))["assets"]
         for asset in assets:
             if asset["type"] == "sprite":
                 with Image.open(ROOT / "game" / asset["file"]) as image:

@@ -5,6 +5,7 @@ import subprocess
 import tempfile
 from pathlib import Path
 import zipfile
+from PIL import Image
 
 
 def main():
@@ -39,8 +40,14 @@ def main():
             shutil.copytree(screenshots, evidence / "screenshots", dirs_exist_ok=True)
         if result.returncode:
             raise SystemExit(result.returncode)
-        if not (screenshots / "first-choice.png").exists() or not (screenshots / "settings.png").exists():
-            raise SystemExit("Standalone EXE did not complete expected interaction tests")
+        required = ["first-choice", "settings"] + ["expression-" + name for name in
+            ("normal", "smile", "happy", "sad", "angry", "surprised", "embarrassed")]
+        for name in required:
+            file = screenshots / (name + ".png")
+            if not file.is_file():
+                raise SystemExit(f"Standalone EXE is missing UI evidence: {name}")
+            with Image.open(file) as image:
+                image.load()  # A present but truncated PNG is not usable evidence.
         print("Standalone Windows EXE: test process completed and UI evidence exists.")
 
 
