@@ -1,127 +1,742 @@
 {
   "schema_version": 1,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "title": "雨停之前",
-  "status": "engineering_placeholder",
-  "entry": "bootstrap_arrival",
+  "status": "vertical_slice_candidate_user_review",
+  "entry": "s01_arrival",
   "initial_state": {
     "affection": 0,
     "trust": 0,
     "truth_known": false
   },
-  "expected_routes": 2,
+  "expected_routes": 8,
   "nodes": [
     {
-      "id": "bootstrap_arrival",
+      "id": "s01_arrival",
       "location": "old_station",
       "time": "21:40",
       "lines": [
         {
-          "id": "bootstrap_arrival_l001",
+          "id": "s01_arrival_l001",
           "speaker": "n",
-          "text": "雨从旧车站的檐边落下来。我看了一眼停运告示，把手机收进口袋。"
+          "text": "雨从车站的铁皮檐边落下来，连成一层薄薄的帘。路灯照着停运告示，也照着我已经湿透的鞋尖。"
         },
         {
-          "id": "bootstrap_arrival_l002",
+          "id": "s01_arrival_l002",
           "speaker": "n",
-          "text": "站台另一头有人抬起了伞。"
+          "text": "手机上的网约车排队数从十二变成十三。我把它收进口袋，沿着熟悉的柱子往里走。"
         },
         {
-          "id": "bootstrap_arrival_l003",
+          "id": "s01_arrival_l003",
+          "speaker": "n",
+          "text": "三年前，这个时候的站台会很吵。今天，只有雨点撞在轨道上的声音。"
+        },
+        {
+          "id": "s01_arrival_l004",
+          "speaker": "n",
+          "text": "旧寄存柜的号码还记在备忘录里。我来取一箱书，办完这件事，明早就回去。"
+        },
+        {
+          "id": "s01_arrival_l005",
           "speaker": "h",
-          "text": "你也是来等最后一班车的吗？"
+          "text": "你还是和以前一样，出门不看天气。",
+          "voice": "heroine_s01_arrival_l005_v1"
         },
         {
-          "id": "bootstrap_arrival_l004",
+          "id": "s01_arrival_l006",
+          "speaker": "n",
+          "text": "有人从长椅旁站起来。蓝灰色的开衫，右边那枚银色发夹，还有说完话后轻轻抬起的眉。"
+        },
+        {
+          "id": "s01_arrival_l007",
           "speaker": "p",
-          "text": "看起来，我们都来晚了。"
+          "text": "许澄？"
+        },
+        {
+          "id": "s01_arrival_l008",
+          "speaker": "h",
+          "text": "嗯。你倒是记得名字。"
+        },
+        {
+          "id": "s01_arrival_l009",
+          "speaker": "n",
+          "text": "我本来准备解释这几年为什么没联系，又觉得刚找出来的理由，听上去和三年前一样差。"
+        },
+        {
+          "id": "s01_arrival_l010",
+          "speaker": "p",
+          "text": "……好久不见。"
+        },
+        {
+          "id": "s01_arrival_l011",
+          "speaker": "h",
+          "text": "三年。差两个月。"
+        },
+        {
+          "id": "s01_arrival_l012",
+          "speaker": "n",
+          "text": "她没有靠近。我也停在原地，隔着半根柱子的距离，听雨落了一会儿。"
         }
       ],
       "background": "station",
       "sprite": "normal",
       "bgm": "rain_theme",
       "ambient": "rain_ambience",
-      "next": "bootstrap_choice"
+      "next": "s02_reunion"
     },
     {
-      "id": "bootstrap_choice",
+      "id": "s02_reunion",
       "location": "old_station",
-      "time": "21:40",
+      "time": "21:43",
       "lines": [
         {
-          "id": "bootstrap_choice_l001",
+          "id": "s02_reunion_l001",
+          "speaker": "p",
+          "text": "你怎么也来了？"
+        },
+        {
+          "id": "s02_reunion_l002",
           "speaker": "h",
-          "text": "出口还有一段露天的路。要一起走吗？"
+          "text": "来取东西。和你一样。"
+        },
+        {
+          "id": "s02_reunion_l003",
+          "speaker": "n",
+          "text": "她指了指椅子上的纸袋，袋口夹着一张褪色的照片。照片背后有一道很深的折痕。"
+        },
+        {
+          "id": "s02_reunion_l004",
+          "speaker": "h",
+          "text": "车站清旧库房时找到了它。以前书店借给这里做过一次展览，一直没拿回来。"
+        },
+        {
+          "id": "s02_reunion_l005",
+          "speaker": "p",
+          "text": "这张是那次展览拍的？"
+        },
+        {
+          "id": "s02_reunion_l006",
+          "speaker": "h",
+          "text": "你按了定时快门，又跑回来。照片还是斜了，大半张都是雨棚。"
+        },
+        {
+          "id": "s02_reunion_l007",
+          "speaker": "p",
+          "text": "那时我说，这叫构图。"
+        },
+        {
+          "id": "s02_reunion_l008",
+          "speaker": "h",
+          "text": "我知道。你还给照片起了个很长的名字。",
+          "voice": "heroine_s02_reunion_l008_v1"
+        },
+        {
+          "id": "s02_reunion_l009",
+          "speaker": "n",
+          "text": "她把照片往袋子里按了按。我记起一个阴天：我们坐在这张长椅上，争论这条线什么时候会关。"
+        },
+        {
+          "id": "s02_reunion_l010",
+          "speaker": "n",
+          "text": "那时我们觉得，旧地方总会等人回来。后来我走得匆忙，连那张照片都没再看过。"
+        },
+        {
+          "id": "s02_reunion_l011",
+          "speaker": "h",
+          "text": "站务的人说，寄存柜里的东西都搬到出口了。已经替你留好，不用赶。"
+        },
+        {
+          "id": "s02_reunion_l012",
+          "speaker": "n",
+          "text": "她说完，把靠近柱子的干燥位置让了出来。袖口却刚好在雨帘边缘。"
         }
       ],
       "choices": [
         {
-          "id": "share_umbrella",
-          "text": "和她共撑一把伞",
+          "id": "q01_care",
+          "text": "把干燥的位置让给她，问候近况",
           "effects": {
             "affection": 1,
-            "trust": 1,
-            "truth_known": true
+            "trust": 1
           },
-          "next": "bootstrap_true"
+          "next": "s03_letter",
+          "response": [
+            {
+              "id": "q01_care_l001",
+              "speaker": "p",
+              "text": "你站里面吧。最近过得怎么样？"
+            },
+            {
+              "id": "q01_care_l002",
+              "speaker": "h",
+              "text": "还好。书店换了新书架，我少了一项修桌子的工作。"
+            },
+            {
+              "id": "q01_care_l003",
+              "speaker": "n",
+              "text": "她把袖口往上卷了一点，终于在我旁边坐下。"
+            }
+          ]
         },
         {
-          "id": "wait_alone",
-          "text": "留下来等雨停",
+          "id": "q01_business",
+          "text": "先确认取物时间，把事情办完",
           "effects": {
             "trust": -1
           },
-          "next": "bootstrap_normal"
+          "next": "s03_letter",
+          "response": [
+            {
+              "id": "q01_business_l001",
+              "speaker": "p",
+              "text": "那我先确认一下，东西今晚能拿走吗？"
+            },
+            {
+              "id": "q01_business_l002",
+              "speaker": "h",
+              "text": "能。我刚问过。"
+            },
+            {
+              "id": "q01_business_l003",
+              "speaker": "n",
+              "text": "她收回纸袋的手停了一下，又把照片整理好。我一时不知道该怎样接下一句。"
+            }
+          ]
         }
       ]
     },
     {
-      "id": "bootstrap_true",
+      "id": "s03_letter",
       "location": "old_station",
-      "time": "21:40",
+      "time": "21:47",
       "lines": [
         {
-          "id": "bootstrap_true_l001",
-          "speaker": "p",
-          "text": "谢谢。我来拿伞吧。"
-        },
-        {
-          "id": "bootstrap_true_l002",
+          "id": "s03_letter_l001",
           "speaker": "h",
-          "text": "好。路上，正好有件事想问你。"
+          "text": "还有一样东西，应该也是你的。"
         },
         {
-          "id": "bootstrap_true_l003",
+          "id": "s03_letter_l002",
           "speaker": "n",
-          "text": "我们并肩走下站台。湿漉漉的路灯，在两个人的脚边亮了起来。"
+          "text": "她从纸袋里抽出一只没有邮票的信封。边角被压平，纸已经有些发黄。"
+        },
+        {
+          "id": "s03_letter_l003",
+          "speaker": "h",
+          "text": "夹在展览那本留言册里。那本书上写了你的联系方式，所以他们把它一起送过来了。"
+        },
+        {
+          "id": "s03_letter_l004",
+          "speaker": "p",
+          "text": "你看过吗？"
+        },
+        {
+          "id": "s03_letter_l005",
+          "speaker": "h",
+          "text": "没拆。"
+        },
+        {
+          "id": "s03_letter_l006",
+          "speaker": "n",
+          "text": "我认出了自己的字。信封上只有一个“澄”字，最后那一点，落在一道浅浅的水痕里。"
+        },
+        {
+          "id": "s03_letter_l007",
+          "speaker": "n",
+          "text": "离开前一天，我在这里改了很久。写了为什么要走，也写了什么时候想回来。然后，把信藏在了书页之间。"
+        },
+        {
+          "id": "s03_letter_l008",
+          "speaker": "n",
+          "text": "我当时以为，等事情确定下来再交给她会更好。后来总有下一件事，总有一个更合适的明天。"
+        },
+        {
+          "id": "s03_letter_l009",
+          "speaker": "h",
+          "text": "不知道是谁留下的。名字倒是和我一样。"
+        },
+        {
+          "id": "s03_letter_l010",
+          "speaker": "n",
+          "text": "她把信递过来，手指避开封口。我伸出手，又慢了一瞬。"
+        },
+        {
+          "id": "s03_letter_l011",
+          "speaker": "h",
+          "text": "你不用现在打开。",
+          "voice": "heroine_s03_letter_l011_v1"
+        },
+        {
+          "id": "s03_letter_l012",
+          "speaker": "n",
+          "text": "纸很轻。我却发现，拿着它的时候，刚才准备好的那些寒暄都不太够用了。"
+        }
+      ],
+      "background": "unsent_letter",
+      "choices": [
+        {
+          "id": "q02_honest",
+          "text": "告诉她：这封信是我写的",
+          "effects": {
+            "trust": 1,
+            "truth_known": true
+          },
+          "next": "s04_waiting",
+          "response": [
+            {
+              "id": "q02_honest_l001",
+              "speaker": "p",
+              "text": "是我写给你的。出发前一天。"
+            },
+            {
+              "id": "q02_honest_l002",
+              "speaker": "h",
+              "text": "……那为什么没给我？"
+            },
+            {
+              "id": "q02_honest_l003",
+              "speaker": "p",
+              "text": "我怕答应了做不到，也怕你说不用等。所以把这个决定，一起拖下去了。"
+            },
+            {
+              "id": "q02_honest_l004",
+              "speaker": "h",
+              "text": "你至少可以告诉我，你还没决定。"
+            },
+            {
+              "id": "q02_honest_l005",
+              "speaker": "p",
+              "text": "嗯。那是我应该做的。"
+            },
+            {
+              "id": "q02_honest_l006",
+              "speaker": "n",
+              "text": "她没有马上笑。我把信封放在膝上，第一次让这件事有了一个明确的答案。"
+            }
+          ]
+        },
+        {
+          "id": "q02_defer",
+          "text": "先收好信，暂时不解释",
+          "effects": {
+            "trust": -1
+          },
+          "next": "s04_waiting",
+          "response": [
+            {
+              "id": "q02_defer_l001",
+              "speaker": "p",
+              "text": "可能是以前遗漏的东西。我先收起来。"
+            },
+            {
+              "id": "q02_defer_l002",
+              "speaker": "h",
+              "text": "嗯。"
+            },
+            {
+              "id": "q02_defer_l003",
+              "speaker": "n",
+              "text": "她把手缩回开衫的袖口，没有追问。我把信放进口袋，边角蹭过掌心。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s04_waiting",
+      "location": "old_station",
+      "time": "21:52",
+      "lines": [
+        {
+          "id": "s04_waiting_l001",
+          "speaker": "n",
+          "text": "站台尽头的灯灭了一盏。我们一起往靠近出口的长椅挪，重新坐到灯下。"
+        },
+        {
+          "id": "s04_waiting_l002",
+          "speaker": "h",
+          "text": "你明天还要走？"
+        },
+        {
+          "id": "s04_waiting_l003",
+          "speaker": "p",
+          "text": "嗯。请的假不长。"
+        },
+        {
+          "id": "s04_waiting_l004",
+          "speaker": "h",
+          "text": "我不是问你能留多久。"
+        },
+        {
+          "id": "s04_waiting_l005",
+          "speaker": "n",
+          "text": "她看了看我口袋露出的信封。我把手机放在椅面上，没有再打开叫车页面。"
+        },
+        {
+          "id": "s04_waiting_l006",
+          "speaker": "p",
+          "text": "我知道。"
+        },
+        {
+          "id": "s04_waiting_l007",
+          "speaker": "h",
+          "text": "以前你说要走的时候，我正想着把照片洗出来。还有一张拍得比较端正，没来得及给你。"
+        },
+        {
+          "id": "s04_waiting_l008",
+          "speaker": "p",
+          "text": "你一直留着？"
+        },
+        {
+          "id": "s04_waiting_l009",
+          "speaker": "h",
+          "text": "那是我自己也在里面的一张照片。当然要留。"
+        },
+        {
+          "id": "s04_waiting_l010",
+          "speaker": "n",
+          "text": "她说得很平常。我却忽然松了一口气：她有自己的生活，也有自己保存东西的理由。"
+        },
+        {
+          "id": "s04_waiting_l011",
+          "speaker": "h",
+          "text": "我后来换了工作，也搬了家。这几年，不是在这里等一班早就开走的车。"
+        },
+        {
+          "id": "s04_waiting_l012",
+          "speaker": "p",
+          "text": "我也不想你那样等。"
+        },
+        {
+          "id": "s04_waiting_l013",
+          "speaker": "h",
+          "text": "我知道。但有些话，如果只放在心里，别人听不见。",
+          "voice": "heroine_s04_waiting_l013_v1"
+        },
+        {
+          "id": "s04_waiting_l014",
+          "speaker": "n",
+          "text": "雨声从急促变得均匀。一阵风把告示的一角掀起来，露出下面旧时刻表的一小段。"
+        },
+        {
+          "id": "s04_waiting_l015",
+          "speaker": "p",
+          "text": "你说得对。"
+        },
+        {
+          "id": "s04_waiting_l016",
+          "speaker": "h",
+          "text": "如果你明天就要走，今天就说今天能做到的事。比如，回去以后给我发个消息。"
+        },
+        {
+          "id": "s04_waiting_l017",
+          "speaker": "p",
+          "text": "这个能做到。"
+        },
+        {
+          "id": "s04_waiting_l018",
+          "speaker": "h",
+          "text": "那就记着。别再拿手机没电当理由。"
+        },
+        {
+          "id": "s04_waiting_l019",
+          "speaker": "n",
+          "text": "我拿出手机，给她发了一个句号。她的屏幕亮起来，头像还是当年那只画得有点歪的猫。"
+        },
+        {
+          "id": "s04_waiting_l020",
+          "speaker": "h",
+          "text": "句号不算消息。"
+        },
+        {
+          "id": "s04_waiting_l021",
+          "speaker": "p",
+          "text": "至少能证明号码没错。"
+        },
+        {
+          "id": "s04_waiting_l022",
+          "speaker": "n",
+          "text": "她很轻地笑了一声，又把手机收好。这一次，我没有急着替这声笑解释什么。"
+        }
+      ],
+      "background": "station",
+      "sprite": "normal",
+      "next": "s05_departure"
+    },
+    {
+      "id": "s05_departure",
+      "location": "old_station",
+      "time": "21:56",
+      "lines": [
+        {
+          "id": "s05_departure_l001",
+          "speaker": "n",
+          "text": "雨小了一些。出口的保安敲了敲玻璃，示意我们该收东西了。"
+        },
+        {
+          "id": "s05_departure_l002",
+          "speaker": "n",
+          "text": "我拎起纸箱，里面的书在搬动时发出沉沉的一声。许澄把照片装进纸袋，撑开伞。"
+        },
+        {
+          "id": "s05_departure_l003",
+          "speaker": "h",
+          "text": "外面那家小店还开着。雨太大时，我会进去坐一会儿。"
+        },
+        {
+          "id": "s05_departure_l004",
+          "speaker": "p",
+          "text": "还是卖热牛奶的那家？"
+        },
+        {
+          "id": "s05_departure_l005",
+          "speaker": "h",
+          "text": "已经换了老板。不过热水还是免费的。"
+        },
+        {
+          "id": "s05_departure_l006",
+          "speaker": "n",
+          "text": "伞面轻轻碰到栏杆。她停下来，看着我，像是在等一个不需要猜的答复。"
+        },
+        {
+          "id": "s05_departure_l007",
+          "speaker": "h",
+          "text": "要一起走到那边吗？",
+          "voice": "heroine_s05_departure_l007_v1"
+        },
+        {
+          "id": "s05_departure_l008",
+          "speaker": "n",
+          "text": "明早的车票还在手机里。眼前这段路，却只有今晚。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "q03_walk",
+          "text": "和她一起走，继续聊一会儿",
+          "effects": {
+            "affection": 1
+          },
+          "next": "s06_resolution",
+          "response": [
+            {
+              "id": "q03_walk_l001",
+              "speaker": "p",
+              "text": "好。纸箱我提着，伞可以借我拿吗？"
+            },
+            {
+              "id": "q03_walk_l002",
+              "speaker": "h",
+              "text": "你拿左边。我不想再湿一次袖口。"
+            },
+            {
+              "id": "q03_walk_l003",
+              "speaker": "n",
+              "text": "她把伞柄挪到两个人之间。我接过去，跟上她的步子。"
+            }
+          ]
+        },
+        {
+          "id": "q03_leave",
+          "text": "今晚先各自回家，改天再联系",
+          "effects": {
+            "trust": -1
+          },
+          "next": "s06_resolution",
+          "response": [
+            {
+              "id": "q03_leave_l001",
+              "speaker": "p",
+              "text": "今晚先回去吧。到家以后，我会给你发消息。"
+            },
+            {
+              "id": "q03_leave_l002",
+              "speaker": "h",
+              "text": "好。我听见了。"
+            },
+            {
+              "id": "q03_leave_l003",
+              "speaker": "n",
+              "text": "她点了点头，把伞撑正。我们把“下次”留了下来，也把今晚各自的路说清楚。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s06_resolution",
+      "location": "old_station",
+      "time": "22:00",
+      "lines": [],
+      "routes": [
+        {
+          "when": {
+            "affection": {
+              "gte": 2
+            },
+            "trust": {
+              "gte": 1
+            },
+            "truth_known": true
+          },
+          "next": "s07_true"
+        },
+        {
+          "when": {},
+          "next": "s08_normal"
+        }
+      ]
+    },
+    {
+      "id": "s07_true",
+      "location": "old_station",
+      "time": "22:01",
+      "lines": [
+        {
+          "id": "s07_true_l001",
+          "speaker": "n",
+          "text": "车站外的路比记忆里短。伞沿滴下的水落在鞋边，纸箱有一半，一直留在干燥的地方。"
+        },
+        {
+          "id": "s07_true_l002",
+          "speaker": "h",
+          "text": "你把伞全偏过来了。"
+        },
+        {
+          "id": "s07_true_l003",
+          "speaker": "p",
+          "text": "我这边已经湿过，不差这一点。"
+        },
+        {
+          "id": "s07_true_l004",
+          "speaker": "h",
+          "text": "那也不用重新湿一遍。"
+        },
+        {
+          "id": "s07_true_l005",
+          "speaker": "n",
+          "text": "她抓住伞柄，往我这边推了推。我们都慢下来，终于把步子走到差不多的长度。"
+        },
+        {
+          "id": "s07_true_l006",
+          "speaker": "n",
+          "text": "小店的灯还亮着。桌上有水杯、纸巾，和一碟并不特别好吃的饼干。我们坐下，没有谁急着给今晚取名字。"
+        },
+        {
+          "id": "s07_true_l007",
+          "speaker": "p",
+          "text": "等我把箱子放好，能把那封信重新写一遍吗？"
+        },
+        {
+          "id": "s07_true_l008",
+          "speaker": "h",
+          "text": "旧的也留着。写过的话，不能因为不好意思就当作没发生。"
+        },
+        {
+          "id": "s07_true_l009",
+          "speaker": "p",
+          "text": "那我把现在的放在后面。"
+        },
+        {
+          "id": "s07_true_l010",
+          "speaker": "h",
+          "text": "嗯。这次记得交给我。"
+        },
+        {
+          "id": "s07_true_l011",
+          "speaker": "n",
+          "text": "她从纸袋里抽出那张照片，放到桌子中间。拍得确实有些歪。雨棚、长椅，还有并肩站着的两个人，都在里面。"
+        },
+        {
+          "id": "s07_true_l012",
+          "speaker": "n",
+          "text": "我把明早的车次告诉她。她说了明天几点上班，又问我到了以后，什么时候方便说话。"
+        },
+        {
+          "id": "s07_true_l013",
+          "speaker": "n",
+          "text": "我们的生活没有突然变得容易。只是下一次联系的时间，终于从一个含糊的词，变成了双方都知道的约定。"
+        },
+        {
+          "id": "s07_true_l014",
+          "speaker": "h",
+          "text": "到家以后，发一条有内容的消息。",
+          "voice": "heroine_s07_true_l014_v1"
+        },
+        {
+          "id": "s07_true_l015",
+          "speaker": "p",
+          "text": "好。第一条就告诉你，这次伞没有忘。"
+        },
+        {
+          "id": "s07_true_l016",
+          "speaker": "n",
+          "text": "窗外，最后几滴雨从招牌上滑下来。桌上的旧信被水杯压住一角，稳稳地留在灯下。"
         }
       ],
       "ending": "true",
-      "ending_title": "工程样片 · 一起走"
+      "ending_title": "True / 把今天说清楚",
+      "clear_scene": true
     },
     {
-      "id": "bootstrap_normal",
+      "id": "s08_normal",
       "location": "old_station",
-      "time": "21:40",
+      "time": "22:06",
       "lines": [
         {
-          "id": "bootstrap_normal_l001",
-          "speaker": "p",
-          "text": "我再等等。你先走吧。"
-        },
-        {
-          "id": "bootstrap_normal_l002",
-          "speaker": "h",
-          "text": "嗯。希望这场雨不会太久。"
-        },
-        {
-          "id": "bootstrap_normal_l003",
+          "id": "s08_normal_l001",
           "speaker": "n",
-          "text": "她的脚步声消失在雨里。我打开了手机，重新寻找回家的路。"
+          "text": "十分钟后，我站在车站外，看着最后几滴雨落进路边的积水。旧箱子靠着腿，信封还放在口袋里。"
+        },
+        {
+          "id": "s08_normal_l002",
+          "speaker": "n",
+          "text": "刚才的话，有些说了，有些没有说。有些本来只要一句，到了嘴边，却被我换成另一句。"
+        },
+        {
+          "id": "s08_normal_l003",
+          "speaker": "n",
+          "text": "许澄没有替我把这些空白填好。我也没有权利把她的沉默，理解成一切都已经过去。"
+        },
+        {
+          "id": "s08_normal_l004",
+          "speaker": "n",
+          "text": "手机亮起来。她发来一张旧照片，下面只有一行字。"
+        },
+        {
+          "id": "s08_normal_l005",
+          "speaker": "h",
+          "text": "这张没有拍歪。你回去以后，慢慢看。"
+        },
+        {
+          "id": "s08_normal_l006",
+          "speaker": "p",
+          "text": "谢谢。到家我给你发消息。"
+        },
+        {
+          "id": "s08_normal_l007",
+          "speaker": "n",
+          "text": "我输入了完整的一句话，没有用句号代替。发送以后，又把信封按平了一点。"
+        },
+        {
+          "id": "s08_normal_l008",
+          "speaker": "n",
+          "text": "车站关闭的时间已经写在告示上。另一些事情，今晚还没有确定。"
+        },
+        {
+          "id": "s08_normal_l009",
+          "speaker": "n",
+          "text": "我可以继续把它们留给以后，也可以在下一次联系时，先把该说的话说出来。"
+        },
+        {
+          "id": "s08_normal_l010",
+          "speaker": "n",
+          "text": "雨停了。这个晚上没有给出所有答案，但我们已经重新有了彼此的号码。"
         }
       ],
+      "background": "station",
       "ending": "normal",
-      "ending_title": "工程样片 · 等雨停"
+      "ending_title": "Normal / 留给下一次的话"
     }
   ]
 }

@@ -36,6 +36,8 @@ def render_story(story, assets, voices):
     lines += ['    $ last_ending = ""', f"    jump {story['entry']}", ""]
     for node in story["nodes"]:
         lines += [f"label {node['id']}:", f"    $ current_scene = {quote(node['id'])}"]
+        if node.get("clear_scene"):
+            lines.append("    scene black with dissolve")
         if node.get("background"):
             lines.append(f"    scene expression {quote(by_asset[node['background']]['file'])} with dissolve")
         if node.get("sprite"):
@@ -59,6 +61,13 @@ def render_story(story, assets, voices):
                 lines.append(f"        {quote(c['text'])}:")
                 for k, v in c["effects"].items():
                     lines.append(f"            $ {k} {'=' if type(v) is bool else '+='} {v!r}")
+                for response in c.get("response", []):
+                    if response.get("expression"):
+                        lines.append(f"            show heroine {response['expression']} at heroine_position")
+                    if response.get("voice"):
+                        lines.append(f"            voice {quote(by_voice[response['voice']]['file'])}")
+                    speaker = "" if response["speaker"] == "n" else response["speaker"] + " "
+                    lines.append(f"            {speaker}{quote(response['text'])}")
                 lines.append(f"            jump {c['next']}")
         elif "routes" in node:
             for i, r in enumerate(node["routes"]):
@@ -81,8 +90,8 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--check", action="store_true", help="Fail if generated scripts are stale")
     args = p.parse_args()
-    assets = json.loads((ROOT / "game/data/asset_manifest.json").read_text())["assets"]
-    voices = json.loads((ROOT / "game/data/voice_manifest.json").read_text())["voices"]
+    assets = json.loads((ROOT / "game/data/asset_manifest.json").read_text(encoding="utf-8"))["assets"]
+    voices = json.loads((ROOT / "game/data/voice_manifest.json").read_text(encoding="utf-8"))["voices"]
     outputs = render_story(load_story(), assets, voices)
     for path, content in zip([ROOT / "game/script/story_generated.rpy", ROOT / "game/script/images_generated.rpy"], outputs):
         if args.check:

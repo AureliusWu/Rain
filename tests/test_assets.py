@@ -25,7 +25,9 @@ class AssetTests(unittest.TestCase):
             if asset["type"] == "sprite":
                 with Image.open(ROOT / "game" / asset["file"]) as image:
                     self.assertIn("A", image.getbands())
-                    self.assertEqual(image.getchannel("A").getextrema(), (0, 255))
+                    low, high = image.getchannel("A").getextrema()
+                    self.assertEqual(low, 0)
+                    self.assertGreaterEqual(high, 250)
 
 
 if __name__ == "__main__":

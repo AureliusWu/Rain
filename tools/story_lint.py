@@ -1,11 +1,11 @@
 """Mechanical prose checks. Character intent and timeline still require review."""
 from collections import Counter
-from tools.story_model import load_story, validate_structure
+from tools.story_model import load_story, validate_structure, scene_lines
 
 
 def lint(story):
     errors = validate_structure(story)
-    texts = [line["text"] for n in story["nodes"] for line in n.get("lines", [])]
+    texts = [line["text"] for n in story["nodes"] for line in scene_lines(n)]
     warnings = []
     for text, count in Counter(texts).items():
         if count > 1 and len(text) > 15:
@@ -27,7 +27,7 @@ def main():
         print("ERROR:", x)
     for x in warnings:
         print("REVIEW:", x)
-    count = sum(len(line["text"]) for n in story["nodes"] for line in n.get("lines", []))
+    count = sum(len(line["text"]) for n in story["nodes"] for line in scene_lines(n))
     print(f"Story lint: {len(errors)} errors, {len(warnings)} review notes; {count} characters (all branches).")
     print("Manual review required: character consistency, emotional logic, timeline, and pacing.")
     raise SystemExit(bool(errors))

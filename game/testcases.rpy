@@ -8,6 +8,8 @@ testsuite global:
         pause until screen "main_menu"
         screenshot "main-menu"
     before testcase:
+        $ preferences.afm_enable = False
+        $ config.skipping = None
         if not screen "main_menu":
             run MainMenu(confirm=False)
         click id "menu_start"
@@ -16,11 +18,18 @@ testsuite global:
 
 testcase route_01:
     advance until screen "choice"
-    click "和她共撑一把伞"
+    click "把干燥的位置让给她，问候近况"
+    advance until eval current_scene == 's03_letter'
+    advance
+    screenshot "cg-letter"
+    advance until screen "choice"
+    click "告诉她：这封信是我写的"
+    advance until screen "choice"
+    click "和她一起走，继续聊一会儿"
     advance until screen "ending_card"
     assert eval (last_ending == 'true')
-    assert eval (affection == 1)
-    assert eval (trust == 1)
+    assert eval (affection == 2)
+    assert eval (trust == 2)
     assert eval (truth_known == True)
     screenshot "route-01-true"
     click id "ending_return"
@@ -28,13 +37,113 @@ testcase route_01:
 
 testcase route_02:
     advance until screen "choice"
-    click "留下来等雨停"
+    click "把干燥的位置让给她，问候近况"
+    advance until screen "choice"
+    click "告诉她：这封信是我写的"
+    advance until screen "choice"
+    click "今晚先各自回家，改天再联系"
+    advance until screen "ending_card"
+    assert eval (last_ending == 'normal')
+    assert eval (affection == 1)
+    assert eval (trust == 1)
+    assert eval (truth_known == True)
+    screenshot "route-02-normal"
+    click id "ending_return"
+    pause until screen "main_menu"
+
+testcase route_03:
+    advance until screen "choice"
+    click "把干燥的位置让给她，问候近况"
+    advance until screen "choice"
+    click "先收好信，暂时不解释"
+    advance until screen "choice"
+    click "和她一起走，继续聊一会儿"
+    advance until screen "ending_card"
+    assert eval (last_ending == 'normal')
+    assert eval (affection == 2)
+    assert eval (trust == 0)
+    assert eval (truth_known == False)
+    screenshot "route-03-normal"
+    click id "ending_return"
+    pause until screen "main_menu"
+
+testcase route_04:
+    advance until screen "choice"
+    click "把干燥的位置让给她，问候近况"
+    advance until screen "choice"
+    click "先收好信，暂时不解释"
+    advance until screen "choice"
+    click "今晚先各自回家，改天再联系"
+    advance until screen "ending_card"
+    assert eval (last_ending == 'normal')
+    assert eval (affection == 1)
+    assert eval (trust == -1)
+    assert eval (truth_known == False)
+    screenshot "route-04-normal"
+    click id "ending_return"
+    pause until screen "main_menu"
+
+testcase route_05:
+    advance until screen "choice"
+    click "先确认取物时间，把事情办完"
+    advance until screen "choice"
+    click "告诉她：这封信是我写的"
+    advance until screen "choice"
+    click "和她一起走，继续聊一会儿"
+    advance until screen "ending_card"
+    assert eval (last_ending == 'normal')
+    assert eval (affection == 1)
+    assert eval (trust == 0)
+    assert eval (truth_known == True)
+    screenshot "route-05-normal"
+    click id "ending_return"
+    pause until screen "main_menu"
+
+testcase route_06:
+    advance until screen "choice"
+    click "先确认取物时间，把事情办完"
+    advance until screen "choice"
+    click "告诉她：这封信是我写的"
+    advance until screen "choice"
+    click "今晚先各自回家，改天再联系"
     advance until screen "ending_card"
     assert eval (last_ending == 'normal')
     assert eval (affection == 0)
     assert eval (trust == -1)
+    assert eval (truth_known == True)
+    screenshot "route-06-normal"
+    click id "ending_return"
+    pause until screen "main_menu"
+
+testcase route_07:
+    advance until screen "choice"
+    click "先确认取物时间，把事情办完"
+    advance until screen "choice"
+    click "先收好信，暂时不解释"
+    advance until screen "choice"
+    click "和她一起走，继续聊一会儿"
+    advance until screen "ending_card"
+    assert eval (last_ending == 'normal')
+    assert eval (affection == 1)
+    assert eval (trust == -2)
     assert eval (truth_known == False)
-    screenshot "route-02-normal"
+    screenshot "route-07-normal"
+    click id "ending_return"
+    pause until screen "main_menu"
+
+testcase route_08:
+    advance until screen "choice"
+    click "先确认取物时间，把事情办完"
+    advance until screen "choice"
+    click "先收好信，暂时不解释"
+    advance until screen "choice"
+    click "今晚先各自回家，改天再联系"
+    advance until screen "ending_card"
+    assert eval (last_ending == 'normal')
+    assert eval (affection == 0)
+    assert eval (trust == -3)
+    assert eval (truth_known == False)
+    screenshot "route-08-normal"
     click id "ending_return"
     pause until screen "main_menu"
 
@@ -48,7 +157,7 @@ testcase save_load_and_restart:
     assert eval renpy.can_load("1-1")
     click id "game_return"
     pause until screen "choice"
-    click "和她共撑一把伞"
+    click "把干燥的位置让给她，问候近况"
     advance
     $ trust = -99
     click id "load_open"
@@ -57,7 +166,7 @@ testcase save_load_and_restart:
     if screen "confirm":
         click id "confirm_yes"
     pause until screen "choice"
-    assert eval (current_scene == 'bootstrap_choice')
+    assert eval (current_scene == 's02_reunion')
     assert eval (affection == 0 and trust == 0 and not truth_known)
     run MainMenu(confirm=False)
     click id "menu_start"
@@ -65,8 +174,8 @@ testcase save_load_and_restart:
     assert eval (affection == 0 and trust == 0 and not truth_known)
 
 testcase history_preferences_and_audio:
-    advance
-    advance
+    advance until eval renpy.music.get_playing(channel="voice") is not None
+    screenshot "first-dialogue"
     click id "history_open"
     assert screen "history"
     screenshot "history"
@@ -75,7 +184,41 @@ testcase history_preferences_and_audio:
     assert screen "preferences"
     screenshot "settings"
     click id "mute_all"
+    assert eval preferences.get_mute("music")
     click id "mute_all"
+    assert eval not preferences.get_mute("music")
     click id "game_return"
     assert eval renpy.music.get_playing(channel="music") is not None
     assert eval renpy.music.get_playing(channel="ambient") is not None
+
+testcase voice_and_display:
+    click id "preferences_open"
+    click id "display_fullscreen"
+    assert eval preferences.fullscreen
+    click id "display_window"
+    assert eval not preferences.fullscreen
+    click id "voice_test"
+    assert eval renpy.music.get_playing(channel="voice") == config.sample_voice
+    click id "game_return"
+
+testcase auto_and_skip:
+    $ preferences.afm_time = 0.1
+    $ test_history_length = len(_history_list)
+    click id "auto_run"
+    assert eval preferences.afm_enable
+    pause until eval len(_history_list) > test_history_length
+    assert eval len(_history_list) > test_history_length
+    click id "auto_run"
+    assert eval not preferences.afm_enable
+    $ preferences.skip_unseen = False
+    click id "preferences_open"
+    click id "skip_unseen"
+    assert eval preferences.skip_unseen
+    click id "game_return"
+    click id "skip_run"
+    pause until screen "choice"
+    assert eval current_scene == 's02_reunion'
+    assert eval (affection == 0 and trust == 0 and not truth_known)
+    $ config.skipping = None
+    $ preferences.afm_time = 15.0
+    $ preferences.skip_unseen = False

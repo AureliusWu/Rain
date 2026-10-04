@@ -1,0 +1,5 @@
+# Optional authoring dependencies. Never required by players or ordinary CI.
+kokoro-onnx==0.6.1
+onnxruntime==1.30.0
+misaki[zh]==0.9.4
+soundfile==0.14.0

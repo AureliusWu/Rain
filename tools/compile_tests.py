@@ -21,6 +21,8 @@ def render_tests(story):
         '        pause until screen "main_menu"',
         '        screenshot "main-menu"',
         "    before testcase:",
+        "        $ preferences.afm_enable = False",
+        "        $ config.skipping = None",
         '        if not screen "main_menu":',
         "            run MainMenu(confirm=False)",
         '        click id "menu_start"',
@@ -30,7 +32,11 @@ def render_tests(story):
     ]
     for index, route in enumerate(report["routes"], 1):
         lines += [f"testcase route_{index:02}:"]
-        for choice_id in route["choices"]:
+        for choice_index, choice_id in enumerate(route["choices"]):
+            if index == 1 and choice_index == 1:
+                cg_scene = next((n["id"] for n in story["nodes"] if n.get("background") == "unsent_letter"), None)
+                if cg_scene:
+                    lines += [f"    advance until eval current_scene == {cg_scene!r}", '    advance', '    screenshot "cg-letter"']
             lines += ['    advance until screen "choice"', f"    click {quote(choices[choice_id]['text'])}"]
         lines += ['    advance until screen "ending_card"', f"    assert eval (last_ending == {route['ending']!r})"]
         for key, value in route["state"].items():
@@ -64,8 +70,8 @@ def render_tests(story):
         '    assert eval (affection == 0 and trust == 0 and not truth_known)',
         '',
         'testcase history_preferences_and_audio:',
-        '    advance',
-        '    advance',
+        '    advance until eval renpy.music.get_playing(channel="voice") is not None',
+        '    screenshot "first-dialogue"',
         '    click id "history_open"',
         '    assert screen "history"',
         '    screenshot "history"',
@@ -74,10 +80,44 @@ def render_tests(story):
         '    assert screen "preferences"',
         '    screenshot "settings"',
         '    click id "mute_all"',
+        '    assert eval preferences.get_mute("music")',
         '    click id "mute_all"',
+        '    assert eval not preferences.get_mute("music")',
         '    click id "game_return"',
         '    assert eval renpy.music.get_playing(channel="music") is not None',
         '    assert eval renpy.music.get_playing(channel="ambient") is not None',
+        '',
+        'testcase voice_and_display:',
+        '    click id "preferences_open"',
+        '    click id "display_fullscreen"',
+        '    assert eval preferences.fullscreen',
+        '    click id "display_window"',
+        '    assert eval not preferences.fullscreen',
+        '    click id "voice_test"',
+        '    assert eval renpy.music.get_playing(channel="voice") == config.sample_voice',
+        '    click id "game_return"',
+        '',
+        'testcase auto_and_skip:',
+        '    $ preferences.afm_time = 0.1',
+        '    $ test_history_length = len(_history_list)',
+        '    click id "auto_run"',
+        '    assert eval preferences.afm_enable',
+        '    pause until eval len(_history_list) > test_history_length',
+        '    assert eval len(_history_list) > test_history_length',
+        '    click id "auto_run"',
+        '    assert eval not preferences.afm_enable',
+        '    $ preferences.skip_unseen = False',
+        '    click id "preferences_open"',
+        '    click id "skip_unseen"',
+        '    assert eval preferences.skip_unseen',
+        '    click id "game_return"',
+        '    click id "skip_run"',
+        '    pause until screen "choice"',
+        f"    assert eval current_scene == {first_choice_scene!r}",
+        '    assert eval (affection == 0 and trust == 0 and not truth_known)',
+        '    $ config.skipping = None',
+        '    $ preferences.afm_time = 15.0',
+        '    $ preferences.skip_unseen = False',
         '',
     ]
     return "\n".join(lines)

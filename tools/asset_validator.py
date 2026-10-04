@@ -2,13 +2,13 @@
 import hashlib
 import json
 from pathlib import PurePosixPath
-from tools.story_model import ROOT, load_story
+from tools.story_model import ROOT, load_story, scene_lines
 
 
 def validate_assets(root=ROOT, story=None):
     story = story or load_story(root / "game/data/story.json")
-    manifest = json.loads((root / "game/data/asset_manifest.json").read_text())
-    voices = json.loads((root / "game/data/voice_manifest.json").read_text())["voices"]
+    manifest = json.loads((root / "game/data/asset_manifest.json").read_text(encoding="utf-8"))
+    voices = json.loads((root / "game/data/voice_manifest.json").read_text(encoding="utf-8"))["voices"]
     errors = []
     assets = manifest["assets"]
     ids = [a["id"] for a in assets]
@@ -30,12 +30,18 @@ def validate_assets(root=ROOT, story=None):
             errors.append(f"Missing asset provenance: {a['id']}")
         if a.get("prompt") and not (root / a["prompt"]).is_file():
             errors.append(f"Missing prompt: {a['id']}")
+        elif a.get("prompt_sha256") and hashlib.sha256((root / a["prompt"]).read_bytes()).hexdigest() != a["prompt_sha256"]:
+            errors.append(f"Prompt hash mismatch: {a['id']}")
+        if a.get("source_file"):
+            source = root / a["source_file"]
+            if not source.is_file() or hashlib.sha256(source.read_bytes()).hexdigest() != a.get("source_sha256"):
+                errors.append(f"Source asset missing/changed: {a['id']}")
     sprite_expressions = {a["expression"] for a in assets if a["type"] == "sprite"}
     for n in story["nodes"]:
         for k in ("background", "bgm", "ambient"):
             if n.get(k) and n[k] not in lookup:
                 errors.append(f"{n['id']}: missing {k} {n[k]}")
-        for expression in [n.get("sprite")] + [line.get("expression") for line in n.get("lines", [])]:
+        for expression in [n.get("sprite")] + [line.get("expression") for line in scene_lines(n)]:
             if expression and expression not in sprite_expressions:
                 errors.append(f"{n['id']}: missing sprite expression {expression}")
     voice_ids = [v["voice_id"] for v in voices]
@@ -44,7 +50,7 @@ def validate_assets(root=ROOT, story=None):
     by_voice = {v["voice_id"]: v for v in voices}
     bound_voice_ids = set()
     for n in story["nodes"]:
-        for line in n.get("lines", []):
+        for line in scene_lines(n):
             if line.get("voice"):
                 voice = by_voice.get(line["voice"])
                 bound_voice_ids.add(line["voice"])

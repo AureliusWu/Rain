@@ -46,6 +46,12 @@ def outgoing(node):
     return [node["next"]] if "next" in node else []
 
 
+def scene_lines(node):
+    yield from node.get("lines", [])
+    for choice in node.get("choices", []):
+        yield from choice.get("response", [])
+
+
 def validate_structure(story):
     errors = []
     if story.get("schema_version") != 1:
@@ -98,7 +104,7 @@ def validate_structure(story):
                     errors.append(f"{name}: invalid condition type")
         if "routes" in n and (not n["routes"] or n["routes"][-1].get("when")):
             errors.append(f"{name}: routes must end in an unconditional fallback")
-        for line in n.get("lines", []):
+        for line in scene_lines(n):
             line_id = line.get("id", "")
             if not ID.fullmatch(line_id) or line_id in line_ids:
                 errors.append(f"{name}: duplicate/invalid line ID {line_id}")
