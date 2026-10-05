@@ -1,0 +1,28 @@
+{
+  "version": "0.8.0",
+  "commit": "a36eae81dae281e31805a36e424a83d5a9fc8c69",
+  "ci_run": 37280375775,
+  "ci_url": "https://github.com/AureliusWu/Test/actions/runs/37280375775",
+  "job_id": 111666813586,
+  "source": {
+    "cases": 30,
+    "passed": 29,
+    "failed": 1,
+    "skipped": 0,
+    "not_run": 0,
+    "assertions_executed": 344,
+    "assertions_passed": 343,
+    "assertions_failed": 1,
+    "seconds": 454.432
+  },
+  "failure": "auto_waits_for_voice: len(_history_list) == test_history_length + 1",
+  "cause": "At a 0.1 second AFM interval, multiple silent dialogue lines can advance between test-runner frames after the voice has ended.",
+  "fix": "Disable AFM as soon as progression is observed; require ended voice channel and at least 3.554 seconds observed playback, allowing 0.15 seconds observation delay for the 3.704 second recording.",
+  "blocked_steps": [
+    "Build standalone Windows ZIP",
+    "Verify and boot EXE extracted from distribution",
+    "Upload standalone package"
+  ],
+  "evidence_upload": "success",
+  "scope": "actual Windows CI failure and success-gated build; not a game save/load failure"
+}

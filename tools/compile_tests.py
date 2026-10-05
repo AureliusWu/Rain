@@ -398,16 +398,21 @@ def render_tests(story):
               '    assert eval not renpy.showing("heroine")', '    screenshot "restart-normal-ending"', '']
 
     voice_file = recordings[dialogue['s01_arrival_l005']['voice']]
+    asset_manifest = json.loads((ROOT / 'game/data/asset_manifest.json').read_text(encoding='utf-8'))['assets']
+    voice_duration = next(a['audio']['duration_seconds'] for a in asset_manifest if a['file'] == voice_file)
     lines += ['testcase auto_waits_for_voice:', '    $ preferences.wait_voice = True',
               '    $ preferences.afm_time = 0.1', at_line('s01_arrival_l005'),
-              playing('voice', voice_file), '    $ test_history_length = len(_history_list)',
+              playing('voice', voice_file), '    $ test_voice_started = __import__("time").monotonic()',
+              '    $ test_history_length = len(_history_list)',
               '    click id "auto_run"', '    assert eval preferences.afm_enable', '    pause 0.5',
               playing('voice', voice_file), '    assert eval len(_history_list) == test_history_length',
               '    screenshot "auto-voice-in-progress"',
               '    pause until eval len(_history_list) > test_history_length',
-              '    assert eval renpy.music.get_playing(channel="voice") is None',
-              '    assert eval len(_history_list) == test_history_length + 1',
               '    click id "auto_run"', '    assert eval not preferences.afm_enable',
+              '    assert eval renpy.music.get_playing(channel="voice") is None',
+              # A fast AFM setting can legitimately advance multiple silent lines
+              # between runner frames. Check complete playback, not an exact line count.
+              f'    assert eval __import__("time").monotonic() - test_voice_started >= {voice_duration - 0.15:.3f}',
               '    $ preferences.afm_time = 15.0', '']
 
     lines += ['testcase skip_stops_at_later_choices:', '    $ preferences.skip_unseen = True',

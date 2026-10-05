@@ -1030,6 +1030,7 @@ testcase auto_waits_for_voice:
     $ preferences.afm_time = 0.1
     advance until "你还是和以前一样，出门不看天气。"
     assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
+    $ test_voice_started = __import__("time").monotonic()
     $ test_history_length = len(_history_list)
     click id "auto_run"
     assert eval preferences.afm_enable
@@ -1038,10 +1039,10 @@ testcase auto_waits_for_voice:
     assert eval len(_history_list) == test_history_length
     screenshot "auto-voice-in-progress"
     pause until eval len(_history_list) > test_history_length
-    assert eval renpy.music.get_playing(channel="voice") is None
-    assert eval len(_history_list) == test_history_length + 1
     click id "auto_run"
     assert eval not preferences.afm_enable
+    assert eval renpy.music.get_playing(channel="voice") is None
+    assert eval __import__("time").monotonic() - test_voice_started >= 3.554
     $ preferences.afm_time = 15.0
 
 testcase skip_stops_at_later_choices:

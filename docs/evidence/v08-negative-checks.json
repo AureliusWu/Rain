@@ -1,0 +1,85 @@
+{
+  "version": "0.8.0",
+  "candidate_commit": "a36eae81dae281e31805a36e424a83d5a9fc8c69",
+  "native_cases": 30,
+  "native_assertions": 345,
+  "records": [
+    {
+      "fault": "tools.compile_story baseline generation",
+      "command": "-m tools.compile_story",
+      "exit_code": 0,
+      "stderr": "",
+      "scope": "isolated authoring fixture; no native engine execution"
+    },
+    {
+      "fault": "tools.compile_story current baseline",
+      "command": "-m tools.compile_story --check",
+      "exit_code": 0,
+      "stderr": "",
+      "scope": "isolated authoring fixture; no native engine execution"
+    },
+    {
+      "fault": "tools.compile_story stale output",
+      "command": "-m tools.compile_story --check",
+      "exit_code": 1,
+      "stderr": "Stale generated script: game/script/story_generated.rpy",
+      "scope": "isolated authoring fixture; no native engine execution"
+    },
+    {
+      "fault": "tools.compile_story missing output",
+      "command": "-m tools.compile_story --check",
+      "exit_code": 1,
+      "stderr": "Stale generated script: game/script/story_generated.rpy",
+      "scope": "isolated authoring fixture; no native engine execution"
+    },
+    {
+      "fault": "tools.compile_tests baseline generation",
+      "command": "-m tools.compile_tests",
+      "exit_code": 0,
+      "stderr": "",
+      "scope": "isolated authoring fixture; no native engine execution"
+    },
+    {
+      "fault": "tools.compile_tests current baseline",
+      "command": "-m tools.compile_tests --check",
+      "exit_code": 0,
+      "stderr": "",
+      "scope": "isolated authoring fixture; no native engine execution"
+    },
+    {
+      "fault": "tools.compile_tests stale output",
+      "command": "-m tools.compile_tests --check",
+      "exit_code": 1,
+      "stderr": "Stale generated interaction tests",
+      "scope": "isolated authoring fixture; no native engine execution"
+    },
+    {
+      "fault": "tools.compile_tests missing output",
+      "command": "-m tools.compile_tests --check",
+      "exit_code": 1,
+      "stderr": "Stale generated interaction tests",
+      "scope": "isolated authoring fixture; no native engine execution"
+    },
+    {
+      "fault": "native summary absent",
+      "command": "-m tools.build.verify_package --report reports/source-tests.txt",
+      "exit_code": 1,
+      "stderr": "Native test cases summary is missing or incomplete; expected 30 passed",
+      "scope": "fabricated summary only to exercise rejection; no native engine execution"
+    },
+    {
+      "fault": "required settings screenshot absent",
+      "command": "-m tools.build.verify_package --report reports/source-tests.txt",
+      "exit_code": 1,
+      "stderr": "Missing UI evidence: settings",
+      "scope": "fabricated summary only to exercise rejection; no native engine execution"
+    },
+    {
+      "fault": "required settings screenshot truncated",
+      "command": "-m tools.build.verify_package --report reports/source-tests.txt",
+      "exit_code": 1,
+      "stderr": "Undecodable UI evidence: settings",
+      "scope": "fabricated summary only to exercise rejection; no native engine execution"
+    }
+  ]
+}

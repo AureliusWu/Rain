@@ -9,7 +9,7 @@
 | 回退改选 | rollback_rechoice：坦白回应点“回退”，重选暂缓、落实联系、同行；必须 Normal，truth_known=false，旧坦白路径不残留 | 已实现，待原生执行 |
 | 同进程两结局 | restart_true_then_normal：True 后返回菜单新游戏，清零旧状态 / 路径 / 结局，音轨恢复，重新走 Normal | 已实现，待原生执行 |
 | 新进程旧存档 | verify_package 第二次启动原始 EXE；渲染单独 cross_process_load，原生读槽位 2，恢复停止雨声的小店状态并可继续到 True | 包专项 1/10 与 1 张截图，待 Windows |
-| 自动与关键语音 | auto_waits_for_voice：开启 wait_voice，在 3.704 秒录音中等 0.5 秒不得跳句；实际声音结束后推进一行，再关闭自动 | 已实现，待原生执行；不代表真实试听 |
+| 自动与关键语音 | auto_waits_for_voice：开启 wait_voice，在 3.704 秒录音中等 0.5 秒不得跳句；声音结束后实际推进并及时关闭自动，单调时钟核对完整录音时长 | 已实现，待原生执行；不代表真实试听 |
 | 四个选择的快进停止 | skip_stops_at_later_choices：每次点击快进，必须显示选择且 config.skipping=None；四个选择逐个执行 | 已实现，待原生执行 |
 | 七种表情、新背景和 CG | 原有 expression / bg 截图保留；后半段存读档新增显示恢复断言和 8 张截图 | 包与源码要求所有 54 张截图完整解码 |
 | 图像与资产失败 | 复用 PNG 损坏、透明度、引用、重复导入与 I/O 回滚；新增缺截图 / 截断 PNG | 正向与反例均已本地执行 |
