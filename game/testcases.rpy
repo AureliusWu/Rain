@@ -598,9 +598,12 @@ testcase late_save_load_true:
     $ affection = -99
     $ trust = -99
     $ truth_known = False
+    $ renpy.scene()
+    $ renpy.show("black")
     $ renpy.show("heroine angry", at_list=[heroine_position])
     $ renpy.music.stop(channel="music")
     $ renpy.music.stop(channel="ambient")
+    assert eval renpy.showing("black")
     assert eval affection == -99 and trust == -99
     click id "load_open"
     pause until screen "load"
@@ -641,9 +644,12 @@ testcase late_save_load_true:
     $ affection = -99
     $ trust = -99
     $ truth_known = False
+    $ renpy.scene()
+    $ renpy.show("black")
     $ renpy.show("heroine angry", at_list=[heroine_position])
     $ renpy.music.stop(channel="music")
     $ renpy.music.stop(channel="ambient")
+    assert eval renpy.showing("black")
     assert eval affection == -99 and trust == -99
     click id "load_open"
     pause until screen "load"
@@ -686,9 +692,12 @@ testcase late_save_load_true:
     $ affection = -99
     $ trust = -99
     $ truth_known = False
+    $ renpy.scene()
+    $ renpy.show("black")
     $ renpy.show("heroine angry", at_list=[heroine_position])
     $ renpy.music.stop(channel="music")
     $ renpy.music.stop(channel="ambient")
+    assert eval renpy.showing("black")
     assert eval affection == -99 and trust == -99
     click id "load_open"
     pause until screen "load"
@@ -731,9 +740,12 @@ testcase late_save_load_true:
     $ affection = -99
     $ trust = -99
     $ truth_known = False
+    $ renpy.scene()
+    $ renpy.show("black")
     $ renpy.show("heroine angry", at_list=[heroine_position])
     $ renpy.music.stop(channel="music")
     $ renpy.music.stop(channel="ambient")
+    assert eval renpy.showing("black")
     assert eval affection == -99 and trust == -99
     click id "load_open"
     pause until screen "load"
@@ -776,9 +788,12 @@ testcase late_save_load_true:
     $ affection = -99
     $ trust = -99
     $ truth_known = False
+    $ renpy.scene()
+    $ renpy.show("black")
     $ renpy.show("heroine angry", at_list=[heroine_position])
     $ renpy.music.stop(channel="music")
     $ renpy.music.stop(channel="ambient")
+    assert eval renpy.showing("black")
     assert eval affection == -99 and trust == -99
     click id "load_open"
     pause until screen "load"
@@ -819,9 +834,12 @@ testcase late_save_load_true:
     $ affection = -99
     $ trust = -99
     $ truth_known = False
+    $ renpy.scene()
+    $ renpy.show("black")
     $ renpy.show("heroine angry", at_list=[heroine_position])
     $ renpy.music.stop(channel="music")
     $ renpy.music.stop(channel="ambient")
+    assert eval renpy.showing("black")
     assert eval affection == -99 and trust == -99
     click id "load_open"
     pause until screen "load"
@@ -862,9 +880,12 @@ testcase late_save_load_true:
     $ affection = -99
     $ trust = -99
     $ truth_known = False
+    $ renpy.scene()
+    $ renpy.show("black")
     $ renpy.show("heroine angry", at_list=[heroine_position])
     $ renpy.music.stop(channel="music")
     $ renpy.music.stop(channel="ambient")
+    assert eval renpy.showing("black")
     assert eval affection == -99 and trust == -99
     click id "load_open"
     pause until screen "load"
@@ -917,9 +938,12 @@ testcase late_save_load_normal:
     $ affection = -99
     $ trust = -99
     $ truth_known = False
+    $ renpy.scene()
+    $ renpy.show("black")
     $ renpy.show("heroine angry", at_list=[heroine_position])
     $ renpy.music.stop(channel="music")
     $ renpy.music.stop(channel="ambient")
+    assert eval renpy.showing("black")
     assert eval affection == -99 and trust == -99
     click id "load_open"
     pause until screen "load"

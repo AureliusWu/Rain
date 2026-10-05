@@ -83,7 +83,13 @@ def validate_native_report(output, test_source):
 def required_screenshots(test_source):
     names = set(re.findall(r'^\s+screenshot "([^"]+)"', test_source, re.MULTILINE))
     # Independent acceptance landmarks also catch an accidentally omitted test.
-    if 'testcase late_save_load_true:' in test_source:
+    if 'testcase route_01:' in test_source:
+        names.update(['first-choice', 'settings', 'chapter-prologue', 'chapter-today',
+                      'cg-letter', 'branch-s04_open', 'branch-s04_reserved', 'revisit-choice',
+                      'audio-true-voice', 'audio-normal-voice', 'bg-exit-covered', 'bg-exit-after-rain',
+                      'bg-s05_shared_path', 'bg-s05_separate_path', 'bg-nearby-cafe'])
+        names.update('expression-' + name for name in ('normal', 'smile', 'happy', 'sad', 'angry',
+                                                      'surprised', 'embarrassed'))
         names.update('save-load-' + name for name in ('before-cg', 'letter-cg', 'chapter-four',
                      'departure', 'shared-path', 'cafe-before-rain-stop', 'cafe-after-rain-stop', 'normal-ending'))
         names.update(['rollback-letter-choice', 'rollback-rechoice-normal', 'restart-normal-ending',
