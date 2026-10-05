@@ -1,23 +1,29 @@
-name: Game validation
+name: Publish verified Windows candidate
 
 on:
-  push:
-    branches: [main]
-  pull_request:
   workflow_dispatch:
-
-permissions:
-  contents: read
+    inputs:
+      expected_version:
+        description: VERSION value to publish, for example 0.7.0
+        required: true
+        type: string
+      prerelease:
+        description: Publish as a prerelease
+        required: true
+        default: true
+        type: boolean
 
 concurrency:
-  group: game-${{ github.ref }}
-  cancel-in-progress: true
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
-  windows:
-    name: Test, build, and run Windows package
+  windows-release:
+    name: Revalidate and publish exact selected commit
     runs-on: windows-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
+    permissions:
+      contents: write
     env:
       PYTHONUTF8: "1"
       SDL_AUDIODRIVER: dummy
@@ -27,9 +33,16 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Verify requested version
+        shell: pwsh
+        run: |
+          $version = (Get-Content VERSION -Raw).Trim()
+          if ($version -ne "${{ inputs.expected_version }}") {
+            throw "Requested version ${{ inputs.expected_version }} does not match VERSION $version"
+          }
       - name: Install authoring dependencies
         run: python -m pip install -r requirements-dev.txt
-      - name: Start-of-batch preflight
+      - name: Release preflight
         run: python -m tools.preflight --require-clean
       - name: Validate graph, prose, assets, and generated scripts
         run: python -m tools.validate
@@ -51,28 +64,43 @@ jobs:
         run: |
           python -m tools.build.package --sdk .\.runtime\renpy-8.5.3-sdk
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-      - name: Verify and boot EXE extracted from distribution
+      - name: Verify extracted standalone EXE and write hashes
         run: |
           $zip = Get-ChildItem dist -Filter '*-win.zip' | Select-Object -First 1
           if (-not $zip) { throw 'Windows ZIP missing' }
           python -m tools.build.verify_package --zip $zip.FullName
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           Get-ChildItem dist -Filter '*.zip' | Get-FileHash -Algorithm SHA256 | ForEach-Object { "$($_.Hash.ToLower())  $(Split-Path $_.Path -Leaf)" } | Set-Content dist/SHA256SUMS.txt
-      - name: Upload test evidence
+      - name: Refuse to replace an existing release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $tag = "v${{ inputs.expected_version }}"
+          gh release view $tag *> $null
+          if ($LASTEXITCODE -eq 0) {
+            throw "Release $tag already exists; refusing to replace it automatically."
+          }
+          exit 0
+      - name: Publish verified selected commit
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $tag = "v${{ inputs.expected_version }}"
+          $flags = @()
+          if ("${{ inputs.prerelease }}" -eq "true") { $flags += "--prerelease" }
+          gh release create $tag dist/* --target "$env:GITHUB_SHA" @flags --title "雨停之前 $tag" --notes-file docs/RELEASE_NOTES.md
+      - name: Upload release evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: test-evidence-${{ github.sha }}
+          name: release-evidence-${{ github.sha }}
           if-no-files-found: warn
           path: |
             reports/
             reports/screenshots/
+            dist/SHA256SUMS.txt
             log.txt
             errors.txt
             traceback.txt
-      - name: Upload standalone package
-        uses: actions/upload-artifact@v4
-        with:
-          name: windows-${{ github.sha }}
-          if-no-files-found: error
-          path: dist/
