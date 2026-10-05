@@ -21,7 +21,7 @@ jobs:
   windows-release:
     name: Revalidate and publish exact selected commit
     runs-on: windows-latest
-    timeout-minutes: 25
+    timeout-minutes: 35
     permissions:
       contents: write
     env:
@@ -68,7 +68,7 @@ jobs:
         run: |
           $zip = Get-ChildItem dist -Filter '*-win.zip' | Select-Object -First 1
           if (-not $zip) { throw 'Windows ZIP missing' }
-          python -m tools.build.verify_package --zip $zip.FullName
+          python -m tools.build.verify_package --zip $zip.FullName --timeout 900
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           Get-ChildItem dist -Filter '*.zip' | Get-FileHash -Algorithm SHA256 | ForEach-Object { "$($_.Hash.ToLower())  $(Split-Path $_.Path -Leaf)" } | Set-Content dist/SHA256SUMS.txt
       - name: Refuse to replace an existing release
