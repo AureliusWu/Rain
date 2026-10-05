@@ -237,6 +237,104 @@
       "sha256": "e53bda76a883e89ad3f3047e07893bd6b92f142e29fecea2a7669add817da4ce"
     },
     {
+      "id": "script_v07_p00_entry_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v07/p00_entry_v1.md",
+      "sha256": "b7f168be6ed4e004d6c7b573ac3b995f985a1038908750c7ad58881b273b9371"
+    },
+    {
+      "id": "script_v07_s01_arrival_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v07/s01_arrival_v1.md",
+      "sha256": "f6eed5eacd169438ad483f697caf1b561c80b90107c3478050b23b4bc695ab17"
+    },
+    {
+      "id": "script_v07_s01_platform_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v07/s01_platform_v1.md",
+      "sha256": "0cf8269516704a8283150586f4a3bf7ea0d5737156bdba81029e3ce2404f08d5"
+    },
+    {
+      "id": "script_v07_s02_boxes_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v07/s02_boxes_v1.md",
+      "sha256": "60bcf9b796194545dd89b53ed507163c8ee409d94b1bbf66e09e4d250c1b643a"
+    },
+    {
+      "id": "script_v07_s02_business_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v07/s02_business_v1.md",
+      "sha256": "4c503237014ff6010cd67afa85d127241b92910dea10d8ef7ac4ecc324ccb753"
+    },
+    {
+      "id": "script_v07_s02_care_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v07/s02_care_v1.md",
+      "sha256": "b1a3699c9630ac3e635ea8ee6d180b4a16868661812f68053417dd510d5089f1"
+    },
+    {
+      "id": "script_v07_s02_reunion_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v07/s02_reunion_v1.md",
+      "sha256": "10fced0c19a7bd10cd23c2241051428c331639c13cbdbc77efb17feeef2fa9e8"
+    },
+    {
+      "id": "script_v07_s03_archive_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v07/s03_archive_v1.md",
+      "sha256": "2a2096328ad6b47e7868409b6734efd5a71bc63fbbac16756fe17795d1122e98"
+    },
+    {
+      "id": "script_v07_s03_deferred_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v07/s03_deferred_v1.md",
+      "sha256": "52d3f87f9e8206c4fa179dd08613db337f49795cb9915ebe75fc659866ffcc43"
+    },
+    {
+      "id": "script_v07_s03_honest_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v07/s03_honest_v1.md",
+      "sha256": "e237b7e0eef8e54c065c69e3d1b264540ccbdde727b954347c484ad89bd4b7ce"
+    },
+    {
+      "id": "script_v07_s03_letter_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v07/s03_letter_v1.md",
+      "sha256": "50b658d51ee685d014d6ac82c7c9822e2de1754e1f32ca371855feff95579958"
+    },
+    {
+      "id": "script_v07_s04_open_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v07/s04_open_v1.md",
+      "sha256": "b411406148061a11bd2db7f48d839d4b84c4a301ae2961f930605b667e81c1fc"
+    },
+    {
+      "id": "script_v07_s04_reserved_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v07/s04_reserved_v1.md",
+      "sha256": "b04aaaa4b50e0131d40dc963c4c5addbbb6d0934b930066db4281f7377f4f8f9"
+    },
+    {
+      "id": "script_v07_s04_waiting_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v07/s04_waiting_v1.md",
+      "sha256": "370205fd5954e160f4453cf05e0c228ba039fe6e01f09254428d730f4eb305d5"
+    },
+    {
       "id": "voice_heroine_v1",
       "version": 1,
       "kind": "voice",
