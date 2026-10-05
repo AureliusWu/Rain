@@ -6,13 +6,22 @@
 
 完整包测试现在默认 900 秒，可用 --timeout 指定正整数；两个 Windows 工作流均显式传入 900，作业总上限 35 分钟。保留完整路线和断言，不以跳过测试缩短运行。超时必须非零退出，并留下 reports/package/process.json、stdout、stderr、引擎日志和已有截图。
 
-三个新增真实子进程用例核对成功输出、非零退出和超时部分证据保留；本地全集 69 项通过。Windows 新结果待本次提交执行，不能沿用旧源码结果充当包验收。
+三个新增真实子进程用例核对成功输出、非零退出和超时部分证据保留；本地全集 69 项通过。超时修复 [CI 37249392326](https://github.com/AureliusWu/Test/actions/runs/37249392326) 已实际通过 Windows 源码和独立 EXE，各 24/24 用例 / 151/151 断言，无跳过；耗时 251.693 / 159.782 秒。下载证据 digest 相符，72 张 PNG 完整解码；包进程记录确认未超时、退出码 0。
+
+## v0.7 第三章审阅 / 第四章批次
+
+新增三项统计回归：每条路线只算所选回应、菜单 / 章节名不膨胀正文、不可达文本不得生成有效报告。`tools.validate` 自动输出 story-stats.json / .md，含剧情 SHA-256、每条实际路径与终态、正文 / 菜单长度、场景数和明确标为估算的阅读时间。
+
+本批本地 72 项通过（6.056 秒）；全部校验 0 错误，Linux Ren'Py 8.5.3 lint 通过。逐项对比超时修复基线，全部 16 条路径 / 状态 / 结局、17 句配音文字相同。合流语义由人工逐段审阅，不计为自动化证明。第四章新正文的 Windows 源码和 EXE 验收待本批 CI；真人计时与听感仍未完成。
+
+两个工作流后续保存源码测试原始输出、ci-context.json 和 SHA256SUMS，包进程输出与截图保留继续沿用；发布输入通过环境变量读取，避免把手动输入直接拼进脚本。
 
 ## Python
 
 ```bash
 python -m unittest discover -s tests -v
 python -m tools.route_validator --report reports/routes.json
+python -m tools.story_stats --report reports/story-stats.json --markdown docs/STORY_STATS_V07.md
 python -m tools.story_lint
 python -m tools.asset_validator
 python -m tools.character_validator --report reports/characters.json

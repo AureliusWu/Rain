@@ -7,6 +7,7 @@ def main():
     for args in [
         ["-m", "unittest", "discover", "-s", "tests", "-v"],
         ["-m", "tools.route_validator", "--report", "reports/routes.json"],
+        ["-m", "tools.story_stats", "--report", "reports/story-stats.json", "--markdown", "reports/story-stats.md"],
         ["-m", "tools.story_lint"],
         ["-m", "tools.prompt_registry", "--check"],
         ["-m", "tools.asset_validator", "--report", "reports/assets.json"],

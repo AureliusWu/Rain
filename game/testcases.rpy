@@ -492,7 +492,7 @@ testcase key_voice_and_sound_cues:
     advance until "……那为什么没给我？"
     pause 0.1
     assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_q02_honest_l002_v1.ogg'
-    advance until "我拿出手机，给她发了一个句号。她的屏幕亮起来，头像还是当年那只画得有点歪的猫。"
+    advance until "我拿起椅面上的手机，给她发了一个句号。她的屏幕亮起来，头像还是当年那只画得有点歪的猫。"
     pause 0.1
     assert eval renpy.music.get_playing(channel='sound') == 'audio/sfx/message_ping.ogg'
 

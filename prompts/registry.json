@@ -265,6 +265,13 @@
       "sha256": "60bcf9b796194545dd89b53ed507163c8ee409d94b1bbf66e09e4d250c1b643a"
     },
     {
+      "id": "script_v07_s02_boxes_v2",
+      "version": 2,
+      "kind": "script",
+      "file": "prompts/script/v07/s02_boxes_v2.md",
+      "sha256": "9e80687cf38e029a6b2f48ef7824915db24b65204ace9e91e3b0dc9da44fbbc7"
+    },
+    {
       "id": "script_v07_s02_business_v1",
       "version": 1,
       "kind": "script",
@@ -293,11 +300,25 @@
       "sha256": "2a2096328ad6b47e7868409b6734efd5a71bc63fbbac16756fe17795d1122e98"
     },
     {
+      "id": "script_v07_s03_archive_v2",
+      "version": 2,
+      "kind": "script",
+      "file": "prompts/script/v07/s03_archive_v2.md",
+      "sha256": "6e0b789f06cb80292857516850b74c9030fc9118aa8bcaf3d8d90fbf3a75b027"
+    },
+    {
       "id": "script_v07_s03_deferred_v1",
       "version": 1,
       "kind": "script",
       "file": "prompts/script/v07/s03_deferred_v1.md",
       "sha256": "52d3f87f9e8206c4fa179dd08613db337f49795cb9915ebe75fc659866ffcc43"
+    },
+    {
+      "id": "script_v07_s03_deferred_v2",
+      "version": 2,
+      "kind": "script",
+      "file": "prompts/script/v07/s03_deferred_v2.md",
+      "sha256": "d4a0ee6fc8995b3c1eaef45e5e3aaf7b011acc09cbdb40a4dffbfa18c0a9d5a0"
     },
     {
       "id": "script_v07_s03_honest_v1",
@@ -314,11 +335,46 @@
       "sha256": "50b658d51ee685d014d6ac82c7c9822e2de1754e1f32ca371855feff95579958"
     },
     {
+      "id": "script_v07_s04_boundary_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v07/s04_boundary_v1.md",
+      "sha256": "79a02e7ab78d8cc0573ff766f4602865536813db8d9ee2e41d563ded97b05a02"
+    },
+    {
+      "id": "script_v07_s04_concrete_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v07/s04_concrete_v1.md",
+      "sha256": "afb8e18ee1eb26db0618b45f438f8f0d3c07199f840bcff847af92354348c6eb"
+    },
+    {
+      "id": "script_v07_s04_memory_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v07/s04_memory_v1.md",
+      "sha256": "e39a621432fa8e41d4ba107a6564499ef5d332c54019e7c80b2fe98a3f921ae9"
+    },
+    {
       "id": "script_v07_s04_open_v1",
       "version": 1,
       "kind": "script",
       "file": "prompts/script/v07/s04_open_v1.md",
       "sha256": "b411406148061a11bd2db7f48d839d4b84c4a301ae2961f930605b667e81c1fc"
+    },
+    {
+      "id": "script_v07_s04_open_v2",
+      "version": 2,
+      "kind": "script",
+      "file": "prompts/script/v07/s04_open_v2.md",
+      "sha256": "1939285e7bee55cb80f6329e13c4f9ee105cdfed4c47b107867eae296e65ae70"
+    },
+    {
+      "id": "script_v07_s04_repair_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v07/s04_repair_v1.md",
+      "sha256": "a047d3d5e198089987f8b886409f2d72e9ba1645d9732c4df56b56d4fd145e22"
     },
     {
       "id": "script_v07_s04_reserved_v1",
@@ -328,11 +384,32 @@
       "sha256": "b04aaaa4b50e0131d40dc963c4c5addbbb6d0934b930066db4281f7377f4f8f9"
     },
     {
+      "id": "script_v07_s04_reserved_v2",
+      "version": 2,
+      "kind": "script",
+      "file": "prompts/script/v07/s04_reserved_v2.md",
+      "sha256": "2b46a82490a93a95364603bed59ab454457676a10fe8f491086ce03a5467b43e"
+    },
+    {
+      "id": "script_v07_s04_revisit_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v07/s04_revisit_v1.md",
+      "sha256": "7c68856303dabb93f189d41bd0eecf9e212b5522493e0548e77db0555f645b75"
+    },
+    {
       "id": "script_v07_s04_waiting_v1",
       "version": 1,
       "kind": "script",
       "file": "prompts/script/v07/s04_waiting_v1.md",
       "sha256": "370205fd5954e160f4453cf05e0c228ba039fe6e01f09254428d730f4eb305d5"
+    },
+    {
+      "id": "script_v07_s04_waiting_v2",
+      "version": 2,
+      "kind": "script",
+      "file": "prompts/script/v07/s04_waiting_v2.md",
+      "sha256": "bb42a790a646052f4e2fc3edde6f0785c54734ab5e4846ae075afb712487a9f5"
     },
     {
       "id": "voice_heroine_v1",
