@@ -22,7 +22,11 @@
 
 现有 24 个用例保留，新增 9 个断言后共 160。包验收要求 bg-exit-covered、bg-exit-after-rain、bg-nearby-cafe、bg-s05_shared_path、bg-s05_separate_path 五张新截图完整可解码。Manifest 已登记背景却遗漏截图时必须失败。源码与独立包使用同一个生成的测试文件。
 
-本候选本地 72 Python、全部作者校验与 Linux lint 已通过；所有 16 条路径 / 终态 / 结局与 17 句配音文字逐项对比第四章基线不变。新的 Windows 原生结果待提交执行，记录于 ALPHA_ACCEPTANCE_V07.md；不把静态断言数量写成已通过数量。
+本候选本地 72 Python、全部作者校验与 Linux lint 已通过；所有 16 条路径 / 终态 / 结局与 17 句配音文字逐项对比第四章基线不变。完整候选 `96cdfa0` 的 [CI 37273842254](https://github.com/AureliusWu/Test/actions/runs/37273842254) 已通过：Windows 72 Python；源码 24/24 用例、160/160 断言（346.531 秒），独立 EXE 同为 24/160（237.702 秒），无失败或跳过。900 秒上限下包进程退出 0、未超时。
+
+下载证据和 Windows artifact 的 digest 匹配；两份 SHA256SUMS 匹配 44,861,562 字节游戏 ZIP，包内 build_info 为 0.7.0。82 张 PNG 完整解码（测试窗口 922×518），10 张独立包画面已直接审阅；新背景与离场首句显示成立。逐张哈希、过程、ZIP 信息及人工待办记录于 [ALPHA_ACCEPTANCE_V07](ALPHA_ACCEPTANCE_V07.md) 和 [机器证据清单](evidence/v07-acceptance.json)。逻辑 GUI 1280×720，不能把缩放窗口截图当作 1080p / DPI 验收。
+
+下一阶段的现有检查与缺口已映射到 [REGRESSION_COVERAGE_V08](REGRESSION_COVERAGE_V08.md)。本轮只建立映射；后半段存读档、回退改选、语音自动衔接及故障反例的新用例尚未执行。
 
 ## Python
 

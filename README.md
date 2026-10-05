@@ -10,7 +10,9 @@ main 当前为 **v0.7.0 完整短篇 Alpha 候选**：六章、24 个叙事场�
 
 [Windows 发布版本](https://github.com/AureliusWu/Test/releases) · [构建与运行证据](https://github.com/AureliusWu/Test/actions) · [阶段记录](docs/STATUS.md)
 
-最新公开 Release 仍为 v0.6.0。v0.7 候选由成功的 Game validation 工作流上传到 Actions，下载时核对 run 的提交和 SHA256SUMS；测试与发布状态见阶段记录。
+最新公开 Release 仍为 v0.6.0。v0.7.0 完整候选的 [Windows 验收 37273842254](https://github.com/AureliusWu/Test/actions/runs/37273842254) 已通过：源码与独立 EXE 各 24 个用例 / 160 个断言，72 项 Python 通过；82 张证据截图完整解码。
+
+[下载 v0.7 Windows 候选 artifact](https://github.com/AureliusWu/Test/actions/runs/37273842254/artifacts/11329379772) · [Alpha 验收与人工待办](docs/ALPHA_ACCEPTANCE_V07.md)。下载 Actions artifact 需要 GitHub 登录，保留至 2027-01-03；可下载的同字节试玩 ZIP 与预览另已交付。游戏 ZIP 为 44,861,562 字节，SHA-256：`9e9cd77da3b2ff9507b5fec89fab68091e0eca2ce4376c8188c1412651dc0af1`；不把候选交付记为公开 Release。
 
 1. 从成功的 Actions 下载 v0.7 Windows 候选 artifact 并解开外层，再完整解压 `BeforeTheRainStops-0.7.0-win.zip`；或从 Release 下载现有 v0.6.0。
 2. 完整解压到可写目录。不要直接在 ZIP 内启动。
@@ -71,7 +73,7 @@ Linux/macOS 可用 SDK 的 `renpy.sh` 运行 lint/test。Linux 无桌面时需�
 
 v0.6 新增 11 句配音与 5 个程序音频，17 句合计 58.048 秒。音乐随旧信、回忆和离站切换，雨声逐渐减弱并在剧情指定台词处淡出。24 个游戏音频及源 WAV 均完整解码并测量；重复执行制作工具保留已有文件。流程、接入位置和试听范围见 [v0.6 音频操作文档](docs/AUDIO_V06.md)。
 
-六章、16 条路线及两个结局已完成 Alpha 正文，说明见 [场景 Outline](docs/STORY_OUTLINE_V07.md) 与 [路线审阅](docs/STORY_REVIEW_V07.md)。候选验收完成后进入 v0.8 回归加固；重大剧情和最终美术继续由用户决定。大系统保持在 [Future Ideas](docs/FUTURE_IDEAS.md)。
+六章、16 条路线及两个结局已完成 Alpha 正文，说明见 [场景 Outline](docs/STORY_OUTLINE_V07.md) 与 [路线审阅](docs/STORY_REVIEW_V07.md)。候选技术验收已完成，v0.8 [回归覆盖表](docs/REGRESSION_COVERAGE_V08.md) 已建立，接下来补后半段存读档、回退与自动语音衔接；真人计时与试听继续待办。重大剧情和最终美术继续由用户决定。大系统保持在 [Future Ideas](docs/FUTURE_IDEAS.md)。
 
 [版本路线](ROADMAP.md) 与 [v0.7–v1.0 执行计划](docs/RELEASE_PLAN_V07_V10.md) 列出完整剧情、回归加固、1080p 适配和正式发布的范围、依赖与验收。[v0.6.0 已发布](https://github.com/AureliusWu/Test/releases/tag/v0.6.0)：Windows 源码和独立 EXE 各通过 24 个用例 / 151 个断言，无失败或跳过。
 

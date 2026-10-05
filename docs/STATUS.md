@@ -6,7 +6,11 @@
 
 已审阅第三章、第四章与第五章合流，补齐同行后进入 Normal 的离场、今晚酒店与次日到家、未拆信封及照片归属、号码已经保存、叫车只查看未下单、站外环境与换景立绘。保留全部 17 句配音文字；新增三个匹配地点的背景，源图、编辑输入、Prompt 与 33 个重建配方均可追踪。详情见 [剧情审阅](STORY_REVIEW_V07.md)、[路线统计](STORY_STATS_V07.md) 与 [美术审阅](ART_REVIEW_V07.md)。
 
-本候选本地 **72 项 Python 测试**和全部作者检查通过；85 个资产、60 张 PNG、24 个 OGG、69 份 Prompt、33 个图片配方均校验 0 错误；Ren'Py 8.5.3 Linux lint 通过。原生交互仍为 24 用例，增加背景与首句立绘检查后共 160 断言及五张必需新截图。**本候选 Windows 源码 / 独立 EXE 尚待本批推送验收**，不能沿用旧包证据。
+本候选本地 **72 项 Python 测试**和全部作者检查通过；85 个资产、60 张 PNG、24 个 OGG、69 份 Prompt、33 个图片配方均校验 0 错误；Ren'Py 8.5.3 Linux lint 通过。完整候选提交 `96cdfa087583c63a0020bca138aec57384211fd3` 的 [Windows CI 37273842254](https://github.com/AureliusWu/Test/actions/runs/37273842254) 已 success：Windows 72 项 Python 通过；源码和 ZIP 独立 EXE 各 **24/24 用例、160/160 断言**（346.531 / 237.702 秒），失败和跳过均为 0。包进程退出 0、未超时。
+
+已核验两个 artifact digest、两份 SHA256SUMS、ZIP CRC 和包内 0.7.0 元数据；82 张证据 PNG 完整解码，直接审阅 10 张独立 EXE 新场景及 UI 画面。游戏 ZIP 为 **44,861,562 字节**，SHA-256 `9e9cd77da3b2ff9507b5fec89fab68091e0eca2ce4376c8188c1412651dc0af1`。**v0.7 Alpha 技术验收完成，候选试玩包与预览已交付；公开 Release 仍为 v0.6.0。**具体证据及人工项见 [ALPHA_ACCEPTANCE_V07](ALPHA_ACCEPTANCE_V07.md)。
+
+下一批工程工作已建立 [v0.8 回归覆盖表](REGRESSION_COVERAGE_V08.md)：优先补旧信 CG、雨棚、离场和小店前后存读档，再补回退改选与同一进程换结局。真人阅读计时、试听和创作审阅继续并行待办，不据估算把整个 v0.7 里程碑勾为完成。主菜单“可玩样片”称呼保留为 v0.9 待改 P2 文案。
 
 第四章提交 `246217f4791b6e3e4aef3ea1874bfb9decaaf543` 的 [CI 37250452907](https://github.com/AureliusWu/Test/actions/runs/37250452907) 已通过：72 项 Python；Windows 源码 24/24 用例、151/151 断言（323.377 秒），独立 EXE 同为 24/151（219.247 秒），无失败或跳过。已下载证据匹配 digest `72bfdb8d84719a8c9bc4ffc55f71cf45ef762fbf0cd620998868d5ff6f75f768`，72 PNG 完整解码；旧包 SHA-256 为 `b1a89057e0d75fd5e917ec8abf10ce36352410f37722aaa99d60305d4a77e49a`，VERSION 为 0.6.0，不将它标为 v0.7 包。
 

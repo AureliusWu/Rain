@@ -1,0 +1,590 @@
+{
+  "version": "0.7.0",
+  "commit": "96cdfa087583c63a0020bca138aec57384211fd3",
+  "ci_run": 37273842254,
+  "ci_url": "https://github.com/AureliusWu/Test/actions/runs/37273842254",
+  "context": {
+    "run_id": "37273842254",
+    "commit": "96cdfa087583c63a0020bca138aec57384211fd3",
+    "audio_driver": "dummy",
+    "version": "0.7.0"
+  },
+  "artifacts": {
+    "commit": "96cdfa087583c63a0020bca138aec57384211fd3",
+    "run_id": 37273842254,
+    "ci_url": "https://github.com/AureliusWu/Test/actions/runs/37273842254",
+    "evidence": {
+      "id": 11329589324,
+      "name": "test-evidence-96cdfa087583c63a0020bca138aec57384211fd3",
+      "size_in_bytes": 51115222,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11329589324",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11329589324/zip",
+      "expired": false,
+      "created_at": "2026-10-05T06:54:28Z",
+      "expires_at": "2027-01-03T06:43:14Z",
+      "updated_at": "2026-10-05T06:54:28Z",
+      "digest": "sha256:88e793ea13593940ad6ea718f815f92e4c152fdc1533f42756136466a95900e7",
+      "workflow_run": {
+        "id": 37273842254,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "96cdfa087583c63a0020bca138aec57384211fd3"
+      }
+    },
+    "windows": {
+      "id": 11329379772,
+      "name": "windows-96cdfa087583c63a0020bca138aec57384211fd3",
+      "size_in_bytes": 44493922,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11329379772",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11329379772/zip",
+      "expired": false,
+      "created_at": "2026-10-05T06:54:31Z",
+      "expires_at": "2027-01-03T06:43:14Z",
+      "updated_at": "2026-10-05T06:54:31Z",
+      "digest": "sha256:122f3f5f74c892c00ac6e580d733a4091d29aaf0fadb4a1fa1472058a8d148c0",
+      "workflow_run": {
+        "id": 37273842254,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "96cdfa087583c63a0020bca138aec57384211fd3"
+      }
+    }
+  },
+  "artifact_sha256": {
+    "evidence": "88e793ea13593940ad6ea718f815f92e4c152fdc1533f42756136466a95900e7",
+    "windows": "122f3f5f74c892c00ac6e580d733a4091d29aaf0fadb4a1fa1472058a8d148c0"
+  },
+  "source_tests": {
+    "test_cases": 24,
+    "assertions": 160,
+    "seconds": 346.531,
+    "failed": 0,
+    "skipped": 0
+  },
+  "standalone_tests": {
+    "test_cases": 24,
+    "assertions": 160,
+    "seconds": 237.702,
+    "failed": 0,
+    "skipped": 0
+  },
+  "standalone_process": {
+    "timeout_seconds": 900,
+    "elapsed_seconds": 239.531,
+    "timed_out": false,
+    "returncode": 0,
+    "scope": "native process only; required screenshots are checked separately"
+  },
+  "png_count": 82,
+  "png_sha256": {
+    "reports/screenshots/audio-normal-voice.png": "79e43bc5096ca3c4df2b99f5521c91a0d188a89eee97d32414de775916d57692",
+    "reports/screenshots/route-13-normal.png": "ab459f29b1fa4d51ee043ae8c67098f956f99da44c6fdaaadade37c286db4308",
+    "reports/screenshots/first-choice.png": "7d1ccdc247d389991585c1e50f1b4d4c08250f00c97a87118c0c447a3cfac7b7",
+    "reports/screenshots/route-14-normal.png": "ab459f29b1fa4d51ee043ae8c67098f956f99da44c6fdaaadade37c286db4308",
+    "reports/screenshots/route-16-normal.png": "ab459f29b1fa4d51ee043ae8c67098f956f99da44c6fdaaadade37c286db4308",
+    "reports/screenshots/expression-surprised.png": "5f16514c8a6772223738e18c988940378b5f272476ed11d7d2d01367e9a2651a",
+    "reports/screenshots/bg-exit-after-rain.png": "8184d2a0d99f95c2928ef0d792c8cf00a8d9b6aaceebf0292eb793b4c9867a21",
+    "reports/screenshots/route-08-normal.png": "ab459f29b1fa4d51ee043ae8c67098f956f99da44c6fdaaadade37c286db4308",
+    "reports/screenshots/route-05-true.png": "451660c605e8747f3de8fa98d11db7e1a27d9fa8537863a60c43916038f62278",
+    "reports/screenshots/route-07-normal.png": "ab459f29b1fa4d51ee043ae8c67098f956f99da44c6fdaaadade37c286db4308",
+    "reports/screenshots/main-menu.png": "1b66b1c16a4d3a2d086cf7076bc5c22129fd4ff375dcce6d24a12f0464c1d9fd",
+    "reports/screenshots/history.png": "56e4d1a62892e72f61ca390bf68e79b179203917ba547b03c2df87fd6b6ba442",
+    "reports/screenshots/first-dialogue.png": "35e6545f71445490c8dd8418a458d5e0929b81b22d4dda777b438b04139d1c32",
+    "reports/screenshots/audio-true-voice.png": "1239560ed5d1752fa02d5fbc4a629b995c3c96288209c0fbd8d84a1f70367ef0",
+    "reports/screenshots/route-10-normal.png": "ab459f29b1fa4d51ee043ae8c67098f956f99da44c6fdaaadade37c286db4308",
+    "reports/screenshots/bg-nearby-cafe.png": "aa1015969ac858832d102382d072fcdb2d6f08c9c25c33d90f0701a7317881bf",
+    "reports/screenshots/route-09-true.png": "451660c605e8747f3de8fa98d11db7e1a27d9fa8537863a60c43916038f62278",
+    "reports/screenshots/expression-normal.png": "53f39784e6b0d1671d76e53d6026ba89c77562ab524aef508a8f9c5531bce66a",
+    "reports/screenshots/route-02-normal.png": "8ef0504c92e2b1268e5a283405feb3f0ccec67ca677b3f502b1a402203fa9fb5",
+    "reports/screenshots/route-12-normal.png": "ab459f29b1fa4d51ee043ae8c67098f956f99da44c6fdaaadade37c286db4308",
+    "reports/screenshots/revisit-choice.png": "66b0f71b82f918df9129294a0e7e53cef07fdc24742e543bf0584b1b4b01d589",
+    "reports/screenshots/branch-s04_open.png": "05318534feaf850f70df50cd29d1b1bd5b11bec0a85b219644900384ff4e8283",
+    "reports/screenshots/expression-angry.png": "c0b6f8cc60b0e3ba207c27fcc73f2385c5921088c33bc4faccfa21dd95234f13",
+    "reports/screenshots/chapter-prologue.png": "0a8b27e2c75c97b9cdea33ee964c77851106ab80de1eedf088d23b614bfff928",
+    "reports/screenshots/expression-happy.png": "3ca8932d3c9cc3e3e952622f488f90407ddd9b55687a4ef3471e97febaa5f514",
+    "reports/screenshots/chapter-today.png": "dc7d680fe57321814a3f358f5a8eff52d23e0a944dc45d1204c721e6da2c58f5",
+    "reports/screenshots/route-11-normal.png": "ab459f29b1fa4d51ee043ae8c67098f956f99da44c6fdaaadade37c286db4308",
+    "reports/screenshots/route-15-normal.png": "ab459f29b1fa4d51ee043ae8c67098f956f99da44c6fdaaadade37c286db4308",
+    "reports/screenshots/expression-embarrassed.png": "a923b8a7af1581405f0772f6d4c24c7185540558292dcaf1e4c7eabe5b4219ba",
+    "reports/screenshots/route-01-true.png": "8ddb48c288d2c9938b3318f2bd3048098f5fe089ae0e66e2119b56a32e20b63e",
+    "reports/screenshots/branch-s04_reserved.png": "a1a3ab733f5f18534e8a994819ac8ce42041c0115bf733f3bb9b9072d28a2949",
+    "reports/screenshots/expression-smile.png": "35e6545f71445490c8dd8418a458d5e0929b81b22d4dda777b438b04139d1c32",
+    "reports/screenshots/bg-s05_shared_path.png": "4b4e9a5a9a58752307bc00ec7de4a041c75a20d47905619190baa90adc660b74",
+    "reports/screenshots/bg-exit-covered.png": "c201f26ac2d34db2436cd0d1e65ebb4372761b6b058d12179b4361e8269dbfd3",
+    "reports/screenshots/expression-sad.png": "b1790dd2c082fa914c1bef4c5510f7419d01a2904efb04795e8306721c840d5b",
+    "reports/screenshots/route-04-normal.png": "ab459f29b1fa4d51ee043ae8c67098f956f99da44c6fdaaadade37c286db4308",
+    "reports/screenshots/settings.png": "bd712fe170762a539283ec985e131131aa928fe2302ad72bf2f63a96f4b81e1e",
+    "reports/screenshots/route-03-true.png": "451660c605e8747f3de8fa98d11db7e1a27d9fa8537863a60c43916038f62278",
+    "reports/screenshots/bg-s05_separate_path.png": "04b485ceb09aa28b33a6eb836e1eb4edc2a585e9fb617c8498484ad58cc951c8",
+    "reports/screenshots/cg-letter.png": "d4c2c12d36bcf0d279518a143ae6e587b20395142fc30b9b18058af17068595c",
+    "reports/screenshots/route-06-normal.png": "ab459f29b1fa4d51ee043ae8c67098f956f99da44c6fdaaadade37c286db4308",
+    "reports/package/screenshots/audio-normal-voice.png": "79e43bc5096ca3c4df2b99f5521c91a0d188a89eee97d32414de775916d57692",
+    "reports/package/screenshots/route-13-normal.png": "ab459f29b1fa4d51ee043ae8c67098f956f99da44c6fdaaadade37c286db4308",
+    "reports/package/screenshots/first-choice.png": "7d1ccdc247d389991585c1e50f1b4d4c08250f00c97a87118c0c447a3cfac7b7",
+    "reports/package/screenshots/route-14-normal.png": "ab459f29b1fa4d51ee043ae8c67098f956f99da44c6fdaaadade37c286db4308",
+    "reports/package/screenshots/route-16-normal.png": "ab459f29b1fa4d51ee043ae8c67098f956f99da44c6fdaaadade37c286db4308",
+    "reports/package/screenshots/expression-surprised.png": "5f16514c8a6772223738e18c988940378b5f272476ed11d7d2d01367e9a2651a",
+    "reports/package/screenshots/bg-exit-after-rain.png": "8184d2a0d99f95c2928ef0d792c8cf00a8d9b6aaceebf0292eb793b4c9867a21",
+    "reports/package/screenshots/route-08-normal.png": "ab459f29b1fa4d51ee043ae8c67098f956f99da44c6fdaaadade37c286db4308",
+    "reports/package/screenshots/route-05-true.png": "451660c605e8747f3de8fa98d11db7e1a27d9fa8537863a60c43916038f62278",
+    "reports/package/screenshots/route-07-normal.png": "ab459f29b1fa4d51ee043ae8c67098f956f99da44c6fdaaadade37c286db4308",
+    "reports/package/screenshots/main-menu.png": "1b66b1c16a4d3a2d086cf7076bc5c22129fd4ff375dcce6d24a12f0464c1d9fd",
+    "reports/package/screenshots/history.png": "56e4d1a62892e72f61ca390bf68e79b179203917ba547b03c2df87fd6b6ba442",
+    "reports/package/screenshots/first-dialogue.png": "35e6545f71445490c8dd8418a458d5e0929b81b22d4dda777b438b04139d1c32",
+    "reports/package/screenshots/audio-true-voice.png": "1239560ed5d1752fa02d5fbc4a629b995c3c96288209c0fbd8d84a1f70367ef0",
+    "reports/package/screenshots/route-10-normal.png": "ab459f29b1fa4d51ee043ae8c67098f956f99da44c6fdaaadade37c286db4308",
+    "reports/package/screenshots/bg-nearby-cafe.png": "aa1015969ac858832d102382d072fcdb2d6f08c9c25c33d90f0701a7317881bf",
+    "reports/package/screenshots/route-09-true.png": "451660c605e8747f3de8fa98d11db7e1a27d9fa8537863a60c43916038f62278",
+    "reports/package/screenshots/expression-normal.png": "53f39784e6b0d1671d76e53d6026ba89c77562ab524aef508a8f9c5531bce66a",
+    "reports/package/screenshots/route-02-normal.png": "8ef0504c92e2b1268e5a283405feb3f0ccec67ca677b3f502b1a402203fa9fb5",
+    "reports/package/screenshots/route-12-normal.png": "ab459f29b1fa4d51ee043ae8c67098f956f99da44c6fdaaadade37c286db4308",
+    "reports/package/screenshots/revisit-choice.png": "66b0f71b82f918df9129294a0e7e53cef07fdc24742e543bf0584b1b4b01d589",
+    "reports/package/screenshots/branch-s04_open.png": "05318534feaf850f70df50cd29d1b1bd5b11bec0a85b219644900384ff4e8283",
+    "reports/package/screenshots/expression-angry.png": "c0b6f8cc60b0e3ba207c27fcc73f2385c5921088c33bc4faccfa21dd95234f13",
+    "reports/package/screenshots/chapter-prologue.png": "0a8b27e2c75c97b9cdea33ee964c77851106ab80de1eedf088d23b614bfff928",
+    "reports/package/screenshots/expression-happy.png": "3ca8932d3c9cc3e3e952622f488f90407ddd9b55687a4ef3471e97febaa5f514",
+    "reports/package/screenshots/chapter-today.png": "dc7d680fe57321814a3f358f5a8eff52d23e0a944dc45d1204c721e6da2c58f5",
+    "reports/package/screenshots/route-11-normal.png": "ab459f29b1fa4d51ee043ae8c67098f956f99da44c6fdaaadade37c286db4308",
+    "reports/package/screenshots/route-15-normal.png": "ab459f29b1fa4d51ee043ae8c67098f956f99da44c6fdaaadade37c286db4308",
+    "reports/package/screenshots/expression-embarrassed.png": "a923b8a7af1581405f0772f6d4c24c7185540558292dcaf1e4c7eabe5b4219ba",
+    "reports/package/screenshots/route-01-true.png": "8ddb48c288d2c9938b3318f2bd3048098f5fe089ae0e66e2119b56a32e20b63e",
+    "reports/package/screenshots/branch-s04_reserved.png": "a1a3ab733f5f18534e8a994819ac8ce42041c0115bf733f3bb9b9072d28a2949",
+    "reports/package/screenshots/expression-smile.png": "35e6545f71445490c8dd8418a458d5e0929b81b22d4dda777b438b04139d1c32",
+    "reports/package/screenshots/bg-s05_shared_path.png": "4b4e9a5a9a58752307bc00ec7de4a041c75a20d47905619190baa90adc660b74",
+    "reports/package/screenshots/bg-exit-covered.png": "c201f26ac2d34db2436cd0d1e65ebb4372761b6b058d12179b4361e8269dbfd3",
+    "reports/package/screenshots/expression-sad.png": "b1790dd2c082fa914c1bef4c5510f7419d01a2904efb04795e8306721c840d5b",
+    "reports/package/screenshots/route-04-normal.png": "ab459f29b1fa4d51ee043ae8c67098f956f99da44c6fdaaadade37c286db4308",
+    "reports/package/screenshots/settings.png": "bd712fe170762a539283ec985e131131aa928fe2302ad72bf2f63a96f4b81e1e",
+    "reports/package/screenshots/route-03-true.png": "451660c605e8747f3de8fa98d11db7e1a27d9fa8537863a60c43916038f62278",
+    "reports/package/screenshots/bg-s05_separate_path.png": "04b485ceb09aa28b33a6eb836e1eb4edc2a585e9fb617c8498484ad58cc951c8",
+    "reports/package/screenshots/cg-letter.png": "d4c2c12d36bcf0d279518a143ae6e587b20395142fc30b9b18058af17068595c",
+    "reports/package/screenshots/route-06-normal.png": "ab459f29b1fa4d51ee043ae8c67098f956f99da44c6fdaaadade37c286db4308"
+  },
+  "required_screenshots": [
+    "audio-normal-voice",
+    "audio-true-voice",
+    "bg-exit-after-rain",
+    "bg-exit-covered",
+    "bg-nearby-cafe",
+    "bg-s05_separate_path",
+    "bg-s05_shared_path",
+    "branch-s04_open",
+    "branch-s04_reserved",
+    "cg-letter",
+    "chapter-prologue",
+    "chapter-today",
+    "expression-angry",
+    "expression-embarrassed",
+    "expression-happy",
+    "expression-normal",
+    "expression-sad",
+    "expression-smile",
+    "expression-surprised",
+    "first-choice",
+    "revisit-choice",
+    "settings"
+  ],
+  "package": {
+    "filename": "BeforeTheRainStops-0.7.0-win.zip",
+    "bytes": 44861562,
+    "sha256": "9e9cd77da3b2ff9507b5fec89fab68091e0eca2ce4376c8188c1412651dc0af1",
+    "entry_count": 1621,
+    "standalone_exe": "BeforeTheRainStops-0.7.0-win/BeforeTheRainStops.exe",
+    "authoring_data_excluded": true,
+    "allowed_engine_cache": [
+      "game/cache/build_info.json",
+      "game/cache/bytecode-312.rpyb"
+    ],
+    "build_info": {
+      "info": {},
+      "time": 1791182999.4094384,
+      "name": "雨停之前",
+      "version": "0.7.0"
+    }
+  },
+  "human_acceptance": {
+    "read_time": "pending",
+    "real_audio_listening": "pending",
+    "ordinary_windows_pc": "pending",
+    "final_creative_approval": "pending"
+  },
+  "png_dimensions": {
+    "reports/screenshots/audio-normal-voice.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/route-13-normal.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/first-choice.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/route-14-normal.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/route-16-normal.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/expression-surprised.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/bg-exit-after-rain.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/route-08-normal.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/route-05-true.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/route-07-normal.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/main-menu.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/history.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/first-dialogue.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/audio-true-voice.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/route-10-normal.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/bg-nearby-cafe.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/route-09-true.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/expression-normal.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/route-02-normal.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/route-12-normal.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/revisit-choice.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/branch-s04_open.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/expression-angry.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/chapter-prologue.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/expression-happy.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/chapter-today.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/route-11-normal.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/route-15-normal.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/expression-embarrassed.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/route-01-true.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/branch-s04_reserved.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/expression-smile.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/bg-s05_shared_path.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/bg-exit-covered.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/expression-sad.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/route-04-normal.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/settings.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/route-03-true.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/bg-s05_separate_path.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/cg-letter.png": [
+      922,
+      518
+    ],
+    "reports/screenshots/route-06-normal.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/audio-normal-voice.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/route-13-normal.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/first-choice.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/route-14-normal.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/route-16-normal.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/expression-surprised.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/bg-exit-after-rain.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/route-08-normal.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/route-05-true.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/route-07-normal.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/main-menu.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/history.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/first-dialogue.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/audio-true-voice.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/route-10-normal.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/bg-nearby-cafe.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/route-09-true.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/expression-normal.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/route-02-normal.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/route-12-normal.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/revisit-choice.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/branch-s04_open.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/expression-angry.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/chapter-prologue.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/expression-happy.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/chapter-today.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/route-11-normal.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/route-15-normal.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/expression-embarrassed.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/route-01-true.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/branch-s04_reserved.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/expression-smile.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/bg-s05_shared_path.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/bg-exit-covered.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/expression-sad.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/route-04-normal.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/settings.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/route-03-true.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/bg-s05_separate_path.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/cg-letter.png": [
+      922,
+      518
+    ],
+    "reports/package/screenshots/route-06-normal.png": [
+      922,
+      518
+    ]
+  },
+  "python_tests": {
+    "local": {
+      "count": 72,
+      "seconds": 6.752
+    },
+    "windows": {
+      "count": 72,
+      "seconds": 10.136
+    }
+  },
+  "story": {
+    "story_sha256": "c9d4bd6ec954c0eca8e5273c5e2e9b9f058aff3be93268b295ec407f4a975681",
+    "all_branch_body_characters": 15206,
+    "shortest_route_characters": 11404,
+    "longest_route_characters": 11744,
+    "narrative_scenes": 24,
+    "router_nodes": 2,
+    "route_count": 16,
+    "endings": {
+      "normal": 12,
+      "true": 4
+    }
+  },
+  "visual_review": {
+    "reviewer": "Agent",
+    "logical_gui": [
+      1280,
+      720
+    ],
+    "reviewed_package_screenshots": [
+      "main-menu",
+      "bg-exit-covered",
+      "bg-s05_shared_path",
+      "bg-s05_separate_path",
+      "bg-nearby-cafe",
+      "bg-exit-after-rain",
+      "first-choice",
+      "settings",
+      "route-01-true",
+      "route-02-normal"
+    ],
+    "known_p2": [
+      "Main menu still calls the complete Alpha a playable sample; scheduled for v0.9 UI prose review."
+    ],
+    "final_user_approval": "pending"
+  },
+  "technical_acceptance": "passed"
+}

@@ -4,7 +4,7 @@
 
 ## 当前基线
 
-GitHub 最新已发布版本为 [**v0.6.0**](https://github.com/AureliusWu/Test/releases/tag/v0.6.0)，音频阶段工程收尾完成。main 正在验收 v0.7.0 完整短篇 Alpha 候选；正文、场景与当前证据见 [STATUS](docs/STATUS.md)。
+GitHub 最新已发布版本为 [**v0.6.0**](https://github.com/AureliusWu/Test/releases/tag/v0.6.0)，音频阶段工程收尾完成。v0.7.0 完整短篇 Alpha 候选已通过 Windows 源码和独立 EXE 技术验收，试玩包与实际预览已交付；真人计时 / 试听尚待完成，公开 Release 没有新增。正文、场景与当前证据见 [STATUS](docs/STATUS.md)。
 
 按 v0.1–v1.0 的 10 个发布里程碑统计，已发布 6 个，进度为 **60%**；不按工时等比例计算。完整剧情、1080p 适配、真人计时与试听、普通 Windows 电脑验收仍在后续阶段。
 
