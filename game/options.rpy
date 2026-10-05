@@ -1,12 +1,12 @@
 define config.name = _("雨停之前")
-define config.version = "0.8.0"
+define config.version = "0.9.0"
 define config.window_title = "雨停之前 · AI Galgame"
 define gui.show_name = True
-define gui.about = _("雨夜的旧车站，两位久未联系的旧友，和一封没有寄出的信。\n\n创作与工程：AureliusWu / AI 辅助\n图像：OpenAI 图像生成\n关键语音：Kokoro-82M v1.1-zh / zf_001\n音乐与音效：原创程序合成\n字体：Source Han Sans / SIL OFL 1.1\n\n当前版本为完整短篇 Alpha 候选。时长、听感与最终创作仍待审阅；完整来源见随游戏附带的 CREDITS.md。")
+define gui.about = _("雨夜的旧车站，两位久未联系的旧友，和一封没有寄出的信。\n\n创作与工程：AureliusWu / AI 辅助\n图像：OpenAI 图像生成\n关键语音：Kokoro-82M v1.1-zh / zf_001\n音乐与音效：原创程序合成\n字体：Source Han Sans / SIL OFL 1.1\n\n当前版本为原生 1080p 体验候选。时长、听感与最终创作仍待审阅；完整来源见随游戏附带的 CREDITS.md。")
 define build.name = "BeforeTheRainStops"
 define build.version = config.version
 define build.destination = "dist"
-define config.save_directory = "AureliusWu-BeforeTheRainStops-beta-v08"
+define config.save_directory = "AureliusWu-BeforeTheRainStops-candidate-v09"
 define config.has_sound = True
 define config.has_music = True
 define config.has_voice = True
@@ -21,6 +21,8 @@ define config.enter_transition = dissolve
 define config.exit_transition = dissolve
 define config.after_load_transition = None
 define config.end_game_transition = dissolve
+define config.physical_width = 1280
+define config.physical_height = 720
 define config.window_icon = "gui/window_icon.png"
 
 init python:
@@ -34,10 +36,10 @@ init python:
     build.classify("**.bak", None)
     build.classify("**.rpy", None)
     build.classify("game/**", "all")
-    build.classify("README.md", "all")
+    build.classify("PLAYER_README.txt", "all")
     build.classify("CREDITS.md", "all")
     build.classify("LICENSE", "all")
     build.classify("licenses/**", "all")
     build.classify("**", None)
-    build.documentation("README.md")
+    build.documentation("PLAYER_README.txt")
     build.documentation("CREDITS.md")

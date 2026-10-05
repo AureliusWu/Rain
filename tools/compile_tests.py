@@ -40,6 +40,8 @@ def render_persistence_tests(story):
         '        $ _test.screenshot_directory = "reports/persistence-screenshots"',
         '        $ preferences.text_cps = 0',
         '        pause until screen "main_menu"',
+        '        run Preference("display", "fullscreen")',
+        '        pause until eval renpy.get_physical_size() == (1920, 1080)',
         '    teardown:',
         '        exit',
         '',
@@ -81,8 +83,13 @@ def render_tests(story):
         '        $ _test.screenshot_directory = "reports/screenshots"',
         "        $ preferences.text_cps = 0",
         '        pause until screen "main_menu"',
+        '        run Preference("display", "fullscreen")',
+        '        pause until eval renpy.get_physical_size() == (1920, 1080)',
+        '        assert eval (config.screen_width, config.screen_height) == (1920, 1080)',
         '        screenshot "main-menu"',
         "    before testcase:",
+        '        run Preference("display", "fullscreen")',
+        '        pause until eval renpy.get_physical_size() == (1920, 1080)',
         "        $ preferences.afm_enable = False",
         "        $ config.skipping = None",
         '        if not screen "main_menu":',
@@ -425,7 +432,59 @@ def render_tests(story):
             lines += ['    screenshot "skip-final-choice"']
         lines += [f'    click {quote(choices[identity]["text"])}', '    advance']
     lines += ['    $ preferences.skip_unseen = False', '    $ config.skipping = None', '']
-    return "\n".join(lines)
+    # Actual rendered height, not a character-count estimate.
+    corpus = [(line['id'], line['text']) for n in story['nodes'] for line in scene_lines(n)]
+    lines += ['testcase native_1080_and_scaled_window:',
+              '    assert eval (config.screen_width, config.screen_height) == (1920, 1080)',
+              f'    $ test_corpus = {corpus!r}',
+              '    $ test_text_overflows = [(identity, renpy.render(Text(text, style="say_dialogue"), gui.dialogue_width, 10000, 0, 0).get_size()[1]) for identity, text in test_corpus if renpy.render(Text(text, style="say_dialogue"), gui.dialogue_width, 10000, 0, 0).get_size()[1] > gui.textbox_height - gui.dialogue_ypos - 42]',
+              '    $ print("Dialogue overflow check:", test_text_overflows)',
+              '    assert eval not test_text_overflows',
+              '    assert eval renpy.get_physical_size() == (1920, 1080)',
+              '    run MainMenu(confirm=False)',
+              '    screenshot "native-main-menu"',
+              '    click id "menu_about"',
+              '    assert screen "about"',
+              '    screenshot "native-about"',
+              '    click id "game_return"',
+              '    $ renpy.set_physical_size((1280, 720))',
+              '    pause until eval renpy.get_physical_size() == (1280, 720)',
+              '    assert eval not preferences.fullscreen',
+              '    screenshot "scaled-main-menu"',
+              '    click id "menu_start"',
+              at_line('s01_arrival_l005'),
+              '    assert screen "say"',
+              '    screenshot "scaled-dialogue"',
+              '    click id "history_open"',
+              '    assert screen "history"',
+              '    screenshot "scaled-history"',
+              '    click id "game_return"',
+              '    click id "preferences_open"',
+              '    assert screen "preferences"',
+              '    screenshot "scaled-settings"',
+              '    click id "game_return"',
+              '    advance until screen "choice"',
+              '    assert screen "choice"',
+              '    screenshot "scaled-choice"',
+              '    click id "save_open"',
+              '    assert screen "save"',
+              '    screenshot "scaled-save"',
+              '    click id "game_return"',
+              '    click id "load_open"',
+              '    assert screen "load"',
+              '    screenshot "scaled-load"',
+              '    click id "game_return"',
+              '    click id "preferences_open"',
+              '    click id "display_fullscreen"',
+              '    pause until eval renpy.get_physical_size() == (1920, 1080)',
+              '    assert eval preferences.fullscreen',
+              '    screenshot "native-settings"',
+              '    click id "game_return"',
+              '    assert screen "choice"',
+              '    screenshot "native-choice"', '']
+    first = lines.index('testcase route_01:')
+    display = lines.index('testcase native_1080_and_scaled_window:')
+    return "\n".join(lines[:first] + lines[display:] + lines[first:display])
 
 
 def main():

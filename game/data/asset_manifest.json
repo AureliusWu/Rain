@@ -86,17 +86,23 @@
       "file": "gui/bar/bottom.png",
       "source": "Ren'Py 8.5.3 stock GUI (MIT)",
       "license": "MIT; licenses/RENPY.txt",
-      "version": 1,
+      "version": 2,
       "approved": true,
-      "status": "development",
-      "sha256": "0478c616d012bb31efabd6cbbe1bd481227abbbe31c467deaf7a943204a4c7db",
+      "status": "candidate_user_review",
+      "sha256": "721cdb7cf92460db96cac248b325947bb2673f372f451d5030b2925fcbcb712f",
       "image": {
-        "width": 36,
-        "height": 350,
+        "width": 54,
+        "height": 525,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "ea691fb24fc8a70e1a363af8aa17b0dc135eb9b671bc6abb183fbe8e964df857"
+        "pixel_sha256": "fbf79bcb8694a5da9d3d54104b31ebfd458a0420ddb5c48d3c4bb209d5a0d172"
+      },
+      "source_file": "assets_source/ui/legacy720/bar/bottom.png",
+      "source_sha256": "0478c616d012bb31efabd6cbbe1bd481227abbbe31c467deaf7a943204a4c7db",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "image_recipe": {
+        "method": "scale_150percent_v1"
       }
     },
     {
@@ -105,17 +111,23 @@
       "file": "gui/bar/left.png",
       "source": "Ren'Py 8.5.3 stock GUI (MIT)",
       "license": "MIT; licenses/RENPY.txt",
-      "version": 1,
+      "version": 2,
       "approved": true,
-      "status": "development",
-      "sha256": "039c278509dcff1f9d13b8b6d43fbcc4722800814833f6a677c194db8bc81160",
+      "status": "candidate_user_review",
+      "sha256": "ee9876b8045f970e91bc462c3919801ae4d71fcb9a00ed6bd260dfc876e87c81",
       "image": {
-        "width": 350,
-        "height": 36,
+        "width": 525,
+        "height": 54,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "c5edffcd70d74144451897f705759028287e34f0fb7895b2c2c526ee318ac8e9"
+        "pixel_sha256": "b90593d137b51174f26012793f32358a1226c02a60bf13c8807d7dfdf52205e5"
+      },
+      "source_file": "assets_source/ui/legacy720/bar/left.png",
+      "source_sha256": "039c278509dcff1f9d13b8b6d43fbcc4722800814833f6a677c194db8bc81160",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "image_recipe": {
+        "method": "scale_150percent_v1"
       }
     },
     {
@@ -124,17 +136,23 @@
       "file": "gui/bar/right.png",
       "source": "Ren'Py 8.5.3 stock GUI (MIT)",
       "license": "MIT; licenses/RENPY.txt",
-      "version": 1,
+      "version": 2,
       "approved": true,
-      "status": "development",
-      "sha256": "c482a23e050de4decff0723317760c79dbd4722d2af06f0bc426fb069639365f",
+      "status": "candidate_user_review",
+      "sha256": "c51f501db9d6df4ecd1689368ec4253ed9994ea8ec56bd1a4077114f983e1f3e",
       "image": {
-        "width": 350,
-        "height": 36,
+        "width": 525,
+        "height": 54,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "b153349e2c2c22d9e3bea5578a875cd6e827bab3439e97366bef955ff1cf3aa0"
+        "pixel_sha256": "da689dd41c9b4d56574c0c2243fdfeb0d45089b03d40636f94d8835e445b9b78"
+      },
+      "source_file": "assets_source/ui/legacy720/bar/right.png",
+      "source_sha256": "c482a23e050de4decff0723317760c79dbd4722d2af06f0bc426fb069639365f",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "image_recipe": {
+        "method": "scale_150percent_v1"
       }
     },
     {
@@ -143,17 +161,23 @@
       "file": "gui/bar/top.png",
       "source": "Ren'Py 8.5.3 stock GUI (MIT)",
       "license": "MIT; licenses/RENPY.txt",
-      "version": 1,
+      "version": 2,
       "approved": true,
-      "status": "development",
-      "sha256": "b3e2cd981d51fef60675dc1151ca5b145bbe74f8abcfc482e52b1ffc60be48e0",
+      "status": "candidate_user_review",
+      "sha256": "880d451dd4441428f9e51ace9ef3cff094dc08de9708faa2504cf50d34c85d76",
       "image": {
-        "width": 36,
-        "height": 350,
+        "width": 54,
+        "height": 525,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "707a10a6c8746622125e4183c9358abda65fb57081129c600f6383995ecc246c"
+        "pixel_sha256": "c26b8728f81c8468800b98ed88044226cc57e3910add9d29693ec54ea1955eb5"
+      },
+      "source_file": "assets_source/ui/legacy720/bar/top.png",
+      "source_sha256": "b3e2cd981d51fef60675dc1151ca5b145bbe74f8abcfc482e52b1ffc60be48e0",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "image_recipe": {
+        "method": "scale_150percent_v1"
       }
     },
     {
@@ -162,17 +186,23 @@
       "file": "gui/button/check_foreground.png",
       "source": "Ren'Py 8.5.3 stock GUI (MIT)",
       "license": "MIT; licenses/RENPY.txt",
-      "version": 1,
+      "version": 2,
       "approved": true,
-      "status": "development",
-      "sha256": "d6c660fe037e2c7ea3cee46b8b2bf49ca25b9e0a8320045657782bed88e4fe6e",
+      "status": "candidate_user_review",
+      "sha256": "0523f181fb0b2bb150e3cb423348331d47185e13dea8b9f6ed9d2169cc93f0ee",
       "image": {
-        "width": 25,
-        "height": 36,
+        "width": 38,
+        "height": 54,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "f40c2c12222b38113068c33d96bef9977f4184371a7f629eb1cacfbbf40830aa"
+        "pixel_sha256": "5c1f1ab7261845d46eb1e7293776a18c87efc48b5f5a02dda3283f6de3cba012"
+      },
+      "source_file": "assets_source/ui/legacy720/button/check_foreground.png",
+      "source_sha256": "d6c660fe037e2c7ea3cee46b8b2bf49ca25b9e0a8320045657782bed88e4fe6e",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "image_recipe": {
+        "method": "scale_150percent_v1"
       }
     },
     {
@@ -181,19 +211,19 @@
       "file": "gui/button/check_selected_foreground.png",
       "source": "Original procedural GUI; tools/image_process/create_ui.py",
       "license": "Project MIT",
-      "version": 2,
+      "version": 3,
       "approved": true,
       "status": "candidate_user_review",
-      "sha256": "9f9be0674e94c2ed6f0d493506326b49106a8782e6cb81ece5d196d3b707eb6a",
-      "source_file": "assets_source/ui/v2/button/check_selected_foreground.png",
-      "source_sha256": "9f9be0674e94c2ed6f0d493506326b49106a8782e6cb81ece5d196d3b707eb6a",
+      "sha256": "38fef02478b327d1548e756bbdfaef84c5bbeee7fa7639d0b22ff50d5a6d81a9",
+      "source_file": "assets_source/ui/v3/button/check_selected_foreground.png",
+      "source_sha256": "38fef02478b327d1548e756bbdfaef84c5bbeee7fa7639d0b22ff50d5a6d81a9",
       "image": {
-        "width": 25,
-        "height": 36,
+        "width": 38,
+        "height": 54,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "88b3a2e5c64733cb39b5a8c62cb38a9d551d764046507b038a3a6b5af0869aba"
+        "pixel_sha256": "fda7cb9d30c2fcaf3d9d2449d4892ffccbe173a0b62cbf0dab2d4a1261de7065"
       },
       "image_recipe": {
         "method": "copy_png_v1"
@@ -206,17 +236,23 @@
       "file": "gui/button/choice_hover_background.png",
       "source": "Ren'Py 8.5.3 stock GUI (MIT)",
       "license": "MIT; licenses/RENPY.txt",
-      "version": 1,
+      "version": 2,
       "approved": true,
-      "status": "development",
-      "sha256": "2116bf4221690929b823a09d2df332acffa2e8b66b69359d7b1264713309d4cb",
+      "status": "candidate_user_review",
+      "sha256": "96572edec6ace61ad48ef71ff9aec51edd31a3321c1567ea4a55c3e4e573c2ec",
       "image": {
-        "width": 790,
-        "height": 35,
+        "width": 1185,
+        "height": 52,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "ef1c21de9249c9b3e986fa899721b819cb4a584a3548bb0372662b4f89011e9f"
+        "pixel_sha256": "242d0ac731622ea1e2df43ccc8e0d302b19551b485c341b136c0b010b365d131"
+      },
+      "source_file": "assets_source/ui/legacy720/button/choice_hover_background.png",
+      "source_sha256": "2116bf4221690929b823a09d2df332acffa2e8b66b69359d7b1264713309d4cb",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "image_recipe": {
+        "method": "scale_150percent_v1"
       }
     },
     {
@@ -225,17 +261,23 @@
       "file": "gui/button/choice_idle_background.png",
       "source": "Ren'Py 8.5.3 stock GUI (MIT)",
       "license": "MIT; licenses/RENPY.txt",
-      "version": 1,
+      "version": 2,
       "approved": true,
-      "status": "development",
-      "sha256": "cc9f3e64b4f7a41e1c229c158b0468b72ab3016029f5c3da448261d0be827317",
+      "status": "candidate_user_review",
+      "sha256": "dae769c41cf0a3a9f975c6fbfcfafa85f3bb91d46b96e5f4890986c52e5c30b5",
       "image": {
-        "width": 790,
-        "height": 35,
+        "width": 1185,
+        "height": 52,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "a08127334f4ce9b5aa8b25f46e7a4cae1ed65cd7f3773882c8054c0454ca00f4"
+        "pixel_sha256": "7ad95a14a5e95dfcd6ad1a7bf80c2da9f9d508bd97bfbfd9d40a9e8b1d067db6"
+      },
+      "source_file": "assets_source/ui/legacy720/button/choice_idle_background.png",
+      "source_sha256": "cc9f3e64b4f7a41e1c229c158b0468b72ab3016029f5c3da448261d0be827317",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "image_recipe": {
+        "method": "scale_150percent_v1"
       }
     },
     {
@@ -244,17 +286,23 @@
       "file": "gui/button/hover_background.png",
       "source": "Ren'Py 8.5.3 stock GUI (MIT)",
       "license": "MIT; licenses/RENPY.txt",
-      "version": 1,
+      "version": 2,
       "approved": true,
-      "status": "development",
-      "sha256": "bacda0751bcdd1a853e6441d4b3dcfa4a01ff55cdfa028e7f4dfb27a142038e5",
+      "status": "candidate_user_review",
+      "sha256": "2572afec54712484ac9fab98bf899e1793b3c937935fb19ec3ac05a46628b388",
       "image": {
-        "width": 300,
-        "height": 36,
+        "width": 450,
+        "height": 54,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "689b4ec69af9615e2eaf502acab074e0bcabaa7a8d749afbbb6cdd05ec8d48cb"
+        "pixel_sha256": "933e979bfb74e50e827ea3f334e6c023f0cfd2a95273b46f6cabb63187540263"
+      },
+      "source_file": "assets_source/ui/legacy720/button/hover_background.png",
+      "source_sha256": "bacda0751bcdd1a853e6441d4b3dcfa4a01ff55cdfa028e7f4dfb27a142038e5",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "image_recipe": {
+        "method": "scale_150percent_v1"
       }
     },
     {
@@ -263,17 +311,23 @@
       "file": "gui/button/idle_background.png",
       "source": "Ren'Py 8.5.3 stock GUI (MIT)",
       "license": "MIT; licenses/RENPY.txt",
-      "version": 1,
+      "version": 2,
       "approved": true,
-      "status": "development",
-      "sha256": "bacda0751bcdd1a853e6441d4b3dcfa4a01ff55cdfa028e7f4dfb27a142038e5",
+      "status": "candidate_user_review",
+      "sha256": "2572afec54712484ac9fab98bf899e1793b3c937935fb19ec3ac05a46628b388",
       "image": {
-        "width": 300,
-        "height": 36,
+        "width": 450,
+        "height": 54,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "689b4ec69af9615e2eaf502acab074e0bcabaa7a8d749afbbb6cdd05ec8d48cb"
+        "pixel_sha256": "933e979bfb74e50e827ea3f334e6c023f0cfd2a95273b46f6cabb63187540263"
+      },
+      "source_file": "assets_source/ui/legacy720/button/idle_background.png",
+      "source_sha256": "bacda0751bcdd1a853e6441d4b3dcfa4a01ff55cdfa028e7f4dfb27a142038e5",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "image_recipe": {
+        "method": "scale_150percent_v1"
       }
     },
     {
@@ -282,17 +336,23 @@
       "file": "gui/button/quick_hover_background.png",
       "source": "Ren'Py 8.5.3 stock GUI (MIT)",
       "license": "MIT; licenses/RENPY.txt",
-      "version": 1,
+      "version": 2,
       "approved": true,
-      "status": "development",
-      "sha256": "a797767c0ab31b5eec7ec553ad3924776d078fbee432a4623f638cf047db0b9f",
+      "status": "candidate_user_review",
+      "sha256": "d41adf1e1c21cfd598b204ad2e15106ed457d39a3bc4401875f18cc743e9b2bf",
       "image": {
-        "width": 100,
-        "height": 30,
+        "width": 150,
+        "height": 45,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "b93223f9682c6f7ee62f6a5dd4e15a8f555165b201057db5105f72ae7d357ab1"
+        "pixel_sha256": "5fd409d148da5787d190ef0552f3150dba80c5fc1fbb09611c97522219ae48e9"
+      },
+      "source_file": "assets_source/ui/legacy720/button/quick_hover_background.png",
+      "source_sha256": "a797767c0ab31b5eec7ec553ad3924776d078fbee432a4623f638cf047db0b9f",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "image_recipe": {
+        "method": "scale_150percent_v1"
       }
     },
     {
@@ -301,17 +361,23 @@
       "file": "gui/button/quick_idle_background.png",
       "source": "Ren'Py 8.5.3 stock GUI (MIT)",
       "license": "MIT; licenses/RENPY.txt",
-      "version": 1,
+      "version": 2,
       "approved": true,
-      "status": "development",
-      "sha256": "a797767c0ab31b5eec7ec553ad3924776d078fbee432a4623f638cf047db0b9f",
+      "status": "candidate_user_review",
+      "sha256": "d41adf1e1c21cfd598b204ad2e15106ed457d39a3bc4401875f18cc743e9b2bf",
       "image": {
-        "width": 100,
-        "height": 30,
+        "width": 150,
+        "height": 45,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "b93223f9682c6f7ee62f6a5dd4e15a8f555165b201057db5105f72ae7d357ab1"
+        "pixel_sha256": "5fd409d148da5787d190ef0552f3150dba80c5fc1fbb09611c97522219ae48e9"
+      },
+      "source_file": "assets_source/ui/legacy720/button/quick_idle_background.png",
+      "source_sha256": "a797767c0ab31b5eec7ec553ad3924776d078fbee432a4623f638cf047db0b9f",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "image_recipe": {
+        "method": "scale_150percent_v1"
       }
     },
     {
@@ -320,17 +386,23 @@
       "file": "gui/button/radio_foreground.png",
       "source": "Ren'Py 8.5.3 stock GUI (MIT)",
       "license": "MIT; licenses/RENPY.txt",
-      "version": 1,
+      "version": 2,
       "approved": true,
-      "status": "development",
-      "sha256": "d6c660fe037e2c7ea3cee46b8b2bf49ca25b9e0a8320045657782bed88e4fe6e",
+      "status": "candidate_user_review",
+      "sha256": "0523f181fb0b2bb150e3cb423348331d47185e13dea8b9f6ed9d2169cc93f0ee",
       "image": {
-        "width": 25,
-        "height": 36,
+        "width": 38,
+        "height": 54,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "f40c2c12222b38113068c33d96bef9977f4184371a7f629eb1cacfbbf40830aa"
+        "pixel_sha256": "5c1f1ab7261845d46eb1e7293776a18c87efc48b5f5a02dda3283f6de3cba012"
+      },
+      "source_file": "assets_source/ui/legacy720/button/radio_foreground.png",
+      "source_sha256": "d6c660fe037e2c7ea3cee46b8b2bf49ca25b9e0a8320045657782bed88e4fe6e",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "image_recipe": {
+        "method": "scale_150percent_v1"
       }
     },
     {
@@ -339,19 +411,19 @@
       "file": "gui/button/radio_selected_foreground.png",
       "source": "Original procedural GUI; tools/image_process/create_ui.py",
       "license": "Project MIT",
-      "version": 2,
+      "version": 3,
       "approved": true,
       "status": "candidate_user_review",
-      "sha256": "9f9be0674e94c2ed6f0d493506326b49106a8782e6cb81ece5d196d3b707eb6a",
-      "source_file": "assets_source/ui/v2/button/radio_selected_foreground.png",
-      "source_sha256": "9f9be0674e94c2ed6f0d493506326b49106a8782e6cb81ece5d196d3b707eb6a",
+      "sha256": "38fef02478b327d1548e756bbdfaef84c5bbeee7fa7639d0b22ff50d5a6d81a9",
+      "source_file": "assets_source/ui/v3/button/radio_selected_foreground.png",
+      "source_sha256": "38fef02478b327d1548e756bbdfaef84c5bbeee7fa7639d0b22ff50d5a6d81a9",
       "image": {
-        "width": 25,
-        "height": 36,
+        "width": 38,
+        "height": 54,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "88b3a2e5c64733cb39b5a8c62cb38a9d551d764046507b038a3a6b5af0869aba"
+        "pixel_sha256": "fda7cb9d30c2fcaf3d9d2449d4892ffccbe173a0b62cbf0dab2d4a1261de7065"
       },
       "image_recipe": {
         "method": "copy_png_v1"
@@ -364,17 +436,23 @@
       "file": "gui/button/slot_hover_background.png",
       "source": "Ren'Py 8.5.3 stock GUI (MIT)",
       "license": "MIT; licenses/RENPY.txt",
-      "version": 1,
+      "version": 2,
       "approved": true,
-      "status": "development",
-      "sha256": "ac592f91652fb7c9ea508fa82d7fb7ae4c457967ab0941e374345869e84cd793",
+      "status": "candidate_user_review",
+      "sha256": "0fe8a9bde95c5eb7f71d7706be84648cebbafac5b7ad6a739c81ab3fa0cfdca5",
       "image": {
-        "width": 276,
-        "height": 206,
+        "width": 414,
+        "height": 309,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "aa56d922a93ba4f517d3ae79f3d4b3be32ee62de2572006565db87605aed1f51"
+        "pixel_sha256": "9294e95e3f2f8209314cdd03c018efce117a2d7c6017e4e42ee04eea1f2fe200"
+      },
+      "source_file": "assets_source/ui/legacy720/button/slot_hover_background.png",
+      "source_sha256": "ac592f91652fb7c9ea508fa82d7fb7ae4c457967ab0941e374345869e84cd793",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "image_recipe": {
+        "method": "scale_150percent_v1"
       }
     },
     {
@@ -383,17 +461,23 @@
       "file": "gui/button/slot_idle_background.png",
       "source": "Ren'Py 8.5.3 stock GUI (MIT)",
       "license": "MIT; licenses/RENPY.txt",
-      "version": 1,
+      "version": 2,
       "approved": true,
-      "status": "development",
-      "sha256": "ff2a5a0a8cfe90b68aea0809a441e8b3e79f5a9508b4d5b2c8dd508cd5abf7d0",
+      "status": "candidate_user_review",
+      "sha256": "68a27f73b75957a87ad76be273dedfac2efd5faa67974878e56e130e94d0a3d6",
       "image": {
-        "width": 276,
-        "height": 206,
+        "width": 414,
+        "height": 309,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "fa096911ffcb05d16552c672a0cc847e51629f445b664ca1bed4be83733cc0a8"
+        "pixel_sha256": "641f0340c5c8fa5fe5380e99a0c67e438a1729dd07c47b4a4d1085de31f043db"
+      },
+      "source_file": "assets_source/ui/legacy720/button/slot_idle_background.png",
+      "source_sha256": "ff2a5a0a8cfe90b68aea0809a441e8b3e79f5a9508b4d5b2c8dd508cd5abf7d0",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "image_recipe": {
+        "method": "scale_150percent_v1"
       }
     },
     {
@@ -402,17 +486,23 @@
       "file": "gui/frame.png",
       "source": "Ren'Py 8.5.3 stock GUI (MIT)",
       "license": "MIT; licenses/RENPY.txt",
-      "version": 1,
+      "version": 2,
       "approved": true,
-      "status": "development",
-      "sha256": "bb3819b02cc1a098ef99477bce13c3fe0d6e47849b9885bf5451a2b381b25b44",
+      "status": "candidate_user_review",
+      "sha256": "a434ce8479eb6f5bf768e294319f0a6b5b93825df4dab401a41f651f9939e2d0",
       "image": {
-        "width": 600,
-        "height": 250,
+        "width": 900,
+        "height": 375,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "1b6c8503b3d62568fb14b00a17269e5f42769ac875714aecf8b495209acefcf4"
+        "pixel_sha256": "a2b4a48e8f93a4da3e775ea50082fdd7046cf53864fd4462d7379cbec8ae4651"
+      },
+      "source_file": "assets_source/ui/legacy720/frame.png",
+      "source_sha256": "bb3819b02cc1a098ef99477bce13c3fe0d6e47849b9885bf5451a2b381b25b44",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "image_recipe": {
+        "method": "scale_150percent_v1"
       }
     },
     {
@@ -421,17 +511,23 @@
       "file": "gui/game_menu.png",
       "source": "Original procedural UI; tools/bootstrap_assets.py",
       "license": "Project MIT",
-      "version": 1,
+      "version": 2,
       "approved": true,
-      "status": "development",
-      "sha256": "2b33ea35763787a35a6d16613aaecfa7f8fa79f1a7704aa5b115cdd1b3a1aefb",
+      "status": "candidate_user_review",
+      "sha256": "afe0fbeaf019f01e35534ece6bdf120abc4b4600788610343256e2d7ffd0fbca",
       "image": {
-        "width": 1280,
-        "height": 720,
+        "width": 1920,
+        "height": 1080,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "f23b030b30198d6fa6ed3d9b80c04a3e0e41fac42eb62113dfb3a6f084039e3a"
+        "pixel_sha256": "71748b93d9ae175b2f0510dcc5b6e4731d4ed8fc04c90fa94ad8f32841f437a4"
+      },
+      "source_file": "assets_source/ui/legacy720/game_menu.png",
+      "source_sha256": "2b33ea35763787a35a6d16613aaecfa7f8fa79f1a7704aa5b115cdd1b3a1aefb",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "image_recipe": {
+        "method": "scale_150percent_v1"
       }
     },
     {
@@ -440,18 +536,18 @@
       "file": "gui/main_menu.png",
       "source": "Original AI-generated station background, reused for main menu",
       "license": "AI-generated output; see CREDITS.md",
-      "version": 2,
+      "version": 3,
       "approved": true,
       "status": "candidate_user_review",
-      "sha256": "4dc437b5d922f3f1049dc78e9deed8822e0229de2dcc713245c434846471a8a3",
+      "sha256": "d3c090ef26d63243ba316e0755453c876e69e9c218d2b3af0251f9546f991c0e",
       "prompt": "prompts/background/station_rain_v1.md",
       "image": {
-        "width": 1280,
-        "height": 720,
+        "width": 1920,
+        "height": 1080,
         "mode": "RGB",
         "format": "PNG",
         "has_alpha": false,
-        "pixel_sha256": "326d14044534a377d8a10a126ad6c34b58a2e9aacb2e3c1c81b1d1c82f598788"
+        "pixel_sha256": "5eef633949924e79778353fe006dea806771cd9f50ac42a4c9cb24f61e0ed396"
       },
       "prompt_id": "background_station_rain_v1",
       "prompt_sha256": "b6380c85f29b6bfe7c800d363cb61596f4858872ec30419a844aac8c888a1d83",
@@ -460,7 +556,7 @@
       "source_sha256": "9080cb886bdeeeba1fb506e252fde3c0b4450ef113f8a6ee831edbab020f4bab",
       "reused_from": "station",
       "image_recipe": {
-        "method": "fit_1280x720_v1"
+        "method": "fit_1920x1080_v1"
       }
     },
     {
@@ -469,17 +565,23 @@
       "file": "gui/namebox.png",
       "source": "Ren'Py 8.5.3 stock GUI (MIT)",
       "license": "MIT; licenses/RENPY.txt",
-      "version": 1,
+      "version": 2,
       "approved": true,
-      "status": "development",
-      "sha256": "bacda0751bcdd1a853e6441d4b3dcfa4a01ff55cdfa028e7f4dfb27a142038e5",
+      "status": "candidate_user_review",
+      "sha256": "2572afec54712484ac9fab98bf899e1793b3c937935fb19ec3ac05a46628b388",
       "image": {
-        "width": 300,
-        "height": 36,
+        "width": 450,
+        "height": 54,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "689b4ec69af9615e2eaf502acab074e0bcabaa7a8d749afbbb6cdd05ec8d48cb"
+        "pixel_sha256": "933e979bfb74e50e827ea3f334e6c023f0cfd2a95273b46f6cabb63187540263"
+      },
+      "source_file": "assets_source/ui/legacy720/namebox.png",
+      "source_sha256": "bacda0751bcdd1a853e6441d4b3dcfa4a01ff55cdfa028e7f4dfb27a142038e5",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "image_recipe": {
+        "method": "scale_150percent_v1"
       }
     },
     {
@@ -488,17 +590,23 @@
       "file": "gui/notify.png",
       "source": "Ren'Py 8.5.3 stock GUI (MIT)",
       "license": "MIT; licenses/RENPY.txt",
-      "version": 1,
+      "version": 2,
       "approved": true,
-      "status": "development",
-      "sha256": "0eec495378a96561b61db1e1220ec2700401ab203b5c7d13e9c478fd3b171397",
+      "status": "candidate_user_review",
+      "sha256": "b9c7d218c7f53fce858e87d39a240fd5ddf0456b1f5fd97024b008e91a076016",
       "image": {
-        "width": 922,
-        "height": 43,
+        "width": 1383,
+        "height": 64,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "2566772dac0e6b30828c90445751d50634af0c8f28c2e127e4ead7020ca38913"
+        "pixel_sha256": "c46cd22c952877a435c1cd588ae212a07545b50e454931813da7a0ed2541a238"
+      },
+      "source_file": "assets_source/ui/legacy720/notify.png",
+      "source_sha256": "0eec495378a96561b61db1e1220ec2700401ab203b5c7d13e9c478fd3b171397",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "image_recipe": {
+        "method": "scale_150percent_v1"
       }
     },
     {
@@ -507,17 +615,23 @@
       "file": "gui/nvl.png",
       "source": "Ren'Py 8.5.3 stock GUI (MIT)",
       "license": "MIT; licenses/RENPY.txt",
-      "version": 1,
+      "version": 2,
       "approved": true,
-      "status": "development",
-      "sha256": "f0e60df6c89ab685368729a526ba760ec2b53a8e05a4941a895455aa80837752",
+      "status": "candidate_user_review",
+      "sha256": "3c5f7e0c4a9ce4eb5b81a9f79e3aadf88345b72426883989d6d9847773c60167",
       "image": {
-        "width": 1280,
-        "height": 720,
+        "width": 1920,
+        "height": 1080,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "6e9fc0e6368cfd57f96ca4d07d4b480da8b3e2bbe57e60ecb20dc926f6d2bc7e"
+        "pixel_sha256": "771749e3769b8e4b976a6bb34fd7eda5f5aa286afb2fc2052891750a005e86b0"
+      },
+      "source_file": "assets_source/ui/legacy720/nvl.png",
+      "source_sha256": "f0e60df6c89ab685368729a526ba760ec2b53a8e05a4941a895455aa80837752",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "image_recipe": {
+        "method": "scale_150percent_v1"
       }
     },
     {
@@ -526,17 +640,23 @@
       "file": "gui/overlay/confirm.png",
       "source": "Ren'Py 8.5.3 stock GUI (MIT)",
       "license": "MIT; licenses/RENPY.txt",
-      "version": 1,
+      "version": 2,
       "approved": true,
-      "status": "development",
-      "sha256": "eb857a3e076dc09e8fd53d33a901207558f6871e38d5da4cc78afca0a5737adc",
+      "status": "candidate_user_review",
+      "sha256": "58de7366247946c678d9fde9913a1e60787cd8342d2067df33f03d49e6226700",
       "image": {
-        "width": 1280,
-        "height": 720,
+        "width": 1920,
+        "height": 1080,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "d362bc5103501f8b80265ac91e354acd69f0a6d7c9b22ed81b8038ca58afd0fa"
+        "pixel_sha256": "34fd68fa8885c1c621e6dc2e082f036d6d74546213ad908a19159a914c0633b2"
+      },
+      "source_file": "assets_source/ui/legacy720/overlay/confirm.png",
+      "source_sha256": "eb857a3e076dc09e8fd53d33a901207558f6871e38d5da4cc78afca0a5737adc",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "image_recipe": {
+        "method": "scale_150percent_v1"
       }
     },
     {
@@ -545,19 +665,19 @@
       "file": "gui/overlay/game_menu.png",
       "source": "Original procedural GUI; tools/image_process/create_ui.py",
       "license": "Project MIT",
-      "version": 2,
+      "version": 3,
       "approved": true,
       "status": "candidate_user_review",
-      "sha256": "f10420b73cbb7b7857b93c59b998f92d1889a937c99a8b0ef9023e2e03ab467a",
-      "source_file": "assets_source/ui/v2/overlay/game_menu.png",
-      "source_sha256": "f10420b73cbb7b7857b93c59b998f92d1889a937c99a8b0ef9023e2e03ab467a",
+      "sha256": "1498189ef95e47d9005b0185ef3ca3c47582425092a8535a2bc625f5812204ac",
+      "source_file": "assets_source/ui/v3/overlay/game_menu.png",
+      "source_sha256": "1498189ef95e47d9005b0185ef3ca3c47582425092a8535a2bc625f5812204ac",
       "image": {
-        "width": 1280,
-        "height": 720,
+        "width": 1920,
+        "height": 1080,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "e12a29cd2a44ec46ba4a29376fee48d6e5c1507ef146b9da6d8a6e220856907b"
+        "pixel_sha256": "5f0257f983f66efa3ad717fa5323593eb52e79d7952b1d10ffe6820c459a051c"
       },
       "image_recipe": {
         "method": "copy_png_v1"
@@ -570,19 +690,19 @@
       "file": "gui/overlay/main_menu.png",
       "source": "Original procedural GUI; tools/image_process/create_ui.py",
       "license": "Project MIT",
-      "version": 2,
+      "version": 3,
       "approved": true,
       "status": "candidate_user_review",
-      "sha256": "b474d863b63b0ccff3c120cc06b3de68b3a991e156c6bbcf83721acba5a5fc9b",
-      "source_file": "assets_source/ui/v2/overlay/main_menu.png",
-      "source_sha256": "b474d863b63b0ccff3c120cc06b3de68b3a991e156c6bbcf83721acba5a5fc9b",
+      "sha256": "9d9018afcc815cb732db0d1d5af4b887024352c4766d4d18494836c22d06c259",
+      "source_file": "assets_source/ui/v3/overlay/main_menu.png",
+      "source_sha256": "9d9018afcc815cb732db0d1d5af4b887024352c4766d4d18494836c22d06c259",
       "image": {
-        "width": 1280,
-        "height": 720,
+        "width": 1920,
+        "height": 1080,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "b53be20354f14e16aa8ada8352cadaf8be0667be8e12c03de23a56b8a3c161f6"
+        "pixel_sha256": "f88320cc1a560aee886706d9f51ea2ac448acb0831cad63fa5d387d99a4f04f7"
       },
       "image_recipe": {
         "method": "copy_png_v1"
@@ -595,17 +715,23 @@
       "file": "gui/phone/nvl.png",
       "source": "Ren'Py 8.5.3 stock GUI (MIT)",
       "license": "MIT; licenses/RENPY.txt",
-      "version": 1,
+      "version": 2,
       "approved": true,
-      "status": "development",
-      "sha256": "24014733ccbae6e9aa7c37b4baaaf655edaf37b0a2dc21a6d79ca2b93ad6cb6a",
+      "status": "candidate_user_review",
+      "sha256": "8393c2c9d95e524e7a4ff53ac7188a7e74b26ed06a743113e4a532d744810bd3",
       "image": {
-        "width": 1280,
-        "height": 720,
+        "width": 1920,
+        "height": 1080,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "4e2221b9e0cb7d0684199609bc516b5a32eadb4dc1b46ef8d5f2327db1733892"
+        "pixel_sha256": "b709ef02483ee762344acebb3dd7d1a273d64282253fb5b5dac13935a4ac0c08"
+      },
+      "source_file": "assets_source/ui/legacy720/phone/nvl.png",
+      "source_sha256": "24014733ccbae6e9aa7c37b4baaaf655edaf37b0a2dc21a6d79ca2b93ad6cb6a",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "image_recipe": {
+        "method": "scale_150percent_v1"
       }
     },
     {
@@ -614,17 +740,23 @@
       "file": "gui/phone/overlay/game_menu.png",
       "source": "Ren'Py 8.5.3 stock GUI (MIT)",
       "license": "MIT; licenses/RENPY.txt",
-      "version": 1,
+      "version": 2,
       "approved": true,
-      "status": "development",
-      "sha256": "22f51657735a3b2c81014b328f50e5a83e2ee689e4c3965751e6a992198c9859",
+      "status": "candidate_user_review",
+      "sha256": "21593bd8b1091325ac3370e20f163c75110e008673d8bb3dd2081f64cd573ea4",
       "image": {
-        "width": 1280,
-        "height": 720,
+        "width": 1920,
+        "height": 1080,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "ea165110968169696fcf054bc900dff640283eb8692d5e9cfcc49905ee7a59f6"
+        "pixel_sha256": "0716dff6e0324e1938245afd1a1fce10894e876f319e9a86d2774dcc83b49146"
+      },
+      "source_file": "assets_source/ui/legacy720/phone/overlay/game_menu.png",
+      "source_sha256": "22f51657735a3b2c81014b328f50e5a83e2ee689e4c3965751e6a992198c9859",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "image_recipe": {
+        "method": "scale_150percent_v1"
       }
     },
     {
@@ -633,17 +765,23 @@
       "file": "gui/phone/overlay/main_menu.png",
       "source": "Ren'Py 8.5.3 stock GUI (MIT)",
       "license": "MIT; licenses/RENPY.txt",
-      "version": 1,
+      "version": 2,
       "approved": true,
-      "status": "development",
-      "sha256": "3ef646f88f1010bec68c630f571873f606643c661678913d5424ce6e89c1524a",
+      "status": "candidate_user_review",
+      "sha256": "d8728432226ec3d6b615d7c7a0368e5081165211617a1089ee8f50c24835cf4f",
       "image": {
-        "width": 1280,
-        "height": 720,
+        "width": 1920,
+        "height": 1080,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "0b9f0dfc6c13cb814cde7e09361bcd93ea8fed23b5c0abe4b0720c4d6d801bdd"
+        "pixel_sha256": "912bba52bbb8710efdf4e44f81352637d8b4c855298daa10ed7ccfaa0db9cb48"
+      },
+      "source_file": "assets_source/ui/legacy720/phone/overlay/main_menu.png",
+      "source_sha256": "3ef646f88f1010bec68c630f571873f606643c661678913d5424ce6e89c1524a",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "image_recipe": {
+        "method": "scale_150percent_v1"
       }
     },
     {
@@ -652,17 +790,23 @@
       "file": "gui/phone/textbox.png",
       "source": "Ren'Py 8.5.3 stock GUI (MIT)",
       "license": "MIT; licenses/RENPY.txt",
-      "version": 1,
+      "version": 2,
       "approved": true,
-      "status": "development",
-      "sha256": "a66ee5c01333ef37383853c849c1d8ee6ed436c8f5f02866151512ae172a9cc9",
+      "status": "candidate_user_review",
+      "sha256": "a6554d0dfa7d64efe6d774439a5f02fc1bffb250f5176c2d08d548a2866cd5b3",
       "image": {
-        "width": 1280,
-        "height": 240,
+        "width": 1920,
+        "height": 360,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "4efa2961443d27d2fa46f4b799fd669dc6f5adcb9fede75b3a7f124f2a252ac7"
+        "pixel_sha256": "a53b9b22aa2a0ccf5a87bd28f681a5990bc40a3d0f77ff41b2c8f357b58cef7d"
+      },
+      "source_file": "assets_source/ui/legacy720/phone/textbox.png",
+      "source_sha256": "a66ee5c01333ef37383853c849c1d8ee6ed436c8f5f02866151512ae172a9cc9",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "image_recipe": {
+        "method": "scale_150percent_v1"
       }
     },
     {
@@ -671,19 +815,19 @@
       "file": "gui/scrollbar/horizontal_hover_bar.png",
       "source": "Original procedural GUI; tools/image_process/create_ui.py",
       "license": "Project MIT",
-      "version": 2,
+      "version": 3,
       "approved": true,
       "status": "candidate_user_review",
-      "sha256": "9692b1e9f2b317d8e3e99f2247d3b3bc68b0b010dc16bb2c18b592825ab20882",
-      "source_file": "assets_source/ui/v2/scrollbar/horizontal_hover_bar.png",
-      "source_sha256": "9692b1e9f2b317d8e3e99f2247d3b3bc68b0b010dc16bb2c18b592825ab20882",
+      "sha256": "66b1198137b1b3d9507b1e17daaaef133e8eff49a659b129e0041df7bb942055",
+      "source_file": "assets_source/ui/v3/scrollbar/horizontal_hover_bar.png",
+      "source_sha256": "66b1198137b1b3d9507b1e17daaaef133e8eff49a659b129e0041df7bb942055",
       "image": {
-        "width": 700,
-        "height": 12,
+        "width": 1050,
+        "height": 18,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "9615f7e8d8b2473b43cec7c50d588598ac66f436e7bdad57827130736e977baa"
+        "pixel_sha256": "2c083617c37ae82265619328a739d0c649731ddc17c123c18ab6dd231a30ba97"
       },
       "image_recipe": {
         "method": "copy_png_v1"
@@ -696,19 +840,19 @@
       "file": "gui/scrollbar/horizontal_hover_thumb.png",
       "source": "Original procedural GUI; tools/image_process/create_ui.py",
       "license": "Project MIT",
-      "version": 2,
+      "version": 3,
       "approved": true,
       "status": "candidate_user_review",
-      "sha256": "6d617e5f762ec461906309d8d472f8ea10557e583bbc810db4ae72f9c505c2a5",
-      "source_file": "assets_source/ui/v2/scrollbar/horizontal_hover_thumb.png",
-      "source_sha256": "6d617e5f762ec461906309d8d472f8ea10557e583bbc810db4ae72f9c505c2a5",
+      "sha256": "adc68bd558c71bced1c0a407d77e1bc374a78fe399ad8f1f5a54612d90d696b5",
+      "source_file": "assets_source/ui/v3/scrollbar/horizontal_hover_thumb.png",
+      "source_sha256": "adc68bd558c71bced1c0a407d77e1bc374a78fe399ad8f1f5a54612d90d696b5",
       "image": {
-        "width": 700,
-        "height": 12,
+        "width": 1050,
+        "height": 18,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "df3f55dab715c48e7b2d30161c565904497a76d7ce430472e4f11f0793ac9b85"
+        "pixel_sha256": "d23dbca15e23a5668c342b0ce5ba03434f761d28cc664b8ebd4be4f1679eff5d"
       },
       "image_recipe": {
         "method": "copy_png_v1"
@@ -721,19 +865,19 @@
       "file": "gui/scrollbar/horizontal_idle_bar.png",
       "source": "Original procedural GUI; tools/image_process/create_ui.py",
       "license": "Project MIT",
-      "version": 2,
+      "version": 3,
       "approved": true,
       "status": "candidate_user_review",
-      "sha256": "5d2bc45dc08d3c9b9fc92774494ba7efbed5874d6e3f282092c5e5a298637122",
-      "source_file": "assets_source/ui/v2/scrollbar/horizontal_idle_bar.png",
-      "source_sha256": "5d2bc45dc08d3c9b9fc92774494ba7efbed5874d6e3f282092c5e5a298637122",
+      "sha256": "6226315eeafdb3584292db30e44462682911f2d2aac5936db71d2f534220a249",
+      "source_file": "assets_source/ui/v3/scrollbar/horizontal_idle_bar.png",
+      "source_sha256": "6226315eeafdb3584292db30e44462682911f2d2aac5936db71d2f534220a249",
       "image": {
-        "width": 700,
-        "height": 12,
+        "width": 1050,
+        "height": 18,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "288f66dff60fb378050782350dd40c878e4a8e63494000e62739bff23e63492c"
+        "pixel_sha256": "1a2313d93fef136769c5d68dea2f41f6d7ccbf05a7f35fa80d8da1f48d20e13c"
       },
       "image_recipe": {
         "method": "copy_png_v1"
@@ -746,19 +890,19 @@
       "file": "gui/scrollbar/horizontal_idle_thumb.png",
       "source": "Original procedural GUI; tools/image_process/create_ui.py",
       "license": "Project MIT",
-      "version": 2,
+      "version": 3,
       "approved": true,
       "status": "candidate_user_review",
-      "sha256": "df6d57fce74a6be844874d5ecd2bce1f31d4f1dac75c9246c1267ea31533433f",
-      "source_file": "assets_source/ui/v2/scrollbar/horizontal_idle_thumb.png",
-      "source_sha256": "df6d57fce74a6be844874d5ecd2bce1f31d4f1dac75c9246c1267ea31533433f",
+      "sha256": "07b6d025870d5607be9737601f290bb3feef2bbe8b57453cec8a8fa0072735ed",
+      "source_file": "assets_source/ui/v3/scrollbar/horizontal_idle_thumb.png",
+      "source_sha256": "07b6d025870d5607be9737601f290bb3feef2bbe8b57453cec8a8fa0072735ed",
       "image": {
-        "width": 700,
-        "height": 12,
+        "width": 1050,
+        "height": 18,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "bd1c23a9a6dd12d409cd035e5dc471e027c2626dc35cd0b9ca9141773d053791"
+        "pixel_sha256": "96a75b20989459acfae4661ea3700be57a7d4de5aa3ced38420d023fbb37fd76"
       },
       "image_recipe": {
         "method": "copy_png_v1"
@@ -771,19 +915,19 @@
       "file": "gui/scrollbar/vertical_hover_bar.png",
       "source": "Original procedural GUI; tools/image_process/create_ui.py",
       "license": "Project MIT",
-      "version": 2,
+      "version": 3,
       "approved": true,
       "status": "candidate_user_review",
-      "sha256": "421365d0297f6f5e1bb22c14c17397cefa39bd3b6bc034317e22aa07ce43b91b",
-      "source_file": "assets_source/ui/v2/scrollbar/vertical_hover_bar.png",
-      "source_sha256": "421365d0297f6f5e1bb22c14c17397cefa39bd3b6bc034317e22aa07ce43b91b",
+      "sha256": "b0d6ed0b20b9b89dea81d5318c524dcff6087b2226944778da60d5a29e724238",
+      "source_file": "assets_source/ui/v3/scrollbar/vertical_hover_bar.png",
+      "source_sha256": "b0d6ed0b20b9b89dea81d5318c524dcff6087b2226944778da60d5a29e724238",
       "image": {
-        "width": 12,
-        "height": 700,
+        "width": 18,
+        "height": 1050,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "9deec817741f1a592c35ad7f530adbe5daa7ff16c74e3ebd2efba805bd5bb90e"
+        "pixel_sha256": "c1956ee3c87245ca76171bc167b4bf2d427623b6ece5efd3855f2099059a5dc4"
       },
       "image_recipe": {
         "method": "copy_png_v1"
@@ -796,19 +940,19 @@
       "file": "gui/scrollbar/vertical_hover_thumb.png",
       "source": "Original procedural GUI; tools/image_process/create_ui.py",
       "license": "Project MIT",
-      "version": 2,
+      "version": 3,
       "approved": true,
       "status": "candidate_user_review",
-      "sha256": "edfb06155945e94b7f8b807cb32dece76b213665391bf7d390d92639060aa26e",
-      "source_file": "assets_source/ui/v2/scrollbar/vertical_hover_thumb.png",
-      "source_sha256": "edfb06155945e94b7f8b807cb32dece76b213665391bf7d390d92639060aa26e",
+      "sha256": "bfa28ab950fe154542d41f28da3f51bb897be350f3765276809d66c3a8cf6989",
+      "source_file": "assets_source/ui/v3/scrollbar/vertical_hover_thumb.png",
+      "source_sha256": "bfa28ab950fe154542d41f28da3f51bb897be350f3765276809d66c3a8cf6989",
       "image": {
-        "width": 12,
-        "height": 700,
+        "width": 18,
+        "height": 1050,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "81705c70af7037e7899f897facfb5c66d0d1a35346aa21d864acef0ec7da7a6a"
+        "pixel_sha256": "30bfb76769288fd95e4ee35286db28923d1fbefb5bd9890f30d919cf78f3b3ea"
       },
       "image_recipe": {
         "method": "copy_png_v1"
@@ -821,19 +965,19 @@
       "file": "gui/scrollbar/vertical_idle_bar.png",
       "source": "Original procedural GUI; tools/image_process/create_ui.py",
       "license": "Project MIT",
-      "version": 2,
+      "version": 3,
       "approved": true,
       "status": "candidate_user_review",
-      "sha256": "eef77159c4739fe8ae84c690aa6b77b3e18b3cedc6cdc601654e3174f4b7cc3b",
-      "source_file": "assets_source/ui/v2/scrollbar/vertical_idle_bar.png",
-      "source_sha256": "eef77159c4739fe8ae84c690aa6b77b3e18b3cedc6cdc601654e3174f4b7cc3b",
+      "sha256": "02fc75156c63d3dc671345e2d2091d947db9c950d10622dac724f4c12955cc56",
+      "source_file": "assets_source/ui/v3/scrollbar/vertical_idle_bar.png",
+      "source_sha256": "02fc75156c63d3dc671345e2d2091d947db9c950d10622dac724f4c12955cc56",
       "image": {
-        "width": 12,
-        "height": 700,
+        "width": 18,
+        "height": 1050,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "78d6273a2d0709b0a93a959f9d2dec68d14e98b16a0e5a2c453aa8e1b97d2f96"
+        "pixel_sha256": "86ae2fdb30d89e5e87f982261ba308928f6c8dee0544dfbd9de402e8d0ad5fe7"
       },
       "image_recipe": {
         "method": "copy_png_v1"
@@ -846,19 +990,19 @@
       "file": "gui/scrollbar/vertical_idle_thumb.png",
       "source": "Original procedural GUI; tools/image_process/create_ui.py",
       "license": "Project MIT",
-      "version": 2,
+      "version": 3,
       "approved": true,
       "status": "candidate_user_review",
-      "sha256": "c6f40f6c0e04a431a08249a57eb1def65cfa17e85c635493e8f87dcc4f3231b3",
-      "source_file": "assets_source/ui/v2/scrollbar/vertical_idle_thumb.png",
-      "source_sha256": "c6f40f6c0e04a431a08249a57eb1def65cfa17e85c635493e8f87dcc4f3231b3",
+      "sha256": "39f7285ec203d24c4ad16d7b7b0e0af72d7f71308e0cc5d1ec64e5fe66ee7ea3",
+      "source_file": "assets_source/ui/v3/scrollbar/vertical_idle_thumb.png",
+      "source_sha256": "39f7285ec203d24c4ad16d7b7b0e0af72d7f71308e0cc5d1ec64e5fe66ee7ea3",
       "image": {
-        "width": 12,
-        "height": 700,
+        "width": 18,
+        "height": 1050,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "4bb361323d46334563fcf896cded1cc4390a5840539a171958b408e3a823c947"
+        "pixel_sha256": "faa62bedca250272a0e4b9015c4a124ffc1af79d294fd6913c767670b5a01883"
       },
       "image_recipe": {
         "method": "copy_png_v1"
@@ -871,17 +1015,23 @@
       "file": "gui/skip.png",
       "source": "Ren'Py 8.5.3 stock GUI (MIT)",
       "license": "MIT; licenses/RENPY.txt",
-      "version": 1,
+      "version": 2,
       "approved": true,
-      "status": "development",
-      "sha256": "e7c723c88f9eb5d9ec9f18f77a464ac38a6c6161e2acfbe170d5ebb7a977992b",
+      "status": "candidate_user_review",
+      "sha256": "2871ec605d2e9a1c6f552dedda78c557cc3e6a5ae3e6e96d5b05570146fbaa9c",
       "image": {
-        "width": 240,
-        "height": 43,
+        "width": 360,
+        "height": 64,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "a5edd75126d78e872c222d4e466a34a0b47104be0cd31f50d43052cbc168f16d"
+        "pixel_sha256": "3c2f6dcf0d94d26885dbddafd64ee90d1936660189127bb12eeb8273b509999c"
+      },
+      "source_file": "assets_source/ui/legacy720/skip.png",
+      "source_sha256": "e7c723c88f9eb5d9ec9f18f77a464ac38a6c6161e2acfbe170d5ebb7a977992b",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "image_recipe": {
+        "method": "scale_150percent_v1"
       }
     },
     {
@@ -890,19 +1040,19 @@
       "file": "gui/slider/horizontal_hover_bar.png",
       "source": "Original procedural GUI; tools/image_process/create_ui.py",
       "license": "Project MIT",
-      "version": 2,
+      "version": 3,
       "approved": true,
       "status": "candidate_user_review",
-      "sha256": "27db675f48e7752b92d82f0c7171266e4a630247f1581cca3d919bdcb5b7eeaf",
-      "source_file": "assets_source/ui/v2/slider/horizontal_hover_bar.png",
-      "source_sha256": "27db675f48e7752b92d82f0c7171266e4a630247f1581cca3d919bdcb5b7eeaf",
+      "sha256": "45bdf7c6ff27b8d1f6fd1f9a30db9221f78034f6ad4e663613635bbb9a5291f4",
+      "source_file": "assets_source/ui/v3/slider/horizontal_hover_bar.png",
+      "source_sha256": "45bdf7c6ff27b8d1f6fd1f9a30db9221f78034f6ad4e663613635bbb9a5291f4",
       "image": {
-        "width": 350,
-        "height": 30,
+        "width": 525,
+        "height": 45,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "d45b761ad9d0b13ee744b5c644d4de06c3c6bffa44233ac5fff3be967c4fa47d"
+        "pixel_sha256": "f9d2d326ab47b92b6e1b45333400acde208353c37421875ff41550e278f488e3"
       },
       "image_recipe": {
         "method": "copy_png_v1"
@@ -915,19 +1065,19 @@
       "file": "gui/slider/horizontal_hover_thumb.png",
       "source": "Original procedural GUI; tools/image_process/create_ui.py",
       "license": "Project MIT",
-      "version": 2,
+      "version": 3,
       "approved": true,
       "status": "candidate_user_review",
-      "sha256": "c3c61cc0811b4f6e5d83522e6b1986fb677c9fce9c149a6a6f71beeabccb888e",
-      "source_file": "assets_source/ui/v2/slider/horizontal_hover_thumb.png",
-      "source_sha256": "c3c61cc0811b4f6e5d83522e6b1986fb677c9fce9c149a6a6f71beeabccb888e",
+      "sha256": "68170e3489086ec9d5ddefdc13ea6bd0fb248fd36ff9eaa5dac4eb22b323ac5e",
+      "source_file": "assets_source/ui/v3/slider/horizontal_hover_thumb.png",
+      "source_sha256": "68170e3489086ec9d5ddefdc13ea6bd0fb248fd36ff9eaa5dac4eb22b323ac5e",
       "image": {
-        "width": 15,
-        "height": 30,
+        "width": 22,
+        "height": 45,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "df61e014407fe1638f8f3ce932171f6d07c79597f13681e186a07c588fed833d"
+        "pixel_sha256": "584276025533e8643c695b652c0897698d24a72e1a39cafb8b5549ce4a3b2ca6"
       },
       "image_recipe": {
         "method": "copy_png_v1"
@@ -940,19 +1090,19 @@
       "file": "gui/slider/horizontal_idle_bar.png",
       "source": "Original procedural GUI; tools/image_process/create_ui.py",
       "license": "Project MIT",
-      "version": 2,
+      "version": 3,
       "approved": true,
       "status": "candidate_user_review",
-      "sha256": "7a7caf1ff2f4e58d9306edc1246dd638add1212d79a34a64e9d1796cb38b121d",
-      "source_file": "assets_source/ui/v2/slider/horizontal_idle_bar.png",
-      "source_sha256": "7a7caf1ff2f4e58d9306edc1246dd638add1212d79a34a64e9d1796cb38b121d",
+      "sha256": "3b980663adb997db81442d0bde4ac67cc863b0e57c038e09b115f4853c084048",
+      "source_file": "assets_source/ui/v3/slider/horizontal_idle_bar.png",
+      "source_sha256": "3b980663adb997db81442d0bde4ac67cc863b0e57c038e09b115f4853c084048",
       "image": {
-        "width": 350,
-        "height": 30,
+        "width": 525,
+        "height": 45,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "22b12a70b8cf1267013fadff53b123f79b4a8639508df48703e9549ce06f7348"
+        "pixel_sha256": "0b5ecad015389a60baa2004e498377d266bb531e033ba45b47583e3bcfbd9d5c"
       },
       "image_recipe": {
         "method": "copy_png_v1"
@@ -965,19 +1115,19 @@
       "file": "gui/slider/horizontal_idle_thumb.png",
       "source": "Original procedural GUI; tools/image_process/create_ui.py",
       "license": "Project MIT",
-      "version": 2,
+      "version": 3,
       "approved": true,
       "status": "candidate_user_review",
-      "sha256": "6494ac1da294691e4d8cb23bde51301baf99554e72a7be5971685ecd75a97955",
-      "source_file": "assets_source/ui/v2/slider/horizontal_idle_thumb.png",
-      "source_sha256": "6494ac1da294691e4d8cb23bde51301baf99554e72a7be5971685ecd75a97955",
+      "sha256": "5b8440deb0750534f4a53b80200ce167843b0072e655a91ae7c2f8e35edfa9c4",
+      "source_file": "assets_source/ui/v3/slider/horizontal_idle_thumb.png",
+      "source_sha256": "5b8440deb0750534f4a53b80200ce167843b0072e655a91ae7c2f8e35edfa9c4",
       "image": {
-        "width": 15,
-        "height": 30,
+        "width": 22,
+        "height": 45,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "1a66b0fdafed85fa58d7a67a6c30bc706f22f96ec19825152934c057caac9981"
+        "pixel_sha256": "ff26529b5827f6ec6d6c4e3a6e5dc93262ca92a2719e37730c03b687ca6f85ff"
       },
       "image_recipe": {
         "method": "copy_png_v1"
@@ -990,19 +1140,19 @@
       "file": "gui/slider/vertical_hover_bar.png",
       "source": "Original procedural GUI; tools/image_process/create_ui.py",
       "license": "Project MIT",
-      "version": 2,
+      "version": 3,
       "approved": true,
       "status": "candidate_user_review",
-      "sha256": "5ac092c7728c9cfa108cb347bfea50e88cc0835d36ebcedb117675aef8531d86",
-      "source_file": "assets_source/ui/v2/slider/vertical_hover_bar.png",
-      "source_sha256": "5ac092c7728c9cfa108cb347bfea50e88cc0835d36ebcedb117675aef8531d86",
+      "sha256": "e1b8832f55827d40a3f8341c7b86d954808a437b48e3e32138c05e80fd005751",
+      "source_file": "assets_source/ui/v3/slider/vertical_hover_bar.png",
+      "source_sha256": "e1b8832f55827d40a3f8341c7b86d954808a437b48e3e32138c05e80fd005751",
       "image": {
-        "width": 30,
-        "height": 350,
+        "width": 45,
+        "height": 525,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "7176be8d7d4c39c1bc4a89c7f56eee5f5fbb84d9473fd6b29d1a5f49f358f586"
+        "pixel_sha256": "18f85113a14fb66a823197cc93fcb257a67941be8fc64798d6a28404011d7ff0"
       },
       "image_recipe": {
         "method": "copy_png_v1"
@@ -1015,19 +1165,19 @@
       "file": "gui/slider/vertical_hover_thumb.png",
       "source": "Original procedural GUI; tools/image_process/create_ui.py",
       "license": "Project MIT",
-      "version": 2,
+      "version": 3,
       "approved": true,
       "status": "candidate_user_review",
-      "sha256": "00fb17b4b2af8fe5a2cc93f8d2877ba93a604297b3f1a5b5987a0a07ae66ca7e",
-      "source_file": "assets_source/ui/v2/slider/vertical_hover_thumb.png",
-      "source_sha256": "00fb17b4b2af8fe5a2cc93f8d2877ba93a604297b3f1a5b5987a0a07ae66ca7e",
+      "sha256": "53b599b70d45657d231aa393ae5fe874f3285d85573fa468b803697de5607078",
+      "source_file": "assets_source/ui/v3/slider/vertical_hover_thumb.png",
+      "source_sha256": "53b599b70d45657d231aa393ae5fe874f3285d85573fa468b803697de5607078",
       "image": {
-        "width": 30,
-        "height": 15,
+        "width": 45,
+        "height": 22,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "805d2183424863d2e4dea96d8caca112534cb3925ec4bca56fd74a92e1251a39"
+        "pixel_sha256": "b14d11e63ec6b68557892800b49003a972b7554b6f521d72db31446fe04a9aa8"
       },
       "image_recipe": {
         "method": "copy_png_v1"
@@ -1040,19 +1190,19 @@
       "file": "gui/slider/vertical_idle_bar.png",
       "source": "Original procedural GUI; tools/image_process/create_ui.py",
       "license": "Project MIT",
-      "version": 2,
+      "version": 3,
       "approved": true,
       "status": "candidate_user_review",
-      "sha256": "195f7e4509d15de2fe5a807f73a232a449f93d0810bb5b20c89237983c4e9c36",
-      "source_file": "assets_source/ui/v2/slider/vertical_idle_bar.png",
-      "source_sha256": "195f7e4509d15de2fe5a807f73a232a449f93d0810bb5b20c89237983c4e9c36",
+      "sha256": "495f94351e72b944604ce0af3acfc2f2c9535ad2660b9065a920bf32948b5996",
+      "source_file": "assets_source/ui/v3/slider/vertical_idle_bar.png",
+      "source_sha256": "495f94351e72b944604ce0af3acfc2f2c9535ad2660b9065a920bf32948b5996",
       "image": {
-        "width": 30,
-        "height": 350,
+        "width": 45,
+        "height": 525,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "78356a05b3c8470649d340fa8259b9034680feb2ef863b7b4f396947285e09ac"
+        "pixel_sha256": "a208f5fd8a8e9c10e3624d62d03ba1c20a39153f2f8d75bfe9deb18973da5993"
       },
       "image_recipe": {
         "method": "copy_png_v1"
@@ -1065,19 +1215,19 @@
       "file": "gui/slider/vertical_idle_thumb.png",
       "source": "Original procedural GUI; tools/image_process/create_ui.py",
       "license": "Project MIT",
-      "version": 2,
+      "version": 3,
       "approved": true,
       "status": "candidate_user_review",
-      "sha256": "d843d2b114020621cd66acd77d868be2811595cbb1ee1128cb3e4da21f453c20",
-      "source_file": "assets_source/ui/v2/slider/vertical_idle_thumb.png",
-      "source_sha256": "d843d2b114020621cd66acd77d868be2811595cbb1ee1128cb3e4da21f453c20",
+      "sha256": "d209607b3084d521710f95a4bbe4cad53e1628f66ba22b29b148b04aeeaa10aa",
+      "source_file": "assets_source/ui/v3/slider/vertical_idle_thumb.png",
+      "source_sha256": "d209607b3084d521710f95a4bbe4cad53e1628f66ba22b29b148b04aeeaa10aa",
       "image": {
-        "width": 30,
-        "height": 15,
+        "width": 45,
+        "height": 22,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "045dbcbbe3a595025b0d1cc81878a84f86f397706201b7873dde6609d98272a6"
+        "pixel_sha256": "8f001f9046f471e034ddd0d17e3e049470024981f66c1df1bde10c3a9211b842"
       },
       "image_recipe": {
         "method": "copy_png_v1"
@@ -1090,17 +1240,23 @@
       "file": "gui/textbox.png",
       "source": "Original procedural UI; tools/bootstrap_assets.py",
       "license": "Project MIT",
-      "version": 1,
+      "version": 2,
       "approved": true,
-      "status": "development",
-      "sha256": "33cb112d1c277e8434d75e84531f5d480bc0b9410dba66a557b4aa7b56612093",
+      "status": "candidate_user_review",
+      "sha256": "f5f5b9c6b0eb4ecd146a4878361e65a3bf22e8f3f92840873ee84629ce26ed9a",
       "image": {
-        "width": 1280,
-        "height": 185,
+        "width": 1920,
+        "height": 278,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "f1fe7a8071946efe262bcdbdeab3bb0af96989e82ae3c7b92420f2444f6d43a9"
+        "pixel_sha256": "514a37feada21a9214ead94836f07251bcfab0273b4a1ac2152cdc080dcefd1c"
+      },
+      "source_file": "assets_source/ui/legacy720/textbox.png",
+      "source_sha256": "33cb112d1c277e8434d75e84531f5d480bc0b9410dba66a557b4aa7b56612093",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "image_recipe": {
+        "method": "scale_150percent_v1"
       }
     },
     {
@@ -1109,9 +1265,9 @@
       "file": "gui/window_icon.png",
       "source": "Original procedural UI; tools/bootstrap_assets.py",
       "license": "Project MIT",
-      "version": 1,
+      "version": 2,
       "approved": true,
-      "status": "development",
+      "status": "candidate_user_review",
       "sha256": "e0bc4933748a5632e10218faf463b8c65b1d79e1c713944447e741dc5c4bf790",
       "image": {
         "width": 256,
@@ -1120,6 +1276,12 @@
         "format": "PNG",
         "has_alpha": true,
         "pixel_sha256": "62651e7a4dd3285805627637e59b73178589e881ac5554730abbb12c1a06ce3d"
+      },
+      "source_file": "assets_source/ui/legacy720/window_icon.png",
+      "source_sha256": "e0bc4933748a5632e10218faf463b8c65b1d79e1c713944447e741dc5c4bf790",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "image_recipe": {
+        "method": "copy_png_v1"
       }
     },
     {
@@ -1131,23 +1293,23 @@
       "source_sha256": "9080cb886bdeeeba1fb506e252fde3c0b4450ef113f8a6ee831edbab020f4bab",
       "prompt": "prompts/background/station_rain_v1.md",
       "prompt_sha256": "b6380c85f29b6bfe7c800d363cb61596f4858872ec30419a844aac8c888a1d83",
-      "version": 1,
+      "version": 2,
       "approved": true,
       "approval_scope": "Agent integration review; user final visual choice pending",
       "status": "candidate_user_review",
       "license": "AI-generated output; no third-party reference art; see CREDITS.md",
-      "sha256": "4dc437b5d922f3f1049dc78e9deed8822e0229de2dcc713245c434846471a8a3",
+      "sha256": "d3c090ef26d63243ba316e0755453c876e69e9c218d2b3af0251f9546f991c0e",
       "image": {
-        "width": 1280,
-        "height": 720,
+        "width": 1920,
+        "height": 1080,
         "mode": "RGB",
         "format": "PNG",
         "has_alpha": false,
-        "pixel_sha256": "326d14044534a377d8a10a126ad6c34b58a2e9aacb2e3c1c81b1d1c82f598788"
+        "pixel_sha256": "5eef633949924e79778353fe006dea806771cd9f50ac42a4c9cb24f61e0ed396"
       },
       "prompt_id": "background_station_rain_v1",
       "image_recipe": {
-        "method": "fit_1280x720_v1"
+        "method": "fit_1920x1080_v1"
       }
     },
     {
@@ -1159,25 +1321,25 @@
       "source_sha256": "8fcbdda633d97b143003a05e270a42c5a0c1c7ef8901ccf4c5c0d08a25706739",
       "prompt": "prompts/character/heroine_clean_v2.md",
       "prompt_sha256": "2936787c199df7e315c5b7429152c76af29c859f44979a3e269f12dc2b9ad2c0",
-      "version": 2,
+      "version": 3,
       "approved": true,
       "approval_scope": "Agent integration review; user final visual choice pending",
       "status": "candidate_user_review",
       "license": "AI-generated output; no third-party reference art; see CREDITS.md",
-      "sha256": "adfece407e87a3c93c6d3e73393faf626709984cea45cdc03f1bce3ddba74e13",
+      "sha256": "d7d7f53dfe3d53d64fb12469eba21a31e8d7eeeb5c3b0021195ca68a22d9ae0b",
       "expression": "normal",
       "character": "heroine",
       "image": {
-        "width": 540,
-        "height": 700,
+        "width": 810,
+        "height": 1050,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "33b54b063a85dbc73d2c3d653c8e18b3935cd430e465075963ea43d3dafb716d"
+        "pixel_sha256": "c46a22b3788380a48b1b217a7163400bbaeba5dd391d6f6c1ef0ceaed39c90e4"
       },
       "prompt_id": "character_heroine_clean_v2",
       "image_recipe": {
-        "method": "sprite_bottom_center_v1"
+        "method": "sprite_bottom_center_810x1050_v1"
       },
       "reference_source_file": "assets_source/character/heroine_base_v1.png",
       "reference_sha256": "7cff4b31caa853bcf66b2748417dd2bccc78469ebff9cffb059c693d41a65533"
@@ -1191,23 +1353,23 @@
       "source_sha256": "fb36eb550b946817d1d886d775db0d062a85cf4ac1c1718f102cacc06022aaab",
       "prompt": "prompts/cg/unsent_letter_v1.md",
       "prompt_sha256": "460289891050f42b73fcb88faafd8092a99d5da4630edc6fd78a0e58bec9a32e",
-      "version": 1,
+      "version": 2,
       "approved": true,
       "approval_scope": "Agent integration review; user final visual choice pending",
       "status": "candidate_user_review",
       "license": "AI-generated output; no third-party reference art; see CREDITS.md",
-      "sha256": "a3d054200a5a570f6c5665e44309a166c2b1b6d78383e6c2beac806f00d88305",
+      "sha256": "3bec683b1b8563dfe853571d04179d4a64fa5340363aabc0de561f9efe1a35be",
       "image": {
-        "width": 1280,
-        "height": 720,
+        "width": 1920,
+        "height": 1080,
         "mode": "RGB",
         "format": "PNG",
         "has_alpha": false,
-        "pixel_sha256": "9b5ef145fb396931bef6e6b73845cd5a0ba920cca456b7eb20b87943f61e6816"
+        "pixel_sha256": "c9c615d774e5f3c12dacedbc7eb784e3fbcdc43fa6787a7233330aabd58d28de"
       },
       "prompt_id": "cg_unsent_letter_v1",
       "image_recipe": {
-        "method": "fit_1280x720_v1"
+        "method": "fit_1920x1080_v1"
       },
       "reference_sources": [
         {
@@ -1457,12 +1619,12 @@
       "source_sha256": "293b62fc030a62ad41164536dae7345936a38ede653a27295be4fd56e0d0f66f",
       "prompt": "prompts/character/heroine_smile_v1.md",
       "prompt_sha256": "3052d436b05e028b187b27cc36a0cb7fd6cab826a0b7f0234b2d7e77a5334c86",
-      "version": 1,
+      "version": 2,
       "approved": true,
       "approval_scope": "Agent integration review; user final visual choice pending",
       "status": "candidate_user_review",
       "license": "AI-generated output; no third-party reference art; see CREDITS.md",
-      "sha256": "d33a77848c7081775fc771b4bcb7bc5ec630560989d19fd06103eee087b152ae",
+      "sha256": "91d04eff73a6c16637cb6680216cbfbbc5a6f230af7fe91cef8abf87c37070cf",
       "expression": "smile",
       "character": "heroine",
       "reference_source_file": "assets_source/character/heroine_clean_v2.png",
@@ -1470,17 +1632,17 @@
       "prompt_components": "prompts/character/heroine_expressions_v1.json",
       "prompt_components_sha256": "3c3551add03df65b70bcf964aac0959403f2b104e2cb3de1efd493c935a7b42d",
       "image": {
-        "width": 540,
-        "height": 700,
+        "width": 810,
+        "height": 1050,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "96dd059ba4f977d184c447cb9ceab146a3f6342df1a41d0ce5f2cb3099f24ea8"
+        "pixel_sha256": "f718875e101db2167b0f097c4e7e7d4f8be453d95254677e6cc0c59c1b74cb68"
       },
       "prompt_id": "character_heroine_smile_v1",
       "prompt_components_id": "character_heroine_expressions_v1",
       "image_recipe": {
-        "method": "sprite_bottom_center_v1"
+        "method": "sprite_bottom_center_810x1050_v1"
       }
     },
     {
@@ -1492,12 +1654,12 @@
       "source_sha256": "b5f91412d654c90f3c525699aadee05d9d5ae3ae65ce8b47610f53950b52e51c",
       "prompt": "prompts/character/heroine_happy_v1.md",
       "prompt_sha256": "6c326cea45594a5330ad4d71d9905a6e9e45a18ed33c0b91b48100778cffc8f7",
-      "version": 1,
+      "version": 2,
       "approved": true,
       "approval_scope": "Agent integration review; user final visual choice pending",
       "status": "candidate_user_review",
       "license": "AI-generated output; no third-party reference art; see CREDITS.md",
-      "sha256": "df1159c71f3fbd5df43161407d5fc90c83cda8360cd0497f9d64127cdf587460",
+      "sha256": "06682ebac013bde79366661351854c278fde3384da94ad85420361a0aebaab8e",
       "expression": "happy",
       "character": "heroine",
       "reference_source_file": "assets_source/character/heroine_clean_v2.png",
@@ -1505,17 +1667,17 @@
       "prompt_components": "prompts/character/heroine_expressions_v1.json",
       "prompt_components_sha256": "3c3551add03df65b70bcf964aac0959403f2b104e2cb3de1efd493c935a7b42d",
       "image": {
-        "width": 540,
-        "height": 700,
+        "width": 810,
+        "height": 1050,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "945b4393bc9bb3527c9db243a83dff5b99d1541d3eacf39f7a53fbf8cf57e4e1"
+        "pixel_sha256": "59c4e7796232a96234e487972d7c81b50de87ab93457168e22049bb9ff8084f1"
       },
       "prompt_id": "character_heroine_happy_v1",
       "prompt_components_id": "character_heroine_expressions_v1",
       "image_recipe": {
-        "method": "sprite_bottom_center_v1"
+        "method": "sprite_bottom_center_810x1050_v1"
       }
     },
     {
@@ -1527,12 +1689,12 @@
       "source_sha256": "475f0f7e1aa9b14103f768d068cc76053183f3e9c180669a21fdf8fbf9f951e0",
       "prompt": "prompts/character/heroine_sad_v1.md",
       "prompt_sha256": "e761d1a3e6c5e8a214a1a837943f4ebde43edb9b903038f48b3d2d9892705677",
-      "version": 1,
+      "version": 2,
       "approved": true,
       "approval_scope": "Agent integration review; user final visual choice pending",
       "status": "candidate_user_review",
       "license": "AI-generated output; no third-party reference art; see CREDITS.md",
-      "sha256": "3e80f2e2a0397e71ef86d77a126dfaba780176805826c4793f4d8046886688ea",
+      "sha256": "1091e8e3f24ad80c6733282cdd4cba9f1ce3199bd55a283188b6e1b3cbcf80d1",
       "expression": "sad",
       "character": "heroine",
       "reference_source_file": "assets_source/character/heroine_clean_v2.png",
@@ -1540,17 +1702,17 @@
       "prompt_components": "prompts/character/heroine_expressions_v1.json",
       "prompt_components_sha256": "3c3551add03df65b70bcf964aac0959403f2b104e2cb3de1efd493c935a7b42d",
       "image": {
-        "width": 540,
-        "height": 700,
+        "width": 810,
+        "height": 1050,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "abdb50b30c3bfc2a18ecd4bc3247d9db7de923cdee6de22e2a1f59bd6f3ecc61"
+        "pixel_sha256": "fa88b014e2ebcc5b288ceff9a56d1d1e212bee0a2ed5a69e666b6fbb821d7ced"
       },
       "prompt_id": "character_heroine_sad_v1",
       "prompt_components_id": "character_heroine_expressions_v1",
       "image_recipe": {
-        "method": "sprite_bottom_center_v1"
+        "method": "sprite_bottom_center_810x1050_v1"
       }
     },
     {
@@ -1562,12 +1724,12 @@
       "source_sha256": "1fc6724b6da184525cdb135359f84fc5c4bf2a3befec897f4ab6828272b2a032",
       "prompt": "prompts/character/heroine_angry_v1.md",
       "prompt_sha256": "4d1ee12bb9b80bbaea8b7a82399954b03220ad13ac36ef1aa5ccb87a17c2bea9",
-      "version": 1,
+      "version": 2,
       "approved": true,
       "approval_scope": "Agent integration review; user final visual choice pending",
       "status": "candidate_user_review",
       "license": "AI-generated output; no third-party reference art; see CREDITS.md",
-      "sha256": "ee446487071a0d976e588400a901c8e65b64234312cfee9ee6541b5d8bfe232c",
+      "sha256": "6c45ccec8410774b66002edc8f5df27f773f52190b526940e07ea6616d4faa42",
       "expression": "angry",
       "character": "heroine",
       "reference_source_file": "assets_source/character/heroine_clean_v2.png",
@@ -1575,17 +1737,17 @@
       "prompt_components": "prompts/character/heroine_expressions_v1.json",
       "prompt_components_sha256": "3c3551add03df65b70bcf964aac0959403f2b104e2cb3de1efd493c935a7b42d",
       "image": {
-        "width": 540,
-        "height": 700,
+        "width": 810,
+        "height": 1050,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "ee3437f6491cbd873e61caf1b5bb4c5c06f1c9ed6a4cb5e741d1162b0bf51d71"
+        "pixel_sha256": "7434216f165b4caef8d6f006a018bc5670365159db64f7deef2b7cc34238bcfd"
       },
       "prompt_id": "character_heroine_angry_v1",
       "prompt_components_id": "character_heroine_expressions_v1",
       "image_recipe": {
-        "method": "sprite_bottom_center_v1"
+        "method": "sprite_bottom_center_810x1050_v1"
       }
     },
     {
@@ -1597,12 +1759,12 @@
       "source_sha256": "f55415f4bb199a0da5cf47ab23102c956e910f44861df05e600e56f8e79c1e06",
       "prompt": "prompts/character/heroine_surprised_v1.md",
       "prompt_sha256": "60facdd431d2566dd7fe661a1f993c152b7b07e52f7028010a682d3e158e0d4b",
-      "version": 1,
+      "version": 2,
       "approved": true,
       "approval_scope": "Agent integration review; user final visual choice pending",
       "status": "candidate_user_review",
       "license": "AI-generated output; no third-party reference art; see CREDITS.md",
-      "sha256": "1e2c61c684c00784a8c71f81bdab56c5801e3dea80afdfa77ec866ada3e5fa6f",
+      "sha256": "8e299ab21f7a25a66814f450ee259ecd78b8e47c25970425ac0328d936169163",
       "expression": "surprised",
       "character": "heroine",
       "reference_source_file": "assets_source/character/heroine_clean_v2.png",
@@ -1610,17 +1772,17 @@
       "prompt_components": "prompts/character/heroine_expressions_v1.json",
       "prompt_components_sha256": "3c3551add03df65b70bcf964aac0959403f2b104e2cb3de1efd493c935a7b42d",
       "image": {
-        "width": 540,
-        "height": 700,
+        "width": 810,
+        "height": 1050,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "43e25c00582ccc0e9df3559d003fde87b25b89d3ae00d6da1f618de9910201b6"
+        "pixel_sha256": "6c859f1374458ce761528af82bba80012b5354b25d537a9deadf70e816a18e20"
       },
       "prompt_id": "character_heroine_surprised_v1",
       "prompt_components_id": "character_heroine_expressions_v1",
       "image_recipe": {
-        "method": "sprite_bottom_center_v1"
+        "method": "sprite_bottom_center_810x1050_v1"
       }
     },
     {
@@ -1632,12 +1794,12 @@
       "source_sha256": "85c2fb56dabe8cbaaee7f04c78dc052656546ef9e65eb1bd487472d29ef7baac",
       "prompt": "prompts/character/heroine_embarrassed_v1.md",
       "prompt_sha256": "24c1015db73282b017494d5d6bf7b50ff2d50af79b78793028918e241b8f014e",
-      "version": 1,
+      "version": 2,
       "approved": true,
       "approval_scope": "Agent integration review; user final visual choice pending",
       "status": "candidate_user_review",
       "license": "AI-generated output; no third-party reference art; see CREDITS.md",
-      "sha256": "1cc9fb4b1226782ee47af92a865cba1f1c107fadb9a81201cf6fc114ea5a6f57",
+      "sha256": "6565c4a8172ab90d1811974bcdea7a66589455cec8e950e4aeac77e7c025e770",
       "expression": "embarrassed",
       "character": "heroine",
       "reference_source_file": "assets_source/character/heroine_clean_v2.png",
@@ -1645,17 +1807,17 @@
       "prompt_components": "prompts/character/heroine_expressions_v1.json",
       "prompt_components_sha256": "3c3551add03df65b70bcf964aac0959403f2b104e2cb3de1efd493c935a7b42d",
       "image": {
-        "width": 540,
-        "height": 700,
+        "width": 810,
+        "height": 1050,
         "mode": "RGBA",
         "format": "PNG",
         "has_alpha": true,
-        "pixel_sha256": "7013d4cf5412ad3907d5b043257c91049c95ff2483a7ed81543ab6422061a71d"
+        "pixel_sha256": "c006224bfecb6493243a76c4f292cb293a01db50c600af0494e3eb1129c40834"
       },
       "prompt_id": "character_heroine_embarrassed_v1",
       "prompt_components_id": "character_heroine_expressions_v1",
       "image_recipe": {
-        "method": "sprite_bottom_center_v1"
+        "method": "sprite_bottom_center_810x1050_v1"
       }
     },
     {
@@ -2357,7 +2519,7 @@
       "license": "AI-generated output; own project reference; see CREDITS.md",
       "source_file": "assets_source/background/station_exit_covered_v1.png",
       "source_sha256": "1bae0d776a6feec13b7ba101b063161a91b32374f6c9a5ef206a626e7abb3481",
-      "version": 1,
+      "version": 2,
       "approved": true,
       "status": "candidate_user_review",
       "approval_scope": "Agent integration review; user final visual choice pending",
@@ -2366,17 +2528,17 @@
       "prompt_sha256": "232b7196ccb17bf0164108ac90fa373a7a7eeecd31215a2fe410f9ae8a68a941",
       "reference_source_file": "assets_source/background/station_rain_v1.png",
       "reference_sha256": "9080cb886bdeeeba1fb506e252fde3c0b4450ef113f8a6ee831edbab020f4bab",
-      "sha256": "efdd8356e73f1cdbb7da72b8c0db45b0820da56fbf2a22c2554302e5bfe28d00",
+      "sha256": "c95c3f2aefcd97810ec0dd57385a5aa87d7cab753257fb39a52d78c8a08483f3",
       "image": {
-        "width": 1280,
-        "height": 720,
+        "width": 1920,
+        "height": 1080,
         "mode": "RGB",
         "format": "PNG",
         "has_alpha": false,
-        "pixel_sha256": "c5b90ed3fde302440b3cfee3125d17025553f8bb3938b810e3793fa9d39266a0"
+        "pixel_sha256": "e9db877ead82102ad4e4a477ab050f37924b5a328819035c2fa0bac7c2ee97b9"
       },
       "image_recipe": {
-        "method": "fit_1280x720_v1"
+        "method": "fit_1920x1080_v1"
       }
     },
     {
@@ -2387,7 +2549,7 @@
       "license": "AI-generated output; own project reference; see CREDITS.md",
       "source_file": "assets_source/background/station_exit_after_rain_v1.png",
       "source_sha256": "6c734e047b7a99748319c0f975870c952c6d317ed5193b7e7e18dd659a09c3e5",
-      "version": 1,
+      "version": 2,
       "approved": true,
       "status": "candidate_user_review",
       "approval_scope": "Agent integration review; user final visual choice pending",
@@ -2396,17 +2558,17 @@
       "prompt_sha256": "a96b8bda8737d03027603bdce0676336b96d4ca069e6105885533fbffa149003",
       "reference_source_file": "assets_source/background/station_exit_after_rain_base_v1.png",
       "reference_sha256": "3252295f85bbbef8681d6b0c6f1c7e44e60c75d3b23daeab4f07b64e21b53841",
-      "sha256": "42023b4faa7438819a0949d4a54723b48d7ad1d2fdfc98d813045563328d6f0c",
+      "sha256": "11e2b4f90c350ef5ae4487b8aa18cac460abaf970da7dae5066aa329053ae4fe",
       "image": {
-        "width": 1280,
-        "height": 720,
+        "width": 1920,
+        "height": 1080,
         "mode": "RGB",
         "format": "PNG",
         "has_alpha": false,
-        "pixel_sha256": "8e42493b8ee3037304c192bb9a8c6239deadd4e9c3adf5fb9a41736b31066fd0"
+        "pixel_sha256": "6c25df6b36c99fa1d4732706db871d36de1eb2745e398e03f78152ddeee9f895"
       },
       "image_recipe": {
-        "method": "fit_1280x720_v1"
+        "method": "fit_1920x1080_v1"
       },
       "reference_sources": [
         {
@@ -2423,7 +2585,7 @@
       "license": "AI-generated output; own project reference; see CREDITS.md",
       "source_file": "assets_source/background/nearby_cafe_v1.png",
       "source_sha256": "c38c92c40e1fde14f386892c450851eb68577dfe946ffdc52f888792f6afcbcc",
-      "version": 1,
+      "version": 2,
       "approved": true,
       "status": "candidate_user_review",
       "approval_scope": "Agent integration review; user final visual choice pending",
@@ -2432,17 +2594,17 @@
       "prompt_sha256": "295372e3460f68593c7984f43c392e4292cfe0e6d394cad90f1e7ad95bd94a00",
       "reference_source_file": "assets_source/background/station_rain_v1.png",
       "reference_sha256": "9080cb886bdeeeba1fb506e252fde3c0b4450ef113f8a6ee831edbab020f4bab",
-      "sha256": "8b0eeebeb31f758f29510f056d8daf39c2b27ceb71f89774ee281d6b6dde5dc9",
+      "sha256": "9f67e75ce780a24ba9b38bade112185b4ccd97517c3eb3389eabdd78a144b60a",
       "image": {
-        "width": 1280,
-        "height": 720,
+        "width": 1920,
+        "height": 1080,
         "mode": "RGB",
         "format": "PNG",
         "has_alpha": false,
-        "pixel_sha256": "71c8a0d756d67ad86fb45c67efd82372f79e27f685f1a20d68edf0934a0d3dd2"
+        "pixel_sha256": "46048bed3825b42730bd5b89180bbcaddd0c6f2cb69e8df5ae3af1ce62f72ff0"
       },
       "image_recipe": {
-        "method": "fit_1280x720_v1"
+        "method": "fit_1920x1080_v1"
       }
     }
   ]

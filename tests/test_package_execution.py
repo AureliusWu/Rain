@@ -80,6 +80,19 @@ class NativeAcceptanceTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'Undecodable UI evidence: late-load'):
                 validate_screenshots(root, ['late-load'])
 
+    def test_native_evidence_rejects_720p_or_wrong_scaled_window(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            Image.new('RGB', (1920, 1080)).save(root / 'main-menu.png')
+            Image.new('RGB', (1280, 720)).save(root / 'scaled-settings.png')
+            validate_screenshots(root, ['main-menu', 'scaled-settings'], native_1080=True)
+            Image.new('RGB', (1280, 720)).save(root / 'main-menu.png')
+            with self.assertRaisesRegex(ValueError, 'Wrong physical UI size: main-menu'):
+                validate_screenshots(root, ['main-menu'], native_1080=True)
+            Image.new('RGB', (1920, 1080)).save(root / 'scaled-settings.png')
+            with self.assertRaisesRegex(ValueError, 'Wrong physical UI size: scaled-settings'):
+                validate_screenshots(root, ['scaled-settings'], native_1080=True)
+
     def test_incomplete_native_report_returns_nonzero_from_cli(self):
         project = Path(__file__).resolve().parents[1]
         with tempfile.TemporaryDirectory() as temp:

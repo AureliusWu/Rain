@@ -52,7 +52,7 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(verify_rebuilds(self.root), ([], ['heroine_normal']))
         self.assertEqual(self.errors(), [])
         with Image.open(file) as image:
-            self.assertEqual(image.size, (540, 700))
+            self.assertEqual(image.size, (810, 1050))
             self.assertEqual(image.getchannel('A').getextrema(), (0, 254))
 
     def test_dry_run_never_creates_output_or_changes_manifest(self):
@@ -61,6 +61,13 @@ class PipelineTests(unittest.TestCase):
         self.assertTrue(report['changed'])
         self.assertEqual(before, self.manifest.read_bytes())
         self.assertFalse((self.root / 'game/characters').exists())
+
+    def test_historical_720p_import_is_reproducible_but_not_current_canvas(self):
+        args = dict(self.arguments, asset_id='legacy_bg', kind='background',
+                    output='backgrounds/legacy.png', method='fit_1280x720_v1')
+        import_image(**args)
+        self.assertFalse(rebuild_image('legacy_bg', root=self.root)['changed'])
+        self.assertTrue(any('Background/CG canvas mismatch' in error for error in self.errors()))
 
     def test_ui_keeps_native_size_and_alpha(self):
         source = 'assets_source/ui/check_v1.png'

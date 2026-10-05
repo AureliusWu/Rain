@@ -97,7 +97,7 @@ def required_screenshots(test_source):
     return sorted(names)
 
 
-def validate_screenshots(directory, required):
+def validate_screenshots(directory, required, native_1080=False):
     for name in required:
         file = directory / (name + '.png')
         if not file.is_file():
@@ -105,15 +105,22 @@ def validate_screenshots(directory, required):
         try:
             with Image.open(file) as image:
                 image.load()
+                size = image.size
         except (OSError, ValueError) as exc:
             raise ValueError(f'Undecodable UI evidence: {name}') from exc
+        if native_1080:
+            expected = (1280, 720) if name.startswith('scaled-') else (1920, 1080)
+            if size != expected:
+                raise ValueError(f'Wrong physical UI size: {name}: {size}, expected {expected}')
 
 
 def validate_suite_evidence(output, test_source, screenshots, evidence):
     summary = validate_native_report(output, test_source)
     required = required_screenshots(test_source)
-    validate_screenshots(screenshots, required)
+    native_1080 = 'testcase native_1080_and_scaled_window:' in test_source or 'testcase cross_process_load:' in test_source
+    validate_screenshots(screenshots, required, native_1080=native_1080)
     summary['screenshots_checked'] = len(required)
+    summary['native_1080'] = native_1080
     (evidence / 'acceptance.json').write_text(json.dumps(summary, indent=2) + '\n', encoding='utf-8')
     return summary
 
@@ -138,6 +145,12 @@ def main():
     with tempfile.TemporaryDirectory(prefix="galgame-package-") as temp:
         destination = Path(temp)
         with zipfile.ZipFile(args.zip) as package:
+            instructions = [name for name in package.namelist() if name.endswith('/PLAYER_README.txt')]
+            if len(instructions) != 1 or any(name.endswith('/README.md') for name in package.namelist()):
+                raise SystemExit('Package must contain dedicated player instructions without the developer README')
+            version = Path('VERSION').read_text(encoding='utf-8').strip()
+            if f'版本：{version}' not in package.read(instructions[0]).decode('utf-8'):
+                raise SystemExit('Player instructions do not match the package version')
             package.extractall(destination)
         exe = next(destination.rglob("BeforeTheRainStops.exe"), None)
         if not exe:

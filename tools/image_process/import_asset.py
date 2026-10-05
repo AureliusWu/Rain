@@ -12,11 +12,14 @@ from tools.prompt_registry import prompt_by_file, validate_registry
 from tools.story_model import ROOT, ID
 
 MANIFEST = 'game/data/asset_manifest.json'
-METHODS = {'sprite': 'sprite_bottom_center_v1', 'background': 'fit_1280x720_v1',
-           'cg': 'fit_1280x720_v1', 'ui': 'copy_png_v1'}
+METHODS = {'sprite': 'sprite_bottom_center_810x1050_v1', 'background': 'fit_1920x1080_v1',
+           'cg': 'fit_1920x1080_v1', 'ui': 'copy_png_v1'}
 FOLDERS = {'sprite': 'characters', 'background': 'backgrounds', 'cg': 'cg', 'ui': 'gui'}
 ALLOWED_METHODS = {kind: {method} for kind, method in METHODS.items()}
-ALLOWED_METHODS['ui'].add('fit_1280x720_v1')  # Explicit full-screen menu background.
+ALLOWED_METHODS['sprite'].add('sprite_bottom_center_v1')  # Historical imports.
+for kind in ('background', 'cg'):
+    ALLOWED_METHODS[kind].add('fit_1280x720_v1')
+ALLOWED_METHODS['ui'].update({'fit_1280x720_v1', 'fit_1920x1080_v1', 'scale_150percent_v1'})
 
 
 def render_image(source, method):
@@ -26,7 +29,7 @@ def render_image(source, method):
             if opened.format != 'PNG':
                 raise ValueError('Native-size UI input must be PNG')
             return source.read_bytes(), image_metadata(opened)
-        if method == 'sprite_bottom_center_v1':
+        if method in {'sprite_bottom_center_v1', 'sprite_bottom_center_810x1050_v1'}:
             if 'A' not in opened.getbands():
                 raise ValueError('Sprite must already have genuine alpha transparency')
             alpha = opened.getchannel('A')
@@ -35,11 +38,15 @@ def render_image(source, method):
             if low != 0 or high < 250 or any(alpha.getpixel(p) for p in corners):
                 raise ValueError('Sprite must have transparent corners and visible character pixels')
             image = opened.convert('RGBA')
-            image.thumbnail((540, 700), Image.Resampling.LANCZOS)
-            result = Image.new('RGBA', (540, 700))
-            result.alpha_composite(image, ((540-image.width)//2, 700-image.height))
-        elif method == 'fit_1280x720_v1':
-            result = ImageOps.fit(opened.convert('RGB'), (1280, 720), method=Image.Resampling.LANCZOS)
+            width, height = (540, 700) if method == 'sprite_bottom_center_v1' else (810, 1050)
+            image.thumbnail((width, height), Image.Resampling.LANCZOS)
+            result = Image.new('RGBA', (width, height))
+            result.alpha_composite(image, ((width-image.width)//2, height-image.height))
+        elif method in {'fit_1280x720_v1', 'fit_1920x1080_v1'}:
+            size = (1280, 720) if method == 'fit_1280x720_v1' else (1920, 1080)
+            result = ImageOps.fit(opened.convert('RGB'), size, method=Image.Resampling.LANCZOS)
+        elif method == 'scale_150percent_v1':
+            result = opened.resize(tuple(round(d * 1.5) for d in opened.size), Image.Resampling.LANCZOS)
         else:
             raise ValueError(f'Unsupported image recipe: {method}')
         buffer = io.BytesIO()

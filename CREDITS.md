@@ -17,3 +17,5 @@
 - v0.5 生产流程：版本化请求索引 prompts/registry.json；图片、语音与场景通过 ID、路径及 SHA-256 绑定。新增导入配方、像素元数据与复用/参考来源，原有图片和音频内容沿用前阶段。
 - v0.6 程序音频的原创音符、参数与制作方向：prompts/audio/soundtrack_v1.json；渲染工具 tools/audio_process/render_soundtrack.py。新增配音请求：prompts/voice/heroine_v2.md；声音、语速、模型及前处理沿用原配置。信号检查由 SoundFile 0.14.0 完成，仅为开发依赖，不进入分发包。
 - v0.7 三张场景背景：站外雨棚、雨停后的出口、街角小店，使用 OpenAI 内置 imagegen 和本项目生成的旧站背景作画风参考；模型标识未暴露。出口底图另做一次店招去字编辑，输入、完整请求、最终源 PNG 与导入配方保存在 assets_source/background 与 prompts/background。游戏使用 1280×720 输出；旧信 CG、七种角色表情与 17 句关键录音保留。全部仍为待最终选择的视觉候选，没有第三方参考图。
+
+- v0.9 原生 1080p：由既有 1672×941 背景 / CG、1024×1536 透明立绘重建，保留原始 Prompt；背景 / CG 约 1.15 倍重采样。20 蓝色图元直接在目标尺寸重画，其他原始 GUI 按明确配方导入。60 图片均有可复现源、许可与哈希，见 docs/DISPLAY_V09.md。

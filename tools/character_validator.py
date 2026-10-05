@@ -6,6 +6,8 @@ from PIL import Image, ImageChops
 from tools.story_model import ROOT, load_story, scene_lines
 
 
+from tools.display_spec import SPRITE_CANVAS
+
 REGISTRY = "prompts/character/heroine_expressions_v1.json"
 
 
@@ -53,7 +55,7 @@ def validate_characters(root=ROOT, assets=None, story=None):
             errors.append(f"Missing expression image: {expression}")
             continue
         with Image.open(path) as candidate:
-            if candidate.size != tuple(registry["game_canvas"]) or "A" not in candidate.getbands():
+            if candidate.size != SPRITE_CANVAS or "A" not in candidate.getbands():
                 errors.append(f"Expression canvas/alpha differs: {expression}")
                 continue
             low, high = candidate.getchannel("A").getextrema()
@@ -62,7 +64,7 @@ def validate_characters(root=ROOT, assets=None, story=None):
                 errors.append(f"Expression has invalid transparency: {expression}")
             metric = geometry(baseline, candidate)
             metrics[expression] = metric
-            if metric["silhouette_iou"] < registry["min_silhouette_iou"] or metric["bbox_delta"] is None or metric["bbox_delta"] > registry["max_bbox_delta"]:
+            if metric["silhouette_iou"] < registry["min_silhouette_iou"] or metric["bbox_delta"] is None or metric["bbox_delta"] > round(registry["max_bbox_delta"] * SPRITE_CANVAS[1] / registry["game_canvas"][1]):
                 errors.append(f"Expression position/silhouette drift: {expression}")
         source = root / asset["source_file"]
         with Image.open(source) as image:

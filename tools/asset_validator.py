@@ -12,6 +12,8 @@ from tools.story_model import ROOT, load_story, scene_lines
 from tools.audio_validator import validate_audio
 from tools.audio_process.generate_voice import request_fingerprint, MODEL_HASH, VOICES_HASH, CONFIG_HASH
 
+from tools.display_spec import CANVAS, SPRITE_CANVAS
+
 IMAGE_TYPES = {'background', 'sprite', 'cg', 'ui'}
 EXTENSIONS = {**{kind: {'.png'} for kind in IMAGE_TYPES}, 'audio': {'.ogg'}, 'voice': {'.ogg'}, 'font': {'.ttf', '.otf'}}
 
@@ -59,9 +61,9 @@ def validate_assets(root=ROOT, story=None, manifest=None, voices=None):
                         actual = image_metadata(image)
                         if image.format != 'PNG' or actual != asset.get('image'):
                             errors.append(f'Image metadata/format mismatch: {name}')
-                        if kind in {'background', 'cg'} and image.size != (1280, 720):
+                        if kind in {'background', 'cg'} and image.size != CANVAS:
                             errors.append(f'Background/CG canvas mismatch: {name}')
-                        if kind == 'sprite' and (image.size != (540, 700) or 'A' not in image.getbands()):
+                        if kind == 'sprite' and (image.size != SPRITE_CANVAS or 'A' not in image.getbands()):
                             errors.append(f'Sprite canvas/alpha mismatch: {name}')
                 except (ValueError, OSError) as exc:
                     errors.append(f'Undecodable image: {name}: {exc}')

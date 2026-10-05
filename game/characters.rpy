@@ -14,7 +14,7 @@ init python:
 transform heroine_position:
     xalign 0.68
     yalign 1.0
-    yoffset 20
+    yoffset 30
 
 screen ending_card(ending_title):
     modal True
@@ -22,8 +22,8 @@ screen ending_card(ending_title):
     vbox:
         xalign 0.5
         yalign 0.47
-        spacing 28
-        text "雨停之前" size 42 color "#a9e1e9" xalign 0.5
-        text ending_title size 28 xalign 0.5
-        text "这一段路，已经走完。" size 20 color "#becdd7" xalign 0.5
+        spacing 42
+        text "雨停之前" size 63 color "#a9e1e9" xalign 0.5
+        text ending_title size 42 xalign 0.5
+        text "这一段路，已经走完。" size 30 color "#becdd7" xalign 0.5
         textbutton "回到主菜单" id "ending_return" xalign 0.5 action Return()

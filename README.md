@@ -2,15 +2,17 @@
 
 一部可离线游玩的中文 Ren'Py 视觉小说。雨夜的旧车站，两位久未联系的旧友，和一封没有寄出的信。
 
-main 当前为 **v0.8.0 已技术验收的回归 Beta 候选**：六章、24 个叙事场景与 2 个状态路由、4 次关键选择、16 条路线、Normal / True 两个完整候选结局。包含七种女主表情、雨夜站台与新增三个场景背景、旧信 CG、17 句 AI 关键语音、3 首原创程序音乐、两种雨声和纸张／消息音效。主题、成年女主许澄和画风仍待用户最终审阅。
+main 当前为 **v0.9.0 原生 1080p 体验候选开发中**：六章、24 个叙事场景与 2 个状态路由、4 次关键选择、16 条路线、Normal / True 两个完整候选结局。包含七种女主表情、雨夜站台与新增三个场景背景、旧信 CG、17 句 AI 关键语音、3 首原创程序音乐、两种雨声和纸张／消息音效。主题、成年女主许澄和画风仍待用户最终审阅。
 
 正文全分支 15,206 字符，单路线 11,404–11,744 字符（包含标点，菜单单列）。仅文字阅读按每分钟 250–350 字符估算约 32–47 分钟；真人完整阅读、听感与普通电脑试玩尚未验收。统计见 [路线报告](docs/STORY_STATS_V07.md)。
+
+原生画布 1920×1080，默认 1280×720 缩放窗口。当前 Windows 候选验收后更新下载入口；见 [适配说明](docs/DISPLAY_V09.md)。
 
 ## 下载与运行
 
 [Windows 发布版本](https://github.com/AureliusWu/Test/releases) · [构建与运行证据](https://github.com/AureliusWu/Test/actions) · [阶段记录](docs/STATUS.md)
 
-最新公开 Release 仍为 v0.6.0。v0.8.0 完整候选的 [Windows 验收 37281855516](https://github.com/AureliusWu/Test/actions/runs/37281855516) 已通过：79 Python；源码与独立 EXE 各 30/345，重新启动后读档另 1/10，失败和跳过为 0；109 张证据 PNG 完整解码。
+最新公开 Release 仍为 v0.6.0。上一份已验收的 v0.8.0 完整候选的 [Windows 验收 37281855516](https://github.com/AureliusWu/Test/actions/runs/37281855516) 已通过：79 Python；源码与独立 EXE 各 30/345，重新启动后读档另 1/10，失败和跳过为 0；109 张证据 PNG 完整解码。
 
 [下载 v0.8 Windows 候选 artifact](https://github.com/AureliusWu/Test/actions/runs/37281855516/artifacts/11333430981) · [Beta 验收](docs/BETA_ACCEPTANCE_V08.md) · [统一真人后续清单](docs/HUMAN_HANDOFF.md)。Actions 需登录，保留至 2027-01-03；同字节试玩 ZIP、校验和、实际预览与统一审阅包另已交付。游戏 ZIP 为 44,868,967 字节，SHA-256 `e436d30a93e7a51671b4ffec60a43ff636a865299b67f237af1c8195e048ba9c`。候选交付与公开 Release 分别报告。
 
@@ -69,7 +71,7 @@ Linux/macOS 可用 SDK 的 `renpy.sh` 运行 lint/test。Linux 无桌面时需�
 
 ## 资产流程与下一阶段
 
-69 份 Prompt、85 个资产、60 张 PNG 与 33 个图片重建配方可追踪。图片导入包含预检、dry-run、版本与路径检查、正常 I/O 失败回滚和重复执行检查，详见 [v0.5 资产操作文档](docs/ASSET_PIPELINE_V05.md) 与 [v0.7 场景候选](docs/ART_REVIEW_V07.md)。
+69 份 Prompt、85 个资产、60 张 PNG 与 60 个图片重建配方可追踪。图片导入包含预检、dry-run、版本与路径检查、正常 I/O 失败回滚和重复执行检查，详见 [v0.5 资产操作文档](docs/ASSET_PIPELINE_V05.md) 与 [v0.7 场景候选](docs/ART_REVIEW_V07.md)。
 
 v0.6 新增 11 句配音与 5 个程序音频，17 句合计 58.048 秒。音乐随旧信、回忆和离站切换，雨声逐渐减弱并在剧情指定台词处淡出。24 个游戏音频及源 WAV 均完整解码并测量；重复执行制作工具保留已有文件。流程、接入位置和试听范围见 [v0.6 音频操作文档](docs/AUDIO_V06.md)。
 
