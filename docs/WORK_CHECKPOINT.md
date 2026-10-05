@@ -56,11 +56,13 @@
 
 这样下一次恢复不需要重新遍历整个项目。
 
-
 ## 2026-10-05 恢复批次 A
 
+- 恢复提交：`5180374a0c7780a6d7c1a1e018795f2cedd3c14d`（`story: restore v0.7 chapters through ch03 checkpoint`）。
+- 恢复工作流：Actions run `37247154199`，结论 success；在提交前完成 Prompt Registry 重建、Ren'Py 剧情/交互测试重新生成与完整作者侧校验。
 - 恢复 14 个场景，新增 208 行 / 6453 字符。
 - 既有语音绑定台词未改字；四次选择、16 路线、两个结局与三个状态保持原结构。
 - 同步新增 v0.7 Scene Prompt，并更新 Prompt Registry。
-- 流程修复的 Windows CI 37246212831 已通过；本批剧情将在后续 Windows checkpoint 再跑完整验收。
+- 流程修复 Windows CI `37246212831` 已通过；恢复剧情后的 Windows checkpoint 由本次记录提交触发，完成后补写 run ID。
+- 当前阶段仍是 v0.7 Alpha 开发，不创建 Release。
 - 下一条任务：检查第三章后的知识、物品、时间、称呼和配音绑定，再进入 ch04。
