@@ -1,6 +1,7 @@
 """Extract and execute the standalone Windows EXE; wait for all native tests."""
 import argparse
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -13,6 +14,7 @@ from tools.compile_tests import render_persistence_tests
 from tools.story_model import load_story
 
 DEFAULT_TEST_TIMEOUT = 2400
+READER_TEST_TIMEOUT = 120
 
 
 def positive_timeout(value):
@@ -50,6 +52,19 @@ def run_native_tests(command, *, cwd, evidence, timeout):
             'timed_out': timed_out, 'returncode': returncode,
             'scope': 'native process only; required screenshots are checked separately'
         }, indent=2)+'\n', encoding='utf-8')
+
+
+def run_source_tests(command, *, cwd, evidence, timeout):
+    """Bound the source process and retain its report on failure or timeout."""
+    process_evidence = evidence / 'source-process'
+    try:
+        return run_native_tests(command, cwd=cwd, evidence=process_evidence, timeout=timeout)
+    finally:
+        stdout = (process_evidence / 'stdout.txt').read_text(encoding='utf-8')
+        stderr = (process_evidence / 'stderr.txt').read_text(encoding='utf-8')
+        (evidence / 'source-tests.txt').write_text(stdout + '\n' + stderr, encoding='utf-8')
+        print(stdout, flush=True)
+        print(stderr, flush=True)
 
 
 def collect_runtime_evidence(exe, evidence, screenshot_directory='reports/screenshots'):
@@ -130,10 +145,29 @@ def main():
     operation = parser.add_mutually_exclusive_group(required=True)
     operation.add_argument('--zip', type=Path)
     operation.add_argument('--report', type=Path, help='Verify source-suite output and screenshots')
+    operation.add_argument('--source-sdk', type=Path, help='Execute the source suite with a bounded SDK process')
     parser.add_argument('--timeout', type=positive_timeout, default=DEFAULT_TEST_TIMEOUT,
                         help='Seconds allowed for the complete native suite (default: 2400)')
     args = parser.parse_args()
     test_source = Path('game/testcases.rpy').read_text(encoding='utf-8')
+    if args.source_sdk:
+        sdk = args.source_sdk.resolve()
+        interpreter = sdk / 'lib' / ('py3-windows-x86_64/python.exe' if os.name == 'nt' else 'py3-linux-x86_64/python')
+        if not interpreter.is_file() or not (sdk / 'renpy.py').is_file():
+            raise SystemExit('Source SDK is incomplete')
+        evidence = Path('reports')
+        with tempfile.TemporaryDirectory(prefix='galgame-source-saves-') as saves:
+            result = run_source_tests([str(interpreter), '-u', str(sdk / 'renpy.py'), '.', 'test', 'global',
+                '--report-detailed', '--overwrite-screenshots', '--savedir', saves],
+                cwd=Path.cwd(), evidence=evidence, timeout=args.timeout)
+        if result.returncode:
+            raise SystemExit(result.returncode)
+        try:
+            summary = validate_suite_evidence(result.stdout, test_source, Path('reports/screenshots'), evidence)
+        except ValueError as exc:
+            raise SystemExit(str(exc)) from exc
+        print(f'Source native evidence accepted: {summary}')
+        return
     if args.report:
         try:
             summary = validate_suite_evidence(args.report.read_text(encoding='utf-8-sig'), test_source,
@@ -182,7 +216,7 @@ def main():
             try:
                 result = run_native_tests([str(exe), str(exe.parent), 'test', 'global', '--report-detailed',
                     '--overwrite-screenshots', '--savedir', str(destination / 'saves')],
-                    cwd=exe.parent, evidence=restart_evidence, timeout=args.timeout)
+                    cwd=exe.parent, evidence=restart_evidence, timeout=min(args.timeout, READER_TEST_TIMEOUT))
             finally:
                 screenshots = collect_runtime_evidence(exe, restart_evidence, 'reports/persistence-screenshots')
             print(result.stdout)

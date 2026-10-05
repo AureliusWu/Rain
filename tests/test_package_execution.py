@@ -5,7 +5,7 @@ import sys
 import tempfile
 import unittest
 from PIL import Image
-from tools.build.verify_package import run_native_tests, collect_runtime_evidence, validate_native_report, validate_screenshots
+from tools.build.verify_package import run_native_tests, run_source_tests, collect_runtime_evidence, validate_native_report, validate_screenshots
 
 
 class NativeProcessEvidenceTests(unittest.TestCase):
@@ -43,6 +43,29 @@ class NativeProcessEvidenceTests(unittest.TestCase):
             self.assertEqual(result.returncode, 7)
             self.assertEqual(json.loads((evidence/'process.json').read_text())['returncode'], 7)
             self.assertIn('native failure', (evidence/'stderr.txt').read_text())
+
+    def test_source_timeout_retains_report_and_process_record(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp); evidence = root / 'reports'
+            with self.assertRaises(subprocess.TimeoutExpired):
+                run_source_tests([sys.executable, '-u', '-c', 'import time; print("route started", flush=True); time.sleep(5)'],
+                                 cwd=root, evidence=evidence, timeout=1)
+            process = json.loads((evidence / 'source-process/process.json').read_text())
+            self.assertTrue(process['timed_out'])
+            self.assertIsNone(process['returncode'])
+            self.assertIn('route started', (evidence / 'source-tests.txt').read_text())
+
+    def test_source_failure_retains_both_streams_and_nonzero_exit(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp); evidence = root / 'reports'
+            result = run_source_tests([sys.executable, '-c', 'import sys; print("partial test"); print("failure", file=sys.stderr); sys.exit(7)'],
+                                      cwd=root, evidence=evidence, timeout=5)
+            self.assertEqual(result.returncode, 7)
+            process = json.loads((evidence / 'source-process/process.json').read_text())
+            self.assertEqual(process['returncode'], 7)
+            report = (evidence / 'source-tests.txt').read_text()
+            self.assertIn('partial test', report)
+            self.assertIn('failure', report)
 
 
 class NativeAcceptanceTests(unittest.TestCase):

@@ -47,7 +47,8 @@ SDK 固定为 Ren'Py 8.5.3，下载后校验官方包 SHA-256。在 Windows 上�
 ```powershell
 $sdk = ".runtime/renpy-8.5.3-sdk"
 & "$sdk/lib/py3-windows-x86_64/python.exe" "$sdk/renpy.py" . lint --error-code --all-problems
-& "$sdk/lib/py3-windows-x86_64/python.exe" "$sdk/renpy.py" . test global --report-detailed --overwrite-screenshots
+python -m tools.build.display
+python -m tools.build.verify_package --source-sdk $sdk --timeout 2400
 python -m tools.build.package --sdk $sdk
 python -m tools.build.verify_package --zip dist/BeforeTheRainStops-0.9.0-win.zip --timeout 2400
 ```
