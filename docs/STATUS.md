@@ -1,6 +1,6 @@
 # 当前状态
 
-源码运行 37300201619 在 2026-10-05 11:55 UTC 仍停于交互步骤，已超过 50 分钟，未取得完成摘要或 EXE 结果；本轮不计为通过。此前源码使用无进程上限的 PowerShell 管道，已补为与包一致的有界进程执行：源码 / 独立 EXE 各 2400 秒，重开读档进程最多 120 秒，总作业 90 分钟为失败取证留出时间。源码 stdout / stderr / elapsed / returncode / timed_out 始终写入 reports/source-process，source-tests.txt 超时仍保留，已有截图仍由 always 上传；-u 避免日志滞留。新增实际子进程超时与非零退出反例，本地 83 Python 和全部作者检查通过。主集合仍为 31/359、65 图，重开为 1/10、1 图，内容和图像尺寸门槛不变。替换异常长跑后继续等待完整 Windows 证据。
+读取取消后日志已定位二轮 37300201619：并非整个集合仍正常慢跑，而是在 21.711 秒报 FAILED；31 用例中 1 失败、30 not run，10 已执行断言均通过，560 句字体溢出列表为空。空存档缩略图误用了 gui.thumbnail_width / height（实际定义于 config），引发 AttributeError；后续 before / teardown 又触发 float > NoneType，使引擎未能退出。已更正为 config.thumbnail_width / height，保留原生蓝色空卡，并保留有界源码进程防止类似错误无限等待。源码 / EXE 各 2400 秒，新进程读档 120 秒、总作业 90 分钟；31/359、65 图与跨进程 1/10、1 图的完整门槛不变。失败 artifact 11344121426 的身份见 evidence/v09-source-overrun.json。完整 Windows 重验仍待完成。
 
 ## v0.9 当前执行点 — 2026-10-05
 

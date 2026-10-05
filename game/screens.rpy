@@ -638,7 +638,7 @@ screen file_slots(title):
 
                         has vbox
 
-                        add FileScreenshot(slot, empty=Solid(gui.muted_color, xsize=gui.thumbnail_width, ysize=gui.thumbnail_height)) xalign 0.5
+                    add FileScreenshot(slot, empty=Solid(gui.muted_color, xsize=config.thumbnail_width, ysize=config.thumbnail_height)) xalign 0.5
 
                         text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
                             style "slot_time_text"

@@ -1,0 +1,29 @@
+{
+  "version": "0.9.0",
+  "commit": "f9cdb3d0314f0fa0529ef4c3d902f1d9c8ca708c",
+  "run_id": 37300201619,
+  "job_id": 111730843810,
+  "ci_url": "https://github.com/AureliusWu/Test/actions/runs/37300201619",
+  "source_tests": {
+    "test_cases": 31,
+    "passed": 0,
+    "failed": 1,
+    "not_run": 30,
+    "assertions_executed": 10,
+    "assertions_passed": 10,
+    "seconds": 21.711,
+    "native_case_seconds": 18.517,
+    "dialogue_overflows": []
+  },
+  "failure": "Empty save thumbnail referenced undefined gui.thumbnail_width/height; actual dimensions are config.thumbnail_width/height.",
+  "secondary_failure": "Ren'Py before_testcase and teardown raised TypeError: float > NoneType; process remained alive after FAILED report.",
+  "handling": "Replaced over-budget unbounded run with bounded source/EXE processes and corrected config attribute; complete Windows acceptance remains pending.",
+  "artifact": {
+    "id": 11344121426,
+    "size_in_bytes": 15687197,
+    "digest": "sha256:01cce86633ba65a77a171e71fad95106cf190f460bebdf5be44727a21799f539"
+  },
+  "human_acceptance": "pending; no release/content freeze",
+  "workflow_conclusion": "cancelled",
+  "source_report_sha256": "7932a327725c38a19e600e808e8b9be0484ef022af403d2e2e7cf46df4a18e26"
+}
