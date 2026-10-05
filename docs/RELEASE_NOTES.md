@@ -10,3 +10,5 @@
 下载 BeforeTheRainStops-0.8.0-win.zip，完整解压后双击 BeforeTheRainStops.exe。无需安装 Python、Ren'Py 或模型，无需联网。Beta 使用独立存档目录，不跨阶段加载旧存档。
 
 main 验证与公开发布分开；本说明供候选验收和后续手动发布使用，公开 Release 是否发布以下载页与 STATUS.md 为准。原生 1080p 适配继续在 v0.9 完成。
+
+机器验收：候选 2356c7f5ba9764f213286fd9d0e83a52f8a4e06b / CI 37281855516，79 Python、源码与 EXE 各 30/345、新进程读档 1/10 均通过。游戏 ZIP SHA-256：e436d30a93e7a51671b4ffec60a43ff636a865299b67f237af1c8195e048ba9c。证据与真人待办见 BETA_ACCEPTANCE_V08.md 和 HUMAN_HANDOFF.md。

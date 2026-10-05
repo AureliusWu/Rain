@@ -2,7 +2,7 @@
 
 一部可离线游玩的中文 Ren'Py 视觉小说。雨夜的旧车站，两位久未联系的旧友，和一封没有寄出的信。
 
-main 当前为 **v0.8.0 回归 Beta 开发候选**：六章、24 个叙事场景与 2 个状态路由、4 次关键选择、16 条路线、Normal / True 两个完整候选结局。包含七种女主表情、雨夜站台与新增三个场景背景、旧信 CG、17 句 AI 关键语音、3 首原创程序音乐、两种雨声和纸张／消息音效。主题、成年女主许澄和画风仍待用户最终审阅。
+main 当前为 **v0.8.0 已技术验收的回归 Beta 候选**：六章、24 个叙事场景与 2 个状态路由、4 次关键选择、16 条路线、Normal / True 两个完整候选结局。包含七种女主表情、雨夜站台与新增三个场景背景、旧信 CG、17 句 AI 关键语音、3 首原创程序音乐、两种雨声和纸张／消息音效。主题、成年女主许澄和画风仍待用户最终审阅。
 
 正文全分支 15,206 字符，单路线 11,404–11,744 字符（包含标点，菜单单列）。仅文字阅读按每分钟 250–350 字符估算约 32–47 分钟；真人完整阅读、听感与普通电脑试玩尚未验收。统计见 [路线报告](docs/STORY_STATS_V07.md)。
 
@@ -10,11 +10,11 @@ main 当前为 **v0.8.0 回归 Beta 开发候选**：六章、24 个叙事场景
 
 [Windows 发布版本](https://github.com/AureliusWu/Test/releases) · [构建与运行证据](https://github.com/AureliusWu/Test/actions) · [阶段记录](docs/STATUS.md)
 
-最新公开 Release 仍为 v0.6.0。v0.7.0 完整候选的 [Windows 验收 37273842254](https://github.com/AureliusWu/Test/actions/runs/37273842254) 已通过：源码与独立 EXE 各 24 个用例 / 160 个断言，72 项 Python 通过；82 张证据截图完整解码。
+最新公开 Release 仍为 v0.6.0。v0.8.0 完整候选的 [Windows 验收 37281855516](https://github.com/AureliusWu/Test/actions/runs/37281855516) 已通过：79 Python；源码与独立 EXE 各 30/345，重新启动后读档另 1/10，失败和跳过为 0；109 张证据 PNG 完整解码。
 
-[下载 v0.7 Windows 候选 artifact](https://github.com/AureliusWu/Test/actions/runs/37273842254/artifacts/11329379772) · [Alpha 验收与人工待办](docs/ALPHA_ACCEPTANCE_V07.md)。下载 Actions artifact 需要 GitHub 登录，保留至 2027-01-03；可下载的同字节试玩 ZIP 与预览另已交付。游戏 ZIP 为 44,861,562 字节，SHA-256：`9e9cd77da3b2ff9507b5fec89fab68091e0eca2ce4376c8188c1412651dc0af1`；不把候选交付记为公开 Release。
+[下载 v0.8 Windows 候选 artifact](https://github.com/AureliusWu/Test/actions/runs/37281855516/artifacts/11333430981) · [Beta 验收](docs/BETA_ACCEPTANCE_V08.md) · [统一真人后续清单](docs/HUMAN_HANDOFF.md)。Actions 需登录，保留至 2027-01-03；同字节试玩 ZIP、校验和、实际预览与统一审阅包另已交付。游戏 ZIP 为 44,868,967 字节，SHA-256 `e436d30a93e7a51671b4ffec60a43ff636a865299b67f237af1c8195e048ba9c`。候选交付与公开 Release 分别报告。
 
-1. 从成功的 Actions 下载 v0.7 Windows 候选 artifact 并解开外层，再完整解压 `BeforeTheRainStops-0.7.0-win.zip`；或从 Release 下载现有 v0.6.0。
+1. 下载并解开 Windows artifact 外层，再完整解压 `BeforeTheRainStops-0.8.0-win.zip`；或从 Release 下载现有 v0.6.0。
 2. 完整解压到可写目录。不要直接在 ZIP 内启动。
 3. 双击 `BeforeTheRainStops.exe`，选择“开始游戏”。无需安装 Python、Ren'Py 或模型，无需联网。
 
@@ -35,7 +35,7 @@ python -m tools.image_process.import_asset --check
 python -m tools.audio_validator --report reports/audio.json
 python -m tools.compile_story
 python -m tools.compile_tests
-python -m tools.story_stats --markdown docs/STORY_STATS_V07.md
+python -m tools.story_stats --markdown reports/story-stats.md
 python -m tools.validate
 python -m tools.build.sdk
 ```
@@ -73,8 +73,8 @@ Linux/macOS 可用 SDK 的 `renpy.sh` 运行 lint/test。Linux 无桌面时需�
 
 v0.6 新增 11 句配音与 5 个程序音频，17 句合计 58.048 秒。音乐随旧信、回忆和离站切换，雨声逐渐减弱并在剧情指定台词处淡出。24 个游戏音频及源 WAV 均完整解码并测量；重复执行制作工具保留已有文件。流程、接入位置和试听范围见 [v0.6 音频操作文档](docs/AUDIO_V06.md)。
 
-六章、16 条路线及两个结局已完成 Alpha 正文，说明见 [场景 Outline](docs/STORY_OUTLINE_V07.md) 与 [路线审阅](docs/STORY_REVIEW_V07.md)。v0.7 候选技术验收已完成，v0.8 已补后半段存读档、回退改选、连续结局、自动语音衔接与重新启动 EXE 后读档，正在执行 Windows 验收。真人计时、试听、创作审阅和普通电脑试玩由用户后续统一完成，见 [后续清单](docs/HUMAN_HANDOFF.md)。重大剧情和最终美术继续由用户决定。大系统保持在 [Future Ideas](docs/FUTURE_IDEAS.md)。
+六章、16 条路线及两个结局已完成 Alpha 正文，说明见 [场景 Outline](docs/STORY_OUTLINE_V07.md) 与 [路线审阅](docs/STORY_REVIEW_V07.md)。v0.7 候选技术验收已完成，v0.8 已补后半段存读档、回退改选、连续结局、自动语音衔接与重新启动 EXE 后读档，已通过 Windows 源码和独立 EXE 验收，结果见 [Beta 验收](docs/BETA_ACCEPTANCE_V08.md)。真人计时、试听、创作审阅和普通电脑试玩由用户后续统一完成，见 [后续清单](docs/HUMAN_HANDOFF.md)。重大剧情和最终美术继续由用户决定。大系统保持在 [Future Ideas](docs/FUTURE_IDEAS.md)。
 
 [版本路线](ROADMAP.md) 与 [v0.7–v1.0 执行计划](docs/RELEASE_PLAN_V07_V10.md) 列出完整剧情、回归加固、1080p 适配和正式发布的范围、依赖与验收。[v0.6.0 已发布](https://github.com/AureliusWu/Test/releases/tag/v0.6.0)：Windows 源码和独立 EXE 各通过 24 个用例 / 151 个断言，无失败或跳过。
 
-按 v0.1–v1.0 的 10 个发布里程碑统计，已完成 6 个，当前进度为 **60%**。此比例只统计版本节点，不代表工时或最终内容的完成比例；v0.7–v1.0 仍待完成。
+按 v0.1–v1.0 的 10 个发布里程碑统计，已完成 6 个，当前进度为 **60%**。此比例只统计版本节点，不代表工时或最终内容的完成比例；v0.7 / v0.8 技术验收已完成，v0.9 / v1.0 与真人事项继续后续。

@@ -13,7 +13,7 @@ python -m tools.build.verify_package --report reports/source-tests.txt
 python -m tools.build.verify_package --zip dist/BeforeTheRainStops-0.8.0-win.zip --timeout 900
 ```
 
-79 项 Python 检查新增实际 CLI 过期 / 缺失输出反例、原生报告缺摘要 / 错数量 / 跳过 / not run / 错用例名反例、缺图和截断 PNG、真实 Vorbis 截断。正向基线与错误输入均实际执行；CI 默认只有前一步成功才继续构建或发布。Windows 实际通过结果将在 Beta 验收中记录，本段不替代执行证据。
+79 项 Python 检查新增实际 CLI 过期 / 缺失输出反例、原生报告缺摘要 / 错数量 / 跳过 / not run / 错用例名反例、缺图和截断 PNG、真实 Vorbis 截断。正向基线与错误输入均实际执行；CI 默认只有前一步成功才继续构建或发布。修复自动精确行数时序竞争后，Windows 37281855516 全部实际通过：源码 / EXE 30/345，新进程 1/10，无失败 / 跳过，109 PNG 解码。源 / 包耗时 461.155 / 322.228 秒，重开进程 2.002 秒；包与失败 / 修复证据见 BETA_ACCEPTANCE_V08.md。
 
 
 ## v0.7 独立包超时恢复
