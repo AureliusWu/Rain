@@ -2,7 +2,7 @@
 testsuite global:
     setup:
         $ _test.transition_timeout = 0.05
-        $ _test.timeout = 15.0
+        $ _test.timeout = 45.0
         $ _test.screenshot_directory = "reports/screenshots"
         $ preferences.text_cps = 0
         pause until screen "main_menu"
@@ -29,45 +29,56 @@ testcase native_1080_and_scaled_window:
     assert eval not test_text_overflows
     assert eval renpy.get_physical_size() == (1920, 1080)
     run MainMenu(confirm=False)
+    pause 0.3
     screenshot "native-main-menu"
     click id "menu_about"
     assert screen "about"
+    pause 0.3
     screenshot "native-about"
     click id "game_return"
     $ renpy.set_physical_size((1280, 720))
     pause until eval renpy.get_physical_size() == (1280, 720)
     assert eval not preferences.fullscreen
+    pause 0.3
     screenshot "scaled-main-menu"
     click id "menu_start"
     advance until "你还是和以前一样，出门不看天气。"
     assert screen "say"
+    pause 0.3
     screenshot "scaled-dialogue"
     click id "history_open"
     assert screen "history"
+    pause 0.3
     screenshot "scaled-history"
     click id "game_return"
     click id "preferences_open"
     assert screen "preferences"
+    pause 0.3
     screenshot "scaled-settings"
     click id "game_return"
     advance until screen "choice"
     assert screen "choice"
+    pause 0.3
     screenshot "scaled-choice"
     click id "save_open"
     assert screen "save"
+    pause 0.3
     screenshot "scaled-save"
     click id "game_return"
     click id "load_open"
     assert screen "load"
+    pause 0.3
     screenshot "scaled-load"
     click id "game_return"
     click id "preferences_open"
     click id "display_fullscreen"
     pause until eval renpy.get_physical_size() == (1920, 1080)
     assert eval preferences.fullscreen
+    pause 0.3
     screenshot "native-settings"
     click id "game_return"
     assert screen "choice"
+    pause 0.3
     screenshot "native-choice"
 
 testcase route_01:

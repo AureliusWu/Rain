@@ -12,7 +12,7 @@ from PIL import Image
 from tools.compile_tests import render_persistence_tests
 from tools.story_model import load_story
 
-DEFAULT_TEST_TIMEOUT = 900
+DEFAULT_TEST_TIMEOUT = 2400
 
 
 def positive_timeout(value):
@@ -131,7 +131,7 @@ def main():
     operation.add_argument('--zip', type=Path)
     operation.add_argument('--report', type=Path, help='Verify source-suite output and screenshots')
     parser.add_argument('--timeout', type=positive_timeout, default=DEFAULT_TEST_TIMEOUT,
-                        help='Seconds allowed for the complete native suite (default: 900)')
+                        help='Seconds allowed for the complete native suite (default: 2400)')
     args = parser.parse_args()
     test_source = Path('game/testcases.rpy').read_text(encoding='utf-8')
     if args.report:

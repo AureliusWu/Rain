@@ -49,7 +49,7 @@ $sdk = ".runtime/renpy-8.5.3-sdk"
 & "$sdk/lib/py3-windows-x86_64/python.exe" "$sdk/renpy.py" . lint --error-code --all-problems
 & "$sdk/lib/py3-windows-x86_64/python.exe" "$sdk/renpy.py" . test global --report-detailed --overwrite-screenshots
 python -m tools.build.package --sdk $sdk
-python -m tools.build.verify_package --zip dist/BeforeTheRainStops-0.8.0-win.zip --timeout 900
+python -m tools.build.verify_package --zip dist/BeforeTheRainStops-0.9.0-win.zip --timeout 2400
 ```
 
 Linux/macOS 可用 SDK 的 `renpy.sh` 运行 lint/test。Linux 无桌面时需要 Xvfb。Windows Actions 先做数据校验与原生交互测试，再构建 ZIP，直接启动解压后的独立 EXE 重跑测试。main 成功后仅上传候选与证据，附 SHA256SUMS；手动发布入口重验选定提交和版本后才创建预发行 Release。

@@ -17,7 +17,7 @@ jobs:
   windows:
     name: Test, build, and run Windows package
     runs-on: windows-latest
-    timeout-minutes: 35
+    timeout-minutes: 75
     env:
       PYTHONUTF8: "1"
       SDL_AUDIODRIVER: dummy
@@ -60,7 +60,7 @@ jobs:
         run: |
           $zip = Get-ChildItem dist -Filter '*-win.zip' | Select-Object -First 1
           if (-not $zip) { throw 'Windows ZIP missing' }
-          python -m tools.build.verify_package --zip $zip.FullName --timeout 900
+          python -m tools.build.verify_package --zip $zip.FullName --timeout 2400
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           Get-ChildItem dist -Filter '*.zip' | Get-FileHash -Algorithm SHA256 | ForEach-Object { "$($_.Hash.ToLower())  $(Split-Path $_.Path -Leaf)" } | Set-Content dist/SHA256SUMS.txt
           @{ commit = $env:GITHUB_SHA; run_id = $env:GITHUB_RUN_ID; version = (Get-Content VERSION -Raw).Trim(); audio_driver = $env:SDL_AUDIODRIVER } | ConvertTo-Json | Set-Content reports/ci-context.json

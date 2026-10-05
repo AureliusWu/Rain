@@ -79,7 +79,9 @@ def render_tests(story):
         "testsuite global:",
         "    setup:",
         "        $ _test.transition_timeout = 0.05",
-        "        $ _test.timeout = 15.0",
+        # Full 1080p software-rendered CI advances longer story spans more slowly.
+        # Keep every route/assertion, and allow the measured span to finish.
+        "        $ _test.timeout = 45.0",
         '        $ _test.screenshot_directory = "reports/screenshots"',
         "        $ preferences.text_cps = 0",
         '        pause until screen "main_menu"',
@@ -484,7 +486,13 @@ def render_tests(story):
               '    screenshot "native-choice"', '']
     first = lines.index('testcase route_01:')
     display = lines.index('testcase native_1080_and_scaled_window:')
-    return "\n".join(lines[:first] + lines[display:] + lines[first:display])
+    # A screen can exist during its menu dissolve; capture the settled view.
+    display_lines = []
+    for line in lines[display:]:
+        if line.strip().startswith('screenshot '):
+            display_lines.append('    pause 0.3')
+        display_lines.append(line)
+    return "\n".join(lines[:first] + display_lines + lines[first:display])
 
 
 def main():

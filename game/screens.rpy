@@ -638,7 +638,7 @@ screen file_slots(title):
 
                         has vbox
 
-                        add FileScreenshot(slot) xalign 0.5
+                        add FileScreenshot(slot, empty=Solid(gui.muted_color, xsize=gui.thumbnail_width, ysize=gui.thumbnail_height)) xalign 0.5
 
                         text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
                             style "slot_time_text"
@@ -701,6 +701,8 @@ style page_button_text:
 
 style slot_button:
     properties gui.button_properties("slot_button")
+    idle_background Solid("#173345cc")
+    hover_background Solid("#284b5de6")
 
 style slot_button_text:
     properties gui.text_properties("slot_button")
