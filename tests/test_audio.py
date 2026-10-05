@@ -62,6 +62,12 @@ class AudioTests(unittest.TestCase):
         self.asset['sha256'] = sha256(self.output.read_bytes())
         self.assertTrue(any('Undecodable audio' in error for error in self.check()))
 
+    def test_truncated_real_vorbis_is_rejected_even_with_updated_checksum(self):
+        encoded = self.output.read_bytes()
+        self.output.write_bytes(encoded[:len(encoded) // 2])
+        self.asset['sha256'] = sha256(self.output.read_bytes())
+        self.assertTrue(any('Undecodable audio' in error for error in self.check()))
+
     def test_silent_audio_is_rejected(self):
         sf.write(self.source, np.zeros(12000), 24000, subtype='PCM_16')
         self.assertTrue(any('Silent audio' in error for error in self.check()))

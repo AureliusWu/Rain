@@ -1,6 +1,7 @@
 """Extract and execute the standalone Windows EXE; wait for all native tests."""
 import argparse
 import json
+import re
 import shutil
 import subprocess
 import tempfile
@@ -8,6 +9,8 @@ import time
 from pathlib import Path
 import zipfile
 from PIL import Image
+from tools.compile_tests import render_persistence_tests
+from tools.story_model import load_story
 
 DEFAULT_TEST_TIMEOUT = 900
 
@@ -49,22 +52,83 @@ def run_native_tests(command, *, cwd, evidence, timeout):
         }, indent=2)+'\n', encoding='utf-8')
 
 
-def collect_runtime_evidence(exe, evidence):
+def collect_runtime_evidence(exe, evidence, screenshot_directory='reports/screenshots'):
     for log in ['log.txt', 'errors.txt', 'traceback.txt']:
         if (exe.parent / log).is_file():
             shutil.copy2(exe.parent / log, evidence / log)
-    screenshots = exe.parent / 'reports/screenshots'
+    screenshots = exe.parent / screenshot_directory
     if screenshots.exists():
         shutil.copytree(screenshots, evidence / 'screenshots', dirs_exist_ok=True)
     return screenshots
 
 
+def validate_native_report(output, test_source):
+    """A zero exit alone cannot establish that every authored test ran."""
+    cases = re.findall(r'^testcase ([a-zA-Z0-9_]+):', test_source, re.MULTILINE)
+    assertions = len(re.findall(r'^\s+assert ', test_source, re.MULTILINE))
+    if not cases or not assertions:
+        raise ValueError('Native test plan is empty')
+    for label, expected, tail in [('Test cases', len(cases), 5), ('Assertions', assertions, 3)]:
+        match = re.search(r'\[rpytest\]\s+' + label + r'\s*:\s*(\d+)\s*\|\s*(\d+) passed\s*\|' +
+                          r'\s*(\d+) xfailed\s*\|\s*(\d+) failed\s*\|\s*(\d+) xpassed\s*\|' +
+                          (r'\s*(\d+) skipped\s*\|\s*(\d+) not run' if tail == 5 else ''), output)
+        if not match or [int(x) for x in match.groups()] != [expected, expected] + [0] * tail:
+            raise ValueError(f'Native {label.lower()} summary is missing or incomplete; expected {expected} passed')
+    passed = set(re.findall(r'^\[rpytest\]\s+PASSED\s+([a-zA-Z0-9_]+)\s+-', output, re.MULTILINE))
+    if not set(cases).issubset(passed) or not re.search(r'\[rpytest\]\s+Status: PASSED\s*$', output, re.MULTILINE):
+        raise ValueError('Native test names or final PASSED status are missing')
+    return {'cases': len(cases), 'assertions': assertions, 'failed': 0, 'skipped': 0, 'not_run': 0}
+
+
+def required_screenshots(test_source):
+    names = set(re.findall(r'^\s+screenshot "([^"]+)"', test_source, re.MULTILINE))
+    # Independent acceptance landmarks also catch an accidentally omitted test.
+    if 'testcase late_save_load_true:' in test_source:
+        names.update('save-load-' + name for name in ('before-cg', 'letter-cg', 'chapter-four',
+                     'departure', 'shared-path', 'cafe-before-rain-stop', 'cafe-after-rain-stop', 'normal-ending'))
+        names.update(['rollback-letter-choice', 'rollback-rechoice-normal', 'restart-normal-ending',
+                      'auto-voice-in-progress', 'skip-final-choice'])
+    return sorted(names)
+
+
+def validate_screenshots(directory, required):
+    for name in required:
+        file = directory / (name + '.png')
+        if not file.is_file():
+            raise ValueError(f'Missing UI evidence: {name}')
+        try:
+            with Image.open(file) as image:
+                image.load()
+        except (OSError, ValueError) as exc:
+            raise ValueError(f'Undecodable UI evidence: {name}') from exc
+
+
+def validate_suite_evidence(output, test_source, screenshots, evidence):
+    summary = validate_native_report(output, test_source)
+    required = required_screenshots(test_source)
+    validate_screenshots(screenshots, required)
+    summary['screenshots_checked'] = len(required)
+    (evidence / 'acceptance.json').write_text(json.dumps(summary, indent=2) + '\n', encoding='utf-8')
+    return summary
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--zip", required=True, type=Path)
+    operation = parser.add_mutually_exclusive_group(required=True)
+    operation.add_argument('--zip', type=Path)
+    operation.add_argument('--report', type=Path, help='Verify source-suite output and screenshots')
     parser.add_argument('--timeout', type=positive_timeout, default=DEFAULT_TEST_TIMEOUT,
                         help='Seconds allowed for the complete native suite (default: 900)')
     args = parser.parse_args()
+    test_source = Path('game/testcases.rpy').read_text(encoding='utf-8')
+    if args.report:
+        try:
+            summary = validate_suite_evidence(args.report.read_text(encoding='utf-8-sig'), test_source,
+                                              Path('reports/screenshots'), Path('reports'))
+        except ValueError as exc:
+            raise SystemExit(str(exc)) from exc
+        print(f'Source native evidence accepted: {summary}')
+        return
     with tempfile.TemporaryDirectory(prefix="galgame-package-") as temp:
         destination = Path(temp)
         with zipfile.ZipFile(args.zip) as package:
@@ -89,28 +153,27 @@ def main():
         print(result.stderr)
         if result.returncode:
             raise SystemExit(result.returncode)
-        required = ["first-choice", "settings", "chapter-prologue", "chapter-today",
-                    "cg-letter", "branch-s04_open", "branch-s04_reserved", "revisit-choice",
-                    "audio-true-voice", "audio-normal-voice"] + ["expression-" + name for name in
-            ("normal", "smile", "happy", "sad", "angry", "surprised", "embarrassed")]
-        # Once these candidate backgrounds are registered, missing native views
-        # must block acceptance even if a generation bug omits their assertions.
-        manifest = json.loads(Path('game/data/asset_manifest.json').read_text(encoding='utf-8'))
-        backgrounds = {asset['id'] for asset in manifest['assets'] if asset['type'] == 'background'}
-        required += [name for asset, name in (
-            ('station_exit_covered', 'bg-exit-covered'),
-            ('station_exit_after_rain', 'bg-exit-after-rain'),
-            ('station_exit_after_rain', 'bg-s05_shared_path'),
-            ('station_exit_after_rain', 'bg-s05_separate_path'),
-            ('nearby_cafe', 'bg-nearby-cafe'),
-        ) if asset in backgrounds]
-        for name in required:
-            file = screenshots / (name + ".png")
-            if not file.is_file():
-                raise SystemExit(f"Standalone EXE is missing UI evidence: {name}")
-            with Image.open(file) as image:
-                image.load()  # A present but truncated PNG is not usable evidence.
-        print("Standalone Windows EXE: test process completed and UI evidence exists.")
+        try:
+            summary = validate_suite_evidence(result.stdout, test_source, screenshots, evidence)
+            # Reuse the same extracted EXE and save directory in a new process.
+            reader = render_persistence_tests(load_story())
+            (game / 'testcases.rpy').write_text(reader, encoding='utf-8')
+            (game / 'testcases.rpyc').unlink(missing_ok=True)
+            restart_evidence = evidence / 'persistence'
+            try:
+                result = run_native_tests([str(exe), str(exe.parent), 'test', 'global', '--report-detailed',
+                    '--overwrite-screenshots', '--savedir', str(destination / 'saves')],
+                    cwd=exe.parent, evidence=restart_evidence, timeout=args.timeout)
+            finally:
+                screenshots = collect_runtime_evidence(exe, restart_evidence, 'reports/persistence-screenshots')
+            print(result.stdout)
+            print(result.stderr)
+            if result.returncode:
+                raise SystemExit(result.returncode)
+            restarted = validate_suite_evidence(result.stdout, reader, screenshots, restart_evidence)
+        except ValueError as exc:
+            raise SystemExit(str(exc)) from exc
+        print(f'Standalone Windows EXE accepted: {summary}; fresh-process load: {restarted}')
 
 
 if __name__ == "__main__":

@@ -2,7 +2,7 @@
 
 一部可离线游玩的中文 Ren'Py 视觉小说。雨夜的旧车站，两位久未联系的旧友，和一封没有寄出的信。
 
-main 当前为 **v0.7.0 完整短篇 Alpha 候选**：六章、24 个叙事场景与 2 个状态路由、4 次关键选择、16 条路线、Normal / True 两个完整候选结局。包含七种女主表情、雨夜站台与新增三个场景背景、旧信 CG、17 句 AI 关键语音、3 首原创程序音乐、两种雨声和纸张／消息音效。主题、成年女主许澄和画风仍待用户最终审阅。
+main 当前为 **v0.8.0 回归 Beta 开发候选**：六章、24 个叙事场景与 2 个状态路由、4 次关键选择、16 条路线、Normal / True 两个完整候选结局。包含七种女主表情、雨夜站台与新增三个场景背景、旧信 CG、17 句 AI 关键语音、3 首原创程序音乐、两种雨声和纸张／消息音效。主题、成年女主许澄和画风仍待用户最终审阅。
 
 正文全分支 15,206 字符，单路线 11,404–11,744 字符（包含标点，菜单单列）。仅文字阅读按每分钟 250–350 字符估算约 32–47 分钟；真人完整阅读、听感与普通电脑试玩尚未验收。统计见 [路线报告](docs/STORY_STATS_V07.md)。
 
@@ -47,7 +47,7 @@ $sdk = ".runtime/renpy-8.5.3-sdk"
 & "$sdk/lib/py3-windows-x86_64/python.exe" "$sdk/renpy.py" . lint --error-code --all-problems
 & "$sdk/lib/py3-windows-x86_64/python.exe" "$sdk/renpy.py" . test global --report-detailed --overwrite-screenshots
 python -m tools.build.package --sdk $sdk
-python -m tools.build.verify_package --zip dist/BeforeTheRainStops-0.7.0-win.zip --timeout 900
+python -m tools.build.verify_package --zip dist/BeforeTheRainStops-0.8.0-win.zip --timeout 900
 ```
 
 Linux/macOS 可用 SDK 的 `renpy.sh` 运行 lint/test。Linux 无桌面时需要 Xvfb。Windows Actions 先做数据校验与原生交互测试，再构建 ZIP，直接启动解压后的独立 EXE 重跑测试。main 成功后仅上传候选与证据，附 SHA256SUMS；手动发布入口重验选定提交和版本后才创建预发行 Release。
@@ -73,7 +73,7 @@ Linux/macOS 可用 SDK 的 `renpy.sh` 运行 lint/test。Linux 无桌面时需�
 
 v0.6 新增 11 句配音与 5 个程序音频，17 句合计 58.048 秒。音乐随旧信、回忆和离站切换，雨声逐渐减弱并在剧情指定台词处淡出。24 个游戏音频及源 WAV 均完整解码并测量；重复执行制作工具保留已有文件。流程、接入位置和试听范围见 [v0.6 音频操作文档](docs/AUDIO_V06.md)。
 
-六章、16 条路线及两个结局已完成 Alpha 正文，说明见 [场景 Outline](docs/STORY_OUTLINE_V07.md) 与 [路线审阅](docs/STORY_REVIEW_V07.md)。候选技术验收已完成，v0.8 [回归覆盖表](docs/REGRESSION_COVERAGE_V08.md) 已建立，接下来补后半段存读档、回退与自动语音衔接；真人计时与试听继续待办。重大剧情和最终美术继续由用户决定。大系统保持在 [Future Ideas](docs/FUTURE_IDEAS.md)。
+六章、16 条路线及两个结局已完成 Alpha 正文，说明见 [场景 Outline](docs/STORY_OUTLINE_V07.md) 与 [路线审阅](docs/STORY_REVIEW_V07.md)。v0.7 候选技术验收已完成，v0.8 已补后半段存读档、回退改选、连续结局、自动语音衔接与重新启动 EXE 后读档，正在执行 Windows 验收。真人计时、试听、创作审阅和普通电脑试玩由用户后续统一完成，见 [后续清单](docs/HUMAN_HANDOFF.md)。重大剧情和最终美术继续由用户决定。大系统保持在 [Future Ideas](docs/FUTURE_IDEAS.md)。
 
 [版本路线](ROADMAP.md) 与 [v0.7–v1.0 执行计划](docs/RELEASE_PLAN_V07_V10.md) 列出完整剧情、回归加固、1080p 适配和正式发布的范围、依赖与验收。[v0.6.0 已发布](https://github.com/AureliusWu/Test/releases/tag/v0.6.0)：Windows 源码和独立 EXE 各通过 24 个用例 / 151 个断言，无失败或跳过。
 

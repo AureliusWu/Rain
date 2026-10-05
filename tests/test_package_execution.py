@@ -4,7 +4,8 @@ import subprocess
 import sys
 import tempfile
 import unittest
-from tools.build.verify_package import run_native_tests, collect_runtime_evidence
+from PIL import Image
+from tools.build.verify_package import run_native_tests, collect_runtime_evidence, validate_native_report, validate_screenshots
 
 
 class NativeProcessEvidenceTests(unittest.TestCase):
@@ -42,3 +43,49 @@ class NativeProcessEvidenceTests(unittest.TestCase):
             self.assertEqual(result.returncode, 7)
             self.assertEqual(json.loads((evidence/'process.json').read_text())['returncode'], 7)
             self.assertIn('native failure', (evidence/'stderr.txt').read_text())
+
+
+class NativeAcceptanceTests(unittest.TestCase):
+    source = 'testcase route_01:\n    assert eval last_ending == "true"\n'
+    report = '''[rpytest] PASSED route_01 - (1.0 s)
+[rpytest] Test cases : 1 | 1 passed | 0 xfailed | 0 failed | 0 xpassed | 0 skipped | 0 not run
+[rpytest] Assertions : 1 | 1 passed | 0 xfailed | 0 failed | 0 xpassed |
+[rpytest] Status: PASSED
+'''
+
+    def test_native_summary_requires_every_expected_case_and_assertion(self):
+        result = validate_native_report(self.report, self.source)
+        self.assertEqual((result['cases'], result['assertions']), (1, 1))
+        for report in [self.report.replace('1 | 1 passed', '0 | 0 passed'),
+                       self.report.replace('0 skipped', '1 skipped'),
+                       self.report.replace('0 not run', '1 not run'),
+                       self.report.replace('PASSED route_01', 'PASSED another_case'),
+                       self.report.replace('Status: PASSED', 'Status: FAILED'), '']:
+            with self.subTest(report=report), self.assertRaises(ValueError):
+                validate_native_report(report, self.source)
+
+    def test_missing_screenshot_is_rejected(self):
+        with tempfile.TemporaryDirectory() as temp:
+            with self.assertRaisesRegex(ValueError, 'Missing UI evidence: late-load'):
+                validate_screenshots(Path(temp), ['late-load'])
+
+    def test_present_but_truncated_screenshot_is_rejected(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            file = root / 'late-load.png'
+            Image.new('RGB', (128, 128), '#112233').save(file)
+            validate_screenshots(root, ['late-load'])
+            data = file.read_bytes()
+            file.write_bytes(data[:len(data)//2])
+            with self.assertRaisesRegex(ValueError, 'Undecodable UI evidence: late-load'):
+                validate_screenshots(root, ['late-load'])
+
+    def test_incomplete_native_report_returns_nonzero_from_cli(self):
+        project = Path(__file__).resolve().parents[1]
+        with tempfile.TemporaryDirectory() as temp:
+            report = Path(temp) / 'source-tests.txt'
+            report.write_text('[rpytest] Status: PASSED\n')
+            result = subprocess.run([sys.executable, '-m', 'tools.build.verify_package', '--report', str(report)],
+                                    cwd=project, capture_output=True, text=True, timeout=10)
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn('summary is missing or incomplete', result.stderr)

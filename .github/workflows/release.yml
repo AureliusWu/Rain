@@ -63,6 +63,8 @@ jobs:
           New-Item -ItemType Directory -Force reports | Out-Null
           & .\.runtime\renpy-8.5.3-sdk\lib\py3-windows-x86_64\python.exe .\.runtime\renpy-8.5.3-sdk\renpy.py . test global --report-detailed --overwrite-screenshots --savedir "$env:RUNNER_TEMP\renpy-source-saves" 2>&1 | Tee-Object -FilePath reports/source-tests.txt
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python -m tools.build.verify_package --report reports/source-tests.txt
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Build standalone Windows ZIP
         run: |
           python -m tools.build.package --sdk .\.runtime\renpy-8.5.3-sdk

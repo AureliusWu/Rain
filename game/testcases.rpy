@@ -573,3 +573,480 @@ testcase audio_normal_ending:
     advance until screen "ending_card"
     pause until eval renpy.music.get_playing(channel="music") is None
     assert eval renpy.music.get_playing(channel="music") is None
+
+testcase late_save_load_true:
+    advance until screen "choice"
+    click "把干燥的位置让给她，问候近况"
+    advance until "不在。所以我才想先问你。"
+    pause until eval renpy.music.get_playing(channel="music") == 'audio/bgm/rain_theme.ogg'
+    pause until eval renpy.music.get_playing(channel="ambient") == 'audio/sfx/rain_ambience.ogg'
+    assert eval current_scene == 's02_boxes' and current_chapter == 'ch01'
+    assert eval visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes']
+    assert eval affection == 1 and trust == 1 and truth_known == False
+    assert eval last_ending == ""
+    assert eval renpy.showing('backgrounds/station_rain.png')
+    assert eval renpy.get_attributes('heroine') == ('normal',)
+    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/rain_theme.ogg'
+    assert eval renpy.music.get_playing(channel='ambient') == 'audio/sfx/rain_ambience.ogg'
+    $ renpy.unlink_save("1-1")
+    click id "save_open"
+    pause until screen "save"
+    click id "slot_1"
+    assert eval renpy.can_load("1-1")
+    click id "game_return"
+    advance
+    $ affection = -99
+    $ trust = -99
+    $ truth_known = False
+    $ renpy.show("heroine angry", at_list=[heroine_position])
+    $ renpy.music.stop(channel="music")
+    $ renpy.music.stop(channel="ambient")
+    assert eval affection == -99 and trust == -99
+    click id "load_open"
+    pause until screen "load"
+    click id "slot_1"
+    if screen "confirm":
+        click id "confirm_yes"
+    pause until "不在。所以我才想先问你。"
+    pause until eval renpy.music.get_playing(channel="music") == 'audio/bgm/rain_theme.ogg'
+    pause until eval renpy.music.get_playing(channel="ambient") == 'audio/sfx/rain_ambience.ogg'
+    assert eval current_scene == 's02_boxes' and current_chapter == 'ch01'
+    assert eval visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes']
+    assert eval affection == 1 and trust == 1 and truth_known == False
+    assert eval last_ending == ""
+    assert eval renpy.showing('backgrounds/station_rain.png')
+    assert eval renpy.get_attributes('heroine') == ('normal',)
+    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/rain_theme.ogg'
+    assert eval renpy.music.get_playing(channel='ambient') == 'audio/sfx/rain_ambience.ogg'
+    pause 0.2
+    screenshot "save-load-before-cg"
+    advance until "还有一样东西，应该也是你的。"
+    pause until eval renpy.music.get_playing(channel="music") == 'audio/bgm/unspoken_theme.ogg'
+    pause until eval renpy.music.get_playing(channel="ambient") == 'audio/sfx/rain_ambience.ogg'
+    assert eval current_scene == 's03_letter' and current_chapter == 'ch02'
+    assert eval visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter']
+    assert eval affection == 1 and trust == 1 and truth_known == False
+    assert eval last_ending == ""
+    assert eval renpy.showing('cg/unsent_letter.png')
+    assert eval not renpy.showing("heroine")
+    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/unspoken_theme.ogg'
+    assert eval renpy.music.get_playing(channel='ambient') == 'audio/sfx/rain_ambience.ogg'
+    $ renpy.unlink_save("1-1")
+    click id "save_open"
+    pause until screen "save"
+    click id "slot_1"
+    assert eval renpy.can_load("1-1")
+    click id "game_return"
+    advance
+    $ affection = -99
+    $ trust = -99
+    $ truth_known = False
+    $ renpy.show("heroine angry", at_list=[heroine_position])
+    $ renpy.music.stop(channel="music")
+    $ renpy.music.stop(channel="ambient")
+    assert eval affection == -99 and trust == -99
+    click id "load_open"
+    pause until screen "load"
+    click id "slot_1"
+    if screen "confirm":
+        click id "confirm_yes"
+    pause until "还有一样东西，应该也是你的。"
+    pause until eval renpy.music.get_playing(channel="music") == 'audio/bgm/unspoken_theme.ogg'
+    pause until eval renpy.music.get_playing(channel="ambient") == 'audio/sfx/rain_ambience.ogg'
+    assert eval current_scene == 's03_letter' and current_chapter == 'ch02'
+    assert eval visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter']
+    assert eval affection == 1 and trust == 1 and truth_known == False
+    assert eval last_ending == ""
+    assert eval renpy.showing('cg/unsent_letter.png')
+    assert eval not renpy.showing("heroine")
+    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/unspoken_theme.ogg'
+    assert eval renpy.music.get_playing(channel='ambient') == 'audio/sfx/rain_ambience.ogg'
+    pause 0.2
+    screenshot "save-load-letter-cg"
+    advance until screen "choice"
+    click "告诉她：这封信是我写的"
+    advance until "另一张照片，是什么时候拍的？"
+    pause until eval renpy.music.get_playing(channel="music") == 'audio/bgm/rain_theme.ogg'
+    pause until eval renpy.music.get_playing(channel="ambient") == 'audio/sfx/rain_ambience.ogg'
+    assert eval current_scene == 's04_memory' and current_chapter == 'ch04'
+    assert eval visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter', 's03_honest', 's03_archive', 's04_gate', 's04_open', 's04_waiting', 's04_memory']
+    assert eval affection == 1 and trust == 2 and truth_known == True
+    assert eval last_ending == ""
+    assert eval renpy.showing('backgrounds/station_exit_covered.png')
+    assert eval renpy.get_attributes('heroine') == ('normal',)
+    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/rain_theme.ogg'
+    assert eval renpy.music.get_playing(channel='ambient') == 'audio/sfx/rain_ambience.ogg'
+    $ renpy.unlink_save("1-1")
+    click id "save_open"
+    pause until screen "save"
+    click id "slot_1"
+    assert eval renpy.can_load("1-1")
+    click id "game_return"
+    advance
+    $ affection = -99
+    $ trust = -99
+    $ truth_known = False
+    $ renpy.show("heroine angry", at_list=[heroine_position])
+    $ renpy.music.stop(channel="music")
+    $ renpy.music.stop(channel="ambient")
+    assert eval affection == -99 and trust == -99
+    click id "load_open"
+    pause until screen "load"
+    click id "slot_1"
+    if screen "confirm":
+        click id "confirm_yes"
+    pause until "另一张照片，是什么时候拍的？"
+    pause until eval renpy.music.get_playing(channel="music") == 'audio/bgm/rain_theme.ogg'
+    pause until eval renpy.music.get_playing(channel="ambient") == 'audio/sfx/rain_ambience.ogg'
+    assert eval current_scene == 's04_memory' and current_chapter == 'ch04'
+    assert eval visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter', 's03_honest', 's03_archive', 's04_gate', 's04_open', 's04_waiting', 's04_memory']
+    assert eval affection == 1 and trust == 2 and truth_known == True
+    assert eval last_ending == ""
+    assert eval renpy.showing('backgrounds/station_exit_covered.png')
+    assert eval renpy.get_attributes('heroine') == ('normal',)
+    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/rain_theme.ogg'
+    assert eval renpy.music.get_playing(channel='ambient') == 'audio/sfx/rain_ambience.ogg'
+    pause 0.2
+    screenshot "save-load-chapter-four"
+    advance until screen "choice"
+    click "把信里的意思和今天的打算说清楚"
+    advance until "雨小了一些。出口的保安敲了敲玻璃，示意我们该收东西了。"
+    pause until eval renpy.music.get_playing(channel="music") == 'audio/bgm/next_message_theme.ogg'
+    pause until eval renpy.music.get_playing(channel="ambient") == 'audio/sfx/rain_light_ambience.ogg'
+    assert eval current_scene == 's05_departure' and current_chapter == 'ch05'
+    assert eval visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter', 's03_honest', 's03_archive', 's04_gate', 's04_open', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_repair', 's05_departure']
+    assert eval affection == 2 and trust == 4 and truth_known == True
+    assert eval last_ending == ""
+    assert eval renpy.showing('backgrounds/station_exit_covered.png')
+    assert eval renpy.get_attributes('heroine') == ('normal',)
+    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/next_message_theme.ogg'
+    assert eval renpy.music.get_playing(channel='ambient') == 'audio/sfx/rain_light_ambience.ogg'
+    $ renpy.unlink_save("1-1")
+    click id "save_open"
+    pause until screen "save"
+    click id "slot_1"
+    assert eval renpy.can_load("1-1")
+    click id "game_return"
+    advance
+    $ affection = -99
+    $ trust = -99
+    $ truth_known = False
+    $ renpy.show("heroine angry", at_list=[heroine_position])
+    $ renpy.music.stop(channel="music")
+    $ renpy.music.stop(channel="ambient")
+    assert eval affection == -99 and trust == -99
+    click id "load_open"
+    pause until screen "load"
+    click id "slot_1"
+    if screen "confirm":
+        click id "confirm_yes"
+    pause until "雨小了一些。出口的保安敲了敲玻璃，示意我们该收东西了。"
+    pause until eval renpy.music.get_playing(channel="music") == 'audio/bgm/next_message_theme.ogg'
+    pause until eval renpy.music.get_playing(channel="ambient") == 'audio/sfx/rain_light_ambience.ogg'
+    assert eval current_scene == 's05_departure' and current_chapter == 'ch05'
+    assert eval visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter', 's03_honest', 's03_archive', 's04_gate', 's04_open', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_repair', 's05_departure']
+    assert eval affection == 2 and trust == 4 and truth_known == True
+    assert eval last_ending == ""
+    assert eval renpy.showing('backgrounds/station_exit_covered.png')
+    assert eval renpy.get_attributes('heroine') == ('normal',)
+    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/next_message_theme.ogg'
+    assert eval renpy.music.get_playing(channel='ambient') == 'audio/sfx/rain_light_ambience.ogg'
+    pause 0.2
+    screenshot "save-load-departure"
+    advance until screen "choice"
+    click "和她一起走，继续聊一会儿"
+    advance until "纸箱底角擦过椅背，响了一声。我检查胶带有没有贴牢，握稳左手的伞，许澄绕过那块松动的地砖。"
+    pause until eval renpy.music.get_playing(channel="music") == 'audio/bgm/next_message_theme.ogg'
+    pause until eval renpy.music.get_playing(channel="ambient") == 'audio/sfx/rain_light_ambience.ogg'
+    assert eval current_scene == 's05_shared_path' and current_chapter == 'ch05'
+    assert eval visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter', 's03_honest', 's03_archive', 's04_gate', 's04_open', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_repair', 's05_departure', 's05_shared_path']
+    assert eval affection == 3 and trust == 4 and truth_known == True
+    assert eval last_ending == ""
+    assert eval renpy.showing('backgrounds/station_exit_after_rain.png')
+    assert eval renpy.get_attributes('heroine') == ('normal',)
+    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/next_message_theme.ogg'
+    assert eval renpy.music.get_playing(channel='ambient') == 'audio/sfx/rain_light_ambience.ogg'
+    $ renpy.unlink_save("1-1")
+    click id "save_open"
+    pause until screen "save"
+    click id "slot_1"
+    assert eval renpy.can_load("1-1")
+    click id "game_return"
+    advance
+    $ affection = -99
+    $ trust = -99
+    $ truth_known = False
+    $ renpy.show("heroine angry", at_list=[heroine_position])
+    $ renpy.music.stop(channel="music")
+    $ renpy.music.stop(channel="ambient")
+    assert eval affection == -99 and trust == -99
+    click id "load_open"
+    pause until screen "load"
+    click id "slot_1"
+    if screen "confirm":
+        click id "confirm_yes"
+    pause until "纸箱底角擦过椅背，响了一声。我检查胶带有没有贴牢，握稳左手的伞，许澄绕过那块松动的地砖。"
+    pause until eval renpy.music.get_playing(channel="music") == 'audio/bgm/next_message_theme.ogg'
+    pause until eval renpy.music.get_playing(channel="ambient") == 'audio/sfx/rain_light_ambience.ogg'
+    assert eval current_scene == 's05_shared_path' and current_chapter == 'ch05'
+    assert eval visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter', 's03_honest', 's03_archive', 's04_gate', 's04_open', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_repair', 's05_departure', 's05_shared_path']
+    assert eval affection == 3 and trust == 4 and truth_known == True
+    assert eval last_ending == ""
+    assert eval renpy.showing('backgrounds/station_exit_after_rain.png')
+    assert eval renpy.get_attributes('heroine') == ('normal',)
+    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/next_message_theme.ogg'
+    assert eval renpy.music.get_playing(channel='ambient') == 'audio/sfx/rain_light_ambience.ogg'
+    pause 0.2
+    screenshot "save-load-shared-path"
+    advance until "推开小店的门，暖气带着水汽迎过来。纸箱有一半，一直留在干燥的地方。"
+    pause until eval renpy.music.get_playing(channel="music") == 'audio/bgm/next_message_theme.ogg'
+    pause until eval renpy.music.get_playing(channel="ambient") == 'audio/sfx/rain_light_ambience.ogg'
+    assert eval current_scene == 's07_true' and current_chapter == 'ch05'
+    assert eval visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter', 's03_honest', 's03_archive', 's04_gate', 's04_open', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_repair', 's05_departure', 's05_shared_path', 's06_resolution', 's07_true']
+    assert eval affection == 3 and trust == 4 and truth_known == True
+    assert eval last_ending == ""
+    assert eval renpy.showing('backgrounds/nearby_cafe.png')
+    assert eval renpy.get_attributes('heroine') == ('smile',)
+    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/next_message_theme.ogg'
+    assert eval renpy.music.get_playing(channel='ambient') == 'audio/sfx/rain_light_ambience.ogg'
+    $ renpy.unlink_save("1-1")
+    click id "save_open"
+    pause until screen "save"
+    click id "slot_1"
+    assert eval renpy.can_load("1-1")
+    click id "game_return"
+    advance
+    $ affection = -99
+    $ trust = -99
+    $ truth_known = False
+    $ renpy.show("heroine angry", at_list=[heroine_position])
+    $ renpy.music.stop(channel="music")
+    $ renpy.music.stop(channel="ambient")
+    assert eval affection == -99 and trust == -99
+    click id "load_open"
+    pause until screen "load"
+    click id "slot_1"
+    if screen "confirm":
+        click id "confirm_yes"
+    pause until "推开小店的门，暖气带着水汽迎过来。纸箱有一半，一直留在干燥的地方。"
+    pause until eval renpy.music.get_playing(channel="music") == 'audio/bgm/next_message_theme.ogg'
+    pause until eval renpy.music.get_playing(channel="ambient") == 'audio/sfx/rain_light_ambience.ogg'
+    assert eval current_scene == 's07_true' and current_chapter == 'ch05'
+    assert eval visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter', 's03_honest', 's03_archive', 's04_gate', 's04_open', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_repair', 's05_departure', 's05_shared_path', 's06_resolution', 's07_true']
+    assert eval affection == 3 and trust == 4 and truth_known == True
+    assert eval last_ending == ""
+    assert eval renpy.showing('backgrounds/nearby_cafe.png')
+    assert eval renpy.get_attributes('heroine') == ('smile',)
+    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/next_message_theme.ogg'
+    assert eval renpy.music.get_playing(channel='ambient') == 'audio/sfx/rain_light_ambience.ogg'
+    pause 0.2
+    screenshot "save-load-cafe-before-rain-stop"
+    advance until "小店的灯还亮着。桌上有水杯、纸巾，和一碟并不特别好吃的饼干。我们坐下，没有谁急着给今晚取名字。"
+    pause until eval renpy.music.get_playing(channel="music") == 'audio/bgm/next_message_theme.ogg'
+    pause until eval renpy.music.get_playing(channel="ambient") == None
+    assert eval current_scene == 's07_true' and current_chapter == 'ch05'
+    assert eval visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter', 's03_honest', 's03_archive', 's04_gate', 's04_open', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_repair', 's05_departure', 's05_shared_path', 's06_resolution', 's07_true']
+    assert eval affection == 3 and trust == 4 and truth_known == True
+    assert eval last_ending == ""
+    assert eval renpy.showing('backgrounds/nearby_cafe.png')
+    assert eval renpy.get_attributes('heroine') == ('smile',)
+    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/next_message_theme.ogg'
+    assert eval renpy.music.get_playing(channel='ambient') == None
+    $ renpy.unlink_save("1-2")
+    click id "save_open"
+    pause until screen "save"
+    click id "slot_2"
+    assert eval renpy.can_load("1-2")
+    click id "game_return"
+    advance
+    $ affection = -99
+    $ trust = -99
+    $ truth_known = False
+    $ renpy.show("heroine angry", at_list=[heroine_position])
+    $ renpy.music.stop(channel="music")
+    $ renpy.music.stop(channel="ambient")
+    assert eval affection == -99 and trust == -99
+    click id "load_open"
+    pause until screen "load"
+    click id "slot_2"
+    if screen "confirm":
+        click id "confirm_yes"
+    pause until "小店的灯还亮着。桌上有水杯、纸巾，和一碟并不特别好吃的饼干。我们坐下，没有谁急着给今晚取名字。"
+    pause until eval renpy.music.get_playing(channel="music") == 'audio/bgm/next_message_theme.ogg'
+    pause until eval renpy.music.get_playing(channel="ambient") == None
+    assert eval current_scene == 's07_true' and current_chapter == 'ch05'
+    assert eval visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter', 's03_honest', 's03_archive', 's04_gate', 's04_open', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_repair', 's05_departure', 's05_shared_path', 's06_resolution', 's07_true']
+    assert eval affection == 3 and trust == 4 and truth_known == True
+    assert eval last_ending == ""
+    assert eval renpy.showing('backgrounds/nearby_cafe.png')
+    assert eval renpy.get_attributes('heroine') == ('smile',)
+    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/next_message_theme.ogg'
+    assert eval renpy.music.get_playing(channel='ambient') == None
+    pause 0.2
+    screenshot "save-load-cafe-after-rain-stop"
+    advance until screen "ending_card"
+    assert eval last_ending == "true"
+
+testcase late_save_load_normal:
+    advance until screen "choice"
+    click "把干燥的位置让给她，问候近况"
+    advance until screen "choice"
+    click "告诉她：这封信是我写的"
+    advance until screen "choice"
+    click "把信里的意思和今天的打算说清楚"
+    advance until screen "choice"
+    click "今晚先各自回去，改天再联系"
+    advance until "道别以后，我站在车站外，看着最后几滴雨落进路边的积水。旧箱子靠着腿，信封还放在口袋里。"
+    pause until eval renpy.music.get_playing(channel="music") == 'audio/bgm/next_message_theme.ogg'
+    pause until eval renpy.music.get_playing(channel="ambient") == 'audio/sfx/rain_light_ambience.ogg'
+    assert eval current_scene == 's08_normal' and current_chapter == 'ch05'
+    assert eval visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter', 's03_honest', 's03_archive', 's04_gate', 's04_open', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_repair', 's05_departure', 's05_separate_path', 's08_normal']
+    assert eval affection == 2 and trust == 3 and truth_known == True
+    assert eval last_ending == ""
+    assert eval renpy.showing('backgrounds/station_exit_after_rain.png')
+    assert eval not renpy.showing("heroine")
+    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/next_message_theme.ogg'
+    assert eval renpy.music.get_playing(channel='ambient') == 'audio/sfx/rain_light_ambience.ogg'
+    $ renpy.unlink_save("1-1")
+    click id "save_open"
+    pause until screen "save"
+    click id "slot_1"
+    assert eval renpy.can_load("1-1")
+    click id "game_return"
+    advance
+    $ affection = -99
+    $ trust = -99
+    $ truth_known = False
+    $ renpy.show("heroine angry", at_list=[heroine_position])
+    $ renpy.music.stop(channel="music")
+    $ renpy.music.stop(channel="ambient")
+    assert eval affection == -99 and trust == -99
+    click id "load_open"
+    pause until screen "load"
+    click id "slot_1"
+    if screen "confirm":
+        click id "confirm_yes"
+    pause until "道别以后，我站在车站外，看着最后几滴雨落进路边的积水。旧箱子靠着腿，信封还放在口袋里。"
+    pause until eval renpy.music.get_playing(channel="music") == 'audio/bgm/next_message_theme.ogg'
+    pause until eval renpy.music.get_playing(channel="ambient") == 'audio/sfx/rain_light_ambience.ogg'
+    assert eval current_scene == 's08_normal' and current_chapter == 'ch05'
+    assert eval visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter', 's03_honest', 's03_archive', 's04_gate', 's04_open', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_repair', 's05_departure', 's05_separate_path', 's08_normal']
+    assert eval affection == 2 and trust == 3 and truth_known == True
+    assert eval last_ending == ""
+    assert eval renpy.showing('backgrounds/station_exit_after_rain.png')
+    assert eval not renpy.showing("heroine")
+    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/next_message_theme.ogg'
+    assert eval renpy.music.get_playing(channel='ambient') == 'audio/sfx/rain_light_ambience.ogg'
+    pause 0.2
+    screenshot "save-load-normal-ending"
+    advance until screen "ending_card"
+    assert eval last_ending == "normal"
+
+testcase rollback_rechoice:
+    advance until screen "choice"
+    click "把干燥的位置让给她，问候近况"
+    advance until screen "choice"
+    click "告诉她：这封信是我写的"
+    pause until "是我写给你的。出发前一天。"
+    assert eval truth_known and affection == 1 and trust == 2
+    click id "rollback_run"
+    pause until screen "choice"
+    assert eval not truth_known and affection == 1 and trust == 1
+    assert eval current_scene == "s03_letter" and "s03_honest" not in visited_scenes
+    assert eval not renpy.showing("heroine")
+    screenshot "rollback-letter-choice"
+    advance until screen "choice"
+    click "先收好信，暂时不解释"
+    advance until screen "choice"
+    click "先约定下一次联系，旧事慢慢谈"
+    advance until screen "choice"
+    click "和她一起走，继续聊一会儿"
+    advance until screen "ending_card"
+    assert eval last_ending == "normal"
+    assert eval visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter', 's03_deferred', 's03_archive', 's04_gate', 's04_reserved', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_concrete', 's05_departure', 's05_shared_path', 's06_resolution', 's08_normal']
+    assert eval not truth_known and affection == 2 and trust == 1
+    screenshot "rollback-rechoice-normal"
+
+testcase restart_true_then_normal:
+    advance until screen "choice"
+    click "把干燥的位置让给她，问候近况"
+    advance until screen "choice"
+    click "告诉她：这封信是我写的"
+    advance until screen "choice"
+    click "把信里的意思和今天的打算说清楚"
+    advance until screen "choice"
+    click "和她一起走，继续聊一会儿"
+    advance until screen "ending_card"
+    assert eval last_ending == "true"
+    click id "ending_return"
+    pause until screen "main_menu"
+    click id "menu_start"
+    advance until screen "choice"
+    assert eval affection == 0 and trust == 0 and not truth_known and last_ending == ""
+    assert eval visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion']
+    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/rain_theme.ogg'
+    assert eval renpy.music.get_playing(channel='ambient') == 'audio/sfx/rain_ambience.ogg'
+    advance until screen "choice"
+    click "把干燥的位置让给她，问候近况"
+    advance until screen "choice"
+    click "告诉她：这封信是我写的"
+    advance until screen "choice"
+    click "把信里的意思和今天的打算说清楚"
+    advance until screen "choice"
+    click "今晚先各自回去，改天再联系"
+    advance until screen "ending_card"
+    assert eval last_ending == "normal"
+    assert eval visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter', 's03_honest', 's03_archive', 's04_gate', 's04_open', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_repair', 's05_departure', 's05_separate_path', 's08_normal']
+    assert eval affection == 2 and trust == 3 and truth_known
+    assert eval not renpy.showing("heroine")
+    screenshot "restart-normal-ending"
+
+testcase auto_waits_for_voice:
+    $ preferences.wait_voice = True
+    $ preferences.afm_time = 0.1
+    advance until "你还是和以前一样，出门不看天气。"
+    assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
+    $ test_history_length = len(_history_list)
+    click id "auto_run"
+    assert eval preferences.afm_enable
+    pause 0.5
+    assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
+    assert eval len(_history_list) == test_history_length
+    screenshot "auto-voice-in-progress"
+    pause until eval len(_history_list) > test_history_length
+    assert eval renpy.music.get_playing(channel="voice") is None
+    assert eval len(_history_list) == test_history_length + 1
+    click id "auto_run"
+    assert eval not preferences.afm_enable
+    $ preferences.afm_time = 15.0
+
+testcase skip_stops_at_later_choices:
+    $ preferences.skip_unseen = True
+    $ preferences.skip_after_choices = False
+    click id "skip_run"
+    pause until screen "choice"
+    assert eval config.skipping is None
+    assert "把干燥的位置让给她，问候近况"
+    click "把干燥的位置让给她，问候近况"
+    advance
+    click id "skip_run"
+    pause until screen "choice"
+    assert eval config.skipping is None
+    assert "告诉她：这封信是我写的"
+    click "告诉她：这封信是我写的"
+    advance
+    click id "skip_run"
+    pause until screen "choice"
+    assert eval config.skipping is None
+    assert "把信里的意思和今天的打算说清楚"
+    click "把信里的意思和今天的打算说清楚"
+    advance
+    click id "skip_run"
+    pause until screen "choice"
+    assert eval config.skipping is None
+    assert "和她一起走，继续聊一会儿"
+    screenshot "skip-final-choice"
+    click "和她一起走，继续聊一会儿"
+    advance
+    $ preferences.skip_unseen = False
+    $ config.skipping = None

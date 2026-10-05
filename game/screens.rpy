@@ -244,7 +244,7 @@ screen quick_menu():
             xalign 0.5
             yalign 1.0
 
-            textbutton _("Back") action Rollback()
+            textbutton _("Back") id "rollback_run" action Rollback()
             textbutton _("History") id "history_open" action ShowMenu('history')
             textbutton _("Skip") id "skip_run" action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Auto") id "auto_run" action Preference("auto-forward", "toggle")
@@ -366,7 +366,7 @@ screen main_menu():
             text "[config.name!t]":
                 style "main_menu_title"
 
-            text _("可玩样片 v[config.version]"):
+            text _("可玩候选 v[config.version]"):
                 style "main_menu_version"
 
 

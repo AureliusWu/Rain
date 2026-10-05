@@ -1,8 +1,63 @@
 """Generate Ren'Py interaction tests from the actual graph's route witnesses."""
 import argparse
 import json
-from tools.story_model import ROOT, load_story, enumerate_routes, scene_lines
+from tools.story_model import ROOT, load_story, enumerate_routes, scene_lines, apply_effects
 from tools.compile_story import quote
+
+
+def checkpoint_assertions(story, route, line_id, selected, background, expression, music, ambient):
+    """Expected authored state at a line, independent of the saved runtime state."""
+    node = next(n for n in story['nodes'] if any(x['id'] == line_id for x in scene_lines(n)))
+    choices = {c['id']: c for n in story['nodes'] for c in n.get('choices', [])}
+    state = story['initial_state']
+    for identity in route['choices'][:selected]:
+        state = apply_effects(choices[identity]['effects'], state)
+    path = route['path'][:route['path'].index(node['id']) + 1]
+    assets = {a['id']: a['file'] for a in json.loads((ROOT / 'game/data/asset_manifest.json').read_text(encoding='utf-8'))['assets']}
+    return [
+        f"    assert eval current_scene == {node['id']!r} and current_chapter == {node['chapter']!r}",
+        f"    assert eval visited_scenes == {path!r}",
+        '    assert eval ' + ' and '.join(f'{key} == {value!r}' for key, value in state.items()),
+        '    assert eval last_ending == ""',
+        f"    assert eval renpy.showing({assets[background]!r})",
+        (f"    assert eval renpy.get_attributes('heroine') == ({expression!r},)" if expression else
+         '    assert eval not renpy.showing("heroine")'),
+        f"    assert eval renpy.music.get_playing(channel='music') == {music!r}",
+        f"    assert eval renpy.music.get_playing(channel='ambient') == {ambient!r}",
+    ]
+
+
+def render_persistence_tests(story):
+    """A second EXE process reads the first process's real late-story slot."""
+    route = enumerate_routes(story)['routes'][0]
+    line = next(x for n in story['nodes'] for x in scene_lines(n) if x['id'] == 's07_true_l006')
+    lines = [
+        '# Generated cross-process reader; injected only into a temporary extraction.',
+        'testsuite global:',
+        '    setup:',
+        '        $ _test.transition_timeout = 0.05',
+        '        $ _test.timeout = 15.0',
+        '        $ _test.screenshot_directory = "reports/persistence-screenshots"',
+        '        $ preferences.text_cps = 0',
+        '        pause until screen "main_menu"',
+        '    teardown:',
+        '        exit',
+        '',
+        'testcase cross_process_load:',
+        '    assert eval renpy.can_load("1-2")',
+        '    click id "load_open"',
+        '    pause until screen "load"',
+        '    click id "slot_2"',
+        '    if screen "confirm":',
+        '        click id "confirm_yes"',
+        f'    pause until {quote(line["text"])}',
+        '    pause until eval renpy.music.get_playing(channel="ambient") is None',
+    ]
+    lines += checkpoint_assertions(story, route, line['id'], 4, 'nearby_cafe', 'smile',
+                                   'audio/bgm/next_message_theme.ogg', None)
+    lines += ['    pause 0.2', '    screenshot "cross-process-late-load"',
+              '    advance until screen "ending_card"', '    assert eval last_ending == "true"', '']
+    return '\n'.join(lines)
 
 
 def render_tests(story):
@@ -259,6 +314,110 @@ def render_tests(story):
               '    advance until screen "ending_card"',
               '    pause until eval renpy.music.get_playing(channel="music") is None',
               '    assert eval renpy.music.get_playing(channel="music") is None', '']
+
+    def save_restore(line_id, name, route, selected, background, expression, music, ambient, slot=1):
+        checks = checkpoint_assertions(story, route, line_id, selected, background, expression, music, ambient)
+        return [at_line(line_id), f'    pause until eval renpy.music.get_playing(channel="music") == {music!r}',
+                f'    pause until eval renpy.music.get_playing(channel="ambient") == {ambient!r}'] + checks + [
+            f'    $ renpy.unlink_save("1-{slot}")', '    click id "save_open"',
+            '    pause until screen "save"', f'    click id "slot_{slot}"',
+            f'    assert eval renpy.can_load("1-{slot}")', '    click id "game_return"',
+            '    advance', '    $ affection = -99', '    $ trust = -99', '    $ truth_known = False',
+            '    $ renpy.show("heroine angry", at_list=[heroine_position])',
+            '    $ renpy.music.stop(channel="music")', '    $ renpy.music.stop(channel="ambient")',
+            '    assert eval affection == -99 and trust == -99', '    click id "load_open"',
+            '    pause until screen "load"', f'    click id "slot_{slot}"',
+            '    if screen "confirm":', '        click id "confirm_yes"',
+            f'    pause until {quote(dialogue[line_id]["text"])}',
+            f'    pause until eval renpy.music.get_playing(channel="music") == {music!r}',
+            f'    pause until eval renpy.music.get_playing(channel="ambient") == {ambient!r}',
+        ] + checks + ['    pause 0.2', f'    screenshot "save-load-{name}"']
+
+    true_route, normal_route = report['routes'][:2]
+    lines += ['testcase late_save_load_true:'] + choose('q01_care')
+    lines += save_restore('s02_boxes_l026', 'before-cg', true_route, 1, 'station', 'normal',
+                          'audio/bgm/rain_theme.ogg', 'audio/sfx/rain_ambience.ogg')
+    lines += save_restore('s03_letter_l001', 'letter-cg', true_route, 1, 'unsent_letter', None,
+                          'audio/bgm/unspoken_theme.ogg', 'audio/sfx/rain_ambience.ogg')
+    lines += choose('q02_honest')
+    lines += save_restore('s04_memory_l001', 'chapter-four', true_route, 2, 'station_exit_covered', 'normal',
+                          'audio/bgm/rain_theme.ogg', 'audio/sfx/rain_ambience.ogg')
+    lines += choose('q04_revisit')
+    lines += save_restore('s05_departure_l001', 'departure', true_route, 3, 'station_exit_covered', 'normal',
+                          'audio/bgm/next_message_theme.ogg', 'audio/sfx/rain_light_ambience.ogg')
+    lines += choose('q03_walk')
+    lines += save_restore('s05_shared_path_l001', 'shared-path', true_route, 4, 'station_exit_after_rain', 'normal',
+                          'audio/bgm/next_message_theme.ogg', 'audio/sfx/rain_light_ambience.ogg')
+    lines += save_restore('s07_true_l001', 'cafe-before-rain-stop', true_route, 4, 'nearby_cafe', 'smile',
+                          'audio/bgm/next_message_theme.ogg', 'audio/sfx/rain_light_ambience.ogg')
+    # Keep slot 2 for a fresh EXE process; slot 1 remains free for other cases.
+    lines += save_restore('s07_true_l006', 'cafe-after-rain-stop', true_route, 4, 'nearby_cafe', 'smile',
+                          'audio/bgm/next_message_theme.ogg', None, slot=2)
+    lines += ['    advance until screen "ending_card"', '    assert eval last_ending == "true"', '']
+
+    lines += ['testcase late_save_load_normal:']
+    for identity in normal_route['choices']:
+        lines += choose(identity)
+    lines += save_restore('s08_normal_l001', 'normal-ending', normal_route, 4, 'station_exit_after_rain', None,
+                          'audio/bgm/next_message_theme.ogg', 'audio/sfx/rain_light_ambience.ogg')
+    lines += ['    advance until screen "ending_card"', '    assert eval last_ending == "normal"', '']
+
+    rollback_route = next(r for r in report['routes'] if r['choices'] ==
+                          ['q01_care', 'q02_defer', 'q04_concrete', 'q03_walk'])
+    lines += ['testcase rollback_rechoice:'] + choose('q01_care') + choose('q02_honest')
+    lines += [f'    pause until {quote(dialogue["q02_honest_l001"]["text"])}',
+              '    assert eval truth_known and affection == 1 and trust == 2',
+              '    click id "rollback_run"', '    pause until screen "choice"',
+              '    assert eval not truth_known and affection == 1 and trust == 1',
+              '    assert eval current_scene == "s03_letter" and "s03_honest" not in visited_scenes',
+              '    assert eval not renpy.showing("heroine")', '    screenshot "rollback-letter-choice"']
+    for identity in rollback_route['choices'][1:]:
+        lines += choose(identity)
+    lines += ['    advance until screen "ending_card"', '    assert eval last_ending == "normal"',
+              f'    assert eval visited_scenes == {rollback_route["path"]!r}',
+              '    assert eval not truth_known and affection == 2 and trust == 1',
+              '    screenshot "rollback-rechoice-normal"', '']
+
+    lines += ['testcase restart_true_then_normal:']
+    for identity in true_route['choices']:
+        lines += choose(identity)
+    lines += ['    advance until screen "ending_card"', '    assert eval last_ending == "true"',
+              '    click id "ending_return"', '    pause until screen "main_menu"',
+              '    click id "menu_start"', '    advance until screen "choice"',
+              '    assert eval affection == 0 and trust == 0 and not truth_known and last_ending == ""',
+              f'    assert eval visited_scenes == {saved_path!r}',
+              playing('music', 'audio/bgm/rain_theme.ogg'),
+              playing('ambient', 'audio/sfx/rain_ambience.ogg')]
+    for identity in normal_route['choices']:
+        lines += choose(identity)
+    lines += ['    advance until screen "ending_card"', '    assert eval last_ending == "normal"',
+              f'    assert eval visited_scenes == {normal_route["path"]!r}',
+              '    assert eval affection == 2 and trust == 3 and truth_known',
+              '    assert eval not renpy.showing("heroine")', '    screenshot "restart-normal-ending"', '']
+
+    voice_file = recordings[dialogue['s01_arrival_l005']['voice']]
+    lines += ['testcase auto_waits_for_voice:', '    $ preferences.wait_voice = True',
+              '    $ preferences.afm_time = 0.1', at_line('s01_arrival_l005'),
+              playing('voice', voice_file), '    $ test_history_length = len(_history_list)',
+              '    click id "auto_run"', '    assert eval preferences.afm_enable', '    pause 0.5',
+              playing('voice', voice_file), '    assert eval len(_history_list) == test_history_length',
+              '    screenshot "auto-voice-in-progress"',
+              '    pause until eval len(_history_list) > test_history_length',
+              '    assert eval renpy.music.get_playing(channel="voice") is None',
+              '    assert eval len(_history_list) == test_history_length + 1',
+              '    click id "auto_run"', '    assert eval not preferences.afm_enable',
+              '    $ preferences.afm_time = 15.0', '']
+
+    lines += ['testcase skip_stops_at_later_choices:', '    $ preferences.skip_unseen = True',
+              '    $ preferences.skip_after_choices = False']
+    for index, identity in enumerate(true_route['choices'], 1):
+        lines += ['    click id "skip_run"', '    pause until screen "choice"',
+                  '    assert eval config.skipping is None',
+                  f'    assert {quote(choices[identity]["text"])}']
+        if index == 4:
+            lines += ['    screenshot "skip-final-choice"']
+        lines += [f'    click {quote(choices[identity]["text"])}', '    advance']
+    lines += ['    $ preferences.skip_unseen = False', '    $ config.skipping = None', '']
     return "\n".join(lines)
 
 
