@@ -36,12 +36,21 @@ testcase route_01:
     assert "第四章 ： 今天"
     pause 0.2
     screenshot "chapter-today"
+    advance until "另一张照片，是什么时候拍的？"
+    pause 0.2
+    assert eval renpy.showing('backgrounds/station_exit_covered.png')
+    screenshot "bg-exit-covered"
     advance until screen "choice"
     screenshot "revisit-choice"
     advance until screen "choice"
     click "把信里的意思和今天的打算说清楚"
     advance until screen "choice"
     click "和她一起走，继续聊一会儿"
+    advance until "纸箱底角擦过椅背，响了一声。我检查胶带有没有贴牢，握稳左手的伞，许澄绕过那块松动的地砖。"
+    pause 0.2
+    assert eval renpy.showing('backgrounds/station_exit_after_rain.png')
+    assert eval renpy.showing("heroine normal")
+    screenshot "bg-s05_shared_path"
     advance until screen "ending_card"
     assert eval (last_ending == 'true')
     assert eval (affection == 3)
@@ -61,7 +70,12 @@ testcase route_02:
     advance until screen "choice"
     click "把信里的意思和今天的打算说清楚"
     advance until screen "choice"
-    click "今晚先各自回家，改天再联系"
+    click "今晚先各自回去，改天再联系"
+    advance until "我把箱盖的胶带压牢，打开叫车页面。排队数已经清零，车会停在出口旁边，牌号最后两位是七六。"
+    pause 0.2
+    assert eval renpy.showing('backgrounds/station_exit_after_rain.png')
+    assert eval renpy.showing("heroine normal")
+    screenshot "bg-s05_separate_path"
     advance until screen "ending_card"
     assert eval (last_ending == 'normal')
     assert eval (affection == 2)
@@ -101,7 +115,7 @@ testcase route_04:
     advance until screen "choice"
     click "先约定下一次联系，旧事慢慢谈"
     advance until screen "choice"
-    click "今晚先各自回家，改天再联系"
+    click "今晚先各自回去，改天再联系"
     advance until screen "ending_card"
     assert eval (last_ending == 'normal')
     assert eval (affection == 1)
@@ -144,7 +158,7 @@ testcase route_06:
     advance until screen "choice"
     click "把信里的意思和今天的打算说清楚"
     advance until screen "choice"
-    click "今晚先各自回家，改天再联系"
+    click "今晚先各自回去，改天再联系"
     advance until screen "ending_card"
     assert eval (last_ending == 'normal')
     assert eval (affection == 2)
@@ -184,7 +198,7 @@ testcase route_08:
     advance until screen "choice"
     click "先约定下一次联系，旧事慢慢谈"
     advance until screen "choice"
-    click "今晚先各自回家，改天再联系"
+    click "今晚先各自回去，改天再联系"
     advance until screen "ending_card"
     assert eval (last_ending == 'normal')
     assert eval (affection == 1)
@@ -224,7 +238,7 @@ testcase route_10:
     advance until screen "choice"
     click "把信里的意思和今天的打算说清楚"
     advance until screen "choice"
-    click "今晚先各自回家，改天再联系"
+    click "今晚先各自回去，改天再联系"
     advance until screen "ending_card"
     assert eval (last_ending == 'normal')
     assert eval (affection == 1)
@@ -264,7 +278,7 @@ testcase route_12:
     advance until screen "choice"
     click "先约定下一次联系，旧事慢慢谈"
     advance until screen "choice"
-    click "今晚先各自回家，改天再联系"
+    click "今晚先各自回去，改天再联系"
     advance until screen "ending_card"
     assert eval (last_ending == 'normal')
     assert eval (affection == 0)
@@ -304,7 +318,7 @@ testcase route_14:
     advance until screen "choice"
     click "把信里的意思和今天的打算说清楚"
     advance until screen "choice"
-    click "今晚先各自回家，改天再联系"
+    click "今晚先各自回去，改天再联系"
     advance until screen "ending_card"
     assert eval (last_ending == 'normal')
     assert eval (affection == 1)
@@ -344,7 +358,7 @@ testcase route_16:
     advance until screen "choice"
     click "先约定下一次联系，旧事慢慢谈"
     advance until screen "choice"
-    click "今晚先各自回家，改天再联系"
+    click "今晚先各自回去，改天再联系"
     advance until screen "ending_card"
     assert eval (last_ending == 'normal')
     assert eval (affection == 0)
@@ -519,6 +533,10 @@ testcase audio_true_ending:
     advance until "小店的灯还亮着。桌上有水杯、纸巾，和一碟并不特别好吃的饼干。我们坐下，没有谁急着给今晚取名字。"
     pause until eval renpy.music.get_playing(channel="ambient") is None
     assert eval renpy.music.get_playing(channel="ambient") is None
+    assert eval renpy.showing('backgrounds/nearby_cafe.png')
+    assert eval renpy.showing("heroine smile")
+    pause 0.2
+    screenshot "bg-nearby-cafe"
     advance until "嗯。这次记得交给我。"
     pause 0.1
     assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s07_true_l010_v1.ogg'
@@ -536,7 +554,12 @@ testcase audio_normal_ending:
     advance until screen "choice"
     click "把信里的意思和今天的打算说清楚"
     advance until screen "choice"
-    click "今晚先各自回家，改天再联系"
+    click "今晚先各自回去，改天再联系"
+    advance until "道别以后，我站在车站外，看着最后几滴雨落进路边的积水。旧箱子靠着腿，信封还放在口袋里。"
+    assert eval renpy.showing('backgrounds/station_exit_after_rain.png')
+    assert eval not renpy.showing("heroine")
+    pause 0.2
+    screenshot "bg-exit-after-rain"
     advance until "手机亮起来。她发来一张旧照片，下面只有一行字。"
     pause 0.1
     assert eval renpy.music.get_playing(channel='sound') == 'audio/sfx/message_ping.ogg'

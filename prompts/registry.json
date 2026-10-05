@@ -9,6 +9,27 @@
       "sha256": "9a1395f5b3d6fcb8a2aa2785f0f7e4fc857eaa7fb68626d57cb1eb762ac88a52"
     },
     {
+      "id": "background_nearby_cafe_v1",
+      "version": 1,
+      "kind": "background",
+      "file": "prompts/background/nearby_cafe_v1.md",
+      "sha256": "295372e3460f68593c7984f43c392e4292cfe0e6d394cad90f1e7ad95bd94a00"
+    },
+    {
+      "id": "background_station_exit_after_rain_v1",
+      "version": 1,
+      "kind": "background",
+      "file": "prompts/background/station_exit_after_rain_v1.md",
+      "sha256": "a96b8bda8737d03027603bdce0676336b96d4ca069e6105885533fbffa149003"
+    },
+    {
+      "id": "background_station_exit_covered_v1",
+      "version": 1,
+      "kind": "background",
+      "file": "prompts/background/station_exit_covered_v1.md",
+      "sha256": "232b7196ccb17bf0164108ac90fa373a7a7eeecd31215a2fe410f9ae8a68a941"
+    },
+    {
       "id": "background_station_rain_v1",
       "version": 1,
       "kind": "background",
@@ -251,6 +272,13 @@
       "sha256": "f6eed5eacd169438ad483f697caf1b561c80b90107c3478050b23b4bc695ab17"
     },
     {
+      "id": "script_v07_s01_arrival_v2",
+      "version": 2,
+      "kind": "script",
+      "file": "prompts/script/v07/s01_arrival_v2.md",
+      "sha256": "5879f3e6e7ee7923856ae19dc250aa036ab43be62bfdc97a50f3ed43179255e2"
+    },
+    {
       "id": "script_v07_s01_platform_v1",
       "version": 1,
       "kind": "script",
@@ -377,6 +405,13 @@
       "sha256": "a047d3d5e198089987f8b886409f2d72e9ba1645d9732c4df56b56d4fd145e22"
     },
     {
+      "id": "script_v07_s04_repair_v2",
+      "version": 2,
+      "kind": "script",
+      "file": "prompts/script/v07/s04_repair_v2.md",
+      "sha256": "87af175b5e6bcf165c34cf53d58013d0c1c7ca4574810c292ec03e75c1bc18cc"
+    },
+    {
       "id": "script_v07_s04_reserved_v1",
       "version": 1,
       "kind": "script",
@@ -410,6 +445,48 @@
       "kind": "script",
       "file": "prompts/script/v07/s04_waiting_v2.md",
       "sha256": "bb42a790a646052f4e2fc3edde6f0785c54734ab5e4846ae075afb712487a9f5"
+    },
+    {
+      "id": "script_v07_s04_waiting_v3",
+      "version": 3,
+      "kind": "script",
+      "file": "prompts/script/v07/s04_waiting_v3.md",
+      "sha256": "5aaa144ccf97559b37cb359f15e4cf5a36b6f6016b5e3368eb4e118e2347d02a"
+    },
+    {
+      "id": "script_v07_s05_departure_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v07/s05_departure_v1.md",
+      "sha256": "d614f851b4d2e833555ffbcdeb18183a9085bd9ff02f346509e5984870fbbef2"
+    },
+    {
+      "id": "script_v07_s05_separate_path_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v07/s05_separate_path_v1.md",
+      "sha256": "6115e9a97a5c0f979b3f374c18dc9c54c3986ad21770a7ec287de4bf559c2672"
+    },
+    {
+      "id": "script_v07_s05_shared_path_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v07/s05_shared_path_v1.md",
+      "sha256": "eb4aeea9244df83989c774c03d497857b37845ce5edbf06c216a0246fd356230"
+    },
+    {
+      "id": "script_v07_s07_true_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v07/s07_true_v1.md",
+      "sha256": "22f5fa9c8b83401c65555a20f06d1a9f3d0ada1452ca4d8b4d5b8102c8ff2468"
+    },
+    {
+      "id": "script_v07_s08_normal_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v07/s08_normal_v1.md",
+      "sha256": "e583b4e1918842a1059682aee510fe1552d0a7ba0c8a4c69d011708b6d4f56f0"
     },
     {
       "id": "voice_heroine_v1",

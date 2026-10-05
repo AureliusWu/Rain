@@ -17,3 +17,7 @@ v0.2 使用一个雨夜站台背景、normal 透明立绘和一张交还旧信�
 七种表情统一参考 `assets_source/character/heroine_clean_v2.png`；共享身份、服装、姿态、镜头和画风组件位于 `prompts/character/heroine_expressions_v1.json`，每张精确请求在 `heroine_<expression>_v1.md`。只编辑眼眉、嘴与轻微腮红；保留身体、发型、发夹、衣纹与灯光。透明 PNG 按全画布缩放到底部居中的 540×700，不按各图包围盒单独缩放，避免跳动。
 
 自动门槛：七种齐全、尺寸和透明通道正确、参考图与 Prompt 哈希一致、轮廓 IoU ≥ 0.97、包围盒偏差 ≤ 4 像素、全部被台词使用。当前新表情与 normal 的 IoU 为 0.993–0.998，包围盒最多差 1 像素。身份、表情含义、服装细节仍需看图审阅；最终视觉选择由用户决定。
+
+## v0.7 场景接入
+
+站外雨棚、雨停出口、小店三张背景取代后段重复站台及 True 黑底，详见 ART_REVIEW_V07.md。源图按既有 fit_1280x720_v1 输出；保留原画和 Prompt。换背景会清空场景，两条离场路径必须首句即重新显示 normal；Normal 消息段不显示女主，True 小店显示 smile。

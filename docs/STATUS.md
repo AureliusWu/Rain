@@ -2,11 +2,15 @@
 
 ## v0.7 当前执行点 — 2026-10-05
 
-已保留聊天模式 main e36bdd8 上恢复的 14 场景、208 行、6453 字符。超时修复提交 `0330120dc5364215d16378d1aaea4d0e75eeef3d` 已完成 [Windows 全链路 37249392326](https://github.com/AureliusWu/Test/actions/runs/37249392326)：69 项 Python，源码 24/24 用例、151/151 断言（251.693 秒），独立 EXE 同样 24/24、151/151（159.782 秒），无失败或跳过。已下载证据并匹配 artifact SHA-256，72 张 PNG 完整解码；包进程 returncode=0、timed_out=false、上限 900 秒。
+六章、24 个叙事场景与 2 个状态路由的完整短篇 Alpha 正文候选已完成；4 次选择、16 条路线、4 True / 12 Normal 保持原结构。全分支 **15,206** 字符，单路线 **11,404–11,744**，文字估算约 **32–47 分钟**。真人完整阅读时长尚未验收，不把估算算作通过。
 
-第三章四种入口前缀已逐段审阅，修正重复登记、信封 / 手机动作、站内十点关闭后的场所衔接，以及正文提到另一分支的语句。第四章五场新增 38 行 / 828 字符，两条 q04 分支分别快速校验通过。全分支现为 **14283** 字符，单路线 **10884–11208** 字符；24 个叙事场景、2 个路由、16 路线、4 True / 12 Normal 与 17 句配音文字均保持不变。详见 [剧情审阅](STORY_REVIEW_V07.md)、[路线统计](STORY_STATS_V07.md)。
+已审阅第三章、第四章与第五章合流，补齐同行后进入 Normal 的离场、今晚酒店与次日到家、未拆信封及照片归属、号码已经保存、叫车只查看未下单、站外环境与换景立绘。保留全部 17 句配音文字；新增三个匹配地点的背景，源图、编辑输入、Prompt 与 33 个重建配方均可追踪。详情见 [剧情审阅](STORY_REVIEW_V07.md)、[路线统计](STORY_STATS_V07.md) 与 [美术审阅](ART_REVIEW_V07.md)。
 
-第四章批次本地全集 **72 项通过（6.056 秒）**，全部作者侧检查和 Linux Ren'Py 8.5.3 lint 通过；此批新正文的 Windows 验收待推送触发，不沿用超时修复包结果。流程同时补充逐路线统计回归、源码日志 / 提交 / 校验和证据保存，发布输入改为环境变量读取。当前 VERSION 与最新 Release 仍为 v0.6.0；v0.7 未发布，下一步第五章与结局、匹配场景的背景及新包验收。恢复位置见 [WORK_CHECKPOINT](WORK_CHECKPOINT.md)，流程见 [WORKFLOW_V07](WORKFLOW_V07.md)。
+本候选本地 **72 项 Python 测试**和全部作者检查通过；85 个资产、60 张 PNG、24 个 OGG、69 份 Prompt、33 个图片配方均校验 0 错误；Ren'Py 8.5.3 Linux lint 通过。原生交互仍为 24 用例，增加背景与首句立绘检查后共 160 断言及五张必需新截图。**本候选 Windows 源码 / 独立 EXE 尚待本批推送验收**，不能沿用旧包证据。
+
+第四章提交 `246217f4791b6e3e4aef3ea1874bfb9decaaf543` 的 [CI 37250452907](https://github.com/AureliusWu/Test/actions/runs/37250452907) 已通过：72 项 Python；Windows 源码 24/24 用例、151/151 断言（323.377 秒），独立 EXE 同为 24/151（219.247 秒），无失败或跳过。已下载证据匹配 digest `72bfdb8d84719a8c9bc4ffc55f71cf45ef762fbf0cd620998868d5ff6f75f768`，72 PNG 完整解码；旧包 SHA-256 为 `b1a89057e0d75fd5e917ec8abf10ce36352410f37722aaa99d60305d4a77e49a`，VERSION 为 0.6.0，不将它标为 v0.7 包。
+
+本批 VERSION / 引擎 / 剧情已同步 **0.7.0**，使用独立 Alpha 存档目录；公开 Release 仍为 v0.6.0。main 只生成候选与证据，手动发布另行重验。当前接续位置见 [WORK_CHECKPOINT](WORK_CHECKPOINT.md)，候选证据与人工项见 [ALPHA_ACCEPTANCE_V07](ALPHA_ACCEPTANCE_V07.md)。
 
 2026-10-05（北京时间）。仓库：[AureliusWu/Test](https://github.com/AureliusWu/Test)，仅 main。
 

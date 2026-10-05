@@ -2,15 +2,17 @@
 
 一部可离线游玩的中文 Ren'Py 视觉小说。雨夜的旧车站，两位久未联系的旧友，和一封没有寄出的信。
 
-当前为 **v0.6.0 音频版**：六章、26 个节点（含 2 个状态路由节点）、4 次关键选择、Normal / True 两个片段结局，包含七种 AI 女主表情立绘、雨夜背景、关键 CG、17 句 AI 关键语音、3 首原创程序音乐、两种雨声和纸张／消息音效。主题、成年女主许澄和画风为待用户审阅的创作方案。
+main 当前为 **v0.7.0 完整短篇 Alpha 候选**：六章、24 个叙事场景与 2 个状态路由、4 次关键选择、16 条路线、Normal / True 两个完整候选结局。包含七种女主表情、雨夜站台与新增三个场景背景、旧信 CG、17 句 AI 关键语音、3 首原创程序音乐、两种雨声和纸张／消息音效。主题、成年女主许澄和画风仍待用户最终审阅。
 
-单路线约 5,050–5,350 字。按每分钟 250–350 字、另计选择和画面停留，预估 17–24 分钟；尚未经过真人计时。完整 30–60 分钟作品属于后续版本。
+正文全分支 15,206 字符，单路线 11,404–11,744 字符（包含标点，菜单单列）。仅文字阅读按每分钟 250–350 字符估算约 32–47 分钟；真人完整阅读、听感与普通电脑试玩尚未验收。统计见 [路线报告](docs/STORY_STATS_V07.md)。
 
 ## 下载与运行
 
 [Windows 发布版本](https://github.com/AureliusWu/Test/releases) · [构建与运行证据](https://github.com/AureliusWu/Test/actions) · [阶段记录](docs/STATUS.md)
 
-1. 下载 Release 中的 `BeforeTheRainStops-0.6.0-win.zip`。
+最新公开 Release 仍为 v0.6.0。v0.7 候选由成功的 Game validation 工作流上传到 Actions，下载时核对 run 的提交和 SHA256SUMS；测试与发布状态见阶段记录。
+
+1. 从成功的 Actions 下载 v0.7 Windows 候选 artifact 并解开外层，再完整解压 `BeforeTheRainStops-0.7.0-win.zip`；或从 Release 下载现有 v0.6.0。
 2. 完整解压到可写目录。不要直接在 ZIP 内启动。
 3. 双击 `BeforeTheRainStops.exe`，选择“开始游戏”。无需安装 Python、Ren'Py 或模型，无需联网。
 
@@ -31,6 +33,7 @@ python -m tools.image_process.import_asset --check
 python -m tools.audio_validator --report reports/audio.json
 python -m tools.compile_story
 python -m tools.compile_tests
+python -m tools.story_stats --markdown docs/STORY_STATS_V07.md
 python -m tools.validate
 python -m tools.build.sdk
 ```
@@ -42,10 +45,10 @@ $sdk = ".runtime/renpy-8.5.3-sdk"
 & "$sdk/lib/py3-windows-x86_64/python.exe" "$sdk/renpy.py" . lint --error-code --all-problems
 & "$sdk/lib/py3-windows-x86_64/python.exe" "$sdk/renpy.py" . test global --report-detailed --overwrite-screenshots
 python -m tools.build.package --sdk $sdk
-python -m tools.build.verify_package --zip dist/BeforeTheRainStops-0.6.0-win.zip
+python -m tools.build.verify_package --zip dist/BeforeTheRainStops-0.7.0-win.zip --timeout 900
 ```
 
-Linux/macOS 可用 SDK 的 `renpy.sh` 运行 lint/test。Linux 无桌面时需要 Xvfb。Windows Actions 先做数据校验与原生交互测试，再构建 ZIP，直接启动解压后的独立 EXE 重跑测试。测试通过才发布预发行版本，附 SHA256SUMS。
+Linux/macOS 可用 SDK 的 `renpy.sh` 运行 lint/test。Linux 无桌面时需要 Xvfb。Windows Actions 先做数据校验与原生交互测试，再构建 ZIP，直接启动解压后的独立 EXE 重跑测试。main 成功后仅上传候选与证据，附 SHA256SUMS；手动发布入口重验选定提交和版本后才创建预发行 Release。
 
 ## 数据与资产
 
@@ -57,18 +60,18 @@ Linux/macOS 可用 SDK 的 `renpy.sh` 运行 lint/test。Linux 无桌面时需�
 | `game/data/voice_manifest.json` | 台词文本、声音配置、时长与语音文件绑定 |
 | `assets_source/` | 原始图片、源 WAV 和 UI 图元 |
 | `game/` | 游戏实际使用的尺寸与格式 |
-| `prompts/registry.json`、`prompts/` | 33 份版本化请求、稳定 ID、共享组件与 SHA-256 |
+| `prompts/registry.json`、`prompts/` | 69 份版本化请求、稳定 ID、共享组件与 SHA-256 |
 | `tools/`、`tests/` | 资产处理、编译、路线与完整性校验 |
 
 仅三个剧情状态：affection、trust、truth_known。模型不进入游戏；运行时没有 LLM、TTS 服务或服务器。Prompt 与文件一起进 Git，修改语音文字后必须重新生成。文档见 [项目约束](docs/PROJECT.md)、[AI 流程](docs/AI_PIPELINE.md)、[测试计划](docs/TEST_PLAN.md) 和 [资产署名](CREDITS.md)。
 
 ## 资产流程与下一阶段
 
-33 份 Prompt、82 个资产、57 张 PNG 与 30 个图片重建配方可追踪。图片导入包含预检、dry-run、版本与路径检查、正常 I/O 失败回滚和重复执行检查，详见 [v0.5 资产操作文档](docs/ASSET_PIPELINE_V05.md)。
+69 份 Prompt、85 个资产、60 张 PNG 与 33 个图片重建配方可追踪。图片导入包含预检、dry-run、版本与路径检查、正常 I/O 失败回滚和重复执行检查，详见 [v0.5 资产操作文档](docs/ASSET_PIPELINE_V05.md) 与 [v0.7 场景候选](docs/ART_REVIEW_V07.md)。
 
 v0.6 新增 11 句配音与 5 个程序音频，17 句合计 58.048 秒。音乐随旧信、回忆和离站切换，雨声逐渐减弱并在剧情指定台词处淡出。24 个游戏音频及源 WAV 均完整解码并测量；重复执行制作工具保留已有文件。流程、接入位置和试听范围见 [v0.6 音频操作文档](docs/AUDIO_V06.md)。
 
-六章、16 条路线及两个结局继续可玩，说明见 [场景 Outline](docs/STORY_OUTLINE_V04.md) 与 [路线审阅](docs/STORY_REVIEW_V04.md)。下一阶段 v0.7 补齐完整短篇剧情及对应场景资产；重大剧情和最终美术继续由用户决定。大系统保持在 [Future Ideas](docs/FUTURE_IDEAS.md)。
+六章、16 条路线及两个结局已完成 Alpha 正文，说明见 [场景 Outline](docs/STORY_OUTLINE_V07.md) 与 [路线审阅](docs/STORY_REVIEW_V07.md)。候选验收完成后进入 v0.8 回归加固；重大剧情和最终美术继续由用户决定。大系统保持在 [Future Ideas](docs/FUTURE_IDEAS.md)。
 
 [版本路线](ROADMAP.md) 与 [v0.7–v1.0 执行计划](docs/RELEASE_PLAN_V07_V10.md) 列出完整剧情、回归加固、1080p 适配和正式发布的范围、依赖与验收。[v0.6.0 已发布](https://github.com/AureliusWu/Test/releases/tag/v0.6.0)：Windows 源码和独立 EXE 各通过 24 个用例 / 151 个断言，无失败或跳过。
 

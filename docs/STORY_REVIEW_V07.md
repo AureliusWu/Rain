@@ -35,10 +35,50 @@
 - concrete：可以建立具体联系，同时保留信的知识状态；不会因为约好时间就自动填充 truth_known。
 - 22:01–22:10 位于站外相连雨棚，保持照片、纸箱、手机和信封的归属。
 
-## 待后续复核
+## 第五章与结局合流
 
-- 第五章的“回家”应区分玩家今晚住酒店与明天下午到家。
-- 同行但未到 True 的路线需要明确如何收束到 Normal，避免只靠路由突然出现“道别以后”。
-- True 尾声原有桌面旧信的描写与“始终在内袋”的约束需统一；未拆封这一事实不可改变。
-- 完整正文和新场景资产完成后，重新遍历全部 16 条路线并做 Windows 源码 / 独立 EXE 验收。
-- 真人阅读节奏、听感和最终创作选择仍待验收。
+本批逐段读取全部 24 个叙事场景，结合 16 条组合核对知识、物品、时间、动作及结局。没有把台词 ID / 图遍历的成功当作人物动机的自动证明。
+
+| 问题 | 修订与当前事实 |
+|---|---|
+| 今晚说“到家”与住酒店冲突 | q03_leave、Normal 玩家回应改为“到住处”；True 的既有配音“到家以后”指已说明的次日下午，不改录音文字 |
+| 同行但未满足 True，突然跳到站外分别 | shared_path 在街角路口停下，是否进店仍可选择；Normal 共同回顾分别，玩家把等车位置定在车站出口，许澄继续往街角 |
+| True 从纯黑场景沿用撑伞动作，场所不明确 | 开头明确进店、归还并收伞、坐下；接入小店背景和 smile 立绘 |
+| 信一直在内袋，True 却写信压在水杯下 | True 尾句保留内袋未拆封口；桌面只展示许澄的两张照片，之后全部收回她的纸袋 |
+| Normal 像重新交换 / 保存号码 | 此前 s04_waiting 已核对并保存，此处仅确认通讯录里的记录 |
+| 入站前已乘车，返程叫车似乎一直在等候 | s01_arrival 明确只查看排队情况并退出，尚未提交订单；分别后才正式叫车 |
+| 已在出口雨棚，环境又说回站台 | s04_waiting 的环境句保持出口雨棚；22:00 后不进入已关闭站内 |
+| 换站外背景首句女主消失，下一句再出现 | shared / separate 两个节点都在首句显示 normal；正式分别后的 Normal 不显示人物，收到的消息继续使用既有声音 |
+
+后续六个场景保存 v0.7 Scene Prompt，s01_arrival / s04_waiting 的已提交请求分别新增 v2 / v3，保留旧请求。源码逐项对比第四章基线：16 条路径、终态和结局完全相同；全部 17 句语音绑定文字不变。没有新增状态或重大结局方向。
+
+## 16 路线事实核对
+
+q01 / q02 决定第三章入口；q04_revisit 明确信的作者并补救，q04_concrete 不替代作者解释。最后分别的 8 条路线均 Normal；同行的 8 条只有 4 条满足既有 True 阈值。
+
+| 路线 | q01 / q02 / q04 / q03 | 作者知情 | 结局 | 合流核对 |
+|---|---|---|---|---|
+| R01 | care / honest / revisit / walk | 是 | True | 信未拆、照片由许澄收回；进店后约好下一次 |
+| R02 | care / honest / revisit / leave | 是 | Normal | 各自离场，玩家等车去酒店 |
+| R03 | care / honest / concrete / walk | 是 | True | 当下联系不改写早前坦白；进店 |
+| R04 | care / honest / concrete / leave | 是 | Normal | 明确分别，数值不能改为同行 |
+| R05 | care / defer / revisit / walk | 是 | True | 后续明确作者，早前回避仍成立 |
+| R06 | care / defer / revisit / leave | 是 | Normal | 已补救仍可选择分别 |
+| R07 | care / defer / concrete / walk | 否 | Normal | 在街角结束同行，不假定已看信 |
+| R08 | care / defer / concrete / leave | 否 | Normal | 只约联系，不填充作者知识 |
+| R09 | business / honest / revisit / walk | 是 | True | 补救当下沟通，事务入口历史保留 |
+| R10 | business / honest / revisit / leave | 是 | Normal | 回住处承诺与次日到家分开 |
+| R11 | business / honest / concrete / walk | 是 | Normal | 信任未到阈值，街角分别 |
+| R12 | business / honest / concrete / leave | 是 | Normal | 玩家分别选择优先 |
+| R13 | business / defer / revisit / walk | 是 | Normal | 知道作者仍不等于消除两次回避；街角分别 |
+| R14 | business / defer / revisit / leave | 是 | Normal | 已坦白但今晚各自回去 |
+| R15 | business / defer / concrete / walk | 否 | Normal | 没有承诺或物品替代知情；街角分别 |
+| R16 | business / defer / concrete / leave | 否 | Normal | 未拆信和未解释事实留给下一次 |
+
+共同物品边界：七本书、留言册与两个空相框属于玩家纸箱；未拆信在外套内袋；照片及完好书店相框由许澄带走。交换号码发生在出口雨棚，共同场景不假定她已知道作者。
+
+## 尚待验收
+
+- 本候选 Windows 源码和独立 EXE 全套交互、三个新背景与两条离场首句截图。
+- 真人 Normal / True 阅读节奏和 30–60 分钟计时；真实音频发音、混音与循环听感。
+- 最终主题、许澄形象、声音与重大结局由用户审阅。本次为 Alpha 候选，未锁定内容。

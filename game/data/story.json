@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "version": "0.6.0",
+  "version": "0.7.0",
   "title": "雨停之前",
   "status": "v07_alpha_expansion_recovered_through_ch03",
   "entry": "p00_entry",
@@ -141,7 +141,7 @@
         {
           "id": "s01_arrival_l002",
           "speaker": "n",
-          "text": "手机上的网约车排队数从十二变成十三。我把它收进口袋，沿着熟悉的柱子往里走。"
+          "text": "手机上的返程叫车页面显示，排队数从十二变成十三。我先退出页面，没有提交订单，把手机收进口袋，沿着熟悉的柱子往里走。"
         },
         {
           "id": "s01_arrival_l003",
@@ -273,10 +273,10 @@
       "next": "s01_platform",
       "chapter": "ch00",
       "dramatic_purpose": "由声音认出久未联系的旧友。",
-      "draft_prompt": "prompts/script/v07/s01_arrival_v1.md",
-      "draft_prompt_sha256": "f6eed5eacd169438ad483f697caf1b561c80b90107c3478050b23b4bc695ab17",
+      "draft_prompt": "prompts/script/v07/s01_arrival_v2.md",
+      "draft_prompt_sha256": "5879f3e6e7ee7923856ae19dc250aa036ab43be62bfdc97a50f3ed43179255e2",
       "review_status": "v07_restored_expansion_candidate",
-      "draft_prompt_id": "script_v07_s01_arrival_v1"
+      "draft_prompt_id": "script_v07_s01_arrival_v2"
     },
     {
       "id": "s01_platform",
@@ -2113,7 +2113,7 @@
         {
           "id": "s04_waiting_l023",
           "speaker": "n",
-          "text": "确认号码以后，我们都没有立刻发第二条消息。屏幕暗下去，站台重新只剩雨声和远处收拾设备的碰撞声。"
+          "text": "确认号码以后，我们都没有立刻发第二条消息。屏幕暗下去，出口雨棚下重新只剩雨声和远处收拾设备的碰撞声。"
         },
         {
           "id": "s04_waiting_l024",
@@ -2211,15 +2211,15 @@
           "text": "我笑了一下，没有伸手。这个回答正好把下一段谈话的边界画出来：可以一起回忆，所有权仍属于她。"
         }
       ],
-      "background": "station",
+      "background": "station_exit_covered",
       "sprite": "normal",
       "next": "s04_memory",
       "chapter": "ch03",
       "dramatic_purpose": "女主表达独立生活和对明确联系的需求。",
-      "draft_prompt": "prompts/script/v07/s04_waiting_v2.md",
-      "draft_prompt_sha256": "bb42a790a646052f4e2fc3edde6f0785c54734ab5e4846ae075afb712487a9f5",
+      "draft_prompt": "prompts/script/v07/s04_waiting_v3.md",
+      "draft_prompt_sha256": "5aaa144ccf97559b37cb359f15e4cf5a36b6f6016b5e3368eb4e118e2347d02a",
       "review_status": "v07_restored_expansion_candidate",
-      "draft_prompt_id": "script_v07_s04_waiting_v2"
+      "draft_prompt_id": "script_v07_s04_waiting_v3"
     },
     {
       "id": "s04_memory",
@@ -2333,7 +2333,7 @@
       "time": "22:01",
       "dramatic_purpose": "确认旧照片承载双方记忆，不把保存误读为等待。",
       "next": "s04_boundary",
-      "background": "station",
+      "background": "station_exit_covered",
       "sprite": "normal",
       "draft_prompt": "prompts/script/v07/s04_memory_v1.md",
       "draft_prompt_sha256": "e39a621432fa8e41d4ba107a6564499ef5d332c54019e7c80b2fe98a3f921ae9",
@@ -2631,7 +2631,7 @@
         {
           "id": "s04_repair_l008",
           "speaker": "n",
-          "text": "她看了我一会儿，伸手把纸袋卷好的袋口压平。刚才没说完的话，终于不需要她去猜作者。"
+          "text": "她看了我一会儿，伸手把纸袋卷好的袋口压平。关于作者和今天的打算，我都把自己的话说清了。"
         },
         {
           "id": "s04_repair_l009",
@@ -2676,10 +2676,10 @@
       "time": "22:10",
       "dramatic_purpose": "补充过去与现在的意思，修复一次早期回避。",
       "next": "s05_departure",
-      "draft_prompt": "prompts/script/v07/s04_repair_v1.md",
-      "draft_prompt_sha256": "a047d3d5e198089987f8b886409f2d72e9ba1645d9732c4df56b56d4fd145e22",
+      "draft_prompt": "prompts/script/v07/s04_repair_v2.md",
+      "draft_prompt_sha256": "87af175b5e6bcf165c34cf53d58013d0c1c7ca4574810c292ec03e75c1bc18cc",
       "review_status": "agent_reviewed_candidate",
-      "draft_prompt_id": "script_v07_s04_repair_v1"
+      "draft_prompt_id": "script_v07_s04_repair_v2"
     },
     {
       "id": "s04_concrete",
@@ -2800,13 +2800,38 @@
     },
     {
       "id": "s05_departure",
-      "location": "old_station",
+      "location": "station_exit",
       "time": "22:13",
       "lines": [
         {
           "id": "s05_departure_l001",
           "speaker": "n",
           "text": "雨小了一些。出口的保安敲了敲玻璃，示意我们该收东西了。"
+        },
+        {
+          "id": "v07_s05_departure_l001",
+          "speaker": "n",
+          "text": "我把折出来的胶带头找出来，沿箱盖压紧。空布袋还挂在手腕上，已经不再滴水。"
+        },
+        {
+          "id": "v07_s05_departure_l002",
+          "speaker": "h",
+          "text": "那只袋子还要带？"
+        },
+        {
+          "id": "v07_s05_departure_l003",
+          "speaker": "p",
+          "text": "晾干还能装书。下次不用它挡雨了。"
+        },
+        {
+          "id": "v07_s05_departure_l004",
+          "speaker": "h",
+          "text": "那就带着。书别再装进去。"
+        },
+        {
+          "id": "v07_s05_departure_l005",
+          "speaker": "n",
+          "text": "她拿起自己的纸袋，让我把长椅上最后一点水擦掉。我们没有留下需要别人替我们收拾的东西。"
         },
         {
           "id": "s05_departure_l002",
@@ -2844,7 +2869,7 @@
         {
           "id": "s05_departure_l008",
           "speaker": "n",
-          "text": "明早的车票还在手机里。眼前这段路，却只有今晚。"
+          "text": "明早从新站出发的车票还在手机里。眼前这段路，却只有今晚。"
         }
       ],
       "choices": [
@@ -2876,7 +2901,7 @@
         },
         {
           "id": "q03_leave",
-          "text": "今晚先各自回家，改天再联系",
+          "text": "今晚先各自回去，改天再联系",
           "effects": {
             "trust": -1
           },
@@ -2885,7 +2910,7 @@
             {
               "id": "q03_leave_l001",
               "speaker": "p",
-              "text": "今晚先回去吧。到家以后，我会给你发消息。"
+              "text": "今晚先回去吧。到住处以后，我会给你发消息。"
             },
             {
               "id": "q03_leave_l002",
@@ -2902,19 +2927,19 @@
         }
       ],
       "chapter": "ch05",
-      "dramatic_purpose": "决定同行还是各自回家。",
-      "draft_prompt": "prompts/script/scene_v1.md",
-      "draft_prompt_sha256": "bc5cc48b7fe000f5a42b11fae33438d79e09af6d71f9790bd3c338e35f6c2ea4",
+      "dramatic_purpose": "决定同行还是各自回到住处。",
+      "draft_prompt": "prompts/script/v07/s05_departure_v1.md",
+      "draft_prompt_sha256": "d614f851b4d2e833555ffbcdeb18183a9085bd9ff02f346509e5984870fbbef2",
       "review_status": "preserved_v03_dialogue_with_route_revision",
-      "background": "station",
+      "background": "station_exit_covered",
       "sprite": "normal",
-      "draft_prompt_id": "script_scene_v1",
+      "draft_prompt_id": "script_v07_s05_departure_v1",
       "bgm": "next_message_theme",
       "ambient": "rain_light_ambience"
     },
     {
       "id": "s05_shared_path",
-      "location": "old_station",
+      "location": "station_exit",
       "lines": [
         {
           "id": "s05_shared_path_l001",
@@ -2935,7 +2960,7 @@
         {
           "id": "s05_shared_path_l004",
           "speaker": "n",
-          "text": "走到出口，雨棚忽然窄了一截。她把纸袋换到里面那只手，我停下来，等她调整好再往前。"
+          "text": "走到雨棚尽头，能避雨的地方忽然窄了一截。她把纸袋换到里面那只手，我停下来，等她调整好再往前。"
         },
         {
           "id": "s05_shared_path_l005",
@@ -2948,6 +2973,31 @@
           "text": "拿得住。你箱子别碰栏杆就好。"
         },
         {
+          "id": "v07_s05_shared_path_l001",
+          "speaker": "n",
+          "text": "我顺着她停下的位置看见一道浅积水，等她绕过去，才把箱子提高一点。"
+        },
+        {
+          "id": "v07_s05_shared_path_l002",
+          "speaker": "h",
+          "text": "看看路。这里不是每块地砖都一样。"
+        },
+        {
+          "id": "v07_s05_shared_path_l003",
+          "speaker": "p",
+          "text": "我在找以前松的那一块。"
+        },
+        {
+          "id": "v07_s05_shared_path_l004",
+          "speaker": "h",
+          "text": "那块修好了。现在松的是另一块。"
+        },
+        {
+          "id": "v07_s05_shared_path_l005",
+          "speaker": "n",
+          "text": "我没再凭记忆往前踩，跟着眼前的路慢慢走。门口的灯在背后留下很窄的一条影子。"
+        },
+        {
           "id": "s05_shared_path_l007",
           "speaker": "n",
           "text": "我的脚步还是比她快半步。我往回收了一点，让箱子在两个人身前留出同样的距离。"
@@ -2955,21 +3005,23 @@
         {
           "id": "s05_shared_path_l008",
           "speaker": "n",
-          "text": "小店的灯就在街角，门口也有一段能避雨的檐。走过去不远，但走到那里以后，我们仍可以各自决定要不要再留一会儿。"
+          "text": "小店的灯就在街角，门口也有一段能避雨的檐。我们在路口停了片刻；要不要进店再留一会儿，仍可以各自决定。"
         }
       ],
       "chapter": "ch05",
       "time": "22:16",
       "dramatic_purpose": "共同走到出口，保持双方行动与边界。",
       "next": "s06_resolution",
-      "draft_prompt": "prompts/script/v04/s05_shared_path_v1.md",
-      "draft_prompt_sha256": "e53bda76a883e89ad3f3047e07893bd6b92f142e29fecea2a7669add817da4ce",
+      "draft_prompt": "prompts/script/v07/s05_shared_path_v1.md",
+      "draft_prompt_sha256": "eb4aeea9244df83989c774c03d497857b37845ce5edbf06c216a0246fd356230",
       "review_status": "agent_reviewed_candidate",
-      "draft_prompt_id": "script_v04_s05_shared_path_v1"
+      "draft_prompt_id": "script_v07_s05_shared_path_v1",
+      "background": "station_exit_after_rain",
+      "sprite": "normal"
     },
     {
       "id": "s05_separate_path",
-      "location": "old_station",
+      "location": "station_exit",
       "lines": [
         {
           "id": "s05_separate_path_l001",
@@ -2993,6 +3045,31 @@
           "text": "我们把纸箱和纸袋分别提起来。许澄撑开自己的伞，先跨过出口外那道积水。"
         },
         {
+          "id": "v07_s05_separate_path_l001",
+          "speaker": "h",
+          "text": "酒店的地址找到了？"
+        },
+        {
+          "id": "v07_s05_separate_path_l002",
+          "speaker": "p",
+          "text": "找到了，已经发给司机。明早从新站走，不用再回来。"
+        },
+        {
+          "id": "v07_s05_separate_path_l003",
+          "speaker": "h",
+          "text": "那就好。箱底别放在积水里。"
+        },
+        {
+          "id": "v07_s05_separate_path_l004",
+          "speaker": "n",
+          "text": "我把纸箱移到干处。她抬了抬自己的袋子，示意照片有保护袋，不需要我再担心一次。"
+        },
+        {
+          "id": "v07_s05_separate_path_l005",
+          "speaker": "n",
+          "text": "我们都确认了各自要去哪里。再说一遍同样的安排，只会让刚才清楚的答复变得含糊。"
+        },
+        {
           "id": "s05_separate_path_l005",
           "speaker": "p",
           "text": "明天下午我发消息。"
@@ -3000,7 +3077,7 @@
         {
           "id": "s05_separate_path_l006",
           "speaker": "h",
-          "text": "看到了会回。今天先各自平安到家。"
+          "text": "看到了会回。今天先各自平安回去。"
         },
         {
           "id": "s05_separate_path_l007",
@@ -3017,14 +3094,16 @@
       "time": "22:16",
       "dramatic_purpose": "明确今晚分别，避免数值把玩家强制带入同行结局。",
       "next": "s08_normal",
-      "draft_prompt": "prompts/script/v04/s05_separate_path_v1.md",
-      "draft_prompt_sha256": "2ae867cb9f60c70427d97bd585c8b24e5065df92a88be95a32e48c5e2f785372",
+      "draft_prompt": "prompts/script/v07/s05_separate_path_v1.md",
+      "draft_prompt_sha256": "6115e9a97a5c0f979b3f374c18dc9c54c3986ad21770a7ec287de4bf559c2672",
       "review_status": "agent_reviewed_candidate",
-      "draft_prompt_id": "script_v04_s05_separate_path_v1"
+      "draft_prompt_id": "script_v07_s05_separate_path_v1",
+      "background": "station_exit_after_rain",
+      "sprite": "normal"
     },
     {
       "id": "s06_resolution",
-      "location": "old_station",
+      "location": "station_exit",
       "time": "22:17",
       "lines": [],
       "routes": [
@@ -3059,7 +3138,7 @@
         {
           "id": "s07_true_l001",
           "speaker": "n",
-          "text": "车站外的路比记忆里短。伞沿滴下的水落在鞋边，纸箱有一半，一直留在干燥的地方。"
+          "text": "推开小店的门，暖气带着水汽迎过来。纸箱有一半，一直留在干燥的地方。"
         },
         {
           "id": "s07_true_l002",
@@ -3079,7 +3158,7 @@
         {
           "id": "s07_true_l005",
           "speaker": "n",
-          "text": "她抓住伞柄，往我这边推了推。我们都慢下来，终于把步子走到差不多的长度。"
+          "text": "我把伞递回去。她收起伞，指了指我袖口滴落的水。我把纸箱靠到桌脚前，拿纸巾擦了擦手。"
         },
         {
           "id": "s07_true_l006",
@@ -3088,9 +3167,34 @@
           "stop_ambient": true
         },
         {
+          "id": "v07_s07_true_l001",
+          "speaker": "n",
+          "text": "店员把热水壶留在桌边，回去收拾柜台。许澄把纸袋靠在椅脚内侧，没有挡住旁边的过道。"
+        },
+        {
+          "id": "v07_s07_true_l002",
+          "speaker": "h",
+          "text": "杯子拿里面那个。外边的刚洗过，烫。"
+        },
+        {
+          "id": "v07_s07_true_l003",
+          "speaker": "p",
+          "text": "你对这儿还挺熟。"
+        },
+        {
+          "id": "v07_s07_true_l004",
+          "speaker": "h",
+          "text": "晚班结束也会来买东西。不是每次都下雨。"
+        },
+        {
+          "id": "v07_s07_true_l005",
+          "speaker": "n",
+          "text": "我把桌边的一点水擦掉，才拿起杯子。这间店在她生活里原本就有位置，今晚我刚好坐了进来。"
+        },
+        {
           "id": "s07_true_l007",
           "speaker": "p",
-          "text": "等我把箱子放好，能把那封信重新写一遍吗？"
+          "text": "回去把箱子安顿好以后，能把那封信重新写一遍吗？"
         },
         {
           "id": "s07_true_l008",
@@ -3133,12 +3237,42 @@
         {
           "id": "s07_true_l015",
           "speaker": "p",
-          "text": "好。第一条就告诉你，这次伞没有忘。"
+          "text": "好。第一条先告诉你，书有没有湿。"
+        },
+        {
+          "id": "v07_s07_true_l006",
+          "speaker": "p",
+          "text": "下次办展要搬书，可以问我。"
+        },
+        {
+          "id": "v07_s07_true_l007",
+          "speaker": "h",
+          "text": "先告诉我哪天有空。没空就说没空。"
+        },
+        {
+          "id": "v07_s07_true_l008",
+          "speaker": "p",
+          "text": "这回会先确认请假。"
+        },
+        {
+          "id": "v07_s07_true_l009",
+          "speaker": "h",
+          "text": "拍照也行。带三脚架，别再拿报纸垫。"
+        },
+        {
+          "id": "v07_s07_true_l010",
+          "speaker": "n",
+          "text": "她把正的那张也放到桌上，指了指我留在边缘的半边肩膀。两张照片并排了一会儿，又一起回到纸袋里。"
+        },
+        {
+          "id": "v07_s07_true_l011",
+          "speaker": "n",
+          "text": "她收好自己的东西，我也把箱子挪到脚边。明天要走和以后愿意见面，都已经可以各自说出来。"
         },
         {
           "id": "s07_true_l016",
           "speaker": "n",
-          "text": "窗外，最后几滴雨从招牌上滑下来。桌上的旧信被水杯压住一角，稳稳地留在灯下。"
+          "text": "窗外，最后几滴雨从招牌上滑下来。照片已经回到她的纸袋，内袋里的旧信仍留着未拆的封口。"
         }
       ],
       "ending": "true",
@@ -3146,16 +3280,28 @@
       "clear_scene": true,
       "chapter": "ch05",
       "dramatic_purpose": "小店里把今天说清楚并约定下一次联系。",
-      "draft_prompt": "prompts/script/scene_v1.md",
-      "draft_prompt_sha256": "bc5cc48b7fe000f5a42b11fae33438d79e09af6d71f9790bd3c338e35f6c2ea4",
+      "draft_prompt": "prompts/script/v07/s07_true_v1.md",
+      "draft_prompt_sha256": "22f5fa9c8b83401c65555a20f06d1a9f3d0ada1452ca4d8b4d5b8102c8ff2468",
       "review_status": "preserved_v03_dialogue_with_route_revision",
-      "draft_prompt_id": "script_scene_v1"
+      "draft_prompt_id": "script_v07_s07_true_v1",
+      "background": "nearby_cafe",
+      "sprite": "smile"
     },
     {
       "id": "s08_normal",
       "location": "station_exit",
       "time": "22:26",
       "lines": [
+        {
+          "id": "v07_s08_normal_l001",
+          "speaker": "n",
+          "text": "分别时，她说今晚先到这里。我把后面原本还想说的话停住，只确认了叫车的位置。"
+        },
+        {
+          "id": "v07_s08_normal_l002",
+          "speaker": "n",
+          "text": "我把等车的位置定在车站出口，她继续往街角走。还有可以继续的话题，也还有各自要过的明天。我们没有再添下一段行程。"
+        },
         {
           "id": "s08_normal_l001",
           "speaker": "n",
@@ -3186,12 +3332,32 @@
         {
           "id": "s08_normal_l006",
           "speaker": "p",
-          "text": "谢谢。到家我给你发消息。"
+          "text": "谢谢。到住处我给你发消息。"
         },
         {
           "id": "s08_normal_l007",
           "speaker": "n",
           "text": "我输入了完整的一句话，没有用句号代替。发送以后，又把信封按平了一点。"
+        },
+        {
+          "id": "v07_s08_normal_l003",
+          "speaker": "n",
+          "text": "她回了一个“好”，没有追问。我把目的地核对成今晚的酒店，明天下午到家是另一条行程。"
+        },
+        {
+          "id": "v07_s08_normal_l004",
+          "speaker": "n",
+          "text": "车还有两分钟到。我沿纸箱底边摸了一遍，确认书没湿，才把已经晾干一点的布袋卷好。"
+        },
+        {
+          "id": "v07_s08_normal_l005",
+          "speaker": "n",
+          "text": "等消息的几秒里，我没有去找比刚才更合适的答复。需要说的下一句话，可以从明天正在做的事开始。"
+        },
+        {
+          "id": "v07_s08_normal_l006",
+          "speaker": "n",
+          "text": "屏幕暗下来以前，我确认她的号码已经在通讯录里。她发来的照片留在聊天里，纸袋仍由她自己带回去。"
         },
         {
           "id": "s08_normal_l008",
@@ -3214,11 +3380,12 @@
       "ending_title": "Normal / 留给下一次的话",
       "chapter": "ch05",
       "dramatic_purpose": "分别后保留联系，承认仍有事情留给下一次。",
-      "draft_prompt": "prompts/script/scene_v1.md",
-      "draft_prompt_sha256": "bc5cc48b7fe000f5a42b11fae33438d79e09af6d71f9790bd3c338e35f6c2ea4",
+      "draft_prompt": "prompts/script/v07/s08_normal_v1.md",
+      "draft_prompt_sha256": "e583b4e1918842a1059682aee510fe1552d0a7ba0c8a4c69d011708b6d4f56f0",
       "review_status": "preserved_v03_dialogue_with_route_revision",
       "clear_scene": true,
-      "draft_prompt_id": "script_scene_v1"
+      "draft_prompt_id": "script_v07_s08_normal_v1",
+      "background": "station_exit_after_rain"
     }
   ],
   "chapters": [

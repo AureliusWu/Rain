@@ -2348,6 +2348,102 @@
         "peak": 0.417786,
         "rms_dbfs": -23.736
       }
+    },
+    {
+      "id": "station_exit_covered",
+      "type": "background",
+      "file": "backgrounds/station_exit_covered.png",
+      "source": "Built-in imagegen; model identifier not exposed; original project reference",
+      "license": "AI-generated output; own project reference; see CREDITS.md",
+      "source_file": "assets_source/background/station_exit_covered_v1.png",
+      "source_sha256": "1bae0d776a6feec13b7ba101b063161a91b32374f6c9a5ef206a626e7abb3481",
+      "version": 1,
+      "approved": true,
+      "status": "candidate_user_review",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "prompt": "prompts/background/station_exit_covered_v1.md",
+      "prompt_id": "background_station_exit_covered_v1",
+      "prompt_sha256": "232b7196ccb17bf0164108ac90fa373a7a7eeecd31215a2fe410f9ae8a68a941",
+      "reference_source_file": "assets_source/background/station_rain_v1.png",
+      "reference_sha256": "9080cb886bdeeeba1fb506e252fde3c0b4450ef113f8a6ee831edbab020f4bab",
+      "sha256": "efdd8356e73f1cdbb7da72b8c0db45b0820da56fbf2a22c2554302e5bfe28d00",
+      "image": {
+        "width": 1280,
+        "height": 720,
+        "mode": "RGB",
+        "format": "PNG",
+        "has_alpha": false,
+        "pixel_sha256": "c5b90ed3fde302440b3cfee3125d17025553f8bb3938b810e3793fa9d39266a0"
+      },
+      "image_recipe": {
+        "method": "fit_1280x720_v1"
+      }
+    },
+    {
+      "id": "station_exit_after_rain",
+      "type": "background",
+      "file": "backgrounds/station_exit_after_rain.png",
+      "source": "Built-in imagegen generation and sign-removal edit; model identifier not exposed",
+      "license": "AI-generated output; own project reference; see CREDITS.md",
+      "source_file": "assets_source/background/station_exit_after_rain_v1.png",
+      "source_sha256": "6c734e047b7a99748319c0f975870c952c6d317ed5193b7e7e18dd659a09c3e5",
+      "version": 1,
+      "approved": true,
+      "status": "candidate_user_review",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "prompt": "prompts/background/station_exit_after_rain_v1.md",
+      "prompt_id": "background_station_exit_after_rain_v1",
+      "prompt_sha256": "a96b8bda8737d03027603bdce0676336b96d4ca069e6105885533fbffa149003",
+      "reference_source_file": "assets_source/background/station_exit_after_rain_base_v1.png",
+      "reference_sha256": "3252295f85bbbef8681d6b0c6f1c7e44e60c75d3b23daeab4f07b64e21b53841",
+      "sha256": "42023b4faa7438819a0949d4a54723b48d7ad1d2fdfc98d813045563328d6f0c",
+      "image": {
+        "width": 1280,
+        "height": 720,
+        "mode": "RGB",
+        "format": "PNG",
+        "has_alpha": false,
+        "pixel_sha256": "8e42493b8ee3037304c192bb9a8c6239deadd4e9c3adf5fb9a41736b31066fd0"
+      },
+      "image_recipe": {
+        "method": "fit_1280x720_v1"
+      },
+      "reference_sources": [
+        {
+          "file": "assets_source/background/station_rain_v1.png",
+          "sha256": "9080cb886bdeeeba1fb506e252fde3c0b4450ef113f8a6ee831edbab020f4bab"
+        }
+      ]
+    },
+    {
+      "id": "nearby_cafe",
+      "type": "background",
+      "file": "backgrounds/nearby_cafe.png",
+      "source": "Built-in imagegen; model identifier not exposed; original project reference",
+      "license": "AI-generated output; own project reference; see CREDITS.md",
+      "source_file": "assets_source/background/nearby_cafe_v1.png",
+      "source_sha256": "c38c92c40e1fde14f386892c450851eb68577dfe946ffdc52f888792f6afcbcc",
+      "version": 1,
+      "approved": true,
+      "status": "candidate_user_review",
+      "approval_scope": "Agent integration review; user final visual choice pending",
+      "prompt": "prompts/background/nearby_cafe_v1.md",
+      "prompt_id": "background_nearby_cafe_v1",
+      "prompt_sha256": "295372e3460f68593c7984f43c392e4292cfe0e6d394cad90f1e7ad95bd94a00",
+      "reference_source_file": "assets_source/background/station_rain_v1.png",
+      "reference_sha256": "9080cb886bdeeeba1fb506e252fde3c0b4450ef113f8a6ee831edbab020f4bab",
+      "sha256": "8b0eeebeb31f758f29510f056d8daf39c2b27ceb71f89774ee281d6b6dde5dc9",
+      "image": {
+        "width": 1280,
+        "height": 720,
+        "mode": "RGB",
+        "format": "PNG",
+        "has_alpha": false,
+        "pixel_sha256": "71c8a0d756d67ad86fb45c67efd82372f79e27f685f1a20d68edf0934a0d3dd2"
+      },
+      "image_recipe": {
+        "method": "fit_1280x720_v1"
+      }
     }
   ]
 }

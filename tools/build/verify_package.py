@@ -93,6 +93,17 @@ def main():
                     "cg-letter", "branch-s04_open", "branch-s04_reserved", "revisit-choice",
                     "audio-true-voice", "audio-normal-voice"] + ["expression-" + name for name in
             ("normal", "smile", "happy", "sad", "angry", "surprised", "embarrassed")]
+        # Once these candidate backgrounds are registered, missing native views
+        # must block acceptance even if a generation bug omits their assertions.
+        manifest = json.loads(Path('game/data/asset_manifest.json').read_text(encoding='utf-8'))
+        backgrounds = {asset['id'] for asset in manifest['assets'] if asset['type'] == 'background'}
+        required += [name for asset, name in (
+            ('station_exit_covered', 'bg-exit-covered'),
+            ('station_exit_after_rain', 'bg-exit-after-rain'),
+            ('station_exit_after_rain', 'bg-s05_shared_path'),
+            ('station_exit_after_rain', 'bg-s05_separate_path'),
+            ('nearby_cafe', 'bg-nearby-cafe'),
+        ) if asset in backgrounds]
         for name in required:
             file = screenshots / (name + ".png")
             if not file.is_file():
