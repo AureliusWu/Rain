@@ -476,10 +476,12 @@ testcase history_preferences_and_audio:
     screenshot "first-dialogue"
     click id "history_open"
     assert screen "history"
+    pause 0.3
     screenshot "history"
     click id "game_return"
     click id "preferences_open"
     assert screen "preferences"
+    pause 0.3
     screenshot "settings"
     click id "mute_all"
     assert eval preferences.get_mute("music")

@@ -2,6 +2,7 @@
 
 ## 0.9.0 — 原生 1080p 体验候选开发，2026-10-05
 
+- 游戏菜单加入不透明深蓝底层，消除底层对话 / 选择 / 快捷栏透字；历史和设置截图等待淡入结束。恢复空卡 FileScreenshot 的 button vbox 缩进，Windows lint 失败证据见 docs/evidence/v09-lint-failure.json。83 Python / 全部作者检查通过，完整 Windows 重验待完成。
 - 修复空存档卡错误的 gui 缩略图尺寸引用，改用已有 config.thumbnail_width / height。二轮 37300201619 在 21.711 秒 FAILED，后续退出钩子异常导致挂起；1 失败 / 30 not run、10 已执行断言通过，失败记录见 docs/evidence/v09-source-overrun.json。完整 Windows 重验待完成。
 - 源码交互执行补 2400 秒硬上限和 source-process 退出证据；新进程读档限 120 秒，总作业 90 分钟。83 Python / 全部作者检查通过。37300201619 超过 50 分钟仍未完成，不计技术验收，完整 Windows 重验仍待完成。
 - 原生画布、字体、控件、布局、60 张图片与重建配方适配；七表情从原图导入，历史请求保持。

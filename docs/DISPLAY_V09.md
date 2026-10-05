@@ -1,5 +1,7 @@
 # v0.9 原生 1080p 适配
 
+实际历史页复查仍见底层对话叠字，0.3 秒等待只能处理过渡，不能消除透明装饰的透字。游戏菜单现增加原生不透明深蓝底层，历史 / 设置 / 存读档均保留原控件；历史和设置证据截图等待过渡结束。修订 cfa495a 被 Windows lint 检出 FileScreenshot 的缩进错误，已恢复到原 button vbox 层级，失败身份见 evidence/v09-lint-failure.json。83 Python / 全部作者检查通过；主集合仍为 31/359 与 65 图，Windows lint / 全源码 / 独立 ZIP EXE / 重开读档仍需在当前修复候选完整重验。
+
 读取取消后日志已定位二轮 37300201619：并非整个集合仍正常慢跑，而是在 21.711 秒报 FAILED；31 用例中 1 失败、30 not run，10 已执行断言均通过，560 句字体溢出列表为空。空存档缩略图误用了 gui.thumbnail_width / height（实际定义于 config），引发 AttributeError；后续 before / teardown 又触发 float > NoneType，使引擎未能退出。已更正为 config.thumbnail_width / height，保留原生蓝色空卡，并保留有界源码进程防止类似错误无限等待。源码 / EXE 各 2400 秒，新进程读档 120 秒、总作业 90 分钟；31/359、65 图与跨进程 1/10、1 图的完整门槛不变。失败 artifact 11344121426 的身份见 evidence/v09-source-overrun.json。完整 Windows 重验仍待完成。
 
 原生画布 1920×1080，默认窗口 1280×720；Ren'Py 8.5.3 负责缩放和输入。沿用全部剧情 ID、三种状态、四选择、16 路线、17 句录音和两个候选结局。

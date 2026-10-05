@@ -415,6 +415,8 @@ screen game_menu(title, scroll=None):
     if main_menu:
         add gui.main_menu_background
     else:
+        # The translucent decoration must not expose the old dialogue or choices.
+        add Solid("#0d2230")
         add gui.game_menu_background
 
     frame:
@@ -638,7 +640,7 @@ screen file_slots(title):
 
                         has vbox
 
-                    add FileScreenshot(slot, empty=Solid(gui.muted_color, xsize=config.thumbnail_width, ysize=config.thumbnail_height)) xalign 0.5
+                        add FileScreenshot(slot, empty=Solid(gui.muted_color, xsize=config.thumbnail_width, ysize=config.thumbnail_height)) xalign 0.5
 
                         text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
                             style "slot_time_text"

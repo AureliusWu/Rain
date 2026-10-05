@@ -1,0 +1,11 @@
+{
+  "commit": "cfa495a228369bae512c5ef9fe77d37e0561b970",
+  "run_id": 37306841229,
+  "job_id": 111752838908,
+  "workflow_conclusion": "failure",
+  "failure_step": "Ren’Py lint",
+  "message": "game/screens.rpy line 643: Line is indented, but the preceding add statement does not expect a block.",
+  "source_executed": false,
+  "package_built": false,
+  "fix": "Restored FileScreenshot add to the existing button vbox indentation; final Windows acceptance pending."
+}
