@@ -106,6 +106,7 @@ def validate_approval(machine, human, version, publication=None, voice=None):
         for recording in records:
             asr, audio = recording.get('asr', {}), recording.get('audio', {})
             require(isinstance(asr,dict) and asr.get('passed') is True and asr.get('polarity_counts_match') is True
+                    and asr.get('critical_terms_match') is True
                     and type(asr.get('cer')) in (int,float) and 0 <= asr['cer'] <= .2, 'Failed voice transcription')
             require(isinstance(audio,dict) and audio.get('sample_rate') == 24000 and audio.get('channels') == 1
                     and type(audio.get('frames')) is int and audio['frames'] > 0

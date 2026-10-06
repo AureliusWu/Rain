@@ -1,0 +1,17 @@
+{
+  "status": "failed_after_all_recordings_generated",
+  "run_id": 37436201390,
+  "job_id": 112178500887,
+  "commit": "faad6507d801dd653c4ad10e4ee489b97965acc3",
+  "generated_recordings": 17,
+  "generated_duration_seconds": 57.36,
+  "failure": "faster-whisper called av.open(metadata_errors=...) but installed PyAV did not support the keyword",
+  "fix": "Decode verified WAV with FFmpeg into a 16 kHz numpy array accepted directly by faster-whisper; reuse exact saved recordings",
+  "archive": {
+    "id": 11399970230,
+    "bytes": 4626183,
+    "sha256": "1aa39f263aba666d1c37dd793ce4c1de47ac54966d772b00de3e3f51b1397452",
+    "crc": "passed"
+  },
+  "listening_claimed": false
+}

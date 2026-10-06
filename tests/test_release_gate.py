@@ -45,7 +45,7 @@ class ReleaseGateTests(unittest.TestCase):
         voice = {'status':'signals_and_asr_passed','unresolved_machine_issues':[],'human_listening':False,
                  'producer_commit':'e'*40,'provider':{'model_id':MODEL_ID,'revision':REVISION,'speaker':SPEAKER},
                  'recordings':[{'voice_id':f'voice_{i}',
-                     'asr':{'passed':True,'polarity_counts_match':True,'cer':0.0},
+                     'asr':{'passed':True,'polarity_counts_match':True,'critical_terms_match':True,'cer':0.0},
                      'audio':{'sample_rate':24000,'channels':1,'frames':24000,'peak':.7,'rms_dbfs':-22}}
                      for i in range(17)]}
         authorization={'schema_version':1,'status':'authorized_by_user','version':'1.0.0',

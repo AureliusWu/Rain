@@ -59,6 +59,18 @@ def character_error_rate(expected,actual):
     return previous[-1]/max(1,len(expected))
 
 
+def assess_transcript(row,transcript,converter):
+    expected,actual = normalize_text(row['text'],converter),normalize_text(transcript,converter)
+    cer = character_error_rate(expected,actual)
+    polarity = all(expected.count(c) == actual.count(c) for c in ('不','没'))
+    terms = {'s03_honest_l005':['我还不知道'], 's04_waiting_l020':['句号'],
+             's08_normal_l005':['拍歪']}.get(row['line_id'],[])
+    critical = all(term in actual for term in terms)
+    return {'transcript':transcript,'normalized_text':actual,'cer':round(cer,6),
+            'polarity_counts_match':polarity,'critical_terms':terms,'critical_terms_match':critical,
+            'passed':bool(actual) and cer <= .2 and polarity and critical}
+
+
 def postprocess(raw,output):
     base = ['ffmpeg','-nostdin','-hide_banner','-y','-i',str(raw)]
     result = subprocess.run(base+['-af','loudnorm=I=-20:TP=-2:LRA=6:print_format=json','-f','null','-'],
@@ -102,31 +114,43 @@ def finish(args,plan,provider,recordings):
     import numpy as np
     import soundfile as sf
     from huggingface_hub import HfApi, snapshot_download
+    def write_json(name,data):
+        (args.output/name).write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     from faster_whisper import WhisperModel
     from opencc import OpenCC
     converter = OpenCC('t2s')
     asr_info = HfApi().model_info('Systran/faster-whisper-small')
     asr_path = snapshot_download('Systran/faster-whisper-small',revision=asr_info.sha)
     asr = WhisperModel(asr_path,device='cpu',compute_type='int8',cpu_threads=4)
-    errors = []
     for row in recordings:
         segments,_ = asr.transcribe(decode_for_asr(args.output/row['files']['wav']['path']),language='zh',beam_size=5,
                                    condition_on_previous_text=False,initial_prompt='以下为简体中文口语录音。',vad_filter=False)
         transcript = ''.join(s.text for s in segments)
-        expected,actual = normalize_text(row['text'],converter),normalize_text(transcript,converter)
-        cer = character_error_rate(expected,actual)
-        polarity = all(expected.count(c) == actual.count(c) for c in ('不','没'))
-        row['asr'] = {'transcript':transcript,'normalized_text':actual,'cer':round(cer,6),
-                      'polarity_counts_match':polarity,'passed':bool(actual) and cer <= .2 and polarity}
+        row['asr_small'] = assess_transcript(row,transcript,converter)
+        print(f"ASR small {row['voice_id']}: CER={row['asr_small']['cer']:.3f}; {transcript}",flush=True)
+    write_json('asr-small.json', [{'voice_id':r['voice_id'],**r['asr_small']} for r in recordings])
+    small_revision=asr_info.sha
+    del asr
+    gc.collect()
+    asr_info=HfApi().model_info('Systran/faster-whisper-large-v3')
+    asr_path=snapshot_download('Systran/faster-whisper-large-v3',revision=asr_info.sha)
+    asr=WhisperModel(asr_path,device='cpu',compute_type='int8',cpu_threads=4)
+    errors=[]
+    for row in recordings:
+        segments,_=asr.transcribe(decode_for_asr(args.output/row['files']['wav']['path']),language='zh',beam_size=5,
+                                condition_on_previous_text=False,initial_prompt='以下为简体中文口语录音。',vad_filter=False)
+        transcript=''.join(s.text for s in segments)
+        row['asr']=assess_transcript(row,transcript,converter)
         if not row['asr']['passed']: errors.append(row['voice_id'])
-        print(f"ASR {row['voice_id']}: CER={cer:.3f}; {transcript}",flush=True)
+        print(f"ASR large-v3 {row['voice_id']}: CER={row['asr']['cer']:.3f}; {transcript}",flush=True)
     write_json('generation.json',{'schema_version':1,'status':'signals_and_asr_passed' if not errors else 'asr_review_required',
                'producer_commit':os.environ.get('ORIGINAL_GENERATION_COMMIT',os.environ.get('GITHUB_SHA')),
                'producer_run':os.environ.get('ORIGINAL_GENERATION_RUN',os.environ.get('GITHUB_RUN_ID')),
                'verification_commit':os.environ.get('GITHUB_SHA'),'verification_run':os.environ.get('GITHUB_RUN_ID'),
                'request_sha256':sha256(args.request.read_bytes()),'source_voice_manifest_sha256':plan['source_voice_manifest_sha256'],
                'source_story_sha256':plan['source_story_sha256'],'recordings':recordings,'provider':provider,
-               'asr_model':'Systran/faster-whisper-small','asr_revision':asr_info.sha,'asr_max_cer':.2,
+               'asr_model':'Systran/faster-whisper-large-v3','asr_revision':asr_info.sha,'asr_max_cer':.2,
+               'diagnostic_asr_model':'Systran/faster-whisper-small','diagnostic_asr_revision':small_revision,
                'unresolved_machine_issues':errors,'human_listening':False,
                'limits':'ASR and signal checks do not establish human listening or final creative approval.'})
     require(not errors,'ASR needs review: '+', '.join(errors))

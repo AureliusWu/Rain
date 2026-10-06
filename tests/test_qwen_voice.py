@@ -9,7 +9,7 @@ from tools.asset_paths import sha256
 from tools.audio_process.metadata import audio_metadata
 from pathlib import Path
 from tools.story_model import ROOT
-from tools.audio_process.generate_qwen import validate_plan, character_error_rate, normalize_text
+from tools.audio_process.generate_qwen import validate_plan, character_error_rate, normalize_text, assess_transcript
 from tools.audio_process.adopt_qwen import prepare
 from tools.audio_process.qwen_voice import MODEL_ID, MODEL_NAME, REVISION, PROCESSING, provenance_matches, request_fingerprint
 
@@ -42,6 +42,15 @@ class QwenVoiceTests(unittest.TestCase):
         self.assertGreater(character_error_rate(expected,actual),0)
         self.assertNotEqual(expected.count('不'),actual.count('不'))
         self.assertEqual(character_error_rate('中文','中文'),0)
+
+    def test_short_or_semantic_word_errors_are_not_hidden_by_low_average_cer(self):
+        for line_id,wrong in [('s03_honest_l005','他还不知道你写了什么，要不要看，也得让我自己决定。'),
+                              ('s04_waiting_l020','举好不算消息。'),
+                              ('s08_normal_l005','这张没有拍完。你回去以后，慢慢看。')]:
+            row=next(r for r in self.plan['lines'] if r['line_id']==line_id)
+            with self.subTest(line_id=line_id):
+                self.assertFalse(assess_transcript(row,wrong,None)['passed'])
+                self.assertTrue(assess_transcript(row,row['text'],None)['passed'])
 
     def test_request_fingerprint_changes_with_direction_and_model(self):
         voice={'instruct':'温柔','model_revision':REVISION,'voice':'Serena'}
@@ -81,7 +90,7 @@ class QwenVoiceTests(unittest.TestCase):
             recordings.append({**row,'files':files,'duration_seconds':1.0,
                 'source_audio':audio_metadata(bundle/files['wav']['path']),
                 'audio':audio_metadata(bundle/files['ogg']['path']),
-                'asr':{'passed':True,'polarity_counts_match':True,'cer':0.0}})
+                'asr':{'passed':True,'polarity_counts_match':True,'critical_terms_match':True,'cer':0.0}})
         report={'status':'signals_and_asr_passed','unresolved_machine_issues':[],'human_listening':False,
                 'request_sha256':sha256((ROOT/'prompts/voice/qwen_heroine_v1.json').read_bytes()),
                 'source_story_sha256':self.plan['source_story_sha256'],

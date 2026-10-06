@@ -41,7 +41,7 @@ jobs:
           gh api repos/AureliusWu/Test/actions/artifacts/11399970230 > artifact-info.json
           python -c "import json; a=json.load(open('artifact-info.json')); assert a['id']==11399970230 and a['digest']=='sha256:1aa39f263aba666d1c37dd793ce4c1de47ac54966d772b00de3e3f51b1397452' and not a['expired']"
           gh run download 37436201390 --repo AureliusWu/Test --name qwen-serena-faad6507d801dd653c4ad10e4ee489b97965acc3 --dir reports/qwen-voice
-      - name: Check all saved hashes and independently transcribe
+      - name: Check all saved hashes, transcribe and persist verification report
         run: python -m tools.audio_process.generate_qwen --output reports/qwen-voice --reuse
       - name: Adopt verified recordings and run complete author checks
         run: |

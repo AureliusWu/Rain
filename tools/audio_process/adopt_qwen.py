@@ -38,6 +38,7 @@ def prepare(bundle,root=ROOT):
         require(all(record[k] == direction[k] for k in ('voice_id','line_id','text','instruct','seed')),'Request binding mismatch')
         asr = record['asr']
         require(asr.get('passed') is True and asr.get('polarity_counts_match') is True
+                and asr.get('critical_terms_match') is True
                 and type(asr.get('cer')) in (int,float) and 0 <= asr['cer'] <= .2,'Failed independent transcription')
         verified = {}
         for kind in ('wav','ogg'):
