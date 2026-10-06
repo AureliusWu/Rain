@@ -31,7 +31,7 @@ Windows 存档位于 %APPDATA%\RenPy\AureliusWu-BeforeTheRainStops-v1。
 
 制作与来源
 创作与工程：AureliusWu / AI 辅助；引擎：Ren'Py 8.5.3。
-图像：OpenAI 图像生成；关键语音：Kokoro-82M v1.1-zh / zf_001。
+图像：OpenAI 图像生成；关键语音：Qwen3-TTS 1.7B / Serena。
 音乐与音效：原创程序合成；字体：Source Han Sans / SIL OFL 1.1。
 具体署名、来源和许可见 CREDITS.md、LICENSE 与 licenses 文件夹。
 遇到问题时，请记录本页版本、当前场景 / 台词和触发操作。

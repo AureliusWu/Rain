@@ -1122,7 +1122,7 @@ testcase auto_waits_for_voice:
     click id "auto_run"
     assert eval not preferences.afm_enable
     assert eval renpy.music.get_playing(channel="voice") is None
-    assert eval __import__("time").monotonic() - test_voice_started >= 3.554
+    assert eval __import__("time").monotonic() - test_voice_started >= 2.890
     $ preferences.afm_time = 15.0
 
 testcase skip_stops_at_later_choices:

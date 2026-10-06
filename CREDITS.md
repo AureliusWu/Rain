@@ -10,7 +10,7 @@
 - v0.2 背景、许澄基础立绘与旧信 CG：OpenAI 内置图像生成工具。工具未暴露具体模型标识；使用原创 Prompt 和本项目生成的参考图，没有引用第三方人物或现成作品。源图及 Prompt 保留在 assets_source 与 prompts。人物透明版由基础立绘编辑生成。
 - v0.3 六张表情变体：同一 normal 基础图通过内置图像生成工具分别做面部编辑；未使用第三方角色参考。固定组件、精确请求、输入与输出哈希随仓库保留；正常、微笑、开心、难过、生气、惊讶、害羞共七种。
 - v0.2 蓝色菜单、滑块与选择标记：原创程序生成图元，tools/image_process/create_ui.py；其他控件沿用 Ren'Py 默认 GUI。
-- 关键语音：Kokoro-82M v1.1-zh，zf_001，speed 0.95；模型 Apache-2.0，许可证见 licenses/Kokoro-model-Apache-2.0.txt。[官方模型](https://huggingface.co/hexgrad/Kokoro-82M-v1.1-zh)；[ONNX 导出](https://github.com/thewh1teagle/kokoro-onnx/releases/tag/model-files-v1.1)。开发工具 kokoro-onnx 使用 MIT，Misaki 中文前处理使用 Apache-2.0。模型和推理依赖不随游戏分发。
+- 历史候选关键语音：Kokoro-82M v1.1-zh，zf_001，speed 0.95；模型 Apache-2.0，许可证见 licenses/Kokoro-model-Apache-2.0.txt。[官方模型](https://huggingface.co/hexgrad/Kokoro-82M-v1.1-zh)；[ONNX 导出](https://github.com/thewh1teagle/kokoro-onnx/releases/tag/model-files-v1.1)。开发工具 kokoro-onnx 使用 MIT，Misaki 中文前处理使用 Apache-2.0。模型和推理依赖不随游戏分发。
 - 语音为项目台词的本地合成，未克隆现实人物。v0.6 共 17 句、58.048 秒，保留 v0.2 的六句录音。ONNX Runtime 在导入前设置 ORT_DISABLE_TELEMETRY=1，并关闭事件 API；游戏仅播放离线 OGG。
 - 最终美术与声音选择由 AureliusWu 决定；本版本验收状态见发行说明。MIT 适用于原创代码及程序图元，第三方许可保留；不对 AI 输出主张独占版权。
 
@@ -21,3 +21,5 @@
 - v0.9 原生 1080p：由既有 1672×941 背景 / CG、1024×1536 透明立绘重建，保留原始 Prompt；背景 / CG 约 1.15 倍重采样。20 蓝色图元直接在目标尺寸重画，其他原始 GUI 按明确配方导入。60 图片均有可复现源、许可与哈希，见 docs/DISPLAY_V09.md。
 
 - v1.0：40 处无配音正文精修，保留 560 个台词 ID、16 条路线和 17 句录音文字；12 份新版本场景请求保留原请求与逐句修改。图像、录音和许可沿用已登记资产，不改变来源或版权声明。
+
+- v1.0 语音升级：17 句关键台词全部改用免费开源 Qwen3-TTS-12Hz-1.7B-CustomVoice / Serena / Chinese。官方预设音色，无现实人物参考或克隆。模型和 qwen-tts 0.1.1 代码采用 Apache-2.0，见 licenses/Qwen3-TTS-Apache-2.0.txt；https://github.com/QwenLM/Qwen3-TTS ，https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice 。固定模型提交、逐句指令、源 WAV、响度处理和独立 ASR 记录保留；旧版录音归档，玩家包不含模型或生成依赖。自动文字和信号检查不代表真人试听。

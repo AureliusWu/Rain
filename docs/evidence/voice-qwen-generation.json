@@ -1,0 +1,1398 @@
+{
+  "schema_version": 1,
+  "status": "signals_and_asr_passed",
+  "producer_commit": "faad6507d801dd653c4ad10e4ee489b97965acc3",
+  "producer_run": "37436201390",
+  "verification_commit": "8cb049e0a654bfba8a22f84b016e7bbe1973368a",
+  "verification_run": "37438947888",
+  "request_sha256": "8802352a0ec833b5c91e47ca08835548faacd6b5474150b09f98dbdeb23d1966",
+  "source_voice_manifest_sha256": "58df83bd4be148de0a7a0ea66e4a9c3b8a165f3f7f1a4653a8171fc3d17b5fa7",
+  "source_story_sha256": "8456fefa4ec8c504444bfafab017ceb882c7ba5e335a1541842a9526bca919f3",
+  "recordings": [
+    {
+      "voice_id": "heroine_s01_arrival_l005_v1",
+      "line_id": "s01_arrival_l005",
+      "text": "你还是和以前一样，出门不看天气。",
+      "instruct": "自然标准普通话，23岁成年女性，温暖轻柔的日常对话。语速适中，吐字清晰，情绪克制。轻轻打趣，带微笑，像和久别的旧友重逢。",
+      "seed": 20261006,
+      "language": "Chinese",
+      "speaker": "Serena",
+      "sample_rate": 24000,
+      "duration_seconds": 3.04,
+      "generation_seconds": 28.711,
+      "loudness_input": {
+        "input_i": "-26.72",
+        "input_tp": "-12.83",
+        "input_lra": "0.20",
+        "input_thresh": "-36.87",
+        "output_i": "-19.70",
+        "output_tp": "-5.85",
+        "output_lra": "0.00",
+        "output_thresh": "-29.86",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.30"
+      },
+      "source_audio": {
+        "format": "WAV",
+        "subtype": "PCM_16",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 72960,
+        "duration_seconds": 3.04,
+        "peak": 0.4841,
+        "rms_dbfs": -20.075
+      },
+      "audio": {
+        "format": "OGG",
+        "subtype": "VORBIS",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 72960,
+        "duration_seconds": 3.04,
+        "peak": 0.488625,
+        "rms_dbfs": -20.029
+      },
+      "files": {
+        "raw": {
+          "path": "raw/heroine_s01_arrival_l005_v1.wav",
+          "sha256": "f61c03def793d936141ec8288793f973900ea3ca6ae83a418222fd903496a37e"
+        },
+        "wav": {
+          "path": "wav/heroine_s01_arrival_l005_v1.wav",
+          "sha256": "3813ef20a2c9b54d4d9d48e973dc1b76cfcf2a722cb44be30567759d760a179d"
+        },
+        "ogg": {
+          "path": "ogg/heroine_s01_arrival_l005_v1.ogg",
+          "sha256": "3191823a7180c6e6237345a711eb4d8d2359b8014b6b85d1946a316790b9b13f"
+        }
+      },
+      "asr_small": {
+        "transcript": "你还是和以前一样,出门不看天气。",
+        "normalized_text": "你还是和以前一样出门不看天气",
+        "cer": 0.0,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      },
+      "asr": {
+        "transcript": "你还是和以前一样,出门不看天气。",
+        "normalized_text": "你还是和以前一样出门不看天气",
+        "cer": 0.0,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      }
+    },
+    {
+      "voice_id": "heroine_s02_reunion_l008_v1",
+      "line_id": "s02_reunion_l008",
+      "text": "我知道。你还给照片起了个很长的名字。",
+      "instruct": "自然标准普通话，23岁成年女性，温暖轻柔的日常对话。语速适中，吐字清晰，情绪克制。温和地回忆共同经历，熟悉，带一点笑意。",
+      "seed": 20261007,
+      "language": "Chinese",
+      "speaker": "Serena",
+      "sample_rate": 24000,
+      "duration_seconds": 4.08,
+      "generation_seconds": 37.356,
+      "loudness_input": {
+        "input_i": "-23.05",
+        "input_tp": "-9.82",
+        "input_lra": "0.20",
+        "input_thresh": "-33.25",
+        "output_i": "-19.20",
+        "output_tp": "-6.13",
+        "output_lra": "0.20",
+        "output_thresh": "-29.45",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.80"
+      },
+      "source_audio": {
+        "format": "WAV",
+        "subtype": "PCM_16",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 97920,
+        "duration_seconds": 4.08,
+        "peak": 0.454987,
+        "rms_dbfs": -20.112
+      },
+      "audio": {
+        "format": "OGG",
+        "subtype": "VORBIS",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 97920,
+        "duration_seconds": 4.08,
+        "peak": 0.44837,
+        "rms_dbfs": -20.087
+      },
+      "files": {
+        "raw": {
+          "path": "raw/heroine_s02_reunion_l008_v1.wav",
+          "sha256": "5c340551675a71e1d14964bc32f6f8621d16a80570c3254072404745f5bbb2fe"
+        },
+        "wav": {
+          "path": "wav/heroine_s02_reunion_l008_v1.wav",
+          "sha256": "684d97354149a0dbbad6720f8337f9ccf714970910e966c282b0b4e35e1ba95b"
+        },
+        "ogg": {
+          "path": "ogg/heroine_s02_reunion_l008_v1.ogg",
+          "sha256": "8dd03edfd2d9732d88808753f9c4d7bad0a92203b80679c113ee2fd8dcbc0666"
+        }
+      },
+      "asr_small": {
+        "transcript": "我知道,你还给照片起了个很长的名字。",
+        "normalized_text": "我知道你还给照片起了个很长的名字",
+        "cer": 0.0,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      },
+      "asr": {
+        "transcript": "我知道,你还给照片起了个很长的名字。",
+        "normalized_text": "我知道你还给照片起了个很长的名字",
+        "cer": 0.0,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      }
+    },
+    {
+      "voice_id": "heroine_s03_letter_l011_v1",
+      "line_id": "s03_letter_l011",
+      "text": "你不用现在打开。",
+      "instruct": "自然标准普通话，23岁成年女性，温暖轻柔的日常对话。语速适中，吐字清晰，情绪克制。安静体贴，给对方留出选择的空间，不催促。",
+      "seed": 20261008,
+      "language": "Chinese",
+      "speaker": "Serena",
+      "sample_rate": 24000,
+      "duration_seconds": 1.36,
+      "generation_seconds": 13.715,
+      "loudness_input": {
+        "input_i": "-24.30",
+        "input_tp": "-9.58",
+        "input_lra": "0.00",
+        "input_thresh": "-34.30",
+        "output_i": "-20.00",
+        "output_tp": "-5.29",
+        "output_lra": "0.00",
+        "output_thresh": "-30.00",
+        "normalization_type": "linear",
+        "target_offset": "-0.00"
+      },
+      "source_audio": {
+        "format": "WAV",
+        "subtype": "PCM_16",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 32640,
+        "duration_seconds": 1.36,
+        "peak": 0.542755,
+        "rms_dbfs": -20.654
+      },
+      "audio": {
+        "format": "OGG",
+        "subtype": "VORBIS",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 32640,
+        "duration_seconds": 1.36,
+        "peak": 0.541544,
+        "rms_dbfs": -20.61
+      },
+      "files": {
+        "raw": {
+          "path": "raw/heroine_s03_letter_l011_v1.wav",
+          "sha256": "b9e9cb1e855900d67a7839fc591f47ef3ec564811f4ffc5e154b9d4423b8f24e"
+        },
+        "wav": {
+          "path": "wav/heroine_s03_letter_l011_v1.wav",
+          "sha256": "63ba228a2611d3beb2e6555a57494efddbb91442bff7d6e114b64298ad090ce1"
+        },
+        "ogg": {
+          "path": "ogg/heroine_s03_letter_l011_v1.ogg",
+          "sha256": "da091a25ab2a943113d5ac25c1ecae2b59a0a72ef91af4c78b5be7924d02f476"
+        }
+      },
+      "asr_small": {
+        "transcript": "你不用现在打开。",
+        "normalized_text": "你不用现在打开",
+        "cer": 0.0,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      },
+      "asr": {
+        "transcript": "你不用现在打开。",
+        "normalized_text": "你不用现在打开",
+        "cer": 0.0,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      }
+    },
+    {
+      "voice_id": "heroine_s04_waiting_l013_v1",
+      "line_id": "s04_waiting_l013",
+      "text": "我知道。但有些话，如果只放在心里，别人听不见。",
+      "instruct": "自然标准普通话，23岁成年女性，温暖轻柔的日常对话。语速适中，吐字清晰，情绪克制。认真坦诚表达自己的需要，温柔而清楚，转折处稍停顿。",
+      "seed": 20261009,
+      "language": "Chinese",
+      "speaker": "Serena",
+      "sample_rate": 24000,
+      "duration_seconds": 4.96,
+      "generation_seconds": 45.015,
+      "loudness_input": {
+        "input_i": "-25.41",
+        "input_tp": "-6.22",
+        "input_lra": "0.40",
+        "input_thresh": "-35.60",
+        "output_i": "-20.03",
+        "output_tp": "-2.00",
+        "output_lra": "0.50",
+        "output_thresh": "-30.76",
+        "normalization_type": "dynamic",
+        "target_offset": "0.03"
+      },
+      "source_audio": {
+        "format": "WAV",
+        "subtype": "PCM_16",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 119040,
+        "duration_seconds": 4.96,
+        "peak": 0.795441,
+        "rms_dbfs": -20.817
+      },
+      "audio": {
+        "format": "OGG",
+        "subtype": "VORBIS",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 119040,
+        "duration_seconds": 4.96,
+        "peak": 0.80173,
+        "rms_dbfs": -20.769
+      },
+      "files": {
+        "raw": {
+          "path": "raw/heroine_s04_waiting_l013_v1.wav",
+          "sha256": "14c045161442c344eb3abe0e608dabf53b370f0e0a92baed68e6dd33ac2b49b9"
+        },
+        "wav": {
+          "path": "wav/heroine_s04_waiting_l013_v1.wav",
+          "sha256": "08618764290569c3552c6de35f4270593a57dea4a66d3f6ab351521d76f456ab"
+        },
+        "ogg": {
+          "path": "ogg/heroine_s04_waiting_l013_v1.ogg",
+          "sha256": "cbbaa390a032218a2b932c60af4e6352695298a07c9614cbe2ee3aa00d3f7df1"
+        }
+      },
+      "asr_small": {
+        "transcript": "我知道,但有些话如果只放在心里,别人听不见。",
+        "normalized_text": "我知道但有些话如果只放在心里别人听不见",
+        "cer": 0.0,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      },
+      "asr": {
+        "transcript": "我知道,但有些话如果只放在心里,别人听不见。",
+        "normalized_text": "我知道但有些话如果只放在心里别人听不见",
+        "cer": 0.0,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      }
+    },
+    {
+      "voice_id": "heroine_s05_departure_l007_v1",
+      "line_id": "s05_departure_l007",
+      "text": "要一起走到那边吗？",
+      "instruct": "自然标准普通话，23岁成年女性，温暖轻柔的日常对话。语速适中，吐字清晰，情绪克制。轻柔地邀请对方同行，略带期待。",
+      "seed": 20261010,
+      "language": "Chinese",
+      "speaker": "Serena",
+      "sample_rate": 24000,
+      "duration_seconds": 1.52,
+      "generation_seconds": 14.777,
+      "loudness_input": {
+        "input_i": "-22.04",
+        "input_tp": "-8.08",
+        "input_lra": "0.00",
+        "input_thresh": "-32.04",
+        "output_i": "-19.99",
+        "output_tp": "-6.03",
+        "output_lra": "0.00",
+        "output_thresh": "-29.99",
+        "normalization_type": "linear",
+        "target_offset": "-0.01"
+      },
+      "source_audio": {
+        "format": "WAV",
+        "subtype": "PCM_16",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 36480,
+        "duration_seconds": 1.52,
+        "peak": 0.499298,
+        "rms_dbfs": -19.788
+      },
+      "audio": {
+        "format": "OGG",
+        "subtype": "VORBIS",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 36480,
+        "duration_seconds": 1.52,
+        "peak": 0.491179,
+        "rms_dbfs": -19.756
+      },
+      "files": {
+        "raw": {
+          "path": "raw/heroine_s05_departure_l007_v1.wav",
+          "sha256": "155b81f256cec69b1711bb284c73516a7152cccdd81502d19b0d7870a4a54aff"
+        },
+        "wav": {
+          "path": "wav/heroine_s05_departure_l007_v1.wav",
+          "sha256": "7ef90da379ea40af6666da9ab1dd1df137e6beeb5840d9f91f89d881deb4ad3f"
+        },
+        "ogg": {
+          "path": "ogg/heroine_s05_departure_l007_v1.ogg",
+          "sha256": "c5e97a5cfd1eef16d65ea2faddc80f5f4557dfecae3c6dd0d216966579c2c71f"
+        }
+      },
+      "asr_small": {
+        "transcript": "要一起走到那边吗?",
+        "normalized_text": "要一起走到那边吗",
+        "cer": 0.0,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      },
+      "asr": {
+        "transcript": "要一起走到那边吗?",
+        "normalized_text": "要一起走到那边吗",
+        "cer": 0.0,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      }
+    },
+    {
+      "voice_id": "heroine_s07_true_l014_v1",
+      "line_id": "s07_true_l014",
+      "text": "到家以后，发一条有内容的消息。",
+      "instruct": "自然标准普通话，23岁成年女性，温暖轻柔的日常对话。语速适中，吐字清晰，情绪克制。告别时温暖叮嘱，带希望，结尾微笑。",
+      "seed": 20261011,
+      "language": "Chinese",
+      "speaker": "Serena",
+      "sample_rate": 24000,
+      "duration_seconds": 2.24,
+      "generation_seconds": 21.515,
+      "loudness_input": {
+        "input_i": "-23.30",
+        "input_tp": "-8.69",
+        "input_lra": "0.00",
+        "input_thresh": "-33.30",
+        "output_i": "-20.00",
+        "output_tp": "-5.39",
+        "output_lra": "0.00",
+        "output_thresh": "-30.00",
+        "normalization_type": "linear",
+        "target_offset": "0.00"
+      },
+      "source_audio": {
+        "format": "WAV",
+        "subtype": "PCM_16",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 53760,
+        "duration_seconds": 2.24,
+        "peak": 0.535278,
+        "rms_dbfs": -20.031
+      },
+      "audio": {
+        "format": "OGG",
+        "subtype": "VORBIS",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 53760,
+        "duration_seconds": 2.24,
+        "peak": 0.538889,
+        "rms_dbfs": -20.015
+      },
+      "files": {
+        "raw": {
+          "path": "raw/heroine_s07_true_l014_v1.wav",
+          "sha256": "22ddc23baa594685ec07adc458092dba1897c6d5594c8008ef9df5d040d06ad8"
+        },
+        "wav": {
+          "path": "wav/heroine_s07_true_l014_v1.wav",
+          "sha256": "263851770ed5b65e061d776365433bed5ad930d2c2bff7ccc071b8ced744e9dd"
+        },
+        "ogg": {
+          "path": "ogg/heroine_s07_true_l014_v1.ogg",
+          "sha256": "5ff301295081eb9e267860afa93392a3907887a185c66bf09dfc60cfb0c28329"
+        }
+      },
+      "asr_small": {
+        "transcript": "到家以后发一条有内容的消息。",
+        "normalized_text": "到家以后发一条有内容的消息",
+        "cer": 0.0,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      },
+      "asr": {
+        "transcript": "到家以后发一条有内容的消息。",
+        "normalized_text": "到家以后发一条有内容的消息",
+        "cer": 0.0,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      }
+    },
+    {
+      "voice_id": "heroine_q02_honest_l002_v1",
+      "line_id": "q02_honest_l002",
+      "text": "……那为什么没给我？",
+      "instruct": "自然标准普通话，23岁成年女性，温暖轻柔的日常对话。语速适中，吐字清晰，情绪克制。先迟疑，再轻声问出困惑，略带难过，克制。",
+      "seed": 20261012,
+      "language": "Chinese",
+      "speaker": "Serena",
+      "sample_rate": 24000,
+      "duration_seconds": 2.24,
+      "generation_seconds": 21.152,
+      "loudness_input": {
+        "input_i": "-26.46",
+        "input_tp": "-15.68",
+        "input_lra": "0.00",
+        "input_thresh": "-37.48",
+        "output_i": "-20.00",
+        "output_tp": "-9.22",
+        "output_lra": "0.00",
+        "output_thresh": "-31.02",
+        "normalization_type": "linear",
+        "target_offset": "0.00"
+      },
+      "source_audio": {
+        "format": "WAV",
+        "subtype": "PCM_16",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 53760,
+        "duration_seconds": 2.24,
+        "peak": 0.3461,
+        "rms_dbfs": -20.851
+      },
+      "audio": {
+        "format": "OGG",
+        "subtype": "VORBIS",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 53760,
+        "duration_seconds": 2.24,
+        "peak": 0.346098,
+        "rms_dbfs": -20.809
+      },
+      "files": {
+        "raw": {
+          "path": "raw/heroine_q02_honest_l002_v1.wav",
+          "sha256": "674040e155062120df79baa61ec242f0d24b522a7a80b8dd0536a1a1a26d7c5a"
+        },
+        "wav": {
+          "path": "wav/heroine_q02_honest_l002_v1.wav",
+          "sha256": "48fced3b9dabbded42bc8d3bc7d7d34cbe50688595922b404ac5cf1dabd3a0a5"
+        },
+        "ogg": {
+          "path": "ogg/heroine_q02_honest_l002_v1.ogg",
+          "sha256": "8ce518661e4480f42f9d7be914dd72b6943cff281b8abbfc4646d9713f13c6c0"
+        }
+      },
+      "asr_small": {
+        "transcript": "啊,那为什么没给我?",
+        "normalized_text": "啊那为什么没给我",
+        "cer": 0.142857,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      },
+      "asr": {
+        "transcript": "那为什么没给我?",
+        "normalized_text": "那为什么没给我",
+        "cer": 0.0,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      }
+    },
+    {
+      "voice_id": "heroine_s03_honest_l005_v1",
+      "line_id": "s03_honest_l005",
+      "text": "我还不知道你写了什么。要不要看，也得让我自己决定。",
+      "instruct": "自然标准普通话，23岁成年女性，温暖轻柔的日常对话。语速适中，吐字清晰，情绪克制。平静坚定地说明自己的边界，柔和清晰。",
+      "seed": 20261013,
+      "language": "Chinese",
+      "speaker": "Serena",
+      "sample_rate": 24000,
+      "duration_seconds": 3.92,
+      "generation_seconds": 35.775,
+      "loudness_input": {
+        "input_i": "-25.11",
+        "input_tp": "-9.42",
+        "input_lra": "1.10",
+        "input_thresh": "-35.54",
+        "output_i": "-19.19",
+        "output_tp": "-4.09",
+        "output_lra": "0.00",
+        "output_thresh": "-29.70",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.81"
+      },
+      "source_audio": {
+        "format": "WAV",
+        "subtype": "PCM_16",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 94080,
+        "duration_seconds": 3.92,
+        "peak": 0.608582,
+        "rms_dbfs": -19.949
+      },
+      "audio": {
+        "format": "OGG",
+        "subtype": "VORBIS",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 94080,
+        "duration_seconds": 3.92,
+        "peak": 0.619398,
+        "rms_dbfs": -19.91
+      },
+      "files": {
+        "raw": {
+          "path": "raw/heroine_s03_honest_l005_v1.wav",
+          "sha256": "d348ec7b76e672a91cb2753da60e607c087480b3525e8d49ad5acb2d3cf06b46"
+        },
+        "wav": {
+          "path": "wav/heroine_s03_honest_l005_v1.wav",
+          "sha256": "efce89ce97b439a645b24b766415e639dbbfb1786f031579408ce5e82d0d14f1"
+        },
+        "ogg": {
+          "path": "ogg/heroine_s03_honest_l005_v1.ogg",
+          "sha256": "f0d845f384ae7fde0a62e43a1b6a25c944917d9e084fcf69c627e26bbc1f2cc4"
+        }
+      },
+      "asr_small": {
+        "transcript": "他还不知道你写了什么,要不要看,也得让我自己决定。",
+        "normalized_text": "他还不知道你写了什么要不要看也得让我自己决定",
+        "cer": 0.045455,
+        "polarity_counts_match": true,
+        "critical_terms": [
+          "我还不知道"
+        ],
+        "critical_terms_match": false,
+        "passed": false
+      },
+      "asr": {
+        "transcript": "我还不知道你写了什么,要不要看也得让我自己决定。",
+        "normalized_text": "我还不知道你写了什么要不要看也得让我自己决定",
+        "cer": 0.0,
+        "polarity_counts_match": true,
+        "critical_terms": [
+          "我还不知道"
+        ],
+        "critical_terms_match": true,
+        "passed": true
+      }
+    },
+    {
+      "voice_id": "heroine_s03_deferred_l007_v1",
+      "line_id": "s03_deferred_l007",
+      "text": "会。但我可以等你说，不用替你猜一个答案。",
+      "instruct": "自然标准普通话，23岁成年女性，温暖轻柔的日常对话。语速适中，吐字清晰，情绪克制。诚实承认，再温和告诉对方可以等，笃定。",
+      "seed": 20261014,
+      "language": "Chinese",
+      "speaker": "Serena",
+      "sample_rate": 24000,
+      "duration_seconds": 5.04,
+      "generation_seconds": 46.111,
+      "loudness_input": {
+        "input_i": "-24.64",
+        "input_tp": "-9.06",
+        "input_lra": "1.30",
+        "input_thresh": "-35.12",
+        "output_i": "-19.94",
+        "output_tp": "-4.35",
+        "output_lra": "1.40",
+        "output_thresh": "-30.53",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.06"
+      },
+      "source_audio": {
+        "format": "WAV",
+        "subtype": "PCM_16",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 120960,
+        "duration_seconds": 5.04,
+        "peak": 0.600983,
+        "rms_dbfs": -20.076
+      },
+      "audio": {
+        "format": "OGG",
+        "subtype": "VORBIS",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 120960,
+        "duration_seconds": 5.04,
+        "peak": 0.599413,
+        "rms_dbfs": -20.054
+      },
+      "files": {
+        "raw": {
+          "path": "raw/heroine_s03_deferred_l007_v1.wav",
+          "sha256": "929e6f07a616a6a3ab893101090300687ea38d3ab59eacb89d676fe5d1f2f159"
+        },
+        "wav": {
+          "path": "wav/heroine_s03_deferred_l007_v1.wav",
+          "sha256": "cb1e1a2b65b31f9b0026c7517c3ca1c15662bbc9cc114a8cbf50baaa3127b247"
+        },
+        "ogg": {
+          "path": "ogg/heroine_s03_deferred_l007_v1.ogg",
+          "sha256": "5485ba3132f49e90cc85627cc6212da5639d353652cfa75b87c9bdbdc6563aae"
+        }
+      },
+      "asr_small": {
+        "transcript": "会,但我可以等你说,不用替你猜一个答案。",
+        "normalized_text": "会但我可以等你说不用替你猜一个答案",
+        "cer": 0.0,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      },
+      "asr": {
+        "transcript": "会,但我可以等你说,不用替你猜一个答案。",
+        "normalized_text": "会但我可以等你说不用替你猜一个答案",
+        "cer": 0.0,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      }
+    },
+    {
+      "voice_id": "heroine_s04_open_l008_v1",
+      "line_id": "s04_open_l008",
+      "text": "慢一点可以。你说到哪，我就听到哪。",
+      "instruct": "自然标准普通话，23岁成年女性，温暖轻柔的日常对话。语速适中，吐字清晰，情绪克制。耐心温暖地鼓励对方慢慢说。",
+      "seed": 20261015,
+      "language": "Chinese",
+      "speaker": "Serena",
+      "sample_rate": 24000,
+      "duration_seconds": 4.32,
+      "generation_seconds": 39.06,
+      "loudness_input": {
+        "input_i": "-26.57",
+        "input_tp": "-11.49",
+        "input_lra": "0.70",
+        "input_thresh": "-36.76",
+        "output_i": "-20.34",
+        "output_tp": "-5.23",
+        "output_lra": "0.40",
+        "output_thresh": "-30.45",
+        "normalization_type": "dynamic",
+        "target_offset": "0.34"
+      },
+      "source_audio": {
+        "format": "WAV",
+        "subtype": "PCM_16",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 103680,
+        "duration_seconds": 4.32,
+        "peak": 0.567047,
+        "rms_dbfs": -19.831
+      },
+      "audio": {
+        "format": "OGG",
+        "subtype": "VORBIS",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 103680,
+        "duration_seconds": 4.32,
+        "peak": 0.579856,
+        "rms_dbfs": -19.806
+      },
+      "files": {
+        "raw": {
+          "path": "raw/heroine_s04_open_l008_v1.wav",
+          "sha256": "6d4ed81072b055581fcd2fa089e0104d7cf83695e368ab6dfd35f4488b6ff83b"
+        },
+        "wav": {
+          "path": "wav/heroine_s04_open_l008_v1.wav",
+          "sha256": "83fed5059848db07dff0b51a43813140cff3f9678ab5b8f7ec46fb0e71e2f0ee"
+        },
+        "ogg": {
+          "path": "ogg/heroine_s04_open_l008_v1.ogg",
+          "sha256": "886d2abb76d09ca147af06d45586726cdf09cd04f568bc6766bcdd2d20055982"
+        }
+      },
+      "asr_small": {
+        "transcript": "慢一点可以,你说到哪儿我就听到哪儿。",
+        "normalized_text": "慢一点可以你说到哪儿我就听到哪儿",
+        "cer": 0.142857,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      },
+      "asr": {
+        "transcript": "慢一点可以,你说到哪儿我就听到哪儿。",
+        "normalized_text": "慢一点可以你说到哪儿我就听到哪儿",
+        "cer": 0.142857,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      }
+    },
+    {
+      "voice_id": "heroine_s04_reserved_l005_v1",
+      "line_id": "s04_reserved_l005",
+      "text": "可以。但你没说的部分，我不会当作已经知道。",
+      "instruct": "自然标准普通话，23岁成年女性，温暖轻柔的日常对话。语速适中，吐字清晰，情绪克制。温柔坚定地澄清，转折略停顿，认真。",
+      "seed": 20261016,
+      "language": "Chinese",
+      "speaker": "Serena",
+      "sample_rate": 24000,
+      "duration_seconds": 4.24,
+      "generation_seconds": 38.603,
+      "loudness_input": {
+        "input_i": "-25.78",
+        "input_tp": "-9.11",
+        "input_lra": "1.50",
+        "input_thresh": "-35.97",
+        "output_i": "-18.52",
+        "output_tp": "-2.00",
+        "output_lra": "0.90",
+        "output_thresh": "-28.76",
+        "normalization_type": "dynamic",
+        "target_offset": "-1.48"
+      },
+      "source_audio": {
+        "format": "WAV",
+        "subtype": "PCM_16",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 101760,
+        "duration_seconds": 4.24,
+        "peak": 0.672638,
+        "rms_dbfs": -20.211
+      },
+      "audio": {
+        "format": "OGG",
+        "subtype": "VORBIS",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 101760,
+        "duration_seconds": 4.24,
+        "peak": 0.670489,
+        "rms_dbfs": -20.2
+      },
+      "files": {
+        "raw": {
+          "path": "raw/heroine_s04_reserved_l005_v1.wav",
+          "sha256": "25883f009105dafe803c4c009e9a8350728308bd6dae3405329446f5b0875d83"
+        },
+        "wav": {
+          "path": "wav/heroine_s04_reserved_l005_v1.wav",
+          "sha256": "12be0bb97a2839423a5c3f29fad6886345a65186bd560ff494ca7bf85a8b49c9"
+        },
+        "ogg": {
+          "path": "ogg/heroine_s04_reserved_l005_v1.ogg",
+          "sha256": "dbac1fe4124601203646ac0ba57e23dcda086a53ea6628d4b3db78a29d33286e"
+        }
+      },
+      "asr_small": {
+        "transcript": "可以,但你没说的部分,我不会当做已经知道。",
+        "normalized_text": "可以但你没说的部分我不会当做已经知道",
+        "cer": 0.055556,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      },
+      "asr": {
+        "transcript": "可以,但你没说的部分,我不会当作已经知道。",
+        "normalized_text": "可以但你没说的部分我不会当作已经知道",
+        "cer": 0.0,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      }
+    },
+    {
+      "voice_id": "heroine_s04_waiting_l004_v1",
+      "line_id": "s04_waiting_l004",
+      "text": "我不是问你能留多久。",
+      "instruct": "自然标准普通话，23岁成年女性，温暖轻柔的日常对话。语速适中，吐字清晰，情绪克制。轻声提醒问题的重点，略有失落。",
+      "seed": 20261017,
+      "language": "Chinese",
+      "speaker": "Serena",
+      "sample_rate": 24000,
+      "duration_seconds": 1.6,
+      "generation_seconds": 15.427,
+      "loudness_input": {
+        "input_i": "-25.55",
+        "input_tp": "-11.12",
+        "input_lra": "0.00",
+        "input_thresh": "-35.55",
+        "output_i": "-20.01",
+        "output_tp": "-5.58",
+        "output_lra": "0.00",
+        "output_thresh": "-30.01",
+        "normalization_type": "linear",
+        "target_offset": "0.01"
+      },
+      "source_audio": {
+        "format": "WAV",
+        "subtype": "PCM_16",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 38400,
+        "duration_seconds": 1.6,
+        "peak": 0.525238,
+        "rms_dbfs": -20.05
+      },
+      "audio": {
+        "format": "OGG",
+        "subtype": "VORBIS",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 38400,
+        "duration_seconds": 1.6,
+        "peak": 0.527687,
+        "rms_dbfs": -20.033
+      },
+      "files": {
+        "raw": {
+          "path": "raw/heroine_s04_waiting_l004_v1.wav",
+          "sha256": "d45892e30823be7aeed7281c333f786f2240d3bd8d1e0f8b53bf63d0658107f7"
+        },
+        "wav": {
+          "path": "wav/heroine_s04_waiting_l004_v1.wav",
+          "sha256": "3fd571a2ae01897124448fe1ce9a5d6dcd047985d203397be2002c3c716bb3e8"
+        },
+        "ogg": {
+          "path": "ogg/heroine_s04_waiting_l004_v1.ogg",
+          "sha256": "4369babb91f40915b1eb356ecfe4a9aad04d9515e26d6af5699b27accbebe45d"
+        }
+      },
+      "asr_small": {
+        "transcript": "我不是问你能留多久。",
+        "normalized_text": "我不是问你能留多久",
+        "cer": 0.0,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      },
+      "asr": {
+        "transcript": "我不是问你能留多久。",
+        "normalized_text": "我不是问你能留多久",
+        "cer": 0.0,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      }
+    },
+    {
+      "voice_id": "heroine_s04_waiting_l020_v1",
+      "line_id": "s04_waiting_l020",
+      "text": "句号不算消息。",
+      "instruct": "自然标准普通话，23岁成年女性，温暖轻柔的日常对话。语速适中，吐字清晰，情绪克制。带轻松的打趣和笑意，熟悉的朋友对话。",
+      "seed": 20261018,
+      "language": "Chinese",
+      "speaker": "Serena",
+      "sample_rate": 24000,
+      "duration_seconds": 1.28,
+      "generation_seconds": 12.587,
+      "loudness_input": {
+        "input_i": "-20.53",
+        "input_tp": "-7.38",
+        "input_lra": "0.00",
+        "input_thresh": "-30.53",
+        "output_i": "-20.01",
+        "output_tp": "-6.85",
+        "output_lra": "0.00",
+        "output_thresh": "-30.01",
+        "normalization_type": "linear",
+        "target_offset": "0.01"
+      },
+      "source_audio": {
+        "format": "WAV",
+        "subtype": "PCM_16",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 30720,
+        "duration_seconds": 1.28,
+        "peak": 0.449249,
+        "rms_dbfs": -21.191
+      },
+      "audio": {
+        "format": "OGG",
+        "subtype": "VORBIS",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 30720,
+        "duration_seconds": 1.28,
+        "peak": 0.448673,
+        "rms_dbfs": -21.139
+      },
+      "files": {
+        "raw": {
+          "path": "raw/heroine_s04_waiting_l020_v1.wav",
+          "sha256": "a7b0209e8a3caa55658a408879f29dc6944969b47874311bfaedec8d3a924d97"
+        },
+        "wav": {
+          "path": "wav/heroine_s04_waiting_l020_v1.wav",
+          "sha256": "2f743e557d2c27c16651a904997b094a7b6bb462ab391881458ce3a909fd5f6c"
+        },
+        "ogg": {
+          "path": "ogg/heroine_s04_waiting_l020_v1.ogg",
+          "sha256": "84effbf606e56bd399510c40967ba1baa1acfe26f32c62cda0ac8d9edb5ff029"
+        }
+      },
+      "asr_small": {
+        "transcript": "举好不算消息。",
+        "normalized_text": "举好不算消息",
+        "cer": 0.333333,
+        "polarity_counts_match": true,
+        "critical_terms": [
+          "句号"
+        ],
+        "critical_terms_match": false,
+        "passed": false
+      },
+      "asr": {
+        "transcript": "句号不算消息。",
+        "normalized_text": "句号不算消息",
+        "cer": 0.0,
+        "polarity_counts_match": true,
+        "critical_terms": [
+          "句号"
+        ],
+        "critical_terms_match": true,
+        "passed": true
+      }
+    },
+    {
+      "voice_id": "heroine_s04_boundary_l007_v1",
+      "line_id": "s04_boundary_l007",
+      "text": "不说，也不能替我决定我会不会为难。",
+      "instruct": "自然标准普通话，23岁成年女性，温暖轻柔的日常对话。语速适中，吐字清晰，情绪克制。认真表达个人边界，平静坚定，略带难过。",
+      "seed": 20261019,
+      "language": "Chinese",
+      "speaker": "Serena",
+      "sample_rate": 24000,
+      "duration_seconds": 6.56,
+      "generation_seconds": 58.862,
+      "loudness_input": {
+        "input_i": "-34.13",
+        "input_tp": "-16.88",
+        "input_lra": "5.10",
+        "input_thresh": "-44.48",
+        "output_i": "-20.57",
+        "output_tp": "-3.56",
+        "output_lra": "4.60",
+        "output_thresh": "-31.40",
+        "normalization_type": "dynamic",
+        "target_offset": "0.57"
+      },
+      "source_audio": {
+        "format": "WAV",
+        "subtype": "PCM_16",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 157440,
+        "duration_seconds": 6.56,
+        "peak": 0.649445,
+        "rms_dbfs": -20.745
+      },
+      "audio": {
+        "format": "OGG",
+        "subtype": "VORBIS",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 157440,
+        "duration_seconds": 6.56,
+        "peak": 0.685602,
+        "rms_dbfs": -20.681
+      },
+      "files": {
+        "raw": {
+          "path": "raw/heroine_s04_boundary_l007_v1.wav",
+          "sha256": "4f3c322d18186fd089bdaa69844ab6932a3f2d8914c27263a41abbcc5d916ded"
+        },
+        "wav": {
+          "path": "wav/heroine_s04_boundary_l007_v1.wav",
+          "sha256": "531451979992df0d790732084dc2c8aa6ed1d4209f5a9910f1b9d275806cbbef"
+        },
+        "ogg": {
+          "path": "ogg/heroine_s04_boundary_l007_v1.ogg",
+          "sha256": "31060cd9a821070da0db984e8df25a7b914cb964d789459ad0f74c96ca237df6"
+        }
+      },
+      "asr_small": {
+        "transcript": "嗯 不说也不能替我决定 我会不会为难",
+        "normalized_text": "嗯不说也不能替我决定我会不会为难",
+        "cer": 0.066667,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      },
+      "asr": {
+        "transcript": "不说也不能替我决定,我会不会为难。",
+        "normalized_text": "不说也不能替我决定我会不会为难",
+        "cer": 0.0,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      }
+    },
+    {
+      "voice_id": "heroine_s04_repair_l009_v1",
+      "line_id": "s04_repair_l009",
+      "text": "那我也说清楚。见面我愿意，什么时候有空，我会自己告诉你。",
+      "instruct": "自然标准普通话，23岁成年女性，温暖轻柔的日常对话。语速适中，吐字清晰，情绪克制。坦诚说明愿意与界限，温暖坚定，长句分段停顿。",
+      "seed": 20261020,
+      "language": "Chinese",
+      "speaker": "Serena",
+      "sample_rate": 24000,
+      "duration_seconds": 6.0,
+      "generation_seconds": 53.515,
+      "loudness_input": {
+        "input_i": "-25.40",
+        "input_tp": "-7.79",
+        "input_lra": "2.20",
+        "input_thresh": "-35.83",
+        "output_i": "-20.74",
+        "output_tp": "-3.18",
+        "output_lra": "2.40",
+        "output_thresh": "-31.07",
+        "normalization_type": "dynamic",
+        "target_offset": "0.74"
+      },
+      "source_audio": {
+        "format": "WAV",
+        "subtype": "PCM_16",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 144000,
+        "duration_seconds": 6.0,
+        "peak": 0.751312,
+        "rms_dbfs": -20.103
+      },
+      "audio": {
+        "format": "OGG",
+        "subtype": "VORBIS",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 144000,
+        "duration_seconds": 6.0,
+        "peak": 0.749012,
+        "rms_dbfs": -20.052
+      },
+      "files": {
+        "raw": {
+          "path": "raw/heroine_s04_repair_l009_v1.wav",
+          "sha256": "08ce99088fdcaddbf9c22d1be65dcd622404cccfaff8212166b4365ef4ed886e"
+        },
+        "wav": {
+          "path": "wav/heroine_s04_repair_l009_v1.wav",
+          "sha256": "d624d4fc03bb99e7e91760b9e6588d8d7391002593f2e32d61f7b43bd445671b"
+        },
+        "ogg": {
+          "path": "ogg/heroine_s04_repair_l009_v1.ogg",
+          "sha256": "e0160af73d754bb2101d980a62cc4784b84db1808585ab02ab7e3b8f56be32bb"
+        }
+      },
+      "asr_small": {
+        "transcript": "那我也说清楚 见面我愿意什么时候有空我会自己告诉你",
+        "normalized_text": "那我也说清楚见面我愿意什么时候有空我会自己告诉你",
+        "cer": 0.0,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      },
+      "asr": {
+        "transcript": "那我也说清楚,见面我愿意,什么时候有空我会自己告诉你。",
+        "normalized_text": "那我也说清楚见面我愿意什么时候有空我会自己告诉你",
+        "cer": 0.0,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      }
+    },
+    {
+      "voice_id": "heroine_s07_true_l010_v1",
+      "line_id": "s07_true_l010",
+      "text": "嗯。这次记得交给我。",
+      "instruct": "自然标准普通话，23岁成年女性，温暖轻柔的日常对话。语速适中，吐字清晰，情绪克制。先轻轻回应，再带笑叮嘱，放松释然。",
+      "seed": 20261021,
+      "language": "Chinese",
+      "speaker": "Serena",
+      "sample_rate": 24000,
+      "duration_seconds": 2.08,
+      "generation_seconds": 19.462,
+      "loudness_input": {
+        "input_i": "-22.25",
+        "input_tp": "-6.23",
+        "input_lra": "0.00",
+        "input_thresh": "-32.79",
+        "output_i": "-19.99",
+        "output_tp": "-3.98",
+        "output_lra": "0.00",
+        "output_thresh": "-30.53",
+        "normalization_type": "linear",
+        "target_offset": "-0.01"
+      },
+      "source_audio": {
+        "format": "WAV",
+        "subtype": "PCM_16",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 49920,
+        "duration_seconds": 2.08,
+        "peak": 0.627533,
+        "rms_dbfs": -20.525
+      },
+      "audio": {
+        "format": "OGG",
+        "subtype": "VORBIS",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 49920,
+        "duration_seconds": 2.08,
+        "peak": 0.621222,
+        "rms_dbfs": -20.507
+      },
+      "files": {
+        "raw": {
+          "path": "raw/heroine_s07_true_l010_v1.wav",
+          "sha256": "b6c426f3705f2cf216bf1ec11f14f71d5f5dd25caa6c49b4916dc92a53e6d424"
+        },
+        "wav": {
+          "path": "wav/heroine_s07_true_l010_v1.wav",
+          "sha256": "ac67d518f1da3f9376d6ef7682bcdf939a86e70501508c35c013f0f6bcce2400"
+        },
+        "ogg": {
+          "path": "ogg/heroine_s07_true_l010_v1.ogg",
+          "sha256": "9ac1bc2f258faf27ca9461b1d71e0c19eeab96302a18df1f0eeee9484d1e3591"
+        }
+      },
+      "asr_small": {
+        "transcript": "嗯 这次记得交给我",
+        "normalized_text": "嗯这次记得交给我",
+        "cer": 0.0,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      },
+      "asr": {
+        "transcript": "嗯,这次记得交给我。",
+        "normalized_text": "嗯这次记得交给我",
+        "cer": 0.0,
+        "polarity_counts_match": true,
+        "critical_terms": [],
+        "critical_terms_match": true,
+        "passed": true
+      }
+    },
+    {
+      "voice_id": "heroine_s08_normal_l005_v1",
+      "line_id": "s08_normal_l005",
+      "text": "这张没有拍歪。你回去以后，慢慢看。",
+      "instruct": "自然标准普通话，23岁成年女性，温暖轻柔的日常对话。语速适中，吐字清晰，情绪克制。告别时轻声说，平静温柔，一点留恋，结尾放慢。",
+      "seed": 20261022,
+      "language": "Chinese",
+      "speaker": "Serena",
+      "sample_rate": 24000,
+      "duration_seconds": 2.88,
+      "generation_seconds": 26.48,
+      "loudness_input": {
+        "input_i": "-22.42",
+        "input_tp": "-5.41",
+        "input_lra": "0.00",
+        "input_thresh": "-32.85",
+        "output_i": "-20.01",
+        "output_tp": "-2.98",
+        "output_lra": "0.00",
+        "output_thresh": "-30.64",
+        "normalization_type": "linear",
+        "target_offset": "0.01"
+      },
+      "source_audio": {
+        "format": "WAV",
+        "subtype": "PCM_16",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 69120,
+        "duration_seconds": 2.88,
+        "peak": 0.706573,
+        "rms_dbfs": -21.057
+      },
+      "audio": {
+        "format": "OGG",
+        "subtype": "VORBIS",
+        "sample_rate": 24000,
+        "channels": 1,
+        "frames": 69120,
+        "duration_seconds": 2.88,
+        "peak": 0.709254,
+        "rms_dbfs": -21.033
+      },
+      "files": {
+        "raw": {
+          "path": "raw/heroine_s08_normal_l005_v1.wav",
+          "sha256": "794106a3a0275aba031c8991ccde774ab6547ab3943a0a24c205221167481d72"
+        },
+        "wav": {
+          "path": "wav/heroine_s08_normal_l005_v1.wav",
+          "sha256": "dc9213e73cd14c2e8ea9daed76b57aa0f756ba1bc1e9f918fef835e06f34f7b0"
+        },
+        "ogg": {
+          "path": "ogg/heroine_s08_normal_l005_v1.ogg",
+          "sha256": "c800c529b3d52018bd411d1227ce8ea24b8ea2eca03d43ad5cac245c1d807a10"
+        }
+      },
+      "asr_small": {
+        "transcript": "这张没有拍完,你回去以后慢慢看。",
+        "normalized_text": "这张没有拍完你回去以后慢慢看",
+        "cer": 0.071429,
+        "polarity_counts_match": true,
+        "critical_terms": [
+          "拍歪"
+        ],
+        "critical_terms_match": false,
+        "passed": false
+      },
+      "asr": {
+        "transcript": "这张没有拍歪,你回去以后慢慢看。",
+        "normalized_text": "这张没有拍歪你回去以后慢慢看",
+        "cer": 0.0,
+        "polarity_counts_match": true,
+        "critical_terms": [
+          "拍歪"
+        ],
+        "critical_terms_match": true,
+        "passed": true
+      }
+    }
+  ],
+  "provider": {
+    "schema_version": 1,
+    "model_id": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+    "revision": "0c0e3051f131929182e2c023b9537f8b1c68adfe",
+    "speaker": "Serena",
+    "license": "Apache-2.0",
+    "model_sha256": "38b1d5971bdbd982b561cccec982669a53b0537c3cf5e9bd4778ed07bb2f5137",
+    "voice_bank_sha256": "26a3b733fd9fdd9fed4512e733c1ff388e4d99d6a2f08462132422e12042a2c2",
+    "config_sha256": "17a07f527a1c25ea30b4e023a184482a23d3e279d697b1dc81b1bde498d29cf9",
+    "checkpoint_sha256": "7b468c62eee10df177cca74dc9660f2b333214f44533612b9754ae377bdfb575",
+    "snapshot_files": [
+      {
+        "path": "config.json",
+        "sha256": "17a07f527a1c25ea30b4e023a184482a23d3e279d697b1dc81b1bde498d29cf9",
+        "bytes": 4908
+      },
+      {
+        "path": "generation_config.json",
+        "sha256": "f1b90b4513f3b34c62851049e2492d7b4c5940daf1276f89c82b8ef04127f3aa",
+        "bytes": 245
+      },
+      {
+        "path": "merges.txt",
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "bytes": 1671839
+      },
+      {
+        "path": "model.safetensors",
+        "sha256": "38b1d5971bdbd982b561cccec982669a53b0537c3cf5e9bd4778ed07bb2f5137",
+        "bytes": 3833402552
+      },
+      {
+        "path": "preprocessor_config.json",
+        "sha256": "efdde1022ea9d76928bf7a9cd53139138f5ba2e466e837f08f6105ab1af1c119",
+        "bytes": 127
+      },
+      {
+        "path": "speech_tokenizer/config.json",
+        "sha256": "ee65bb901c876664ab8707c487157aa1a6ee57c65969b28fb5ec9dc211e68167",
+        "bytes": 2336
+      },
+      {
+        "path": "speech_tokenizer/configuration.json",
+        "sha256": "6bc26d64eb5024b4d1dab5a52371958b429256d6c9d59787f1f5294a54e0cebd",
+        "bytes": 76
+      },
+      {
+        "path": "speech_tokenizer/model.safetensors",
+        "sha256": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258",
+        "bytes": 682293092
+      },
+      {
+        "path": "speech_tokenizer/preprocessor_config.json",
+        "sha256": "fcb3805e597e786d4067706e602f6688524640f8d3396790e2e09b5942fcbdfb",
+        "bytes": 234
+      },
+      {
+        "path": "tokenizer_config.json",
+        "sha256": "dc3c31c3bdaedd5016382bb3cbe07323026775ad51f5a4fb564505992ae4a670",
+        "bytes": 7344
+      },
+      {
+        "path": "vocab.json",
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "bytes": 2776833
+      }
+    ],
+    "wrapper": "qwen-tts-0.1.1",
+    "torch_version": "2.9.1+cpu",
+    "processing": "ebu_r128_minus20_lufs_truepeak_minus2_db_24k_pcm16_v1",
+    "cpu_threads": 4,
+    "dtype": "float32"
+  },
+  "asr_model": "Systran/faster-whisper-large-v3",
+  "asr_revision": "edaa852ec7e145841d8ffdb056a99866b5f0a478",
+  "asr_max_cer": 0.2,
+  "diagnostic_asr_model": "Systran/faster-whisper-small",
+  "diagnostic_asr_revision": "536b0662742c02347bc0e980a01041f333bce120",
+  "unresolved_machine_issues": [],
+  "human_listening": false,
+  "limits": "ASR and signal checks do not establish human listening or final creative approval."
+}
