@@ -30,44 +30,53 @@ testcase native_1080_and_scaled_window:
     assert eval renpy.get_physical_size() == (1920, 1080)
     run MainMenu(confirm=False)
     pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
     screenshot "native-main-menu"
     click id "menu_about"
     assert screen "about"
     pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
     screenshot "native-about"
     click id "game_return"
     $ renpy.set_physical_size((1280, 720))
     pause until eval renpy.get_physical_size() == (1280, 720)
     assert eval not preferences.fullscreen
     pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
     screenshot "scaled-main-menu"
     click id "menu_start"
     advance until "你还是和以前一样，出门不看天气。"
     assert screen "say"
     pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
     screenshot "scaled-dialogue"
     click id "history_open"
     assert screen "history"
     pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
     screenshot "scaled-history"
     click id "game_return"
     click id "preferences_open"
     assert screen "preferences"
     pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
     screenshot "scaled-settings"
     click id "game_return"
     advance until screen "choice"
     assert screen "choice"
     pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
     screenshot "scaled-choice"
     click id "save_open"
     assert screen "save"
     pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
     screenshot "scaled-save"
     click id "game_return"
     click id "load_open"
     assert screen "load"
     pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
     screenshot "scaled-load"
     click id "game_return"
     click id "preferences_open"
@@ -75,10 +84,12 @@ testcase native_1080_and_scaled_window:
     pause until eval renpy.get_physical_size() == (1920, 1080)
     assert eval preferences.fullscreen
     pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
     screenshot "native-settings"
     click id "game_return"
     assert screen "choice"
     pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
     screenshot "native-choice"
 
 testcase route_01:
@@ -477,11 +488,13 @@ testcase history_preferences_and_audio:
     click id "history_open"
     assert screen "history"
     pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
     screenshot "history"
     click id "game_return"
     click id "preferences_open"
     assert screen "preferences"
     pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
     screenshot "settings"
     click id "mute_all"
     assert eval preferences.get_mute("music")

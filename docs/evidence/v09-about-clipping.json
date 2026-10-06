@@ -12,5 +12,16 @@
   "finding": "about description and translated RenPy license extend beyond right visible edge",
   "source": "direct inspection of actual standalone EXE PNG",
   "fix": "bound about vbox and about text to 1380 logical pixels",
-  "revalidation": "pending current repaired candidate; do not inherit old package visual approval"
+  "revalidation": "pending current repaired candidate; do not inherit old package visual approval",
+  "additional_capture_finding": {
+    "screenshot": "reports/package/screenshots/scaled-history.png",
+    "sha256": "b8466aa105e7240f207ec8a5af15b9ce8e3bcd879d6ecdd70b019101918b8fa9",
+    "pixels": [
+      1280,
+      720
+    ],
+    "finding": "capture includes a partly dissolved old say screen, while later native history is opaque",
+    "repair": "wait for engine ongoing transition state on root/master/screens before UI screenshots",
+    "reference": "https://www.renpy.org/doc/html/other.html#renpy.get_ongoing_transition"
+  }
 }

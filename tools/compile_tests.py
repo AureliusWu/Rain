@@ -187,11 +187,13 @@ def render_tests(story):
         '    click id "history_open"',
         '    assert screen "history"',
         '    pause 0.3',
+        '    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))',
         '    screenshot "history"',
         '    click id "game_return"',
         '    click id "preferences_open"',
         '    assert screen "preferences"',
         '    pause 0.3',
+        '    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))',
         '    screenshot "settings"',
         '    click id "mute_all"',
         '    assert eval preferences.get_mute("music")',
@@ -488,11 +490,13 @@ def render_tests(story):
               '    screenshot "native-choice"', '']
     first = lines.index('testcase route_01:')
     display = lines.index('testcase native_1080_and_scaled_window:')
-    # A screen can exist during its menu dissolve; capture the settled view.
+    # Wall-time pauses alone can still capture a software-rendered transition.
+    # Wait for the engine's actual transition state before capturing the UI.
     display_lines = []
     for line in lines[display:]:
         if line.strip().startswith('screenshot '):
             display_lines.append('    pause 0.3')
+            display_lines.append('    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))')
         display_lines.append(line)
     return "\n".join(lines[:first] + display_lines + lines[first:display])
 

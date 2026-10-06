@@ -1,5 +1,7 @@
 # Work checkpoint
 
+缩放历史证据仍抓到过渡叠影；仅等待 0.3 秒不足以证明稳定画面。现在按引擎 get_ongoing_transition 的实际状态等待顶层 / master / screens 过渡结束，再截原生与缩放菜单；31/359、65 图及全部路线保持。
+
 2026-10-06 接续：637b9d5 / Windows 37307573272 已 success，83 Python，源码与独立 EXE 各 31/359，新进程读档 1/10；两个 artifact 大小及 digest 已核验。实际 EXE 关于页发现长说明和引擎许可在右侧裁切（P2），身份见 evidence/v09-about-clipping.json。已约束 about vbox / text 到 1380 像素内容宽度；修订包的完整 Windows 重验和画面审阅待完成，不沿用旧包视觉结论。
 
 2026-10-05，main。用户要求工程自主继续，真人后续统一由用户操作。
