@@ -63,3 +63,5 @@ python -m tools.build.verify_package --zip dist/BeforeTheRainStops-1.0.0-win.zip
 main 的 CI 生成候选游戏和证据。v1 正式发布入口为 `release-v10.yml`：要求机器验收、普通 Windows / DPI、24 个声音试听、两结局真人计时、创作定案与冻结记录全部绑定同一候选提交及 ZIP SHA-256。该入口下载已验收 artifact，校验后直接发布同字节 ZIP，再下载发行资产核对；不会重新构建另一份包。
 
 当前人工记录为 pending，不创建正式 v1.0 tag。后续操作见 [发布步骤](docs/RELEASE_ACCEPTANCE_V10.md)。历史公开 Release 与当前 main 候选分开保留。
+
+发布工具已完成 [工程补检](docs/RELEASE_ENGINEERING_V10.md)：Linux 97 项测试通过，补齐原报告异常计数，拒绝错误类型 / 缺失记录和机器问题。试玩候选及 Windows 证据继续绑定上方同一身份。

@@ -79,7 +79,11 @@ class NativeAcceptanceTests(unittest.TestCase):
     def test_native_summary_requires_every_expected_case_and_assertion(self):
         result = validate_native_report(self.report, self.source)
         self.assertEqual((result['cases'], result['assertions']), (1, 1))
+        self.assertEqual({k: result[k] for k in ('failed', 'xfailed', 'xpassed', 'skipped', 'not_run')},
+                         dict.fromkeys(('failed', 'xfailed', 'xpassed', 'skipped', 'not_run'), 0))
         for report in [self.report.replace('1 | 1 passed', '0 | 0 passed'),
+                       self.report.replace('0 xfailed', '1 xfailed'),
+                       self.report.replace('0 xpassed', '1 xpassed'),
                        self.report.replace('0 skipped', '1 skipped'),
                        self.report.replace('0 not run', '1 not run'),
                        self.report.replace('PASSED route_01', 'PASSED another_case'),

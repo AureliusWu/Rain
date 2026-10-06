@@ -1,0 +1,121 @@
+test_corrupt_png_with_matching_file_hash_is_still_rejected (test_asset_pipeline.PipelineTests.test_corrupt_png_with_matching_file_hash_is_still_rejected) ... ok
+test_dry_run_never_creates_output_or_changes_manifest (test_asset_pipeline.PipelineTests.test_dry_run_never_creates_output_or_changes_manifest) ... ok
+test_duplicate_output_and_wrong_reference_type_are_rejected (test_asset_pipeline.PipelineTests.test_duplicate_output_and_wrong_reference_type_are_rejected) ... ok
+test_failed_first_import_removes_partial_image (test_asset_pipeline.PipelineTests.test_failed_first_import_removes_partial_image) ... ok
+test_historical_720p_import_is_reproducible_but_not_current_canvas (test_asset_pipeline.PipelineTests.test_historical_720p_import_is_reproducible_but_not_current_canvas) ... ok
+test_manifest_replace_failure_restores_previous_image (test_asset_pipeline.PipelineTests.test_manifest_replace_failure_restores_previous_image) ... ok
+test_missing_component_is_rejected (test_asset_pipeline.PipelineTests.test_missing_component_is_rejected) ... ok
+test_missing_reference_and_changed_prompt_do_not_leave_output (test_asset_pipeline.PipelineTests.test_missing_reference_and_changed_prompt_do_not_leave_output) ... ok
+test_opaque_or_empty_sprite_is_rejected_before_write (test_asset_pipeline.PipelineTests.test_opaque_or_empty_sprite_is_rejected_before_write) ... ok
+test_output_collision_and_untracked_file_are_rejected (test_asset_pipeline.PipelineTests.test_output_collision_and_untracked_file_are_rejected) ... ok
+test_prompt_registry_rejects_duplicate_and_wrong_versions (test_asset_pipeline.PipelineTests.test_prompt_registry_rejects_duplicate_and_wrong_versions) ... ok
+test_reference_rebinding_requires_a_new_asset_version (test_asset_pipeline.PipelineTests.test_reference_rebinding_requires_a_new_asset_version) ... ok
+test_registered_prompt_binding_cannot_point_to_another_id (test_asset_pipeline.PipelineTests.test_registered_prompt_binding_cannot_point_to_another_id) ... ok
+test_repeat_import_and_saved_recipe_are_idempotent (test_asset_pipeline.PipelineTests.test_repeat_import_and_saved_recipe_are_idempotent) ... ok
+test_symlink_cannot_escape_asset_folder (test_asset_pipeline.PipelineTests.test_symlink_cannot_escape_asset_folder) ... ok
+test_traversal_and_cross_platform_paths_are_rejected (test_asset_pipeline.PipelineTests.test_traversal_and_cross_platform_paths_are_rejected) ... ok
+test_ui_keeps_native_size_and_alpha (test_asset_pipeline.PipelineTests.test_ui_keeps_native_size_and_alpha) ... ok
+test_version_change_required_and_downgrade_rejected (test_asset_pipeline.PipelineTests.test_version_change_required_and_downgrade_rejected) ... ok
+test_all_assets_and_voice_bindings_are_valid (test_assets.AssetTests.test_all_assets_and_voice_bindings_are_valid) ... ok
+test_character_asset_alpha (test_assets.AssetTests.test_character_asset_alpha) ... ok
+test_missing_background_reference_fails (test_assets.AssetTests.test_missing_background_reference_fails) ... ok
+test_missing_voice_reference_fails (test_assets.AssetTests.test_missing_voice_reference_fails) ... ok
+test_clipping_is_rejected (test_audio.AudioTests.test_clipping_is_rejected) ... ok
+test_current_project_audio_and_selected_voice_bindings (test_audio.AudioTests.test_current_project_audio_and_selected_voice_bindings) ... ok
+test_invalid_stop_cue_and_changed_metadata_are_rejected (test_audio.AudioTests.test_invalid_stop_cue_and_changed_metadata_are_rejected) ... ok
+test_missing_sound_and_wrong_music_role_are_rejected (test_audio.AudioTests.test_missing_sound_and_wrong_music_role_are_rejected) ... ok
+test_non_finite_audio_is_rejected (test_audio.AudioTests.test_non_finite_audio_is_rejected) ... ok
+test_ogg_header_with_matching_checksum_does_not_prove_audio (test_audio.AudioTests.test_ogg_header_with_matching_checksum_does_not_prove_audio) ... ok
+test_procedural_cues_are_repeatable_and_music_has_loop_headroom (test_audio.AudioTests.test_procedural_cues_are_repeatable_and_music_has_loop_headroom) ... ok
+test_silent_audio_is_rejected (test_audio.AudioTests.test_silent_audio_is_rejected) ... ok
+test_source_and_encoded_lengths_must_match (test_audio.AudioTests.test_source_and_encoded_lengths_must_match) ... ok
+test_truncated_real_vorbis_is_rejected_even_with_updated_checksum (test_audio.AudioTests.test_truncated_real_vorbis_is_rejected_even_with_updated_checksum) ... ok
+test_unchanged_voice_request_and_files_can_be_reused (test_audio.AudioTests.test_unchanged_voice_request_and_files_can_be_reused) ... ok
+test_valid_wave_and_vorbis_are_fully_decoded (test_audio.AudioTests.test_valid_wave_and_vorbis_are_fully_decoded) ... ok
+test_voice_cache_rejects_changed_or_missing_source (test_audio.AudioTests.test_voice_cache_rejects_changed_or_missing_source) ... ok
+test_voice_cache_rejects_changed_speed_text_prompt_and_line (test_audio.AudioTests.test_voice_cache_rejects_changed_speed_text_prompt_and_line) ... ok
+test_voice_preparation_limits_peaks_and_fades_edges (test_audio.AudioTests.test_voice_preparation_limits_peaks_and_fades_edges) ... ok
+test_voice_preparation_rejects_empty_and_non_finite (test_audio.AudioTests.test_voice_preparation_rejects_empty_and_non_finite) ... ok
+test_all_seven_expressions_are_aligned_and_used (test_characters.CharacterTests.test_all_seven_expressions_are_aligned_and_used) ... ok
+test_missing_expression_is_rejected (test_characters.CharacterTests.test_missing_expression_is_rejected) ... ok
+test_removed_story_expression_cue_is_rejected (test_characters.CharacterTests.test_removed_story_expression_cue_is_rejected) ... ok
+test_shifted_sprite_is_detected (test_characters.CharacterTests.test_shifted_sprite_is_detected) ... ok
+test_interaction_test_staleness_and_missing_output_fail_cli (test_generated_checks.GeneratedCheckTests.test_interaction_test_staleness_and_missing_output_fail_cli) ... ok
+test_story_script_staleness_and_missing_output_fail_cli (test_generated_checks.GeneratedCheckTests.test_story_script_staleness_and_missing_output_fail_cli) ... ok
+test_incomplete_native_report_returns_nonzero_from_cli (test_package_execution.NativeAcceptanceTests.test_incomplete_native_report_returns_nonzero_from_cli) ... ok
+test_missing_screenshot_is_rejected (test_package_execution.NativeAcceptanceTests.test_missing_screenshot_is_rejected) ... ok
+test_native_evidence_rejects_720p_or_wrong_scaled_window (test_package_execution.NativeAcceptanceTests.test_native_evidence_rejects_720p_or_wrong_scaled_window) ... ok
+test_native_summary_requires_every_expected_case_and_assertion (test_package_execution.NativeAcceptanceTests.test_native_summary_requires_every_expected_case_and_assertion) ... ok
+test_present_but_truncated_screenshot_is_rejected (test_package_execution.NativeAcceptanceTests.test_present_but_truncated_screenshot_is_rejected) ... ok
+test_failed_process_retains_stderr_and_nonzero_exit (test_package_execution.NativeProcessEvidenceTests.test_failed_process_retains_stderr_and_nonzero_exit) ... ok
+test_source_failure_retains_both_streams_and_nonzero_exit (test_package_execution.NativeProcessEvidenceTests.test_source_failure_retains_both_streams_and_nonzero_exit) ... partial test
+
+failure
+
+ok
+test_source_timeout_retains_report_and_process_record (test_package_execution.NativeProcessEvidenceTests.test_source_timeout_retains_report_and_process_record) ... route started
+
+
+ok
+test_success_records_real_output_and_exit (test_package_execution.NativeProcessEvidenceTests.test_success_records_real_output_and_exit) ... ok
+test_timeout_preserves_output_and_partial_ui_evidence (test_package_execution.NativeProcessEvidenceTests.test_timeout_preserves_output_and_partial_ui_evidence) ... ok
+test_approval_of_another_commit_or_zip_is_rejected (test_release_gate.ReleaseGateTests.test_approval_of_another_commit_or_zip_is_rejected) ... ok
+test_bad_machine_process_or_incomplete_tests_are_rejected (test_release_gate.ReleaseGateTests.test_bad_machine_process_or_incomplete_tests_are_rejected) ... ok
+test_boolean_and_invalid_counts_ids_or_exit_codes_are_rejected (test_release_gate.ReleaseGateTests.test_boolean_and_invalid_counts_ids_or_exit_codes_are_rejected) ... ok
+test_cli_blocks_malformed_record_without_outputs_or_traceback (test_release_gate.ReleaseGateTests.test_cli_blocks_malformed_record_without_outputs_or_traceback) ... ok
+test_complete_record_selects_reviewed_commit_and_artifact (test_release_gate.ReleaseGateTests.test_complete_record_selects_reviewed_commit_and_artifact) ... ok
+test_each_error_count_must_be_present_integer_zero (test_release_gate.ReleaseGateTests.test_each_error_count_must_be_present_integer_zero) ... ok
+test_estimate_nan_boolean_or_out_of_scope_timing_is_rejected (test_release_gate.ReleaseGateTests.test_estimate_nan_boolean_or_out_of_scope_timing_is_rejected) ... ok
+test_injected_tests_models_and_unsafe_paths_are_rejected (test_release_gate.ReleaseGateTests.test_injected_tests_models_and_unsafe_paths_are_rejected) ... ok
+test_malformed_records_are_blocked_with_validation_errors (test_release_gate.ReleaseGateTests.test_malformed_records_are_blocked_with_validation_errors) ... ok
+test_missing_evidence_and_unresolved_issues_block_publication (test_release_gate.ReleaseGateTests.test_missing_evidence_and_unresolved_issues_block_publication) ... ok
+test_pending_human_groups_cannot_be_replaced_by_machine_pass (test_release_gate.ReleaseGateTests.test_pending_human_groups_cannot_be_replaced_by_machine_pass) ... ok
+test_reviewed_bytes_accept_but_same_size_tampering_fails (test_release_gate.ReleaseGateTests.test_reviewed_bytes_accept_but_same_size_tampering_fails) ... ok
+test_source_and_exe_counts_must_agree (test_release_gate.ReleaseGateTests.test_source_and_exe_counts_must_agree) ... ok
+test_unresolved_or_missing_machine_issues_block_publication (test_release_gate.ReleaseGateTests.test_unresolved_or_missing_machine_issues_block_publication) ... ok
+test_all_authored_endings_reachable (test_routes.RouteTests.test_all_authored_endings_reachable) ... ok
+test_backwards_time_fails (test_routes.RouteTests.test_backwards_time_fails) ... ok
+test_both_trust_branches_are_reachable (test_routes.RouteTests.test_both_trust_branches_are_reachable) ... ok
+test_choice_combinations_are_exhaustive (test_routes.RouteTests.test_choice_combinations_are_exhaustive) ... ok
+test_declared_facts_and_chapters_on_every_route (test_routes.RouteTests.test_declared_facts_and_chapters_on_every_route) ... ok
+test_duplicate_id_fails (test_routes.RouteTests.test_duplicate_id_fails) ... ok
+test_early_hesitation_can_be_repaired (test_routes.RouteTests.test_early_hesitation_can_be_repaired) ... ok
+test_early_unconditional_route_fails (test_routes.RouteTests.test_early_unconditional_route_fails) ... ok
+test_effects_preserve_previous_state (test_routes.RouteTests.test_effects_preserve_previous_state) ... ok
+test_global_choice_id_collision_fails (test_routes.RouteTests.test_global_choice_id_collision_fails) ... ok
+test_invalid_state_type_fails (test_routes.RouteTests.test_invalid_state_type_fails) ... ok
+test_leaving_always_respects_players_action (test_routes.RouteTests.test_leaving_always_respects_players_action) ... ok
+test_loop_fails (test_routes.RouteTests.test_loop_fails) ... ok
+test_missing_chapter_and_draft_fail (test_routes.RouteTests.test_missing_chapter_and_draft_fail) ... ok
+test_missing_target_fails (test_routes.RouteTests.test_missing_target_fails) ... ok
+test_out_of_range_state_fails (test_routes.RouteTests.test_out_of_range_state_fails) ... ok
+test_unreachable_ending_fails (test_routes.RouteTests.test_unreachable_ending_fails) ... ok
+test_zero_effect_and_identical_consequence_fail (test_routes.RouteTests.test_zero_effect_and_identical_consequence_fail) ... ok
+test_checksum_failure_discards_partial_and_preserves_runtime (test_sdk_recovery.SdkRecoveryTests.test_checksum_failure_discards_partial_and_preserves_runtime) ... ok
+test_corrupt_cached_archive_is_redownloaded (test_sdk_recovery.SdkRecoveryTests.test_corrupt_cached_archive_is_redownloaded) ... ok
+test_existing_usable_sdk_skips_network (test_sdk_recovery.SdkRecoveryTests.test_existing_usable_sdk_skips_network) ... ok
+test_extract_failure_preserves_existing_runtime (test_sdk_recovery.SdkRecoveryTests.test_extract_failure_preserves_existing_runtime) ... ok
+test_interrupted_download_preserves_existing_runtime (test_sdk_recovery.SdkRecoveryTests.test_interrupted_download_preserves_existing_runtime) ... ok
+test_successful_recovery_replaces_broken_runtime_and_cleans_backup (test_sdk_recovery.SdkRecoveryTests.test_successful_recovery_replaces_broken_runtime_and_cleans_backup) ... ok
+test_runtime_version_mismatch_is_rejected (test_story_lint.StoryLintTests.test_runtime_version_mismatch_is_rejected) ... ok
+test_scene_prompt_change_requires_new_hash (test_story_lint.StoryLintTests.test_scene_prompt_change_requires_new_hash) ... ok
+test_menu_and_title_do_not_inflate_body (test_story_stats.StoryStatsTests.test_menu_and_title_do_not_inflate_body) ... ok
+test_routes_count_only_their_selected_response (test_story_stats.StoryStatsTests.test_routes_count_only_their_selected_response) ... ok
+test_unreachable_text_cannot_be_reported_as_valid_content (test_story_stats.StoryStatsTests.test_unreachable_text_cannot_be_reported_as_valid_content) ... ok
+
+----------------------------------------------------------------------
+Ran 97 tests in 10.166s
+
+OK
+Scenes: 26; complete routes: 16; endings: ['normal', 'true']
+Body: 15065 characters; routes: 16; single route: 11303–11666; scenes: 24 + 2 routers
+Text reading only, 250–350 characters/minute. No measured playtime, choice or image dwell time, audio listening or breaks.
+Story lint: 0 errors, 0 review notes; 15065 characters (all branches).
+Manual review required: character consistency, emotional logic, timeline, and pacing.
+Prompt registry: 0 errors
+Asset validation: 0 errors; 85 assets, 60 images
+Audio validation: 24 decoded game files, 0 errors
+Image reproduction: 60 recipes, 0 errors; no files changed.
+Character validation: 7 expressions, 0 errors
+Ren'Py scripts are current.
+Interaction tests are current.

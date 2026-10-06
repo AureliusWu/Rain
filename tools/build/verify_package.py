@@ -92,7 +92,8 @@ def validate_native_report(output, test_source):
     passed = set(re.findall(r'^\[rpytest\]\s+PASSED\s+([a-zA-Z0-9_]+)\s+-', output, re.MULTILINE))
     if not set(cases).issubset(passed) or not re.search(r'\[rpytest\]\s+Status: PASSED\s*$', output, re.MULTILINE):
         raise ValueError('Native test names or final PASSED status are missing')
-    return {'cases': len(cases), 'assertions': assertions, 'failed': 0, 'skipped': 0, 'not_run': 0}
+    return {'cases': len(cases), 'assertions': assertions, 'failed': 0, 'xfailed': 0,
+            'xpassed': 0, 'skipped': 0, 'not_run': 0}
 
 
 def required_screenshots(test_source):

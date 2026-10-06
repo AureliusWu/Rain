@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-06",
+  "candidate_commit": "7593a348bf28e196c2ee3a55fd1e14c837289ef3",
+  "original_game_zip": {
+    "file": "BeforeTheRainStops-1.0.0-win.zip",
+    "size_in_bytes": 56354657,
+    "sha256": "4ecba6cea822947b08bc8a877af2d5eed4ccbb3ffdd367c92032c236f5dac048",
+    "entries": 1621,
+    "build_info": {
+      "info": {},
+      "time": 1791260064.381209,
+      "name": "雨停之前",
+      "version": "1.0.0"
+    },
+    "crc": "passed",
+    "assets_checked": 85,
+    "player_readme_sha256": "5053c2e75cea5d8d3a03f0f3873f40616a666f5527bde3be33879fc8491a3a93",
+    "player_readme_source_comparison": "equal after CRLF/LF normalization",
+    "test_scripts_in_original_zip": false,
+    "allowed_engine_cache": [
+      "game/cache/build_info.json",
+      "game/cache/bytecode-312.rpyb"
+    ]
+  },
+  "accepted_windows_run": 37411258713,
+  "native_report_counter_checks": [
+    {
+      "scope": "source",
+      "report_sha256": "5b5495c4a0f722a2a017ffc86847bc06c40f222ceab30255ad22d4101da2613a",
+      "cases": 31,
+      "assertions": 359,
+      "failed": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "skipped": 0,
+      "not_run": 0
+    },
+    {
+      "scope": "standalone",
+      "report_sha256": "0aa8db9f51111652083c690c3be350feccd313a7e597e75b053f3ed66a081599",
+      "cases": 31,
+      "assertions": 359,
+      "failed": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "skipped": 0,
+      "not_run": 0
+    },
+    {
+      "scope": "fresh_process",
+      "report_sha256": "6f3b1659e6cfeaecaefea53a27a114753d1a2215b6dd6b67844c9dd359247426",
+      "cases": 1,
+      "assertions": 10,
+      "failed": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "skipped": 0,
+      "not_run": 0
+    }
+  ],
+  "zip_validation": "passed",
+  "preview_identity": "passed",
+  "human_record_sha256": "25096ca965f0f5522a8c90c1397fc1efa0d175d6f83694766a27fc1839e27bdb",
+  "human_gate": "blocked: Human acceptance pending",
+  "formal_release_executed": false,
+  "test_environment": "Linux author tools; Windows game evidence retains its original accepted run",
+  "status": "release_tools_validated_human_acceptance_pending",
+  "author_validation": {
+    "platform": "Linux",
+    "python_tests": 97,
+    "seconds": 10.166,
+    "returncode": 0,
+    "all_author_validators": "passed",
+    "log": "docs/evidence/v10-release-tools-validation.txt"
+  },
+  "renpy_lint": {
+    "platform": "Linux",
+    "engine": "8.5.3",
+    "returncode": 0,
+    "log": "docs/evidence/v10-release-tools-lint.txt"
+  },
+  "tool_files": [
+    {
+      "path": "tools/release_gate.py",
+      "sha256": "2441cd0e649813d28ad586714f78bd488c56e4211cf0374f9a1ccb62f457d770"
+    },
+    {
+      "path": "tools/build/verify_package.py",
+      "sha256": "80afa09ad04aa9c7409f62f948af2493af9da73abea87e8fae07cbf9e8475674"
+    },
+    {
+      "path": "tests/test_release_gate.py",
+      "sha256": "df98ed9065b82298df82e9153b8a2230893c25b8a17c5c28978f67fb2e436a47"
+    },
+    {
+      "path": "tests/test_package_execution.py",
+      "sha256": "df799a75bb40ab5a17a60f8de687fe4e520bb4ae59205a12be18395abb7b965f"
+    }
+  ],
+  "logs": [
+    {
+      "path": "docs/evidence/v10-release-tools-validation.txt",
+      "sha256": "5c14ab5d575d6040ef699b244ec6d5f9c8e9d9ae1956198abfefa5f4c3f95596"
+    },
+    {
+      "path": "docs/evidence/v10-release-tools-lint.txt",
+      "sha256": "c5f867ec27fd2b66b685442280b4b7ad139a178a6b365d007e669e7527fc4a2b"
+    }
+  ],
+  "gameplay_and_distribution_inputs": "identical to accepted candidate",
+  "actual_cli": {
+    "returncode": 1,
+    "stderr": "Release blocked: Human acceptance pending",
+    "publication_outputs_created": false
+  }
+}

@@ -119,7 +119,9 @@
         "scaled-settings",
         "settings",
         "skip-final-choice"
-      ]
+      ],
+      "xfailed": 0,
+      "xpassed": 0
     },
     "standalone": {
       "cases": 31,
@@ -204,7 +206,9 @@
         "scaled-settings",
         "settings",
         "skip-final-choice"
-      ]
+      ],
+      "xfailed": 0,
+      "xpassed": 0
     },
     "fresh_process": {
       "cases": 1,
@@ -225,7 +229,9 @@
       "report_sha256": "6f3b1659e6cfeaecaefea53a27a114753d1a2215b6dd6b67844c9dd359247426",
       "required_screenshots": [
         "cross-process-late-load"
-      ]
+      ],
+      "xfailed": 0,
+      "xpassed": 0
     }
   },
   "display": {
@@ -1556,5 +1562,13 @@
     "executed": false,
     "publication": "pending human acceptance",
     "exact_reviewed_zip_required": true
+  },
+  "report_counter_audit": {
+    "date": "2026-10-06",
+    "method": "Reparsed unchanged accepted CI reports against the candidate test plan; original Windows run and game ZIP are retained.",
+    "fields_added": [
+      "xfailed",
+      "xpassed"
+    ]
   }
 }

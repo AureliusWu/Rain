@@ -12,6 +12,8 @@
 
 Windows runner 使用 dummy 音频；真人试听、两结局阅读计时、普通电脑 / 中文路径 / 100% 与 150% DPI、创作定案及内容冻结继续待用户统一操作。正式发布 workflow 尚未执行，没有正式 v1.0 tag / Release。
 
+发布工具补检见 [RELEASE_ENGINEERING_V10](RELEASE_ENGINEERING_V10.md)：本轮 Linux 97 项测试及全部作者校验 / lint 通过；原 Windows 输出已重新解析并补齐 xfailed / xpassed，原 ZIP / 预览校验通过。正式检查继续按同一候选和真实 pending 人验表阻止发布。
+
 ## 统一人工验收
 
 [HUMAN_HANDOFF](HUMAN_HANDOFF.md) 包含一次完成的操作范围。`docs/review/V10_HUMAN_ACCEPTANCE.json` 当前五组均 pending，没有自动填写通过、真人计时、试听或冻结。

@@ -12,6 +12,7 @@ import zipfile
 HEX40 = re.compile(r"[0-9a-f]{40}")
 HEX64 = re.compile(r"[0-9a-f]{64}")
 GROUPS = ("ordinary_windows", "display_dpi", "listening", "creative_and_freeze")
+ERROR_COUNTS = ("failed", "xfailed", "xpassed", "skipped", "not_run")
 
 
 def require(condition, message):
@@ -19,44 +20,67 @@ def require(condition, message):
         raise ValueError(message)
 
 
-def validate_approval(machine, human, version):
-    require(re.fullmatch(r"[1-9][0-9]*\.[0-9]+\.[0-9]+", version), "Formal gate requires a v1+ version")
+def has_text(value):
+    return isinstance(value, str) and bool(value.strip())
+
+
+def validate_machine(machine, version):
+    require(isinstance(version, str) and re.fullmatch(r"[1-9][0-9]*\.[0-9]+\.[0-9]+", version), "Formal gate requires a v1+ version")
+    require(isinstance(machine, dict), "Machine acceptance must be a JSON object")
     require(machine.get("status") == "technical_and_visual_passed_with_human_limits", "Machine/visual acceptance incomplete")
+    require(machine.get("unresolved_machine_issues") == [], "Unresolved or missing machine issue record")
     candidate = machine.get("candidate_commit", "")
     package = machine.get("package", {})
-    require(HEX40.fullmatch(candidate), "Invalid candidate commit")
+    require(isinstance(package, dict), "Invalid package record")
+    require(isinstance(candidate, str) and HEX40.fullmatch(candidate), "Invalid candidate commit")
     require(machine.get("version") == version, "Machine version mismatch")
-    require(HEX64.fullmatch(package.get("sha256", "")), "Invalid package SHA-256")
+    digest = package.get("sha256")
+    require(isinstance(digest, str) and HEX64.fullmatch(digest), "Invalid package SHA-256")
     require(package.get("file") == f"BeforeTheRainStops-{version}-win.zip", "Package filename/version mismatch")
     require(type(package.get("size_in_bytes")) is int and package["size_in_bytes"] > 0, "Missing package size")
     require(package.get("crc") == "passed" and package.get("test_scripts_in_original_zip") is False, "Package cleanliness/CRC not accepted")
-    require(machine.get("lint") == "passed" and machine.get("python_tests", {}).get("passed", 0) > 0, "Authoring/lint acceptance incomplete")
+    python_tests = machine.get("python_tests")
+    require(isinstance(python_tests, dict) and type(python_tests.get("passed")) is int
+            and python_tests["passed"] > 0 and machine.get("lint") == "passed", "Authoring/lint acceptance incomplete")
+    suites = machine.get("suites")
+    require(isinstance(suites, dict), "Missing suite records")
     for scope in ("source", "standalone", "fresh_process"):
-        suite = machine.get("suites", {}).get(scope, {})
+        suite = suites.get(scope)
+        require(isinstance(suite, dict), f"Missing {scope} suite")
         process = suite.get("process", {})
-        require(suite.get("cases", 0) > 0 and suite.get("assertions", 0) > 0, f"Missing {scope} suite")
-        require(all(suite.get(k) == 0 for k in ("failed", "skipped", "not_run")), f"Incomplete {scope} suite")
-        require(process.get("returncode") == 0 and process.get("timed_out") is False, f"Unaccepted {scope} process")
+        require(all(type(suite.get(k)) is int and suite[k] > 0 for k in ("cases", "assertions")), f"Invalid {scope} test counts")
+        require(all(type(suite.get(k)) is int and suite[k] == 0 for k in ERROR_COUNTS), f"Incomplete {scope} suite")
+        require(isinstance(process, dict) and type(process.get("returncode")) is int
+                and process["returncode"] == 0 and process.get("timed_out") is False, f"Unaccepted {scope} process")
+    require(all(suites["source"][k] == suites["standalone"][k] for k in ("cases", "assertions")), "Source/EXE suite counts differ")
     require(type(machine.get("run_id")) is int and machine["run_id"] > 0, "Missing accepted CI run")
-    artifacts = [a for a in machine.get("artifacts", []) if a.get("name") == f"windows-{candidate}"]
-    require(len(artifacts) == 1 and type(artifacts[0].get("id")) is int, "Missing unique accepted package artifact")
+    artifacts = machine.get("artifacts")
+    require(isinstance(artifacts, list) and all(isinstance(a, dict) for a in artifacts), "Invalid artifact records")
+    artifacts = [a for a in artifacts if a.get("name") == f"windows-{candidate}"]
+    require(len(artifacts) == 1 and type(artifacts[0].get("id")) is int and artifacts[0]["id"] > 0, "Missing unique accepted package artifact")
+    return {"version": version, "candidate": candidate, "run_id": machine["run_id"],
+            "artifact_id": artifacts[0]["id"], "package": package["file"],
+            "sha256": package["sha256"], "size": package["size_in_bytes"]}
+
+
+def validate_approval(machine, human, version):
+    selection = validate_machine(machine, version)
+    require(isinstance(human, dict), "Human acceptance must be a JSON object")
     require(human.get("schema_version") == 1 and human.get("status") == "approved", "Human acceptance pending")
-    require(human.get("version") == version and human.get("candidate_commit") == candidate, "Human acceptance targets another candidate")
-    require(human.get("package_sha256") == package["sha256"], "Human acceptance targets another ZIP")
-    require(bool(human.get("reviewer", "").strip()) and bool(human.get("reviewed_at", "").strip()), "Missing human reviewer/date")
+    require(human.get("version") == version and human.get("candidate_commit") == selection["candidate"], "Human acceptance targets another candidate")
+    require(human.get("package_sha256") == selection["sha256"], "Human acceptance targets another ZIP")
+    require(has_text(human.get("reviewer")) and has_text(human.get("reviewed_at")), "Missing human reviewer/date")
     require(human.get("unresolved_issues") == [], "Unresolved human issues")
     for group in GROUPS:
         item = human.get(group, {})
-        require(item.get("status") == "passed" and bool(item.get("evidence", "").strip()), f"Human {group} pending or lacks evidence")
+        require(isinstance(item, dict) and item.get("status") == "passed" and has_text(item.get("evidence")), f"Human {group} pending or lacks evidence")
     timing = human.get("reading_time", {})
-    require(timing.get("status") == "passed" and bool(timing.get("evidence", "").strip()), "Human reading timing pending")
+    require(isinstance(timing, dict) and timing.get("status") == "passed" and has_text(timing.get("evidence")), "Human reading timing pending")
     for ending in ("normal", "true"):
         minutes = timing.get(f"{ending}_minutes")
         require(type(minutes) in (int, float) and math.isfinite(minutes) and 30 <= minutes <= 60,
                 f"{ending} measured playtime must be 30–60 minutes; revise or record a user-approved scope change first")
-    return {"version": version, "candidate": candidate, "run_id": machine["run_id"],
-            "artifact_id": artifacts[0]["id"], "package": package["file"],
-            "sha256": package["sha256"], "size": package["size_in_bytes"]}
+    return selection
 
 
 def validate_zip(path, selection):
