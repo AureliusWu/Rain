@@ -93,7 +93,6 @@ testcase native_1080_and_scaled_window:
     screenshot "native-choice"
 
 testcase current_voice_replay_and_restore:
-    only __import__("os").environ.get("BTRS_VOICE_SMOKE") == "1"
     advance until "你还是和以前一样，出门不看天气。"
     assert id "voice_replay"
     pause until eval renpy.music.get_playing(channel="voice") is None
@@ -146,7 +145,6 @@ testcase current_voice_replay_and_restore:
     assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == _test.voice_replay_state
 
 testcase history_voice_replay:
-    only __import__("os").environ.get("BTRS_VOICE_SMOKE") == "1"
     advance until "你还是和以前一样，出门不看天气。"
     advance
     assert "有人从长椅旁站起来。蓝灰色的开衫，右边那枚银色发夹，还有说完话后轻轻抬起的眉。"
@@ -198,7 +196,6 @@ testcase history_voice_replay:
     assert not id "voice_replay"
 
 testcase auto_waits_for_replayed_voice:
-    only __import__("os").environ.get("BTRS_VOICE_SMOKE") == "1"
     $ preferences.wait_voice = True
     $ preferences.afm_time = 0.1
     advance until "你还是和以前一样，出门不看天气。"

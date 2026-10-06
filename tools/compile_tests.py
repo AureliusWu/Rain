@@ -577,9 +577,6 @@ def render_tests(story):
     # Run new voice interaction checks before the long all-route regression.
     replay_lines = []
     for line in lines[replay_start:replay_end]:
-        if line.startswith('testcase '):
-            replay_lines += [line, '    only __import__("os").environ.get("BTRS_VOICE_SMOKE") == "1"']
-            continue
         if line.strip().startswith('screenshot '):
             replay_lines.append('    pause 0.3')
             replay_lines.append('    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))')

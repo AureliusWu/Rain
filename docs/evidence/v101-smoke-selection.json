@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "status": "superseded_selection_issue",
+  "candidate_commit": "07b418584ab1192da9cd708e0cb85ea33f0c4354",
+  "run_id": 37486491543,
+  "job_id": 112347732909,
+  "phase": "source_voice_smoke",
+  "issue": "RenPy testcase only expressions are evaluated during parse. Lint compiled the environment-dependent flag as false, so the supposed smoke command ran the full suite.",
+  "engine_evidence": "RenPy 8.5.3 renpy/test/testparser.py evaluates property expressions with renpy.python.py_eval at parse time.",
+  "correction": "Remove conditional only flags. Execute each of three explicitly named testcases in its own process, then execute the unchanged complete global suite.",
+  "publication_blocked": true,
+  "completed_full_regression_is_not_claimed": true,
+  "next_commit_replaces_this_attempt": true
+}
