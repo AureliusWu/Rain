@@ -1,0 +1,5 @@
+# Author only. Install torch==2.9.1 and torchaudio==2.9.1 from the official CPU index first.
+qwen-tts==0.1.1
+faster-whisper==1.2.1
+opencc-python-reimplemented==0.1.7
+soundfile[numpy]==0.14.0

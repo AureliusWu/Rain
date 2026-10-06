@@ -138,7 +138,15 @@ def validate_assets(root=ROOT, story=None, manifest=None, voices=None):
         prompt = prompts.get(voice.get('prompt_id'), {})
         if voice.get('generation_sha256') != request_fingerprint(voice, prompt.get('sha256')):
             errors.append(f'Voice request fingerprint mismatch: {name}')
-        if (voice.get('model_sha256'), voice.get('voice_bank_sha256'), voice.get('config_sha256')) != (MODEL_HASH, VOICES_HASH, CONFIG_HASH):
+        if voice.get('engine') == 'qwen3_tts':
+            from tools.audio_process.qwen_voice import PROVIDER_FILE, provenance_matches
+            try:
+                provider = json.loads((root / PROVIDER_FILE).read_text(encoding='utf-8'))
+                if not provenance_matches(voice, provider):
+                    errors.append(f'Voice model/config provenance mismatch: {name}')
+            except (OSError, ValueError):
+                errors.append(f'Missing Qwen model provenance: {name}')
+        elif (voice.get('model_sha256'), voice.get('voice_bank_sha256'), voice.get('config_sha256')) != (MODEL_HASH, VOICES_HASH, CONFIG_HASH):
             errors.append(f'Voice model/config provenance mismatch: {name}')
         asset = lookup.get(name)
         if not asset or (asset.get('file'), asset.get('prompt_id'), asset.get('source_file')) != (voice.get('file'), voice.get('prompt_id'), voice.get('source_file')):

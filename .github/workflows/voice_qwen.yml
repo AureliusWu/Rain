@@ -1,0 +1,65 @@
+name: Generate free Qwen Serena voice upgrade
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/voice_qwen.yml'
+      - 'tools/audio_process/generate_qwen.py'
+      - 'prompts/voice/qwen_heroine_v1.json'
+  workflow_dispatch:
+
+concurrency:
+  group: voice-qwen-main
+  cancel-in-progress: false
+
+jobs:
+  voice:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    permissions:
+      contents: write
+    env:
+      PYTHONUTF8: '1'
+      PYTHONUNBUFFERED: '1'
+      ORT_DISABLE_TELEMETRY: '1'
+      HF_HUB_DISABLE_TELEMETRY: '1'
+      DO_NOT_TRACK: '1'
+      OMP_NUM_THREADS: '4'
+      MKL_NUM_THREADS: '4'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install author-only free speech dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg sox
+          python -m pip install torch==2.9.1 torchaudio==2.9.1 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -r requirements-voice-qwen.txt -r requirements-dev.txt
+      - name: Generate and independently transcribe 17 lines
+        run: python -m tools.audio_process.generate_qwen --output reports/qwen-voice
+      - name: Adopt exact text-bound recordings and run author checks
+        run: |
+          python -m tools.audio_process.adopt_qwen --bundle reports/qwen-voice
+          python -m tools.validate > reports/qwen-voice/author-validation.txt 2>&1
+      - name: Commit validated audio without overwriting newer main work
+        env:
+          EXPECTED_HEAD: ${{ github.sha }}
+        run: |
+          current=$(git ls-remote origin refs/heads/main | cut -f1)
+          test "$current" = "$EXPECTED_HEAD"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add game/data game/audio/voice assets_source/audio/voice prompts/registry.json game/script game/testcases.rpy game/options.rpy CREDITS.md PLAYER_README.txt docs/review/VOICE_KOKORO_ARCHIVE.json docs/evidence/voice-qwen-generation.json
+          git commit -m 'feat: replace 17 heroine recordings with free Qwen Serena speech'
+          git push origin HEAD:main
+          git rev-parse HEAD > reports/qwen-voice/integration-commit.txt
+      - name: Save generated audio, provenance, comparisons and validation output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qwen-serena-${{ github.sha }}
+          path: reports/qwen-voice/
+          if-no-files-found: warn

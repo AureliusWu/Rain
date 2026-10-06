@@ -19,6 +19,9 @@ PROCESSING = 'edge_fades_15ms_peak_0.89_v1'
 
 
 def request_fingerprint(voice, prompt_hash):
+    if voice.get('engine') == 'qwen3_tts':
+        from tools.audio_process.qwen_voice import request_fingerprint as qwen_fingerprint
+        return qwen_fingerprint(voice, prompt_hash)
     request = {key: voice.get(key) for key in ['line_id', 'text', 'character', 'model', 'voice', 'speed', 'version', 'processing', 'prompt_id']}
     request.update(model_sha256=MODEL_HASH, voice_bank_sha256=VOICES_HASH,
                    config_sha256=CONFIG_HASH, frontend='misaki-0.9.4/ZHG2P-1.1',

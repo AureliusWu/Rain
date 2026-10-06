@@ -366,7 +366,7 @@ screen main_menu():
             text "[config.name!t]":
                 style "main_menu_title"
 
-            text _("可玩候选 v[config.version]"):
+            text _("v[config.version]"):
                 style "main_menu_version"
 
 

@@ -585,6 +585,13 @@
       "kind": "voice",
       "file": "prompts/voice/heroine_v2.md",
       "sha256": "273970b73a1aca7d9baaaee5a45faa1f68b63322c19be5c63fbe290b16a2c8d2"
+    },
+    {
+      "id": "voice_qwen_heroine_v1",
+      "version": 1,
+      "kind": "voice",
+      "file": "prompts/voice/qwen_heroine_v1.json",
+      "sha256": "8802352a0ec833b5c91e47ca08835548faacd6b5474150b09f98dbdeb23d1966"
     }
   ]
 }
