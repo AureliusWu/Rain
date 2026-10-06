@@ -1,4 +1,4 @@
-# 当前断点：新配音验收完成，准备发布正式 v1.0.0
+# 当前断点：新配音验收完成，修复发布退出码后重试正式发行
 
 提交 `dff19a6ecf516fa674e24fcb3481413efc25b849` / [Windows CI 37440590549](https://github.com/AureliusWu/Test/actions/runs/37440590549)；原始游戏 ZIP **56,359,988 字节**，SHA-256 `0d09a78a482e2ff0d34e14f51d49c89d5cc0d36b91506d44c6a3bcdcc678d3f1`。
 
@@ -13,3 +13,5 @@
 不要重跑已通过的游戏合集、重生成配音、复用旧 Kokoro 包、把真人 pending 伪改为 passed，或再次要求发布许可。当前 docs 的更新不改变已验收运行资产。若发布途中中断，先读取 Release / tag / workflow 的实际状态，不覆盖既有发布。
 
 Windows CI 使用 dummy 音频。真人试听、两结局阅读计时、普通电脑 / 中文路径 / 100% 与 150% DPI、创作定案及内容冻结仍为 pending，由用户统一操作；ASR 与自动执行时间不能代替这些结论。
+
+首轮发布 37444936017 的声音授权、artifact 下载、原 ZIP / 预览全部通过；创建 Release 前因 gh 预期 HTTP 404 返回码残留导致 step 6 失败，创建步骤 skipped。workflow 修复提交 0e2db075 使用 exit 0，仅在所有验证及两个不存在检查完成后返回成功。没有更换候选或安装包，重新提交授权文件以触发修复后的工作流。失败证据见 evidence/v10-publication-first-failure.json。
