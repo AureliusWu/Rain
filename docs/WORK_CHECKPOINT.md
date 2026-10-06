@@ -8,10 +8,12 @@
 
 用户已明确授权“完成后发布正式版”；真人后续统一由用户操作。35 个 EXE 关键画面复核、131 PNG 解码、85 包内资产和完整 ZIP 检查完成。人验表保持真实 pending，独立授权 JSON 绑定本次语音与同字节包。
 
-下一步：提交本次 docs 与授权文件到 main，触发 `release-v10.yml` → 等待并核对非 prerelease / 非 draft 的 v1.0.0、tag 目标 `dff19a6ecf516fa674e24fcb3481413efc25b849` 与公开资产 SHA-256 → 保存发行回读记录并更新当前状态 → 交付原始同字节 Windows 包与两份新声音材料。
+下一步：提交本次 docs 与授权文件到 main，触发 `release-v10.yml` → 等待并核对非 prerelease / 非 draft 的 v1.0.0、tag 目标当前发行提交，游戏源与 `dff19a6ecf516fa674e24fcb3481413efc25b849` 完全一致 与公开资产 SHA-256 → 保存发行回读记录并更新当前状态 → 交付原始同字节 Windows 包与两份新声音材料。
 
 不要重跑已通过的游戏合集、重生成配音、复用旧 Kokoro 包、把真人 pending 伪改为 passed，或再次要求发布许可。当前 docs 的更新不改变已验收运行资产。若发布途中中断，先读取 Release / tag / workflow 的实际状态，不覆盖既有发布。
 
 Windows CI 使用 dummy 音频。真人试听、两结局阅读计时、普通电脑 / 中文路径 / 100% 与 150% DPI、创作定案及内容冻结仍为 pending，由用户统一操作；ASR 与自动执行时间不能代替这些结论。
 
 首轮发布 37444936017 的声音授权、artifact 下载、原 ZIP / 预览全部通过；创建 Release 前因 gh 预期 HTTP 404 返回码残留导致 step 6 失败，创建步骤 skipped。workflow 修复提交 0e2db075 使用 exit 0，仅在所有验证及两个不存在检查完成后返回成功。没有更换候选或安装包，重新提交授权文件以触发修复后的工作流。失败证据见 evidence/v10-publication-first-failure.json。
+
+第二次发布 37445389130 的全部预检通过，创建历史 target Release 返回 HTTP 403；GITHUB_TOKEN 已有 contents write，但不能授权 workflows write。官方规则要求目标的 workflows 与默认分支一致。因此新增源码等同性检查，只允许文档与 release workflow 差异，tag 指向当前 main，原验收 DFF 与安装包保持。修复提交 7a3cd3a；下一次授权文件提交触发正常权限范围内的发布。不要回退或覆盖历史 tag，不需要新账号或凭据。

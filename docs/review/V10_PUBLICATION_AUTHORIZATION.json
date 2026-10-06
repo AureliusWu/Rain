@@ -19,6 +19,19 @@
   ],
   "human_acceptance_is_not_claimed": true,
   "publication_workflow_fix_commit": "0e2db0752dfff2daec25b12842b58be251978e96",
-  "previous_publication_attempt": 37444936017,
-  "retry_reason": "Expected absent-tag HTTP 404 probe exit code handled explicitly; same accepted ZIP and pending human record."
+  "previous_publication_attempt": 37445389130,
+  "retry_reason": "Historical target workflow permission restriction; use publication main with enforced source-equivalence check and unchanged accepted ZIP.",
+  "previous_publication_attempts": [
+    37444936017,
+    37445389130
+  ],
+  "publication_workflow_source_policy_commit": "7a3cd3a0c0ef92c4432386c669c3e2baaed333e3",
+  "tag_target_policy": "current_main_with_identical_accepted_game_source",
+  "tag_difference_allowlist": [
+    "docs/**",
+    "README.md",
+    "ROADMAP.md",
+    "CHANGELOG.md",
+    ".github/workflows/release-v10.yml"
+  ]
 }

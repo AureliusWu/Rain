@@ -23,3 +23,7 @@ Windows CI 使用 dummy 音频。真人试听、两结局阅读计时、普通�
 `release-v10.yml` 检查机器验收、语音和用户授权，从成功 CI 的原始 `windows-<commit>` artifact 取包，核对原始 SHA-256 / 大小 / CRC / 许可 / 预览后创建非预发行 v1.0.0，随后下载公开发行资产核对同一字节。任何现存同名 tag / Release 均拒绝覆盖；不会重新构建另一份包。
 
 目前处于正式发布执行前；成功回读后的公开 URL、发行资产与运行身份补记于 `evidence/v10-publication.json`。真人后续统一见 [HUMAN_HANDOFF](HUMAN_HANDOFF.md)，语音来源与自动校验限制见 [VOICE_UPGRADE_V10](VOICE_UPGRADE_V10.md)。
+
+## tag 与游戏源提交
+
+GitHub 自动令牌不能给相对默认分支包含工作流差异的历史提交创建 Release。本次 tag 改指向含验收记录的当前 main；workflow 先 fetch 原验收提交，再比较全仓路径，只允许 docs、README / ROADMAP / CHANGELOG 和 release-v10.yml 差异，并确认 main 未推进。任何游戏、资产、工具、测试、Prompt、版本或许可改变均阻止发布。机器与包证据仍绑定原验收提交 DFF，ZIP SHA-256 不变。403 及处理证据见 evidence/v10-publication-target-permission.json。

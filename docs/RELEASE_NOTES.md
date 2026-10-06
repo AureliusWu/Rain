@@ -16,3 +16,5 @@
 本次按用户“完成后发布正式版”的明确指令发布同一份验收 ZIP。Windows CI 使用 dummy 音频。真人试听、两结局阅读计时、普通电脑 / 中文路径 / 100% 与 150% DPI、创作定案及内容冻结仍为 pending，由用户统一操作；ASR 与自动执行时间不能代替这些结论。
 
 [完整验收与包身份](https://github.com/AureliusWu/Test/blob/main/docs/RELEASE_ACCEPTANCE_V10.md) · [统一真人操作](https://github.com/AureliusWu/Test/blob/main/docs/HUMAN_HANDOFF.md) · [语音方案](https://github.com/AureliusWu/Test/blob/main/docs/VOICE_UPGRADE_V10.md) · [来源与许可](https://github.com/AureliusWu/Test/blob/main/CREDITS.md)。
+
+发行 tag 基于包含验收记录的当前 main 提交。发布 CI 验证与上述游戏验收提交仅有文档 / 发布工作流差异，全部游戏与资产内容一致；安装包直接来自该成功验收，不重新构建。
