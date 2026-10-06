@@ -1,9 +1,6 @@
 name: Resume saved Qwen recording verification
 
 on:
-  push:
-    branches: [main]
-    paths: ['.github/workflows/voice_verify.yml']
   workflow_dispatch:
 
 concurrency:

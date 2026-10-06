@@ -89,3 +89,145 @@ jobs:
           name: windows-${{ github.sha }}
           if-no-files-found: error
           path: dist/
+      - name: Prepare bounded exact package and evidence transfers
+        run: python -m tools.build.transfer_evidence
+      - name: Upload exact transfer part 00
+        if: ${{ hashFiles('transfer/part00/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-00
+          path: transfer/part00/
+          if-no-files-found: error
+      - name: Upload exact transfer part 01
+        if: ${{ hashFiles('transfer/part01/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-01
+          path: transfer/part01/
+          if-no-files-found: error
+      - name: Upload exact transfer part 02
+        if: ${{ hashFiles('transfer/part02/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-02
+          path: transfer/part02/
+          if-no-files-found: error
+      - name: Upload exact transfer part 03
+        if: ${{ hashFiles('transfer/part03/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-03
+          path: transfer/part03/
+          if-no-files-found: error
+      - name: Upload exact transfer part 04
+        if: ${{ hashFiles('transfer/part04/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-04
+          path: transfer/part04/
+          if-no-files-found: error
+      - name: Upload exact transfer part 05
+        if: ${{ hashFiles('transfer/part05/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-05
+          path: transfer/part05/
+          if-no-files-found: error
+      - name: Upload exact transfer part 06
+        if: ${{ hashFiles('transfer/part06/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-06
+          path: transfer/part06/
+          if-no-files-found: error
+      - name: Upload exact transfer part 07
+        if: ${{ hashFiles('transfer/part07/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-07
+          path: transfer/part07/
+          if-no-files-found: error
+      - name: Upload exact transfer part 08
+        if: ${{ hashFiles('transfer/part08/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-08
+          path: transfer/part08/
+          if-no-files-found: error
+      - name: Upload exact transfer part 09
+        if: ${{ hashFiles('transfer/part09/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-09
+          path: transfer/part09/
+          if-no-files-found: error
+      - name: Upload exact transfer part 10
+        if: ${{ hashFiles('transfer/part10/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-10
+          path: transfer/part10/
+          if-no-files-found: error
+      - name: Upload exact transfer part 11
+        if: ${{ hashFiles('transfer/part11/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-11
+          path: transfer/part11/
+          if-no-files-found: error
+      - name: Upload exact transfer part 12
+        if: ${{ hashFiles('transfer/part12/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-12
+          path: transfer/part12/
+          if-no-files-found: error
+      - name: Upload exact transfer part 13
+        if: ${{ hashFiles('transfer/part13/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-13
+          path: transfer/part13/
+          if-no-files-found: error
+      - name: Upload exact transfer part 14
+        if: ${{ hashFiles('transfer/part14/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-14
+          path: transfer/part14/
+          if-no-files-found: error
+      - name: Upload exact transfer part 15
+        if: ${{ hashFiles('transfer/part15/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-15
+          path: transfer/part15/
+          if-no-files-found: error
+      - name: Upload exact transfer part 16
+        if: ${{ hashFiles('transfer/part16/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-16
+          path: transfer/part16/
+          if-no-files-found: error
+      - name: Upload exact transfer part 17
+        if: ${{ hashFiles('transfer/part17/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-17
+          path: transfer/part17/
+          if-no-files-found: error
+      - name: Upload exact transfer part 18
+        if: ${{ hashFiles('transfer/part18/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-18
+          path: transfer/part18/
+          if-no-files-found: error
+      - name: Upload exact transfer part 19
+        if: ${{ hashFiles('transfer/part19/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-19
+          path: transfer/part19/
+          if-no-files-found: error
