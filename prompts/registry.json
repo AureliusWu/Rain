@@ -489,6 +489,90 @@
       "sha256": "e583b4e1918842a1059682aee510fe1552d0a7ba0c8a4c69d011708b6d4f56f0"
     },
     {
+      "id": "script_v10_s04_boundary_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v10/s04_boundary_v1.md",
+      "sha256": "87ccb64d05d7179943997ab6cdd21699af854589f3bbb556cb0c290c56947360"
+    },
+    {
+      "id": "script_v10_s04_concrete_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v10/s04_concrete_v1.md",
+      "sha256": "2bc4a58027508cdb72fc082b84513f91ef979963ebca0bc7a06939f1a5bc0f55"
+    },
+    {
+      "id": "script_v10_s04_memory_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v10/s04_memory_v1.md",
+      "sha256": "e00c934d043456c3efa0d5a5d5f7e89881863dead665e108b1f05f32f9ec8b42"
+    },
+    {
+      "id": "script_v10_s04_open_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v10/s04_open_v1.md",
+      "sha256": "69c1b025a4b5b2df951c323953f82e4e7bb0c9a24bda3ea84768dcc682fa6d97"
+    },
+    {
+      "id": "script_v10_s04_repair_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v10/s04_repair_v1.md",
+      "sha256": "e2d637661ae96ea9d0da616daba55ad1c24790d18e055f8268e7921e7ce39bff"
+    },
+    {
+      "id": "script_v10_s04_reserved_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v10/s04_reserved_v1.md",
+      "sha256": "cb4dea708ad61bab50230d6f5b4dbf05a00a1f9ddd55eddd4fe2e51f8fe35e5e"
+    },
+    {
+      "id": "script_v10_s04_revisit_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v10/s04_revisit_v1.md",
+      "sha256": "86ac7490f49a0d2656f204a4eeee838d92a25e3550d0e633816a4ab14a49d299"
+    },
+    {
+      "id": "script_v10_s04_waiting_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v10/s04_waiting_v1.md",
+      "sha256": "0552d18d365d27e06e3b8afe34d681c4220ea3b190fe11d614f9ffc4fab8799a"
+    },
+    {
+      "id": "script_v10_s05_separate_path_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v10/s05_separate_path_v1.md",
+      "sha256": "6820928b4541fe24b27e88a8382567e69c985266ae98f0140a2afd5edf0c5c0c"
+    },
+    {
+      "id": "script_v10_s05_shared_path_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v10/s05_shared_path_v1.md",
+      "sha256": "5d0fe2b73567fdd91580ea99c9a1da1b88a22c49809306740dd8793126cda7c4"
+    },
+    {
+      "id": "script_v10_s07_true_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v10/s07_true_v1.md",
+      "sha256": "1511833e74155ddab8313ce31ae2ec036735a98ddb12217b5e2ba71fde4fac3c"
+    },
+    {
+      "id": "script_v10_s08_normal_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/v10/s08_normal_v1.md",
+      "sha256": "ca96a2945a7f9d280268dbe30d173f725db54a0e21a604a60b85e5f91d7866da"
+    },
+    {
       "id": "voice_heroine_v1",
       "version": 1,
       "kind": "voice",

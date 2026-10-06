@@ -43,6 +43,9 @@ jobs:
           if ($version -ne $env:RELEASE_EXPECTED_VERSION) {
             throw "Requested version $env:RELEASE_EXPECTED_VERSION does not match VERSION $version"
           }
+          if ([version]$version -ge [version]"1.0.0") {
+            throw "v1+ must use release-v10.yml to publish the exact human-reviewed artifact."
+          }
       - name: Install authoring dependencies
         run: python -m pip install -r requirements-dev.txt
       - name: Release preflight

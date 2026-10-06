@@ -1,0 +1,83 @@
+name: Publish exact approved v1 Windows package
+
+on:
+  workflow_dispatch:
+    inputs:
+      expected_version:
+        description: Human-approved VERSION value
+        required: true
+        default: '1.0.0'
+        type: string
+
+concurrency:
+  group: formal-release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: windows-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      actions: read
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PYTHONUTF8: '1'
+      EXPECTED_VERSION: ${{ inputs.expected_version }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Bind machine and human approval to exact candidate
+        id: accepted
+        shell: pwsh
+        run: |
+          if ((Get-Content VERSION -Raw).Trim() -ne $env:EXPECTED_VERSION) { throw 'VERSION mismatch' }
+          python -m tools.release_gate --version $env:EXPECTED_VERSION --github-output $env:GITHUB_OUTPUT
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Fetch approved successful CI artifact
+        shell: pwsh
+        env:
+          ACCEPTED_RUN: ${{ steps.accepted.outputs.run_id }}
+          ACCEPTED_ARTIFACT: ${{ steps.accepted.outputs.artifact_id }}
+          ACCEPTED_COMMIT: ${{ steps.accepted.outputs.candidate }}
+        run: |
+          $run = gh api "repos/$env:GITHUB_REPOSITORY/actions/runs/$env:ACCEPTED_RUN" | ConvertFrom-Json
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          if ($run.head_sha -ne $env:ACCEPTED_COMMIT -or $run.conclusion -ne 'success' -or $run.status -ne 'completed' -or $run.path -ne '.github/workflows/game.yml') { throw 'Accepted CI identity/status mismatch' }
+          $listing = gh api "repos/$env:GITHUB_REPOSITORY/actions/runs/$env:ACCEPTED_RUN/artifacts?per_page=100" | ConvertFrom-Json
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          $matches = @($listing.artifacts | Where-Object { $_.name -eq "windows-$env:ACCEPTED_COMMIT" })
+          if ($matches.Count -ne 1 -or $matches[0].id -ne $env:ACCEPTED_ARTIFACT -or $matches[0].expired) { throw 'Accepted artifact missing, replaced or expired; restore/revalidate explicitly' }
+          gh run download $env:ACCEPTED_RUN --repo $env:GITHUB_REPOSITORY --name "windows-$env:ACCEPTED_COMMIT" --dir accepted-package
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Verify reviewed ZIP and refuse existing tag or release
+        shell: pwsh
+        env:
+          PACKAGE_NAME: ${{ steps.accepted.outputs.package }}
+          PACKAGE_SHA: ${{ steps.accepted.outputs.sha256 }}
+        run: |
+          python -m tools.release_gate --version $env:EXPECTED_VERSION --zip "accepted-package/$env:PACKAGE_NAME" --preview "accepted-package/BeforeTheRainStops-$env:EXPECTED_VERSION-preview.png"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          $tag = "v$env:EXPECTED_VERSION"
+          foreach ($endpoint in @("releases/tags/$tag", "git/ref/tags/$tag")) {
+            $result = gh api "repos/$env:GITHUB_REPOSITORY/$endpoint" 2>&1
+            if ($LASTEXITCODE -eq 0) { throw "Existing $endpoint; refusing replacement" }
+            if (($result | Out-String) -notmatch 'HTTP 404') { throw "Could not verify absence of $endpoint" }
+          }
+          "$env:PACKAGE_SHA  $env:PACKAGE_NAME" | Set-Content accepted-package/SHA256SUMS.txt -Encoding utf8NoBOM
+      - name: Publish accepted bytes and read back download
+        shell: pwsh
+        env:
+          PACKAGE_NAME: ${{ steps.accepted.outputs.package }}
+          ACCEPTED_COMMIT: ${{ steps.accepted.outputs.candidate }}
+        run: |
+          $tag = "v$env:EXPECTED_VERSION"
+          gh release create $tag "accepted-package/$env:PACKAGE_NAME" "accepted-package/BeforeTheRainStops-$env:EXPECTED_VERSION-preview.png" accepted-package/SHA256SUMS.txt --repo $env:GITHUB_REPOSITORY --target $env:ACCEPTED_COMMIT --title "雨停之前 $tag" --notes-file docs/RELEASE_NOTES.md
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          gh release download $tag --repo $env:GITHUB_REPOSITORY --pattern $env:PACKAGE_NAME --dir release-readback
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python -m tools.release_gate --version $env:EXPECTED_VERSION --zip "release-readback/$env:PACKAGE_NAME"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

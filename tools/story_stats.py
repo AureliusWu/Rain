@@ -67,8 +67,8 @@ def measure(story):
 
 def render_markdown(report):
     lines = [
-        '# v0.7 路线字数报告', '',
-        f"剧情版本：`{report['version']}`（开发中）。剧情源 SHA-256：`{report['story_sha256']}`。", '',
+        f"# v{report['version']} 路线字数报告", '',
+        f"剧情版本：`{report['version']}`。剧情源 SHA-256：`{report['story_sha256']}`。", '',
         '按台词 ID 去重，正文包含标点，单位为 Unicode 字符；各路线仅计算所选选项的回应。菜单选项单列，章节标题、Prompt 和纯路由节点不计入正文。', '',
         f"全分支正文 **{report['all_branch_body_characters']}** 字符；{report['all_branch_body_lines']} 行；菜单 {report['all_menu_characters']} 字符。共 {report['narrative_scenes']} 个叙事场景、{report['router_nodes']} 个纯路由节点、{report['route_count']} 条路线。", '',
         f"单路线 **{report['shortest_route_characters']}–{report['longest_route_characters']}** 字符。True {report['endings'].get('true', 0)} 条，Normal {report['endings'].get('normal', 0)} 条。", '',
@@ -82,7 +82,7 @@ def render_markdown(report):
     for index, route in enumerate(report['routes'], 1):
         timing = route['estimated_reading_minutes']
         lines.append(f"| R{index:02d} | {' → '.join(route['choices'])} | {route['ending']} | {route['body_characters']} | {route['menu_characters']} | {route['narrative_scenes']} | {timing['at_350_chars_per_minute']}–{timing['at_250_chars_per_minute']} |")
-    lines += ['', '复现：`python -m tools.story_stats --report reports/story-stats.json --markdown docs/STORY_STATS_V07.md`。完整路径及三个终态保存在 JSON 报告中。', '']
+    lines += ['', '复现：`python -m tools.story_stats --report reports/story-stats.json --markdown reports/story-stats.md`。完整路径及三个终态保存在 JSON 报告中。', '']
     return '\n'.join(lines)
 
 

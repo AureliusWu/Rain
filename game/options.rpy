@@ -1,12 +1,12 @@
 define config.name = _("雨停之前")
-define config.version = "0.9.0"
+define config.version = "1.0.0"
 define config.window_title = "雨停之前 · AI Galgame"
 define gui.show_name = True
-define gui.about = _("雨夜的旧车站，两位久未联系的旧友，和一封没有寄出的信。\n\n创作与工程：AureliusWu / AI 辅助\n图像：OpenAI 图像生成\n关键语音：Kokoro-82M v1.1-zh / zf_001\n音乐与音效：原创程序合成\n字体：Source Han Sans / SIL OFL 1.1\n\n当前版本为原生 1080p 体验候选。时长、听感与最终创作仍待审阅；完整来源见随游戏附带的 CREDITS.md。")
+define gui.about = _("雨夜的旧车站，两位久未联系的旧友，和一封没有寄出的信。\n\n创作与工程：AureliusWu / AI 辅助\n图像：OpenAI 图像生成\n关键语音：Kokoro-82M v1.1-zh / zf_001\n音乐与音效：原创程序合成\n字体：Source Han Sans / SIL OFL 1.1\n\nv1.0 完整短篇。版本验收记录见发行说明；完整来源见随游戏附带的 CREDITS.md。")
 define build.name = "BeforeTheRainStops"
 define build.version = config.version
 define build.destination = "dist"
-define config.save_directory = "AureliusWu-BeforeTheRainStops-candidate-v09"
+define config.save_directory = "AureliusWu-BeforeTheRainStops-v1"
 define config.has_sound = True
 define config.has_music = True
 define config.has_voice = True
