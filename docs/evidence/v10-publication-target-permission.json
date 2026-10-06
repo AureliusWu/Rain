@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "publication_stopped_by_target_workflow_permission",
+  "workflow_run_id": 37445389130,
+  "job_id": 112208826970,
+  "workflow_commit": "38f1cbdeaccc52b2227e074652ba0adc4858e404",
+  "candidate_commit": "dff19a6ecf516fa674e24fcb3481413efc25b849",
+  "package_sha256": "0d09a78a482e2ff0d34e14f51d49c89d5cc0d36b91506d44c6a3bcdcc678d3f1",
+  "all_prepublication_checks": "passed",
+  "token_permissions": {
+    "actions": "read",
+    "contents": "write",
+    "metadata": "read"
+  },
+  "http_status": 403,
+  "message": "Resource not accessible by integration",
+  "operation": "gh release create --target accepted historical commit",
+  "release_created": false,
+  "diagnosis": "Inference supported by the recorded contents-write token and GitHub REST documentation: historical target workflow files differ from default main, requiring workflows-write permission unavailable to GITHUB_TOKEN.",
+  "official_reference": "https://docs.github.com/en/rest/releases/releases?apiVersion=2026-03-10#create-a-release",
+  "resolution": "Tag the current publication main commit after verifying that every change since accepted game commit is documentation or the release workflow only. Keep original accepted artifact and exact package SHA-256. No additional credentials or permissions.",
+  "human_acceptance_status": "pending"
+}
