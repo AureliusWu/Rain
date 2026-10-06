@@ -60,10 +60,8 @@ jobs:
           New-Item -ItemType Directory -Force reports | Out-Null
           python -m tools.build.display
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          foreach ($case in @('current_voice_replay_and_restore', 'history_voice_replay', 'auto_waits_for_replayed_voice')) {
-            & .\.runtime\renpy-8.5.3-sdk\lib\py3-windows-x86_64\python.exe .\.runtime\renpy-8.5.3-sdk\renpy.py . test $case --report-detailed --overwrite-screenshots --savedir "$env:RUNNER_TEMP/voice-smoke-$case" 2>&1 | Tee-Object "reports/source-voice-smoke-$case.txt"
-            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          }
+          python -m tools.build.verify_voice_smoke --sdk .runtime/renpy-8.5.3-sdk --iterations 2 --timeout 180
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Run actual Windows interaction tests
         run: |
           New-Item -ItemType Directory -Force reports | Out-Null

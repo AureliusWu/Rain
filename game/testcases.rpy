@@ -173,13 +173,24 @@ testcase history_voice_replay:
     pause 0.3
     pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
     screenshot "scaled-history-voice-replay"
-    run Preference("all mute", "toggle")
+    click id "menu_preferences"
+    pause until screen "preferences"
+    click id "mute_all"
     assert eval preferences.get_mute("voice")
+    click "历史"
+    pause until screen "history"
     click id ("history_voice_%d" % test_history_voice_index)
     assert eval preferences.get_mute("voice")
-    run Preference("all mute", "toggle")
+    pause until eval renpy.music.get_playing(channel="voice") is None
+    assert eval renpy.music.get_playing(channel="voice") is None
+    click id "menu_preferences"
+    pause until screen "preferences"
+    click id "mute_all"
     assert eval not preferences.get_mute("voice")
+    click "历史"
+    pause until screen "history"
     click id ("history_voice_%d" % test_history_voice_index)
+    pause until eval renpy.music.get_playing(channel="voice") == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
     assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
     click id "game_return"
     assert not screen "history"

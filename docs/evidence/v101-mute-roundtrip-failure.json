@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "status": "failed_and_corrected_pending_rerun",
+  "candidate_commit": "2d7ed6a0db743cbe797799327c80b6cbb6e532e7",
+  "run_id": 37489810515,
+  "job_id": 112359252743,
+  "standalone_quick_checks": "all_three_passed",
+  "full_source": {
+    "cases": 34,
+    "passed": 33,
+    "failed": 1,
+    "executed_assertions": 395,
+    "passed_assertions": 394,
+    "failed_assertions": 1,
+    "seconds": 1108.187,
+    "failed_case": "history_voice_replay",
+    "failed_statement": "immediate get_playing assertion after synthetic mute/unmute actions in history"
+  },
+  "observation": "The history case passed alone but failed within the full prefix. The voice mixer was unmuted but the immediate playback assertion failed; the log does not establish an audible defect.",
+  "correction": "Exercise actual preferences/menu/mute controls for the roundtrip; check muted playback settles to None, then use a bounded wait for the expected file after unmuting and replaying. Keep all old assertions and add one muted-audio assertion. Run the actual four-case prefix twice in one process per pass before the complete regression.",
+  "new_expected_full_assertions": 404,
+  "artifact": {
+    "id": 11425508847,
+    "bytes": 154371230,
+    "sha256": "4dcc0d2a72d960d79dd667eba1ff4431f31823058efe8866dab931cf5cc7de2e"
+  },
+  "publication_blocked": true,
+  "standalone_and_upgrade_not_reached": true
+}
