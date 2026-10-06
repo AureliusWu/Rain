@@ -1,37 +1,25 @@
-# v1.0 验收与发布
+# v1.0 配音升级验收与正式发布
 
-版本 1.0.0 已准备为验收候选。40 处正文精修已应用，560 个台词 ID、17 句录音文字、四次选择与 16 路线保留。全分支 15,065 字符、单路线 11,303–11,666。
+新版配音及工程验收已完成，按用户明确指令进入正式发布。本页绑定本次 Qwen 配音的游戏包；旧 Kokoro 候选机器、画面及人验表另保留在 `evidence/v10-kokoro-acceptance.json`、`evidence/v10-kokoro-visual-review.json` 与 `review/V10_KOKORO_HUMAN_ACCEPTANCE.json`。
 
-## 机器验收
+## 当前机器验收
 
-候选 `7593a348bf28e196c2ee3a55fd1e14c837289ef3` / [Windows CI 37411258713](https://github.com/AureliusWu/Test/actions/runs/37411258713)；原始游戏 ZIP **56,354,657 字节**，SHA-256 `4ecba6cea822947b08bc8a877af2d5eed4ccbb3ffdd367c92032c236f5dac048`。
+提交 `dff19a6ecf516fa674e24fcb3481413efc25b849` / [Windows CI 37440590549](https://github.com/AureliusWu/Test/actions/runs/37440590549)；原始游戏 ZIP **56,359,988 字节**，SHA-256 `0d09a78a482e2ff0d34e14f51d49c89d5cc0d36b91506d44c6a3bcdcc678d3f1`。
 
-91 项 Windows Python、作者侧全部校验与 Ren’Py 8.5.3 lint 通过。源码和独立 EXE 各 **31/31 用例、359/359 断言**（1088.999 / 741.506 秒）；关闭首进程后重新启动 EXE，真实读档另 **1/1 用例、10/10 断言**（3.719 秒）。全部 failed / xfailed / xpassed / skipped / not run 为 0，三个进程退出 0、未超时。
+113 项 Windows Python、全部作者校验与 Ren’Py 8.5.3 lint 通过。源码和独立 EXE 各 **31/31 用例、359/359 断言**（1089.606 / 739.611 秒）；退出首进程后重新启动 EXE，真实读档另 **1/1 用例、10/10 断言**（3.745 秒）。failed / xfailed / xpassed / skipped / not run 全为 0，三个进程退出 0、未超时。
 
-131 张 PNG 完整解码；35 张实际 EXE 关键画面按当前原图或相同 SHA-256 的既有直接审阅记录复核，未发现遗留机器问题。85 个包内资产 SHA-256、原始 ZIP CRC、版本、玩家说明及许可文件已核验；未注入测试脚本。仅保留引擎启动必需的 build_info / bytecode 缓存。
+131 张原生 PNG 完整解码并核对尺寸 / SHA-256。35 张实际 EXE 关键画面由当前原图直接查看或匹配既有直接审阅图的相同 SHA-256 复核，方法逐图记录；未发现遗留机器问题。85 个包内资产、ZIP CRC、版本、玩家说明、Qwen 等许可及文件排除均通过；原始 ZIP 未注入测试脚本，未含推理模型。
 
-Windows runner 使用 dummy 音频；真人试听、两结局阅读计时、普通电脑 / 中文路径 / 100% 与 150% DPI、创作定案及内容冻结继续待用户统一操作。正式发布 workflow 尚未执行，没有正式 v1.0 tag / Release。
+17 句关键配音已替换为免费开源 Qwen3-TTS 1.7B CustomVoice / Serena。逐句保存语气指令，双遍响度处理目标 -20 LUFS / 真峰值 -2 dBTP；24 kHz 单声道、合计 57.360 秒。全部信号与独立 large-v3 ASR 校验通过：16 句归一化文字一致，1 句“哪 / 哪儿”儿化差异。旧 Kokoro 源录音与 OGG 历史保留。 模型和推理代码为 Apache-2.0，固定模型 revision 与依赖、每句种子、请求、来源和哈希均有记录；模型仅在作者侧运行。
 
-发布工具补检见 [RELEASE_ENGINEERING_V10](RELEASE_ENGINEERING_V10.md)：本轮 Linux 97 项测试及全部作者校验 / lint 通过；原 Windows 输出已重新解析并补齐 xfailed / xpassed，原 ZIP / 预览校验通过。正式检查继续按同一候选和真实 pending 人验表阻止发布。
+Windows CI 使用 dummy 音频。真人试听、两结局阅读计时、普通电脑 / 中文路径 / 100% 与 150% DPI、创作定案及内容冻结仍为 pending，由用户统一操作；ASR 与自动执行时间不能代替这些结论。
 
-## 统一人工验收
+## 发布依据与同字节验证
 
-[HUMAN_HANDOFF](HUMAN_HANDOFF.md) 包含一次完成的操作范围。`docs/review/V10_HUMAN_ACCEPTANCE.json` 当前五组均 pending，没有自动填写通过、真人计时、试听或冻结。
+用户最新指令为“优化角色语音……搞点免费的语音引擎……完成后发布正式版”。此明确授权更新先前等待真人全部完成才发布的安排。
 
-结果需绑定实际试玩候选提交及 ZIP SHA-256。填写 reviewer、reviewed_at、五组 status / evidence，Normal 和 True 完整实测分钟，以及 unresolved_issues。正式发布要求所有组 passed、整体 approved、无遗留问题。若时长偏离 30–60 分钟，先根据阅读结果调整，或由用户明确修改范围；不使用估算代替测量。
+`review/V10_PUBLICATION_AUTHORIZATION.json` 绑定上述指令、语音证据 SHA-256、当前提交与包哈希，并披露五组 pending。`review/V10_HUMAN_ACCEPTANCE.json` 仅更新包身份，真人结果保持真实 pending、证据为空、实测分钟为 null。
 
-## 后续发布操作
+`release-v10.yml` 检查机器验收、语音和用户授权，从成功 CI 的原始 `windows-<commit>` artifact 取包，核对原始 SHA-256 / 大小 / CRC / 许可 / 预览后创建非预发行 v1.0.0，随后下载公开发行资产核对同一字节。任何现存同名 tag / Release 均拒绝覆盖；不会重新构建另一份包。
 
-1. 用户统一完成普通 Windows、中文路径、DPI、试听、两结局计时和创作定案；工程侧整理真实结果，填写绑定记录和冻结日期，并按结果同步 README / RELEASE_NOTES 的验收状态。
-2. 执行 `python -m tools.release_gate --version 1.0.0`。记录完整后通过，当前会阻止发布。
-3. 从 main 手动运行 `Publish exact approved v1 Windows package`，输入 1.0.0。
-4. workflow 验证成功 CI 的候选 SHA、artifact ID 与版本，下载既有 ZIP，再校验文件大小、SHA-256、CRC、元数据、许可及开发文件排除。
-5. 没有现存同名 tag / Release 时才创建正式 v1.0.0；发布的 ZIP 不重新构建，并重新下载核验同字节。
-
-如果 artifact 过期，先恢复已交付原始 ZIP 或重新建立完整候选验收，不绕过哈希或人工绑定。旧 release.yml 仅处理 v1 以前的候选。
-
-## 下载入口与范围
-
-[Windows 候选 artifact](https://github.com/AureliusWu/Test/actions/runs/37411258713/artifacts/11390201913)，需 GitHub 登录，保留至 2027-01-04T03:55:25Z。同字节游戏 ZIP、统一审阅 ZIP、校验和及实际 EXE 预览另已交付。公开 Release 仍为 v0.6.0。
-
-审阅材料含 66 张原始 EXE PNG、24 OGG / 24 解码 WAV、两结局完整原文与其余 100 行分支文本，覆盖全部 560 台词 ID。统一回报模板保留 pending，不预填通过。
+目前处于正式发布执行前；成功回读后的公开 URL、发行资产与运行身份补记于 `evidence/v10-publication.json`。真人后续统一见 [HUMAN_HANDOFF](HUMAN_HANDOFF.md)，语音来源与自动校验限制见 [VOICE_UPGRADE_V10](VOICE_UPGRADE_V10.md)。
