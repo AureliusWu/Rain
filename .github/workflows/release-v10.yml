@@ -72,6 +72,8 @@ jobs:
             if (($result | Out-String) -notmatch 'HTTP 404') { throw "Could not verify absence of $endpoint" }
           }
           "$env:PACKAGE_SHA  $env:PACKAGE_NAME" | Set-Content accepted-package/SHA256SUMS.txt -Encoding utf8NoBOM
+          # The expected gh 404 probes leave LASTEXITCODE=1; all checks above passed.
+          exit 0
       - name: Publish accepted bytes and read back download
         shell: pwsh
         env:

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "publication_stopped_before_release",
+  "workflow_run_id": 37444936017,
+  "job_id": 112207371328,
+  "workflow_commit": "5146a5026ed7ae9b73170a6174759a7953d95823",
+  "candidate_commit": "dff19a6ecf516fa674e24fcb3481413efc25b849",
+  "package_sha256": "0d09a78a482e2ff0d34e14f51d49c89d5cc0d36b91506d44c6a3bcdcc678d3f1",
+  "machine_voice_authorization_gate": "passed",
+  "accepted_ci_artifact_download": "passed",
+  "zip_and_preview_gate": "passed",
+  "failed_step": "Verify reviewed ZIP and refuse existing tag or release",
+  "exit_code": 1,
+  "release_creation_step": "skipped",
+  "diagnosis": "Both expected absent-resource probes leave gh LASTEXITCODE=1. GitHub appends an exit using LASTEXITCODE to pwsh scripts; successful Set-Content does not replace that native exit code.",
+  "fix": "Exit 0 only after package/preview verification, both confirmed HTTP 404 absence checks, and checksum write. All existing-tag, API-error and hash failures still abort before that point.",
+  "official_runner_shell_reference": "https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax",
+  "ci_url": "https://github.com/AureliusWu/Test/actions/runs/37444936017",
+  "human_acceptance_status": "pending"
+}
