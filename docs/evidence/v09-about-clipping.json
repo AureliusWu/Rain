@@ -1,0 +1,16 @@
+{
+  "candidate_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+  "run_id": 37307573272,
+  "job_id": 111754866407,
+  "screenshot": "reports/package/screenshots/native-about.png",
+  "screenshot_sha256": "b4af05e0c6065b4bbb7d615bc19ec74e9e0766958b3556d4d24a6d734cc4c286",
+  "pixels": [
+    1920,
+    1080
+  ],
+  "severity": "P2",
+  "finding": "about description and translated RenPy license extend beyond right visible edge",
+  "source": "direct inspection of actual standalone EXE PNG",
+  "fix": "bound about vbox and about text to 1380 logical pixels",
+  "revalidation": "pending current repaired candidate; do not inherit old package visual approval"
+}

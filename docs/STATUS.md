@@ -1,5 +1,7 @@
 # 当前状态
 
+2026-10-06 接续：637b9d5 / Windows 37307573272 已 success，83 Python，源码与独立 EXE 各 31/359，新进程读档 1/10；两个 artifact 大小及 digest 已核验。实际 EXE 关于页发现长说明和引擎许可在右侧裁切（P2），身份见 evidence/v09-about-clipping.json。已约束 about vbox / text 到 1380 像素内容宽度；修订包的完整 Windows 重验和画面审阅待完成，不沿用旧包视觉结论。
+
 读取取消后日志已定位二轮 37300201619：并非整个集合仍正常慢跑，而是在 21.711 秒报 FAILED；31 用例中 1 失败、30 not run，10 已执行断言均通过，560 句字体溢出列表为空。空存档缩略图误用了 gui.thumbnail_width / height（实际定义于 config），引发 AttributeError；后续 before / teardown 又触发 float > NoneType，使引擎未能退出。已更正为 config.thumbnail_width / height，保留原生蓝色空卡，并保留有界源码进程防止类似错误无限等待。源码 / EXE 各 2400 秒，新进程读档 120 秒、总作业 90 分钟；31/359、65 图与跨进程 1/10、1 图的完整门槛不变。失败 artifact 11344121426 的身份见 evidence/v09-source-overrun.json。完整 Windows 重验仍待完成。
 
 ## v0.9 当前执行点 — 2026-10-05
