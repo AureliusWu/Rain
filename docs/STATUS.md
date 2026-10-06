@@ -1,3 +1,13 @@
+# v1.0.1 配音重听开发候选 — 2026-10-06
+
+本批继续打磨已完成的免费配音：当前有录音的台词显示“重听语音”，历史中仅已读、有录音的条目显示“重播语音”。沿用正文、路线、语音文件和 v1 存档目录。旧正式版的真实语音行存档和后半段存档将由新 EXE 读取并检查状态与新重播入口。
+
+本地 113 Python、全部作者校验及 Ren'Py 8.5.3 lint 通过；Linux 环境无显示服务，本批没有通过 Linux 原生 UI 测试。Windows 源码 / EXE / 新进程 / 真实 v1.0.0 升级测试待执行，不能沿用下方 v1.0.0 的结果作为新功能验收。
+
+公开正式版仍为下方 v1.0.0；本批候选不覆盖既有 tag 或 ZIP。真人后续仍由用户统一操作。
+
+---
+
 # v1.0.0 正式发布 — 2026-10-06
 
 [正式 Release](https://github.com/AureliusWu/Test/releases/tag/v1.0.0) · [Windows ZIP](https://github.com/AureliusWu/Test/releases/download/v1.0.0/BeforeTheRainStops-1.0.0-win.zip) · [发行回读记录](evidence/v10-publication.json)

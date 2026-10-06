@@ -108,6 +108,15 @@ screen say(who, what):
 
         text what id "what"
 
+        if _get_voice_info().filename:
+            textbutton "重听语音":
+                id "voice_replay"
+                style "voice_replay_button"
+                xpos gui.dialogue_xpos + gui.dialogue_width
+                xanchor 1.0
+                ypos 8
+                action VoiceReplay()
+
 
     ## If there's a side image, display it above the text. Do not display on the
     ## phone variant - there's no room.
@@ -155,6 +164,16 @@ style say_dialogue:
     ypos gui.dialogue_ypos
 
     adjust_spacing False
+
+style voice_replay_button is button:
+    padding (18, 8)
+    background "#102b3bd9"
+    hover_background "#234454ed"
+
+style voice_replay_button_text is button_text:
+    size 27
+    color "#a9e1e9"
+    hover_color "#ffffff"
 
 
 ## Input screen ################################################################
@@ -898,6 +917,8 @@ screen history():
 
     tag menu
 
+    on "hide" action Stop("voice")
+
     ## Avoid predicting this screen, as it can be very large.
     predict False
 
@@ -905,7 +926,7 @@ screen history():
 
         style_prefix "history"
 
-        for h in _history_list:
+        for history_index, h in enumerate(_history_list):
 
             window:
 
@@ -923,6 +944,15 @@ screen history():
                         ## set.
                         if "color" in h.who_args:
                             text_color h.who_args["color"]
+
+                if h.voice and h.voice.filename:
+                    textbutton "重播语音":
+                        id ("history_voice_%d" % history_index)
+                        style "voice_replay_button"
+                        xpos gui.history_name_xpos
+                        xanchor gui.history_name_xalign
+                        ypos 65
+                        action PlayCharacterVoice(h.voice.tag, h.voice.filename, selected=True)
 
                 $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
                 text what:

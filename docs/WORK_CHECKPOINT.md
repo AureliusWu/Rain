@@ -1,4 +1,14 @@
-# 当前断点：本次要求已完成，v1.0.0 正式版已发布
+# 当前断点：v1.0.1 配音重听候选，待本批 Windows 验证
+
+用户继续开发后，本批增加当前台词和历史的语音重播，使用引擎原生接口。沿用现有正文、17 句 Qwen 录音、台词 ID 和 v1 存档目录；只提升补丁版本。历史退出停止重播，下一句无语音时隐藏当前重听入口。
+
+本地 113 Python、全部作者校验与 Ren'Py 8.5.3 lint 通过。Windows 新功能、全套路线 / 存读档、源码 / EXE / 新进程，以及旧正式 v1.0.0 的真实存档升级检查尚待当前提交执行；下一步完成当前 Windows 结果和新截图审阅，不复用历史结果证明新功能。
+
+已完成的 v1.0.0 免费配音升级和正式发行保持，下方为已发布版本身份；新候选不能覆盖 v1.0.0 或重跑已完成的语音生成。真人试听、计时、普通电脑 / DPI、创作定案继续由用户统一操作。
+
+---
+
+# v1.0.0 正式版已发布
 
 [正式 Release](https://github.com/AureliusWu/Test/releases/tag/v1.0.0) · [Windows 下载](https://github.com/AureliusWu/Test/releases/download/v1.0.0/BeforeTheRainStops-1.0.0-win.zip)
 

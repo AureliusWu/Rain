@@ -92,6 +92,129 @@ testcase native_1080_and_scaled_window:
     pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
     screenshot "native-choice"
 
+testcase current_voice_replay_and_restore:
+    advance until "你还是和以前一样，出门不看天气。"
+    assert id "voice_replay"
+    pause until eval renpy.music.get_playing(channel="voice") is None
+    $ test_replay_state = (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what)
+    click id "voice_replay"
+    assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
+    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == test_replay_state
+    pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
+    screenshot "native-voice-replay"
+    run Preference("display", "window")
+    $ renpy.set_physical_size((1280, 720))
+    pause until eval renpy.get_physical_size() == (1280, 720)
+    assert id "voice_replay"
+    click id "voice_replay"
+    assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
+    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == test_replay_state
+    pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
+    screenshot "scaled-voice-replay"
+    $ renpy.unlink_save("1-4")
+    click id "save_open"
+    pause until screen "save"
+    click id "slot_4"
+    assert eval renpy.can_load("1-4")
+    click id "game_return"
+    advance
+    assert "有人从长椅旁站起来。蓝灰色的开衫，右边那枚银色发夹，还有说完话后轻轻抬起的眉。"
+    assert not id "voice_replay"
+    click id "load_open"
+    pause until screen "load"
+    click id "slot_4"
+    if screen "confirm":
+        click id "confirm_yes"
+    pause until "你还是和以前一样，出门不看天气。"
+    assert id "voice_replay"
+    click id "voice_replay"
+    assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
+    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == test_replay_state
+    pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
+    screenshot "voice-replay-after-load"
+    advance
+    assert not id "voice_replay"
+    click id "rollback_run"
+    pause until "你还是和以前一样，出门不看天气。"
+    assert id "voice_replay"
+    click id "voice_replay"
+    assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
+    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == test_replay_state
+
+testcase history_voice_replay:
+    advance until "你还是和以前一样，出门不看天气。"
+    advance
+    assert "有人从长椅旁站起来。蓝灰色的开衫，右边那枚银色发夹，还有说完话后轻轻抬起的眉。"
+    assert not id "voice_replay"
+    $ test_history_voice_index = next(i for i, h in enumerate(_history_list) if h.voice and h.voice.filename == 'audio/voice/heroine_s01_arrival_l005_v1.ogg')
+    $ test_silent_history_index = len(_history_list) - 1
+    $ test_replay_state = (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what)
+    click id "history_open"
+    assert screen "history"
+    assert eval [h.voice.filename for h in _history_list if h.voice and h.voice.filename] == ['audio/voice/heroine_s01_arrival_l005_v1.ogg']
+    assert eval renpy.get_widget("history", "history_voice_%d" % test_silent_history_index) is None
+    click id ("history_voice_%d" % test_history_voice_index)
+    assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
+    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == test_replay_state
+    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/rain_theme.ogg'
+    assert eval renpy.music.get_playing(channel='ambient') == 'audio/sfx/rain_ambience.ogg'
+    pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
+    screenshot "native-history-voice-replay"
+    run Preference("display", "window")
+    $ renpy.set_physical_size((1280, 720))
+    pause until eval renpy.get_physical_size() == (1280, 720)
+    click id ("history_voice_%d" % test_history_voice_index)
+    assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
+    pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
+    screenshot "scaled-history-voice-replay"
+    run Preference("all mute", "toggle")
+    assert eval preferences.get_mute("voice")
+    click id ("history_voice_%d" % test_history_voice_index)
+    assert eval preferences.get_mute("voice")
+    run Preference("all mute", "toggle")
+    assert eval not preferences.get_mute("voice")
+    click id ("history_voice_%d" % test_history_voice_index)
+    assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
+    click id "game_return"
+    assert not screen "history"
+    pause until eval renpy.music.get_playing(channel="voice") is None
+    assert eval renpy.music.get_playing(channel="voice") is None
+    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == test_replay_state
+    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/rain_theme.ogg'
+    assert eval renpy.music.get_playing(channel='ambient') == 'audio/sfx/rain_ambience.ogg'
+    click id "history_open"
+    click id "preferences_open"
+    assert screen "preferences"
+    click id "voice_test"
+    assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
+    click id "game_return"
+    assert not id "voice_replay"
+
+testcase auto_waits_for_replayed_voice:
+    $ preferences.wait_voice = True
+    $ preferences.afm_time = 0.1
+    advance until "你还是和以前一样，出门不看天气。"
+    $ test_history_length = len(_history_list)
+    click id "auto_run"
+    pause 0.5
+    click id "voice_replay"
+    $ test_replay_started = __import__("time").monotonic()
+    assert eval preferences.afm_enable
+    assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
+    pause 0.5
+    assert eval len(_history_list) == test_history_length
+    assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
+    pause until eval len(_history_list) > test_history_length
+    click id "auto_run"
+    assert eval not preferences.afm_enable
+    assert eval __import__("time").monotonic() - test_replay_started >= 2.890
+    $ preferences.afm_time = 15.0
+
 testcase route_01:
     pause until "序章 ： 雨夜"
     assert "序章 ： 雨夜"

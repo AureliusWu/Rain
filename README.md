@@ -24,6 +24,8 @@ Windows 113 项 Python、全部作者校验与 Ren’Py 8.5.3 lint 通过；源�
 
 ## 开发与验证
 
+`main` 正在验证 v1.0.1 配音重听小版本，公开正式版仍为上方 v1.0.0。新增当前台词和已读历史的重播，并检查已发布 v1.0.0 EXE 的真实存档升级；进度见 [当前断点](docs/WORK_CHECKPOINT.md)。
+
 Python 3.12、Pillow、SoundFile / NumPy 只用于开发。模型与推理依赖不进入玩家包。
 
 ```bash
@@ -41,7 +43,7 @@ $sdk = ".runtime/renpy-8.5.3-sdk"
 python -m tools.build.display
 python -m tools.build.verify_package --source-sdk $sdk --timeout 2400
 python -m tools.build.package --sdk $sdk
-python -m tools.build.verify_package --zip dist/BeforeTheRainStops-1.0.0-win.zip --timeout 2400
+python -m tools.build.verify_package --zip dist/BeforeTheRainStops-1.0.1-win.zip --timeout 2400
 ```
 
 ## 数据与来源

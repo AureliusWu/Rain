@@ -1,6 +1,7 @@
 """Reject misbound speech requests and unverifiable recording adoption."""
 import copy
 import json
+import shutil
 import tempfile
 import unittest
 import numpy as np
@@ -17,6 +18,9 @@ from tools.audio_process.qwen_voice import MODEL_ID, MODEL_NAME, REVISION, PROCE
 class QwenVoiceTests(unittest.TestCase):
     def setUp(self):
         self.plan = json.loads((ROOT/'prompts/voice/qwen_heroine_v1.json').read_text(encoding='utf-8'))
+        # Exercise a new incoming request against this checkout. The production
+        # request remains the immutable v1.0.0 generation receipt.
+        self.plan['source_story_sha256'] = sha256((ROOT/'game/data/story.json').read_bytes())
 
     def test_request_matches_all_story_lines(self):
         validate_plan(self.plan)
@@ -75,7 +79,7 @@ class QwenVoiceTests(unittest.TestCase):
             with self.assertRaises(ValueError): prepare(bundle)
         self.assertEqual((ROOT/'game/data/voice_manifest.json').read_bytes(),original)
 
-    def verified_fixture_bundle(self,directory):
+    def verified_fixture_bundle(self,directory,request_root):
         # Synthetic sine fixture checks adoption validation only; never used as game speech.
         bundle=Path(directory)
         samples=.12*np.sin(2*np.pi*440*np.arange(24000)/24000)
@@ -92,7 +96,7 @@ class QwenVoiceTests(unittest.TestCase):
                 'audio':audio_metadata(bundle/files['ogg']['path']),
                 'asr':{'passed':True,'polarity_counts_match':True,'critical_terms_match':True,'cer':0.0}})
         report={'status':'signals_and_asr_passed','unresolved_machine_issues':[],'human_listening':False,
-                'request_sha256':sha256((ROOT/'prompts/voice/qwen_heroine_v1.json').read_bytes()),
+                'request_sha256':sha256((request_root/'prompts/voice/qwen_heroine_v1.json').read_bytes()),
                 'source_story_sha256':self.plan['source_story_sha256'],
                 'source_voice_manifest_sha256':self.plan['source_voice_manifest_sha256'],
                 'provider':{'model_id':MODEL_ID,'revision':REVISION,'wrapper':'qwen-tts-0.1.1',
@@ -103,24 +107,27 @@ class QwenVoiceTests(unittest.TestCase):
         return bundle,report
 
     def test_bundle_hash_and_escape_fail_without_writing_any_game_file(self):
-        # Applicable before adoption. After integration the original manifest intentionally differs.
-        if sha256((ROOT/'game/data/voice_manifest.json').read_bytes()) != self.plan['source_voice_manifest_sha256']:
-            root=tempfile.TemporaryDirectory();self.addCleanup(root.cleanup)
-            fixture=Path(root.name)
-            import shutil
-            for relative in ('game/data/story.json','prompts','game/data/voice_manifest.json','game/data/asset_manifest.json'):
-                target=fixture/relative;target.parent.mkdir(parents=True,exist_ok=True)
-                if (ROOT/relative).is_dir(): shutil.copytree(ROOT/relative,target)
-                else: shutil.copy2(ROOT/relative,target)
-            archived=json.loads((ROOT/'docs/review/VOICE_KOKORO_ARCHIVE.json').read_text(encoding='utf-8'))
-            original=json.dumps(archived['voice_manifest'],ensure_ascii=False,indent=2)+'\n'
-            (fixture/'game/data/voice_manifest.json').write_bytes(original.encode('utf-8'))
-            self.assertEqual(sha256((fixture/'game/data/voice_manifest.json').read_bytes()),
-                             self.plan['source_voice_manifest_sha256'])
-            test_root=fixture
-        else: test_root=ROOT
+        root=tempfile.TemporaryDirectory();self.addCleanup(root.cleanup)
+        test_root=Path(root.name)
+        for relative in ('game/data/story.json','prompts','game/data/voice_manifest.json','game/data/asset_manifest.json'):
+            target=test_root/relative;target.parent.mkdir(parents=True,exist_ok=True)
+            if (ROOT/relative).is_dir(): shutil.copytree(ROOT/relative,target)
+            else: shutil.copy2(ROOT/relative,target)
+        archived=json.loads((ROOT/'docs/review/VOICE_KOKORO_ARCHIVE.json').read_text(encoding='utf-8'))
+        original=json.dumps(archived['voice_manifest'],ensure_ascii=False,indent=2)+'\n'
+        (test_root/'game/data/voice_manifest.json').write_bytes(original.encode('utf-8'))
+        self.assertEqual(sha256((test_root/'game/data/voice_manifest.json').read_bytes()),
+                         self.plan['source_voice_manifest_sha256'])
+        (test_root/'prompts/voice/qwen_heroine_v1.json').write_bytes(
+            (json.dumps(self.plan,ensure_ascii=False,indent=2)+'\n').encode('utf-8'))
+        registry_file = test_root/'prompts/registry.json'
+        registry = json.loads(registry_file.read_text(encoding='utf-8'))
+        for prompt in registry['prompts']:
+            if prompt['file'] == 'prompts/voice/qwen_heroine_v1.json':
+                prompt['sha256'] = sha256((test_root/prompt['file']).read_bytes())
+        registry_file.write_text(json.dumps(registry,ensure_ascii=False),encoding='utf-8')
         with tempfile.TemporaryDirectory() as directory:
-            bundle,report=self.verified_fixture_bundle(directory)
+            bundle,report=self.verified_fixture_bundle(directory,test_root)
             first=bundle/report['recordings'][0]['files']['ogg']['path']
             first.write_bytes(b'OggS invalid fixture')
             with self.assertRaisesRegex(ValueError,'Bundle hash'): prepare(bundle,test_root)
