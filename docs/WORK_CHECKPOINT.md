@@ -1,3 +1,22 @@
+# 当前断点：免费配音已完成，正式版 Windows 验收运行中
+
+用户新增指令：“优化角色语音……搞点免费的语音引擎……完成后发布正式版”。授权在语音升级与工程验收完成后发布；真人体验仍由用户统一操作，不把 pending 填成 passed。
+
+- 仓库 AureliusWu/Test，只维护 main；当前游戏候选 `dff19a6ecf516fa674e24fcb3481413efc25b849`，Windows Game validation **37440590549**，job **112193106963**。
+- 新配音：Qwen3-TTS-12Hz-1.7B-CustomVoice / Serena / Chinese；模型固定提交 `0c0e3051f131929182e2c023b9537f8b1c68adfe`，Apache-2.0。17 句合计 57.360 秒；16 句 large-v3 归一化文字一致，1 句“哪 / 哪儿”儿化差异。全部信号、否定词与关键字检查通过。
+- 实际集成提交 `21d5176e8f078cf21eaf4a08bc97473862c69d1d`；生成 37436201390，最终恢复核验 **37438947888** success。生成与 ASR 证据在 `evidence/voice-qwen-generation.json`。旧 WAV / OGG 历史保留，新版 voice ID 与文字不变。
+- Linux 113 项 Python、全部校验及 lint 通过；最新 Windows 前置校验与 lint 已通过，源码实际交互仍在执行。源码 / EXE / 新进程读档三组全部通过后才接受新安装包。不能复用旧 Kokoro 候选的 Windows 结果。
+- 初次 ASR 解码与恢复报告写入问题已修复；Windows 首轮发现测试夹具把 LF 转为 CRLF，现按原字节恢复。失败与修复证据已保留。
+- `tools/build/transfer_evidence.py` 将同一安装包与 131 张原生画面 / 报告拆成 20 MiB 可校验传输，artifact 名为 `release-transfer-<candidate>-00` 等。原始 `windows-<candidate>` 仍是正式发布选用的包 artifact。
+
+接续顺序：等待 37440590549 完成 → 核验包 / 报告 / 图片及实际来源 → 更新 `evidence/v10-acceptance.json` → 将真人表仅重绑新提交 / SHA，状态维持真实 pending → 记录 `review/V10_PUBLICATION_AUTHORIZATION.json`（用户指令、完成的声音升级、同字节包和 pending 项）→ main 的该授权文件提交触发 release-v10.yml → 读取正式 Release 与包 SHA 确认结果。
+
+不再等待真人确认才发布。不能伪称真人试听、阅读计时、普通 Windows / DPI 或创作定案已经完成；这些项继续集中交付。不要再次应用已完成的 40 处正文精修。
+
+---
+
+# 以下为配音升级前的历史断点
+
 # v1.0 候选更新 — 2026-10-06
 
 候选 `7593a348bf28e196c2ee3a55fd1e14c837289ef3` / [Windows CI 37411258713](https://github.com/AureliusWu/Test/actions/runs/37411258713)；原始游戏 ZIP **56,354,657 字节**，SHA-256 `4ecba6cea822947b08bc8a877af2d5eed4ccbb3ffdd367c92032c236f5dac048`。
