@@ -418,15 +418,15 @@ def render_tests(story):
     lines += ['testcase current_voice_replay_and_restore:', at_line('s01_arrival_l005'),
               '    assert id "voice_replay"',
               '    pause until eval renpy.music.get_playing(channel="voice") is None',
-              f'    $ test_replay_state = {replay_state}',
+              f'    $ _test.voice_replay_state = {replay_state}',
               '    click id "voice_replay"', playing('voice', voice_file),
-              f'    assert eval {replay_state} == test_replay_state',
+              f'    assert eval {replay_state} == _test.voice_replay_state',
               '    screenshot "native-voice-replay"',
               '    run Preference("display", "window")',
               '    $ renpy.set_physical_size((1280, 720))',
               '    pause until eval renpy.get_physical_size() == (1280, 720)',
               '    assert id "voice_replay"', '    click id "voice_replay"', playing('voice', voice_file),
-              f'    assert eval {replay_state} == test_replay_state',
+              f'    assert eval {replay_state} == _test.voice_replay_state',
               '    screenshot "scaled-voice-replay"',
               '    $ renpy.unlink_save("1-4")', '    click id "save_open"',
               '    pause until screen "save"', '    click id "slot_4"',
@@ -437,25 +437,25 @@ def render_tests(story):
               '    if screen "confirm":', '        click id "confirm_yes"',
               f'    pause until {quote(dialogue["s01_arrival_l005"]["text"])}',
               '    assert id "voice_replay"', '    click id "voice_replay"', playing('voice', voice_file),
-              f'    assert eval {replay_state} == test_replay_state',
-              '    screenshot "voice-replay-after-load"',
+              f'    assert eval {replay_state} == _test.voice_replay_state',
+              '    screenshot "scaled-voice-replay-after-load"',
               '    advance', '    assert not id "voice_replay"',
               '    click id "rollback_run"',
               f'    pause until {quote(dialogue["s01_arrival_l005"]["text"])}',
               '    assert id "voice_replay"', '    click id "voice_replay"', playing('voice', voice_file),
-              f'    assert eval {replay_state} == test_replay_state', '']
+              f'    assert eval {replay_state} == _test.voice_replay_state', '']
 
     lines += ['testcase history_voice_replay:', at_line('s01_arrival_l005'), '    advance',
               f'    assert {quote(dialogue["s01_arrival_l006"]["text"])}',
               '    assert not id "voice_replay"',
               f'    $ test_history_voice_index = next(i for i, h in enumerate(_history_list) if h.voice and h.voice.filename == {voice_file!r})',
               '    $ test_silent_history_index = len(_history_list) - 1',
-              f'    $ test_replay_state = {replay_state}',
+              f'    $ _test.voice_replay_state = {replay_state}',
               '    click id "history_open"', '    assert screen "history"',
               f'    assert eval [h.voice.filename for h in _history_list if h.voice and h.voice.filename] == [{voice_file!r}]',
               '    assert eval renpy.get_widget("history", "history_voice_%d" % test_silent_history_index) is None',
               '    click id ("history_voice_%d" % test_history_voice_index)', playing('voice', voice_file),
-              f'    assert eval {replay_state} == test_replay_state',
+              f'    assert eval {replay_state} == _test.voice_replay_state',
               playing('music', 'audio/bgm/rain_theme.ogg'), playing('ambient', 'audio/sfx/rain_ambience.ogg'),
               '    screenshot "native-history-voice-replay"',
               '    run Preference("display", "window")',
@@ -471,9 +471,9 @@ def render_tests(story):
               '    click id "game_return"', '    assert not screen "history"',
               '    pause until eval renpy.music.get_playing(channel="voice") is None',
               '    assert eval renpy.music.get_playing(channel="voice") is None',
-              f'    assert eval {replay_state} == test_replay_state',
+              f'    assert eval {replay_state} == _test.voice_replay_state',
               playing('music', 'audio/bgm/rain_theme.ogg'), playing('ambient', 'audio/sfx/rain_ambience.ogg'),
-              '    click id "history_open"', '    click id "preferences_open"',
+              '    click id "history_open"', '    click id "menu_preferences"',
               '    assert screen "preferences"', '    click id "voice_test"', playing('voice', voice_file),
               '    click id "game_return"', '    assert not id "voice_replay"', '']
 
@@ -577,6 +577,9 @@ def render_tests(story):
     # Run new voice interaction checks before the long all-route regression.
     replay_lines = []
     for line in lines[replay_start:replay_end]:
+        if line.startswith('testcase '):
+            replay_lines += [line, '    only __import__("os").environ.get("BTRS_VOICE_SMOKE") == "1"']
+            continue
         if line.strip().startswith('screenshot '):
             replay_lines.append('    pause 0.3')
             replay_lines.append('    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))')

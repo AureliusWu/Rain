@@ -93,13 +93,14 @@ testcase native_1080_and_scaled_window:
     screenshot "native-choice"
 
 testcase current_voice_replay_and_restore:
+    only __import__("os").environ.get("BTRS_VOICE_SMOKE") == "1"
     advance until "你还是和以前一样，出门不看天气。"
     assert id "voice_replay"
     pause until eval renpy.music.get_playing(channel="voice") is None
-    $ test_replay_state = (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what)
+    $ _test.voice_replay_state = (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what)
     click id "voice_replay"
     assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
-    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == test_replay_state
+    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == _test.voice_replay_state
     pause 0.3
     pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
     screenshot "native-voice-replay"
@@ -109,7 +110,7 @@ testcase current_voice_replay_and_restore:
     assert id "voice_replay"
     click id "voice_replay"
     assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
-    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == test_replay_state
+    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == _test.voice_replay_state
     pause 0.3
     pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
     screenshot "scaled-voice-replay"
@@ -131,10 +132,10 @@ testcase current_voice_replay_and_restore:
     assert id "voice_replay"
     click id "voice_replay"
     assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
-    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == test_replay_state
+    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == _test.voice_replay_state
     pause 0.3
     pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
-    screenshot "voice-replay-after-load"
+    screenshot "scaled-voice-replay-after-load"
     advance
     assert not id "voice_replay"
     click id "rollback_run"
@@ -142,23 +143,24 @@ testcase current_voice_replay_and_restore:
     assert id "voice_replay"
     click id "voice_replay"
     assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
-    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == test_replay_state
+    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == _test.voice_replay_state
 
 testcase history_voice_replay:
+    only __import__("os").environ.get("BTRS_VOICE_SMOKE") == "1"
     advance until "你还是和以前一样，出门不看天气。"
     advance
     assert "有人从长椅旁站起来。蓝灰色的开衫，右边那枚银色发夹，还有说完话后轻轻抬起的眉。"
     assert not id "voice_replay"
     $ test_history_voice_index = next(i for i, h in enumerate(_history_list) if h.voice and h.voice.filename == 'audio/voice/heroine_s01_arrival_l005_v1.ogg')
     $ test_silent_history_index = len(_history_list) - 1
-    $ test_replay_state = (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what)
+    $ _test.voice_replay_state = (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what)
     click id "history_open"
     assert screen "history"
     assert eval [h.voice.filename for h in _history_list if h.voice and h.voice.filename] == ['audio/voice/heroine_s01_arrival_l005_v1.ogg']
     assert eval renpy.get_widget("history", "history_voice_%d" % test_silent_history_index) is None
     click id ("history_voice_%d" % test_history_voice_index)
     assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
-    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == test_replay_state
+    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == _test.voice_replay_state
     assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/rain_theme.ogg'
     assert eval renpy.music.get_playing(channel='ambient') == 'audio/sfx/rain_ambience.ogg'
     pause 0.3
@@ -184,11 +186,11 @@ testcase history_voice_replay:
     assert not screen "history"
     pause until eval renpy.music.get_playing(channel="voice") is None
     assert eval renpy.music.get_playing(channel="voice") is None
-    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == test_replay_state
+    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == _test.voice_replay_state
     assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/rain_theme.ogg'
     assert eval renpy.music.get_playing(channel='ambient') == 'audio/sfx/rain_ambience.ogg'
     click id "history_open"
-    click id "preferences_open"
+    click id "menu_preferences"
     assert screen "preferences"
     click id "voice_test"
     assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
@@ -196,6 +198,7 @@ testcase history_voice_replay:
     assert not id "voice_replay"
 
 testcase auto_waits_for_replayed_voice:
+    only __import__("os").environ.get("BTRS_VOICE_SMOKE") == "1"
     $ preferences.wait_voice = True
     $ preferences.afm_time = 0.1
     advance until "你还是和以前一样，出门不看天气。"

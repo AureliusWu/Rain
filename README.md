@@ -37,6 +37,8 @@ python -m tools.build.sdk
 
 Windows 使用固定并校验 SHA-256 的 Ren’Py 8.5.3 SDK：
 
+升级构建先从已发布的 v1.0.0 ZIP 校验并保留原语句名；CI 自动完成。手工构建也应在 lint 前运行 `python -m tools.build.seed_release_names --previous-zip <已下载的完整v1.0.0-ZIP>`。标准 [old-game 机制](https://www.renpy.org/doc/html/build.html#old-game) 不进入玩家包；真实旧档加载另行测试。
+
 ```powershell
 $sdk = ".runtime/renpy-8.5.3-sdk"
 & "$sdk/lib/py3-windows-x86_64/python.exe" "$sdk/renpy.py" . lint --error-code --all-problems

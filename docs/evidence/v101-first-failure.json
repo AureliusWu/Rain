@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "status": "failed_not_publishable",
+  "candidate_commit": "5653a55f3833ed48258a17e3a89204f804730555",
+  "run_id": 37481501446,
+  "job_id": 112330502564,
+  "ci_url": "https://github.com/AureliusWu/Test/actions/runs/37481501446",
+  "phase": "source_native",
+  "python_tests": {
+    "passed": 113
+  },
+  "lint": "passed",
+  "source": {
+    "cases": 34,
+    "passed": 32,
+    "failed": 2,
+    "assertions_executed": 395,
+    "assertions_passed": 395,
+    "assertions_required": 403,
+    "report_seconds": 1313.691,
+    "status": "failed"
+  },
+  "failures": [
+    {
+      "case": "current_voice_replay_and_restore",
+      "error": "NameError: test_replay_state is not defined",
+      "test_line": 134,
+      "cause": "Game-store comparison fixture is reverted when the real save is loaded.",
+      "correction": "Keep comparison state on non-rollback test runner settings."
+    },
+    {
+      "case": "history_voice_replay",
+      "error": "RenpyTestTimeoutError after 45 seconds",
+      "test_line": 191,
+      "selector": "preferences_open",
+      "cause": "The quick-menu preferences widget is absent from the history menu.",
+      "correction": "Name and use the actual navigation menu_preferences widget."
+    }
+  ],
+  "additional_review_fix": "Name the 1280x720 post-load screenshot scaled-voice-replay-after-load. Dimension checks were not reached in this failed run.",
+  "source_job_log_sha256": "bac1dd15284badc1b665965de6c37611e39a5c91cb7830ccd43b2caa44a47192",
+  "source_job_log_bytes": 65144,
+  "evidence_artifact": {
+    "id": 11421964181,
+    "name": "test-evidence-5653a55f3833ed48258a17e3a89204f804730555",
+    "size_in_bytes": 152791114,
+    "digest": "sha256:92f36b83cd353bead31f37c958d506756d61dea3feed17ca204f8ebf26822f2d"
+  },
+  "standalone_and_upgrade": "not reached",
+  "published": false,
+  "next": "Fail-fast new voice checks, complete source/EXE/fresh-process regression and real v1.0.0 upgrade; seed official old-game bytecode for stable statement names."
+}

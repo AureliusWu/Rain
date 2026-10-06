@@ -322,7 +322,7 @@ screen navigation():
 
         textbutton _("Load") id "load_open" action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        textbutton _("Preferences") id "menu_preferences" action ShowMenu("preferences")
 
         if _in_replay:
 
