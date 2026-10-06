@@ -9,6 +9,10 @@
 
 下载 BeforeTheRainStops-1.0.0-win.zip，完整解压到可写目录后双击 BeforeTheRainStops.exe。无需安装引擎、Python 或模型，可离线游玩。v1 使用独立存档目录，旧阶段存档保留，请从头开始。
 
-当前为验收候选，Windows 新版本结果尚待绑定；普通电脑 / DPI、试听、真人计时、创作定案与冻结尚未记为通过。正式发布由 release-v10.yml 校验完整记录后使用同一份已验收 ZIP。
+当前为已通过机器验收的候选；普通电脑 / DPI、试听、真人计时、创作定案与冻结尚未记为通过。正式发布由 release-v10.yml 校验完整记录后使用同一份已验收 ZIP。
 
-[完整验收与包身份](RELEASE_ACCEPTANCE_V10.md) · [统一真人操作](HUMAN_HANDOFF.md) · [资产来源](../CREDITS.md)。
+候选 `7593a348bf28e196c2ee3a55fd1e14c837289ef3` / [Windows CI 37411258713](https://github.com/AureliusWu/Test/actions/runs/37411258713)；原始游戏 ZIP **56,354,657 字节**，SHA-256 `4ecba6cea822947b08bc8a877af2d5eed4ccbb3ffdd367c92032c236f5dac048`。
+
+91 项 Windows Python、作者侧全部校验与 Ren’Py 8.5.3 lint 通过。源码和独立 EXE 各 **31/31 用例、359/359 断言**（1088.999 / 741.506 秒）；关闭首进程后重新启动 EXE，真实读档另 **1/1 用例、10/10 断言**（3.719 秒）。全部 failed / xfailed / xpassed / skipped / not run 为 0，三个进程退出 0、未超时。
+
+[完整验收与包身份](https://github.com/AureliusWu/Test/blob/main/docs/RELEASE_ACCEPTANCE_V10.md) · [统一真人操作](https://github.com/AureliusWu/Test/blob/main/docs/HUMAN_HANDOFF.md) · [资产来源](https://github.com/AureliusWu/Test/blob/main/CREDITS.md)。

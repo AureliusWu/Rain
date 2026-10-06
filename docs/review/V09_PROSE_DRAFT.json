@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "prepared_not_applied",
+  "status": "superseded_by_applied_v10_review",
   "source_commit": "d8c61e2b3b03498115ea26d89d029026a0191c40",
   "source_story_sha256": "2ee68551a00d5b18e4d2e4e5ea37680889d1afa0d08e8668b2407766a318ee52",
   "date": "2026-10-06",
@@ -1080,9 +1080,9 @@
     ]
   },
   "limits": [
-    "拟稿全分支 14949 字符，应用前复核 15000 字符规模预算和阅读目标。",
-    "prepared_not_applied；当前游戏正文和试玩包保持原始 15206 字符。",
-    "机械检查不能替代角色、物品、时间线、情绪节奏与最终创作审阅。"
+    "本文件保留 v0.9 原始拟稿；37 处草案已在 v1.0 的 40 处修订中应用并有少量上下文补改。",
+    "v1.0 实际正文为 15065 字符；以 V10_PROSE_REVIEW.json、当前 story.json 与新候选验收身份为准。",
+    "机械检查不能替代最终创作、真人计时和实际试听。"
   ],
   "context_review": {
     "method": "direct reading of affected scenes and neighboring lines; not a fully automated semantic check",
@@ -1120,9 +1120,7 @@
       }
     ],
     "remaining": [
-      "final complete-route pacing review before application; affected scene context has been directly read",
-      "resolve all-branch 15000-character scope budget without padding",
-      "regenerate Scene Prompts and story/test scripts, rebind final Windows package after application",
+      "v1.0 record supersedes the original pre-application tasks",
       "human timing, listening and final creative approval pending"
     ],
     "affected_scenes_directly_read": [
@@ -1139,5 +1137,13 @@
       "s07_true",
       "s08_normal"
     ]
+  },
+  "application_v10": {
+    "date": "2026-10-06",
+    "candidate_commit": "7593a348bf28e196c2ee3a55fd1e14c837289ef3",
+    "applied_review": "docs/review/V10_PROSE_REVIEW.json",
+    "edits_applied": 40,
+    "all_branch_characters": 15065,
+    "instruction": "Do not apply this old draft again; v10 record includes the final amendments and three additional lines."
   }
 }

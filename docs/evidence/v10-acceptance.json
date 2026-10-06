@@ -1,0 +1,1560 @@
+{
+  "schema_version": 1,
+  "status": "technical_and_visual_passed_with_human_limits",
+  "version": "1.0.0",
+  "candidate_commit": "7593a348bf28e196c2ee3a55fd1e14c837289ef3",
+  "candidate_tree": "35125c76dd7646907622e04e5833bb80a87a4b3e",
+  "run_id": 37411258713,
+  "job_id": 112099972371,
+  "ci_url": "https://github.com/AureliusWu/Test/actions/runs/37411258713",
+  "ci_completed_at": "2026-10-06T04:27:16Z",
+  "audit_date": "2026-10-06",
+  "engine": "Ren'Py 8.5.3.26051504",
+  "python_tests": {
+    "passed": 91,
+    "seconds": 10.195,
+    "platform": "Windows"
+  },
+  "lint": "passed",
+  "audio_output": "dummy",
+  "artifacts": [
+    {
+      "id": 11390122113,
+      "name": "test-evidence-7593a348bf28e196c2ee3a55fd1e14c837289ef3",
+      "size_in_bytes": 299200193,
+      "digest": "sha256:44446c7308874392fa7098c49320d7c49c56b4d786bb581d26a0b8f5e258fc49",
+      "created_at": "2026-10-06T04:27:10Z",
+      "expires_at": "2027-01-04T03:55:25Z"
+    },
+    {
+      "id": 11390201913,
+      "name": "windows-7593a348bf28e196c2ee3a55fd1e14c837289ef3",
+      "size_in_bytes": 59162653,
+      "digest": "sha256:96d276bb0972aa3d8be093570006cf0a842780d5929e31827668e8be735fa7db",
+      "created_at": "2026-10-06T04:27:13Z",
+      "expires_at": "2027-01-04T03:55:25Z"
+    }
+  ],
+  "suites": {
+    "source": {
+      "cases": 31,
+      "assertions": 359,
+      "failed": 0,
+      "skipped": 0,
+      "not_run": 0,
+      "screenshots_checked": 65,
+      "native_1080": true,
+      "report_seconds": 1088.999,
+      "process": {
+        "timeout_seconds": 2400,
+        "elapsed_seconds": 1089.954,
+        "timed_out": false,
+        "returncode": 0,
+        "scope": "native process only; required screenshots are checked separately"
+      },
+      "report_sha256": "5b5495c4a0f722a2a017ffc86847bc06c40f222ceab30255ad22d4101da2613a",
+      "required_screenshots": [
+        "audio-normal-voice",
+        "audio-true-voice",
+        "auto-voice-in-progress",
+        "bg-exit-after-rain",
+        "bg-exit-covered",
+        "bg-nearby-cafe",
+        "bg-s05_separate_path",
+        "bg-s05_shared_path",
+        "branch-s04_open",
+        "branch-s04_reserved",
+        "cg-letter",
+        "chapter-prologue",
+        "chapter-today",
+        "expression-angry",
+        "expression-embarrassed",
+        "expression-happy",
+        "expression-normal",
+        "expression-sad",
+        "expression-smile",
+        "expression-surprised",
+        "first-choice",
+        "first-dialogue",
+        "history",
+        "main-menu",
+        "native-about",
+        "native-choice",
+        "native-main-menu",
+        "native-settings",
+        "restart-normal-ending",
+        "revisit-choice",
+        "rollback-letter-choice",
+        "rollback-rechoice-normal",
+        "route-01-true",
+        "route-02-normal",
+        "route-03-true",
+        "route-04-normal",
+        "route-05-true",
+        "route-06-normal",
+        "route-07-normal",
+        "route-08-normal",
+        "route-09-true",
+        "route-10-normal",
+        "route-11-normal",
+        "route-12-normal",
+        "route-13-normal",
+        "route-14-normal",
+        "route-15-normal",
+        "route-16-normal",
+        "save-load-before-cg",
+        "save-load-cafe-after-rain-stop",
+        "save-load-cafe-before-rain-stop",
+        "save-load-chapter-four",
+        "save-load-departure",
+        "save-load-letter-cg",
+        "save-load-normal-ending",
+        "save-load-shared-path",
+        "scaled-choice",
+        "scaled-dialogue",
+        "scaled-history",
+        "scaled-load",
+        "scaled-main-menu",
+        "scaled-save",
+        "scaled-settings",
+        "settings",
+        "skip-final-choice"
+      ]
+    },
+    "standalone": {
+      "cases": 31,
+      "assertions": 359,
+      "failed": 0,
+      "skipped": 0,
+      "not_run": 0,
+      "screenshots_checked": 65,
+      "native_1080": true,
+      "report_seconds": 741.506,
+      "process": {
+        "timeout_seconds": 2400,
+        "elapsed_seconds": 744.141,
+        "timed_out": false,
+        "returncode": 0,
+        "scope": "native process only; required screenshots are checked separately"
+      },
+      "report_sha256": "0aa8db9f51111652083c690c3be350feccd313a7e597e75b053f3ed66a081599",
+      "required_screenshots": [
+        "audio-normal-voice",
+        "audio-true-voice",
+        "auto-voice-in-progress",
+        "bg-exit-after-rain",
+        "bg-exit-covered",
+        "bg-nearby-cafe",
+        "bg-s05_separate_path",
+        "bg-s05_shared_path",
+        "branch-s04_open",
+        "branch-s04_reserved",
+        "cg-letter",
+        "chapter-prologue",
+        "chapter-today",
+        "expression-angry",
+        "expression-embarrassed",
+        "expression-happy",
+        "expression-normal",
+        "expression-sad",
+        "expression-smile",
+        "expression-surprised",
+        "first-choice",
+        "first-dialogue",
+        "history",
+        "main-menu",
+        "native-about",
+        "native-choice",
+        "native-main-menu",
+        "native-settings",
+        "restart-normal-ending",
+        "revisit-choice",
+        "rollback-letter-choice",
+        "rollback-rechoice-normal",
+        "route-01-true",
+        "route-02-normal",
+        "route-03-true",
+        "route-04-normal",
+        "route-05-true",
+        "route-06-normal",
+        "route-07-normal",
+        "route-08-normal",
+        "route-09-true",
+        "route-10-normal",
+        "route-11-normal",
+        "route-12-normal",
+        "route-13-normal",
+        "route-14-normal",
+        "route-15-normal",
+        "route-16-normal",
+        "save-load-before-cg",
+        "save-load-cafe-after-rain-stop",
+        "save-load-cafe-before-rain-stop",
+        "save-load-chapter-four",
+        "save-load-departure",
+        "save-load-letter-cg",
+        "save-load-normal-ending",
+        "save-load-shared-path",
+        "scaled-choice",
+        "scaled-dialogue",
+        "scaled-history",
+        "scaled-load",
+        "scaled-main-menu",
+        "scaled-save",
+        "scaled-settings",
+        "settings",
+        "skip-final-choice"
+      ]
+    },
+    "fresh_process": {
+      "cases": 1,
+      "assertions": 10,
+      "failed": 0,
+      "skipped": 0,
+      "not_run": 0,
+      "screenshots_checked": 1,
+      "native_1080": true,
+      "report_seconds": 3.719,
+      "process": {
+        "timeout_seconds": 120,
+        "elapsed_seconds": 4.359,
+        "timed_out": false,
+        "returncode": 0,
+        "scope": "native process only; required screenshots are checked separately"
+      },
+      "report_sha256": "6f3b1659e6cfeaecaefea53a27a114753d1a2215b6dd6b67844c9dd359247426",
+      "required_screenshots": [
+        "cross-process-late-load"
+      ]
+    }
+  },
+  "display": {
+    "desktop_pixels": [
+      1920,
+      1080
+    ],
+    "bits_per_pixel": 32,
+    "frequency_hz": 64,
+    "display_change_result": 0,
+    "available_modes": [
+      [
+        640,
+        480,
+        32,
+        64
+      ],
+      [
+        800,
+        600,
+        32,
+        64
+      ],
+      [
+        1024,
+        768,
+        32,
+        64
+      ],
+      [
+        1152,
+        864,
+        32,
+        64
+      ],
+      [
+        1280,
+        720,
+        32,
+        64
+      ],
+      [
+        1280,
+        800,
+        32,
+        64
+      ],
+      [
+        1280,
+        1024,
+        32,
+        64
+      ],
+      [
+        1366,
+        768,
+        32,
+        64
+      ],
+      [
+        1440,
+        900,
+        32,
+        64
+      ],
+      [
+        1600,
+        900,
+        32,
+        64
+      ],
+      [
+        1600,
+        1200,
+        32,
+        64
+      ],
+      [
+        1680,
+        1050,
+        32,
+        64
+      ],
+      [
+        1920,
+        1080,
+        32,
+        64
+      ]
+    ],
+    "scope": "Windows CI desktop only; ordinary-PC 100%/150% DPI remains human review"
+  },
+  "screenshots_count": 131,
+  "screenshots": [
+    {
+      "scope": "source",
+      "path": "reports/screenshots/audio-normal-voice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "91388a61760b6929fe5b136d3cad0ae7e59fe729bddc9dbfea597997505b117d"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/audio-true-voice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "a775eea076a365d748c882a64b359fc92203f9e653a363cc9e27b7e6c8a44bdb"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/auto-voice-in-progress.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "c62d70336ed8f9ecf71c32164ff297a80ae14663be1b4e1845c7b6c4b11703a7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/bg-exit-after-rain.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "00e1e95a6bc8737e37583090ee397a978d706ae9910da20f2cb46476526ce853"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/bg-exit-covered.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "03657b4621952aa327d515e818bfe0ac9a88668ab4ae9048d9c96371ed694608"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/bg-nearby-cafe.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/bg-s05_separate_path.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "beabea97cd1f928b269877e3c9a7628197a3ae2a7ab0a487b52440bf187226c6"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/bg-s05_shared_path.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "630fd2811289783e75941ef4e830410206c5fc6a7687a697f62b33ffda1bc7dc"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/branch-s04_open.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "70a8393ff2bb231a45256b255d3373c9c05f51ad3bc43baaa1d436bd1197b577"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/branch-s04_reserved.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "f82076c7b1c1649b24f29a9cf5e5992428f522d4ad7029e78602006da58b972f"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/cg-letter.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "0de4774f325f032998a90645672276b496c8bccbdf1f718fe7e1042cf57895a4"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/chapter-prologue.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "1dc207749ee71e954341f8a641f9875d99b06d607d5fc7086eb49c794e323b02"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/chapter-today.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "f6ccdfe37c8f311cd9d0ef55c5321600057e18fe1414d697a37f658448c530fe"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/expression-angry.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7633b17840d42357f86f1f5562cecf03fa0fe0bd0a2f4f948a08c0c425fae339"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/expression-embarrassed.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "f48e7538a53ccdef70a2b2c6f1c811ed291e2e492bb8aa4590e4f418152c084e"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/expression-happy.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "d4a9a8cd6600c86cfaf011e91c603b3f4cbe51a4ab980fc34ca27baf0d9bca47"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/expression-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "eb86566d85033bde110661ce1898ce95c912a4509ec6662f870464ecde024b55"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/expression-sad.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "5028bcd7d6888831548cc0c2c3ed13bdd1070f3b222d24c2b32ac7de6942bb28"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/expression-smile.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "0945341ae1319ad49fa72d781fbcb00aa42fa4fb29e3fe347f0c29f2b8c02152"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/expression-surprised.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "05e5e98a1f089ac773aae5245299bf6c0d292db7fe84fea1a2805c701e422877"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/first-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "927746409e8975ba56aed6ca17e482f0cabfadcab16396e48d3026ac06a4f0d4"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/first-dialogue.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "0945341ae1319ad49fa72d781fbcb00aa42fa4fb29e3fe347f0c29f2b8c02152"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/history.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "2358ab65ac0c04a8ea9bfa73cd1aa0e9bf238b9efaa2a35d9f808f6f8cdfaf92"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/main-menu.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "796ef5c4273285c0e2307815f1e4d95633a122e24417a2b1b6885e4bce93b9c7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/native-about.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "9d6155a7cc1647f8ea3e5af9c995d36ceda56250f2edf59b24909c2072237b2b"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/native-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "36038fe31be4a5536c4b20edef06114fa30fde01cb45ccf48c4bb577a44183d9"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/native-main-menu.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "796ef5c4273285c0e2307815f1e4d95633a122e24417a2b1b6885e4bce93b9c7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/native-settings.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "0ce265f22d02fdfbe9579ede57e42007e597f302cbdb5e8e7d65e648253b0acd"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/restart-normal-ending.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/revisit-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "97082048bead36b30eafda14eb9c4b108d5233436be6883f766b1c2bd4e7588d"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/rollback-letter-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "c5fc67db46fdc44632a70736dc9d27d06c26f141c6e36c22745194d852855393"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/rollback-rechoice-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-01-true.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "0f871365c93f2c4b5f3c73473119ff9ed7898abae27c4ca35b8119b40ffc5116"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-02-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "decec29be269cb2591a52c5c0680ed098ee3cbce549fac0df9208e77394ffcbe"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-03-true.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "b8de721acc7d807bf3dd8392ebcb1228802e1c7fdfe6c02a87378dec81df2228"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-04-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-05-true.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "b8de721acc7d807bf3dd8392ebcb1228802e1c7fdfe6c02a87378dec81df2228"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-06-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-07-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-08-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-09-true.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "b8de721acc7d807bf3dd8392ebcb1228802e1c7fdfe6c02a87378dec81df2228"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-10-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-11-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-12-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-13-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-14-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-15-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-16-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/save-load-before-cg.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "a673c03fa76da4db26a192b66ace813d54a53bd2336b9a94a70724c175c695e1"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/save-load-cafe-after-rain-stop.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/save-load-cafe-before-rain-stop.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "581f05e0530f8a721b9cedb41090485d4567cdec089898b6a59feb128571daf7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/save-load-chapter-four.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "18090c7fd3caa3c66260ef016ee06f32db10178a5f31d8c8a4b2aa38e20d21f2"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/save-load-departure.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "538a5a8a7d70476b47b4c368765e06cc080d66bb3aea706152dc45a297687dcf"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/save-load-letter-cg.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "1d97e32d5261d86436908f9dabd72504d1df1cb3622284750bdb3c83fcca3924"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/save-load-normal-ending.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "00e1e95a6bc8737e37583090ee397a978d706ae9910da20f2cb46476526ce853"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/save-load-shared-path.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "23a8c42c8b26dda67d5ad1fbedb29337cd5a3b0816f3a9a0ac32d5cd44916ef6"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/scaled-choice.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "93050dcf561ead5f6911d8751a79cd656d3f18149a5133a3d7cbbfc9350c47d3"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/scaled-dialogue.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "4e9064000ae12f0fddeb9f7ae80fae55dfc76296dc01b3043e80bf666a139f90"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/scaled-history.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "608ec4e6e5f00a3ed422a0eb1ce75cfe7590fb83261e06e5f9a6cdc8beb1f2d4"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/scaled-load.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "1c6af37531deeaab7ec91976071d67471cd329648aab35a2cda7d9f07c620eed"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/scaled-main-menu.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "be6306d99b1768d5d814e9daf689cac54cee5746ccff701990277844aabb4f27"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/scaled-save.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "b7825f2a8b71d9eae97070a619d533490d1b1728e2802eae5bba503c388a3680"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/scaled-settings.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "ff949fa006c4032cd572391b268deefb3071eb9b658be5af6e522fd1c65f6b0f"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/settings.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "0ce265f22d02fdfbe9579ede57e42007e597f302cbdb5e8e7d65e648253b0acd"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/skip-final-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "6552ec267338a996d0003da6f1ff4a59d2b4d23468543710dd2c4ce6540c9723"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/audio-normal-voice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "91388a61760b6929fe5b136d3cad0ae7e59fe729bddc9dbfea597997505b117d"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/audio-true-voice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "a775eea076a365d748c882a64b359fc92203f9e653a363cc9e27b7e6c8a44bdb"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/auto-voice-in-progress.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "c62d70336ed8f9ecf71c32164ff297a80ae14663be1b4e1845c7b6c4b11703a7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/bg-exit-after-rain.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "00e1e95a6bc8737e37583090ee397a978d706ae9910da20f2cb46476526ce853"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/bg-exit-covered.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "03657b4621952aa327d515e818bfe0ac9a88668ab4ae9048d9c96371ed694608"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/bg-nearby-cafe.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/bg-s05_separate_path.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "beabea97cd1f928b269877e3c9a7628197a3ae2a7ab0a487b52440bf187226c6"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/bg-s05_shared_path.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "630fd2811289783e75941ef4e830410206c5fc6a7687a697f62b33ffda1bc7dc"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/branch-s04_open.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "70a8393ff2bb231a45256b255d3373c9c05f51ad3bc43baaa1d436bd1197b577"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/branch-s04_reserved.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "f82076c7b1c1649b24f29a9cf5e5992428f522d4ad7029e78602006da58b972f"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/cg-letter.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "0de4774f325f032998a90645672276b496c8bccbdf1f718fe7e1042cf57895a4"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/chapter-prologue.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "1dc207749ee71e954341f8a641f9875d99b06d607d5fc7086eb49c794e323b02"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/chapter-today.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "f6ccdfe37c8f311cd9d0ef55c5321600057e18fe1414d697a37f658448c530fe"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/expression-angry.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7633b17840d42357f86f1f5562cecf03fa0fe0bd0a2f4f948a08c0c425fae339"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/expression-embarrassed.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "f48e7538a53ccdef70a2b2c6f1c811ed291e2e492bb8aa4590e4f418152c084e"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/expression-happy.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "d4a9a8cd6600c86cfaf011e91c603b3f4cbe51a4ab980fc34ca27baf0d9bca47"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/expression-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "eb86566d85033bde110661ce1898ce95c912a4509ec6662f870464ecde024b55"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/expression-sad.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "5028bcd7d6888831548cc0c2c3ed13bdd1070f3b222d24c2b32ac7de6942bb28"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/expression-smile.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "0945341ae1319ad49fa72d781fbcb00aa42fa4fb29e3fe347f0c29f2b8c02152"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/expression-surprised.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "05e5e98a1f089ac773aae5245299bf6c0d292db7fe84fea1a2805c701e422877"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/first-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "927746409e8975ba56aed6ca17e482f0cabfadcab16396e48d3026ac06a4f0d4"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/first-dialogue.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "0945341ae1319ad49fa72d781fbcb00aa42fa4fb29e3fe347f0c29f2b8c02152"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/history.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "2358ab65ac0c04a8ea9bfa73cd1aa0e9bf238b9efaa2a35d9f808f6f8cdfaf92"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/main-menu.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "796ef5c4273285c0e2307815f1e4d95633a122e24417a2b1b6885e4bce93b9c7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/native-about.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "9d6155a7cc1647f8ea3e5af9c995d36ceda56250f2edf59b24909c2072237b2b"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/native-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "36038fe31be4a5536c4b20edef06114fa30fde01cb45ccf48c4bb577a44183d9"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/native-main-menu.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "796ef5c4273285c0e2307815f1e4d95633a122e24417a2b1b6885e4bce93b9c7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/native-settings.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "0ce265f22d02fdfbe9579ede57e42007e597f302cbdb5e8e7d65e648253b0acd"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/restart-normal-ending.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/revisit-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "97082048bead36b30eafda14eb9c4b108d5233436be6883f766b1c2bd4e7588d"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/rollback-letter-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "c5fc67db46fdc44632a70736dc9d27d06c26f141c6e36c22745194d852855393"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/rollback-rechoice-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-01-true.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "0f871365c93f2c4b5f3c73473119ff9ed7898abae27c4ca35b8119b40ffc5116"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-02-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "decec29be269cb2591a52c5c0680ed098ee3cbce549fac0df9208e77394ffcbe"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-03-true.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "b8de721acc7d807bf3dd8392ebcb1228802e1c7fdfe6c02a87378dec81df2228"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-04-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-05-true.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "b8de721acc7d807bf3dd8392ebcb1228802e1c7fdfe6c02a87378dec81df2228"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-06-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-07-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-08-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-09-true.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "b8de721acc7d807bf3dd8392ebcb1228802e1c7fdfe6c02a87378dec81df2228"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-10-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-11-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-12-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-13-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-14-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-15-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-16-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/save-load-before-cg.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "a673c03fa76da4db26a192b66ace813d54a53bd2336b9a94a70724c175c695e1"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/save-load-cafe-after-rain-stop.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/save-load-cafe-before-rain-stop.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "581f05e0530f8a721b9cedb41090485d4567cdec089898b6a59feb128571daf7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/save-load-chapter-four.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "18090c7fd3caa3c66260ef016ee06f32db10178a5f31d8c8a4b2aa38e20d21f2"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/save-load-departure.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "538a5a8a7d70476b47b4c368765e06cc080d66bb3aea706152dc45a297687dcf"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/save-load-letter-cg.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "1d97e32d5261d86436908f9dabd72504d1df1cb3622284750bdb3c83fcca3924"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/save-load-normal-ending.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "00e1e95a6bc8737e37583090ee397a978d706ae9910da20f2cb46476526ce853"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/save-load-shared-path.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "23a8c42c8b26dda67d5ad1fbedb29337cd5a3b0816f3a9a0ac32d5cd44916ef6"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/scaled-choice.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "93050dcf561ead5f6911d8751a79cd656d3f18149a5133a3d7cbbfc9350c47d3"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/scaled-dialogue.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "4e9064000ae12f0fddeb9f7ae80fae55dfc76296dc01b3043e80bf666a139f90"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/scaled-history.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "608ec4e6e5f00a3ed422a0eb1ce75cfe7590fb83261e06e5f9a6cdc8beb1f2d4"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/scaled-load.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "1c6af37531deeaab7ec91976071d67471cd329648aab35a2cda7d9f07c620eed"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/scaled-main-menu.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "be6306d99b1768d5d814e9daf689cac54cee5746ccff701990277844aabb4f27"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/scaled-save.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "b7825f2a8b71d9eae97070a619d533490d1b1728e2802eae5bba503c388a3680"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/scaled-settings.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "ff949fa006c4032cd572391b268deefb3071eb9b658be5af6e522fd1c65f6b0f"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/settings.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "0ce265f22d02fdfbe9579ede57e42007e597f302cbdb5e8e7d65e648253b0acd"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/skip-final-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "6552ec267338a996d0003da6f1ff4a59d2b4d23468543710dd2c4ce6540c9723"
+    },
+    {
+      "scope": "fresh_process",
+      "path": "reports/package/persistence/screenshots/cross-process-late-load.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac"
+    }
+  ],
+  "package": {
+    "file": "BeforeTheRainStops-1.0.0-win.zip",
+    "size_in_bytes": 56354657,
+    "sha256": "4ecba6cea822947b08bc8a877af2d5eed4ccbb3ffdd367c92032c236f5dac048",
+    "entries": 1621,
+    "build_info": {
+      "info": {},
+      "time": 1791260064.381209,
+      "name": "雨停之前",
+      "version": "1.0.0"
+    },
+    "crc": "passed",
+    "assets_checked": 85,
+    "player_readme_sha256": "5053c2e75cea5d8d3a03f0f3873f40616a666f5527bde3be33879fc8491a3a93",
+    "player_readme_source_comparison": "equal after CRLF/LF normalization",
+    "test_scripts_in_original_zip": false,
+    "allowed_engine_cache": [
+      "game/cache/build_info.json",
+      "game/cache/bytecode-312.rpyb"
+    ]
+  },
+  "story": {
+    "sha256": "8456fefa4ec8c504444bfafab017ceb882c7ba5e335a1541842a9526bca919f3",
+    "lines": 560,
+    "all_branch_characters": 15065,
+    "route_count": 16,
+    "endings": {
+      "normal": 12,
+      "true": 4
+    }
+  },
+  "human_pending": [
+    "Normal/True reading time",
+    "17 voices and 7 sound/music listening",
+    "ordinary offline Windows/Chinese path/100% and 150% DPI",
+    "creative approval/content freeze"
+  ],
+  "limits": [
+    "Windows runner uses dummy audio; no listening approval",
+    "PNG dimensions do not prove ordinary-PC DPI",
+    "1672x941 background/CG sources were resampled about 1.15x",
+    "candidate is not frozen or a formal release"
+  ],
+  "unresolved_machine_issues": [],
+  "prose_review": {
+    "file": "docs/review/V10_PROSE_REVIEW.json",
+    "edits_applied": 40,
+    "stable_line_ids": 560,
+    "recorded_voice_texts_unchanged": 17,
+    "human_approval": "pending"
+  },
+  "release_pipeline": {
+    "workflow": ".github/workflows/release-v10.yml",
+    "executed": false,
+    "publication": "pending human acceptance",
+    "exact_reviewed_zip_required": true
+  }
+}

@@ -1,6 +1,14 @@
 # v1.0 候选更新 — 2026-10-06
 
-已应用 40 处正文精修，正文 15,065 字符 / 560 行，16 路线保留；版本 1.0.0 与 v1 独立存档目录同步。新增严格发布门槛与同字节 artifact 发布流程。完整 Windows 回归待当前 run 结果，真人事项统一保留，详见 [v1.0 验收](docs/RELEASE_ACCEPTANCE_V10.md)。
+候选 `7593a348bf28e196c2ee3a55fd1e14c837289ef3` / [Windows CI 37411258713](https://github.com/AureliusWu/Test/actions/runs/37411258713)；原始游戏 ZIP **56,354,657 字节**，SHA-256 `4ecba6cea822947b08bc8a877af2d5eed4ccbb3ffdd367c92032c236f5dac048`。
+
+91 项 Windows Python、作者侧全部校验与 Ren’Py 8.5.3 lint 通过。源码和独立 EXE 各 **31/31 用例、359/359 断言**（1088.999 / 741.506 秒）；关闭首进程后重新启动 EXE，真实读档另 **1/1 用例、10/10 断言**（3.719 秒）。全部 failed / xfailed / xpassed / skipped / not run 为 0，三个进程退出 0、未超时。
+
+131 张 PNG 完整解码；35 张实际 EXE 关键画面按当前原图或相同 SHA-256 的既有直接审阅记录复核，未发现遗留机器问题。85 个包内资产 SHA-256、原始 ZIP CRC、版本、玩家说明及许可文件已核验；未注入测试脚本。仅保留引擎启动必需的 build_info / bytecode 缓存。
+
+Windows runner 使用 dummy 音频；真人试听、两结局阅读计时、普通电脑 / 中文路径 / 100% 与 150% DPI、创作定案及内容冻结继续待用户统一操作。正式发布 workflow 尚未执行，没有正式 v1.0 tag / Release。
+
+40 处正文精修已应用；全分支 15,065 字符，单路线 11,303–11,666，560 台词 ID / 17 句录音 / 16 路线保留。版本与 v1 独立存档目录同步；81 份版本化 Prompt 可追踪。统一审阅提供 66 EXE PNG、24 OGG / WAV、两结局全文及其余 100 行分支，覆盖全部正文。
 
 # Changelog
 

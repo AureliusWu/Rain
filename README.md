@@ -8,13 +8,19 @@ main 已进入 **v1.0.0 验收候选**：六章、24 个叙事场景、4 次选�
 
 ## 下载与运行
 
-当前 v1.0 正在完整 Windows 回归，包身份及结果将绑定到 [v1.0 验收记录](docs/RELEASE_ACCEPTANCE_V10.md)。[统一真人清单](docs/HUMAN_HANDOFF.md) · [公开发行版本](https://github.com/AureliusWu/Test/releases)。历史 v0.9 技术证据保留在 [1080p 验收](docs/DISPLAY_ACCEPTANCE_V09.md)，不能代替新正文的运行结果。
+v1.0 Windows 全量回归已通过，见 [v1.0 验收记录](docs/RELEASE_ACCEPTANCE_V10.md)。[统一真人清单](docs/HUMAN_HANDOFF.md) · [公开发行版本](https://github.com/AureliusWu/Test/releases)。历史 v0.9 技术证据保留在 [1080p 验收](docs/DISPLAY_ACCEPTANCE_V09.md)，不能代替新正文的运行结果。
 
 1. 完整解压 `BeforeTheRainStops-1.0.0-win.zip` 到可写目录。
 2. 双击 `BeforeTheRainStops.exe`。无需 Python、引擎、模型或网络。
 3. 左键 / 空格 / Enter 推进，右键 / Esc 开菜单；下方提供回退、历史、快进、自动、存读档及设置。F 切换全屏。
 
 原生 1920×1080、默认 1280×720 缩放窗口。v1 使用独立存档目录 `AureliusWu-BeforeTheRainStops-v1`，旧阶段存档保留，不跨阶段加载。
+
+候选 `7593a348bf28e196c2ee3a55fd1e14c837289ef3` / [Windows CI 37411258713](https://github.com/AureliusWu/Test/actions/runs/37411258713)；原始游戏 ZIP **56,354,657 字节**，SHA-256 `4ecba6cea822947b08bc8a877af2d5eed4ccbb3ffdd367c92032c236f5dac048`。
+
+91 项 Windows Python、作者侧全部校验与 Ren’Py 8.5.3 lint 通过。源码和独立 EXE 各 **31/31 用例、359/359 断言**（1088.999 / 741.506 秒）；关闭首进程后重新启动 EXE，真实读档另 **1/1 用例、10/10 断言**（3.719 秒）。全部 failed / xfailed / xpassed / skipped / not run 为 0，三个进程退出 0、未超时。
+
+[Windows 候选下载](https://github.com/AureliusWu/Test/actions/runs/37411258713/artifacts/11390201913)（登录 GitHub，保留至 2027-01-04T03:55:25Z）。原始 ZIP 与统一审阅材料已另行交付；正式 Release 等待人工验收。
 
 ## 开发与验证
 

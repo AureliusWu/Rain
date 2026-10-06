@@ -4,7 +4,13 @@
 
 ## 机器验收
 
-本次 Windows 源码、独立 EXE 与关闭后新进程读档正在重验；候选提交、run、artifact、原始游戏 ZIP 大小 / SHA-256 和实际画面将在完成后写入 `docs/evidence/v10-acceptance.json`。历史 v0.9 通过结果仅作基线。
+候选 `7593a348bf28e196c2ee3a55fd1e14c837289ef3` / [Windows CI 37411258713](https://github.com/AureliusWu/Test/actions/runs/37411258713)；原始游戏 ZIP **56,354,657 字节**，SHA-256 `4ecba6cea822947b08bc8a877af2d5eed4ccbb3ffdd367c92032c236f5dac048`。
+
+91 项 Windows Python、作者侧全部校验与 Ren’Py 8.5.3 lint 通过。源码和独立 EXE 各 **31/31 用例、359/359 断言**（1088.999 / 741.506 秒）；关闭首进程后重新启动 EXE，真实读档另 **1/1 用例、10/10 断言**（3.719 秒）。全部 failed / xfailed / xpassed / skipped / not run 为 0，三个进程退出 0、未超时。
+
+131 张 PNG 完整解码；35 张实际 EXE 关键画面按当前原图或相同 SHA-256 的既有直接审阅记录复核，未发现遗留机器问题。85 个包内资产 SHA-256、原始 ZIP CRC、版本、玩家说明及许可文件已核验；未注入测试脚本。仅保留引擎启动必需的 build_info / bytecode 缓存。
+
+Windows runner 使用 dummy 音频；真人试听、两结局阅读计时、普通电脑 / 中文路径 / 100% 与 150% DPI、创作定案及内容冻结继续待用户统一操作。正式发布 workflow 尚未执行，没有正式 v1.0 tag / Release。
 
 ## 统一人工验收
 
@@ -14,10 +20,16 @@
 
 ## 后续发布操作
 
-1. 用户统一完成普通 Windows、中文路径、DPI、试听、两结局计时和创作定案；工程侧整理真实结果并填写绑定记录。
+1. 用户统一完成普通 Windows、中文路径、DPI、试听、两结局计时和创作定案；工程侧整理真实结果，填写绑定记录和冻结日期，并按结果同步 README / RELEASE_NOTES 的验收状态。
 2. 执行 `python -m tools.release_gate --version 1.0.0`。记录完整后通过，当前会阻止发布。
 3. 从 main 手动运行 `Publish exact approved v1 Windows package`，输入 1.0.0。
 4. workflow 验证成功 CI 的候选 SHA、artifact ID 与版本，下载既有 ZIP，再校验文件大小、SHA-256、CRC、元数据、许可及开发文件排除。
 5. 没有现存同名 tag / Release 时才创建正式 v1.0.0；发布的 ZIP 不重新构建，并重新下载核验同字节。
 
 如果 artifact 过期，先恢复已交付原始 ZIP 或重新建立完整候选验收，不绕过哈希或人工绑定。旧 release.yml 仅处理 v1 以前的候选。
+
+## 下载入口与范围
+
+[Windows 候选 artifact](https://github.com/AureliusWu/Test/actions/runs/37411258713/artifacts/11390201913)，需 GitHub 登录，保留至 2027-01-04T03:55:25Z。同字节游戏 ZIP、统一审阅 ZIP、校验和及实际 EXE 预览另已交付。公开 Release 仍为 v0.6.0。
+
+审阅材料含 66 张原始 EXE PNG、24 OGG / 24 解码 WAV、两结局完整原文与其余 100 行分支文本，覆盖全部 560 台词 ID。统一回报模板保留 pending，不预填通过。
