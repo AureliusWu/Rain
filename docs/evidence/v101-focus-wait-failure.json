@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "failed_and_corrected_pending_rerun",
+  "candidate_commit": "2591ba29f0f3f3a9793797b52b778e096c94791d",
+  "run_id": 37495345486,
+  "job_id": 112378331174,
+  "phase": "four_case_voice_prefix_first_iteration",
+  "cases": 4,
+  "passed": 1,
+  "failed": 3,
+  "executed_assertions": 20,
+  "passed_assertions": 20,
+  "seconds": 176.507,
+  "observation": "The new get_widget(...).is_focused() wait never became true in any of the three voice cases. This introduced test timeout is not evidence of an audible playback defect.",
+  "correction": "Remove the invalid context-dependent focus wait. Use the SDK text selector that resolves the actual rendered Focus object, move to its center, allow one input frame, then click that center. Keep display settling, all 404 full assertions, two actual-prefix runs and diagnostic target prints before the click.",
+  "engine_evidence": "RenPy 8.5.3 renpy/test/testfocus.py find_focus resolves the rendered focus list, whereas Displayable.is_focused reads the current context's scene_lists.focused.",
+  "artifact": {"id": 11427492703, "bytes": 17959432, "sha256": "dd861e59d085ae1ce7aae26b5b71c69a34cc74705fcdf7be3231e94beb5d8c6c"},
+  "publication_blocked": true,
+  "full_regression_not_reached": true
+}

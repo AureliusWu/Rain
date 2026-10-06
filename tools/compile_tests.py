@@ -417,17 +417,17 @@ def render_tests(story):
     replay_state = '(current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what)'
     current_replay_click = [
         '    move pos (0.5, 0.4)',
-        '    move id "voice_replay" pos (0.5, 0.5)',
-        '    pause until eval renpy.get_widget("say", "voice_replay") is not None and renpy.get_widget("say", "voice_replay").is_focused()',
-        '    click id "voice_replay" pos (0.5, 0.5)',
-        '    $ print("Current replay click:", renpy.get_physical_size(), _last_voice_play, renpy.music.get_playing(channel="voice"), _last_say_what)',
+        '    move "重听语音" pos (0.5, 0.5)',
+        '    pause 0.1',
+        '    $ print("Current replay target:", renpy.get_physical_size(), _last_voice_play, VoiceReplay().get_sensitive(), _last_say_what)',
+        '    click "重听语音" pos (0.5, 0.5)',
     ]
     history_replay_click = [
         '    move pos (0.5, 0.4)',
-        '    move id ("history_voice_%d" % test_history_voice_index) pos (0.5, 0.5)',
-        '    pause until eval renpy.get_widget("history", "history_voice_%d" % test_history_voice_index) is not None and renpy.get_widget("history", "history_voice_%d" % test_history_voice_index).is_focused()',
-        '    click id ("history_voice_%d" % test_history_voice_index) pos (0.5, 0.5)',
-        '    $ print("History replay click:", renpy.get_physical_size(), preferences.get_mute("voice"), renpy.music.get_playing(channel="voice"))',
+        '    move "重播语音" pos (0.5, 0.5)',
+        '    pause 0.1',
+        '    $ print("History replay target:", renpy.get_physical_size(), preferences.get_mute("voice"), renpy.music.get_playing(channel="voice"))',
+        '    click "重播语音" pos (0.5, 0.5)',
     ]
     lines += ['testcase current_voice_replay_and_restore:', at_line('s01_arrival_l005'),
               '    assert id "voice_replay"',
@@ -454,8 +454,7 @@ def render_tests(story):
               '    assert id "voice_replay"', *current_replay_click, playing('voice', voice_file),
               f'    assert eval {replay_state} == _test.voice_replay_state',
               '    screenshot "scaled-voice-replay-after-load"',
-              # The say behavior cannot dismiss while a screen button has mouse focus.
-              # Move to the dialogue before sending the engine's dismiss event.
+              # Dismiss uses the default say focus; leave the replay button first.
               '    move id "what"', '    advance', '    assert not id "voice_replay"',
               '    click id "rollback_run"',
               f'    pause until {quote(dialogue["s01_arrival_l005"]["text"])}',
