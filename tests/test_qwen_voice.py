@@ -114,7 +114,9 @@ class QwenVoiceTests(unittest.TestCase):
                 else: shutil.copy2(ROOT/relative,target)
             archived=json.loads((ROOT/'docs/review/VOICE_KOKORO_ARCHIVE.json').read_text(encoding='utf-8'))
             original=json.dumps(archived['voice_manifest'],ensure_ascii=False,indent=2)+'\n'
-            (fixture/'game/data/voice_manifest.json').write_text(original,encoding='utf-8')
+            (fixture/'game/data/voice_manifest.json').write_bytes(original.encode('utf-8'))
+            self.assertEqual(sha256((fixture/'game/data/voice_manifest.json').read_bytes()),
+                             self.plan['source_voice_manifest_sha256'])
             test_root=fixture
         else: test_root=ROOT
         with tempfile.TemporaryDirectory() as directory:

@@ -1,0 +1,14 @@
+{
+  "status": "authoring_test_fixture_failed_before_native_execution",
+  "candidate_commit": "04fc35ba2826aef55d9449da18cb174987fd1739",
+  "run_id": 37440020977,
+  "job_id": 112191646193,
+  "python_tests": 113,
+  "failed": 1,
+  "test": "test_bundle_hash_and_escape_fail_without_writing_any_game_file",
+  "cause": "Path.write_text converted the restored JSON fixture's LF newlines to CRLF on Windows, invalidating the original byte hash before the intended corrupt-audio assertion.",
+  "fix": "Restore archived voice manifest with write_bytes and assert its exact SHA-256 before invoking bundle adoption validation.",
+  "native_source_executed": false,
+  "standalone_executed": false,
+  "game_published": false
+}
