@@ -35,6 +35,71 @@ class ReleaseGateTests(unittest.TestCase):
         self.assertEqual(selection["candidate"], self.machine["candidate_commit"])
         self.assertEqual(selection["artifact_id"], 456)
 
+    def publication_fixture(self):
+        from tools.audio_process.qwen_voice import MODEL_ID, REVISION, SPEAKER
+        human = copy.deepcopy(self.human)
+        human.update(status='pending',reviewer='',reviewed_at='')
+        groups = ['ordinary_windows','display_dpi','listening','creative_and_freeze','reading_time']
+        for group in groups: human[group]={'status':'pending','evidence':''}
+        human['reading_time'].update(normal_minutes=None,true_minutes=None)
+        voice = {'status':'signals_and_asr_passed','unresolved_machine_issues':[],'human_listening':False,
+                 'producer_commit':'e'*40,'provider':{'model_id':MODEL_ID,'revision':REVISION,'speaker':SPEAKER},
+                 'recordings':[{'voice_id':f'voice_{i}',
+                     'asr':{'passed':True,'polarity_counts_match':True,'cer':0.0},
+                     'audio':{'sample_rate':24000,'channels':1,'frames':24000,'peak':.7,'rms_dbfs':-22}}
+                     for i in range(17)]}
+        authorization={'schema_version':1,'status':'authorized_by_user','version':'1.0.0',
+                       'candidate_commit':'a'*40,'package_sha256':'b'*64,
+                       'instruction':'完成后发布正式版','condition':'voice_upgrade_completed',
+                       'requested_at':'2026-10-06','pending_human_checks':groups,
+                       'voice_generation_commit':'e'*40,'voice_generation_sha256':'f'*64}
+        machine={**self.machine,'voice_upgrade':{'generation_sha256':'f'*64}}
+        return machine,human,authorization,voice
+
+    def test_user_requested_publication_preserves_pending_human_records(self):
+        machine,human,authorization,voice=self.publication_fixture()
+        original=copy.deepcopy(human)
+        selected=validate_approval(machine,human,'1.0.0',authorization,voice)
+        self.assertEqual(selected['approval_mode'],'user_requested_after_voice_upgrade')
+        self.assertEqual(human,original)
+        self.assertEqual(human['listening']['status'],'pending')
+
+    def test_publication_cannot_authorize_other_bytes_or_unstated_instruction(self):
+        machine,human,authorization,voice=self.publication_fixture()
+        for key,value in [('candidate_commit','c'*40),('package_sha256','d'*64),('version','1.0.1'),
+                          ('instruction','继续'),('condition','none'),('requested_at','')]:
+            with self.subTest(key=key),self.assertRaises(ValueError):
+                validate_approval(machine,human,'1.0.0',{**authorization,key:value},voice)
+
+    def test_publication_must_disclose_pending_checks_and_never_claim_fake_listening(self):
+        machine,human,authorization,voice=self.publication_fixture()
+        for changes in ({'pending_human_checks':[]},{'voice_generation_sha256':'0'*64}):
+            with self.assertRaises(ValueError): validate_approval(machine,human,'1.0.0',{**authorization,**changes},voice)
+        human['listening']['evidence']='unperformed listening claim'
+        with self.assertRaises(ValueError): validate_approval(machine,human,'1.0.0',authorization,voice)
+
+    def test_publication_still_requires_complete_voice_and_machine_pass(self):
+        machine,human,authorization,voice=self.publication_fixture()
+        for changes in ({'status':'asr_review_required'},{'recordings':voice['recordings'][:-1]},
+                        {'human_listening':True},{'unresolved_machine_issues':['bad line']}):
+            with self.assertRaises(ValueError): validate_approval(machine,human,'1.0.0',authorization,{**voice,**changes})
+        machine['suites']['standalone']['failed']=1
+        with self.assertRaises(ValueError): validate_approval(machine,human,'1.0.0',authorization,voice)
+
+    def test_publication_rejects_failed_transcription_or_speech_signals(self):
+        machine,human,authorization,voice=self.publication_fixture()
+        for group,key,value in [('asr','cer',.3),('asr','polarity_counts_match',False),
+                                ('audio','peak',1.0),('audio','rms_dbfs',-60)]:
+            changed=copy.deepcopy(voice);changed['recordings'][0][group][key]=value
+            with self.subTest(key=key),self.assertRaises(ValueError):
+                validate_approval(machine,human,'1.0.0',authorization,changed)
+
+    def test_voice_publication_requires_packaged_qwen_license(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path,selection=self.fixture_zip(Path(temp))
+            with self.assertRaisesRegex(ValueError,'Qwen license'):
+                validate_zip(path,{**selection,'qwen_license_required':'true'})
+
     def test_pending_human_groups_cannot_be_replaced_by_machine_pass(self):
         for group in ("ordinary_windows", "display_dpi", "listening", "creative_and_freeze", "reading_time"):
             with self.subTest(group=group):

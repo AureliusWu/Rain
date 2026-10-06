@@ -74,13 +74,90 @@ def postprocess(raw,output):
     return measured
 
 
+def decode_for_asr(file):
+    # faster-whisper accepts 16 kHz numpy samples directly. Avoid PyAV API drift.
+    import numpy as np
+    result = subprocess.run(['ffmpeg','-nostdin','-v','error','-i',str(file),'-ar','16000',
+                             '-ac','1','-f','f32le','pipe:1'],capture_output=True,check=True)
+    samples = np.frombuffer(result.stdout,dtype='<f4').copy()
+    require(len(samples) > 0 and np.isfinite(samples).all(),'Invalid independent ASR input')
+    return samples
+
+
+def validate_reuse(bundle,plan,provider,records):
+    require(provider.get('model_id') == MODEL_ID and provider.get('revision') == REVISION
+            and provider.get('speaker') == SPEAKER,'Wrong saved provider')
+    require(len(records) == len(plan['lines']) == 17,'Incomplete saved recordings')
+    for record,row in zip(records,plan['lines']):
+        require(all(record[k] == row[k] for k in ('voice_id','line_id','text','instruct','seed')),'Saved request changed')
+        for kind in ('raw','wav','ogg'):
+            file=(bundle/record['files'][kind]['path']).resolve()
+            require(file.is_relative_to(bundle.resolve()),'Unsafe saved recording path')
+            require(sha256(file.read_bytes()) == record['files'][kind]['sha256'],'Saved recording hash mismatch')
+        require(audio_metadata(bundle/record['files']['wav']['path']) == record['source_audio']
+                and audio_metadata(bundle/record['files']['ogg']['path']) == record['audio'],'Saved metadata mismatch')
+
+
+def finish(args,plan,provider,recordings):
+    import numpy as np
+    import soundfile as sf
+    from huggingface_hub import HfApi, snapshot_download
+    from faster_whisper import WhisperModel
+    from opencc import OpenCC
+    converter = OpenCC('t2s')
+    asr_info = HfApi().model_info('Systran/faster-whisper-small')
+    asr_path = snapshot_download('Systran/faster-whisper-small',revision=asr_info.sha)
+    asr = WhisperModel(asr_path,device='cpu',compute_type='int8',cpu_threads=4)
+    errors = []
+    for row in recordings:
+        segments,_ = asr.transcribe(decode_for_asr(args.output/row['files']['wav']['path']),language='zh',beam_size=5,
+                                   condition_on_previous_text=False,initial_prompt='以下为简体中文口语录音。',vad_filter=False)
+        transcript = ''.join(s.text for s in segments)
+        expected,actual = normalize_text(row['text'],converter),normalize_text(transcript,converter)
+        cer = character_error_rate(expected,actual)
+        polarity = all(expected.count(c) == actual.count(c) for c in ('不','没'))
+        row['asr'] = {'transcript':transcript,'normalized_text':actual,'cer':round(cer,6),
+                      'polarity_counts_match':polarity,'passed':bool(actual) and cer <= .2 and polarity}
+        if not row['asr']['passed']: errors.append(row['voice_id'])
+        print(f"ASR {row['voice_id']}: CER={cer:.3f}; {transcript}",flush=True)
+    write_json('generation.json',{'schema_version':1,'status':'signals_and_asr_passed' if not errors else 'asr_review_required',
+               'producer_commit':os.environ.get('ORIGINAL_GENERATION_COMMIT',os.environ.get('GITHUB_SHA')),
+               'producer_run':os.environ.get('ORIGINAL_GENERATION_RUN',os.environ.get('GITHUB_RUN_ID')),
+               'verification_commit':os.environ.get('GITHUB_SHA'),'verification_run':os.environ.get('GITHUB_RUN_ID'),
+               'request_sha256':sha256(args.request.read_bytes()),'source_voice_manifest_sha256':plan['source_voice_manifest_sha256'],
+               'source_story_sha256':plan['source_story_sha256'],'recordings':recordings,'provider':provider,
+               'asr_model':'Systran/faster-whisper-small','asr_revision':asr_info.sha,'asr_max_cer':.2,
+               'unresolved_machine_issues':errors,'human_listening':False,
+               'limits':'ASR and signal checks do not establish human listening or final creative approval.'})
+    require(not errors,'ASR needs review: '+', '.join(errors))
+    comparison,index,cursor = [],[],0.0
+    current = {v['voice_id']:v for v in json.loads((ROOT/'game/data/voice_manifest.json').read_text())['voices']}
+    for name in [recordings[i]['voice_id'] for i in (0,6,15)]:
+        for label,file in [('Kokoro',ROOT/current[name]['source_file']),('Qwen3-TTS Serena',args.output/'wav'/(name+'.wav'))]:
+            samples,rate = sf.read(file,dtype='float32')
+            require(rate == 24000,'Comparison sample rate mismatch')
+            index.append({'voice_id':name,'engine':label,'start_seconds':round(cursor,3),'end_seconds':round(cursor+len(samples)/rate,3)})
+            comparison.extend([samples,np.zeros(rate,dtype=np.float32)]);cursor += len(samples)/rate+1
+    sf.write(args.output/'VOICE_COMPARISON.wav',np.concatenate(comparison),24000,subtype='PCM_16')
+    write_json('VOICE_COMPARISON.json',index)
+
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--request',type=Path,default=ROOT/'prompts/voice/qwen_heroine_v1.json')
     parser.add_argument('--output',type=Path,required=True)
+    parser.add_argument('--reuse',action='store_true',help='Verify preserved recordings without running TTS again')
     args = parser.parse_args()
     plan = json.loads(args.request.read_text(encoding='utf-8'))
     validate_plan(plan)
+    if args.reuse:
+        provider=json.loads((args.output/'provider.json').read_text(encoding='utf-8'))
+        recordings=json.loads((args.output/'partial.json').read_text(encoding='utf-8'))
+        require(sha256((ROOT/'game/data/voice_manifest.json').read_bytes()) == plan['source_voice_manifest_sha256'],'Saved voice source changed')
+        validate_reuse(args.output,plan,provider,recordings)
+        finish(args,plan,provider,recordings)
+        return
     require(not args.output.exists(),'Output already exists; inspect outcome before retry')
     for folder in ('raw','wav','ogg'): (args.output/folder).mkdir(parents=True)
     import numpy as np
@@ -137,43 +214,7 @@ def main():
         print(f"Generated {row['voice_id']}: {recordings[-1]['duration_seconds']}s; {recordings[-1]['generation_seconds']}s CPU",flush=True)
     del engine,wavs
     gc.collect()
-    from faster_whisper import WhisperModel
-    from opencc import OpenCC
-    converter = OpenCC('t2s')
-    asr_info = HfApi().model_info('Systran/faster-whisper-small')
-    asr_path = snapshot_download('Systran/faster-whisper-small',revision=asr_info.sha)
-    asr = WhisperModel(asr_path,device='cpu',compute_type='int8',cpu_threads=4)
-    errors = []
-    for row in recordings:
-        segments,_ = asr.transcribe(str(args.output/row['files']['wav']['path']),language='zh',beam_size=5,
-                                   condition_on_previous_text=False,initial_prompt='以下为简体中文口语录音。',vad_filter=False)
-        transcript = ''.join(s.text for s in segments)
-        expected,actual = normalize_text(row['text'],converter),normalize_text(transcript,converter)
-        cer = character_error_rate(expected,actual)
-        polarity = all(expected.count(c) == actual.count(c) for c in ('不','没'))
-        row['asr'] = {'transcript':transcript,'normalized_text':actual,'cer':round(cer,6),
-                      'polarity_counts_match':polarity,'passed':bool(actual) and cer <= .2 and polarity}
-        if not row['asr']['passed']: errors.append(row['voice_id'])
-        print(f"ASR {row['voice_id']}: CER={cer:.3f}; {transcript}",flush=True)
-    write_json('generation.json',{'schema_version':1,'status':'signals_and_asr_passed' if not errors else 'asr_review_required',
-               'producer_commit':os.environ.get('GITHUB_SHA'),'producer_run':os.environ.get('GITHUB_RUN_ID'),
-               'request_sha256':sha256(args.request.read_bytes()),'source_voice_manifest_sha256':plan['source_voice_manifest_sha256'],
-               'source_story_sha256':plan['source_story_sha256'],'recordings':recordings,'provider':provider,
-               'asr_model':'Systran/faster-whisper-small','asr_revision':asr_info.sha,'asr_max_cer':.2,
-               'unresolved_machine_issues':errors,'human_listening':False,
-               'limits':'ASR and signal checks do not establish human listening or final creative approval.'})
-    require(not errors,'ASR needs review: '+', '.join(errors))
-    comparison,index,cursor = [],[],0.0
-    current = {v['voice_id']:v for v in json.loads((ROOT/'game/data/voice_manifest.json').read_text())['voices']}
-    for name in [recordings[i]['voice_id'] for i in (0,6,15)]:
-        for label,file in [('Kokoro',ROOT/current[name]['source_file']),('Qwen3-TTS Serena',args.output/'wav'/(name+'.wav'))]:
-            samples,rate = sf.read(file,dtype='float32')
-            require(rate == 24000,'Comparison sample rate mismatch')
-            index.append({'voice_id':name,'engine':label,'start_seconds':round(cursor,3),'end_seconds':round(cursor+len(samples)/rate,3)})
-            comparison.extend([samples,np.zeros(rate,dtype=np.float32)]);cursor += len(samples)/rate+1
-    sf.write(args.output/'VOICE_COMPARISON.wav',np.concatenate(comparison),24000,subtype='PCM_16')
-    write_json('VOICE_COMPARISON.json',index)
-
+    finish(args,plan,provider,recordings)
 
 if __name__ == '__main__':
     main()

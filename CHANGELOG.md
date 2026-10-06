@@ -1,3 +1,10 @@
+# v1.0 免费语音升级（制作中）
+
+- 根据用户指令选用免费开源 Qwen3-TTS 1.7B CustomVoice / Serena，为 17 句关键台词保存具体表演指令。
+- 增加固定模型来源、源 WAV / OGG、双遍响度处理与独立 ASR 核验；保留旧 Kokoro 音频历史。
+- 主菜单版本显示统一为 v1.0.0。正式发布采用用户本次明确授权；真人试听、计时与普通电脑体验继续保留真实状态。
+- 生成与新版 Windows 验收完成后更新本条，不以管线配置存在宣称音频已替换或正式版已发布。
+
 # v1.0 候选更新 — 2026-10-06
 
 候选 `7593a348bf28e196c2ee3a55fd1e14c837289ef3` / [Windows CI 37411258713](https://github.com/AureliusWu/Test/actions/runs/37411258713)；原始游戏 ZIP **56,354,657 字节**，SHA-256 `4ecba6cea822947b08bc8a877af2d5eed4ccbb3ffdd367c92032c236f5dac048`。

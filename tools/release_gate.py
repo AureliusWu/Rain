@@ -63,9 +63,63 @@ def validate_machine(machine, version):
             "sha256": package["sha256"], "size": package["size_in_bytes"]}
 
 
-def validate_approval(machine, human, version):
+def validate_approval(machine, human, version, publication=None, voice=None):
     selection = validate_machine(machine, version)
     require(isinstance(human, dict), "Human acceptance must be a JSON object")
+    if publication is not None:
+        require(isinstance(publication, dict) and publication.get('schema_version') == 1
+                and publication.get('status') == 'authorized_by_user', 'Invalid publication authorization')
+        require(publication.get('version') == version
+                and publication.get('candidate_commit') == selection['candidate']
+                and publication.get('package_sha256') == selection['sha256'], 'Publication targets another candidate or ZIP')
+        require(publication.get('instruction') == '完成后发布正式版'
+                and publication.get('condition') == 'voice_upgrade_completed'
+                and has_text(publication.get('requested_at')), 'Missing explicit conditional publication instruction')
+        require(human.get('version') == version and human.get('candidate_commit') == selection['candidate']
+                and human.get('package_sha256') == selection['sha256'], 'Human follow-up targets another candidate')
+        require(human.get('schema_version') == 1 and human.get('status') in ('pending','approved') and human.get('unresolved_issues') == [],
+                'Unresolved human issues or malformed follow-up record')
+        pending = []
+        for group in (*GROUPS, 'reading_time'):
+            item = human.get(group)
+            require(isinstance(item,dict) and item.get('status') in ('pending','passed'), 'Invalid human follow-up status')
+            if item['status'] == 'pending':
+                pending.append(group)
+                require(item.get('evidence') == '', 'Pending group cannot claim completed evidence')
+            else:
+                require(has_text(item.get('evidence')), 'Completed group lacks evidence')
+        require(publication.get('pending_human_checks') == pending, 'Authorization must disclose actual pending checks')
+        require(human['status'] == ('pending' if pending else 'approved'), 'Human overall status disagrees with groups')
+        if 'reading_time' in pending:
+            require(human['reading_time'].get('normal_minutes') is None and human['reading_time'].get('true_minutes') is None,
+                    'Pending timing cannot claim measured minutes')
+        require(isinstance(voice,dict) and voice.get('status') == 'signals_and_asr_passed'
+                and voice.get('unresolved_machine_issues') == [] and voice.get('human_listening') is False,
+                'Voice upgrade verification incomplete')
+        provider = voice.get('provider', {})
+        from tools.audio_process.qwen_voice import MODEL_ID, REVISION, SPEAKER
+        require(isinstance(provider,dict) and (provider.get('model_id'),provider.get('revision'),provider.get('speaker'))
+                == (MODEL_ID, REVISION, SPEAKER), 'Wrong voice provider')
+        records = voice.get('recordings')
+        require(isinstance(records,list) and len(records) == 17 and all(isinstance(r,dict) for r in records), 'Incomplete voice set')
+        require(len({r.get('voice_id') for r in records}) == 17, 'Duplicate voice recordings')
+        for recording in records:
+            asr, audio = recording.get('asr', {}), recording.get('audio', {})
+            require(isinstance(asr,dict) and asr.get('passed') is True and asr.get('polarity_counts_match') is True
+                    and type(asr.get('cer')) in (int,float) and 0 <= asr['cer'] <= .2, 'Failed voice transcription')
+            require(isinstance(audio,dict) and audio.get('sample_rate') == 24000 and audio.get('channels') == 1
+                    and type(audio.get('frames')) is int and audio['frames'] > 0
+                    and type(audio.get('peak')) in (int,float) and 0 < audio['peak'] < .99
+                    and type(audio.get('rms_dbfs')) in (int,float) and -30 <= audio['rms_dbfs'] <= -18,
+                    'Failed voice signal checks')
+        require(publication.get('voice_generation_commit') == voice.get('producer_commit')
+                and isinstance(voice.get('producer_commit'),str) and HEX40.fullmatch(voice['producer_commit']),
+                'Voice production identity mismatch')
+        digest = publication.get('voice_generation_sha256')
+        upgrade = machine.get('voice_upgrade')
+        require(isinstance(digest,str) and HEX64.fullmatch(digest)
+                and isinstance(upgrade,dict) and upgrade.get('generation_sha256') == digest, 'Voice evidence binding mismatch')
+        return {**selection, 'approval_mode':'user_requested_after_voice_upgrade', 'qwen_license_required':'true'}
     require(human.get("schema_version") == 1 and human.get("status") == "approved", "Human acceptance pending")
     require(human.get("version") == version and human.get("candidate_commit") == selection["candidate"], "Human acceptance targets another candidate")
     require(human.get("package_sha256") == selection["sha256"], "Human acceptance targets another ZIP")
@@ -110,12 +164,16 @@ def validate_zip(path, selection):
         require(info.get("version") == selection["version"], "ZIP build version mismatch")
         for file in ("PLAYER_README.txt", "CREDITS.md", "LICENSE", "licenses/RENPY.txt", "licenses/SourceHanSans-OFL.txt", "licenses/Kokoro-model-Apache-2.0.txt"):
             require(f"{root}/{file}" in names, f"Missing player/license file: {file}")
+        if selection.get('qwen_license_required') == 'true':
+            require(f'{root}/licenses/Qwen3-TTS-Apache-2.0.txt' in names, 'Missing Qwen license')
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--machine", type=Path, default=Path("docs/evidence/v10-acceptance.json"))
     parser.add_argument("--human", type=Path, default=Path("docs/review/V10_HUMAN_ACCEPTANCE.json"))
+    parser.add_argument('--authorization',type=Path,default=Path('docs/review/V10_PUBLICATION_AUTHORIZATION.json'))
+    parser.add_argument('--voice',type=Path,default=Path('docs/evidence/voice-qwen-generation.json'))
     parser.add_argument("--version", required=True)
     parser.add_argument("--zip", type=Path)
     parser.add_argument("--preview", type=Path)
@@ -123,8 +181,14 @@ def main():
     args = parser.parse_args()
     try:
         machine = json.loads(args.machine.read_text(encoding="utf-8"))
+        validate_machine(machine,args.version)
+        publication = json.loads(args.authorization.read_text(encoding='utf-8')) if args.authorization.exists() else None
+        voice = json.loads(args.voice.read_text(encoding='utf-8')) if publication is not None else None
         selection = validate_approval(machine,
-                                      json.loads(args.human.read_text(encoding="utf-8")), args.version)
+                                      json.loads(args.human.read_text(encoding="utf-8")), args.version, publication, voice)
+        if publication is not None:
+            require(hashlib.sha256(args.voice.read_bytes()).hexdigest() == publication['voice_generation_sha256'],
+                    'Voice generation evidence bytes changed')
         if args.zip:
             validate_zip(args.zip, selection)
         if args.preview:

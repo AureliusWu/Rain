@@ -1,0 +1,68 @@
+name: Resume saved Qwen recording verification
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/voice_verify.yml']
+  workflow_dispatch:
+
+concurrency:
+  group: voice-qwen-main
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      actions: read
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PYTHONUTF8: '1'
+      PYTHONUNBUFFERED: '1'
+      HF_HUB_DISABLE_TELEMETRY: '1'
+      ORT_DISABLE_TELEMETRY: '1'
+      DO_NOT_TRACK: '1'
+      ORIGINAL_GENERATION_COMMIT: faad6507d801dd653c4ad10e4ee489b97965acc3
+      ORIGINAL_GENERATION_RUN: '37436201390'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install verification dependencies without TTS model
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          python -m pip install -r requirements-dev.txt faster-whisper==1.2.1 opencc-python-reimplemented==0.1.7
+      - name: Download exact saved recording artifact
+        run: |
+          gh api repos/AureliusWu/Test/actions/artifacts/11399970230 > artifact-info.json
+          python -c "import json; a=json.load(open('artifact-info.json')); assert a['id']==11399970230 and a['digest']=='sha256:1aa39f263aba666d1c37dd793ce4c1de47ac54966d772b00de3e3f51b1397452' and not a['expired']"
+          gh run download 37436201390 --repo AureliusWu/Test --name qwen-serena-faad6507d801dd653c4ad10e4ee489b97965acc3 --dir reports/qwen-voice
+      - name: Check all saved hashes and independently transcribe
+        run: python -m tools.audio_process.generate_qwen --output reports/qwen-voice --reuse
+      - name: Adopt verified recordings and run complete author checks
+        run: |
+          python -m tools.audio_process.adopt_qwen --bundle reports/qwen-voice
+          python -m tools.validate > reports/qwen-voice/author-validation.txt 2>&1
+      - name: Commit audio with a main lease
+        env:
+          EXPECTED_HEAD: ${{ github.sha }}
+        run: |
+          current=$(git ls-remote origin refs/heads/main | cut -f1)
+          test "$current" = "$EXPECTED_HEAD"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add game/data game/audio/voice assets_source/audio/voice game/script game/testcases.rpy game/options.rpy CREDITS.md PLAYER_README.txt docs/review/VOICE_KOKORO_ARCHIVE.json docs/evidence/voice-qwen-generation.json
+          git commit -m 'feat: integrate 17 verified Qwen Serena heroine recordings'
+          git push origin HEAD:main
+          git rev-parse HEAD > reports/qwen-voice/integration-commit.txt
+      - name: Preserve verification, audio and comparison evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qwen-verified-${{ github.sha }}
+          path: reports/qwen-voice/
+          if-no-files-found: warn

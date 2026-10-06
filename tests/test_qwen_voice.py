@@ -3,6 +3,10 @@ import copy
 import json
 import tempfile
 import unittest
+import numpy as np
+import soundfile as sf
+from tools.asset_paths import sha256
+from tools.audio_process.metadata import audio_metadata
 from pathlib import Path
 from tools.story_model import ROOT
 from tools.audio_process.generate_qwen import validate_plan, character_error_rate, normalize_text
@@ -61,6 +65,57 @@ class QwenVoiceTests(unittest.TestCase):
             (bundle/'generation.json').write_text(json.dumps({'status':'asr_review_required'}))
             with self.assertRaises(ValueError): prepare(bundle)
         self.assertEqual((ROOT/'game/data/voice_manifest.json').read_bytes(),original)
+
+    def verified_fixture_bundle(self,directory):
+        # Synthetic sine fixture checks adoption validation only; never used as game speech.
+        bundle=Path(directory)
+        samples=.12*np.sin(2*np.pi*440*np.arange(24000)/24000)
+        recordings=[]
+        for row in self.plan['lines']:
+            files={}
+            for kind in ('wav','ogg'):
+                file=bundle/(row['voice_id']+'.'+kind)
+                sf.write(file,samples,24000,format='WAV' if kind=='wav' else 'OGG',
+                         subtype='PCM_16' if kind=='wav' else 'VORBIS')
+                files[kind]={'path':file.name,'sha256':sha256(file.read_bytes())}
+            recordings.append({**row,'files':files,'duration_seconds':1.0,
+                'source_audio':audio_metadata(bundle/files['wav']['path']),
+                'audio':audio_metadata(bundle/files['ogg']['path']),
+                'asr':{'passed':True,'polarity_counts_match':True,'cer':0.0}})
+        report={'status':'signals_and_asr_passed','unresolved_machine_issues':[],'human_listening':False,
+                'request_sha256':sha256((ROOT/'prompts/voice/qwen_heroine_v1.json').read_bytes()),
+                'source_story_sha256':self.plan['source_story_sha256'],
+                'source_voice_manifest_sha256':self.plan['source_voice_manifest_sha256'],
+                'provider':{'model_id':MODEL_ID,'revision':REVISION,'wrapper':'qwen-tts-0.1.1',
+                    'torch_version':'fixture','processing':PROCESSING,**{k:'a'*64 for k in
+                    ('model_sha256','voice_bank_sha256','config_sha256','checkpoint_sha256')}},
+                'recordings':recordings}
+        (bundle/'generation.json').write_text(json.dumps(report),encoding='utf-8')
+        return bundle,report
+
+    def test_bundle_hash_and_escape_fail_without_writing_any_game_file(self):
+        # Applicable before adoption. After integration the original manifest intentionally differs.
+        if sha256((ROOT/'game/data/voice_manifest.json').read_bytes()) != self.plan['source_voice_manifest_sha256']:
+            root=tempfile.TemporaryDirectory();self.addCleanup(root.cleanup)
+            fixture=Path(root.name)
+            import shutil
+            for relative in ('game/data/story.json','prompts','game/data/voice_manifest.json','game/data/asset_manifest.json'):
+                target=fixture/relative;target.parent.mkdir(parents=True,exist_ok=True)
+                if (ROOT/relative).is_dir(): shutil.copytree(ROOT/relative,target)
+                else: shutil.copy2(ROOT/relative,target)
+            archived=json.loads((ROOT/'docs/review/VOICE_KOKORO_ARCHIVE.json').read_text(encoding='utf-8'))
+            original=json.dumps(archived['voice_manifest'],ensure_ascii=False,indent=2)+'\n'
+            (fixture/'game/data/voice_manifest.json').write_text(original,encoding='utf-8')
+            test_root=fixture
+        else: test_root=ROOT
+        with tempfile.TemporaryDirectory() as directory:
+            bundle,report=self.verified_fixture_bundle(directory)
+            first=bundle/report['recordings'][0]['files']['ogg']['path']
+            first.write_bytes(b'OggS invalid fixture')
+            with self.assertRaisesRegex(ValueError,'Bundle hash'): prepare(bundle,test_root)
+            report['recordings'][0]['files']['ogg']['path']='../escaped.ogg'
+            (bundle/'generation.json').write_text(json.dumps(report),encoding='utf-8')
+            with self.assertRaisesRegex(ValueError,'Unsafe bundle path'): prepare(bundle,test_root)
 
 
 if __name__ == '__main__':

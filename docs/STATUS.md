@@ -1,3 +1,11 @@
+# v1.0 免费语音升级进度（当前批次）
+
+Qwen3-TTS 1.7B / Serena 制作管线已提交，生成任务 37436201390 正在执行。作者侧 112 项 Python、全部校验与 Linux lint 已通过。下方为之前的 Kokoro 候选验收历史，新配音需要重新生成安装包并完成 Windows 全链路，尚未发布正式版。
+
+用户新增指令为“完成后发布正式版”；独立发布授权将绑定新版提交、语音证据和安装包字节，同时保留真人统一操作项。实施说明见 VOICE_UPGRADE_V10.md。
+
+---
+
 # v1.0 候选更新 — 2026-10-06
 
 候选 `7593a348bf28e196c2ee3a55fd1e14c837289ef3` / [Windows CI 37411258713](https://github.com/AureliusWu/Test/actions/runs/37411258713)；原始游戏 ZIP **56,354,657 字节**，SHA-256 `4ecba6cea822947b08bc8a877af2d5eed4ccbb3ffdd367c92032c236f5dac048`。

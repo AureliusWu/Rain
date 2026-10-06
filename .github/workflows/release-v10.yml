@@ -1,10 +1,14 @@
 name: Publish exact approved v1 Windows package
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/review/V10_PUBLICATION_AUTHORIZATION.json'
   workflow_dispatch:
     inputs:
       expected_version:
-        description: Human-approved VERSION value
+        description: Authorized VERSION value
         required: true
         default: '1.0.0'
         type: string
@@ -24,13 +28,13 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
       PYTHONUTF8: '1'
-      EXPECTED_VERSION: ${{ inputs.expected_version }}
+      EXPECTED_VERSION: ${{ inputs.expected_version || '1.0.0' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Bind machine and human approval to exact candidate
+      - name: Bind machine checks and user publication authorization to exact candidate
         id: accepted
         shell: pwsh
         run: |

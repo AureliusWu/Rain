@@ -25,3 +25,8 @@
 真实 `V10_HUMAN_ACCEPTANCE.json` 内容保留，五组均为 pending。正式检查的实际结果仍为 `Release blocked: Human acceptance pending`；未创建 tag 或 Release。用户继续在已交付审阅包的 `REVIEW_RESULT_TEMPLATE.md` 统一填写试听、阅读计时、普通 Windows / DPI 和创作意见。
 
 本轮提交标为 `[skip ci]`：已完成作者工具验证，继续绑定原游戏包与 Windows 证据。后续若修改游戏或资产，重新建立候选、完成 Windows 全链路并更新真实人工绑定。
+# 本次发布授权更新（2026-10-06）
+
+用户明确要求免费语音升级完成后发布正式版。发布检查现支持独立的 `review/V10_PUBLICATION_AUTHORIZATION.json`，绑定新候选提交、同字节安装包和 17 句 Qwen 生成证据，并列出真人检查的真实 pending 状态。原有完整真人验收路径继续可用，机器失败、语音生成或转写未通过、目标包不一致仍阻止发布。
+
+正式工作流可由该授权文件的 main 提交触发；语音生成和资产集成后需重新完成 Windows Game validation。不得沿用旧 Kokoro 包的 Windows 结果作为新版音频验收。
