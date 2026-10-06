@@ -439,7 +439,9 @@ def render_tests(story):
               '    assert id "voice_replay"', '    click id "voice_replay"', playing('voice', voice_file),
               f'    assert eval {replay_state} == _test.voice_replay_state',
               '    screenshot "scaled-voice-replay-after-load"',
-              '    advance', '    assert not id "voice_replay"',
+              # The say behavior cannot dismiss while a screen button has mouse focus.
+              # Move to the dialogue before sending the engine's dismiss event.
+              '    move id "what"', '    advance', '    assert not id "voice_replay"',
               '    click id "rollback_run"',
               f'    pause until {quote(dialogue["s01_arrival_l005"]["text"])}',
               '    assert id "voice_replay"', '    click id "voice_replay"', playing('voice', voice_file),

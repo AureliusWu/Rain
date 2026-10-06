@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "status": "failed_and_corrected_pending_rerun",
+  "candidate_commit": "282ecabf123da90723a8e9ecab28a1a2b18bdd1f",
+  "run_id": 37488485901,
+  "job_id": 112355279424,
+  "case": "current_voice_replay_and_restore",
+  "case_result": "failed",
+  "executed_assertions": 13,
+  "passed_assertions": 13,
+  "timeout_seconds": 45.0,
+  "failed_statement": "advance after scaled-voice-replay-after-load",
+  "engine_evidence": "RenPy 8.5.3 renpy/display/behavior.py SayBehavior.event requires focus for the dismiss event. The test mouse remained over voice_replay.",
+  "correction": "Move the mouse to dialogue widget what before emitting dismiss, in current voice replay and published old-save reader cases. Preserve all assertions and the complete regression.",
+  "artifact": {
+    "id": 11424303019,
+    "bytes": 9060331,
+    "sha256": "08bbb737faf542811dc035b79d6711fc69bdefad1ef67adbe3484291b6d9c53d"
+  },
+  "publication_blocked": true,
+  "full_regression_not_reached": true
+}

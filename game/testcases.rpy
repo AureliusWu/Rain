@@ -135,6 +135,7 @@ testcase current_voice_replay_and_restore:
     pause 0.3
     pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
     screenshot "scaled-voice-replay-after-load"
+    move id "what"
     advance
     assert not id "voice_replay"
     click id "rollback_run"

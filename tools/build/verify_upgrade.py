@@ -63,7 +63,7 @@ def render_upgrade_reader(story):
              '    assert eval affection == 0 and trust == 0 and not truth_known',
              '    assert id "voice_replay"', '    click id "voice_replay"',
              f'    assert eval renpy.music.get_playing(channel="voice") == {voice_file!r}',
-             '    screenshot "upgrade-v101-voice-load"', '    advance',
+             '    screenshot "upgrade-v101-voice-load"', '    move id "what"', '    advance',
              f'    assert {quote(dialogue["s01_arrival_l006"]["text"])}', '    assert not id "voice_replay"',
              f'    $ test_history_voice_index = next(i for i, h in enumerate(_history_list) if h.voice and h.voice.filename == {voice_file!r})',
              '    click id "history_open"', '    click id ("history_voice_%d" % test_history_voice_index)',
