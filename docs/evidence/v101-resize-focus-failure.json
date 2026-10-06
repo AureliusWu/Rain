@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "status": "failed_and_corrected_pending_rerun",
+  "candidate_commit": "518e2b62ac21e5426473329341ffad6de2ec4f66",
+  "run_id": 37493710207,
+  "job_id": 112372731844,
+  "phase": "four_case_voice_prefix",
+  "first_iteration": {"cases": 4, "passed": 4, "assertions": 59, "passed_assertions": 59},
+  "second_iteration": {"cases": 4, "passed": 3, "failed": 1, "assertions": 48, "passed_assertions": 47, "failed_assertions": 1},
+  "failed_case": "current_voice_replay_and_restore",
+  "failed_statement": "voice playing assertion after changing physical window size and clicking current replay",
+  "observation": "The game was already on the next silent narration, so the click dismissed rather than activating replay. The new native mute roundtrip passed both iterations.",
+  "engine_evidence": "RenPy 8.5.3 testfocus.find_position randomizes an unspecified point; testmouse posts motion/down/up together. Widget existence and requested physical size do not establish that button focus is ready.",
+  "correction": "Allow the resized display to settle; move to button center, wait for the actual widget to be focused, then click that center. Apply to current/history/auto/old-save replay. Keep all 404 full assertions and two prefix iterations; add diagnostic playback/state prints.",
+  "artifact": {"id": 11425909598, "bytes": 48316445, "sha256": "57c0caf6cf9c088bc8b1741a2dd8bfa141369cff1e35fd77a24ad6357b4c276e"},
+  "publication_blocked": true,
+  "full_regression_not_reached": true
+}

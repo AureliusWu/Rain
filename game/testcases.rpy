@@ -97,7 +97,11 @@ testcase current_voice_replay_and_restore:
     assert id "voice_replay"
     pause until eval renpy.music.get_playing(channel="voice") is None
     $ _test.voice_replay_state = (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what)
-    click id "voice_replay"
+    move pos (0.5, 0.4)
+    move id "voice_replay" pos (0.5, 0.5)
+    pause until eval renpy.get_widget("say", "voice_replay") is not None and renpy.get_widget("say", "voice_replay").is_focused()
+    click id "voice_replay" pos (0.5, 0.5)
+    $ print("Current replay click:", renpy.get_physical_size(), _last_voice_play, renpy.music.get_playing(channel="voice"), _last_say_what)
     assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
     assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == _test.voice_replay_state
     pause 0.3
@@ -106,8 +110,13 @@ testcase current_voice_replay_and_restore:
     run Preference("display", "window")
     $ renpy.set_physical_size((1280, 720))
     pause until eval renpy.get_physical_size() == (1280, 720)
+    pause 0.3
     assert id "voice_replay"
-    click id "voice_replay"
+    move pos (0.5, 0.4)
+    move id "voice_replay" pos (0.5, 0.5)
+    pause until eval renpy.get_widget("say", "voice_replay") is not None and renpy.get_widget("say", "voice_replay").is_focused()
+    click id "voice_replay" pos (0.5, 0.5)
+    $ print("Current replay click:", renpy.get_physical_size(), _last_voice_play, renpy.music.get_playing(channel="voice"), _last_say_what)
     assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
     assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == _test.voice_replay_state
     pause 0.3
@@ -129,7 +138,11 @@ testcase current_voice_replay_and_restore:
         click id "confirm_yes"
     pause until "你还是和以前一样，出门不看天气。"
     assert id "voice_replay"
-    click id "voice_replay"
+    move pos (0.5, 0.4)
+    move id "voice_replay" pos (0.5, 0.5)
+    pause until eval renpy.get_widget("say", "voice_replay") is not None and renpy.get_widget("say", "voice_replay").is_focused()
+    click id "voice_replay" pos (0.5, 0.5)
+    $ print("Current replay click:", renpy.get_physical_size(), _last_voice_play, renpy.music.get_playing(channel="voice"), _last_say_what)
     assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
     assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == _test.voice_replay_state
     pause 0.3
@@ -141,7 +154,11 @@ testcase current_voice_replay_and_restore:
     click id "rollback_run"
     pause until "你还是和以前一样，出门不看天气。"
     assert id "voice_replay"
-    click id "voice_replay"
+    move pos (0.5, 0.4)
+    move id "voice_replay" pos (0.5, 0.5)
+    pause until eval renpy.get_widget("say", "voice_replay") is not None and renpy.get_widget("say", "voice_replay").is_focused()
+    click id "voice_replay" pos (0.5, 0.5)
+    $ print("Current replay click:", renpy.get_physical_size(), _last_voice_play, renpy.music.get_playing(channel="voice"), _last_say_what)
     assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
     assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == _test.voice_replay_state
 
@@ -157,7 +174,11 @@ testcase history_voice_replay:
     assert screen "history"
     assert eval [h.voice.filename for h in _history_list if h.voice and h.voice.filename] == ['audio/voice/heroine_s01_arrival_l005_v1.ogg']
     assert eval renpy.get_widget("history", "history_voice_%d" % test_silent_history_index) is None
-    click id ("history_voice_%d" % test_history_voice_index)
+    move pos (0.5, 0.4)
+    move id ("history_voice_%d" % test_history_voice_index) pos (0.5, 0.5)
+    pause until eval renpy.get_widget("history", "history_voice_%d" % test_history_voice_index) is not None and renpy.get_widget("history", "history_voice_%d" % test_history_voice_index).is_focused()
+    click id ("history_voice_%d" % test_history_voice_index) pos (0.5, 0.5)
+    $ print("History replay click:", renpy.get_physical_size(), preferences.get_mute("voice"), renpy.music.get_playing(channel="voice"))
     assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
     assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == _test.voice_replay_state
     assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/rain_theme.ogg'
@@ -168,7 +189,12 @@ testcase history_voice_replay:
     run Preference("display", "window")
     $ renpy.set_physical_size((1280, 720))
     pause until eval renpy.get_physical_size() == (1280, 720)
-    click id ("history_voice_%d" % test_history_voice_index)
+    pause 0.3
+    move pos (0.5, 0.4)
+    move id ("history_voice_%d" % test_history_voice_index) pos (0.5, 0.5)
+    pause until eval renpy.get_widget("history", "history_voice_%d" % test_history_voice_index) is not None and renpy.get_widget("history", "history_voice_%d" % test_history_voice_index).is_focused()
+    click id ("history_voice_%d" % test_history_voice_index) pos (0.5, 0.5)
+    $ print("History replay click:", renpy.get_physical_size(), preferences.get_mute("voice"), renpy.music.get_playing(channel="voice"))
     assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
     pause 0.3
     pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
@@ -179,7 +205,11 @@ testcase history_voice_replay:
     assert eval preferences.get_mute("voice")
     click "历史"
     pause until screen "history"
-    click id ("history_voice_%d" % test_history_voice_index)
+    move pos (0.5, 0.4)
+    move id ("history_voice_%d" % test_history_voice_index) pos (0.5, 0.5)
+    pause until eval renpy.get_widget("history", "history_voice_%d" % test_history_voice_index) is not None and renpy.get_widget("history", "history_voice_%d" % test_history_voice_index).is_focused()
+    click id ("history_voice_%d" % test_history_voice_index) pos (0.5, 0.5)
+    $ print("History replay click:", renpy.get_physical_size(), preferences.get_mute("voice"), renpy.music.get_playing(channel="voice"))
     assert eval preferences.get_mute("voice")
     pause until eval renpy.music.get_playing(channel="voice") is None
     assert eval renpy.music.get_playing(channel="voice") is None
@@ -189,7 +219,11 @@ testcase history_voice_replay:
     assert eval not preferences.get_mute("voice")
     click "历史"
     pause until screen "history"
-    click id ("history_voice_%d" % test_history_voice_index)
+    move pos (0.5, 0.4)
+    move id ("history_voice_%d" % test_history_voice_index) pos (0.5, 0.5)
+    pause until eval renpy.get_widget("history", "history_voice_%d" % test_history_voice_index) is not None and renpy.get_widget("history", "history_voice_%d" % test_history_voice_index).is_focused()
+    click id ("history_voice_%d" % test_history_voice_index) pos (0.5, 0.5)
+    $ print("History replay click:", renpy.get_physical_size(), preferences.get_mute("voice"), renpy.music.get_playing(channel="voice"))
     pause until eval renpy.music.get_playing(channel="voice") == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
     assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
     click id "game_return"
@@ -214,7 +248,11 @@ testcase auto_waits_for_replayed_voice:
     $ test_history_length = len(_history_list)
     click id "auto_run"
     pause 0.5
-    click id "voice_replay"
+    move pos (0.5, 0.4)
+    move id "voice_replay" pos (0.5, 0.5)
+    pause until eval renpy.get_widget("say", "voice_replay") is not None and renpy.get_widget("say", "voice_replay").is_focused()
+    click id "voice_replay" pos (0.5, 0.5)
+    $ print("Current replay click:", renpy.get_physical_size(), _last_voice_play, renpy.music.get_playing(channel="voice"), _last_say_what)
     $ test_replay_started = __import__("time").monotonic()
     assert eval preferences.afm_enable
     assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
