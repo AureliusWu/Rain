@@ -12,7 +12,7 @@
   "finding": "about description and translated RenPy license extend beyond right visible edge",
   "source": "direct inspection of actual standalone EXE PNG",
   "fix": "bound about vbox and about text to 1380 logical pixels",
-  "revalidation": "pending current repaired candidate; do not inherit old package visual approval",
+  "revalidation": "resolved in exact repaired candidate; original findings retained",
   "additional_capture_finding": {
     "screenshot": "reports/package/screenshots/scaled-history.png",
     "sha256": "b8466aa105e7240f207ec8a5af15b9ce8e3bcd879d6ecdd70b019101918b8fa9",
@@ -23,5 +23,37 @@
     "finding": "capture includes a partly dissolved old say screen, while later native history is opaque",
     "repair": "wait for engine ongoing transition state on root/master/screens before UI screenshots",
     "reference": "https://www.renpy.org/doc/html/other.html#renpy.get_ongoing_transition"
-  }
+  },
+  "resolved_candidate_commit": "d8c61e2b3b03498115ea26d89d029026a0191c40",
+  "resolved_run_id": 37405577661,
+  "resolved_screenshots": [
+    {
+      "name": "native-about",
+      "path": "reports/package/screenshots/native-about.png",
+      "sha256": "b4af05e0c6065b4bbb7d615bc19ec74e9e0766958b3556d4d24a6d734cc4c286",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "direct inspection of current unmodified EXE PNG at original dimensions",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "b4af05e0c6065b4bbb7d615bc19ec74e9e0766958b3556d4d24a6d734cc4c286",
+      "finding": "实际 1920×1080 EXE 图中，长说明和翻译引擎许可在可见内容区换行；行尾完整，返回及导航在画幅内。"
+    },
+    {
+      "name": "scaled-history",
+      "path": "reports/package/screenshots/scaled-history.png",
+      "sha256": "608ec4e6e5f00a3ed422a0eb1ce75cfe7590fb83261e06e5f9a6cdc8beb1f2d4",
+      "pixels": [
+        1280,
+        720
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "direct inspection of current unmodified EXE PNG at original dimensions",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "b8466aa105e7240f207ec8a5af15b9ce8e3bcd879d6ecdd70b019101918b8fa9",
+      "finding": "实际 1280×720 EXE 图中，深蓝历史页完整遮盖底层 say / 快捷栏；历史正文、姓名、返回、滚动条在画幅内。"
+    }
+  ]
 }

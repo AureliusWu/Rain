@@ -1,0 +1,526 @@
+{
+  "version": "0.9.0",
+  "candidate_commit": "d8c61e2b3b03498115ea26d89d029026a0191c40",
+  "run_id": 37405577661,
+  "date": "2026-10-06",
+  "status": "passed_with_limits",
+  "inspected_count": 35,
+  "planned_review_count": 35,
+  "inspected": [
+    {
+      "name": "native-main-menu",
+      "path": "reports/package/screenshots/native-main-menu.png",
+      "sha256": "9477bf6149c17aeb1055e4e74e7165ba48eae19ef292a4161bad554c19275c62",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "9477bf6149c17aeb1055e4e74e7165ba48eae19ef292a4161bad554c19275c62",
+      "finding": "截图正文 / 控件可读，未见裁切；最终创作判断待用户"
+    },
+    {
+      "name": "native-about",
+      "path": "reports/package/screenshots/native-about.png",
+      "sha256": "b4af05e0c6065b4bbb7d615bc19ec74e9e0766958b3556d4d24a6d734cc4c286",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "direct inspection of current unmodified EXE PNG at original dimensions",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "b4af05e0c6065b4bbb7d615bc19ec74e9e0766958b3556d4d24a6d734cc4c286",
+      "finding": "实际 1920×1080 EXE 图中，长说明和翻译引擎许可在可见内容区换行；行尾完整，返回及导航在画幅内。"
+    },
+    {
+      "name": "native-settings",
+      "path": "reports/package/screenshots/native-settings.png",
+      "sha256": "0ce265f22d02fdfbe9579ede57e42007e597f302cbdb5e8e7d65e648253b0acd",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "0ce265f22d02fdfbe9579ede57e42007e597f302cbdb5e8e7d65e648253b0acd",
+      "finding": "深蓝菜单稳定遮盖底层 say / choice / 快捷栏；文字与控件在画幅内"
+    },
+    {
+      "name": "native-choice",
+      "path": "reports/package/screenshots/native-choice.png",
+      "sha256": "36038fe31be4a5536c4b20edef06114fa30fde01cb45ccf48c4bb577a44183d9",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "36038fe31be4a5536c4b20edef06114fa30fde01cb45ccf48c4bb577a44183d9",
+      "finding": "截图正文 / 控件可读，未见裁切；最终创作判断待用户"
+    },
+    {
+      "name": "scaled-main-menu",
+      "path": "reports/package/screenshots/scaled-main-menu.png",
+      "sha256": "8974dd849208c2e9e77235dc0d83f9f0200460ff7df63d862672fe95aceae5ef",
+      "pixels": [
+        1280,
+        720
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "8974dd849208c2e9e77235dc0d83f9f0200460ff7df63d862672fe95aceae5ef",
+      "finding": "截图正文 / 控件可读，未见裁切；最终创作判断待用户"
+    },
+    {
+      "name": "scaled-dialogue",
+      "path": "reports/package/screenshots/scaled-dialogue.png",
+      "sha256": "4e9064000ae12f0fddeb9f7ae80fae55dfc76296dc01b3043e80bf666a139f90",
+      "pixels": [
+        1280,
+        720
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "4e9064000ae12f0fddeb9f7ae80fae55dfc76296dc01b3043e80bf666a139f90",
+      "finding": "截图正文 / 控件可读，未见裁切；最终创作判断待用户"
+    },
+    {
+      "name": "scaled-choice",
+      "path": "reports/package/screenshots/scaled-choice.png",
+      "sha256": "93050dcf561ead5f6911d8751a79cd656d3f18149a5133a3d7cbbfc9350c47d3",
+      "pixels": [
+        1280,
+        720
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "93050dcf561ead5f6911d8751a79cd656d3f18149a5133a3d7cbbfc9350c47d3",
+      "finding": "截图正文 / 控件可读，未见裁切；最终创作判断待用户"
+    },
+    {
+      "name": "scaled-history",
+      "path": "reports/package/screenshots/scaled-history.png",
+      "sha256": "608ec4e6e5f00a3ed422a0eb1ce75cfe7590fb83261e06e5f9a6cdc8beb1f2d4",
+      "pixels": [
+        1280,
+        720
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "direct inspection of current unmodified EXE PNG at original dimensions",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "b8466aa105e7240f207ec8a5af15b9ce8e3bcd879d6ecdd70b019101918b8fa9",
+      "finding": "实际 1280×720 EXE 图中，深蓝历史页完整遮盖底层 say / 快捷栏；历史正文、姓名、返回、滚动条在画幅内。"
+    },
+    {
+      "name": "history",
+      "path": "reports/package/screenshots/history.png",
+      "sha256": "2358ab65ac0c04a8ea9bfa73cd1aa0e9bf238b9efaa2a35d9f808f6f8cdfaf92",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "2358ab65ac0c04a8ea9bfa73cd1aa0e9bf238b9efaa2a35d9f808f6f8cdfaf92",
+      "finding": "深蓝菜单稳定遮盖底层 say / choice / 快捷栏；文字与控件在画幅内"
+    },
+    {
+      "name": "scaled-settings",
+      "path": "reports/package/screenshots/scaled-settings.png",
+      "sha256": "ff949fa006c4032cd572391b268deefb3071eb9b658be5af6e522fd1c65f6b0f",
+      "pixels": [
+        1280,
+        720
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "ff949fa006c4032cd572391b268deefb3071eb9b658be5af6e522fd1c65f6b0f",
+      "finding": "深蓝菜单稳定遮盖底层 say / choice / 快捷栏；文字与控件在画幅内"
+    },
+    {
+      "name": "scaled-save",
+      "path": "reports/package/screenshots/scaled-save.png",
+      "sha256": "b7825f2a8b71d9eae97070a619d533490d1b1728e2802eae5bba503c388a3680",
+      "pixels": [
+        1280,
+        720
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "b7825f2a8b71d9eae97070a619d533490d1b1728e2802eae5bba503c388a3680",
+      "finding": "截图正文 / 控件可读，未见裁切；最终创作判断待用户"
+    },
+    {
+      "name": "scaled-load",
+      "path": "reports/package/screenshots/scaled-load.png",
+      "sha256": "1c6af37531deeaab7ec91976071d67471cd329648aab35a2cda7d9f07c620eed",
+      "pixels": [
+        1280,
+        720
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "1c6af37531deeaab7ec91976071d67471cd329648aab35a2cda7d9f07c620eed",
+      "finding": "截图正文 / 控件可读，未见裁切；最终创作判断待用户"
+    },
+    {
+      "name": "settings",
+      "path": "reports/package/screenshots/settings.png",
+      "sha256": "0ce265f22d02fdfbe9579ede57e42007e597f302cbdb5e8e7d65e648253b0acd",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "0ce265f22d02fdfbe9579ede57e42007e597f302cbdb5e8e7d65e648253b0acd",
+      "finding": "深蓝菜单稳定遮盖底层 say / choice / 快捷栏；文字与控件在画幅内"
+    },
+    {
+      "name": "first-dialogue",
+      "path": "reports/package/screenshots/first-dialogue.png",
+      "sha256": "0945341ae1319ad49fa72d781fbcb00aa42fa4fb29e3fe347f0c29f2b8c02152",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "0945341ae1319ad49fa72d781fbcb00aa42fa4fb29e3fe347f0c29f2b8c02152",
+      "finding": "截图正文 / 控件可读，未见裁切；最终创作判断待用户"
+    },
+    {
+      "name": "first-choice",
+      "path": "reports/package/screenshots/first-choice.png",
+      "sha256": "927746409e8975ba56aed6ca17e482f0cabfadcab16396e48d3026ac06a4f0d4",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "927746409e8975ba56aed6ca17e482f0cabfadcab16396e48d3026ac06a4f0d4",
+      "finding": "截图正文 / 控件可读，未见裁切；最终创作判断待用户"
+    },
+    {
+      "name": "cg-letter",
+      "path": "reports/package/screenshots/cg-letter.png",
+      "sha256": "0de4774f325f032998a90645672276b496c8bccbdf1f718fe7e1042cf57895a4",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "0de4774f325f032998a90645672276b496c8bccbdf1f718fe7e1042cf57895a4",
+      "finding": "旧信 CG 显示，未叠加普通立绘；对白处于对话区"
+    },
+    {
+      "name": "expression-normal",
+      "path": "reports/package/screenshots/expression-normal.png",
+      "sha256": "eb86566d85033bde110661ce1898ce95c912a4509ec6662f870464ecde024b55",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "eb86566d85033bde110661ce1898ce95c912a4509ec6662f870464ecde024b55",
+      "finding": "人物头部完整、位置一致；对白不遮脸；表情审美仍待用户定案"
+    },
+    {
+      "name": "expression-smile",
+      "path": "reports/package/screenshots/expression-smile.png",
+      "sha256": "0945341ae1319ad49fa72d781fbcb00aa42fa4fb29e3fe347f0c29f2b8c02152",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "0945341ae1319ad49fa72d781fbcb00aa42fa4fb29e3fe347f0c29f2b8c02152",
+      "finding": "人物头部完整、位置一致；对白不遮脸；表情审美仍待用户定案"
+    },
+    {
+      "name": "expression-happy",
+      "path": "reports/package/screenshots/expression-happy.png",
+      "sha256": "d4a9a8cd6600c86cfaf011e91c603b3f4cbe51a4ab980fc34ca27baf0d9bca47",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "d4a9a8cd6600c86cfaf011e91c603b3f4cbe51a4ab980fc34ca27baf0d9bca47",
+      "finding": "人物头部完整、位置一致；对白不遮脸；表情审美仍待用户定案"
+    },
+    {
+      "name": "expression-sad",
+      "path": "reports/package/screenshots/expression-sad.png",
+      "sha256": "5028bcd7d6888831548cc0c2c3ed13bdd1070f3b222d24c2b32ac7de6942bb28",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "5028bcd7d6888831548cc0c2c3ed13bdd1070f3b222d24c2b32ac7de6942bb28",
+      "finding": "人物头部完整、位置一致；对白不遮脸；表情审美仍待用户定案"
+    },
+    {
+      "name": "expression-angry",
+      "path": "reports/package/screenshots/expression-angry.png",
+      "sha256": "7633b17840d42357f86f1f5562cecf03fa0fe0bd0a2f4f948a08c0c425fae339",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "7633b17840d42357f86f1f5562cecf03fa0fe0bd0a2f4f948a08c0c425fae339",
+      "finding": "人物头部完整、位置一致；对白不遮脸；表情审美仍待用户定案"
+    },
+    {
+      "name": "expression-surprised",
+      "path": "reports/package/screenshots/expression-surprised.png",
+      "sha256": "05e5e98a1f089ac773aae5245299bf6c0d292db7fe84fea1a2805c701e422877",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "05e5e98a1f089ac773aae5245299bf6c0d292db7fe84fea1a2805c701e422877",
+      "finding": "人物头部完整、位置一致；对白不遮脸；表情审美仍待用户定案"
+    },
+    {
+      "name": "expression-embarrassed",
+      "path": "reports/package/screenshots/expression-embarrassed.png",
+      "sha256": "f48e7538a53ccdef70a2b2c6f1c811ed291e2e492bb8aa4590e4f418152c084e",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "f48e7538a53ccdef70a2b2c6f1c811ed291e2e492bb8aa4590e4f418152c084e",
+      "finding": "人物头部完整、位置一致；对白不遮脸；表情审美仍待用户定案"
+    },
+    {
+      "name": "save-load-letter-cg",
+      "path": "reports/package/screenshots/save-load-letter-cg.png",
+      "sha256": "1d97e32d5261d86436908f9dabd72504d1df1cb3622284750bdb3c83fcca3924",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "1d97e32d5261d86436908f9dabd72504d1df1cb3622284750bdb3c83fcca3924",
+      "finding": "旧信 CG 显示，未叠加普通立绘；对白处于对话区"
+    },
+    {
+      "name": "bg-exit-covered",
+      "path": "reports/package/screenshots/bg-exit-covered.png",
+      "sha256": "03657b4621952aa327d515e818bfe0ac9a88668ab4ae9048d9c96371ed694608",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "03657b4621952aa327d515e818bfe0ac9a88668ab4ae9048d9c96371ed694608",
+      "finding": "截图正文 / 控件可读，未见裁切；最终创作判断待用户"
+    },
+    {
+      "name": "bg-exit-after-rain",
+      "path": "reports/package/screenshots/bg-exit-after-rain.png",
+      "sha256": "00e1e95a6bc8737e37583090ee397a978d706ae9910da20f2cb46476526ce853",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "00e1e95a6bc8737e37583090ee397a978d706ae9910da20f2cb46476526ce853",
+      "finding": "截图正文 / 控件可读，未见裁切；最终创作判断待用户"
+    },
+    {
+      "name": "bg-nearby-cafe",
+      "path": "reports/package/screenshots/bg-nearby-cafe.png",
+      "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac",
+      "finding": "截图正文 / 控件可读，未见裁切；最终创作判断待用户"
+    },
+    {
+      "name": "bg-s05_shared_path",
+      "path": "reports/package/screenshots/bg-s05_shared_path.png",
+      "sha256": "630fd2811289783e75941ef4e830410206c5fc6a7687a697f62b33ffda1bc7dc",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "630fd2811289783e75941ef4e830410206c5fc6a7687a697f62b33ffda1bc7dc",
+      "finding": "截图正文 / 控件可读，未见裁切；最终创作判断待用户"
+    },
+    {
+      "name": "chapter-prologue",
+      "path": "reports/package/screenshots/chapter-prologue.png",
+      "sha256": "1dc207749ee71e954341f8a641f9875d99b06d607d5fc7086eb49c794e323b02",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "1dc207749ee71e954341f8a641f9875d99b06d607d5fc7086eb49c794e323b02",
+      "finding": "截图正文 / 控件可读，未见裁切；最终创作判断待用户"
+    },
+    {
+      "name": "chapter-today",
+      "path": "reports/package/screenshots/chapter-today.png",
+      "sha256": "f6ccdfe37c8f311cd9d0ef55c5321600057e18fe1414d697a37f658448c530fe",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "f6ccdfe37c8f311cd9d0ef55c5321600057e18fe1414d697a37f658448c530fe",
+      "finding": "截图正文 / 控件可读，未见裁切；最终创作判断待用户"
+    },
+    {
+      "name": "save-load-cafe-after-rain-stop",
+      "path": "reports/package/screenshots/save-load-cafe-after-rain-stop.png",
+      "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac",
+      "finding": "截图正文 / 控件可读，未见裁切；最终创作判断待用户"
+    },
+    {
+      "name": "save-load-normal-ending",
+      "path": "reports/package/screenshots/save-load-normal-ending.png",
+      "sha256": "00e1e95a6bc8737e37583090ee397a978d706ae9910da20f2cb46476526ce853",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "00e1e95a6bc8737e37583090ee397a978d706ae9910da20f2cb46476526ce853",
+      "finding": "截图正文 / 控件可读，未见裁切；最终创作判断待用户"
+    },
+    {
+      "name": "route-01-true",
+      "path": "reports/package/screenshots/route-01-true.png",
+      "sha256": "0f871365c93f2c4b5f3c73473119ff9ed7898abae27c4ca35b8119b40ffc5116",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "0f871365c93f2c4b5f3c73473119ff9ed7898abae27c4ca35b8119b40ffc5116",
+      "finding": "结局名称和返回按钮完整；True 保留小店人物，Normal 道别后无立绘"
+    },
+    {
+      "name": "route-02-normal",
+      "path": "reports/package/screenshots/route-02-normal.png",
+      "sha256": "decec29be269cb2591a52c5c0680ed098ee3cbce549fac0df9208e77394ffcbe",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "decec29be269cb2591a52c5c0680ed098ee3cbce549fac0df9208e77394ffcbe",
+      "finding": "结局名称和返回按钮完整；True 保留小店人物，Normal 道别后无立绘"
+    },
+    {
+      "name": "cross-process-late-load",
+      "path": "reports/package/persistence/screenshots/cross-process-late-load.png",
+      "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "status": "visually_checked_with_limits",
+      "review_method": "same exact bytes as previously directly inspected image",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac",
+      "finding": "截图正文 / 控件可读，未见裁切；最终创作判断待用户"
+    }
+  ],
+  "unresolved_machine_issues": [],
+  "limits": [
+    "Machine and image review does not establish human listening, timing, ordinary-PC DPI or creative approval.",
+    "Equal-byte reuse applies only to previously directly inspected images with a matching SHA-256."
+  ],
+  "current_direct_inspection_count": 2,
+  "reused_identical_count": 33,
+  "resolved_previous_issues": [
+    {
+      "name": "native-about",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "b4af05e0c6065b4bbb7d615bc19ec74e9e0766958b3556d4d24a6d734cc4c286",
+      "repaired_candidate_commit": "d8c61e2b3b03498115ea26d89d029026a0191c40",
+      "repaired_png_sha256": "b4af05e0c6065b4bbb7d615bc19ec74e9e0766958b3556d4d24a6d734cc4c286",
+      "finding": "实际 1920×1080 EXE 图中，长说明和翻译引擎许可在可见内容区换行；行尾完整，返回及导航在画幅内。"
+    },
+    {
+      "name": "scaled-history",
+      "previous_commit": "637b9d50b5637085cebaf5ebad1e2068a79ed622",
+      "previous_sha256": "b8466aa105e7240f207ec8a5af15b9ce8e3bcd879d6ecdd70b019101918b8fa9",
+      "repaired_candidate_commit": "d8c61e2b3b03498115ea26d89d029026a0191c40",
+      "repaired_png_sha256": "608ec4e6e5f00a3ed422a0eb1ce75cfe7590fb83261e06e5f9a6cdc8beb1f2d4",
+      "finding": "实际 1280×720 EXE 图中，深蓝历史页完整遮盖底层 say / 快捷栏；历史正文、姓名、返回、滚动条在画幅内。"
+    }
+  ]
+}

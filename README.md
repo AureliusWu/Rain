@@ -1,30 +1,26 @@
 # 雨停之前 / Before the Rain Stops
 
-一部可离线游玩的中文 Ren'Py 视觉小说。雨夜的旧车站，两位久未联系的旧友，和一封没有寄出的信。
+可离线游玩的中文 Ren'Py 视觉小说。雨夜旧车站，两位久未联系的旧友，和一封没有寄出的信。
 
-main 当前为 **v0.9.0 原生 1080p 体验候选开发中**：六章、24 个叙事场景与 2 个状态路由、4 次关键选择、16 条路线、Normal / True 两个完整候选结局。包含七种女主表情、雨夜站台与新增三个场景背景、旧信 CG、17 句 AI 关键语音、3 首原创程序音乐、两种雨声和纸张／消息音效。主题、成年女主许澄和画风仍待用户最终审阅。
+main 当前为 **v0.9.0 原生 1080p 体验候选，技术验收已完成**。六章、24 叙事场景与 2 状态路由、4 次选择、16 路线、Normal / True 两个完整结局；七表情、四背景、旧信 CG、17 句 AI 关键语音、三首原创程序音乐、两种雨声与纸张 / 消息音效。主题、成年女主许澄与画风仍待用户最终审阅。
 
-正文全分支 15,206 字符，单路线 11,404–11,744 字符（包含标点，菜单单列）。仅文字阅读按每分钟 250–350 字符估算约 32–47 分钟；真人完整阅读、听感与普通电脑试玩尚未验收。统计见 [路线报告](docs/STORY_STATS_V07.md)。
-
-原生画布 1920×1080，默认 1280×720 缩放窗口。当前 Windows 候选验收后更新下载入口；见 [适配说明](docs/DISPLAY_V09.md)。
+正文全分支 15,206 字符，单路线 11,404–11,744（含标点、菜单单列）。按每分钟 250–350 字符估算纯文字阅读 32–47 分钟；真人完整计时、听感和普通电脑试玩未验收。原生画布 1920×1080，默认 1280×720 缩放窗口；[适配说明](docs/DISPLAY_V09.md)。
 
 ## 下载与运行
 
-[Windows 发布版本](https://github.com/AureliusWu/Test/releases) · [构建与运行证据](https://github.com/AureliusWu/Test/actions) · [阶段记录](docs/STATUS.md)
+[下载 v0.9 Windows 候选 artifact](https://github.com/AureliusWu/Test/actions/runs/37405577661/artifacts/11388500951) · [本候选验收](docs/DISPLAY_ACCEPTANCE_V09.md) · [统一真人后续](docs/HUMAN_HANDOFF.md) · [公开发布版本](https://github.com/AureliusWu/Test/releases)
 
-最新公开 Release 仍为 v0.6.0。上一份已验收的 v0.8.0 完整候选的 [Windows 验收 37281855516](https://github.com/AureliusWu/Test/actions/runs/37281855516) 已通过：79 Python；源码与独立 EXE 各 30/345，重新启动后读档另 1/10，失败和跳过为 0；109 张证据 PNG 完整解码。
+候选 `d8c61e2b3b03498115ea26d89d029026a0191c40` / [Windows CI 37405577661](https://github.com/AureliusWu/Test/actions/runs/37405577661)；原始游戏 ZIP **56,354,895 字节**，SHA-256 `68b14936327a9c9df36c6aafc7238688676419594d2846598199aa7c4947f385`。
 
-[下载 v0.8 Windows 候选 artifact](https://github.com/AureliusWu/Test/actions/runs/37281855516/artifacts/11333430981) · [Beta 验收](docs/BETA_ACCEPTANCE_V08.md) · [统一真人后续清单](docs/HUMAN_HANDOFF.md)。Actions 需登录，保留至 2027-01-03；同字节试玩 ZIP、校验和、实际预览与统一审阅包另已交付。游戏 ZIP 为 44,868,967 字节，SHA-256 `e436d30a93e7a51671b4ffec60a43ff636a865299b67f237af1c8195e048ba9c`。候选交付与公开 Release 分别报告。
+83 项 Windows Python、作者侧全部校验与 Ren'Py 8.5.3 lint 通过。源码和独立 EXE 各 **31/31 用例、359/359 断言**（1324.780 / 897.690 秒）；关闭首进程后重新启动 EXE，真实读档另 **1/1 用例、10/10 断言**（4.282 秒）。全部 failed / xfailed / xpassed / skipped / not run 为 0，三个原生进程退出 0、未超时。
 
-1. 下载并解开 Windows artifact 外层，再完整解压 `BeforeTheRainStops-0.8.0-win.zip`；或从 Release 下载现有 v0.6.0。
-2. 完整解压到可写目录。不要直接在 ZIP 内启动。
-3. 双击 `BeforeTheRainStops.exe`，选择“开始游戏”。无需安装 Python、Ren'Py 或模型，无需联网。
+Actions 下载需登录，保留至 2027-01-04T02:44:10Z。同字节游戏 ZIP、统一审阅 ZIP、校验和和实际预览另已交付；最新公开 Release 仍为 v0.6.0，候选没有创建正式 Release。
 
-左键、空格或 Enter 推进；右键或 Esc 打开菜单。画面下方可存档、读档、查看历史、快进、自动播放和进入设置。设置含音量、文字速度与全屏/窗口切换。结局页可返回主菜单，再从头走另一条路线。
+1. 解开 Windows artifact 外层，再完整解压 BeforeTheRainStops-0.9.0-win.zip 到可写目录。不要在 ZIP 内直接运行。
+2. 双击 BeforeTheRainStops.exe，选择“开始游戏”。无需安装 Python、引擎或模型，无需联网。
+3. 左键 / 空格 / Enter 推进，右键 / Esc 开菜单；下方可回退、历史、快进、自动、存读档与设置。结局页返回主菜单可重新开始。
 
-各阶段使用独立存档目录；旧存档保留，不跨版本加载。v0.1 是可运行的临时资产测试片段，不计入正式剧情。
-
-![v0.3 开心表情的实际游戏画面，当前版沿用相同资产](docs/images/expression-happy-v03.png)
+阶段存档目录独立，旧存档保留，不跨阶段加载。审阅包含 66 原始 EXE PNG、24 OGG / WAV、两完整正文和统一结果模板。
 
 ## 开发与验证
 
@@ -80,4 +76,4 @@ v0.6 新增 11 句配音与 5 个程序音频，17 句合计 58.048 秒。音乐
 
 [版本路线](ROADMAP.md) 与 [v0.7–v1.0 执行计划](docs/RELEASE_PLAN_V07_V10.md) 列出完整剧情、回归加固、1080p 适配和正式发布的范围、依赖与验收。[v0.6.0 已发布](https://github.com/AureliusWu/Test/releases/tag/v0.6.0)：Windows 源码和独立 EXE 各通过 24 个用例 / 151 个断言，无失败或跳过。
 
-按 v0.1–v1.0 的 10 个发布里程碑统计，已完成 6 个，当前进度为 **60%**。此比例只统计版本节点，不代表工时或最终内容的完成比例；v0.7 / v0.8 技术验收已完成，v0.9 / v1.0 与真人事项继续后续。
+按 v0.1–v1.0 的 10 个发布里程碑统计，已完成 6 个，当前进度为 **60%**。此比例只统计版本节点，不代表工时或最终内容的完成比例；v0.7 / v0.8 技术验收已完成，v0.9 原生 1080p 技术已验收；正文精修、真人事项和 v1.0 继续后续。
