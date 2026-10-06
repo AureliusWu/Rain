@@ -1,3 +1,20 @@
+# v1.0.0 正式发布 — 2026-10-06
+
+[正式 Release](https://github.com/AureliusWu/Test/releases/tag/v1.0.0) · [Windows ZIP](https://github.com/AureliusWu/Test/releases/download/v1.0.0/BeforeTheRainStops-1.0.0-win.zip) · [发行回读记录](evidence/v10-publication.json)
+
+17 句关键配音已替换为免费开源 Qwen3-TTS 1.7B CustomVoice / Serena，保存逐句表演指令并完成响度处理。全部信号 / 独立 ASR 检查通过；保留旧录音历史，玩家无需模型或网络。
+
+游戏验收提交 `dff19a6ecf516fa674e24fcb3481413efc25b849`；发行 tag 指向 `b4f06f89eebb73ff0494cb18fc4cfc38192c84ce`，仅增加文档与发布工作流差异，游戏内容完全一致。原始 ZIP **56,359,988 字节**，SHA-256 `0d09a78a482e2ff0d34e14f51d49c89d5cc0d36b91506d44c6a3bcdcc678d3f1`。
+
+Windows 113 项 Python、全部作者校验与 Ren’Py 8.5.3 lint 通过；源码和独立 EXE 各 31 用例 / 359 断言，退出后新进程读档 1 用例 / 10 断言通过。全部异常计数为 0，三个进程退出 0、未超时；131 PNG 完整解码、35 个 EXE 关键视图复核、85 包内资产与 ZIP CRC / 许可检查通过。
+
+按用户“完成后发布正式版”发布，Release 为非 draft、非 prerelease。发布 workflow 下载既有验收 ZIP，公开资产再次下载校验通过，没有重新构建。真人试听、Normal / True 阅读计时、普通电脑 / 中文路径 / DPI、最终创作定案与冻结仍待用户统一操作。ASR、dummy 音频与自动测试耗时不代表这些项目通过。
+
+
+---
+
+# 以下为本次发布前的历史记录
+
 # v1.0 免费语音升级进度（当前批次）
 
 Qwen3-TTS 1.7B / Serena 制作管线已提交，17 句录音已集成到 main（21d5176）。生成任务 37436201390 与恢复核验 37438947888 的出处保留。作者侧 113 项 Python、全部校验与 Linux lint 已通过。新版录音合计 57.360 秒，large-v3 逐句复核通过：16 句归一化文字一致，1 句为“哪 / 哪儿”的儿化差异。下方为之前的 Kokoro 候选验收历史，新配音需要重新生成安装包并完成 Windows 全链路，尚未发布正式版。最新候选 dff19a6 / Windows CI 37440590549 已通过前置校验和 lint，正在执行实际交互。

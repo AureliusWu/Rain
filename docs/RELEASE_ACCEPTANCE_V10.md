@@ -1,6 +1,6 @@
 # v1.0 配音升级验收与正式发布
 
-新版配音及工程验收已完成，按用户明确指令进入正式发布。本页绑定本次 Qwen 配音的游戏包；旧 Kokoro 候选机器、画面及人验表另保留在 `evidence/v10-kokoro-acceptance.json`、`evidence/v10-kokoro-visual-review.json` 与 `review/V10_KOKORO_HUMAN_ACCEPTANCE.json`。
+新版配音、工程验收与 [正式 v1.0.0](https://github.com/AureliusWu/Test/releases/tag/v1.0.0) 发布已完成。本页绑定本次 Qwen 配音的游戏包；旧 Kokoro 候选机器、画面及人验表另保留在 `evidence/v10-kokoro-acceptance.json`、`evidence/v10-kokoro-visual-review.json` 与 `review/V10_KOKORO_HUMAN_ACCEPTANCE.json`。
 
 ## 当前机器验收
 
@@ -22,7 +22,7 @@ Windows CI 使用 dummy 音频。真人试听、两结局阅读计时、普通�
 
 `release-v10.yml` 检查机器验收、语音和用户授权，从成功 CI 的原始 `windows-<commit>` artifact 取包，核对原始 SHA-256 / 大小 / CRC / 许可 / 预览后创建非预发行 v1.0.0，随后下载公开发行资产核对同一字节。任何现存同名 tag / Release 均拒绝覆盖；不会重新构建另一份包。
 
-目前处于正式发布执行前；成功回读后的公开 URL、发行资产与运行身份补记于 `evidence/v10-publication.json`。真人后续统一见 [HUMAN_HANDOFF](HUMAN_HANDOFF.md)，语音来源与自动校验限制见 [VOICE_UPGRADE_V10](VOICE_UPGRADE_V10.md)。
+正式发布及同字节回读已经成功。公开 URL、非预发行状态、tag 目标、发行资产和运行身份记录于 `evidence/v10-publication.json`。真人后续统一见 [HUMAN_HANDOFF](HUMAN_HANDOFF.md)，语音来源与自动校验限制见 [VOICE_UPGRADE_V10](VOICE_UPGRADE_V10.md)。
 
 ## tag 与游戏源提交
 

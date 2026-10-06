@@ -1,4 +1,14 @@
-# v1.0 免费语音升级（制作中）
+# 1.0.0 正式版与免费配音升级 — 2026-10-06
+
+- 17 句角色配音切换到 Apache-2.0 Qwen3-TTS 1.7B CustomVoice / Serena，逐句语气指令、固定模型 revision / 种子、24 kHz 源 WAV / OGG 与来源哈希可追踪；旧 Kokoro 录音保留。
+- 双遍响度目标 -20 LUFS / 真峰值 -2 dBTP；合计 57.360 秒。17 句独立 large-v3 ASR、信号、否定词与关键字检查通过；自动等待测试按新时长更新。
+- Windows 113 项 Python、全部作者校验与 Ren’Py 8.5.3 lint 通过；源码和独立 EXE 各 31 用例 / 359 断言，退出后新进程读档 1 用例 / 10 断言通过。全部异常计数为 0，三个进程退出 0、未超时；131 PNG 完整解码、35 个 EXE 关键视图复核、85 包内资产与 ZIP CRC / 许可检查通过。
+- [正式 v1.0.0](https://github.com/AureliusWu/Test/releases/tag/v1.0.0) 按用户明确指令发布同一份验收 ZIP；非 draft / 非 prerelease，发行下载回读通过。游戏验收提交 `dff19a6ecf516fa674e24fcb3481413efc25b849`；发行 tag 指向 `b4f06f89eebb73ff0494cb18fc4cfc38192c84ce`，仅增加文档与发布工作流差异，游戏内容完全一致。原始 ZIP **56,359,988 字节**，SHA-256 `0d09a78a482e2ff0d34e14f51d49c89d5cc0d36b91506d44c6a3bcdcc678d3f1`。
+- 真人试听、Normal / True 阅读计时、普通电脑 / 中文路径 / DPI、最终创作定案与冻结仍待用户统一操作。ASR、dummy 音频与自动测试耗时不代表这些项目通过。
+
+---
+
+# 历史：v1.0 免费语音升级制作记录
 
 - 根据用户指令选用免费开源 Qwen3-TTS 1.7B CustomVoice / Serena，为 17 句关键台词保存具体表演指令。
 - 增加固定模型来源、源 WAV / OGG、双遍响度处理与独立 ASR 核验；保留旧 Kokoro 音频历史。

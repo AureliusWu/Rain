@@ -1,19 +1,15 @@
-# 当前断点：新配音验收完成，修复发布退出码后重试正式发行
+# 当前断点：本次要求已完成，v1.0.0 正式版已发布
 
-提交 `dff19a6ecf516fa674e24fcb3481413efc25b849` / [Windows CI 37440590549](https://github.com/AureliusWu/Test/actions/runs/37440590549)；原始游戏 ZIP **56,359,988 字节**，SHA-256 `0d09a78a482e2ff0d34e14f51d49c89d5cc0d36b91506d44c6a3bcdcc678d3f1`。
+[正式 Release](https://github.com/AureliusWu/Test/releases/tag/v1.0.0) · [Windows 下载](https://github.com/AureliusWu/Test/releases/download/v1.0.0/BeforeTheRainStops-1.0.0-win.zip)
 
-113 项 Windows Python、全部作者校验与 Ren’Py 8.5.3 lint 通过。源码和独立 EXE 各 **31/31 用例、359/359 断言**（1089.606 / 739.611 秒）；退出首进程后重新启动 EXE，真实读档另 **1/1 用例、10/10 断言**（3.745 秒）。failed / xfailed / xpassed / skipped / not run 全为 0，三个进程退出 0、未超时。
+游戏验收提交 `dff19a6ecf516fa674e24fcb3481413efc25b849`；发行 tag 指向 `b4f06f89eebb73ff0494cb18fc4cfc38192c84ce`，仅增加文档与发布工作流差异，游戏内容完全一致。原始 ZIP **56,359,988 字节**，SHA-256 `0d09a78a482e2ff0d34e14f51d49c89d5cc0d36b91506d44c6a3bcdcc678d3f1`。
 
-17 句关键配音已替换为免费开源 Qwen3-TTS 1.7B CustomVoice / Serena。逐句保存语气指令，双遍响度处理目标 -20 LUFS / 真峰值 -2 dBTP；24 kHz 单声道、合计 57.360 秒。全部信号与独立 large-v3 ASR 校验通过：16 句归一化文字一致，1 句“哪 / 哪儿”儿化差异。旧 Kokoro 源录音与 OGG 历史保留。
+Windows 113 项 Python、全部作者校验与 Ren’Py 8.5.3 lint 通过；源码和独立 EXE 各 31 用例 / 359 断言，退出后新进程读档 1 用例 / 10 断言通过。全部异常计数为 0，三个进程退出 0、未超时；131 PNG 完整解码、35 个 EXE 关键视图复核、85 包内资产与 ZIP CRC / 许可检查通过。
 
-用户已明确授权“完成后发布正式版”；真人后续统一由用户操作。35 个 EXE 关键画面复核、131 PNG 解码、85 包内资产和完整 ZIP 检查完成。人验表保持真实 pending，独立授权 JSON 绑定本次语音与同字节包。
+17 句关键配音已替换为免费开源 Qwen3-TTS 1.7B / Serena，合计 57.360 秒；逐句指令、固定 revision / 种子、响度处理、信号及 large-v3 独立 ASR 完成，旧录音历史保留。语音证据 SHA-256：`5180a9ca16c7a01f502350dcdfadf073da06edcb9b054350d7fdec8c3af7336a`。
 
-下一步：提交本次 docs 与授权文件到 main，触发 `release-v10.yml` → 等待并核对非 prerelease / 非 draft 的 v1.0.0、tag 目标当前发行提交，游戏源与 `dff19a6ecf516fa674e24fcb3481413efc25b849` 完全一致 与公开资产 SHA-256 → 保存发行回读记录并更新当前状态 → 交付原始同字节 Windows 包与两份新声音材料。
+发布 workflow **37446100720** 已 success，tag 目标包含验收文档且游戏内容与验收提交完全一致；Release 非 draft、非 prerelease，原始 ZIP 发布后下载回读通过。实际发行资产及 SHA-256 见 `evidence/v10-publication.json`。
 
-不要重跑已通过的游戏合集、重生成配音、复用旧 Kokoro 包、把真人 pending 伪改为 passed，或再次要求发布许可。当前 docs 的更新不改变已验收运行资产。若发布途中中断，先读取 Release / tag / workflow 的实际状态，不覆盖既有发布。
+真人试听、Normal / True 阅读计时、普通电脑 / 中文路径 / DPI、最终创作定案与冻结仍待用户统一操作。ASR、dummy 音频与自动测试耗时不代表这些项目通过。
 
-Windows CI 使用 dummy 音频。真人试听、两结局阅读计时、普通电脑 / 中文路径 / 100% 与 150% DPI、创作定案及内容冻结仍为 pending，由用户统一操作；ASR 与自动执行时间不能代替这些结论。
-
-首轮发布 37444936017 的声音授权、artifact 下载、原 ZIP / 预览全部通过；创建 Release 前因 gh 预期 HTTP 404 返回码残留导致 step 6 失败，创建步骤 skipped。workflow 修复提交 0e2db075 使用 exit 0，仅在所有验证及两个不存在检查完成后返回成功。没有更换候选或安装包，重新提交授权文件以触发修复后的工作流。失败证据见 evidence/v10-publication-first-failure.json。
-
-第二次发布 37445389130 的全部预检通过，创建历史 target Release 返回 HTTP 403；GITHUB_TOKEN 已有 contents write，但不能授权 workflows write。官方规则要求目标的 workflows 与默认分支一致。因此新增源码等同性检查，只允许文档与 release workflow 差异，tag 指向当前 main，原验收 DFF 与安装包保持。修复提交 7a3cd3a；下一次授权文件提交触发正常权限范围内的发布。不要回退或覆盖历史 tag，不需要新账号或凭据。
+后续若收到真人结果，按实际问题修复并发行新版本；不要覆盖 v1.0.0、重跑已完成开发、伪填人验表，或再次请求本次发布许可。旧候选与旧发声引擎证据有独立历史归档。

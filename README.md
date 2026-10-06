@@ -2,25 +2,25 @@
 
 离线中文 Ren’Py 视觉小说。雨夜旧车站，两位久未联系的旧友，和一封没有寄出的信。
 
-main 已进入 **v1.0.0 验收候选**：六章、24 个叙事场景、4 次选择、16 条路线与 Normal / True 两个完整结局。40 处正文精修已经应用；七种表情、四背景、旧信 CG、17 句关键语音、三首原创程序音乐及环境音效保留。
+**v1.0.0 正式版已发布。** 六章、24 个叙事场景、四次选择、16 条路线与 Normal / True 两个完整结局。40 处正文精修、七表情、四背景、旧信 CG、17 句关键配音及原创程序音乐 / 环境音效。
 
-正文全分支 **15,065** 字符，单路线 **11,303–11,666**。每分钟 250–350 字符的纯文字估算约 32–47 分钟；真人计时、试听、普通电脑 / DPI 和最终创作定案由用户统一完成，尚未记为通过。
+关键配音升级为免费开源 **Qwen3-TTS 1.7B CustomVoice / Serena**，按台词设定语气并统一混音；预生成 OGG 随游戏提供，不需付费语音 API、账号、模型或运行时网络。
 
 ## 下载与运行
 
-v1.0 Windows 全量回归已通过，见 [v1.0 验收记录](docs/RELEASE_ACCEPTANCE_V10.md)。[统一真人清单](docs/HUMAN_HANDOFF.md) · [公开发行版本](https://github.com/AureliusWu/Test/releases)。历史 v0.9 技术证据保留在 [1080p 验收](docs/DISPLAY_ACCEPTANCE_V09.md)，不能代替新正文的运行结果。
+[正式 v1.0.0](https://github.com/AureliusWu/Test/releases/tag/v1.0.0) · [Windows ZIP](https://github.com/AureliusWu/Test/releases/download/v1.0.0/BeforeTheRainStops-1.0.0-win.zip) · [验收记录](docs/RELEASE_ACCEPTANCE_V10.md) · [统一真人后续](docs/HUMAN_HANDOFF.md)
 
 1. 完整解压 `BeforeTheRainStops-1.0.0-win.zip` 到可写目录。
-2. 双击 `BeforeTheRainStops.exe`。无需 Python、引擎、模型或网络。
-3. 左键 / 空格 / Enter 推进，右键 / Esc 开菜单；下方提供回退、历史、快进、自动、存读档及设置。F 切换全屏。
+2. 双击 `BeforeTheRainStops.exe`。无需 Python、引擎或模型，可离线游玩。
+3. 左键 / 空格 / Enter 推进，右键 / Esc 开菜单；下方提供回退、历史、快进、自动、存读档与设置。F 切换全屏。
 
-原生 1920×1080、默认 1280×720 缩放窗口。v1 使用独立存档目录 `AureliusWu-BeforeTheRainStops-v1`，旧阶段存档保留，不跨阶段加载。
+原生 1920×1080、默认 1280×720 缩放窗口。v1 使用独立存档目录 `AureliusWu-BeforeTheRainStops-v1`，旧阶段存档保留，请从头开始。
 
-候选 `7593a348bf28e196c2ee3a55fd1e14c837289ef3` / [Windows CI 37411258713](https://github.com/AureliusWu/Test/actions/runs/37411258713)；原始游戏 ZIP **56,354,657 字节**，SHA-256 `4ecba6cea822947b08bc8a877af2d5eed4ccbb3ffdd367c92032c236f5dac048`。
+游戏验收提交 `dff19a6ecf516fa674e24fcb3481413efc25b849`；发行 tag 指向 `b4f06f89eebb73ff0494cb18fc4cfc38192c84ce`，仅增加文档与发布工作流差异，游戏内容完全一致。原始 ZIP **56,359,988 字节**，SHA-256 `0d09a78a482e2ff0d34e14f51d49c89d5cc0d36b91506d44c6a3bcdcc678d3f1`。
 
-91 项 Windows Python、作者侧全部校验与 Ren’Py 8.5.3 lint 通过。源码和独立 EXE 各 **31/31 用例、359/359 断言**（1088.999 / 741.506 秒）；关闭首进程后重新启动 EXE，真实读档另 **1/1 用例、10/10 断言**（3.719 秒）。全部 failed / xfailed / xpassed / skipped / not run 为 0，三个进程退出 0、未超时。
+Windows 113 项 Python、全部作者校验与 Ren’Py 8.5.3 lint 通过；源码和独立 EXE 各 31 用例 / 359 断言，退出后新进程读档 1 用例 / 10 断言通过。全部异常计数为 0，三个进程退出 0、未超时；131 PNG 完整解码、35 个 EXE 关键视图复核、85 包内资产与 ZIP CRC / 许可检查通过。
 
-[Windows 候选下载](https://github.com/AureliusWu/Test/actions/runs/37411258713/artifacts/11390201913)（登录 GitHub，保留至 2027-01-04T03:55:25Z）。原始 ZIP 与统一审阅材料已另行交付；正式 Release 等待人工验收。
+全分支正文 15,065 字符，单路线 11,303–11,666。真人试听、Normal / True 阅读计时、普通电脑 / 中文路径 / DPI、最终创作定案与冻结仍待用户统一操作。ASR、dummy 音频与自动测试耗时不代表这些项目通过。
 
 ## 开发与验证
 
@@ -58,10 +58,9 @@ python -m tools.build.verify_package --zip dist/BeforeTheRainStops-1.0.0-win.zip
 
 [正文精修记录](docs/review/V10_PROSE_REVIEW.json) · [字数统计](docs/STORY_STATS_V10.md) · [项目约束](docs/PROJECT.md) · [测试计划](docs/TEST_PLAN.md)。最终主题、角色、美术与结局由用户决定。
 
-## 正式发布
 
-main 的 CI 生成候选游戏和证据。v1 正式发布入口为 `release-v10.yml`：要求机器验收、普通 Windows / DPI、24 个声音试听、两结局真人计时、创作定案与冻结记录全部绑定同一候选提交及 ZIP SHA-256。该入口下载已验收 artifact，校验后直接发布同字节 ZIP，再下载发行资产核对；不会重新构建另一份包。
+## 正式发布记录
 
-当前人工记录为 pending，不创建正式 v1.0 tag。后续操作见 [发布步骤](docs/RELEASE_ACCEPTANCE_V10.md)。历史公开 Release 与当前 main 候选分开保留。
+`release-v10.yml` 依据用户“完成后发布正式版”的独立授权，绑定 Windows 机器验收、17 句语音证据和真实 pending 人验表。使用成功 CI 已验收的原始 ZIP，发布并下载回读核对相同字节。v1.0.0 tag 指向包含验收记录的发行提交，CI 已验证与游戏验收提交仅有文档 / 发布工作流差异；后续文档提交不改变发行包。
 
-发布工具已完成 [工程补检](docs/RELEASE_ENGINEERING_V10.md)：Linux 97 项测试通过，补齐原报告异常计数，拒绝错误类型 / 缺失记录和机器问题。试玩候选及 Windows 证据继续绑定上方同一身份。
+[发行证据](docs/evidence/v10-publication.json) · [语音方案与来源](docs/VOICE_UPGRADE_V10.md) · [发布授权](docs/review/V10_PUBLICATION_AUTHORIZATION.json)。

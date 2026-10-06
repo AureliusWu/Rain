@@ -1,3 +1,13 @@
+# 当前发布工程结果 — 2026-10-06
+
+[正式 v1.0.0](https://github.com/AureliusWu/Test/releases/tag/v1.0.0) 与公开 ZIP 同字节回读已通过。游戏验收提交 `dff19a6ecf516fa674e24fcb3481413efc25b849`；发行 tag 指向 `b4f06f89eebb73ff0494cb18fc4cfc38192c84ce`，仅增加文档与发布工作流差异，游戏内容完全一致。原始 ZIP **56,359,988 字节**，SHA-256 `0d09a78a482e2ff0d34e14f51d49c89d5cc0d36b91506d44c6a3bcdcc678d3f1`。
+
+本次新配音 Windows 113 项测试包含 20 项 release gate 反例 / 授权检查。机器验收和声音报告绑定独立用户授权，真实人验状态维持 pending。完整身份在 `evidence/v10-acceptance.json` 与 `evidence/v10-publication.json`；旧 Kokoro 机器记录另存 `evidence/v10-kokoro-acceptance.json`。
+
+下方是新配音前的 97 项补检历史，以及随后新增的授权路径；其中“仍阻止发布”是当时的真实结果。
+
+---
+
 # v1.0 发布工程补检 — 2026-10-06
 
 发布检查已修复异常计数、布尔值计数、机器问题和不完整记录的误判。新增 6 项反例回归，发布检查共 14 项；本轮 Linux 全部 97 项 Python 测试、作者校验及 Ren’Py 8.5.3 lint 通过。

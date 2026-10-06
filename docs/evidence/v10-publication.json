@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "status": "published",
+  "version": "1.0.0",
+  "candidate_commit": "dff19a6ecf516fa674e24fcb3481413efc25b849",
+  "tag_target_commit": "b4f06f89eebb73ff0494cb18fc4cfc38192c84ce",
+  "release": {
+    "id": 404551815,
+    "tag_name": "v1.0.0",
+    "html_url": "https://github.com/AureliusWu/Test/releases/tag/v1.0.0",
+    "target_commitish": "b4f06f89eebb73ff0494cb18fc4cfc38192c84ce",
+    "draft": false,
+    "prerelease": false,
+    "published_at": "2026-10-06T09:54:16Z",
+    "assets": [
+      {
+        "id": 615114723,
+        "name": "BeforeTheRainStops-1.0.0-preview.png",
+        "size": 3167797,
+        "digest": "sha256:8b8e69f0901cc2626f816534ae6703aa61bc5c106531333ae61842a274cb2855",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/AureliusWu/Test/releases/download/v1.0.0/BeforeTheRainStops-1.0.0-preview.png"
+      },
+      {
+        "id": 615114726,
+        "name": "BeforeTheRainStops-1.0.0-win.zip",
+        "size": 56359988,
+        "digest": "sha256:0d09a78a482e2ff0d34e14f51d49c89d5cc0d36b91506d44c6a3bcdcc678d3f1",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/AureliusWu/Test/releases/download/v1.0.0/BeforeTheRainStops-1.0.0-win.zip"
+      },
+      {
+        "id": 615114724,
+        "name": "SHA256SUMS.txt",
+        "size": 100,
+        "digest": "sha256:0f34686309db1c558658c70f5f19d9810b91cca72ef3c29a4504105924c0a9f4",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/AureliusWu/Test/releases/download/v1.0.0/SHA256SUMS.txt"
+      }
+    ]
+  },
+  "verification": {
+    "workflow_run_id": 37446100720,
+    "workflow_job_id": 112211187871,
+    "workflow_commit": "b4f06f89eebb73ff0494cb18fc4cfc38192c84ce",
+    "workflow_status": "completed",
+    "workflow_conclusion": "success",
+    "workflow_url": "https://github.com/AureliusWu/Test/actions/runs/37446100720",
+    "released_zip_readback": "passed",
+    "exact_acceptance_gate_passes": 3
+  },
+  "game_source_equivalence": {
+    "status": "passed",
+    "accepted_commit": "dff19a6ecf516fa674e24fcb3481413efc25b849",
+    "publication_commit": "b4f06f89eebb73ff0494cb18fc4cfc38192c84ce",
+    "method": "Windows publication CI git diff compared all tracked paths; only documentation and release workflow changes allowed. Default main head identity checked before release.",
+    "changed_paths": [
+      ".github/workflows/release-v10.yml",
+      "docs/HUMAN_HANDOFF.md",
+      "docs/RELEASE_ACCEPTANCE_V10.md",
+      "docs/RELEASE_NOTES.md",
+      "docs/STATUS.md",
+      "docs/WORK_CHECKPOINT.md",
+      "docs/evidence/v10-acceptance.json",
+      "docs/evidence/v10-kokoro-acceptance.json",
+      "docs/evidence/v10-kokoro-visual-review.json",
+      "docs/evidence/v10-publication-first-failure.json",
+      "docs/evidence/v10-publication-target-permission.json",
+      "docs/evidence/v10-visual-review.json",
+      "docs/review/V10_HUMAN_ACCEPTANCE.json",
+      "docs/review/V10_KOKORO_HUMAN_ACCEPTANCE.json",
+      "docs/review/V10_PUBLICATION_AUTHORIZATION.json"
+    ]
+  },
+  "accepted_package": {
+    "run_id": 37440590549,
+    "artifact_id": 11402083238,
+    "file": "BeforeTheRainStops-1.0.0-win.zip",
+    "size_in_bytes": 56359988,
+    "sha256": "0d09a78a482e2ff0d34e14f51d49c89d5cc0d36b91506d44c6a3bcdcc678d3f1"
+  },
+  "publication_authorization": "docs/review/V10_PUBLICATION_AUTHORIZATION.json",
+  "previous_attempts": [
+    {
+      "run_id": 37444936017,
+      "result": "expected absent-probe exit code fixed"
+    },
+    {
+      "run_id": 37445389130,
+      "result": "historical target workflow permission restriction resolved by equivalent publication main"
+    }
+  ],
+  "human_pending": [
+    "ordinary_windows",
+    "display_dpi",
+    "listening",
+    "creative_and_freeze",
+    "reading_time"
+  ]
+}

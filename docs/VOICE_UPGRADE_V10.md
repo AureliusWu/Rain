@@ -22,7 +22,7 @@
 - 所有新文件在整批绑定、哈希和音频元数据预检通过后才替换；源请求与旧 voice manifest 的哈希必须一致。保留旧源 WAV，旧游戏 OGG 转入作者侧历史目录。
 - 根据新版实际时长重新生成自动播放测试，继续验证语音播放、音量、结局配音和存读档恢复。
 
-生成状态及逐句证据见 `evidence/voice-qwen-generation.json`，模型文件与参数出处见 `game/data/voice_provider_qwen.json`。Windows 包与本次验收身份见 `evidence/v10-acceptance.json`；生成证据出现前，本文只说明实施方案。
+生成状态及逐句证据见 `evidence/voice-qwen-generation.json`，模型文件与参数出处见 `game/data/voice_provider_qwen.json`。Windows 包与本次验收身份见 `evidence/v10-acceptance.json`。生成、完整 Windows 验收与正式发布已经完成，发行回读见 `evidence/v10-publication.json`。
 
 ## 正式发布与真人后续
 
