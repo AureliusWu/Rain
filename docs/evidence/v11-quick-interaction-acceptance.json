@@ -195,5 +195,7 @@
     "assertions": 433,
     "screenshots_checked": 78,
     "raw_reports_and_hashes": "Await final CI transfer; the final acceptance will independently verify them."
-  }
+  },
+  "overall_ci_result": "failure in the final old-save history-stop assertion; quick/source/standalone/fresh-process checks remain passed",
+  "superseded_by_correction": "docs/evidence/v11-upgrade-stop-race-failure.json"
 }

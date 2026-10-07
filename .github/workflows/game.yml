@@ -79,16 +79,39 @@ jobs:
             reports/voice-smoke/02/stderr.txt
             reports/voice-smoke/02/process.json
             reports/voice-smoke-acceptance.json
+      - name: Build standalone Windows ZIP
+        run: |
+          python -m tools.build.package --sdk .\.runtime\renpy-8.5.3-sdk
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Load real saves and extras unlocks from the published v1.0.1 EXE
+        run: |
+          $zip = Get-ChildItem dist -Filter '*-win.zip' | Select-Object -First 1
+          python -m tools.build.verify_upgrade --previous-zip .runtime/compat/BeforeTheRainStops-1.0.1-win.zip --current-zip $zip.FullName
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Upload early real old-save upgrade evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: upgrade-prefix-${{ github.sha }}
+          if-no-files-found: warn
+          path: |
+            reports/upgrade/acceptance.json
+            reports/upgrade/writer/stdout.txt
+            reports/upgrade/writer/stderr.txt
+            reports/upgrade/writer/process.json
+            reports/upgrade/writer/test-plan.rpy
+            reports/upgrade/writer/screenshots/*.png
+            reports/upgrade/reader/stdout.txt
+            reports/upgrade/reader/stderr.txt
+            reports/upgrade/reader/process.json
+            reports/upgrade/reader/test-plan.rpy
+            reports/upgrade/reader/screenshots/*.png
       - name: Run actual Windows interaction tests
         run: |
           New-Item -ItemType Directory -Force reports | Out-Null
           python -m tools.build.display
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           python -m tools.build.verify_package --source-sdk .\.runtime\renpy-8.5.3-sdk --timeout 2400
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-      - name: Build standalone Windows ZIP
-        run: |
-          python -m tools.build.package --sdk .\.runtime\renpy-8.5.3-sdk
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Verify and boot EXE extracted from distribution
         run: |
@@ -100,11 +123,8 @@ jobs:
           Copy-Item reports/package/screenshots/native-main-menu.png "dist/BeforeTheRainStops-$version-preview.png"
           Get-ChildItem dist -Filter '*.zip' | Get-FileHash -Algorithm SHA256 | ForEach-Object { "$($_.Hash.ToLower())  $(Split-Path $_.Path -Leaf)" } | Set-Content dist/SHA256SUMS.txt
           @{ commit = $env:GITHUB_SHA; run_id = $env:GITHUB_RUN_ID; version = (Get-Content VERSION -Raw).Trim(); audio_driver = $env:SDL_AUDIODRIVER } | ConvertTo-Json | Set-Content reports/ci-context.json
-      - name: Load real saves and extras unlocks from the published v1.0.1 EXE
-        run: |
-          $zip = Get-ChildItem dist -Filter '*-win.zip' | Select-Object -First 1
-          python -m tools.build.verify_upgrade --previous-zip .runtime/compat/BeforeTheRainStops-1.0.1-win.zip --current-zip $zip.FullName
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Audit exact ZIP and export remote visual-review copies
+        run: python -m tools.build.export_review
       - name: Upload test evidence
         if: always()
         uses: actions/upload-artifact@v4

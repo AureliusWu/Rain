@@ -75,7 +75,11 @@ def render_upgrade_reader(story):
              '    click "重播语音" pos (0.5, 0.5)',
              f'    assert eval renpy.music.get_playing(channel="voice") == {voice_file!r}',
              '    click id "game_return"',
-             '    assert eval renpy.music.get_playing(channel="voice") is None', '']
+             # Native Stop uses config.fadeout_audio (16 ms in this SDK).
+             # Bound the real stop below the sample duration instead of racing
+             # the audio thread with a same-frame assertion.
+             '    $ print("Old-save history close:", config.fadeout_audio, renpy.music.get_playing(channel="voice"))',
+             '    assert eval (not renpy.get_screen("history") and renpy.music.get_playing(channel="voice") is None) timeout 1.0', '']
     return render_persistence_tests(story) + '\n\n' + '\n'.join(lines)
 
 

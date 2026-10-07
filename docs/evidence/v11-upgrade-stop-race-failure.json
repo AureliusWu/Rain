@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "status": "rejected_candidate",
+  "version": "1.1.0",
+  "candidate_commit": "36d58d264316dba2a395bace5276e64b38b0abc4",
+  "run_id": 37601069169,
+  "job_id": 112725294756,
+  "ci_url": "https://github.com/AureliusWu/Test/actions/runs/37601069169",
+  "ci_conclusion": "failure",
+  "python_tests": 118,
+  "windows_lint": "passed",
+  "native_summaries": {
+    "quick_1": {
+      "case_summary": {
+        "total": 6,
+        "passed": 6,
+        "xfailed": 0,
+        "failed": 0,
+        "xpassed": 0,
+        "skipped": 0,
+        "not_run": 0
+      },
+      "assertion_summary": {
+        "total": 88,
+        "passed": 88,
+        "xfailed": 0,
+        "failed": 0,
+        "xpassed": 0
+      }
+    },
+    "quick_2": {
+      "case_summary": {
+        "total": 6,
+        "passed": 6,
+        "xfailed": 0,
+        "failed": 0,
+        "xpassed": 0,
+        "skipped": 0,
+        "not_run": 0
+      },
+      "assertion_summary": {
+        "total": 88,
+        "passed": 88,
+        "xfailed": 0,
+        "failed": 0,
+        "xpassed": 0
+      }
+    },
+    "source": {
+      "case_summary": {
+        "total": 36,
+        "passed": 36,
+        "xfailed": 0,
+        "failed": 0,
+        "xpassed": 0,
+        "skipped": 0,
+        "not_run": 0
+      },
+      "assertion_summary": {
+        "total": 433,
+        "passed": 433,
+        "xfailed": 0,
+        "failed": 0,
+        "xpassed": 0
+      }
+    },
+    "standalone": {
+      "case_summary": {
+        "total": 36,
+        "passed": 36,
+        "xfailed": 0,
+        "failed": 0,
+        "xpassed": 0,
+        "skipped": 0,
+        "not_run": 0
+      },
+      "assertion_summary": {
+        "total": 433,
+        "passed": 433,
+        "xfailed": 0,
+        "failed": 0,
+        "xpassed": 0
+      }
+    },
+    "fresh_process": {
+      "case_summary": {
+        "total": 1,
+        "passed": 1,
+        "xfailed": 0,
+        "failed": 0,
+        "xpassed": 0,
+        "skipped": 0,
+        "not_run": 0
+      },
+      "assertion_summary": {
+        "total": 14,
+        "passed": 14,
+        "xfailed": 0,
+        "failed": 0,
+        "xpassed": 0
+      }
+    },
+    "upgrade_writer": {
+      "case_summary": {
+        "total": 1,
+        "passed": 1,
+        "xfailed": 0,
+        "failed": 0,
+        "xpassed": 0,
+        "skipped": 0,
+        "not_run": 0
+      },
+      "assertion_summary": {
+        "total": 12,
+        "passed": 12,
+        "xfailed": 0,
+        "failed": 0,
+        "xpassed": 0
+      }
+    },
+    "upgrade_reader": {
+      "case_summary": {
+        "total": 2,
+        "passed": 1,
+        "xfailed": 0,
+        "failed": 1,
+        "xpassed": 0,
+        "skipped": 0,
+        "not_run": 0
+      },
+      "assertion_summary": {
+        "total": 24,
+        "passed": 23,
+        "xfailed": 0,
+        "failed": 1,
+        "xpassed": 0
+      }
+    }
+  },
+  "failed_case": "previous_voice_save_in_new_version",
+  "failed_assertion": "renpy.music.get_playing(channel=\"voice\") is None immediately after closing history",
+  "old_seen_records_and_late_save_case": "cross_process_load passed all 14 assertions in the real v1.0.1 reader; overall upgrade still failed",
+  "cause": "Pinned native Stop defaults to a 16 ms fadeout. The upgrade assertion ran in the same frame, unlike the bounded stop check in the full history test. The fading file can still be reported.",
+  "correction": "Use native assertion timeout 1.0 and require the history screen to be absent, keeping all 24 reader assertions. No manual stop, clip shortening, persistent editing or forced unlock. Test the single built ZIP in the real upgrade before long source/EXE suites.",
+  "pinned_sdk": "8.5.3.26051504",
+  "pinned_source_proof": {
+    "method": "Direct SDK source reading before execution-environment disconnect",
+    "config": "renpy/config.py:142, fadeout_audio = 0.016",
+    "stop": "renpy/common/00action_audio.rpy:110-128",
+    "channel": "renpy/audio/audio.py:704-723 and 821-837",
+    "bounded_assertion": "renpy/test/testast.py:1429-1474; testparser.py:525-541"
+  },
+  "decoded_job_log_sha256": "0532257e3312607de80eb4bfd00430b75c7f94d969ab5d7255f7695a5cb42431",
+  "decoded_job_log_format": "Complete decoded GitHub job log, CRLF normalized to LF",
+  "raw_artifact": {
+    "id": 11474504363,
+    "name": "test-evidence-36d58d264316dba2a395bace5276e64b38b0abc4",
+    "size_in_bytes": 451453729,
+    "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11474504363",
+    "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11474504363/zip",
+    "expired": false,
+    "created_at": "2026-10-07T10:22:49Z",
+    "expires_at": "2027-01-05T09:30:20Z",
+    "updated_at": "2026-10-07T10:22:49Z",
+    "digest": "sha256:e08eade4deeb3a62f40076067a724a9c953f6cc88cad7aeec43edbde28168ddb",
+    "workflow_run": {
+      "id": 37601069169,
+      "repository_id": 1403696098,
+      "head_repository_id": 1403696098,
+      "head_branch": "main",
+      "head_sha": "36d58d264316dba2a395bace5276e64b38b0abc4"
+    }
+  },
+  "human_acceptance_is_not_claimed": true,
+  "formal_v11_publication": "not performed",
+  "limits": "Source, EXE and fresh-process suites passed but old-save upgrade did not fully pass. No final v1.1.0 acceptance or EXE visual review is claimed. The 451 MB raw artifact is retained remotely, not downloaded through the 32 MiB tool."
+}
