@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "status": "early_native_upgrade_passed_full_regression_pending",
+  "version": "1.1.0",
+  "candidate_commit": "b1f4f180b7a315fcb9a195889389d5af5e7688d2",
+  "candidate_tree": "cb123246a566a59d04fe25c6692b84f79ef708cc",
+  "run_id": 37610239212,
+  "job_id": 112755472685,
+  "ci_url": "https://github.com/AureliusWu/Test/actions/runs/37610239212",
+  "actual_ci_steps": [
+    {
+      "name": "Run voice and extras interaction checks first",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 11,
+      "started_at": "2026-10-07T10:53:23Z",
+      "completed_at": "2026-10-07T10:57:43Z"
+    },
+    {
+      "name": "Upload first extras interaction evidence",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 12,
+      "started_at": "2026-10-07T10:57:43Z",
+      "completed_at": "2026-10-07T10:57:47Z"
+    },
+    {
+      "name": "Build standalone Windows ZIP",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 13,
+      "started_at": "2026-10-07T10:57:47Z",
+      "completed_at": "2026-10-07T10:57:59Z"
+    },
+    {
+      "name": "Load real saves and extras unlocks from the published v1.0.1 EXE",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 14,
+      "started_at": "2026-10-07T10:57:59Z",
+      "completed_at": "2026-10-07T10:59:04Z"
+    },
+    {
+      "name": "Upload early real old-save upgrade evidence",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 15,
+      "started_at": "2026-10-07T10:59:04Z",
+      "completed_at": "2026-10-07T10:59:06Z"
+    }
+  ],
+  "quick_prefix_expected_and_enforced": {
+    "iterations": 2,
+    "cases_per_iteration": 6,
+    "assertions_per_iteration": 88,
+    "screenshots_per_iteration": 25
+  },
+  "real_upgrade_expected_and_enforced": {
+    "previous_version": "1.0.1",
+    "writer": {
+      "cases": 1,
+      "assertions": 12,
+      "screenshots": 2
+    },
+    "reader": {
+      "cases": 2,
+      "assertions": 24,
+      "screenshots": 3
+    },
+    "history_close_native_deadline_seconds": 1
+  },
+  "evidence_basis": "Successful native CLI stages enforce every authored case/assertion and required screenshot; raw reports and exact package hashes will be independently audited after full CI completion.",
+  "early_artifacts": [
+    {
+      "id": 11477646628,
+      "name": "extras-prefix-b1f4f180b7a315fcb9a195889389d5af5e7688d2",
+      "size_in_bytes": 18393316,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11477646628",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11477646628/zip",
+      "expired": false,
+      "created_at": "2026-10-07T10:57:46Z",
+      "expires_at": "2027-01-05T10:52:15Z",
+      "updated_at": "2026-10-07T10:57:46Z",
+      "digest": "sha256:749637b4298693841042758438b81fbc0b4637586bf53ac4717b50063e8d3f7a",
+      "workflow_run": {
+        "id": 37610239212,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "b1f4f180b7a315fcb9a195889389d5af5e7688d2"
+      }
+    },
+    {
+      "id": 11477172861,
+      "name": "upgrade-prefix-b1f4f180b7a315fcb9a195889389d5af5e7688d2",
+      "size_in_bytes": 15214121,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11477172861",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11477172861/zip",
+      "expired": false,
+      "created_at": "2026-10-07T10:59:06Z",
+      "expires_at": "2027-01-05T10:52:15Z",
+      "updated_at": "2026-10-07T10:59:06Z",
+      "digest": "sha256:b7b8e1659b3fa472766cecf57ea521eb696523face7a36f442033a4c6f3969c1",
+      "workflow_run": {
+        "id": 37610239212,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "b1f4f180b7a315fcb9a195889389d5af5e7688d2"
+      }
+    }
+  ],
+  "game_source_equivalence": {
+    "candidate_commit": "b1f4f180b7a315fcb9a195889389d5af5e7688d2",
+    "candidate_tree": "cb123246a566a59d04fe25c6692b84f79ef708cc",
+    "compared_to": "36d58d264316dba2a395bace5276e64b38b0abc4",
+    "root_objects": [
+      {
+        "path": "game",
+        "old_sha": "9ecf05190636c76c5f8fb2d61aeeae9fe3c77672",
+        "current_sha": "9ecf05190636c76c5f8fb2d61aeeae9fe3c77672"
+      },
+      {
+        "path": "assets_source",
+        "old_sha": "646f41ef0b93a6321be35422f0af68df3b9b9a00",
+        "current_sha": "646f41ef0b93a6321be35422f0af68df3b9b9a00"
+      },
+      {
+        "path": "prompts",
+        "old_sha": "1da86bf672ea5b69ce29c50efa4ad08041d40cef",
+        "current_sha": "1da86bf672ea5b69ce29c50efa4ad08041d40cef"
+      },
+      {
+        "path": "licenses",
+        "old_sha": "75f8620e57f839422dd2dce6f69e872636167301",
+        "current_sha": "75f8620e57f839422dd2dce6f69e872636167301"
+      },
+      {
+        "path": "VERSION",
+        "old_sha": "9084fa2f716a7117829f3f32a5f4cef400e02903",
+        "current_sha": "9084fa2f716a7117829f3f32a5f4cef400e02903"
+      },
+      {
+        "path": "PLAYER_README.txt",
+        "old_sha": "ca0feb8f3bebf2d66abde491eb83381030751799",
+        "current_sha": "ca0feb8f3bebf2d66abde491eb83381030751799"
+      },
+      {
+        "path": "CREDITS.md",
+        "old_sha": "50df01b237b1bb23ed0b314d3084fc2dbc84fa0c",
+        "current_sha": "50df01b237b1bb23ed0b314d3084fc2dbc84fa0c"
+      },
+      {
+        "path": "LICENSE",
+        "old_sha": "5713eeb57dc34a97d40075dca6944c8bb92be0fc",
+        "current_sha": "5713eeb57dc34a97d40075dca6944c8bb92be0fc"
+      }
+    ],
+    "story_change": "Version field only versus accepted v1.0.1 source"
+  },
+  "pending": [
+    "full_source_suite",
+    "full_standalone_suite",
+    "fresh_process",
+    "exact_zip_audit",
+    "final_visual_review",
+    "formal_publication_and_download_readback"
+  ],
+  "human_acceptance_is_not_claimed": true,
+  "local_environment": "offline; task continues through repository API and actual Windows CI"
+}
