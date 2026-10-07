@@ -55,7 +55,7 @@ def main():
             (folder/'bundle.part').write_bytes(data)
             manifest['parts'].append({'index':index,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()})
             index+=1
-    if len(manifest['parts'])>20: raise ValueError('Increase workflow transfer capacity before upload')
+    if len(manifest['parts'])>24: raise ValueError('Increase workflow transfer capacity before upload')
     for part in manifest['parts']:
         (destination/f"part{part['index']:02d}"/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
     print(f"Exact package/evidence transfer: {manifest['bundle_bytes']} bytes in {len(manifest['parts'])} parts")

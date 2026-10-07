@@ -265,6 +265,118 @@ testcase auto_waits_for_replayed_voice:
     assert eval __import__("time").monotonic() - test_replay_started >= 2.890
     $ preferences.afm_time = 15.0
 
+testcase extras_locked_no_spoilers:
+    run MainMenu(confirm=False)
+    click id "menu_extras"
+    assert screen "extras_images_room"
+    assert eval extras_gallery.Action("unsent_letter") is None
+    assert eval extras_gallery.Action("nearby_cafe") is None
+    assert "继续阅读后解锁"
+    assert not "未寄出的信"
+    pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
+    screenshot "native-extras-locked"
+    click id "extras_music_tab"
+    assert screen "extras_music_room_screen"
+    assert eval not extras_music_room.is_unlocked('audio/bgm/unspoken_theme.ogg')
+    assert eval not extras_music_room.is_unlocked('audio/bgm/next_message_theme.ogg')
+    assert not id "extras_music_unspoken_theme"
+    assert not id "extras_music_next_message_theme"
+    assert eval renpy.music.get_playing(channel="gallery_music") is None
+    pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
+    screenshot "native-extras-music-locked"
+    click id "extras_images_tab"
+    $ renpy.set_physical_size((1280, 720))
+    pause until eval renpy.get_physical_size() == (1280, 720)
+    pause 0.3
+    pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
+    screenshot "scaled-extras-locked"
+    click id "game_return"
+    assert screen "main_menu"
+
+testcase extras_unlock_and_music:
+    advance until screen "choice"
+    click "把干燥的位置让给她，问候近况"
+    advance until screen "choice"
+    click "告诉她：这封信是我写的"
+    advance until screen "choice"
+    click "把信里的意思和今天的打算说清楚"
+    advance until screen "choice"
+    click "和她一起走，继续聊一会儿"
+    advance until screen "ending_card"
+    assert eval last_ending == "true"
+    click id "ending_return"
+    pause until screen "main_menu"
+    $ _test.extras_state = (affection, trust, truth_known, last_ending, list(visited_scenes))
+    $ _test.extras_volume = preferences.get_volume("music")
+    click id "menu_extras"
+    assert eval all(extras_gallery.Action(key) is not None for key, title, filename in extras_images)
+    assert eval extras_gallery.get_fraction(None) == "5/5"
+    pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
+    screenshot "native-extras-unlocked"
+    click id "extras_image_unsent_letter"
+    pause until screen "extras_image_viewer"
+    assert id "extras_image_return"
+    pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
+    screenshot "native-extras-cg"
+    click id "extras_image_return"
+    pause until screen "extras_images_room"
+    assert eval (affection, trust, truth_known, last_ending, list(visited_scenes)) == _test.extras_state
+    click id "extras_music_tab"
+    assert eval all(extras_music_room.is_unlocked(filename) for key, title, filename, duration in extras_music)
+    click id "extras_music_rain_theme"
+    pause until eval renpy.music.get_playing(channel="gallery_music") == 'audio/bgm/rain_theme.ogg'
+    click id "extras_next"
+    pause until eval renpy.music.get_playing(channel="gallery_music") == 'audio/bgm/unspoken_theme.ogg'
+    click id "extras_next"
+    pause until eval renpy.music.get_playing(channel="gallery_music") == 'audio/bgm/next_message_theme.ogg'
+    click id "extras_previous"
+    pause until eval renpy.music.get_playing(channel="gallery_music") == 'audio/bgm/unspoken_theme.ogg'
+    click id "extras_pause"
+    assert eval renpy.music.get_pause(channel="gallery_music")
+    click id "extras_pause"
+    assert eval not renpy.music.get_pause(channel="gallery_music")
+    click id "extras_volume" pos (0.25, 0.5)
+    assert eval abs(preferences.get_volume("music") - 0.25) < 0.06
+    click id "extras_mute"
+    assert eval preferences.mute["music"]
+    click id "extras_mute"
+    assert eval not preferences.mute["music"]
+    click id "extras_music_unspoken_theme"
+    pause until eval renpy.music.get_playing(channel="gallery_music") == 'audio/bgm/unspoken_theme.ogg'
+    pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
+    screenshot "native-extras-music"
+    click id "extras_stop"
+    assert eval renpy.music.get_playing(channel="gallery_music") is None
+    click id "extras_music_next_message_theme"
+    pause until eval renpy.music.get_playing(channel="gallery_music") == 'audio/bgm/next_message_theme.ogg'
+    $ renpy.set_physical_size((1280, 720))
+    pause until eval renpy.get_physical_size() == (1280, 720)
+    pause 0.3
+    pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
+    screenshot "scaled-extras-music"
+    click id "extras_images_tab"
+    assert eval renpy.music.get_playing(channel="gallery_music") is None
+    pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
+    screenshot "scaled-extras-unlocked"
+    assert eval (affection, trust, truth_known, last_ending, list(visited_scenes)) == _test.extras_state
+    $ preferences.set_volume("music", _test.extras_volume)
+    click id "extras_music_tab"
+    click id "extras_music_rain_theme"
+    pause until eval renpy.music.get_playing(channel="gallery_music") == 'audio/bgm/rain_theme.ogg'
+    click id "menu_start"
+    advance until "你还是和以前一样，出门不看天气。"
+    assert eval renpy.music.get_playing(channel="gallery_music") is None
+    assert eval renpy.music.get_playing(channel="music") == 'audio/bgm/rain_theme.ogg'
+    assert eval affection == 0 and trust == 0 and not truth_known
+
 testcase route_01:
     pause until "序章 ： 雨夜"
     assert "序章 ： 雨夜"

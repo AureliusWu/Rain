@@ -3,6 +3,7 @@ import argparse
 import json
 from tools.story_model import ROOT, load_story, enumerate_routes, scene_lines, apply_effects
 from tools.compile_story import quote
+from tools.extras_tests import render_extras_tests, extras_persistence_assertions
 
 
 def checkpoint_assertions(story, route, line_id, selected, background, expression, music, ambient):
@@ -46,6 +47,7 @@ def render_persistence_tests(story):
         '        exit',
         '',
         'testcase cross_process_load:',
+        *extras_persistence_assertions(),
         '    assert eval renpy.can_load("1-2")',
         '    click id "load_open"',
         '    pause until screen "load"',
@@ -605,7 +607,7 @@ def render_tests(story):
             replay_lines.append('    pause 0.3')
             replay_lines.append('    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))')
         replay_lines.append(line)
-    return "\n".join(lines[:first] + display_lines + replay_lines + lines[first:replay_start] + lines[replay_end:display])
+    return "\n".join(lines[:first] + display_lines + replay_lines + render_extras_tests(story) + lines[first:replay_start] + lines[replay_end:display])
 
 
 def main():

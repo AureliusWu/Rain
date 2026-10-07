@@ -14,7 +14,7 @@ class GeneratedCheckTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
             (root / 'tools').mkdir()
-            for name in ['__init__.py', 'story_model.py', 'compile_story.py', 'compile_tests.py']:
+            for name in ['__init__.py', 'story_model.py', 'compile_story.py', 'compile_tests.py', 'compile_extras.py', 'extras_tests.py']:
                 shutil.copy2(ROOT / 'tools' / name, root / 'tools' / name)
             (root / 'game/data').mkdir(parents=True)
             for name in ['story.json', 'asset_manifest.json', 'voice_manifest.json']:
@@ -39,3 +39,6 @@ class GeneratedCheckTests(unittest.TestCase):
 
     def test_interaction_test_staleness_and_missing_output_fail_cli(self):
         self.check_stale('tools.compile_tests', 'game/testcases.rpy')
+
+    def test_extras_binding_staleness_and_missing_output_fail_cli(self):
+        self.check_stale('tools.compile_extras', 'game/script/extras_generated.rpy')

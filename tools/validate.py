@@ -15,6 +15,7 @@ def main():
         ["-m", "tools.image_process.import_asset", "--check"],
         ["-m", "tools.character_validator", "--report", "reports/characters.json"],
         ["-m", "tools.compile_story", "--check"],
+        ["-m", "tools.compile_extras", "--check"],
         ["-m", "tools.compile_tests", "--check"],
     ]:
         subprocess.run([sys.executable, *args], check=True)

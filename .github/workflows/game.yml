@@ -48,19 +48,19 @@ jobs:
       - name: Preserve published statement names for v1 saves
         run: |
           New-Item -ItemType Directory -Force .runtime/compat | Out-Null
-          Invoke-WebRequest -Uri "https://github.com/AureliusWu/Test/releases/download/v1.0.0/BeforeTheRainStops-1.0.0-win.zip" -OutFile ".runtime/compat/BeforeTheRainStops-1.0.0-win.zip"
-          python -m tools.build.seed_release_names --previous-zip .runtime/compat/BeforeTheRainStops-1.0.0-win.zip
+          Invoke-WebRequest -Uri "https://github.com/AureliusWu/Test/releases/download/v1.0.1/BeforeTheRainStops-1.0.1-win.zip" -OutFile ".runtime/compat/BeforeTheRainStops-1.0.1-win.zip"
+          python -m tools.build.seed_release_names --previous-zip .runtime/compat/BeforeTheRainStops-1.0.1-win.zip
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Ren'Py lint
         run: |
           & .\.runtime\renpy-8.5.3-sdk\lib\py3-windows-x86_64\python.exe .\.runtime\renpy-8.5.3-sdk\renpy.py . lint --error-code --all-problems
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-      - name: Run new voice interaction checks first
+      - name: Run voice and extras interaction checks first
         run: |
           New-Item -ItemType Directory -Force reports | Out-Null
           python -m tools.build.display
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          python -m tools.build.verify_voice_smoke --sdk .runtime/renpy-8.5.3-sdk --iterations 2 --timeout 180
+          python -m tools.build.verify_voice_smoke --sdk .runtime/renpy-8.5.3-sdk --iterations 2 --timeout 300
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Run actual Windows interaction tests
         run: |
@@ -83,10 +83,10 @@ jobs:
           Copy-Item reports/package/screenshots/native-main-menu.png "dist/BeforeTheRainStops-$version-preview.png"
           Get-ChildItem dist -Filter '*.zip' | Get-FileHash -Algorithm SHA256 | ForEach-Object { "$($_.Hash.ToLower())  $(Split-Path $_.Path -Leaf)" } | Set-Content dist/SHA256SUMS.txt
           @{ commit = $env:GITHUB_SHA; run_id = $env:GITHUB_RUN_ID; version = (Get-Content VERSION -Raw).Trim(); audio_driver = $env:SDL_AUDIODRIVER } | ConvertTo-Json | Set-Content reports/ci-context.json
-      - name: Load real saves from the published v1.0.0 EXE
+      - name: Load real saves and extras unlocks from the published v1.0.1 EXE
         run: |
           $zip = Get-ChildItem dist -Filter '*-win.zip' | Select-Object -First 1
-          python -m tools.build.verify_upgrade --previous-zip .runtime/compat/BeforeTheRainStops-1.0.0-win.zip --current-zip $zip.FullName
+          python -m tools.build.verify_upgrade --previous-zip .runtime/compat/BeforeTheRainStops-1.0.1-win.zip --current-zip $zip.FullName
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Upload test evidence
         if: always()
@@ -248,4 +248,32 @@ jobs:
         with:
           name: release-transfer-${{ github.sha }}-19
           path: transfer/part19/
+          if-no-files-found: error
+      - name: Upload exact transfer part 20
+        if: ${{ hashFiles('transfer/part20/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-20
+          path: transfer/part20/
+          if-no-files-found: error
+      - name: Upload exact transfer part 21
+        if: ${{ hashFiles('transfer/part21/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-21
+          path: transfer/part21/
+          if-no-files-found: error
+      - name: Upload exact transfer part 22
+        if: ${{ hashFiles('transfer/part22/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-22
+          path: transfer/part22/
+          if-no-files-found: error
+      - name: Upload exact transfer part 23
+        if: ${{ hashFiles('transfer/part23/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-23
+          path: transfer/part23/
           if-no-files-found: error

@@ -324,6 +324,9 @@ screen navigation():
 
         textbutton _("Preferences") id "menu_preferences" action ShowMenu("preferences")
 
+        if main_menu:
+            textbutton "鉴赏室" id "menu_extras" action ShowMenu("extras_images_room")
+
         if _in_replay:
 
             textbutton _("End Replay") action EndReplay(confirm=True)

@@ -1,4 +1,4 @@
-"""Load real saves made by the exact published v1.0.0 EXE in the new EXE."""
+"""Load real saves made by the exact published v1.0.1 EXE in the new EXE."""
 import argparse
 import hashlib
 import json
@@ -12,8 +12,8 @@ from tools.story_model import ROOT, enumerate_routes, load_story, scene_lines
 from tools.build.verify_package import (collect_runtime_evidence, positive_timeout,
                                        run_native_tests, validate_suite_evidence)
 
-BASELINE_VERSION = '1.0.0'
-BASELINE_SHA256 = '0d09a78a482e2ff0d34e14f51d49c89d5cc0d36b91506d44c6a3bcdcc678d3f1'
+BASELINE_VERSION = '1.0.1'
+BASELINE_SHA256 = '9238e2d06cb7820056912455765f42b74337bf857dacd5a213be4cc349843f36'
 
 
 def digest(file):
@@ -28,11 +28,11 @@ def render_upgrade_writer(story):
     setup = render_persistence_tests(story).split('testcase cross_process_load:')[0]
     setup = setup.replace('reports/persistence-screenshots', 'reports/upgrade-screenshots')
     setup = setup.replace('_test.timeout = 15.0', '_test.timeout = 45.0')
-    lines = ['testcase create_v100_saves:', '    click id "menu_start"',
+    lines = ['testcase create_previous_saves:', '    click id "menu_start"',
              f'    advance until {quote(dialogue["s01_arrival_l005"]["text"])}',
-             '    assert eval config.version == "1.0.0"',
+             f'    assert eval config.version == {BASELINE_VERSION!r}',
              '    assert eval renpy.music.get_playing(channel="voice") == config.sample_voice',
-             '    screenshot "upgrade-v100-first-voice"',
+             '    screenshot "upgrade-previous-first-voice"',
              '    $ renpy.unlink_save("1-4")', '    click id "save_open"',
              '    pause until screen "save"', '    click id "slot_4"',
              '    assert eval renpy.can_load("1-4")', '    click id "game_return"']
@@ -42,7 +42,7 @@ def render_upgrade_writer(story):
               '    pause until eval renpy.music.get_playing(channel="ambient") is None']
     lines += checkpoint_assertions(story, route, 's07_true_l006', 4, 'nearby_cafe', 'smile',
                                    'audio/bgm/next_message_theme.ogg', None)
-    lines += ['    screenshot "upgrade-v100-late-save"',
+    lines += ['    screenshot "upgrade-previous-late-save"',
               '    $ renpy.unlink_save("1-2")', '    click id "save_open"',
               '    pause until screen "save"', '    click id "slot_2"',
               '    assert eval renpy.can_load("1-2")', '']
@@ -53,7 +53,7 @@ def render_upgrade_reader(story):
     dialogue = {line['id']: line for node in story['nodes'] for line in scene_lines(node)}
     voice_file = next(v['file'] for v in json.loads((ROOT/'game/data/voice_manifest.json').read_text(encoding='utf-8'))['voices']
                       if v['line_id'] == 's01_arrival_l005')
-    lines = ['testcase v100_voice_save_in_new_version:', '    run MainMenu(confirm=False)',
+    lines = ['testcase previous_voice_save_in_new_version:', '    run MainMenu(confirm=False)',
              '    assert eval renpy.can_load("1-4")', '    click id "load_open"',
              '    pause until screen "load"', '    click id "slot_4"',
              '    if screen "confirm":', '        click id "confirm_yes"',
@@ -66,7 +66,7 @@ def render_upgrade_reader(story):
              '    move "重听语音" pos (0.5, 0.5)', '    pause 0.1',
              '    click "重听语音" pos (0.5, 0.5)',
              f'    assert eval renpy.music.get_playing(channel="voice") == {voice_file!r}',
-             '    screenshot "upgrade-v101-voice-load"', '    move id "what"', '    advance',
+             '    screenshot "upgrade-current-voice-load"', '    move id "what"', '    advance',
              f'    assert {quote(dialogue["s01_arrival_l006"]["text"])}', '    assert not id "voice_replay"',
              f'    $ test_history_voice_index = next(i for i, h in enumerate(_history_list) if h.voice and h.voice.filename == {voice_file!r})',
              '    click id "history_open"',
@@ -118,7 +118,7 @@ def main():
     args = parser.parse_args()
     before = {'previous': digest(args.previous_zip), 'current': digest(args.current_zip)}
     if before['previous'] != BASELINE_SHA256:
-        raise SystemExit('Previous ZIP differs from the exact published v1.0.0')
+        raise SystemExit('Previous ZIP differs from the exact published '+BASELINE_VERSION)
     story = load_story()
     with tempfile.TemporaryDirectory(prefix='galgame-upgrade-') as temp:
         root = Path(temp)
@@ -134,7 +134,7 @@ def main():
               'package_sha256': before, 'writer': writer, 'reader': reader,
               'original_packages_unmodified': True, 'human_listening': False}
     (ROOT/'reports/upgrade/acceptance.json').write_text(json.dumps(report, indent=2)+'\n', encoding='utf-8')
-    print('Published v1.0.0 saves loaded successfully in the current Windows EXE.')
+    print('Published '+BASELINE_VERSION+' saves and extras records loaded successfully in the current Windows EXE.')
 
 
 if __name__ == '__main__':

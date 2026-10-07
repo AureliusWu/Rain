@@ -1,4 +1,4 @@
-"""Exercise the actual four-case voice prefix together before long regression."""
+"""Exercise the actual voice-and-extras prefix before long regression."""
 import argparse
 import hashlib
 import json
@@ -12,15 +12,16 @@ from tools.build.verify_package import (collect_runtime_evidence, positive_timeo
                                        run_native_tests, validate_suite_evidence)
 
 PREFIX_CASES = ('native_1080_and_scaled_window', 'current_voice_replay_and_restore',
-                'history_voice_replay', 'auto_waits_for_replayed_voice')
+                'history_voice_replay', 'auto_waits_for_replayed_voice',
+                'extras_locked_no_spoilers', 'extras_unlock_and_music')
 
 
 def prefix_plan(source):
     blocks = re.split(r'(?=^testcase [a-zA-Z0-9_]+:)', source, flags=re.MULTILINE)
     names = re.findall(r'^testcase ([a-zA-Z0-9_]+):', source, re.MULTILINE)
-    if tuple(names[:4]) != PREFIX_CASES:
+    if tuple(names[:len(PREFIX_CASES)]) != PREFIX_CASES:
         raise ValueError('Voice smoke prefix differs from the real global test order')
-    return ''.join(blocks[:5])
+    return ''.join(blocks[:len(PREFIX_CASES)+1])
 
 
 def main():

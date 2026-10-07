@@ -6,6 +6,8 @@
 
 关键配音使用免费开源 **Qwen3-TTS 1.7B CustomVoice / Serena**，预生成 OGG 随游戏提供，不需付费语音 API、账号、模型或运行时网络。当前有配音的台词提供“重听语音”；已读历史中有录音的条目提供“重播语音”，离开历史停止重播。自动播放会等待新一轮重播结束。
 
+`main` 正在开发 **v1.1.0 鉴赏室**：已有图片与音乐按原生已读记录解锁，支持全图查看和音乐重听。当前公开正式版仍为 v1.0.1；新 Windows 验收与发布进度见 [当前断点](docs/WORK_CHECKPOINT.md)。
+
 ## 下载与运行
 
 [v1.0.1 Release](https://github.com/AureliusWu/Test/releases/tag/v1.0.1) · [Windows ZIP](https://github.com/AureliusWu/Test/releases/download/v1.0.1/BeforeTheRainStops-1.0.1-win.zip) · [本次验收](docs/RELEASE_ACCEPTANCE_V101.md) · [统一真人后续](docs/HUMAN_HANDOFF.md) · [保留的 v1.0.0](https://github.com/AureliusWu/Test/releases/tag/v1.0.0)
@@ -39,7 +41,7 @@ python -m tools.build.sdk
 
 Windows 使用固定并校验 SHA-256 的 Ren’Py 8.5.3 SDK：
 
-升级构建先从已发布的 v1.0.0 ZIP 校验并保留原语句名；CI 自动完成。手工构建也应在 lint 前运行 `python -m tools.build.seed_release_names --previous-zip <已下载的完整v1.0.0-ZIP>`。标准 [old-game 机制](https://www.renpy.org/doc/html/build.html#old-game) 不进入玩家包；真实旧档加载另行测试。
+升级构建先从已发布的 v1.0.1 ZIP 校验并保留原语句名；CI 自动完成。手工构建也应在 lint 前运行 `python -m tools.build.seed_release_names --previous-zip <已下载的完整v1.0.1-ZIP>`。标准 [old-game 机制](https://www.renpy.org/doc/html/build.html#old-game) 不进入玩家包；真实旧档加载另行测试。
 
 ```powershell
 $sdk = ".runtime/renpy-8.5.3-sdk"
