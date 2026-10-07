@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "status": "published_and_exact_public_download_verified",
+  "version": "1.1.0",
+  "candidate_commit": "b1f4f180b7a315fcb9a195889389d5af5e7688d2",
+  "candidate_tree": "cb123246a566a59d04fe25c6692b84f79ef708cc",
+  "accepted_run_id": 37610239212,
+  "publication_commit": "f32c2de9b67aa3f46e9e32146239477407b9c450",
+  "publication_tree": "30c7e2afb8c338cb9fd5c0a404bb63376ce42505",
+  "publication_run_id": 37640637862,
+  "publication_job_id": 112858336382,
+  "publication_ci_url": "https://github.com/AureliusWu/Test/actions/runs/37640637862",
+  "publication_completed_at": "2026-10-07T14:55:08Z",
+  "tag_name": "v1.1.0",
+  "tag_ref": {
+    "ref": "refs/tags/v1.1.0",
+    "node_id": "REF_kwDOU6qz4rByZWZzL3RhZ3MvdjEuMS4w",
+    "url": "https://api.github.com/repos/AureliusWu/Test/git/refs/tags/v1.1.0",
+    "object": {
+      "sha": "f32c2de9b67aa3f46e9e32146239477407b9c450",
+      "type": "commit",
+      "url": "https://api.github.com/repos/AureliusWu/Test/git/commits/f32c2de9b67aa3f46e9e32146239477407b9c450"
+    }
+  },
+  "tag_target_policy": "current_main_with_identical_accepted_game_source",
+  "release": {
+    "id": 405880463,
+    "url": "https://github.com/AureliusWu/Test/releases/tag/v1.1.0",
+    "published_at": "2026-10-07T14:55:02Z",
+    "draft": false,
+    "prerelease": false,
+    "latest_release_id": 405880463
+  },
+  "package": {
+    "file": "BeforeTheRainStops-1.1.0-win.zip",
+    "size_in_bytes": 56379987,
+    "sha256": "a6ce022d23e5e88e3666d9806ca69a30077d52c56bf74820f4863f9ddc66fca0",
+    "asset_id": 619005202,
+    "download_url": "https://github.com/AureliusWu/Test/releases/download/v1.1.0/BeforeTheRainStops-1.1.0-win.zip"
+  },
+  "assets": [
+    {
+      "id": 619005197,
+      "name": "BeforeTheRainStops-1.1.0-preview.png",
+      "state": "uploaded",
+      "size": 3170620,
+      "digest": "sha256:5284066eae27aae5b37436031ce27e77842e6768c065b7fb1d165270ed284746",
+      "download_url": "https://github.com/AureliusWu/Test/releases/download/v1.1.0/BeforeTheRainStops-1.1.0-preview.png"
+    },
+    {
+      "id": 619005202,
+      "name": "BeforeTheRainStops-1.1.0-win.zip",
+      "state": "uploaded",
+      "size": 56379987,
+      "digest": "sha256:a6ce022d23e5e88e3666d9806ca69a30077d52c56bf74820f4863f9ddc66fca0",
+      "download_url": "https://github.com/AureliusWu/Test/releases/download/v1.1.0/BeforeTheRainStops-1.1.0-win.zip"
+    },
+    {
+      "id": 619005200,
+      "name": "SHA256SUMS.txt",
+      "state": "uploaded",
+      "size": 100,
+      "digest": "sha256:8f36e4493a7a433d177e4aa28f42f8c2f64293cd5866ec6c7bf7535f7d06fe40",
+      "download_url": "https://github.com/AureliusWu/Test/releases/download/v1.1.0/SHA256SUMS.txt"
+    }
+  ],
+  "public_download_verification": {
+    "status": "passed",
+    "method": "Actual Windows publisher downloaded the public release ZIP and reran exact SHA-256, size, CRC, version, license and cleanliness gates.",
+    "exact_gate_successes": 3,
+    "source_equivalence": "passed",
+    "game_tree_sha": "9ecf05190636c76c5f8fb2d61aeeae9fe3c77672",
+    "decoded_job_log_sha256": "9f0857c8211c5e32ccee479872155d3bbd3461a2bdde4deb7bc8f8121874af81",
+    "decoded_job_log_format": "UTF-8 with CRLF normalized to LF"
+  },
+  "metadata_only_changes": [
+    "docs/RELEASE_ACCEPTANCE_V11.md",
+    "docs/RELEASE_NOTES_V11.md",
+    "docs/STATUS.md",
+    "docs/TEST_PLAN.md",
+    "docs/WORK_CHECKPOINT.md",
+    "docs/evidence/v11-acceptance.json",
+    "docs/evidence/v11-early-upgrade-checkpoint.json",
+    "docs/evidence/v11-prepublication-baseline.json",
+    "docs/evidence/v11-visual-review.json",
+    "docs/review/V11_HUMAN_ACCEPTANCE.json",
+    "docs/review/V11_PUBLICATION_AUTHORIZATION.json"
+  ],
+  "previous_releases_preserved": [
+    {
+      "tag_name": "v1.0.1",
+      "release_id": 405360576,
+      "tag_commit": "4029f6674081d8be870f987cab42d1052d1794be",
+      "assets": [
+        {
+          "id": 617495877,
+          "name": "BeforeTheRainStops-1.0.1-preview.png",
+          "size": 3167801,
+          "digest": "sha256:635f705f82173d006c0304a269b4968f5a6a6e8f5c13c4e356d74c15121a067c"
+        },
+        {
+          "id": 617495872,
+          "name": "BeforeTheRainStops-1.0.1-win.zip",
+          "size": 56364666,
+          "digest": "sha256:9238e2d06cb7820056912455765f42b74337bf857dacd5a213be4cc349843f36"
+        },
+        {
+          "id": 617495876,
+          "name": "SHA256SUMS.txt",
+          "size": 100,
+          "digest": "sha256:f2cf3a73b2aa01268c908c258893ad99340347b3ffbfa405edd29332bd901490"
+        }
+      ]
+    },
+    {
+      "tag_name": "v1.0.0",
+      "release_id": 404551815,
+      "tag_commit": "b4f06f89eebb73ff0494cb18fc4cfc38192c84ce",
+      "assets": [
+        {
+          "id": 615114723,
+          "name": "BeforeTheRainStops-1.0.0-preview.png",
+          "size": 3167797,
+          "digest": "sha256:8b8e69f0901cc2626f816534ae6703aa61bc5c106531333ae61842a274cb2855"
+        },
+        {
+          "id": 615114726,
+          "name": "BeforeTheRainStops-1.0.0-win.zip",
+          "size": 56359988,
+          "digest": "sha256:0d09a78a482e2ff0d34e14f51d49c89d5cc0d36b91506d44c6a3bcdcc678d3f1"
+        },
+        {
+          "id": 615114724,
+          "name": "SHA256SUMS.txt",
+          "size": 100,
+          "digest": "sha256:0f34686309db1c558658c70f5f19d9810b91cca72ef3c29a4504105924c0a9f4"
+        }
+      ]
+    }
+  ],
+  "human_pending": [
+    "ordinary_windows",
+    "display_dpi",
+    "listening",
+    "creative_and_freeze",
+    "reading_time"
+  ],
+  "human_acceptance_is_not_claimed": true,
+  "unresolved_machine_issues": []
+}

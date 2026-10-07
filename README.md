@@ -2,33 +2,34 @@
 
 离线中文 Ren’Py 视觉小说。雨夜旧车站，两位久未联系的旧友，和一封没有寄出的信。
 
-**v1.0.1 免费配音重听补丁版已正式发布。** 六章、24 个叙事场景、四次选择、16 条路线与 Normal / True 两个完整结局。包含七表情、四背景、旧信 CG、17 句关键配音及原创程序音乐 / 环境音效。
+**v1.1.0 离线鉴赏室版已正式发布。** 六章、24 个叙事场景、四次选择、16 条路线、Normal / True 两个结局，七表情、四背景、旧信 CG、17 句配音及原创音乐 / 环境音效。
 
-关键配音使用免费开源 **Qwen3-TTS 1.7B CustomVoice / Serena**，预生成 OGG 随游戏提供，不需付费语音 API、账号、模型或运行时网络。当前有配音的台词提供“重听语音”；已读历史中有录音的条目提供“重播语音”，离开历史停止重播。自动播放会等待新一轮重播结束。
+主菜单新增“鉴赏室”：五张已有背景 / CG、三首音乐随真实剧情解锁，退出后保留进度。未解锁内容隐藏图片和标题；支持全图查看、播放 / 切曲 / 暂停 / 停止、共用音量与静音，离开页面停止播放。
 
-`main` 正在开发 **v1.1.0 鉴赏室**：已有图片与音乐按原生已读记录解锁，支持全图查看和音乐重听。当前公开正式版仍为 v1.0.1；新 Windows 验收与发布进度见 [当前断点](docs/WORK_CHECKPOINT.md)。
+关键配音使用免费开源 **Qwen3-TTS 1.7B CustomVoice / Serena**，预生成 OGG 随包提供；当前台词可重听，已读历史可重播，自动模式等待重播结束。
 
 ## 下载与运行
 
-[v1.0.1 Release](https://github.com/AureliusWu/Test/releases/tag/v1.0.1) · [Windows ZIP](https://github.com/AureliusWu/Test/releases/download/v1.0.1/BeforeTheRainStops-1.0.1-win.zip) · [本次验收](docs/RELEASE_ACCEPTANCE_V101.md) · [统一真人后续](docs/HUMAN_HANDOFF.md) · [保留的 v1.0.0](https://github.com/AureliusWu/Test/releases/tag/v1.0.0)
+[v1.1.0 Release](https://github.com/AureliusWu/Test/releases/tag/v1.1.0) · [Windows ZIP](https://github.com/AureliusWu/Test/releases/download/v1.1.0/BeforeTheRainStops-1.1.0-win.zip) · [本次验收](docs/RELEASE_ACCEPTANCE_V11.md) · [统一真人后续](docs/HUMAN_HANDOFF.md)
 
-1. 完整解压 `BeforeTheRainStops-1.0.1-win.zip` 到可写目录。
-2. 双击 `BeforeTheRainStops.exe`。无需 Python、引擎或模型，可离线游玩。
-3. 左键 / 空格 / Enter 推进，右键 / Esc 开菜单；下方提供回退、历史、快进、自动、存读档与设置。F 切换全屏。重听后可点击对白区域继续阅读。
+1. 完整解压 `BeforeTheRainStops-1.1.0-win.zip` 到可写目录。
+2. 双击 `BeforeTheRainStops.exe`，无需 Python、引擎、模型、账号或语音 API，可离线游玩。
+3. 左键 / 空格 / Enter 推进，右键 / Esc 开菜单，F 切换全屏；下方有回退、历史、快进、自动、存读档与设置。
+4. 主菜单进入鉴赏室，看过的图片与听过的音乐自动解锁。
 
-原生 1920×1080、默认 1280×720 缩放窗口。v1 使用存档目录 `AureliusWu-BeforeTheRainStops-v1`；已实际检查 v1.0.0 的开局配音行和后半段存档读取。更早 v0.x 存档保留，跨阶段请从头开始。
+原生 1920×1080、默认 1280×720；沿用 `AureliusWu-BeforeTheRainStops-v1` 存档目录，实际验证 v1.0.1 两个代表存档和原生已读记录。
 
-游戏验收提交 `cfacee500c15498175f165f32ddfb6c70f7c9314` / [Windows CI 37496730978](https://github.com/AureliusWu/Test/actions/runs/37496730978)；原始 ZIP **56,364,666 字节**，SHA-256 `9238e2d06cb7820056912455765f42b74337bf857dacd5a213be4cc349843f36`。
+游戏验收提交 `b1f4f180b7a315fcb9a195889389d5af5e7688d2` / [Windows CI 37610239212](https://github.com/AureliusWu/Test/actions/runs/37610239212)；原始 ZIP **56,379,987 字节**，SHA-256 `a6ce022d23e5e88e3666d9806ca69a30077d52c56bf74820f4863f9ddc66fca0`。
 
-Windows 113 项 Python、全部作者校验及 Ren’Py 8.5.3 lint 通过；源码和独立 EXE 各 **34/34 用例、404/404 断言**，新进程读档 **1/1 用例、10/10 断言**。精确的公开 v1.0.0 EXE 写档 **1/12**，新版 EXE 读取旧档 **2/20** 均通过；全部异常计数为 0，五个进程退出 0、未超时。
+Windows **118 项 Python**、全部作者校验及 Ren’Py 8.5.3.26051504 lint 通过；源码和独立 EXE 各 **36 用例 / 433 断言 / 78 截图**。新进程读档 / 鉴赏持久进度 **1/14/2**，公开 v1.0.1 写档 **1/12/2**、新 EXE 读取旧档 / 已读记录 **2/24/3**（用例 / 断言 / 截图）。五个完整进程退出 0、未超时，异常计数全为 0；两遍实际前缀另各 **6/88/25** 通过。
 
-145 张 PNG 完整解码并检查尺寸 / SHA-256；42 个关键 EXE / 升级读取视图复核，其中 17 个直接查看当前图、25 个仅在 SHA-256 与此前直接审阅图一致时复用。85 包内资产、原始 ZIP CRC、版本、玩家说明和许可核验通过；原始包没有注入测试脚本。
+Windows 审计完整解码并核对 **163 张原始 PNG** 的尺寸 / SHA-256；复核 **52 个关键视图**，其中 8 个实际查看全分辨率 JPEG 副本、44 个原始 PNG 哈希与已有直接观察完全相同。副本绑定原图哈希并保留 JPEG 查看限制；85 包内资产、ZIP CRC、版本、玩家说明、许可与录音证据通过，玩家包无测试注入或模型。
 
-全分支正文 15,065 字符，单路线 11,303–11,666。真人试听、Normal / True 阅读计时、普通电脑 / 中文路径 / DPI、最终创作定案与冻结继续待用户统一操作。Windows runner 使用 dummy 音频，自动执行耗时不等于阅读时长。
+全分支 15,065 字符，单路线 11,303–11,666。真人试听、Normal / True 阅读计时、普通电脑 / 中文路径 / DPI、最终创作定案与冻结继续由用户统一操作。Windows 使用 dummy 音频，自动执行耗时不等于阅读时长。真实旧档覆盖两个代表位置；不宣称逐一验证所有玩家存档或 Linux 原生 UI 通过。
 
 ## 开发与验证
 
-当前游戏验收提交 `cfacee500c15498175f165f32ddfb6c70f7c9314`。完整机器与图像证据见 [本次验收](docs/RELEASE_ACCEPTANCE_V101.md)，发布进度见 [当前断点](docs/WORK_CHECKPOINT.md)。
+当前游戏验收提交 `b1f4f180b7a315fcb9a195889389d5af5e7688d2`。完整机器与图像证据见 [本次验收](docs/RELEASE_ACCEPTANCE_V11.md)，发布进度见 [当前断点](docs/WORK_CHECKPOINT.md)。
 
 Python 3.12、Pillow、SoundFile / NumPy 只用于开发。模型与推理依赖不进入玩家包。
 
@@ -49,7 +50,9 @@ $sdk = ".runtime/renpy-8.5.3-sdk"
 python -m tools.build.display
 python -m tools.build.verify_package --source-sdk $sdk --timeout 2400
 python -m tools.build.package --sdk $sdk
-python -m tools.build.verify_package --zip dist/BeforeTheRainStops-1.0.1-win.zip --timeout 2400
+$version = (Get-Content VERSION -Raw).Trim()
+python -m tools.build.verify_package --zip "dist/BeforeTheRainStops-$version-win.zip" --timeout 2400
+python -m tools.build.verify_upgrade --previous-zip .runtime/compat/BeforeTheRainStops-1.0.1-win.zip --current-zip "dist/BeforeTheRainStops-$version-win.zip"
 ```
 
 ## 数据与来源
@@ -69,12 +72,8 @@ python -m tools.build.verify_package --zip dist/BeforeTheRainStops-1.0.1-win.zip
 
 ## 正式发布记录
 
-当前 v1.0.1 的 `release-v101.yml` 使用成功 Windows CI 的同一原始 ZIP，正式发布后下载回读核验。tag 指向 `4029f6674081d8be870f987cab42d1052d1794be`，与验收游戏源代码相同；后续文档提交不改变发行包。真人后续五组继续 pending。
+[正式 v1.1.0](https://github.com/AureliusWu/Test/releases/tag/v1.1.0) 已于 **2026-10-07T14:55:02Z** 发布，非草稿、非预发行，且为最新正式版。tag 指向 `f32c2de9b67aa3f46e9e32146239477407b9c450`，与验收提交仅有允许的文档差异；[发布 CI 37640637862](https://github.com/AureliusWu/Test/actions/runs/37640637862) 成功，公开 ZIP 下载回读 SHA-256 / CRC 与验收包一致。v1.0.1、v1.0.0 的标签及下载资产保持原样。实际身份见 [发布记录](docs/evidence/v11-publication.json)。
 
-[本次发行证据](docs/evidence/v101-publication.json) · [本次发布授权](docs/review/V101_PUBLICATION_AUTHORIZATION.json) · [发布 CI](https://github.com/AureliusWu/Test/actions/runs/37568976789)。
+[发布授权](docs/review/V11_PUBLICATION_AUTHORIZATION.json) · [语音方案与来源](docs/VOICE_UPGRADE_V10.md)。
 
-以下保留 v1.0.0 的发行记录。
-
-`release-v10.yml` 依据用户“完成后发布正式版”的独立授权，绑定 Windows 机器验收、17 句语音证据和真实 pending 人验表。使用成功 CI 已验收的原始 ZIP，发布并下载回读核对相同字节。v1.0.0 tag 指向包含验收记录的发行提交，CI 已验证与游戏验收提交仅有文档 / 发布工作流差异；后续文档提交不改变发行包。
-
-[发行证据](docs/evidence/v10-publication.json) · [语音方案与来源](docs/VOICE_UPGRADE_V10.md) · [发布授权](docs/review/V10_PUBLICATION_AUTHORIZATION.json)。
+保留 [v1.0.1](https://github.com/AureliusWu/Test/releases/tag/v1.0.1) 及其 [证据](docs/evidence/v101-publication.json)，以及 [v1.0.0](https://github.com/AureliusWu/Test/releases/tag/v1.0.0) 及其 [证据](docs/evidence/v10-publication.json)。
