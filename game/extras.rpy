@@ -41,9 +41,9 @@ screen extras_images_room():
                                     add Solid("#193444")
                                     text "未解锁" align (0.5, 0.5) size 30 color "#becdd7"
                         if extras_gallery.Action(identity) is not None:
-                            text title size 28 xalign 0.5
+                            text title id "extras_title_" + identity size 28 xalign 0.5
                         else:
-                            text "继续阅读后解锁" size 25 color "#8da9b8" xalign 0.5
+                            text "继续阅读后解锁" id "extras_locked_" + identity size 25 color "#8da9b8" xalign 0.5
                 null width 420 height 275
 
 screen extras_music_room_screen():

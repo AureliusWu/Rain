@@ -1,0 +1,34 @@
+{
+  "status": "rejected_candidate",
+  "version": "1.1.0",
+  "candidate_commit": "158ced6e7264834953e65c642bfdb978b8a3a33d",
+  "run_id": 37585738477,
+  "job_id": 112675306227,
+  "failure_step": "Run voice and extras interaction checks first",
+  "python_tests": 118,
+  "windows_lint": "passed",
+  "native_report": {
+    "cases": 6,
+    "passed": 4,
+    "failed": 1,
+    "not_run": 1,
+    "assertions": 63,
+    "passed_assertions": 62,
+    "failed_assertions": 1
+  },
+  "first_failure": {
+    "case": "extras_locked_no_spoilers",
+    "statement": "assert \"继续阅读后解锁\"",
+    "reason": "RenPy 8.5.3 test TextSelector searches focus/alt text; an ordinary static caption in the main-menu gallery does not create a focus target. The screen and both locked Gallery actions had passed before this selector failed.",
+    "secondary_failure": "The following before_testcase hook timed out while unwinding the failed test."
+  },
+  "correction": "Give unlocked titles and locked captions widget IDs. Assert the actual locked caption widget text and absence of the unlocked title widget. Retain all native unlock, spoiler, interaction, screenshot and persistence checks.",
+  "review_limits": "No extras screenshot was reached in this rejected run; no extras visual approval or successful EXE regression is claimed.",
+  "artifact": {
+    "id": 11466476805,
+    "bytes": 24099758,
+    "sha256": "1916e168dbb5b319312c95835e9ef13b67c762443376d18208827780db69dfea"
+  },
+  "decoded_job_log_sha256": "02f8ede77b22cc58563432dfb9fad02022d3b4fcf500cf76c4b3c8cdc8f77ba3",
+  "native_stdout_sha256": "0ba0288293dd7c3c95a563be8119c8134a6dc713a370910cce0c32a7e5e58f27"
+}
