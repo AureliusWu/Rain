@@ -271,7 +271,7 @@ testcase extras_locked_no_spoilers:
     assert screen "extras_images_room"
     assert eval extras_gallery.Action("unsent_letter") is None
     assert eval extras_gallery.Action("nearby_cafe") is None
-    assert eval "继续阅读后解锁" in renpy.get_widget("extras_images_room", "extras_locked_unsent_letter")._tts_all()
+    assert eval "继续阅读后解锁" in renpy.get_widget("extras_images_room", "extras_locked_unsent_letter")._tts_all(False)
     assert not id "extras_title_unsent_letter"
     pause 0.3
     pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))

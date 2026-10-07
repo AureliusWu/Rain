@@ -12,7 +12,7 @@ def render_extras_tests(story):
              '    click id "menu_extras"', '    assert screen "extras_images_room"',
              '    assert eval extras_gallery.Action("unsent_letter") is None',
              '    assert eval extras_gallery.Action("nearby_cafe") is None',
-             '    assert eval "继续阅读后解锁" in renpy.get_widget("extras_images_room", "extras_locked_unsent_letter")._tts_all()',
+             '    assert eval "继续阅读后解锁" in renpy.get_widget("extras_images_room", "extras_locked_unsent_letter")._tts_all(False)',
              '    assert not id "extras_title_unsent_letter"',
              '    screenshot "native-extras-locked"',
              '    click id "extras_music_tab"', '    assert screen "extras_music_room_screen"',

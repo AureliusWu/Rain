@@ -1,0 +1,27 @@
+{
+  "status": "rejected_candidate",
+  "version": "1.1.0",
+  "candidate_commit": "cb03e189b98b9c71dee1a46a155d7774b16378b5",
+  "run_id": 37586537688,
+  "job_id": 112677849425,
+  "failure_step": "Run voice and extras interaction checks first",
+  "python_tests": 118,
+  "windows_lint": "passed",
+  "native_report": {
+    "cases": 6,
+    "passed": 4,
+    "failed": 1,
+    "not_run": 1,
+    "executed_assertions": 62,
+    "passed_assertions": 62
+  },
+  "error": "TypeError: Text._tts() missing 1 required positional argument: raw",
+  "correction": "The pinned Text _tts_all method requires the raw argument. Pass False to inspect the rendered locked caption text; all required test counts and spoiler checks remain.",
+  "artifact": {
+    "id": 11467016120,
+    "bytes": 24100401,
+    "sha256": "cad10a83f2a4e4f7f6e2ce707e376f1e74c26b6be697a3cac9c9168b4ff6286d"
+  },
+  "decoded_job_log_sha256": "21a3c49967797d8ad5bf120340440da158d9fdb04e6f8c9ac056986ebf47f30e",
+  "review_limits": "No extras screenshot was reached. The failed hook timeout is secondary to the test TypeError; no extras UI or EXE acceptance is claimed."
+}
