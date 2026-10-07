@@ -1,0 +1,42 @@
+{
+  "status": "rejected_candidate",
+  "version": "1.1.0",
+  "candidate_commit": "92432adde658730214fbe3b04e5d70d09dea33b2",
+  "run_id": 37586998017,
+  "job_id": 112679332786,
+  "failure_step": "Run voice and extras interaction checks first",
+  "python_tests": 118,
+  "windows_lint": "passed",
+  "native_report": {
+    "cases": 6,
+    "passed": 5,
+    "failed": 1,
+    "not_run": 0,
+    "assertions": 80,
+    "passed_assertions": 79,
+    "failed_assertions": 1
+  },
+  "first_failure": {
+    "case": "extras_unlock_and_music",
+    "statement": "assert eval abs(preferences.get_volume(\"music\") - 0.25) < 0.06",
+    "reason": "The native MixerValue slider uses quadratic or decibel conversion. Its fractional position is not the linear amplitude returned by preferences.get_volume."
+  },
+  "correction": "Retain the actual 25% physical slider click. Check the normalized native MixerValue position, with the pinned quadratic/decibel range, and log its volume and mixer value. Do not replace the mouse operation with a programmatic set_volume call. Publish bounded prefix images before the long regression so new views can be inspected early.",
+  "pinned_source": {
+    "sdk": "8.5.3.26051504",
+    "file": "renpy/common/00barvalues.rpy",
+    "sha256": "bcd07a920c131d172a5988f996266baea6e1cf69362d4ae429ca98131ec1b8db",
+    "methods": [
+      "MixerValue.set_mixer",
+      "MixerValue.get_mixer",
+      "MixerValue.get_adjustment"
+    ]
+  },
+  "artifact": {
+    "id": 11467451685,
+    "bytes": 37501528,
+    "sha256": "b0e09e41ecea2d62ab8630c8875b84c5ffaa38382d1d7020dacd5f78432c806d"
+  },
+  "decoded_job_log_sha256": "d8480ef1406ced320c2b985c3a66b04ac0c9a313e1c05c1ba06de089d2a3d4db",
+  "review_limits": "Locked extras, real unlocks, full image viewer, next/previous and pause assertions reached successfully. No complete extras acceptance or EXE regression is claimed for this run."
+}

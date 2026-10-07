@@ -341,7 +341,8 @@ testcase extras_unlock_and_music:
     click id "extras_pause"
     assert eval not renpy.music.get_pause(channel="gallery_music")
     click id "extras_volume" pos (0.25, 0.5)
-    assert eval abs(preferences.get_volume("music") - 0.25) < 0.06
+    $ print("Extras volume after real slider click:", preferences.get_volume("music"), MixerValue("music").get_mixer(), config.quadratic_volumes, config.volume_db_range)
+    assert eval abs(MixerValue("music").get_mixer() / (1.0 if config.quadratic_volumes else config.volume_db_range) - 0.25) < 0.06
     click id "extras_mute"
     assert eval preferences.mute["music"]
     click id "extras_mute"

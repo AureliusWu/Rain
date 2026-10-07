@@ -62,6 +62,23 @@ jobs:
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           python -m tools.build.verify_voice_smoke --sdk .runtime/renpy-8.5.3-sdk --iterations 2 --timeout 300
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Upload first extras interaction evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: extras-prefix-${{ github.sha }}
+          if-no-files-found: warn
+          path: |
+            reports/voice-smoke/01/screenshots/native-extras-*.png
+            reports/voice-smoke/01/screenshots/scaled-extras-*.png
+            reports/voice-smoke/01/stdout.txt
+            reports/voice-smoke/01/stderr.txt
+            reports/voice-smoke/01/process.json
+            reports/voice-smoke/01/test-plan.rpy
+            reports/voice-smoke/02/stdout.txt
+            reports/voice-smoke/02/stderr.txt
+            reports/voice-smoke/02/process.json
+            reports/voice-smoke-acceptance.json
       - name: Run actual Windows interaction tests
         run: |
           New-Item -ItemType Directory -Force reports | Out-Null
