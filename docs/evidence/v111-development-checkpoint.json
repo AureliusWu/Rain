@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "windows_in_progress",
+  "status": "full_windows_source_in_progress",
   "version": "1.1.1",
   "candidate_commit": "91cd48641448d48f2bbd97de9f200024ca02dadf",
   "candidate_tree": "8c7fbc29cb9fa87ce06bfc3b8c57d71e6df2b607",
@@ -55,5 +55,70 @@
     "reading_time"
   ],
   "publication": "not_started",
-  "next": "Complete this Windows run, inspect current visual evidence, authorize exact reviewed bytes under the existing user publication instruction, then verify public download."
+  "next": "Finish full source and exact-package EXE runs, then audit and directly inspect current review images before formal publication.",
+  "windows_steps_completed": [
+    "authoring checks",
+    "RenPy lint",
+    "two real prefix iterations",
+    "standalone ZIP build",
+    "published v1.1.0 old-save writer and new EXE reader"
+  ],
+  "completed_native_counts": {
+    "prefix_per_iteration": [
+      6,
+      103,
+      29
+    ],
+    "prefix_iterations": 2,
+    "upgrade_writer": [
+      1,
+      14,
+      3
+    ],
+    "upgrade_reader": [
+      2,
+      26,
+      4
+    ]
+  },
+  "early_artifacts": [
+    {
+      "id": 11496673315,
+      "name": "upgrade-prefix-91cd48641448d48f2bbd97de9f200024ca02dadf",
+      "size_in_bytes": 20653618,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11496673315",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11496673315/zip",
+      "expired": false,
+      "created_at": "2026-10-07T16:27:56Z",
+      "expires_at": "2027-01-05T16:19:21Z",
+      "updated_at": "2026-10-07T16:27:56Z",
+      "digest": "sha256:23b769a31863b6945e7e5efb459c6e26c0352d2f3a1c5c7ec439bcc108ab04a5",
+      "workflow_run": {
+        "id": 37651109153,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "91cd48641448d48f2bbd97de9f200024ca02dadf"
+      }
+    },
+    {
+      "id": 11496039915,
+      "name": "extras-prefix-91cd48641448d48f2bbd97de9f200024ca02dadf",
+      "size_in_bytes": 26437647,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11496039915",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11496039915/zip",
+      "expired": false,
+      "created_at": "2026-10-07T16:26:03Z",
+      "expires_at": "2027-01-05T16:19:21Z",
+      "updated_at": "2026-10-07T16:26:03Z",
+      "digest": "sha256:cb9e7055a6e3d63d405e250f26da9c4824515406e8124959227a30d133c9957c",
+      "workflow_run": {
+        "id": 37651109153,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "91cd48641448d48f2bbd97de9f200024ca02dadf"
+      }
+    }
+  ]
 }
