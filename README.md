@@ -2,29 +2,31 @@
 
 离线中文 Ren’Py 视觉小说。雨夜旧车站，两位久未联系的旧友，和一封没有寄出的信。
 
-**v1.0.0 正式版已发布。** 六章、24 个叙事场景、四次选择、16 条路线与 Normal / True 两个完整结局。40 处正文精修、七表情、四背景、旧信 CG、17 句关键配音及原创程序音乐 / 环境音效。
+**v1.0.1 免费配音重听补丁版。** 六章、24 个叙事场景、四次选择、16 条路线与 Normal / True 两个完整结局。包含七表情、四背景、旧信 CG、17 句关键配音及原创程序音乐 / 环境音效。
 
-关键配音升级为免费开源 **Qwen3-TTS 1.7B CustomVoice / Serena**，按台词设定语气并统一混音；预生成 OGG 随游戏提供，不需付费语音 API、账号、模型或运行时网络。
+关键配音使用免费开源 **Qwen3-TTS 1.7B CustomVoice / Serena**，预生成 OGG 随游戏提供，不需付费语音 API、账号、模型或运行时网络。当前有配音的台词提供“重听语音”；已读历史中有录音的条目提供“重播语音”，离开历史停止重播。自动播放会等待新一轮重播结束。
 
 ## 下载与运行
 
-[正式 v1.0.0](https://github.com/AureliusWu/Test/releases/tag/v1.0.0) · [Windows ZIP](https://github.com/AureliusWu/Test/releases/download/v1.0.0/BeforeTheRainStops-1.0.0-win.zip) · [验收记录](docs/RELEASE_ACCEPTANCE_V10.md) · [统一真人后续](docs/HUMAN_HANDOFF.md)
+[v1.0.1 Release](https://github.com/AureliusWu/Test/releases/tag/v1.0.1) · [Windows ZIP](https://github.com/AureliusWu/Test/releases/download/v1.0.1/BeforeTheRainStops-1.0.1-win.zip) · [本次验收](docs/RELEASE_ACCEPTANCE_V101.md) · [统一真人后续](docs/HUMAN_HANDOFF.md) · [保留的 v1.0.0](https://github.com/AureliusWu/Test/releases/tag/v1.0.0)
 
-1. 完整解压 `BeforeTheRainStops-1.0.0-win.zip` 到可写目录。
+1. 完整解压 `BeforeTheRainStops-1.0.1-win.zip` 到可写目录。
 2. 双击 `BeforeTheRainStops.exe`。无需 Python、引擎或模型，可离线游玩。
-3. 左键 / 空格 / Enter 推进，右键 / Esc 开菜单；下方提供回退、历史、快进、自动、存读档与设置。F 切换全屏。
+3. 左键 / 空格 / Enter 推进，右键 / Esc 开菜单；下方提供回退、历史、快进、自动、存读档与设置。F 切换全屏。重听后可点击对白区域继续阅读。
 
-原生 1920×1080、默认 1280×720 缩放窗口。v1 使用独立存档目录 `AureliusWu-BeforeTheRainStops-v1`，旧阶段存档保留，请从头开始。
+原生 1920×1080、默认 1280×720 缩放窗口。v1 使用存档目录 `AureliusWu-BeforeTheRainStops-v1`；已实际检查 v1.0.0 的开局配音行和后半段存档读取。更早 v0.x 存档保留，跨阶段请从头开始。
 
-游戏验收提交 `dff19a6ecf516fa674e24fcb3481413efc25b849`；发行 tag 指向 `b4f06f89eebb73ff0494cb18fc4cfc38192c84ce`，仅增加文档与发布工作流差异，游戏内容完全一致。原始 ZIP **56,359,988 字节**，SHA-256 `0d09a78a482e2ff0d34e14f51d49c89d5cc0d36b91506d44c6a3bcdcc678d3f1`。
+游戏验收提交 `cfacee500c15498175f165f32ddfb6c70f7c9314` / [Windows CI 37496730978](https://github.com/AureliusWu/Test/actions/runs/37496730978)；原始 ZIP **56,364,666 字节**，SHA-256 `9238e2d06cb7820056912455765f42b74337bf857dacd5a213be4cc349843f36`。
 
-Windows 113 项 Python、全部作者校验与 Ren’Py 8.5.3 lint 通过；源码和独立 EXE 各 31 用例 / 359 断言，退出后新进程读档 1 用例 / 10 断言通过。全部异常计数为 0，三个进程退出 0、未超时；131 PNG 完整解码、35 个 EXE 关键视图复核、85 包内资产与 ZIP CRC / 许可检查通过。
+Windows 113 项 Python、全部作者校验及 Ren’Py 8.5.3 lint 通过；源码和独立 EXE 各 **34/34 用例、404/404 断言**，新进程读档 **1/1 用例、10/10 断言**。精确的公开 v1.0.0 EXE 写档 **1/12**，新版 EXE 读取旧档 **2/20** 均通过；全部异常计数为 0，五个进程退出 0、未超时。
 
-全分支正文 15,065 字符，单路线 11,303–11,666。真人试听、Normal / True 阅读计时、普通电脑 / 中文路径 / DPI、最终创作定案与冻结仍待用户统一操作。ASR、dummy 音频与自动测试耗时不代表这些项目通过。
+145 张 PNG 完整解码并检查尺寸 / SHA-256；42 个关键 EXE / 升级读取视图复核，其中 17 个直接查看当前图、25 个仅在 SHA-256 与此前直接审阅图一致时复用。85 包内资产、原始 ZIP CRC、版本、玩家说明和许可核验通过；原始包没有注入测试脚本。
+
+全分支正文 15,065 字符，单路线 11,303–11,666。真人试听、Normal / True 阅读计时、普通电脑 / 中文路径 / DPI、最终创作定案与冻结继续待用户统一操作。Windows runner 使用 dummy 音频，自动执行耗时不等于阅读时长。
 
 ## 开发与验证
 
-`main` 正在验证 v1.0.1 配音重听小版本，公开正式版仍为上方 v1.0.0。新增当前台词和已读历史的重播，并检查已发布 v1.0.0 EXE 的真实存档升级；进度见 [当前断点](docs/WORK_CHECKPOINT.md)。
+当前游戏验收提交 `cfacee500c15498175f165f32ddfb6c70f7c9314`。完整机器与图像证据见 [本次验收](docs/RELEASE_ACCEPTANCE_V101.md)，发布进度见 [当前断点](docs/WORK_CHECKPOINT.md)。
 
 Python 3.12、Pillow、SoundFile / NumPy 只用于开发。模型与推理依赖不进入玩家包。
 

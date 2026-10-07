@@ -1,0 +1,2754 @@
+{
+  "schema_version": 1,
+  "version": "1.0.1",
+  "candidate_commit": "cfacee500c15498175f165f32ddfb6c70f7c9314",
+  "run_id": 37496730978,
+  "ci_context": {
+    "audio_driver": "dummy",
+    "commit": "cfacee500c15498175f165f32ddfb6c70f7c9314",
+    "run_id": "37496730978",
+    "version": "1.0.1"
+  },
+  "suites": {
+    "source": {
+      "cases": 34,
+      "assertions": 404,
+      "failed": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "skipped": 0,
+      "not_run": 0,
+      "screenshots_checked": 70,
+      "process": {
+        "timeout_seconds": 2400,
+        "elapsed_seconds": 1532.657,
+        "timed_out": false,
+        "returncode": 0,
+        "scope": "native process only; required screenshots are checked separately"
+      },
+      "report_sha256": "b56c674aa07f5e970084304725ca889587a53d79444ebb16047981e5a78f86e5",
+      "report_path": "reports/source-process/stdout.txt",
+      "required_screenshots": [
+        "audio-normal-voice",
+        "audio-true-voice",
+        "auto-voice-in-progress",
+        "bg-exit-after-rain",
+        "bg-exit-covered",
+        "bg-nearby-cafe",
+        "bg-s05_separate_path",
+        "bg-s05_shared_path",
+        "branch-s04_open",
+        "branch-s04_reserved",
+        "cg-letter",
+        "chapter-prologue",
+        "chapter-today",
+        "expression-angry",
+        "expression-embarrassed",
+        "expression-happy",
+        "expression-normal",
+        "expression-sad",
+        "expression-smile",
+        "expression-surprised",
+        "first-choice",
+        "first-dialogue",
+        "history",
+        "main-menu",
+        "native-about",
+        "native-choice",
+        "native-history-voice-replay",
+        "native-main-menu",
+        "native-settings",
+        "native-voice-replay",
+        "restart-normal-ending",
+        "revisit-choice",
+        "rollback-letter-choice",
+        "rollback-rechoice-normal",
+        "route-01-true",
+        "route-02-normal",
+        "route-03-true",
+        "route-04-normal",
+        "route-05-true",
+        "route-06-normal",
+        "route-07-normal",
+        "route-08-normal",
+        "route-09-true",
+        "route-10-normal",
+        "route-11-normal",
+        "route-12-normal",
+        "route-13-normal",
+        "route-14-normal",
+        "route-15-normal",
+        "route-16-normal",
+        "save-load-before-cg",
+        "save-load-cafe-after-rain-stop",
+        "save-load-cafe-before-rain-stop",
+        "save-load-chapter-four",
+        "save-load-departure",
+        "save-load-letter-cg",
+        "save-load-normal-ending",
+        "save-load-shared-path",
+        "scaled-choice",
+        "scaled-dialogue",
+        "scaled-history",
+        "scaled-history-voice-replay",
+        "scaled-load",
+        "scaled-main-menu",
+        "scaled-save",
+        "scaled-settings",
+        "scaled-voice-replay",
+        "scaled-voice-replay-after-load",
+        "settings",
+        "skip-final-choice"
+      ]
+    },
+    "standalone": {
+      "cases": 34,
+      "assertions": 404,
+      "failed": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "skipped": 0,
+      "not_run": 0,
+      "screenshots_checked": 70,
+      "process": {
+        "timeout_seconds": 2400,
+        "elapsed_seconds": 1044.406,
+        "timed_out": false,
+        "returncode": 0,
+        "scope": "native process only; required screenshots are checked separately"
+      },
+      "report_sha256": "a8b327df9561c679deb5a6669e4772d4103b5a1e55af3c5b3e648509222ed775",
+      "report_path": "reports/package/stdout.txt",
+      "required_screenshots": [
+        "audio-normal-voice",
+        "audio-true-voice",
+        "auto-voice-in-progress",
+        "bg-exit-after-rain",
+        "bg-exit-covered",
+        "bg-nearby-cafe",
+        "bg-s05_separate_path",
+        "bg-s05_shared_path",
+        "branch-s04_open",
+        "branch-s04_reserved",
+        "cg-letter",
+        "chapter-prologue",
+        "chapter-today",
+        "expression-angry",
+        "expression-embarrassed",
+        "expression-happy",
+        "expression-normal",
+        "expression-sad",
+        "expression-smile",
+        "expression-surprised",
+        "first-choice",
+        "first-dialogue",
+        "history",
+        "main-menu",
+        "native-about",
+        "native-choice",
+        "native-history-voice-replay",
+        "native-main-menu",
+        "native-settings",
+        "native-voice-replay",
+        "restart-normal-ending",
+        "revisit-choice",
+        "rollback-letter-choice",
+        "rollback-rechoice-normal",
+        "route-01-true",
+        "route-02-normal",
+        "route-03-true",
+        "route-04-normal",
+        "route-05-true",
+        "route-06-normal",
+        "route-07-normal",
+        "route-08-normal",
+        "route-09-true",
+        "route-10-normal",
+        "route-11-normal",
+        "route-12-normal",
+        "route-13-normal",
+        "route-14-normal",
+        "route-15-normal",
+        "route-16-normal",
+        "save-load-before-cg",
+        "save-load-cafe-after-rain-stop",
+        "save-load-cafe-before-rain-stop",
+        "save-load-chapter-four",
+        "save-load-departure",
+        "save-load-letter-cg",
+        "save-load-normal-ending",
+        "save-load-shared-path",
+        "scaled-choice",
+        "scaled-dialogue",
+        "scaled-history",
+        "scaled-history-voice-replay",
+        "scaled-load",
+        "scaled-main-menu",
+        "scaled-save",
+        "scaled-settings",
+        "scaled-voice-replay",
+        "scaled-voice-replay-after-load",
+        "settings",
+        "skip-final-choice"
+      ]
+    },
+    "fresh_process": {
+      "cases": 1,
+      "assertions": 10,
+      "failed": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "skipped": 0,
+      "not_run": 0,
+      "screenshots_checked": 1,
+      "process": {
+        "timeout_seconds": 120,
+        "elapsed_seconds": 6.109,
+        "timed_out": false,
+        "returncode": 0,
+        "scope": "native process only; required screenshots are checked separately"
+      },
+      "report_sha256": "d6b32d3e215a2802c0c5752ec0338bf241ec201e480942e0c9960f7d14bdf399",
+      "report_path": "reports/package/persistence/stdout.txt",
+      "required_screenshots": [
+        "cross-process-late-load"
+      ]
+    },
+    "upgrade_writer": {
+      "cases": 1,
+      "assertions": 12,
+      "failed": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "skipped": 0,
+      "not_run": 0,
+      "screenshots_checked": 2,
+      "process": {
+        "timeout_seconds": 300,
+        "elapsed_seconds": 42.454,
+        "timed_out": false,
+        "returncode": 0,
+        "scope": "native process only; required screenshots are checked separately"
+      },
+      "report_sha256": "ea10129b702c72b56fc300e467ff84225a77d5c1344c7ed925415174df1fa032",
+      "report_path": "reports/upgrade/writer/stdout.txt",
+      "required_screenshots": [
+        "upgrade-v100-first-voice",
+        "upgrade-v100-late-save"
+      ]
+    },
+    "upgrade_reader": {
+      "cases": 2,
+      "assertions": 20,
+      "failed": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "skipped": 0,
+      "not_run": 0,
+      "screenshots_checked": 2,
+      "process": {
+        "timeout_seconds": 300,
+        "elapsed_seconds": 10.89,
+        "timed_out": false,
+        "returncode": 0,
+        "scope": "native process only; required screenshots are checked separately"
+      },
+      "report_sha256": "8f3294f944b4deac99399b4f6243ff070feb74433a3ac334d64403524f8863e9",
+      "report_path": "reports/upgrade/reader/stdout.txt",
+      "required_screenshots": [
+        "cross-process-late-load",
+        "upgrade-v101-voice-load"
+      ]
+    }
+  },
+  "package": {
+    "file": "BeforeTheRainStops-1.0.1-win.zip",
+    "size_in_bytes": 56364666,
+    "sha256": "9238e2d06cb7820056912455765f42b74337bf857dacd5a213be4cc349843f36",
+    "entries": 1622,
+    "crc": "passed",
+    "test_scripts_in_original_zip": false,
+    "assets_checked": 85,
+    "build_info": {
+      "info": {},
+      "time": 1791306168.7347486,
+      "name": "雨停之前",
+      "version": "1.0.1"
+    },
+    "license_and_credits_documents": [
+      {
+        "path": "licenses/Kokoro-model-Apache-2.0.txt",
+        "source_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "packaged_sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+        "comparison": "CRLF_to_LF_only"
+      },
+      {
+        "path": "licenses/SourceHanSans-OFL.txt",
+        "source_sha256": "fcac737e761ec63dbfbdce11030a1780161920d80315edba9c8beff1c2bac5a2",
+        "packaged_sha256": "1953855bf1927e7214385bbdd8adb04cc5e8a0ecd0e6eaedeb1bdc281b009481",
+        "comparison": "CRLF_to_LF_only"
+      },
+      {
+        "path": "licenses/Qwen3-TTS-Apache-2.0.txt",
+        "source_sha256": "a9eae1c78a93600a66ebb23a75c414cf1376c259b6e7da0fc67fd35406dc4b20",
+        "packaged_sha256": "2b8b9e82917d28dacc83fcb496c097c05e2032a8abd9f1bce86b7893167a21d6",
+        "comparison": "CRLF_to_LF_only"
+      },
+      {
+        "path": "licenses/RENPY.txt",
+        "source_sha256": "b5d4610dfb530c53d5ce681e913f313903948616eb7b4ff8e8ddd19337852c1e",
+        "packaged_sha256": "3aaf0d1a4c1c20eea96d675981883ffc05e17c8426f077190d6ed0a9d2e586d0",
+        "comparison": "CRLF_to_LF_only"
+      },
+      {
+        "path": "LICENSE",
+        "source_sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075",
+        "packaged_sha256": "33e85d24e8df239c6eeab0cf6f40ad308f28b4b18470e7baa723ef5665d8549c",
+        "comparison": "CRLF_to_LF_only"
+      },
+      {
+        "path": "CREDITS.md",
+        "source_sha256": "7a5d7aa757638f2510090346227b87efd9f8b27c2726d71e7213f8f7609ea648",
+        "packaged_sha256": "7a5d7aa757638f2510090346227b87efd9f8b27c2726d71e7213f8f7609ea648",
+        "comparison": "identical_bytes"
+      }
+    ]
+  },
+  "screenshots_count": 145,
+  "screenshots": [
+    {
+      "scope": "source",
+      "path": "reports/screenshots/audio-normal-voice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "e583f6e43b78eda8c5ac503382ca5fefd20b23a7abdadd2984ab4feff82d87a6"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/audio-true-voice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "6c0aea49bf8a10880cf72475b24bb5e3e9448dcb1194e52b0071c55c8a521154"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/auto-voice-in-progress.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "866dde11ff3dd20c2eb99a72e9d5ebc5c60a9f5cfd66e4fb597bda35d86d80bb"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/bg-exit-after-rain.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "00e1e95a6bc8737e37583090ee397a978d706ae9910da20f2cb46476526ce853"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/bg-exit-covered.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "03657b4621952aa327d515e818bfe0ac9a88668ab4ae9048d9c96371ed694608"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/bg-nearby-cafe.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/bg-s05_separate_path.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "beabea97cd1f928b269877e3c9a7628197a3ae2a7ab0a487b52440bf187226c6"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/bg-s05_shared_path.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "630fd2811289783e75941ef4e830410206c5fc6a7687a697f62b33ffda1bc7dc"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/branch-s04_open.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "70a8393ff2bb231a45256b255d3373c9c05f51ad3bc43baaa1d436bd1197b577"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/branch-s04_reserved.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "f82076c7b1c1649b24f29a9cf5e5992428f522d4ad7029e78602006da58b972f"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/cg-letter.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "0de4774f325f032998a90645672276b496c8bccbdf1f718fe7e1042cf57895a4"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/chapter-prologue.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "1dc207749ee71e954341f8a641f9875d99b06d607d5fc7086eb49c794e323b02"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/chapter-today.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "f6ccdfe37c8f311cd9d0ef55c5321600057e18fe1414d697a37f658448c530fe"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/expression-angry.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "98884ee38e325a804ae3ee7599f31cdae89bd7f12b10777189f717b695bcae2d"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/expression-embarrassed.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "f48e7538a53ccdef70a2b2c6f1c811ed291e2e492bb8aa4590e4f418152c084e"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/expression-happy.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "d4a9a8cd6600c86cfaf011e91c603b3f4cbe51a4ab980fc34ca27baf0d9bca47"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/expression-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "eb86566d85033bde110661ce1898ce95c912a4509ec6662f870464ecde024b55"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/expression-sad.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "5028bcd7d6888831548cc0c2c3ed13bdd1070f3b222d24c2b32ac7de6942bb28"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/expression-smile.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "30c73292f22c4cf234b2b261fa22f33ad68dbf49a2d06b8a91f5cb3cfea11c6a"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/expression-surprised.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "6eb871b901a508842edc10c950fa4c530d59711426101201f8f7be822585d725"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/first-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "927746409e8975ba56aed6ca17e482f0cabfadcab16396e48d3026ac06a4f0d4"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/first-dialogue.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "30c73292f22c4cf234b2b261fa22f33ad68dbf49a2d06b8a91f5cb3cfea11c6a"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/history.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "18ec98240a0b8e584397a8165d68fee69557f462654284d4b53f170894b95db6"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/main-menu.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "635f705f82173d006c0304a269b4968f5a6a6e8f5c13c4e356d74c15121a067c"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/native-about.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "781ffbf35d80f5e9c07513517ac5606d61543b88316ca37a23f4476ece205e79"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/native-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "36038fe31be4a5536c4b20edef06114fa30fde01cb45ccf48c4bb577a44183d9"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/native-history-voice-replay.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "9171031ac7ee173e5e9d37b5e87a93acc1821d14c3c400470819acf5c64e24ad"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/native-main-menu.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "635f705f82173d006c0304a269b4968f5a6a6e8f5c13c4e356d74c15121a067c"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/native-settings.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "0ce265f22d02fdfbe9579ede57e42007e597f302cbdb5e8e7d65e648253b0acd"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/native-voice-replay.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "f7aacaf5e5f5a844a5e06c2ff4a72b965a851e148966de701fb353254af8465d"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/restart-normal-ending.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/revisit-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "97082048bead36b30eafda14eb9c4b108d5233436be6883f766b1c2bd4e7588d"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/rollback-letter-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "c5fc67db46fdc44632a70736dc9d27d06c26f141c6e36c22745194d852855393"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/rollback-rechoice-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-01-true.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "0f871365c93f2c4b5f3c73473119ff9ed7898abae27c4ca35b8119b40ffc5116"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-02-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "decec29be269cb2591a52c5c0680ed098ee3cbce549fac0df9208e77394ffcbe"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-03-true.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "b8de721acc7d807bf3dd8392ebcb1228802e1c7fdfe6c02a87378dec81df2228"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-04-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-05-true.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "b8de721acc7d807bf3dd8392ebcb1228802e1c7fdfe6c02a87378dec81df2228"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-06-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-07-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-08-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-09-true.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "b8de721acc7d807bf3dd8392ebcb1228802e1c7fdfe6c02a87378dec81df2228"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-10-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-11-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-12-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-13-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-14-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-15-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/route-16-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/save-load-before-cg.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "a673c03fa76da4db26a192b66ace813d54a53bd2336b9a94a70724c175c695e1"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/save-load-cafe-after-rain-stop.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/save-load-cafe-before-rain-stop.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "581f05e0530f8a721b9cedb41090485d4567cdec089898b6a59feb128571daf7"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/save-load-chapter-four.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "18090c7fd3caa3c66260ef016ee06f32db10178a5f31d8c8a4b2aa38e20d21f2"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/save-load-departure.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "538a5a8a7d70476b47b4c368765e06cc080d66bb3aea706152dc45a297687dcf"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/save-load-letter-cg.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "1d97e32d5261d86436908f9dabd72504d1df1cb3622284750bdb3c83fcca3924"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/save-load-normal-ending.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "00e1e95a6bc8737e37583090ee397a978d706ae9910da20f2cb46476526ce853"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/save-load-shared-path.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "23a8c42c8b26dda67d5ad1fbedb29337cd5a3b0816f3a9a0ac32d5cd44916ef6"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/scaled-choice.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "93050dcf561ead5f6911d8751a79cd656d3f18149a5133a3d7cbbfc9350c47d3"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/scaled-dialogue.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "c9b69981ee83d0bde20faefbc11149261368a69d1c1163d6e57314947d6229da"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/scaled-history-voice-replay.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "f49bc6817cb4bf9557bbe2c783954b602a7bf5f2081b9a0c023a78bfafb3d126"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/scaled-history.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "e014377d3816802d5d1d5ada89e48ee0f720a05caf36636cacee760e7fa9395a"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/scaled-load.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "1c6af37531deeaab7ec91976071d67471cd329648aab35a2cda7d9f07c620eed"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/scaled-main-menu.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "788a63aef6a0e8c16adc449274e5ee983ef3f912d96b07c7a3948bf735e5aa4b"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/scaled-save.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "b7825f2a8b71d9eae97070a619d533490d1b1728e2802eae5bba503c388a3680"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/scaled-settings.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "ff949fa006c4032cd572391b268deefb3071eb9b658be5af6e522fd1c65f6b0f"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/scaled-voice-replay-after-load.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "96312871a9a3c965285bb0a3b1d69c67ab29fac8a1128dba33fd1030856bffc8"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/scaled-voice-replay.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "96312871a9a3c965285bb0a3b1d69c67ab29fac8a1128dba33fd1030856bffc8"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/settings.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "c1cd46dc62dcf89c678c7c94602c8fc892c10156d4f2fed96a82657a5396f765"
+    },
+    {
+      "scope": "source",
+      "path": "reports/screenshots/skip-final-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "6552ec267338a996d0003da6f1ff4a59d2b4d23468543710dd2c4ce6540c9723"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/audio-normal-voice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "e583f6e43b78eda8c5ac503382ca5fefd20b23a7abdadd2984ab4feff82d87a6"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/audio-true-voice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "6c0aea49bf8a10880cf72475b24bb5e3e9448dcb1194e52b0071c55c8a521154"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/auto-voice-in-progress.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "866dde11ff3dd20c2eb99a72e9d5ebc5c60a9f5cfd66e4fb597bda35d86d80bb"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/bg-exit-after-rain.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "00e1e95a6bc8737e37583090ee397a978d706ae9910da20f2cb46476526ce853"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/bg-exit-covered.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "03657b4621952aa327d515e818bfe0ac9a88668ab4ae9048d9c96371ed694608"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/bg-nearby-cafe.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/bg-s05_separate_path.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "beabea97cd1f928b269877e3c9a7628197a3ae2a7ab0a487b52440bf187226c6"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/bg-s05_shared_path.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "630fd2811289783e75941ef4e830410206c5fc6a7687a697f62b33ffda1bc7dc"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/branch-s04_open.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "70a8393ff2bb231a45256b255d3373c9c05f51ad3bc43baaa1d436bd1197b577"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/branch-s04_reserved.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "f82076c7b1c1649b24f29a9cf5e5992428f522d4ad7029e78602006da58b972f"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/cg-letter.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "0de4774f325f032998a90645672276b496c8bccbdf1f718fe7e1042cf57895a4"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/chapter-prologue.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "1dc207749ee71e954341f8a641f9875d99b06d607d5fc7086eb49c794e323b02"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/chapter-today.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "f6ccdfe37c8f311cd9d0ef55c5321600057e18fe1414d697a37f658448c530fe"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/expression-angry.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "98884ee38e325a804ae3ee7599f31cdae89bd7f12b10777189f717b695bcae2d"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/expression-embarrassed.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "f48e7538a53ccdef70a2b2c6f1c811ed291e2e492bb8aa4590e4f418152c084e"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/expression-happy.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "d4a9a8cd6600c86cfaf011e91c603b3f4cbe51a4ab980fc34ca27baf0d9bca47"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/expression-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "eb86566d85033bde110661ce1898ce95c912a4509ec6662f870464ecde024b55"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/expression-sad.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "5028bcd7d6888831548cc0c2c3ed13bdd1070f3b222d24c2b32ac7de6942bb28"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/expression-smile.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "30c73292f22c4cf234b2b261fa22f33ad68dbf49a2d06b8a91f5cb3cfea11c6a"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/expression-surprised.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "6eb871b901a508842edc10c950fa4c530d59711426101201f8f7be822585d725"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/first-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "927746409e8975ba56aed6ca17e482f0cabfadcab16396e48d3026ac06a4f0d4"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/first-dialogue.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "30c73292f22c4cf234b2b261fa22f33ad68dbf49a2d06b8a91f5cb3cfea11c6a"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/history.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "18ec98240a0b8e584397a8165d68fee69557f462654284d4b53f170894b95db6"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/main-menu.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "635f705f82173d006c0304a269b4968f5a6a6e8f5c13c4e356d74c15121a067c"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/native-about.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "781ffbf35d80f5e9c07513517ac5606d61543b88316ca37a23f4476ece205e79"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/native-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "36038fe31be4a5536c4b20edef06114fa30fde01cb45ccf48c4bb577a44183d9"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/native-history-voice-replay.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "9171031ac7ee173e5e9d37b5e87a93acc1821d14c3c400470819acf5c64e24ad"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/native-main-menu.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "635f705f82173d006c0304a269b4968f5a6a6e8f5c13c4e356d74c15121a067c"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/native-settings.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "0ce265f22d02fdfbe9579ede57e42007e597f302cbdb5e8e7d65e648253b0acd"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/native-voice-replay.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "f7aacaf5e5f5a844a5e06c2ff4a72b965a851e148966de701fb353254af8465d"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/restart-normal-ending.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/revisit-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "97082048bead36b30eafda14eb9c4b108d5233436be6883f766b1c2bd4e7588d"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/rollback-letter-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "c5fc67db46fdc44632a70736dc9d27d06c26f141c6e36c22745194d852855393"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/rollback-rechoice-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-01-true.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "0f871365c93f2c4b5f3c73473119ff9ed7898abae27c4ca35b8119b40ffc5116"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-02-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "decec29be269cb2591a52c5c0680ed098ee3cbce549fac0df9208e77394ffcbe"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-03-true.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "b8de721acc7d807bf3dd8392ebcb1228802e1c7fdfe6c02a87378dec81df2228"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-04-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-05-true.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "b8de721acc7d807bf3dd8392ebcb1228802e1c7fdfe6c02a87378dec81df2228"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-06-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-07-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-08-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-09-true.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "b8de721acc7d807bf3dd8392ebcb1228802e1c7fdfe6c02a87378dec81df2228"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-10-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-11-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-12-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-13-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-14-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-15-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/route-16-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/save-load-before-cg.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "a673c03fa76da4db26a192b66ace813d54a53bd2336b9a94a70724c175c695e1"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/save-load-cafe-after-rain-stop.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/save-load-cafe-before-rain-stop.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "581f05e0530f8a721b9cedb41090485d4567cdec089898b6a59feb128571daf7"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/save-load-chapter-four.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "18090c7fd3caa3c66260ef016ee06f32db10178a5f31d8c8a4b2aa38e20d21f2"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/save-load-departure.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "538a5a8a7d70476b47b4c368765e06cc080d66bb3aea706152dc45a297687dcf"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/save-load-letter-cg.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "1d97e32d5261d86436908f9dabd72504d1df1cb3622284750bdb3c83fcca3924"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/save-load-normal-ending.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "00e1e95a6bc8737e37583090ee397a978d706ae9910da20f2cb46476526ce853"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/save-load-shared-path.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "23a8c42c8b26dda67d5ad1fbedb29337cd5a3b0816f3a9a0ac32d5cd44916ef6"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/scaled-choice.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "93050dcf561ead5f6911d8751a79cd656d3f18149a5133a3d7cbbfc9350c47d3"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/scaled-dialogue.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "c9b69981ee83d0bde20faefbc11149261368a69d1c1163d6e57314947d6229da"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/scaled-history-voice-replay.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "f49bc6817cb4bf9557bbe2c783954b602a7bf5f2081b9a0c023a78bfafb3d126"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/scaled-history.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "e014377d3816802d5d1d5ada89e48ee0f720a05caf36636cacee760e7fa9395a"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/scaled-load.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "1c6af37531deeaab7ec91976071d67471cd329648aab35a2cda7d9f07c620eed"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/scaled-main-menu.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "788a63aef6a0e8c16adc449274e5ee983ef3f912d96b07c7a3948bf735e5aa4b"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/scaled-save.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "b7825f2a8b71d9eae97070a619d533490d1b1728e2802eae5bba503c388a3680"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/scaled-settings.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "ff949fa006c4032cd572391b268deefb3071eb9b658be5af6e522fd1c65f6b0f"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/scaled-voice-replay-after-load.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "96312871a9a3c965285bb0a3b1d69c67ab29fac8a1128dba33fd1030856bffc8"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/scaled-voice-replay.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "96312871a9a3c965285bb0a3b1d69c67ab29fac8a1128dba33fd1030856bffc8"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/settings.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "c1cd46dc62dcf89c678c7c94602c8fc892c10156d4f2fed96a82657a5396f765"
+    },
+    {
+      "scope": "standalone",
+      "path": "reports/package/screenshots/skip-final-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "6552ec267338a996d0003da6f1ff4a59d2b4d23468543710dd2c4ce6540c9723"
+    },
+    {
+      "scope": "fresh_process",
+      "path": "reports/package/persistence/screenshots/cross-process-late-load.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac"
+    },
+    {
+      "scope": "upgrade_writer",
+      "path": "reports/upgrade/writer/screenshots/upgrade-v100-first-voice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "425b09c6756716e7620851388bf5a088478ca183f4f4a89e53c12f7907ce4513"
+    },
+    {
+      "scope": "upgrade_writer",
+      "path": "reports/upgrade/writer/screenshots/upgrade-v100-late-save.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "f6997f7e7438680ae60569007905bb1e67e2167fbc7873f6529f0befb175fe55"
+    },
+    {
+      "scope": "upgrade_reader",
+      "path": "reports/upgrade/reader/screenshots/cross-process-late-load.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac"
+    },
+    {
+      "scope": "upgrade_reader",
+      "path": "reports/upgrade/reader/screenshots/upgrade-v101-voice-load.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "f7aacaf5e5f5a844a5e06c2ff4a72b965a851e148966de701fb353254af8465d"
+    }
+  ],
+  "upgrade": {
+    "status": "passed",
+    "previous_version": "1.0.0",
+    "current_version": "1.0.1",
+    "package_sha256": {
+      "previous": "0d09a78a482e2ff0d34e14f51d49c89d5cc0d36b91506d44c6a3bcdcc678d3f1",
+      "current": "9238e2d06cb7820056912455765f42b74337bf857dacd5a213be4cc349843f36"
+    },
+    "writer": {
+      "cases": 1,
+      "assertions": 12,
+      "failed": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "skipped": 0,
+      "not_run": 0,
+      "screenshots_checked": 2,
+      "native_1080": false
+    },
+    "reader": {
+      "cases": 2,
+      "assertions": 20,
+      "failed": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "skipped": 0,
+      "not_run": 0,
+      "screenshots_checked": 2,
+      "native_1080": true
+    },
+    "original_packages_unmodified": true,
+    "human_listening": false
+  },
+  "story_change": "version field only; all authored nodes, lines and IDs equal to accepted v1.0.0",
+  "transfer_verification": {
+    "parts": 19,
+    "outer_artifact_digests": "passed",
+    "part_hashes": "passed",
+    "assembled_bundle_hash": "passed",
+    "crc": "passed",
+    "bundle_sha256": "28d257098cc263c5724a3c0792315e720860da92e1aa9d2755c3e75e39a95e43",
+    "bundle_bytes": 382667479,
+    "artifacts": [
+      {
+        "id": 11429739804,
+        "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-00",
+        "size_in_bytes": 20979103,
+        "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11429739804",
+        "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11429739804/zip",
+        "expired": false,
+        "created_at": "2026-10-06T17:22:12Z",
+        "expires_at": "2027-01-04T16:34:10Z",
+        "updated_at": "2026-10-06T17:22:12Z",
+        "digest": "sha256:974f466e07520b3369fb258b9a6394ca701489659dd43ec242382091d5da2e46",
+        "workflow_run": {
+          "id": 37496730978,
+          "repository_id": 1403696098,
+          "head_repository_id": 1403696098,
+          "head_branch": "main",
+          "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+        },
+        "file_id": "file_00000000f2848209be2ffea88ea40243"
+      },
+      {
+        "id": 11431065545,
+        "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-01",
+        "size_in_bytes": 20979103,
+        "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431065545",
+        "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431065545/zip",
+        "expired": false,
+        "created_at": "2026-10-06T17:22:13Z",
+        "expires_at": "2027-01-04T16:34:10Z",
+        "updated_at": "2026-10-06T17:22:13Z",
+        "digest": "sha256:c768ff97cc01acf1e12524d714a5930ab42d741ce7d8f6b69c07f48457885687",
+        "workflow_run": {
+          "id": 37496730978,
+          "repository_id": 1403696098,
+          "head_repository_id": 1403696098,
+          "head_branch": "main",
+          "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+        },
+        "file_id": "file_00000000076482068431208aac5df7e6"
+      },
+      {
+        "id": 11431085359,
+        "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-02",
+        "size_in_bytes": 20978578,
+        "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431085359",
+        "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431085359/zip",
+        "expired": false,
+        "created_at": "2026-10-06T17:22:15Z",
+        "expires_at": "2027-01-04T16:34:10Z",
+        "updated_at": "2026-10-06T17:22:15Z",
+        "digest": "sha256:1194ad670f6572af1e3a202234446d8c0ec21e07c56b4d12fedb423698086ae9",
+        "workflow_run": {
+          "id": 37496730978,
+          "repository_id": 1403696098,
+          "head_repository_id": 1403696098,
+          "head_branch": "main",
+          "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+        },
+        "file_id": "file_0000000074c482069e284bb44c6fb59a"
+      },
+      {
+        "id": 11431160158,
+        "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-03",
+        "size_in_bytes": 20979187,
+        "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431160158",
+        "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431160158/zip",
+        "expired": false,
+        "created_at": "2026-10-06T17:22:17Z",
+        "expires_at": "2027-01-04T16:34:10Z",
+        "updated_at": "2026-10-06T17:22:17Z",
+        "digest": "sha256:fa106dfa90b16675fed9e33e990eaeeb5ff5a5c75c126359725c604533109183",
+        "workflow_run": {
+          "id": 37496730978,
+          "repository_id": 1403696098,
+          "head_repository_id": 1403696098,
+          "head_branch": "main",
+          "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+        },
+        "file_id": "file_00000000839481f795af74db8531ea46"
+      },
+      {
+        "id": 11431200082,
+        "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-04",
+        "size_in_bytes": 20979155,
+        "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431200082",
+        "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431200082/zip",
+        "expired": false,
+        "created_at": "2026-10-06T17:22:18Z",
+        "expires_at": "2027-01-04T16:34:10Z",
+        "updated_at": "2026-10-06T17:22:18Z",
+        "digest": "sha256:b4cf07643185254df908bc87973cda4ee26ca7edadf72069c8998ccc7716b6e6",
+        "workflow_run": {
+          "id": 37496730978,
+          "repository_id": 1403696098,
+          "head_repository_id": 1403696098,
+          "head_branch": "main",
+          "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+        },
+        "file_id": "file_0000000044e4820688d072cfa8211f6c"
+      },
+      {
+        "id": 11431135219,
+        "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-05",
+        "size_in_bytes": 20979187,
+        "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431135219",
+        "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431135219/zip",
+        "expired": false,
+        "created_at": "2026-10-06T17:22:20Z",
+        "expires_at": "2027-01-04T16:34:10Z",
+        "updated_at": "2026-10-06T17:22:20Z",
+        "digest": "sha256:4f68c51c64ab1ef017eb8b739050e18f25102381a3f9a1fb68b0ee40c66b1a16",
+        "workflow_run": {
+          "id": 37496730978,
+          "repository_id": 1403696098,
+          "head_repository_id": 1403696098,
+          "head_branch": "main",
+          "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+        },
+        "file_id": "file_0000000085b482078608712565c9472d"
+      },
+      {
+        "id": 11430517068,
+        "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-06",
+        "size_in_bytes": 20979187,
+        "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430517068",
+        "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430517068/zip",
+        "expired": false,
+        "created_at": "2026-10-06T17:22:22Z",
+        "expires_at": "2027-01-04T16:34:10Z",
+        "updated_at": "2026-10-06T17:22:22Z",
+        "digest": "sha256:722a65c5d6cac45fef0518047e51d83624c278bec4e980b09ec1a42f83cb92d7",
+        "workflow_run": {
+          "id": 37496730978,
+          "repository_id": 1403696098,
+          "head_repository_id": 1403696098,
+          "head_branch": "main",
+          "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+        },
+        "file_id": "file_0000000038808206ab7fe28b718156a3"
+      },
+      {
+        "id": 11431040491,
+        "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-07",
+        "size_in_bytes": 20979187,
+        "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431040491",
+        "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431040491/zip",
+        "expired": false,
+        "created_at": "2026-10-06T17:22:24Z",
+        "expires_at": "2027-01-04T16:34:10Z",
+        "updated_at": "2026-10-06T17:22:24Z",
+        "digest": "sha256:046a1a7211b27b6f7431865858efa513150439cb783263264ec151e287b99b25",
+        "workflow_run": {
+          "id": 37496730978,
+          "repository_id": 1403696098,
+          "head_repository_id": 1403696098,
+          "head_branch": "main",
+          "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+        },
+        "file_id": "file_00000000eb7c820681e9583e728616ce"
+      },
+      {
+        "id": 11429778967,
+        "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-08",
+        "size_in_bytes": 20979187,
+        "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11429778967",
+        "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11429778967/zip",
+        "expired": false,
+        "created_at": "2026-10-06T17:22:26Z",
+        "expires_at": "2027-01-04T16:34:10Z",
+        "updated_at": "2026-10-06T17:22:26Z",
+        "digest": "sha256:1768c4b43587ff318c1427bdb941f3bba98ff61edff45bfa1f0eb86e1716a6ae",
+        "workflow_run": {
+          "id": 37496730978,
+          "repository_id": 1403696098,
+          "head_repository_id": 1403696098,
+          "head_branch": "main",
+          "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+        },
+        "file_id": "file_0000000020388206a6479baf3e7dfb11"
+      },
+      {
+        "id": 11431215077,
+        "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-09",
+        "size_in_bytes": 20979187,
+        "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431215077",
+        "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431215077/zip",
+        "expired": false,
+        "created_at": "2026-10-06T17:22:27Z",
+        "expires_at": "2027-01-04T16:34:10Z",
+        "updated_at": "2026-10-06T17:22:27Z",
+        "digest": "sha256:67fa698f996cc6950febee27674da23d72d46243307c751745c672aea489ee33",
+        "workflow_run": {
+          "id": 37496730978,
+          "repository_id": 1403696098,
+          "head_repository_id": 1403696098,
+          "head_branch": "main",
+          "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+        },
+        "file_id": "file_000000001ee881f5be46f6939553d38f"
+      },
+      {
+        "id": 11429789024,
+        "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-10",
+        "size_in_bytes": 20979100,
+        "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11429789024",
+        "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11429789024/zip",
+        "expired": false,
+        "created_at": "2026-10-06T17:22:29Z",
+        "expires_at": "2027-01-04T16:34:10Z",
+        "updated_at": "2026-10-06T17:22:29Z",
+        "digest": "sha256:33a7f3370d26045db14682f2db1c8122f9593af31718f14922b4212a0c0f73be",
+        "workflow_run": {
+          "id": 37496730978,
+          "repository_id": 1403696098,
+          "head_repository_id": 1403696098,
+          "head_branch": "main",
+          "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+        },
+        "file_id": "file_0000000054948207b5b6c04770c2b781"
+      },
+      {
+        "id": 11429873547,
+        "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-11",
+        "size_in_bytes": 20979166,
+        "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11429873547",
+        "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11429873547/zip",
+        "expired": false,
+        "created_at": "2026-10-06T17:22:31Z",
+        "expires_at": "2027-01-04T16:34:10Z",
+        "updated_at": "2026-10-06T17:22:31Z",
+        "digest": "sha256:c505331634f11275ceb90307ae0e62623d88c53f9a968118d6ffd1e62339c688",
+        "workflow_run": {
+          "id": 37496730978,
+          "repository_id": 1403696098,
+          "head_repository_id": 1403696098,
+          "head_branch": "main",
+          "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+        },
+        "file_id": "file_0000000012908206a54a4aa0111ef1f6"
+      },
+      {
+        "id": 11430531955,
+        "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-12",
+        "size_in_bytes": 20979187,
+        "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430531955",
+        "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430531955/zip",
+        "expired": false,
+        "created_at": "2026-10-06T17:22:32Z",
+        "expires_at": "2027-01-04T16:34:10Z",
+        "updated_at": "2026-10-06T17:22:32Z",
+        "digest": "sha256:68d21165b46713d0a7f73168da88d8b318dc78453ae4b17203a7241ca05257f0",
+        "workflow_run": {
+          "id": 37496730978,
+          "repository_id": 1403696098,
+          "head_repository_id": 1403696098,
+          "head_branch": "main",
+          "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+        },
+        "file_id": "file_000000009ce081f8a9a80db4c95a7277"
+      },
+      {
+        "id": 11430452075,
+        "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-13",
+        "size_in_bytes": 20979187,
+        "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430452075",
+        "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430452075/zip",
+        "expired": false,
+        "created_at": "2026-10-06T17:22:34Z",
+        "expires_at": "2027-01-04T16:34:10Z",
+        "updated_at": "2026-10-06T17:22:34Z",
+        "digest": "sha256:5ee22d18382f3c8537d131d1e9be3f258752c3db7f5a0bd3f580a6b72568fd30",
+        "workflow_run": {
+          "id": 37496730978,
+          "repository_id": 1403696098,
+          "head_repository_id": 1403696098,
+          "head_branch": "main",
+          "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+        },
+        "file_id": "file_00000000760482068ed332355f487b96"
+      },
+      {
+        "id": 11431045536,
+        "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-14",
+        "size_in_bytes": 20979187,
+        "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431045536",
+        "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431045536/zip",
+        "expired": false,
+        "created_at": "2026-10-06T17:22:36Z",
+        "expires_at": "2027-01-04T16:34:10Z",
+        "updated_at": "2026-10-06T17:22:36Z",
+        "digest": "sha256:852071f24f9ea11fb8ae2377e941c4b50b5002bb2ede7b6caa0894581a498d89",
+        "workflow_run": {
+          "id": 37496730978,
+          "repository_id": 1403696098,
+          "head_repository_id": 1403696098,
+          "head_branch": "main",
+          "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+        },
+        "file_id": "file_000000003a248206810a5df4abf25b56"
+      },
+      {
+        "id": 11430172642,
+        "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-15",
+        "size_in_bytes": 20979184,
+        "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430172642",
+        "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430172642/zip",
+        "expired": false,
+        "created_at": "2026-10-06T17:22:38Z",
+        "expires_at": "2027-01-04T16:34:10Z",
+        "updated_at": "2026-10-06T17:22:38Z",
+        "digest": "sha256:f209cb835a8f789c659cb6ebef278e4ac2a99ebf48d19a4e5fa6f7eaee354be5",
+        "workflow_run": {
+          "id": 37496730978,
+          "repository_id": 1403696098,
+          "head_repository_id": 1403696098,
+          "head_branch": "main",
+          "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+        },
+        "file_id": "file_000000000ea482098a042911c418e61c"
+      },
+      {
+        "id": 11429904604,
+        "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-16",
+        "size_in_bytes": 20979187,
+        "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11429904604",
+        "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11429904604/zip",
+        "expired": false,
+        "created_at": "2026-10-06T17:22:39Z",
+        "expires_at": "2027-01-04T16:34:10Z",
+        "updated_at": "2026-10-06T17:22:39Z",
+        "digest": "sha256:a11cc633a9f5a9c4e2457cc8ebf9dfa9a5f611bbaeabbd228dcc2b5a33f6461f",
+        "workflow_run": {
+          "id": 37496730978,
+          "repository_id": 1403696098,
+          "head_repository_id": 1403696098,
+          "head_branch": "main",
+          "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+        },
+        "file_id": "file_000000004b1882098a32ba70e32a480b"
+      },
+      {
+        "id": 11430128604,
+        "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-17",
+        "size_in_bytes": 20978446,
+        "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430128604",
+        "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430128604/zip",
+        "expired": false,
+        "created_at": "2026-10-06T17:22:41Z",
+        "expires_at": "2027-01-04T16:34:10Z",
+        "updated_at": "2026-10-06T17:22:41Z",
+        "digest": "sha256:f789a56d7b4a02d77469275d0999a23c3fe83fa367958fee92f5ce156f13db32",
+        "workflow_run": {
+          "id": 37496730978,
+          "repository_id": 1403696098,
+          "head_repository_id": 1403696098,
+          "head_branch": "main",
+          "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+        },
+        "file_id": "file_00000000c1208206b7435ae53316deea"
+      },
+      {
+        "id": 11430851991,
+        "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-18",
+        "size_in_bytes": 5168926,
+        "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430851991",
+        "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430851991/zip",
+        "expired": false,
+        "created_at": "2026-10-06T17:22:42Z",
+        "expires_at": "2027-01-04T16:34:10Z",
+        "updated_at": "2026-10-06T17:22:42Z",
+        "digest": "sha256:fb0354211c585f19b0b46e796027e1eaf5062fc0814990daf76407aab017a46c",
+        "workflow_run": {
+          "id": 37496730978,
+          "repository_id": 1403696098,
+          "head_repository_id": 1403696098,
+          "head_branch": "main",
+          "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+        },
+        "file_id": "file_000000000e2c820693438dab6e3850c3"
+      }
+    ]
+  },
+  "human_pending": [
+    "ordinary_windows",
+    "display_dpi",
+    "listening",
+    "creative_and_freeze",
+    "reading_time"
+  ],
+  "status": "technical_and_visual_passed_with_human_limits",
+  "candidate_tree": "40d34e682855a1619bcef6af18a4e82718677052",
+  "job_id": 112383068299,
+  "ci_url": "https://github.com/AureliusWu/Test/actions/runs/37496730978",
+  "ci_completed_at": "2026-10-06T17:22:46Z",
+  "audit_date": "2026-10-07",
+  "engine": "Ren'Py 8.5.3.26051504",
+  "audio_output": "dummy",
+  "python_tests": {
+    "passed": 113,
+    "platform": "Windows",
+    "seconds": 15.325
+  },
+  "lint": "passed",
+  "artifacts": [
+    {
+      "id": 11431215077,
+      "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-09",
+      "size_in_bytes": 20979187,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431215077",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431215077/zip",
+      "expired": false,
+      "created_at": "2026-10-06T17:22:27Z",
+      "expires_at": "2027-01-04T16:34:10Z",
+      "updated_at": "2026-10-06T17:22:27Z",
+      "digest": "sha256:67fa698f996cc6950febee27674da23d72d46243307c751745c672aea489ee33",
+      "workflow_run": {
+        "id": 37496730978,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+      }
+    },
+    {
+      "id": 11431200082,
+      "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-04",
+      "size_in_bytes": 20979155,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431200082",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431200082/zip",
+      "expired": false,
+      "created_at": "2026-10-06T17:22:18Z",
+      "expires_at": "2027-01-04T16:34:10Z",
+      "updated_at": "2026-10-06T17:22:18Z",
+      "digest": "sha256:b4cf07643185254df908bc87973cda4ee26ca7edadf72069c8998ccc7716b6e6",
+      "workflow_run": {
+        "id": 37496730978,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+      }
+    },
+    {
+      "id": 11431160158,
+      "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-03",
+      "size_in_bytes": 20979187,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431160158",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431160158/zip",
+      "expired": false,
+      "created_at": "2026-10-06T17:22:17Z",
+      "expires_at": "2027-01-04T16:34:10Z",
+      "updated_at": "2026-10-06T17:22:17Z",
+      "digest": "sha256:fa106dfa90b16675fed9e33e990eaeeb5ff5a5c75c126359725c604533109183",
+      "workflow_run": {
+        "id": 37496730978,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+      }
+    },
+    {
+      "id": 11431135219,
+      "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-05",
+      "size_in_bytes": 20979187,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431135219",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431135219/zip",
+      "expired": false,
+      "created_at": "2026-10-06T17:22:20Z",
+      "expires_at": "2027-01-04T16:34:10Z",
+      "updated_at": "2026-10-06T17:22:20Z",
+      "digest": "sha256:4f68c51c64ab1ef017eb8b739050e18f25102381a3f9a1fb68b0ee40c66b1a16",
+      "workflow_run": {
+        "id": 37496730978,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+      }
+    },
+    {
+      "id": 11431085359,
+      "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-02",
+      "size_in_bytes": 20978578,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431085359",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431085359/zip",
+      "expired": false,
+      "created_at": "2026-10-06T17:22:15Z",
+      "expires_at": "2027-01-04T16:34:10Z",
+      "updated_at": "2026-10-06T17:22:15Z",
+      "digest": "sha256:1194ad670f6572af1e3a202234446d8c0ec21e07c56b4d12fedb423698086ae9",
+      "workflow_run": {
+        "id": 37496730978,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+      }
+    },
+    {
+      "id": 11431065545,
+      "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-01",
+      "size_in_bytes": 20979103,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431065545",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431065545/zip",
+      "expired": false,
+      "created_at": "2026-10-06T17:22:13Z",
+      "expires_at": "2027-01-04T16:34:10Z",
+      "updated_at": "2026-10-06T17:22:13Z",
+      "digest": "sha256:c768ff97cc01acf1e12524d714a5930ab42d741ce7d8f6b69c07f48457885687",
+      "workflow_run": {
+        "id": 37496730978,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+      }
+    },
+    {
+      "id": 11431045536,
+      "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-14",
+      "size_in_bytes": 20979187,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431045536",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431045536/zip",
+      "expired": false,
+      "created_at": "2026-10-06T17:22:36Z",
+      "expires_at": "2027-01-04T16:34:10Z",
+      "updated_at": "2026-10-06T17:22:36Z",
+      "digest": "sha256:852071f24f9ea11fb8ae2377e941c4b50b5002bb2ede7b6caa0894581a498d89",
+      "workflow_run": {
+        "id": 37496730978,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+      }
+    },
+    {
+      "id": 11431040491,
+      "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-07",
+      "size_in_bytes": 20979187,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431040491",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11431040491/zip",
+      "expired": false,
+      "created_at": "2026-10-06T17:22:24Z",
+      "expires_at": "2027-01-04T16:34:10Z",
+      "updated_at": "2026-10-06T17:22:24Z",
+      "digest": "sha256:046a1a7211b27b6f7431865858efa513150439cb783263264ec151e287b99b25",
+      "workflow_run": {
+        "id": 37496730978,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+      }
+    },
+    {
+      "id": 11430851991,
+      "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-18",
+      "size_in_bytes": 5168926,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430851991",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430851991/zip",
+      "expired": false,
+      "created_at": "2026-10-06T17:22:42Z",
+      "expires_at": "2027-01-04T16:34:10Z",
+      "updated_at": "2026-10-06T17:22:42Z",
+      "digest": "sha256:fb0354211c585f19b0b46e796027e1eaf5062fc0814990daf76407aab017a46c",
+      "workflow_run": {
+        "id": 37496730978,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+      }
+    },
+    {
+      "id": 11430711745,
+      "name": "test-evidence-cfacee500c15498175f165f32ddfb6c70f7c9314",
+      "size_in_bytes": 371830247,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430711745",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430711745/zip",
+      "expired": false,
+      "created_at": "2026-10-06T17:21:52Z",
+      "expires_at": "2027-01-04T16:34:10Z",
+      "updated_at": "2026-10-06T17:21:52Z",
+      "digest": "sha256:48f6af746d9ed22fb3cc5999fa9a66eca536396bb281358b1084a6456cb8749d",
+      "workflow_run": {
+        "id": 37496730978,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+      }
+    },
+    {
+      "id": 11430531955,
+      "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-12",
+      "size_in_bytes": 20979187,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430531955",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430531955/zip",
+      "expired": false,
+      "created_at": "2026-10-06T17:22:32Z",
+      "expires_at": "2027-01-04T16:34:10Z",
+      "updated_at": "2026-10-06T17:22:32Z",
+      "digest": "sha256:68d21165b46713d0a7f73168da88d8b318dc78453ae4b17203a7241ca05257f0",
+      "workflow_run": {
+        "id": 37496730978,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+      }
+    },
+    {
+      "id": 11430517068,
+      "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-06",
+      "size_in_bytes": 20979187,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430517068",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430517068/zip",
+      "expired": false,
+      "created_at": "2026-10-06T17:22:22Z",
+      "expires_at": "2027-01-04T16:34:10Z",
+      "updated_at": "2026-10-06T17:22:22Z",
+      "digest": "sha256:722a65c5d6cac45fef0518047e51d83624c278bec4e980b09ec1a42f83cb92d7",
+      "workflow_run": {
+        "id": 37496730978,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+      }
+    },
+    {
+      "id": 11430452075,
+      "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-13",
+      "size_in_bytes": 20979187,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430452075",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430452075/zip",
+      "expired": false,
+      "created_at": "2026-10-06T17:22:34Z",
+      "expires_at": "2027-01-04T16:34:10Z",
+      "updated_at": "2026-10-06T17:22:34Z",
+      "digest": "sha256:5ee22d18382f3c8537d131d1e9be3f258752c3db7f5a0bd3f580a6b72568fd30",
+      "workflow_run": {
+        "id": 37496730978,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+      }
+    },
+    {
+      "id": 11430187658,
+      "name": "windows-cfacee500c15498175f165f32ddfb6c70f7c9314",
+      "size_in_bytes": 59169799,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430187658",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430187658/zip",
+      "expired": false,
+      "created_at": "2026-10-06T17:21:55Z",
+      "expires_at": "2027-01-04T16:34:10Z",
+      "updated_at": "2026-10-06T17:21:55Z",
+      "digest": "sha256:a2d25949dddc7361030b4c92ffda834568bd931debbf14a7150647367177909c",
+      "workflow_run": {
+        "id": 37496730978,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+      }
+    },
+    {
+      "id": 11430172642,
+      "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-15",
+      "size_in_bytes": 20979184,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430172642",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430172642/zip",
+      "expired": false,
+      "created_at": "2026-10-06T17:22:38Z",
+      "expires_at": "2027-01-04T16:34:10Z",
+      "updated_at": "2026-10-06T17:22:38Z",
+      "digest": "sha256:f209cb835a8f789c659cb6ebef278e4ac2a99ebf48d19a4e5fa6f7eaee354be5",
+      "workflow_run": {
+        "id": 37496730978,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+      }
+    },
+    {
+      "id": 11430128604,
+      "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-17",
+      "size_in_bytes": 20978446,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430128604",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11430128604/zip",
+      "expired": false,
+      "created_at": "2026-10-06T17:22:41Z",
+      "expires_at": "2027-01-04T16:34:10Z",
+      "updated_at": "2026-10-06T17:22:41Z",
+      "digest": "sha256:f789a56d7b4a02d77469275d0999a23c3fe83fa367958fee92f5ce156f13db32",
+      "workflow_run": {
+        "id": 37496730978,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+      }
+    },
+    {
+      "id": 11429904604,
+      "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-16",
+      "size_in_bytes": 20979187,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11429904604",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11429904604/zip",
+      "expired": false,
+      "created_at": "2026-10-06T17:22:39Z",
+      "expires_at": "2027-01-04T16:34:10Z",
+      "updated_at": "2026-10-06T17:22:39Z",
+      "digest": "sha256:a11cc633a9f5a9c4e2457cc8ebf9dfa9a5f611bbaeabbd228dcc2b5a33f6461f",
+      "workflow_run": {
+        "id": 37496730978,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+      }
+    },
+    {
+      "id": 11429873547,
+      "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-11",
+      "size_in_bytes": 20979166,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11429873547",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11429873547/zip",
+      "expired": false,
+      "created_at": "2026-10-06T17:22:31Z",
+      "expires_at": "2027-01-04T16:34:10Z",
+      "updated_at": "2026-10-06T17:22:31Z",
+      "digest": "sha256:c505331634f11275ceb90307ae0e62623d88c53f9a968118d6ffd1e62339c688",
+      "workflow_run": {
+        "id": 37496730978,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+      }
+    },
+    {
+      "id": 11429789024,
+      "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-10",
+      "size_in_bytes": 20979100,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11429789024",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11429789024/zip",
+      "expired": false,
+      "created_at": "2026-10-06T17:22:29Z",
+      "expires_at": "2027-01-04T16:34:10Z",
+      "updated_at": "2026-10-06T17:22:29Z",
+      "digest": "sha256:33a7f3370d26045db14682f2db1c8122f9593af31718f14922b4212a0c0f73be",
+      "workflow_run": {
+        "id": 37496730978,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+      }
+    },
+    {
+      "id": 11429778967,
+      "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-08",
+      "size_in_bytes": 20979187,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11429778967",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11429778967/zip",
+      "expired": false,
+      "created_at": "2026-10-06T17:22:26Z",
+      "expires_at": "2027-01-04T16:34:10Z",
+      "updated_at": "2026-10-06T17:22:26Z",
+      "digest": "sha256:1768c4b43587ff318c1427bdb941f3bba98ff61edff45bfa1f0eb86e1716a6ae",
+      "workflow_run": {
+        "id": 37496730978,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+      }
+    },
+    {
+      "id": 11429739804,
+      "name": "release-transfer-cfacee500c15498175f165f32ddfb6c70f7c9314-00",
+      "size_in_bytes": 20979103,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11429739804",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11429739804/zip",
+      "expired": false,
+      "created_at": "2026-10-06T17:22:12Z",
+      "expires_at": "2027-01-04T16:34:10Z",
+      "updated_at": "2026-10-06T17:22:12Z",
+      "digest": "sha256:974f466e07520b3369fb258b9a6394ca701489659dd43ec242382091d5da2e46",
+      "workflow_run": {
+        "id": 37496730978,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "cfacee500c15498175f165f32ddfb6c70f7c9314"
+      }
+    }
+  ],
+  "display": {
+    "desktop_pixels": [
+      1920,
+      1080
+    ],
+    "bits_per_pixel": 32,
+    "frequency_hz": 64,
+    "display_change_result": 0,
+    "available_modes": [
+      [
+        640,
+        480,
+        32,
+        64
+      ],
+      [
+        800,
+        600,
+        32,
+        64
+      ],
+      [
+        1024,
+        768,
+        32,
+        64
+      ],
+      [
+        1152,
+        864,
+        32,
+        64
+      ],
+      [
+        1280,
+        720,
+        32,
+        64
+      ],
+      [
+        1280,
+        800,
+        32,
+        64
+      ],
+      [
+        1280,
+        1024,
+        32,
+        64
+      ],
+      [
+        1366,
+        768,
+        32,
+        64
+      ],
+      [
+        1440,
+        900,
+        32,
+        64
+      ],
+      [
+        1600,
+        900,
+        32,
+        64
+      ],
+      [
+        1600,
+        1200,
+        32,
+        64
+      ],
+      [
+        1680,
+        1050,
+        32,
+        64
+      ],
+      [
+        1920,
+        1080,
+        32,
+        64
+      ]
+    ],
+    "scope": "Windows CI desktop only; ordinary-PC 100%/150% DPI remains human review"
+  },
+  "voice_upgrade": {
+    "engine": "Qwen3-TTS 1.7B CustomVoice",
+    "speaker": "Serena",
+    "recordings": 17,
+    "generation_sha256": "5180a9ca16c7a01f502350dcdfadf073da06edcb9b054350d7fdec8c3af7336a",
+    "human_listening": false,
+    "all_recording_bytes_unchanged": true
+  },
+  "visual_review": {
+    "file": "docs/evidence/v101-visual-review.json",
+    "sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+    "direct_new_count": 17,
+    "reused_count": 25
+  },
+  "unresolved_machine_issues": [],
+  "limits": "Windows CI uses dummy audio. Ordinary hardware, Chinese paths, DPI, human listening, reading timing and creative finalization remain pending. Old-save tests cover the first recorded line and a late True-route checkpoint.",
+  "job_log": {
+    "sha256": "f04e0fef796be26a464bfc156804b02e84701ada882afce1d050ef52026932cd",
+    "format": "decoded job log, LF normalized"
+  },
+  "author_reports": [
+    {
+      "path": "reports/acceptance.json",
+      "sha256": "ca3919de2a1a5424776f3d85c0ca0dcc10301b09a547829ab6a6d6385e3a1d77"
+    },
+    {
+      "path": "reports/assets.json",
+      "sha256": "9d1479fb919463588b49a9912d75b6e13eebf133978eeda4dd5f9f0ea2471e5c"
+    },
+    {
+      "path": "reports/audio.json",
+      "sha256": "53262f87d8917fef748355a3e4f9918a6772617dcdf10513c174b8ca69936545"
+    },
+    {
+      "path": "reports/characters.json",
+      "sha256": "5d454b68b8b68854c37ad37d4655787c23593b7eba9ae421364bd51eb80241cb"
+    },
+    {
+      "path": "reports/ci-context.json",
+      "sha256": "29bcd0716549dbf4ea81f2774dcd49ce54d810970d4f5ceb4f83beb6c4af0f1c"
+    },
+    {
+      "path": "reports/display.json",
+      "sha256": "c1c3aada967815df9b951d64625581aea342f40038efcbb8ac20ec93e7637486"
+    },
+    {
+      "path": "reports/routes.json",
+      "sha256": "65712efbe238f9341e07dff8078532782507099e27d38f49a09546681c772e84"
+    },
+    {
+      "path": "reports/save-name-baseline.json",
+      "sha256": "6f311a77ffe7cce4df24341d313a5685d03ae4a1e4e21f66b7445fb486eb2ce8"
+    },
+    {
+      "path": "reports/source-tests.txt",
+      "sha256": "643269b68ecf0fb7c59db34696eebcc267dae6726cc45fc555780524daf399b5"
+    },
+    {
+      "path": "reports/source-voice-smoke-prefix-1.txt",
+      "sha256": "8df76ade23d2d4c8c033bda54b064eed0169a99a54fc237f41cefebb274e2b31"
+    },
+    {
+      "path": "reports/source-voice-smoke-prefix-2.txt",
+      "sha256": "c76aeee155d6c834bc775cd3c8adeb0aa7cce3e2e853986d25f3a515b7e26e65"
+    },
+    {
+      "path": "reports/story-stats.json",
+      "sha256": "29b8db061de15504941e736b7bf84e8903df448b275d9d0ed0b20e8781ec82e7"
+    },
+    {
+      "path": "reports/story-stats.md",
+      "sha256": "69ce28c359a5618ecd347e2dc8d29a903693d5ee755527fac0b9475440f11e3f"
+    },
+    {
+      "path": "reports/voice-smoke-acceptance.json",
+      "sha256": "f8b2f38740d79201856c0ea3ee6b1777f09c303a95d84e00b6c7845de4064af8"
+    }
+  ],
+  "compatibility_baseline": {
+    "previous_version": "1.0.0",
+    "package_sha256": "0d09a78a482e2ff0d34e14f51d49c89d5cc0d36b91506d44c6a3bcdcc678d3f1",
+    "method": "RenPy 8.5.3 old-game statement-name merge",
+    "files": [
+      {
+        "path": "old-game/characters.rpyc",
+        "sha256": "08c45b48dfd7f85e250ceba1d78e6f1ba13c9996bb0009cf3eb90484a6a50b20"
+      },
+      {
+        "path": "old-game/gui.rpyc",
+        "sha256": "e77939a3cc181e29d22c039d2420beda56c3b847bb32b14e96c57cbd02d2bee0"
+      },
+      {
+        "path": "old-game/options.rpyc",
+        "sha256": "6a38a13ef24e5965f6ad7ed142d28e34093723aa3d87caedb9dbb9098c12fd2b"
+      },
+      {
+        "path": "old-game/screens.rpyc",
+        "sha256": "1ba64939022778ae7015bf2715872a7ced4d18dc0fcf55a11d8d848dd1ea0245"
+      },
+      {
+        "path": "old-game/script/images_generated.rpyc",
+        "sha256": "4ca6be60a194bc1930a61d5a3ab229d8ea5cd7c0813ab5043d4fab703a55ffd8"
+      },
+      {
+        "path": "old-game/script/story_generated.rpyc",
+        "sha256": "c41c335f11dab03ca63cccfa299c2c9806d91f4699dd89b79d0d9cba0caada2d"
+      },
+      {
+        "path": "old-game/tl/schinese/common.rpyc",
+        "sha256": "63a99b178a8e2a99bb472d26803aad0185bf0ffe765bbd491bfcbd5fc409232a"
+      },
+      {
+        "path": "old-game/tl/schinese/screens.rpyc",
+        "sha256": "1c94a3fd26a35fd7aa2d8d44d8b1a1179c25d3768e2324a4795ae1aff8245d13"
+      }
+    ],
+    "baseline_is_not_distributed": true
+  },
+  "voice_smoke": {
+    "status": "passed",
+    "iterations": [
+      {
+        "cases": 4,
+        "assertions": 59,
+        "failed": 0,
+        "xfailed": 0,
+        "xpassed": 0,
+        "skipped": 0,
+        "not_run": 0,
+        "screenshots_checked": 17,
+        "native_1080": true
+      },
+      {
+        "cases": 4,
+        "assertions": 59,
+        "failed": 0,
+        "xfailed": 0,
+        "xpassed": 0,
+        "skipped": 0,
+        "not_run": 0,
+        "screenshots_checked": 17,
+        "native_1080": true
+      }
+    ],
+    "cases": [
+      "native_1080_and_scaled_window",
+      "current_voice_replay_and_restore",
+      "history_voice_replay",
+      "auto_waits_for_replayed_voice"
+    ],
+    "prefix_plan_sha256": "33ca66ad4095adc42be88d0b8b56bb30b623c5fe77ccfcd76ccb6b71a7152296",
+    "original_project_is_unmodified": true,
+    "scope": "Actual full-suite prefix, copied game with only the temporary test plan narrowed"
+  },
+  "previous_attempts": [
+    {
+      "commit": "5653a55f3833ed48258a17e3a89204f804730555",
+      "run_id": 37481501446,
+      "result": "failure",
+      "record": "docs/evidence/v101-first-failure.json"
+    },
+    {
+      "commit": "07b418584ab1192da9cd708e0cb85ea33f0c4354",
+      "run_id": 37486491543,
+      "result": "cancelled",
+      "record": "docs/evidence/v101-smoke-selection.json"
+    },
+    {
+      "commit": "282ecabf123da90723a8e9ecab28a1a2b18bdd1f",
+      "run_id": 37488485901,
+      "result": "failure",
+      "record": "docs/evidence/v101-smoke-focus-failure.json"
+    },
+    {
+      "commit": "2d7ed6a0db743cbe797799327c80b6cbb6e532e7",
+      "run_id": 37489810515,
+      "result": "failure",
+      "record": "docs/evidence/v101-mute-roundtrip-failure.json"
+    },
+    {
+      "commit": "518e2b62ac21e5426473329341ffad6de2ec4f66",
+      "run_id": 37493710207,
+      "result": "failure",
+      "record": "docs/evidence/v101-resize-focus-failure.json"
+    },
+    {
+      "commit": "2591ba29f0f3f3a9793797b52b778e096c94791d",
+      "run_id": 37495345486,
+      "result": "failure",
+      "record": "docs/evidence/v101-focus-wait-failure.json"
+    }
+  ]
+}

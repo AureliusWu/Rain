@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "authorized_by_user",
+  "version": "1.0.1",
+  "candidate_commit": "cfacee500c15498175f165f32ddfb6c70f7c9314",
+  "package_sha256": "9238e2d06cb7820056912455765f42b74337bf857dacd5a213be4cc349843f36",
+  "instruction": "完成后发布正式版",
+  "condition": "voice_upgrade_completed",
+  "requested_at": "2026-10-06",
+  "context": "用户在免费语音正式版完成后继续要求开发；本次补充当前台词和历史重播，沿用完成后发布正式版的指令。真人后续仍由用户统一操作。",
+  "continuation_instruction": "继续",
+  "voice_generation_commit": "faad6507d801dd653c4ad10e4ee489b97965acc3",
+  "voice_generation_sha256": "5180a9ca16c7a01f502350dcdfadf073da06edcb9b054350d7fdec8c3af7336a",
+  "pending_human_checks": [
+    "ordinary_windows",
+    "display_dpi",
+    "listening",
+    "creative_and_freeze",
+    "reading_time"
+  ],
+  "human_acceptance_is_not_claimed": true,
+  "tag_target_policy": "current_main_with_identical_accepted_game_source",
+  "tag_difference_allowlist": [
+    "docs/**",
+    "README.md",
+    "ROADMAP.md",
+    "CHANGELOG.md",
+    ".github/workflows/release-v101.yml"
+  ],
+  "existing_v100_release_is_preserved": true
+}
