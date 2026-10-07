@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "status": "windows_in_progress",
+  "version": "1.1.1",
+  "candidate_commit": "91cd48641448d48f2bbd97de9f200024ca02dadf",
+  "candidate_tree": "8c7fbc29cb9fa87ce06bfc3b8c57d71e6df2b607",
+  "run_id": 37651109153,
+  "job_id": 112894363572,
+  "local_authoring": {
+    "status": "passed",
+    "tests": 118,
+    "duration_seconds": 10.878,
+    "command": "python -m tools.validate",
+    "all_validators": "passed"
+  },
+  "planned_counts": {
+    "source": [
+      36,
+      448,
+      82
+    ],
+    "standalone": [
+      36,
+      448,
+      82
+    ],
+    "fresh_process": [
+      1,
+      16,
+      3
+    ],
+    "upgrade_writer": [
+      1,
+      14,
+      3
+    ],
+    "upgrade_reader": [
+      2,
+      26,
+      4
+    ],
+    "prefix_per_iteration": [
+      6,
+      103,
+      29
+    ]
+  },
+  "previous_version": "1.1.0",
+  "previous_package_sha256": "a6ce022d23e5e88e3666d9806ca69a30077d52c56bf74820f4863f9ddc66fca0",
+  "human_pending": [
+    "ordinary_windows",
+    "display_dpi",
+    "listening",
+    "creative_and_freeze",
+    "reading_time"
+  ],
+  "publication": "not_started",
+  "next": "Complete this Windows run, inspect current visual evidence, authorize exact reviewed bytes under the existing user publication instruction, then verify public download."
+}
