@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "early_native_upgrade_passed_full_regression_pending",
+  "status": "source_and_early_upgrade_passed_standalone_pending",
   "version": "1.1.0",
   "candidate_commit": "b1f4f180b7a315fcb9a195889389d5af5e7688d2",
   "candidate_tree": "cb123246a566a59d04fe25c6692b84f79ef708cc",
@@ -47,6 +47,22 @@
       "number": 15,
       "started_at": "2026-10-07T10:59:04Z",
       "completed_at": "2026-10-07T10:59:06Z"
+    },
+    {
+      "name": "Run actual Windows interaction tests",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 16,
+      "started_at": "2026-10-07T10:59:06Z",
+      "completed_at": "2026-10-07T11:25:50Z"
+    },
+    {
+      "name": "Verify and boot EXE extracted from distribution",
+      "status": "in_progress",
+      "conclusion": null,
+      "number": 17,
+      "started_at": "2026-10-07T11:25:50Z",
+      "completed_at": null
     }
   ],
   "quick_prefix_expected_and_enforced": {
@@ -159,7 +175,6 @@
     "story_change": "Version field only versus accepted v1.0.1 source"
   },
   "pending": [
-    "full_source_suite",
     "full_standalone_suite",
     "fresh_process",
     "exact_zip_audit",
@@ -167,5 +182,20 @@
     "formal_publication_and_download_readback"
   ],
   "human_acceptance_is_not_claimed": true,
-  "local_environment": "offline; task continues through repository API and actual Windows CI"
+  "local_environment": "offline; task continues through repository API and actual Windows CI",
+  "last_observed_at": "2026-10-07T11:32:44.067Z",
+  "source_full_expected_and_enforced": {
+    "cases": 36,
+    "assertions": 433,
+    "screenshots": 78
+  },
+  "story_comparison": {
+    "compared_against_commit": "c8afec6cb1777f643445e633c104cfe6ef39d577",
+    "path": "game/data/story.json",
+    "previous_version": "1.0.1",
+    "current_version": "1.1.0",
+    "previous_file_sha256": "fb4dc950d17ffb1b92f88b4e8ed4793304020ef7f7d0d0b970a2b9d88eecdd71",
+    "current_file_sha256": "499324add35c8a78d13935d204c9596309c69dde1fe69f9daa49493ade8558b6",
+    "canonical_deep_comparison_after_version_field_only": "identical"
+  }
 }
