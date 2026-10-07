@@ -283,6 +283,8 @@ testcase extras_locked_no_spoilers:
     assert not id "extras_music_unspoken_theme"
     assert not id "extras_music_next_message_theme"
     assert eval renpy.music.get_playing(channel="gallery_music") is None
+    assert eval renpy.get_widget("extras_music_room_screen", "extras_music_progress")._tts_all(False) == "已解锁 %d/3" % sum(extras_music_room.is_unlocked(filename) for key, title, filename, duration in extras_music)
+    assert eval renpy.get_widget("extras_music_room_screen", 'extras_music_status')._tts_all(False) == '已停止，请选择已解锁的音乐。' timeout 1.0
     pause 0.3
     pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
     screenshot "native-extras-music-locked"
@@ -328,18 +330,27 @@ testcase extras_unlock_and_music:
     assert eval (affection, trust, truth_known, last_ending, list(visited_scenes)) == _test.extras_state
     click id "extras_music_tab"
     assert eval all(extras_music_room.is_unlocked(filename) for key, title, filename, duration in extras_music)
+    assert eval renpy.get_widget("extras_music_room_screen", 'extras_music_progress')._tts_all(False) == '已解锁 3/3' timeout 1.0
+    assert eval renpy.get_widget("extras_music_room_screen", 'extras_music_status')._tts_all(False) == '已停止，请选择已解锁的音乐。' timeout 1.0
     click id "extras_music_rain_theme"
     pause until eval renpy.music.get_playing(channel="gallery_music") == 'audio/bgm/rain_theme.ogg'
+    assert eval renpy.get_widget("extras_music_room_screen", 'extras_music_status')._tts_all(False) == '播放中 · 雨夜' timeout 1.0
     click id "extras_next"
     pause until eval renpy.music.get_playing(channel="gallery_music") == 'audio/bgm/unspoken_theme.ogg'
     click id "extras_next"
     pause until eval renpy.music.get_playing(channel="gallery_music") == 'audio/bgm/next_message_theme.ogg'
+    assert eval renpy.get_widget("extras_music_room_screen", 'extras_music_status')._tts_all(False) == '播放中 · 下一条消息' timeout 1.0
     click id "extras_previous"
     pause until eval renpy.music.get_playing(channel="gallery_music") == 'audio/bgm/unspoken_theme.ogg'
     click id "extras_pause"
     assert eval renpy.music.get_pause(channel="gallery_music")
+    assert eval renpy.get_widget("extras_music_room_screen", 'extras_music_status')._tts_all(False) == '已暂停 · 未说出口' timeout 1.0
+    pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
+    screenshot "native-extras-music-paused"
     click id "extras_pause"
     assert eval not renpy.music.get_pause(channel="gallery_music")
+    assert eval renpy.get_widget("extras_music_room_screen", 'extras_music_status')._tts_all(False) == '播放中 · 未说出口' timeout 1.0
     click id "extras_volume" pos (0.25, 0.5)
     $ print("Extras volume after real slider click:", preferences.get_volume("music"), MixerValue("music").get_mixer(), config.quadratic_volumes, config.volume_db_range)
     assert eval abs(MixerValue("music").get_mixer() / (1.0 if config.quadratic_volumes else config.volume_db_range) - 0.25) < 0.06
@@ -354,6 +365,10 @@ testcase extras_unlock_and_music:
     screenshot "native-extras-music"
     click id "extras_stop"
     assert eval renpy.music.get_playing(channel="gallery_music") is None
+    assert eval renpy.get_widget("extras_music_room_screen", 'extras_music_status')._tts_all(False) == '已停止，请选择已解锁的音乐。' timeout 1.0
+    pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
+    screenshot "native-extras-music-stopped"
     click id "extras_music_next_message_theme"
     pause until eval renpy.music.get_playing(channel="gallery_music") == 'audio/bgm/next_message_theme.ogg'
     $ renpy.set_physical_size((1280, 720))
@@ -362,6 +377,20 @@ testcase extras_unlock_and_music:
     pause 0.3
     pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
     screenshot "scaled-extras-music"
+    assert eval renpy.get_widget("extras_music_room_screen", 'extras_music_progress')._tts_all(False) == '已解锁 3/3' timeout 1.0
+    assert eval renpy.get_widget("extras_music_room_screen", 'extras_music_status')._tts_all(False) == '播放中 · 下一条消息' timeout 1.0
+    click id "extras_pause"
+    assert eval renpy.music.get_pause(channel="gallery_music")
+    assert eval renpy.get_widget("extras_music_room_screen", 'extras_music_status')._tts_all(False) == '已暂停 · 下一条消息' timeout 1.0
+    pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
+    screenshot "scaled-extras-music-paused"
+    click id "extras_stop"
+    assert eval renpy.music.get_playing(channel="gallery_music") is None
+    assert eval renpy.get_widget("extras_music_room_screen", 'extras_music_status')._tts_all(False) == '已停止，请选择已解锁的音乐。' timeout 1.0
+    pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
+    screenshot "scaled-extras-music-stopped"
     click id "extras_images_tab"
     assert eval renpy.music.get_playing(channel="gallery_music") is None
     pause 0.3

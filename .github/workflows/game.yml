@@ -48,8 +48,8 @@ jobs:
       - name: Preserve published statement names for v1 saves
         run: |
           New-Item -ItemType Directory -Force .runtime/compat | Out-Null
-          Invoke-WebRequest -Uri "https://github.com/AureliusWu/Test/releases/download/v1.0.1/BeforeTheRainStops-1.0.1-win.zip" -OutFile ".runtime/compat/BeforeTheRainStops-1.0.1-win.zip"
-          python -m tools.build.seed_release_names --previous-zip .runtime/compat/BeforeTheRainStops-1.0.1-win.zip
+          Invoke-WebRequest -Uri "https://github.com/AureliusWu/Test/releases/download/v1.1.0/BeforeTheRainStops-1.1.0-win.zip" -OutFile ".runtime/compat/BeforeTheRainStops-1.1.0-win.zip"
+          python -m tools.build.seed_release_names --previous-zip .runtime/compat/BeforeTheRainStops-1.1.0-win.zip
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Ren'Py lint
         run: |
@@ -83,10 +83,10 @@ jobs:
         run: |
           python -m tools.build.package --sdk .\.runtime\renpy-8.5.3-sdk
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-      - name: Load real saves and extras unlocks from the published v1.0.1 EXE
+      - name: Load real saves and extras unlocks from the published v1.1.0 EXE
         run: |
           $zip = Get-ChildItem dist -Filter '*-win.zip' | Select-Object -First 1
-          python -m tools.build.verify_upgrade --previous-zip .runtime/compat/BeforeTheRainStops-1.0.1-win.zip --current-zip $zip.FullName
+          python -m tools.build.verify_upgrade --previous-zip .runtime/compat/BeforeTheRainStops-1.1.0-win.zip --current-zip $zip.FullName
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Upload early real old-save upgrade evidence
         if: always()

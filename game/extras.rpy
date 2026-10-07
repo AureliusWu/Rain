@@ -14,6 +14,14 @@ init python:
     for identity, title, filename, duration in extras_music:
         extras_music_room.add(filename)
 
+    def extras_music_status():
+        playing = renpy.music.get_playing(channel="gallery_music")
+        for identity, title, filename, duration in extras_music:
+            if playing == filename and extras_music_room.is_unlocked(filename):
+                state = "已暂停" if renpy.music.get_pause(channel="gallery_music") else "播放中"
+                return "%s · %s" % (state, title)
+        return "已停止，请选择已解锁的音乐。"
+
 screen extras_images_room():
     tag menu
 
@@ -61,9 +69,13 @@ screen extras_music_room_screen():
 
     use game_menu("音乐鉴赏"):
         vbox:
-            spacing 28
+            spacing 22
             use extras_tabs("music")
-            text "在故事中听过的音乐，可以在这里慢慢重听。" size 27 color "#becdd7"
+            hbox:
+                spacing 48
+                text "在故事中听过的音乐，可以在这里慢慢重听。" size 27 color "#becdd7"
+                $ unlocked_count = sum(extras_music_room.is_unlocked(filename) for identity, title, filename, duration in extras_music)
+                text "已解锁 [unlocked_count]/[len(extras_music)]" id "extras_music_progress" size 27 color "#9fdbe5"
             for identity, title, filename, duration in extras_music:
                 frame:
                     background "#153342dd"
@@ -81,11 +93,12 @@ screen extras_music_room_screen():
                         else:
                             text "未解锁音乐" size 30 color "#8da9b8" xsize 900
                             text "继续阅读后解锁" size 25 color "#8da9b8" yalign 0.5
+            text extras_music_status() id "extras_music_status" size 27 color "#9fdbe5" xsize 1320
             hbox:
                 spacing 20
                 textbutton "上一曲" id "extras_previous" style "extras_control" action extras_music_room.Previous()
                 textbutton "下一曲" id "extras_next" style "extras_control" action extras_music_room.Next()
-                textbutton "暂停 / 继续" id "extras_pause" style "extras_control" action extras_music_room.TogglePause()
+                textbutton ("继续" if renpy.music.get_playing(channel="gallery_music") and renpy.music.get_pause(channel="gallery_music") else "暂停") id "extras_pause" style "extras_control" action extras_music_room.TogglePause()
                 textbutton "停止" id "extras_stop" style "extras_control" selected renpy.music.get_playing(channel="gallery_music") is None action extras_music_room.Stop()
             hbox:
                 spacing 30

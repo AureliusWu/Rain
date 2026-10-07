@@ -3,6 +3,9 @@ import json
 from tools.story_model import ROOT, enumerate_routes, scene_lines
 from tools.compile_story import quote
 
+def music_text_assertion(widget, text):
+    return f'    assert eval renpy.get_widget("extras_music_room_screen", {widget!r})._tts_all(False) == {text!r} timeout 1.0'
+
 def render_extras_tests(story):
     assets = {a['id']:a['file'] for a in json.loads((ROOT/'game/data/asset_manifest.json').read_text())['assets']}
     route = next(r for r in enumerate_routes(story)['routes'] if r['ending']=='true')
@@ -21,6 +24,8 @@ def render_extras_tests(story):
              '    assert not id "extras_music_unspoken_theme"',
              '    assert not id "extras_music_next_message_theme"',
              '    assert eval renpy.music.get_playing(channel="gallery_music") is None',
+             '    assert eval renpy.get_widget("extras_music_room_screen", "extras_music_progress")._tts_all(False) == "已解锁 %d/3" % sum(extras_music_room.is_unlocked(filename) for key, title, filename, duration in extras_music)',
+             music_text_assertion('extras_music_status', '已停止，请选择已解锁的音乐。'),
              '    screenshot "native-extras-music-locked"',
              '    click id "extras_images_tab"', '    $ renpy.set_physical_size((1280, 720))',
              '    pause until eval renpy.get_physical_size() == (1280, 720)',
@@ -43,16 +48,23 @@ def render_extras_tests(story):
               '    assert eval (affection, trust, truth_known, last_ending, list(visited_scenes)) == _test.extras_state',
               '    click id "extras_music_tab"',
               '    assert eval all(extras_music_room.is_unlocked(filename) for key, title, filename, duration in extras_music)',
+              music_text_assertion('extras_music_progress', '已解锁 3/3'),
+              music_text_assertion('extras_music_status', '已停止，请选择已解锁的音乐。'),
               '    click id "extras_music_rain_theme"',
               f'    pause until eval renpy.music.get_playing(channel="gallery_music") == {assets["rain_theme"]!r}',
+              music_text_assertion('extras_music_status', '播放中 · 雨夜'),
               '    click id "extras_next"',
               f'    pause until eval renpy.music.get_playing(channel="gallery_music") == {assets["unspoken_theme"]!r}',
               '    click id "extras_next"',
               f'    pause until eval renpy.music.get_playing(channel="gallery_music") == {assets["next_message_theme"]!r}',
+              music_text_assertion('extras_music_status', '播放中 · 下一条消息'),
               '    click id "extras_previous"',
               f'    pause until eval renpy.music.get_playing(channel="gallery_music") == {assets["unspoken_theme"]!r}',
               '    click id "extras_pause"', '    assert eval renpy.music.get_pause(channel="gallery_music")',
+              music_text_assertion('extras_music_status', '已暂停 · 未说出口'),
+              '    screenshot "native-extras-music-paused"',
               '    click id "extras_pause"', '    assert eval not renpy.music.get_pause(channel="gallery_music")',
+              music_text_assertion('extras_music_status', '播放中 · 未说出口'),
               '    click id "extras_volume" pos (0.25, 0.5)',
               '    $ print("Extras volume after real slider click:", preferences.get_volume("music"), MixerValue("music").get_mixer(), config.quadratic_volumes, config.volume_db_range)',
               '    assert eval abs(MixerValue("music").get_mixer() / (1.0 if config.quadratic_volumes else config.volume_db_range) - 0.25) < 0.06',
@@ -62,11 +74,21 @@ def render_extras_tests(story):
               f'    pause until eval renpy.music.get_playing(channel="gallery_music") == {assets["unspoken_theme"]!r}',
               '    screenshot "native-extras-music"',
               '    click id "extras_stop"', '    assert eval renpy.music.get_playing(channel="gallery_music") is None',
+              music_text_assertion('extras_music_status', '已停止，请选择已解锁的音乐。'),
+              '    screenshot "native-extras-music-stopped"',
               '    click id "extras_music_next_message_theme"',
               f'    pause until eval renpy.music.get_playing(channel="gallery_music") == {assets["next_message_theme"]!r}',
               '    $ renpy.set_physical_size((1280, 720))',
               '    pause until eval renpy.get_physical_size() == (1280, 720)',
               '    pause 0.3', '    screenshot "scaled-extras-music"',
+              music_text_assertion('extras_music_progress', '已解锁 3/3'),
+              music_text_assertion('extras_music_status', '播放中 · 下一条消息'),
+              '    click id "extras_pause"', '    assert eval renpy.music.get_pause(channel="gallery_music")',
+              music_text_assertion('extras_music_status', '已暂停 · 下一条消息'),
+              '    screenshot "scaled-extras-music-paused"',
+              '    click id "extras_stop"', '    assert eval renpy.music.get_playing(channel="gallery_music") is None',
+              music_text_assertion('extras_music_status', '已停止，请选择已解锁的音乐。'),
+              '    screenshot "scaled-extras-music-stopped"',
               '    click id "extras_images_tab"',
               '    assert eval renpy.music.get_playing(channel="gallery_music") is None',
               '    screenshot "scaled-extras-unlocked"',
@@ -89,5 +111,9 @@ def extras_persistence_assertions():
     return ['    assert eval all(extras_gallery.Action(key) is not None for key, title, filename in extras_images)',
             '    assert eval all(extras_music_room.is_unlocked(filename) for key, title, filename, duration in extras_music)',
             '    click id "menu_extras"', '    assert screen "extras_images_room"',
-            '    screenshot "native-extras-persistent"', '    click id "game_return"',
+            '    screenshot "native-extras-persistent"',
+            '    click id "extras_music_tab"',
+            music_text_assertion('extras_music_progress', '已解锁 3/3'),
+            music_text_assertion('extras_music_status', '已停止，请选择已解锁的音乐。'),
+            '    screenshot "native-extras-music-persistent"', '    click id "game_return"',
             '    assert screen "main_menu"']

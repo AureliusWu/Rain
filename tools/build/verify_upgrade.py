@@ -1,4 +1,4 @@
-"""Load real saves made by the exact published v1.0.1 EXE in the new EXE."""
+"""Load real saves made by the exact published v1.1.0 EXE in the new EXE."""
 import argparse
 import hashlib
 import json
@@ -12,8 +12,8 @@ from tools.story_model import ROOT, enumerate_routes, load_story, scene_lines
 from tools.build.verify_package import (collect_runtime_evidence, positive_timeout,
                                        run_native_tests, validate_suite_evidence)
 
-BASELINE_VERSION = '1.0.1'
-BASELINE_SHA256 = '9238e2d06cb7820056912455765f42b74337bf857dacd5a213be4cc349843f36'
+BASELINE_VERSION = '1.1.0'
+BASELINE_SHA256 = 'a6ce022d23e5e88e3666d9806ca69a30077d52c56bf74820f4863f9ddc66fca0'
 
 
 def digest(file):
@@ -45,7 +45,12 @@ def render_upgrade_writer(story):
     lines += ['    screenshot "upgrade-previous-late-save"',
               '    $ renpy.unlink_save("1-2")', '    click id "save_open"',
               '    pause until screen "save"', '    click id "slot_2"',
-              '    assert eval renpy.can_load("1-2")', '']
+             '    assert eval renpy.can_load("1-2")', '    click id "game_return"',
+             '    run MainMenu(confirm=False)', '    click id "menu_extras"',
+             '    assert eval all(extras_gallery.Action(key) is not None for key, title, filename in extras_images)',
+             '    click id "extras_music_tab"',
+             '    assert eval all(extras_music_room.is_unlocked(filename) for key, title, filename, duration in extras_music)',
+             '    screenshot "upgrade-previous-extras-music"', '']
     return setup + '\n'.join(lines)
 
 
