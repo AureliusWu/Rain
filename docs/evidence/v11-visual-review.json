@@ -1,0 +1,1266 @@
+{
+  "version": "1.1.0",
+  "candidate_commit": "b1f4f180b7a315fcb9a195889389d5af5e7688d2",
+  "run_id": 37610239212,
+  "inspected": [
+    {
+      "scope": "standalone",
+      "name": "bg-exit-after-rain",
+      "path": "reports/package/screenshots/bg-exit-after-rain.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "00e1e95a6bc8737e37583090ee397a978d706ae9910da20f2cb46476526ce853",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "bg-exit-after-rain",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/bg-exit-after-rain.png",
+        "sha256": "00e1e95a6bc8737e37583090ee397a978d706ae9910da20f2cb46476526ce853",
+        "review_method": "reuse only after exact SHA-256 match with accepted prior visual record",
+        "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。"
+      },
+      "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "bg-exit-covered",
+      "path": "reports/package/screenshots/bg-exit-covered.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "18090c7fd3caa3c66260ef016ee06f32db10178a5f31d8c8a4b2aa38e20d21f2",
+      "status": "visually_checked_with_limits",
+      "review_method": "direct AI inspection of full-resolution JPEG copy from the current original PNG",
+      "finding": "1920×1080 屋檐下背景和立绘完整显示；“我”姓名与单行对白清晰，正文位于底部文本框内，快捷菜单未重叠或裁切。",
+      "inspection_copy": {
+        "format": "JPEG",
+        "quality": 95,
+        "pixels": [
+          1920,
+          1080
+        ],
+        "source_png_sha256": "18090c7fd3caa3c66260ef016ee06f32db10178a5f31d8c8a4b2aa38e20d21f2",
+        "sha256": "52c11465d79cf67869db650e1cc15b200ea66c299f6b0ef1d2e704b90e768174"
+      },
+      "direct_observation_source": "Actually rendered and inspected earlier in this conversation; recovered export payload exactly matches its previously verified SHA-256."
+    },
+    {
+      "scope": "standalone",
+      "name": "bg-nearby-cafe",
+      "path": "reports/package/screenshots/bg-nearby-cafe.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "bg-nearby-cafe",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/bg-nearby-cafe.png",
+        "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac",
+        "review_method": "reuse only after exact SHA-256 match with accepted prior visual record",
+        "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。"
+      },
+      "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "bg-s05_shared_path",
+      "path": "reports/package/screenshots/bg-s05_shared_path.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "23a8c42c8b26dda67d5ad1fbedb29337cd5a3b0816f3a9a0ac32d5cd44916ef6",
+      "status": "visually_checked_with_limits",
+      "review_method": "direct AI inspection of full-resolution JPEG copy from the current original PNG",
+      "finding": "1920×1080 共行分支的雨夜出口背景、立绘与两行旁白均完整；文字与下方快捷菜单保持间距，未见遮挡或溢出。",
+      "inspection_copy": {
+        "format": "JPEG",
+        "quality": 95,
+        "pixels": [
+          1920,
+          1080
+        ],
+        "source_png_sha256": "23a8c42c8b26dda67d5ad1fbedb29337cd5a3b0816f3a9a0ac32d5cd44916ef6",
+        "sha256": "a7d0fa077f7e9cedb98d2b57dde97a62c4b59349ab09cf5a167f6aa955efcf2f"
+      },
+      "direct_observation_source": "Actually rendered and inspected earlier in this conversation; recovered export payload exactly matches its previously verified SHA-256."
+    },
+    {
+      "scope": "standalone",
+      "name": "cg-letter",
+      "path": "reports/package/screenshots/cg-letter.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "1d97e32d5261d86436908f9dabd72504d1df1cb3622284750bdb3c83fcca3924",
+      "status": "visually_checked_with_limits",
+      "review_method": "direct AI inspection of full-resolution JPEG copy from the current original PNG",
+      "finding": "1920×1080 旧信 CG 的近景构图与递信动作清楚，许澄姓名和单行对白位于深色文本框内；姓名、正文及快捷菜单没有重叠或溢出。",
+      "inspection_copy": {
+        "format": "JPEG",
+        "quality": 95,
+        "pixels": [
+          1920,
+          1080
+        ],
+        "source_png_sha256": "1d97e32d5261d86436908f9dabd72504d1df1cb3622284750bdb3c83fcca3924",
+        "sha256": "850938fc04f4c5b50a221c3eeb1cefeac15d4cf7b3532054ebceddac6c185f4b"
+      },
+      "direct_observation_source": "Actually rendered and inspected earlier in this conversation; recovered export payload exactly matches its previously verified SHA-256."
+    },
+    {
+      "scope": "standalone",
+      "name": "chapter-prologue",
+      "path": "reports/package/screenshots/chapter-prologue.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "1dc207749ee71e954341f8a641f9875d99b06d607d5fc7086eb49c794e323b02",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "chapter-prologue",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/chapter-prologue.png",
+        "sha256": "1dc207749ee71e954341f8a641f9875d99b06d607d5fc7086eb49c794e323b02",
+        "review_method": "reuse only after exact SHA-256 match with accepted prior visual record",
+        "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。"
+      },
+      "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "chapter-today",
+      "path": "reports/package/screenshots/chapter-today.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "6079777cb7cb0231ee102dab0c79f911cbd442714a30e6ef9e2fbdf104a3ef08",
+      "status": "visually_checked_with_limits",
+      "review_method": "direct AI inspection of full-resolution JPEG copy from the current original PNG",
+      "finding": "1920×1080 黑底章节画面中“第四章：今天”居中、清晰且未裁切，底部快捷菜单保持可见。",
+      "inspection_copy": {
+        "format": "JPEG",
+        "quality": 95,
+        "pixels": [
+          1920,
+          1080
+        ],
+        "source_png_sha256": "6079777cb7cb0231ee102dab0c79f911cbd442714a30e6ef9e2fbdf104a3ef08",
+        "sha256": "203131fb4302b58391bb311251ff610c64ffad714dc435f5db6a9362e3a1b864"
+      },
+      "direct_observation_source": "Actually rendered and inspected earlier in this conversation; recovered export payload exactly matches its previously verified SHA-256."
+    },
+    {
+      "scope": "standalone",
+      "name": "expression-angry",
+      "path": "reports/package/screenshots/expression-angry.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "98884ee38e325a804ae3ee7599f31cdae89bd7f12b10777189f717b695bcae2d",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "expression-angry",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/expression-angry.png",
+        "sha256": "98884ee38e325a804ae3ee7599f31cdae89bd7f12b10777189f717b695bcae2d",
+        "review_method": "direct inspection of current original PNG with view_image",
+        "finding": "1920×1080 怒意表情、姓名和台词完整；重听按钮独立位于对白上缘，未与正文或下方菜单重叠。"
+      },
+      "finding": "1920×1080 怒意表情、姓名和台词完整；重听按钮独立位于对白上缘，未与正文或下方菜单重叠。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "expression-embarrassed",
+      "path": "reports/package/screenshots/expression-embarrassed.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "f48e7538a53ccdef70a2b2c6f1c811ed291e2e492bb8aa4590e4f418152c084e",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "expression-embarrassed",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/expression-embarrassed.png",
+        "sha256": "f48e7538a53ccdef70a2b2c6f1c811ed291e2e492bb8aa4590e4f418152c084e",
+        "review_method": "reuse only after exact SHA-256 match with accepted prior visual record",
+        "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。"
+      },
+      "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "expression-happy",
+      "path": "reports/package/screenshots/expression-happy.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "d4a9a8cd6600c86cfaf011e91c603b3f4cbe51a4ab980fc34ca27baf0d9bca47",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "expression-happy",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/expression-happy.png",
+        "sha256": "d4a9a8cd6600c86cfaf011e91c603b3f4cbe51a4ab980fc34ca27baf0d9bca47",
+        "review_method": "reuse only after exact SHA-256 match with accepted prior visual record",
+        "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。"
+      },
+      "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "expression-normal",
+      "path": "reports/package/screenshots/expression-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "eb86566d85033bde110661ce1898ce95c912a4509ec6662f870464ecde024b55",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "expression-normal",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/expression-normal.png",
+        "sha256": "eb86566d85033bde110661ce1898ce95c912a4509ec6662f870464ecde024b55",
+        "review_method": "reuse only after exact SHA-256 match with accepted prior visual record",
+        "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。"
+      },
+      "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "expression-sad",
+      "path": "reports/package/screenshots/expression-sad.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "5028bcd7d6888831548cc0c2c3ed13bdd1070f3b222d24c2b32ac7de6942bb28",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "expression-sad",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/expression-sad.png",
+        "sha256": "5028bcd7d6888831548cc0c2c3ed13bdd1070f3b222d24c2b32ac7de6942bb28",
+        "review_method": "reuse only after exact SHA-256 match with accepted prior visual record",
+        "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。"
+      },
+      "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "expression-smile",
+      "path": "reports/package/screenshots/expression-smile.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "30c73292f22c4cf234b2b261fa22f33ad68dbf49a2d06b8a91f5cb3cfea11c6a",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "expression-smile",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/expression-smile.png",
+        "sha256": "30c73292f22c4cf234b2b261fa22f33ad68dbf49a2d06b8a91f5cb3cfea11c6a",
+        "review_method": "direct inspection of current original PNG with view_image",
+        "finding": "微笑表情、首句对白与重听按钮可读，布局未见裁切。"
+      },
+      "finding": "微笑表情、首句对白与重听按钮可读，布局未见裁切。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "expression-surprised",
+      "path": "reports/package/screenshots/expression-surprised.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "6eb871b901a508842edc10c950fa4c530d59711426101201f8f7be822585d725",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "expression-surprised",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/expression-surprised.png",
+        "sha256": "6eb871b901a508842edc10c950fa4c530d59711426101201f8f7be822585d725",
+        "review_method": "direct inspection of current original PNG with view_image",
+        "finding": "惊讶表情和对应台词完整，重听入口可辨认。"
+      },
+      "finding": "惊讶表情和对应台词完整，重听入口可辨认。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "first-choice",
+      "path": "reports/package/screenshots/first-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "927746409e8975ba56aed6ca17e482f0cabfadcab16396e48d3026ac06a4f0d4",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "first-choice",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/first-choice.png",
+        "sha256": "927746409e8975ba56aed6ca17e482f0cabfadcab16396e48d3026ac06a4f0d4",
+        "review_method": "reuse only after exact SHA-256 match with accepted prior visual record",
+        "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。"
+      },
+      "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "first-dialogue",
+      "path": "reports/package/screenshots/first-dialogue.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "30c73292f22c4cf234b2b261fa22f33ad68dbf49a2d06b8a91f5cb3cfea11c6a",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "first-dialogue",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/first-dialogue.png",
+        "sha256": "30c73292f22c4cf234b2b261fa22f33ad68dbf49a2d06b8a91f5cb3cfea11c6a",
+        "review_method": "direct inspection of current original PNG with view_image",
+        "finding": "开局配音台词、角色姓名、重听入口和快捷菜单完整，按钮不覆盖正文。"
+      },
+      "finding": "开局配音台词、角色姓名、重听入口和快捷菜单完整，按钮不覆盖正文。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "history",
+      "path": "reports/package/screenshots/history.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "18ec98240a0b8e584397a8165d68fee69557f462654284d4b53f170894b95db6",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "history",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/history.png",
+        "sha256": "18ec98240a0b8e584397a8165d68fee69557f462654284d4b53f170894b95db6",
+        "review_method": "direct inspection of current original PNG with view_image",
+        "finding": "历史页背景不透出游戏画面；有配音条目的重播按钮位于姓名下方，与正文、返回和滚动条分离。"
+      },
+      "finding": "历史页背景不透出游戏画面；有配音条目的重播按钮位于姓名下方，与正文、返回和滚动条分离。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "native-about",
+      "path": "reports/package/screenshots/native-about.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "85aef226994b34db23e615cd7f08772ea69f8609c9175ae4269a1fa78296636e",
+      "status": "visually_checked_with_limits",
+      "review_method": "direct AI inspection of full-resolution JPEG copy from the current original PNG",
+      "finding": "1920×1080 关于页显示版本 1.1.0、Qwen3-TTS / Serena 与许可说明；新增鉴赏室导航和底部返回按钮完整，来源文字在内容区域内，没有明显重叠或裁切。",
+      "inspection_copy": {
+        "format": "JPEG",
+        "quality": 95,
+        "pixels": [
+          1920,
+          1080
+        ],
+        "source_png_sha256": "85aef226994b34db23e615cd7f08772ea69f8609c9175ae4269a1fa78296636e",
+        "sha256": "2e5a641bdaeb9418c857b4570e1bdacc1c68b1ef745615d2a16d03ed85422b77"
+      },
+      "direct_observation_source": "Actually rendered and inspected earlier in this conversation; recovered export payload exactly matches its previously verified SHA-256."
+    },
+    {
+      "scope": "standalone",
+      "name": "native-choice",
+      "path": "reports/package/screenshots/native-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "36038fe31be4a5536c4b20edef06114fa30fde01cb45ccf48c4bb577a44183d9",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "native-choice",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/native-choice.png",
+        "sha256": "36038fe31be4a5536c4b20edef06114fa30fde01cb45ccf48c4bb577a44183d9",
+        "review_method": "reuse only after exact SHA-256 match with accepted prior visual record",
+        "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。"
+      },
+      "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "native-history-voice-replay",
+      "path": "reports/package/screenshots/native-history-voice-replay.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "9171031ac7ee173e5e9d37b5e87a93acc1821d14c3c400470819acf5c64e24ad",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "native-history-voice-replay",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/native-history-voice-replay.png",
+        "sha256": "9171031ac7ee173e5e9d37b5e87a93acc1821d14c3c400470819acf5c64e24ad",
+        "review_method": "direct inspection of current original PNG with view_image",
+        "finding": "原生历史重播时按钮高亮可读，条目间距、左侧导航和返回未见重叠。"
+      },
+      "finding": "原生历史重播时按钮高亮可读，条目间距、左侧导航和返回未见重叠。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "native-main-menu",
+      "path": "reports/package/screenshots/native-main-menu.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "5284066eae27aae5b37436031ce27e77842e6768c065b7fb1d165270ed284746",
+      "status": "visually_checked_with_limits",
+      "review_method": "direct AI inspection of full-resolution JPEG copy from the current original PNG",
+      "finding": "1920×1080 主菜单新增“鉴赏室”且与其他导航保持等距；游戏标题、1.1.0 版本号和全部七个入口均完整可读。",
+      "inspection_copy": {
+        "format": "JPEG",
+        "quality": 95,
+        "pixels": [
+          1920,
+          1080
+        ],
+        "source_png_sha256": "5284066eae27aae5b37436031ce27e77842e6768c065b7fb1d165270ed284746",
+        "sha256": "40fb26fd3a273121079ebce464f644814b9bc7329bf51c2ff28d8a2e0287a06d"
+      },
+      "direct_observation_source": "Actually rendered and inspected earlier in this conversation; recovered export payload exactly matches its previously verified SHA-256."
+    },
+    {
+      "scope": "standalone",
+      "name": "native-settings",
+      "path": "reports/package/screenshots/native-settings.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "0ce265f22d02fdfbe9579ede57e42007e597f302cbdb5e8e7d65e648253b0acd",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "native-settings",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/native-settings.png",
+        "sha256": "0ce265f22d02fdfbe9579ede57e42007e597f302cbdb5e8e7d65e648253b0acd",
+        "review_method": "reuse only after exact SHA-256 match with accepted prior visual record",
+        "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。"
+      },
+      "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "native-voice-replay",
+      "path": "reports/package/screenshots/native-voice-replay.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "f7aacaf5e5f5a844a5e06c2ff4a72b965a851e148966de701fb353254af8465d",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "native-voice-replay",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/native-voice-replay.png",
+        "sha256": "f7aacaf5e5f5a844a5e06c2ff4a72b965a851e148966de701fb353254af8465d",
+        "review_method": "direct inspection of current original PNG with view_image",
+        "finding": "原生当前台词重播时按钮高亮可读，姓名、台词和快捷菜单完整。"
+      },
+      "finding": "原生当前台词重播时按钮高亮可读，姓名、台词和快捷菜单完整。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "route-01-true",
+      "path": "reports/package/screenshots/route-01-true.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "b8de721acc7d807bf3dd8392ebcb1228802e1c7fdfe6c02a87378dec81df2228",
+      "status": "visually_checked_with_limits",
+      "review_method": "direct AI inspection of full-resolution JPEG copy from the current original PNG",
+      "finding": "1920×1080 True 结局页的游戏标题、结局名称、结束提示与回到主菜单按钮层次清楚；深色遮罩上的文字清晰，所有控件均在视口内。",
+      "inspection_copy": {
+        "format": "JPEG",
+        "quality": 95,
+        "pixels": [
+          1920,
+          1080
+        ],
+        "source_png_sha256": "b8de721acc7d807bf3dd8392ebcb1228802e1c7fdfe6c02a87378dec81df2228",
+        "sha256": "5ad50c69b23c1b267b4760fc34807dd870cf8e4b08983c45c02646af03580b3e"
+      },
+      "direct_observation_source": "Actually rendered and inspected earlier in this conversation; recovered export payload exactly matches its previously verified SHA-256."
+    },
+    {
+      "scope": "standalone",
+      "name": "route-02-normal",
+      "path": "reports/package/screenshots/route-02-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "decec29be269cb2591a52c5c0680ed098ee3cbce549fac0df9208e77394ffcbe",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "route-02-normal",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/route-02-normal.png",
+        "sha256": "decec29be269cb2591a52c5c0680ed098ee3cbce549fac0df9208e77394ffcbe",
+        "review_method": "reuse only after exact SHA-256 match with accepted prior visual record",
+        "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。"
+      },
+      "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "save-load-cafe-after-rain-stop",
+      "path": "reports/package/screenshots/save-load-cafe-after-rain-stop.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "save-load-cafe-after-rain-stop",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/save-load-cafe-after-rain-stop.png",
+        "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac",
+        "review_method": "reuse only after exact SHA-256 match with accepted prior visual record",
+        "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。"
+      },
+      "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "save-load-letter-cg",
+      "path": "reports/package/screenshots/save-load-letter-cg.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "1d97e32d5261d86436908f9dabd72504d1df1cb3622284750bdb3c83fcca3924",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "save-load-letter-cg",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/save-load-letter-cg.png",
+        "sha256": "1d97e32d5261d86436908f9dabd72504d1df1cb3622284750bdb3c83fcca3924",
+        "review_method": "reuse only after exact SHA-256 match with accepted prior visual record",
+        "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。"
+      },
+      "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "save-load-normal-ending",
+      "path": "reports/package/screenshots/save-load-normal-ending.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "00e1e95a6bc8737e37583090ee397a978d706ae9910da20f2cb46476526ce853",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "save-load-normal-ending",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/save-load-normal-ending.png",
+        "sha256": "00e1e95a6bc8737e37583090ee397a978d706ae9910da20f2cb46476526ce853",
+        "review_method": "reuse only after exact SHA-256 match with accepted prior visual record",
+        "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。"
+      },
+      "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-choice",
+      "path": "reports/package/screenshots/scaled-choice.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "93050dcf561ead5f6911d8751a79cd656d3f18149a5133a3d7cbbfc9350c47d3",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "scaled-choice",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/scaled-choice.png",
+        "sha256": "93050dcf561ead5f6911d8751a79cd656d3f18149a5133a3d7cbbfc9350c47d3",
+        "review_method": "reuse only after exact SHA-256 match with accepted prior visual record",
+        "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。"
+      },
+      "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-dialogue",
+      "path": "reports/package/screenshots/scaled-dialogue.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "c9b69981ee83d0bde20faefbc11149261368a69d1c1163d6e57314947d6229da",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "scaled-dialogue",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/scaled-dialogue.png",
+        "sha256": "c9b69981ee83d0bde20faefbc11149261368a69d1c1163d6e57314947d6229da",
+        "review_method": "direct inspection of current original PNG with view_image",
+        "finding": "1280×720 下角色、对白和重听入口可读，未见重叠或裁切。"
+      },
+      "finding": "1280×720 下角色、对白和重听入口可读，未见重叠或裁切。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-history-voice-replay",
+      "path": "reports/package/screenshots/scaled-history-voice-replay.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "f49bc6817cb4bf9557bbe2c783954b602a7bf5f2081b9a0c023a78bfafb3d126",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "scaled-history-voice-replay",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/scaled-history-voice-replay.png",
+        "sha256": "f49bc6817cb4bf9557bbe2c783954b602a7bf5f2081b9a0c023a78bfafb3d126",
+        "review_method": "direct inspection of current original PNG with view_image",
+        "finding": "1280×720 历史页重播按钮高亮可读；正文、导航、返回和滚动条互不重叠。"
+      },
+      "finding": "1280×720 历史页重播按钮高亮可读；正文、导航、返回和滚动条互不重叠。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-history",
+      "path": "reports/package/screenshots/scaled-history.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "e014377d3816802d5d1d5ada89e48ee0f720a05caf36636cacee760e7fa9395a",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "scaled-history",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/scaled-history.png",
+        "sha256": "e014377d3816802d5d1d5ada89e48ee0f720a05caf36636cacee760e7fa9395a",
+        "review_method": "direct inspection of current original PNG with view_image",
+        "finding": "1280×720 历史中姓名下方的重播入口与正文分离，最后条目仍完整可见。"
+      },
+      "finding": "1280×720 历史中姓名下方的重播入口与正文分离，最后条目仍完整可见。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-load",
+      "path": "reports/package/screenshots/scaled-load.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "1c6af37531deeaab7ec91976071d67471cd329648aab35a2cda7d9f07c620eed",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "scaled-load",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/scaled-load.png",
+        "sha256": "1c6af37531deeaab7ec91976071d67471cd329648aab35a2cda7d9f07c620eed",
+        "review_method": "reuse only after exact SHA-256 match with accepted prior visual record",
+        "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。"
+      },
+      "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-main-menu",
+      "path": "reports/package/screenshots/scaled-main-menu.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "3bdb12de09fdf0062662f0aa5f703db356353ce6f0afc1c6797fdaa884c10122",
+      "status": "visually_checked_with_limits",
+      "review_method": "direct AI inspection of full-resolution JPEG copy from the current original PNG",
+      "finding": "1280×720 主菜单的七个入口、鉴赏室入口及标题 / v1.1.0 标识完整显示；缩放后文字仍清晰，左侧导航和底部标题没有重叠或裁切。",
+      "inspection_copy": {
+        "format": "JPEG",
+        "quality": 95,
+        "pixels": [
+          1280,
+          720
+        ],
+        "source_png_sha256": "3bdb12de09fdf0062662f0aa5f703db356353ce6f0afc1c6797fdaa884c10122",
+        "sha256": "68b8c54dabc959990b282a1a90d843a05434a602dba19f253e7da0f5a42454f0"
+      },
+      "direct_observation_source": "Actually rendered and inspected earlier in this conversation; recovered export payload exactly matches its previously verified SHA-256."
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-save",
+      "path": "reports/package/screenshots/scaled-save.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "b7825f2a8b71d9eae97070a619d533490d1b1728e2802eae5bba503c388a3680",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "scaled-save",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/scaled-save.png",
+        "sha256": "b7825f2a8b71d9eae97070a619d533490d1b1728e2802eae5bba503c388a3680",
+        "review_method": "reuse only after exact SHA-256 match with accepted prior visual record",
+        "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。"
+      },
+      "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-settings",
+      "path": "reports/package/screenshots/scaled-settings.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "ff949fa006c4032cd572391b268deefb3071eb9b658be5af6e522fd1c65f6b0f",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "scaled-settings",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/scaled-settings.png",
+        "sha256": "ff949fa006c4032cd572391b268deefb3071eb9b658be5af6e522fd1c65f6b0f",
+        "review_method": "reuse only after exact SHA-256 match with accepted prior visual record",
+        "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。"
+      },
+      "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-voice-replay-after-load",
+      "path": "reports/package/screenshots/scaled-voice-replay-after-load.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "96312871a9a3c965285bb0a3b1d69c67ab29fac8a1128dba33fd1030856bffc8",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "scaled-voice-replay-after-load",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/scaled-voice-replay-after-load.png",
+        "sha256": "96312871a9a3c965285bb0a3b1d69c67ab29fac8a1128dba33fd1030856bffc8",
+        "review_method": "direct inspection of current original PNG with view_image",
+        "finding": "缩放窗口读档后的配音台词和重听按钮完整；与同轮缩放重播图字节一致。"
+      },
+      "finding": "缩放窗口读档后的配音台词和重听按钮完整；与同轮缩放重播图字节一致。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-voice-replay",
+      "path": "reports/package/screenshots/scaled-voice-replay.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "96312871a9a3c965285bb0a3b1d69c67ab29fac8a1128dba33fd1030856bffc8",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "scaled-voice-replay",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/scaled-voice-replay.png",
+        "sha256": "96312871a9a3c965285bb0a3b1d69c67ab29fac8a1128dba33fd1030856bffc8",
+        "review_method": "direct inspection of current original PNG with view_image",
+        "finding": "1280×720 当前台词重播入口高亮，角色、对白与底部菜单完整可读。"
+      },
+      "finding": "1280×720 当前台词重播入口高亮，角色、对白与底部菜单完整可读。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "settings",
+      "path": "reports/package/screenshots/settings.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "c1cd46dc62dcf89c678c7c94602c8fc892c10156d4f2fed96a82657a5396f765",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "settings",
+        "scope": "standalone",
+        "path": "reports/package/screenshots/settings.png",
+        "sha256": "c1cd46dc62dcf89c678c7c94602c8fc892c10156d4f2fed96a82657a5396f765",
+        "review_method": "direct inspection of current original PNG with view_image",
+        "finding": "设置页的显示、快进、文字速度和三类音量控件完整，语音测试和全部静音入口可读。"
+      },
+      "finding": "设置页的显示、快进、文字速度和三类音量控件完整，语音测试和全部静音入口可读。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "fresh_process",
+      "name": "cross-process-late-load",
+      "path": "reports/package/persistence/screenshots/cross-process-late-load.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "cross-process-late-load",
+        "scope": "fresh_process",
+        "path": "reports/package/persistence/screenshots/cross-process-late-load.png",
+        "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac",
+        "review_method": "reuse only after exact SHA-256 match with accepted prior visual record",
+        "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。"
+      },
+      "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "upgrade_reader",
+      "name": "cross-process-late-load",
+      "path": "reports/upgrade/reader/screenshots/cross-process-late-load.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "cross-process-late-load",
+        "scope": "upgrade_reader",
+        "path": "reports/upgrade/reader/screenshots/cross-process-late-load.png",
+        "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac",
+        "review_method": "reuse only after exact SHA-256 match with accepted prior visual record",
+        "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。"
+      },
+      "finding": "当前原始 PNG 与此前验收图 SHA-256 完全相同；复用此前直接审阅链，不新增真人或画质结论。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "upgrade_reader",
+      "name": "upgrade-current-voice-load",
+      "path": "reports/upgrade/reader/screenshots/upgrade-current-voice-load.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "f7aacaf5e5f5a844a5e06c2ff4a72b965a851e148966de701fb353254af8465d",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with accepted v1.0.1 visual record",
+      "prior_review_file": "docs/evidence/v101-visual-review.json",
+      "prior_review_sha256": "960ce5e6825970fc1a333589d7484e942a2d64be09626f42c160d9193930bfa5",
+      "prior_record": {
+        "name": "upgrade-v101-voice-load",
+        "scope": "upgrade_reader",
+        "path": "reports/upgrade/reader/screenshots/upgrade-v101-voice-load.png",
+        "sha256": "f7aacaf5e5f5a844a5e06c2ff4a72b965a851e148966de701fb353254af8465d",
+        "review_method": "direct inspection of current original PNG with view_image",
+        "finding": "从已发布 v1.0.0 的开局语音存档读取后，新版首句对白与重听入口完整，按钮高亮可读。"
+      },
+      "finding": "从已发布 v1.0.0 的开局语音存档读取后，新版首句对白与重听入口完整，按钮高亮可读。",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "native-extras-cg",
+      "path": "reports/package/screenshots/native-extras-cg.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "e617e70fcecc59534634e77346069bda0789b9f57368c33847e8c51700ff2b94",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with the directly inspected current-gallery source-prefix image",
+      "prior_review_file": "docs/evidence/v11-quick-interaction-acceptance.json",
+      "prior_review_sha256": "0a6a7005f1e843480ed1124b9bdc6d81d14a0fc36e509cd097073413a35b4e23",
+      "prior_candidate_commit": "36d58d264316dba2a395bace5276e64b38b0abc4",
+      "prior_run_id": 37601069169,
+      "prior_record": {
+        "name": "native-extras-cg",
+        "sha256": "e617e70fcecc59534634e77346069bda0789b9f57368c33847e8c51700ff2b94",
+        "finding": "旧信 CG 全屏显示，无拉伸或明显裁切；右下角返回鉴赏室按钮完整可读。"
+      },
+      "finding": "旧信 CG 全屏显示，无拉伸或明显裁切；右下角返回鉴赏室按钮完整可读。",
+      "reuse_limit": "Reuses only the observed pixels, not overall acceptance of the rejected source-prefix candidate.",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "native-extras-locked",
+      "path": "reports/package/screenshots/native-extras-locked.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "0214e8f48bedf81e91d474892b0d7936cc82ee0ae96ec13902d64c4c0608f6ba",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with the directly inspected current-gallery source-prefix image",
+      "prior_review_file": "docs/evidence/v11-quick-interaction-acceptance.json",
+      "prior_review_sha256": "0a6a7005f1e843480ed1124b9bdc6d81d14a0fc36e509cd097073413a35b4e23",
+      "prior_candidate_commit": "36d58d264316dba2a395bace5276e64b38b0abc4",
+      "prior_run_id": 37601069169,
+      "prior_record": {
+        "name": "native-extras-locked",
+        "sha256": "0214e8f48bedf81e91d474892b0d7936cc82ee0ae96ec13902d64c4c0608f6ba",
+        "finding": "1080p 锁定页只显示已看过的雨夜站台；其余四格采用通用未解锁提示，不显示原图或具体标题。三列两行、底部标题带与返回按钮均未裁切。"
+      },
+      "finding": "1080p 锁定页只显示已看过的雨夜站台；其余四格采用通用未解锁提示，不显示原图或具体标题。三列两行、底部标题带与返回按钮均未裁切。",
+      "reuse_limit": "Reuses only the observed pixels, not overall acceptance of the rejected source-prefix candidate.",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "native-extras-music",
+      "path": "reports/package/screenshots/native-extras-music.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "a6053e09a5993b8ee08174d5f4887c010710491a6ba59c5b5b42e78e4ed99cea",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with the directly inspected current-gallery source-prefix image",
+      "prior_review_file": "docs/evidence/v11-quick-interaction-acceptance.json",
+      "prior_review_sha256": "0a6a7005f1e843480ed1124b9bdc6d81d14a0fc36e509cd097073413a35b4e23",
+      "prior_candidate_commit": "36d58d264316dba2a395bace5276e64b38b0abc4",
+      "prior_run_id": 37601069169,
+      "prior_record": {
+        "name": "native-extras-music",
+        "sha256": "a6053e09a5993b8ee08174d5f4887c010710491a6ba59c5b5b42e78e4ed99cea",
+        "finding": "1080p 三首已解锁音乐标题和时长清晰，未说出口行显示当前播放高亮，停止按钮没有错误的选中高亮；切曲、暂停、音量和静音控件完整。"
+      },
+      "finding": "1080p 三首已解锁音乐标题和时长清晰，未说出口行显示当前播放高亮，停止按钮没有错误的选中高亮；切曲、暂停、音量和静音控件完整。",
+      "reuse_limit": "Reuses only the observed pixels, not overall acceptance of the rejected source-prefix candidate.",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "native-extras-music-locked",
+      "path": "reports/package/screenshots/native-extras-music-locked.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "9cd6a72fc145be7d504dc0224f457bbed87ed3bb5295471733e242fe509bfd49",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with the directly inspected current-gallery source-prefix image",
+      "prior_review_file": "docs/evidence/v11-quick-interaction-acceptance.json",
+      "prior_review_sha256": "0a6a7005f1e843480ed1124b9bdc6d81d14a0fc36e509cd097073413a35b4e23",
+      "prior_candidate_commit": "36d58d264316dba2a395bace5276e64b38b0abc4",
+      "prior_run_id": 37601069169,
+      "prior_record": {
+        "name": "native-extras-music-locked",
+        "sha256": "9cd6a72fc145be7d504dc0224f457bbed87ed3bb5295471733e242fe509bfd49",
+        "finding": "1080p 音乐锁定页仅显示雨夜标题及 24 秒时长，另外两首使用通用提示；停止按钮正确高亮，暂停不可用，控制和音量区域完整。"
+      },
+      "finding": "1080p 音乐锁定页仅显示雨夜标题及 24 秒时长，另外两首使用通用提示；停止按钮正确高亮，暂停不可用，控制和音量区域完整。",
+      "reuse_limit": "Reuses only the observed pixels, not overall acceptance of the rejected source-prefix candidate.",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "native-extras-unlocked",
+      "path": "reports/package/screenshots/native-extras-unlocked.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "31a2d667f6fece459c8384e40c4998dd809f11b864ebd04b52215420af8c6a94",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with the directly inspected current-gallery source-prefix image",
+      "prior_review_file": "docs/evidence/v11-quick-interaction-acceptance.json",
+      "prior_review_sha256": "0a6a7005f1e843480ed1124b9bdc6d81d14a0fc36e509cd097073413a35b4e23",
+      "prior_candidate_commit": "36d58d264316dba2a395bace5276e64b38b0abc4",
+      "prior_run_id": 37601069169,
+      "prior_record": {
+        "name": "native-extras-unlocked",
+        "sha256": "31a2d667f6fece459c8384e40c4998dd809f11b864ebd04b52215420af8c6a94",
+        "finding": "1080p 五张已解锁图片完整按三列两行展示，标题位于独立深色底带，未覆盖图片；末行与返回按钮保持完整。"
+      },
+      "finding": "1080p 五张已解锁图片完整按三列两行展示，标题位于独立深色底带，未覆盖图片；末行与返回按钮保持完整。",
+      "reuse_limit": "Reuses only the observed pixels, not overall acceptance of the rejected source-prefix candidate.",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-extras-locked",
+      "path": "reports/package/screenshots/scaled-extras-locked.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "8bd4a756b8612061c45ba6f6f0ad2c700a0bb758eb231990f9200db4612a613a",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with the directly inspected current-gallery source-prefix image",
+      "prior_review_file": "docs/evidence/v11-quick-interaction-acceptance.json",
+      "prior_review_sha256": "0a6a7005f1e843480ed1124b9bdc6d81d14a0fc36e509cd097073413a35b4e23",
+      "prior_candidate_commit": "36d58d264316dba2a395bace5276e64b38b0abc4",
+      "prior_run_id": 37601069169,
+      "prior_record": {
+        "name": "scaled-extras-locked",
+        "sha256": "8bd4a756b8612061c45ba6f6f0ad2c700a0bb758eb231990f9200db4612a613a",
+        "finding": "720p 锁定页布局缩放完整；未解锁项目没有剧透标题或原图，标题带和末行提示仍清晰可读。"
+      },
+      "finding": "720p 锁定页布局缩放完整；未解锁项目没有剧透标题或原图，标题带和末行提示仍清晰可读。",
+      "reuse_limit": "Reuses only the observed pixels, not overall acceptance of the rejected source-prefix candidate.",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-extras-music",
+      "path": "reports/package/screenshots/scaled-extras-music.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "7270af75f174fbf5e8d0eaeec1da6e63f0aa1ae098027ed9e5b8b90ce4ab38a3",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with the directly inspected current-gallery source-prefix image",
+      "prior_review_file": "docs/evidence/v11-quick-interaction-acceptance.json",
+      "prior_review_sha256": "0a6a7005f1e843480ed1124b9bdc6d81d14a0fc36e509cd097073413a35b4e23",
+      "prior_candidate_commit": "36d58d264316dba2a395bace5276e64b38b0abc4",
+      "prior_run_id": 37601069169,
+      "prior_record": {
+        "name": "scaled-extras-music",
+        "sha256": "7270af75f174fbf5e8d0eaeec1da6e63f0aa1ae098027ed9e5b8b90ce4ab38a3",
+        "finding": "720p 三首音乐及播放控制均在视口内，下一条消息行显示播放高亮，音量滑杆与静音按钮没有重叠或裁切。"
+      },
+      "finding": "720p 三首音乐及播放控制均在视口内，下一条消息行显示播放高亮，音量滑杆与静音按钮没有重叠或裁切。",
+      "reuse_limit": "Reuses only the observed pixels, not overall acceptance of the rejected source-prefix candidate.",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-extras-unlocked",
+      "path": "reports/package/screenshots/scaled-extras-unlocked.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "2b42c24f4c06d92f34143238d75b4037a7ea714ad96952b7ea9110774ce9fa9c",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with the directly inspected current-gallery source-prefix image",
+      "prior_review_file": "docs/evidence/v11-quick-interaction-acceptance.json",
+      "prior_review_sha256": "0a6a7005f1e843480ed1124b9bdc6d81d14a0fc36e509cd097073413a35b4e23",
+      "prior_candidate_commit": "36d58d264316dba2a395bace5276e64b38b0abc4",
+      "prior_run_id": 37601069169,
+      "prior_record": {
+        "name": "scaled-extras-unlocked",
+        "sha256": "2b42c24f4c06d92f34143238d75b4037a7ea714ad96952b7ea9110774ce9fa9c",
+        "finding": "720p 五图及各自底部标题带完整显示，咖啡馆和旧信末行未被屏幕边缘截断。"
+      },
+      "finding": "720p 五图及各自底部标题带完整显示，咖啡馆和旧信末行未被屏幕边缘截断。",
+      "reuse_limit": "Reuses only the observed pixels, not overall acceptance of the rejected source-prefix candidate.",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "fresh_process",
+      "name": "native-extras-persistent",
+      "path": "reports/package/persistence/screenshots/native-extras-persistent.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "31a2d667f6fece459c8384e40c4998dd809f11b864ebd04b52215420af8c6a94",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with the directly inspected current-gallery source-prefix image",
+      "prior_review_file": "docs/evidence/v11-quick-interaction-acceptance.json",
+      "prior_review_sha256": "0a6a7005f1e843480ed1124b9bdc6d81d14a0fc36e509cd097073413a35b4e23",
+      "prior_candidate_commit": "36d58d264316dba2a395bace5276e64b38b0abc4",
+      "prior_run_id": 37601069169,
+      "prior_record": {
+        "name": "native-extras-unlocked",
+        "sha256": "31a2d667f6fece459c8384e40c4998dd809f11b864ebd04b52215420af8c6a94",
+        "finding": "1080p 五张已解锁图片完整按三列两行展示，标题位于独立深色底带，未覆盖图片；末行与返回按钮保持完整。"
+      },
+      "finding": "1080p 五张已解锁图片完整按三列两行展示，标题位于独立深色底带，未覆盖图片；末行与返回按钮保持完整。",
+      "reuse_limit": "Reuses only the observed pixels, not overall acceptance of the rejected source-prefix candidate.",
+      "exact_pixel_reuse_verified": true
+    },
+    {
+      "scope": "upgrade_reader",
+      "name": "native-extras-persistent",
+      "path": "reports/upgrade/reader/screenshots/native-extras-persistent.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "31a2d667f6fece459c8384e40c4998dd809f11b864ebd04b52215420af8c6a94",
+      "status": "visually_checked_with_limits",
+      "review_method": "exact original PNG SHA-256 match with the directly inspected current-gallery source-prefix image",
+      "prior_review_file": "docs/evidence/v11-quick-interaction-acceptance.json",
+      "prior_review_sha256": "0a6a7005f1e843480ed1124b9bdc6d81d14a0fc36e509cd097073413a35b4e23",
+      "prior_candidate_commit": "36d58d264316dba2a395bace5276e64b38b0abc4",
+      "prior_run_id": 37601069169,
+      "prior_record": {
+        "name": "native-extras-unlocked",
+        "sha256": "31a2d667f6fece459c8384e40c4998dd809f11b864ebd04b52215420af8c6a94",
+        "finding": "1080p 五张已解锁图片完整按三列两行展示，标题位于独立深色底带，未覆盖图片；末行与返回按钮保持完整。"
+      },
+      "finding": "1080p 五张已解锁图片完整按三列两行展示，标题位于独立深色底带，未覆盖图片；末行与返回按钮保持完整。",
+      "reuse_limit": "Reuses only the observed pixels, not overall acceptance of the rejected source-prefix candidate.",
+      "exact_pixel_reuse_verified": true
+    }
+  ],
+  "schema_version": 1,
+  "date": "2026-10-07",
+  "status": "visually_checked_with_limits",
+  "inspected_count": 52,
+  "planned_review_count": 52,
+  "direct_new_count": 8,
+  "reused_count": 44,
+  "reused_accepted_v101_count": 34,
+  "reused_directly_observed_source_prefix_count": 10,
+  "unresolved_machine_issues": [],
+  "limits": "52 selected standalone/fresh-process/upgrade-reader views only. Eight current views actually inspected as full-resolution quality-95 JPEG copies bound to original PNG SHA-256; 44 exact PNG hash matches reuse earlier directly observed pixels. Source-prefix reuse accepts only observed pixels, not the rejected candidate overall. All 163 originals decoded, not all visually reviewed. Human hardware/DPI/listening/creative/timing remain pending."
+}
