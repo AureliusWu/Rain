@@ -33,18 +33,25 @@ screen extras_images_room():
                             id "extras_image_" + identity
                             style "extras_thumbnail"
                             action extras_gallery.Action(identity)
-                            if extras_gallery.Action(identity) is not None:
-                                add Transform(filename, xysize=(408, 230), fit="contain")
-                            else:
-                                fixed:
-                                    xysize (408, 230)
-                                    add Solid("#193444")
-                                    text "未解锁" align (0.5, 0.5) size 30 color "#becdd7"
-                        if extras_gallery.Action(identity) is not None:
-                            text title id "extras_title_" + identity size 28 xalign 0.5
-                        else:
-                            text "继续阅读后解锁" id "extras_locked_" + identity size 25 color "#8da9b8" xalign 0.5
-                null width 420 height 275
+                            vbox:
+                                spacing 0
+                                xsize 408
+                                if extras_gallery.Action(identity) is not None:
+                                    add Transform(filename, xysize=(408, 230), fit="contain")
+                                else:
+                                    fixed:
+                                        xysize (408, 230)
+                                        add Solid("#193444")
+                                        text "未解锁" align (0.5, 0.5) size 30 color "#becdd7"
+                                frame:
+                                    background "#102b3be6"
+                                    padding (0, 8)
+                                    xysize (408, 52)
+                                    if extras_gallery.Action(identity) is not None:
+                                        text title id "extras_title_" + identity size 28 xalign 0.5
+                                    else:
+                                        text "继续阅读后解锁" id "extras_locked_" + identity size 25 color "#8da9b8" xalign 0.5
+                null width 420 height 294
 
 screen extras_music_room_screen():
     tag menu
@@ -79,7 +86,7 @@ screen extras_music_room_screen():
                 textbutton "上一曲" id "extras_previous" style "extras_control" action extras_music_room.Previous()
                 textbutton "下一曲" id "extras_next" style "extras_control" action extras_music_room.Next()
                 textbutton "暂停 / 继续" id "extras_pause" style "extras_control" action extras_music_room.TogglePause()
-                textbutton "停止" id "extras_stop" style "extras_control" action extras_music_room.Stop()
+                textbutton "停止" id "extras_stop" style "extras_control" selected renpy.music.get_playing(channel="gallery_music") is None action extras_music_room.Stop()
             hbox:
                 spacing 30
                 text "音乐音量" size 30 yalign 0.5
@@ -108,6 +115,7 @@ screen extras_image_viewer(locked, displayables, index, count, gallery, **proper
     key "game_menu" action gallery.Return()
 
 style extras_thumbnail is button:
+    xysize (420, 294)
     padding (6, 6)
     background "#274754"
     hover_background "#9fdbe5"

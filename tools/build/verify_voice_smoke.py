@@ -38,12 +38,13 @@ def main():
     prefix = prefix_plan(source)
     results = []
     with tempfile.TemporaryDirectory(prefix='galgame-voice-smoke-') as temp:
-        project = Path(temp)/'project'
-        # Keep the game byte-for-byte. Only the test plan is narrowed in this copy.
-        shutil.copytree(ROOT/'game', project/'game', ignore=shutil.ignore_patterns('saves'))
-        (project/'game/testcases.rpy').write_bytes(prefix.encode('utf-8'))
-        (project/'game/testcases.rpyc').unlink(missing_ok=True)
         for iteration in range(1, args.iterations+1):
+            # Ren'Py merges --savedir and game-local saves. Give each run its own
+            # game copy as well, so an earlier unlock cannot seed a fresh player.
+            project = Path(temp)/f'project-{iteration}'
+            shutil.copytree(ROOT/'game', project/'game', ignore=shutil.ignore_patterns('saves'))
+            (project/'game/testcases.rpy').write_bytes(prefix.encode('utf-8'))
+            (project/'game/testcases.rpyc').unlink(missing_ok=True)
             evidence = ROOT/'reports/voice-smoke'/f'{iteration:02d}'
             command = [str(interpreter), str(sdk/'renpy.py'), str(project), 'test', 'global',
                        '--report-detailed', '--overwrite-screenshots',
@@ -64,6 +65,7 @@ def main():
     report = {'status':'passed', 'iterations':results, 'cases':list(PREFIX_CASES),
               'prefix_plan_sha256':hashlib.sha256(prefix.encode('utf-8')).hexdigest(),
               'original_project_is_unmodified':True,
+              'game_copies_and_save_directories_are_separate':True,
               'scope':'Actual full-suite prefix, copied game with only the temporary test plan narrowed'}
     (ROOT/'reports/voice-smoke-acceptance.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
     print(f'Voice prefix passed {len(results)} times with {results[0]["cases"]} cases / {results[0]["assertions"]} assertions each.')

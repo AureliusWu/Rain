@@ -1,0 +1,99 @@
+{
+  "status": "rejected_candidate",
+  "version": "1.1.0",
+  "candidate_commit": "1069462625838e617acdaa02af79c906d1ce6cba",
+  "run_id": 37599721674,
+  "job_id": 112720850984,
+  "python_tests": 118,
+  "windows_lint": "passed",
+  "first_iteration": {
+    "cases": 6,
+    "passed": 6,
+    "assertions": 88,
+    "passed_assertions": 88,
+    "screenshots_checked": 25,
+    "returncode": 0
+  },
+  "second_iteration": {
+    "cases": 6,
+    "passed": 4,
+    "failed": 1,
+    "not_run": 1,
+    "assertions": 61,
+    "passed_assertions": 60,
+    "failed_assertions": 1,
+    "first_failure": "extras_gallery.Action(\"unsent_letter\") is None"
+  },
+  "cause": "RenPy initializes both the command-line savedir and game-local game/saves locations. The second quick process used a new external savedir but reused the first project copy, importing its seen-image and seen-audio persistent records.",
+  "correction": "Use a separate unchanged game copy and separate external savedir for every iteration. Never clear player data or force-unlock content to make tests pass.",
+  "pinned_sdk": "8.5.3.26051504",
+  "source_proof": {
+    "savelocation.py_sha256": "e0b32aab4127325a307a8396b6a9b636781161fd23d595127e668d784342b85c",
+    "init_lines": "679-708; primary savedir and game-local saves are both added"
+  },
+  "prefix_artifact": {
+    "id": 11472009001,
+    "bytes": 19001978,
+    "sha256": "e440c399a3a4af671efa3f4a7cb44f784507701dbb66f9b45f216e45d419f72e"
+  },
+  "raw_artifact": {
+    "id": 11471654595,
+    "bytes": 86286690,
+    "sha256": "ff74a696639d931401c3663b11f2b88fd4debb91cd79abe1387453ae71e58c33"
+  },
+  "early_visual_review": {
+    "images_directly_inspected": [
+      {
+        "name": "native-extras-cg",
+        "sha256": "e617e70fcecc59534634e77346069bda0789b9f57368c33847e8c51700ff2b94",
+        "review_method": "direct current PNG inspection with view_image",
+        "scope": "source quick prefix, rejected candidate"
+      },
+      {
+        "name": "native-extras-locked",
+        "sha256": "df4a67ffed469bd455a8d3ea7536affe1da1f96e55eafc8240dc0fa31ac7109e",
+        "review_method": "direct current PNG inspection with view_image",
+        "scope": "source quick prefix, rejected candidate"
+      },
+      {
+        "name": "native-extras-music-locked",
+        "sha256": "9cd6a72fc145be7d504dc0224f457bbed87ed3bb5295471733e242fe509bfd49",
+        "review_method": "direct current PNG inspection with view_image",
+        "scope": "source quick prefix, rejected candidate"
+      },
+      {
+        "name": "native-extras-music",
+        "sha256": "ed235567120f87de5ee487381a6de34b70e3d5200cb5e55f250d8b37588710e1",
+        "review_method": "direct current PNG inspection with view_image",
+        "scope": "source quick prefix, rejected candidate"
+      },
+      {
+        "name": "native-extras-unlocked",
+        "sha256": "3c7fb7333cc9a289cb236363792f6b05eb79847faad2eb549cd884547fa9f9bd",
+        "review_method": "direct current PNG inspection with view_image",
+        "scope": "source quick prefix, rejected candidate"
+      },
+      {
+        "name": "scaled-extras-locked",
+        "sha256": "818a8fea19850b61b8f868e7657925f926e1e65b9f73ecffc40413e50bcf89fa",
+        "review_method": "direct current PNG inspection with view_image",
+        "scope": "source quick prefix, rejected candidate"
+      },
+      {
+        "name": "scaled-extras-music",
+        "sha256": "9f71e7cf7133bfdaa35e40738490b84ed6b32bd0d4c7d4a9e97fd654ca86bd22",
+        "review_method": "direct current PNG inspection with view_image",
+        "scope": "source quick prefix, rejected candidate"
+      },
+      {
+        "name": "scaled-extras-unlocked",
+        "sha256": "145374a183f09f5ea2d0c3fb2498825dfc34a1bc8b54f706d2b557cc6c1f40d3",
+        "review_method": "direct current PNG inspection with view_image",
+        "scope": "source quick prefix, rejected candidate"
+      }
+    ],
+    "finding": "Locked images and music conceal titles; full-image return and native/scaled controls fit. Thumbnail captions were drawn over image content because of inherited button height; set explicit card height and a separate dark caption band. Native MusicRoom.Stop selected-state queries the default music channel; bind the visible button selection to gallery_music."
+  },
+  "decoded_job_log_sha256": "b7b01b436b317004fdcaaa894722c1bbb9932b0ab04386d8c4b0d7200e69b27d",
+  "review_limits": "Only the first iteration passed. Neither the two-iteration prefix nor source/EXE full regression passed in this run; changed card and Stop visuals require new screenshots."
+}
