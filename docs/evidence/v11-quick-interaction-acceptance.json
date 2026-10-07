@@ -7,7 +7,7 @@
   "run_id": 37601069169,
   "job_id": 112725294756,
   "ci_url": "https://github.com/AureliusWu/Test/actions/runs/37601069169",
-  "checkpoint_at": "2026-10-07T09:49:43.602153Z",
+  "checkpoint_at": "2026-10-07T10:05:14.047276Z",
   "quick_stage_completed_at": "2026-10-07T09:35:55Z",
   "python_tests": {
     "passed": 118,
@@ -153,7 +153,6 @@
     ]
   },
   "pending": [
-    "full_source_suite",
     "standalone_exe_suite",
     "fresh_process_persistence",
     "actual_v101_upgrade",
@@ -161,5 +160,40 @@
     "formal_release_and_public_download_readback"
   ],
   "human_acceptance_is_not_claimed": true,
-  "limits": "Two real source-prefix runs and eight directly viewed source-prefix PNGs only. This checkpoint is not full source/EXE acceptance or proof of formal v1.1.0 publication. Windows CI uses dummy audio; human follow-up remains pending."
+  "limits": "Two real source-prefix runs and eight directly viewed source-prefix PNGs only. This checkpoint is not full source/EXE acceptance or proof of formal v1.1.0 publication. Windows CI uses dummy audio; human follow-up remains pending.",
+  "full_source_and_build_steps": {
+    "candidate_commit": "36d58d264316dba2a395bace5276e64b38b0abc4",
+    "run_id": 37601069169,
+    "job_id": 112725294756,
+    "source_step": {
+      "name": "Run actual Windows interaction tests",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 13,
+      "started_at": "2026-10-07T09:35:58Z",
+      "completed_at": "2026-10-07T10:02:41Z"
+    },
+    "build_step": {
+      "name": "Build standalone Windows ZIP",
+      "status": "completed",
+      "conclusion": "success",
+      "number": 14,
+      "started_at": "2026-10-07T10:02:41Z",
+      "completed_at": "2026-10-07T10:02:54Z"
+    },
+    "exe_step": {
+      "name": "Verify and boot EXE extracted from distribution",
+      "status": "in_progress",
+      "conclusion": null,
+      "number": 15,
+      "started_at": "2026-10-07T10:02:54Z",
+      "completed_at": null
+    }
+  },
+  "full_source_summary_inferred_from_successful_required_native_validator": {
+    "cases": 36,
+    "assertions": 433,
+    "screenshots_checked": 78,
+    "raw_reports_and_hashes": "Await final CI transfer; the final acceptance will independently verify them."
+  }
 }
