@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "status": "quick_prefix_passed_full_acceptance_pending",
+  "version": "1.1.0",
+  "candidate_commit": "36d58d264316dba2a395bace5276e64b38b0abc4",
+  "candidate_tree": "c775c5737d1a6716218e1275179f1f96c1dcc639",
+  "run_id": 37601069169,
+  "job_id": 112725294756,
+  "ci_url": "https://github.com/AureliusWu/Test/actions/runs/37601069169",
+  "checkpoint_at": "2026-10-07T09:49:43.602153Z",
+  "quick_stage_completed_at": "2026-10-07T09:35:55Z",
+  "python_tests": {
+    "passed": 118,
+    "platform": "Windows"
+  },
+  "author_validators": "passed",
+  "pinned_native_lint": "RenPy 8.5.3.26051504 passed",
+  "iterations": [
+    {
+      "iteration": 1,
+      "process": {
+        "timeout_seconds": 300,
+        "elapsed_seconds": 129.062,
+        "timed_out": false,
+        "returncode": 0,
+        "scope": "native process only; required screenshots are checked separately"
+      },
+      "stdout_sha256": "d8cf9a0ad1c4f4c46a45862c9dee4ad651338cd8137f8b873849f3e9792e31ad",
+      "native_summary": {
+        "cases": 6,
+        "assertions": 88,
+        "failed": 0,
+        "xfailed": 0,
+        "xpassed": 0,
+        "skipped": 0,
+        "not_run": 0,
+        "screenshots_checked": 25,
+        "native_1080": true
+      }
+    },
+    {
+      "iteration": 2,
+      "process": {
+        "timeout_seconds": 300,
+        "elapsed_seconds": 131.891,
+        "timed_out": false,
+        "returncode": 0,
+        "scope": "native process only; required screenshots are checked separately"
+      },
+      "stdout_sha256": "fceab3bc866eaefa68255aa717005a44f0cd8f764097f7ff2027e0f430fc6547",
+      "native_summary": {
+        "cases": 6,
+        "assertions": 88,
+        "failed": 0,
+        "xfailed": 0,
+        "xpassed": 0,
+        "skipped": 0,
+        "not_run": 0,
+        "screenshots_checked": 25,
+        "native_1080": true
+      }
+    }
+  ],
+  "voice_smoke": {
+    "status": "passed",
+    "iterations": [
+      {
+        "cases": 6,
+        "assertions": 88,
+        "failed": 0,
+        "xfailed": 0,
+        "xpassed": 0,
+        "skipped": 0,
+        "not_run": 0,
+        "screenshots_checked": 25,
+        "native_1080": true
+      },
+      {
+        "cases": 6,
+        "assertions": 88,
+        "failed": 0,
+        "xfailed": 0,
+        "xpassed": 0,
+        "skipped": 0,
+        "not_run": 0,
+        "screenshots_checked": 25,
+        "native_1080": true
+      }
+    ],
+    "cases": [
+      "native_1080_and_scaled_window",
+      "current_voice_replay_and_restore",
+      "history_voice_replay",
+      "auto_waits_for_replayed_voice",
+      "extras_locked_no_spoilers",
+      "extras_unlock_and_music"
+    ],
+    "prefix_plan_sha256": "2153003000666d65328ad9e200ff66892341de7ffe079e754e67d483516957ce",
+    "original_project_is_unmodified": true,
+    "game_copies_and_save_directories_are_separate": true,
+    "scope": "Actual full-suite prefix, copied game with only the temporary test plan narrowed"
+  },
+  "visual_review": {
+    "version": "1.1.0",
+    "candidate_commit": "36d58d264316dba2a395bace5276e64b38b0abc4",
+    "run_id": 37601069169,
+    "artifact_id": 11473346772,
+    "artifact_sha256": "133ff9d26063c2603dd7a559435832d8458843469a342814addd4daee53d3eb1",
+    "scope": "source quick prefix only; not standalone EXE acceptance",
+    "review_method": "direct inspection of current original PNG with view_image",
+    "human_acceptance_is_not_claimed": true,
+    "images": [
+      {
+        "name": "native-extras-locked",
+        "sha256": "0214e8f48bedf81e91d474892b0d7936cc82ee0ae96ec13902d64c4c0608f6ba",
+        "finding": "1080p 锁定页只显示已看过的雨夜站台；其余四格采用通用未解锁提示，不显示原图或具体标题。三列两行、底部标题带与返回按钮均未裁切。"
+      },
+      {
+        "name": "native-extras-unlocked",
+        "sha256": "31a2d667f6fece459c8384e40c4998dd809f11b864ebd04b52215420af8c6a94",
+        "finding": "1080p 五张已解锁图片完整按三列两行展示，标题位于独立深色底带，未覆盖图片；末行与返回按钮保持完整。"
+      },
+      {
+        "name": "scaled-extras-locked",
+        "sha256": "8bd4a756b8612061c45ba6f6f0ad2c700a0bb758eb231990f9200db4612a613a",
+        "finding": "720p 锁定页布局缩放完整；未解锁项目没有剧透标题或原图，标题带和末行提示仍清晰可读。"
+      },
+      {
+        "name": "scaled-extras-unlocked",
+        "sha256": "2b42c24f4c06d92f34143238d75b4037a7ea714ad96952b7ea9110774ce9fa9c",
+        "finding": "720p 五图及各自底部标题带完整显示，咖啡馆和旧信末行未被屏幕边缘截断。"
+      },
+      {
+        "name": "native-extras-music-locked",
+        "sha256": "9cd6a72fc145be7d504dc0224f457bbed87ed3bb5295471733e242fe509bfd49",
+        "finding": "1080p 音乐锁定页仅显示雨夜标题及 24 秒时长，另外两首使用通用提示；停止按钮正确高亮，暂停不可用，控制和音量区域完整。"
+      },
+      {
+        "name": "native-extras-music",
+        "sha256": "a6053e09a5993b8ee08174d5f4887c010710491a6ba59c5b5b42e78e4ed99cea",
+        "finding": "1080p 三首已解锁音乐标题和时长清晰，未说出口行显示当前播放高亮，停止按钮没有错误的选中高亮；切曲、暂停、音量和静音控件完整。"
+      },
+      {
+        "name": "scaled-extras-music",
+        "sha256": "7270af75f174fbf5e8d0eaeec1da6e63f0aa1ae098027ed9e5b8b90ce4ab38a3",
+        "finding": "720p 三首音乐及播放控制均在视口内，下一条消息行显示播放高亮，音量滑杆与静音按钮没有重叠或裁切。"
+      },
+      {
+        "name": "native-extras-cg",
+        "sha256": "e617e70fcecc59534634e77346069bda0789b9f57368c33847e8c51700ff2b94",
+        "finding": "旧信 CG 全屏显示，无拉伸或明显裁切；右下角返回鉴赏室按钮完整可读。"
+      }
+    ]
+  },
+  "pending": [
+    "full_source_suite",
+    "standalone_exe_suite",
+    "fresh_process_persistence",
+    "actual_v101_upgrade",
+    "final_exe_visual_review",
+    "formal_release_and_public_download_readback"
+  ],
+  "human_acceptance_is_not_claimed": true,
+  "limits": "Two real source-prefix runs and eight directly viewed source-prefix PNGs only. This checkpoint is not full source/EXE acceptance or proof of formal v1.1.0 publication. Windows CI uses dummy audio; human follow-up remains pending."
+}
