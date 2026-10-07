@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "status": "published_and_exact_public_download_verified",
+  "version": "1.0.1",
+  "verified_at": "2026-10-07",
+  "candidate_commit": "cfacee500c15498175f165f32ddfb6c70f7c9314",
+  "candidate_tree": "40d34e682855a1619bcef6af18a4e82718677052",
+  "accepted_game_run_id": 37496730978,
+  "publication_commit": "4029f6674081d8be870f987cab42d1052d1794be",
+  "publication_tree": "45469b77e2a2fe3d9bcb141d51c891b396b69258",
+  "publication_run_id": 37568976789,
+  "publication_job_id": 112623087495,
+  "publication_ci_url": "https://github.com/AureliusWu/Test/actions/runs/37568976789",
+  "publication_job_completed_at": "2026-10-07T03:55:46Z",
+  "tag": {
+    "name": "v1.0.1",
+    "ref": "refs/tags/v1.0.1",
+    "target_commit": "4029f6674081d8be870f987cab42d1052d1794be",
+    "target_policy": "current main with identical accepted game source"
+  },
+  "release": {
+    "id": 405360576,
+    "url": "https://github.com/AureliusWu/Test/releases/tag/v1.0.1",
+    "draft": false,
+    "prerelease": false,
+    "published_at": "2026-10-07T03:55:41Z",
+    "latest_release_id": 405360576
+  },
+  "package": {
+    "file": "BeforeTheRainStops-1.0.1-win.zip",
+    "bytes": 56364666,
+    "sha256": "9238e2d06cb7820056912455765f42b74337bf857dacd5a213be4cc349843f36",
+    "asset_id": 617495872,
+    "download_url": "https://github.com/AureliusWu/Test/releases/download/v1.0.1/BeforeTheRainStops-1.0.1-win.zip"
+  },
+  "assets": [
+    {
+      "id": 617495877,
+      "name": "BeforeTheRainStops-1.0.1-preview.png",
+      "bytes": 3167801,
+      "digest": "sha256:635f705f82173d006c0304a269b4968f5a6a6e8f5c13c4e356d74c15121a067c",
+      "url": "https://github.com/AureliusWu/Test/releases/download/v1.0.1/BeforeTheRainStops-1.0.1-preview.png",
+      "state": "uploaded"
+    },
+    {
+      "id": 617495872,
+      "name": "BeforeTheRainStops-1.0.1-win.zip",
+      "bytes": 56364666,
+      "digest": "sha256:9238e2d06cb7820056912455765f42b74337bf857dacd5a213be4cc349843f36",
+      "url": "https://github.com/AureliusWu/Test/releases/download/v1.0.1/BeforeTheRainStops-1.0.1-win.zip",
+      "state": "uploaded"
+    },
+    {
+      "id": 617495876,
+      "name": "SHA256SUMS.txt",
+      "bytes": 100,
+      "digest": "sha256:f2cf3a73b2aa01268c908c258893ad99340347b3ffbfa405edd29332bd901490",
+      "url": "https://github.com/AureliusWu/Test/releases/download/v1.0.1/SHA256SUMS.txt",
+      "state": "uploaded"
+    }
+  ],
+  "public_download_verification": {
+    "status": "passed",
+    "method": "publisher downloaded the public v1.0.1 ZIP and ran tools.release_gate against the exact accepted package SHA-256",
+    "gate_success_count": 3,
+    "zip_crc": "passed",
+    "source_equivalence": "passed",
+    "publisher_log": {
+      "source": "https://github.com/AureliusWu/Test/actions/runs/37568976789/job/112623087495",
+      "format": "decoded GitHub job log, LF normalized",
+      "sha256": "c03e6b31f4cb71923746af83a8349756a8130464d0d0eb6a63aaf470ae3b238f"
+    }
+  },
+  "publication_metadata_only_changes": [
+    "CHANGELOG.md",
+    "README.md",
+    "ROADMAP.md",
+    "docs/HUMAN_HANDOFF.md",
+    "docs/PROJECT.md",
+    "docs/RELEASE_ACCEPTANCE_V101.md",
+    "docs/RELEASE_NOTES_V101.md",
+    "docs/STATUS.md",
+    "docs/TEST_PLAN.md",
+    "docs/WORK_CHECKPOINT.md",
+    "docs/evidence/v101-acceptance.json",
+    "docs/evidence/v101-visual-review.json",
+    "docs/review/V101_HUMAN_ACCEPTANCE.json",
+    "docs/review/V101_PUBLICATION_AUTHORIZATION.json"
+  ],
+  "previous_release_preserved": {
+    "version": "1.0.0",
+    "release_id": 404551815,
+    "url": "https://github.com/AureliusWu/Test/releases/tag/v1.0.0",
+    "tag_target": "b4f06f89eebb73ff0494cb18fc4cfc38192c84ce",
+    "zip_sha256": "0d09a78a482e2ff0d34e14f51d49c89d5cc0d36b91506d44c6a3bcdcc678d3f1"
+  },
+  "pending_human_checks": [
+    "ordinary_windows",
+    "display_dpi",
+    "listening",
+    "creative_and_freeze",
+    "reading_time"
+  ],
+  "human_acceptance_is_not_claimed": true,
+  "unresolved_machine_issues": []
+}

@@ -2,7 +2,7 @@
 
 离线中文 Ren’Py 视觉小说。雨夜旧车站，两位久未联系的旧友，和一封没有寄出的信。
 
-**v1.0.1 免费配音重听补丁版。** 六章、24 个叙事场景、四次选择、16 条路线与 Normal / True 两个完整结局。包含七表情、四背景、旧信 CG、17 句关键配音及原创程序音乐 / 环境音效。
+**v1.0.1 免费配音重听补丁版已正式发布。** 六章、24 个叙事场景、四次选择、16 条路线与 Normal / True 两个完整结局。包含七表情、四背景、旧信 CG、17 句关键配音及原创程序音乐 / 环境音效。
 
 关键配音使用免费开源 **Qwen3-TTS 1.7B CustomVoice / Serena**，预生成 OGG 随游戏提供，不需付费语音 API、账号、模型或运行时网络。当前有配音的台词提供“重听语音”；已读历史中有录音的条目提供“重播语音”，离开历史停止重播。自动播放会等待新一轮重播结束。
 
@@ -66,6 +66,12 @@ python -m tools.build.verify_package --zip dist/BeforeTheRainStops-1.0.1-win.zip
 
 
 ## 正式发布记录
+
+当前 v1.0.1 的 `release-v101.yml` 使用成功 Windows CI 的同一原始 ZIP，正式发布后下载回读核验。tag 指向 `4029f6674081d8be870f987cab42d1052d1794be`，与验收游戏源代码相同；后续文档提交不改变发行包。真人后续五组继续 pending。
+
+[本次发行证据](docs/evidence/v101-publication.json) · [本次发布授权](docs/review/V101_PUBLICATION_AUTHORIZATION.json) · [发布 CI](https://github.com/AureliusWu/Test/actions/runs/37568976789)。
+
+以下保留 v1.0.0 的发行记录。
 
 `release-v10.yml` 依据用户“完成后发布正式版”的独立授权，绑定 Windows 机器验收、17 句语音证据和真实 pending 人验表。使用成功 CI 已验收的原始 ZIP，发布并下载回读核对相同字节。v1.0.0 tag 指向包含验收记录的发行提交，CI 已验证与游戏验收提交仅有文档 / 发布工作流差异；后续文档提交不改变发行包。
 

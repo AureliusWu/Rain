@@ -14,4 +14,4 @@ Windows 113 项 Python、全部作者校验及 Ren’Py 8.5.3 lint 通过；源�
 
 真人试听、Normal / True 阅读计时、普通电脑 / 中文路径 / DPI、最终创作定案与冻结继续待用户统一操作。Windows runner 使用 dummy 音频，自动执行耗时不等于阅读时长。
 
-本次按用户“完成后发布正式版”及后续“继续”的指令，发布同一份验收 ZIP；保留 v1.0.0。验收提交、正式 tag 与公开下载文件的对应关系见仓库发布记录。
+本次按用户“完成后发布正式版”及后续“继续”的指令，发布同一份验收 ZIP；保留 v1.0.0。验收提交、正式 tag 与公开下载文件的对应关系见仓库 [发布记录](https://github.com/AureliusWu/Test/blob/main/docs/evidence/v101-publication.json)。

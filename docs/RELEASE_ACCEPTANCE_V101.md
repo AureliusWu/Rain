@@ -28,4 +28,4 @@ Windows 113 项 Python、全部作者校验及 Ren’Py 8.5.3 lint 通过；源�
 
 真人试听、Normal / True 阅读计时、普通电脑 / 中文路径 / DPI、最终创作定案与冻结继续待用户统一操作。Windows runner 使用 dummy 音频，自动执行耗时不等于阅读时长。
 
-Windows 仅验证当前 CI 环境；本批 Linux 无显示服务，没有 Linux 原生 UI 通过记录。发行 workflow 按独立用户授权发布同一份已验证 ZIP，公开发布与下载回读完成后写入 `evidence/v101-publication.json`。
+Windows 仅验证当前 CI 环境；本批 Linux 无显示服务，没有 Linux 原生 UI 通过记录。[正式 v1.0.1](https://github.com/AureliusWu/Test/releases/tag/v1.0.1) 已于 **2026-10-07T03:55:41Z** 发布，非草稿、非预发行，且为当前最新正式版。tag 指向发行提交 `4029f6674081d8be870f987cab42d1052d1794be`，已验证与游戏验收提交仅有文档差异；[发布 CI 37568976789](https://github.com/AureliusWu/Test/actions/runs/37568976789) 成功，公开 ZIP 下载回读的 SHA-256 / CRC 与验收包一致。v1.0.0 的 tag 与下载资产保持原样。实际身份见 [发布记录](evidence/v101-publication.json)。

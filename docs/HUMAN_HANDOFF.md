@@ -4,7 +4,9 @@
 
 当前统一对象是 **v1.0.1 Qwen / Serena 配音重听版**。游戏验收提交 `cfacee500c15498175f165f32ddfb6c70f7c9314` / [Windows CI 37496730978](https://github.com/AureliusWu/Test/actions/runs/37496730978)；原始 ZIP **56,364,666 字节**，SHA-256 `9238e2d06cb7820056912455765f42b74337bf857dacd5a213be4cc349843f36`。
 
-17 句新配音及旧 / 新对照已提供单独试听材料。旧 Kokoro 审阅包仅作历史，本次请使用新语音。所有真人项继续 pending；包或哈希变化时重新绑定受影响项目。
+[正式版下载](https://github.com/AureliusWu/Test/releases/tag/v1.0.1) 已发布并回读核验；正式 tag `4029f6674081d8be870f987cab42d1052d1794be`，当前真人验收仍绑定上方游戏提交和同一 ZIP SHA-256。
+
+17 句 Qwen 配音（与 v1.0.0 录音字节一致）及旧 / 新对照已提供单独试听材料。旧 Kokoro 审阅包仅作历史，本次请使用新语音。所有真人项继续 pending；包或哈希变化时重新绑定受影响项目。
 
 | 真人事项 | 操作与记录 | 状态 |
 |---|---|---|
@@ -16,4 +18,4 @@
 
 统一回报：版本 / commit / ZIP SHA-256；系统与显示 / 声音设备；路线与选择；有效阅读分钟；各项通过或具体问题；对应台词 / 场景 / 操作和截图 / 录音；创作保留或修改意见。可直接用自然语言回报，无需自行修改 JSON。
 
-`review/V101_HUMAN_ACCEPTANCE.json` 保留五组 pending、证据空白及计时 null。工程侧收到真实结果后修复缺陷、补齐记录与内容冻结；不会将 ASR 或 Windows runner 的 dummy 音频称为真人试听通过。正式发布按本次独立用户授权执行，不伪改人验表。
+`review/V101_HUMAN_ACCEPTANCE.json` 保留五组 pending、证据空白及计时 null。工程侧收到真实结果后修复缺陷、补齐记录与内容冻结；不会将 ASR 或 Windows runner 的 dummy 音频称为真人试听通过。正式发布已按本次独立用户授权完成，未将 pending 人验表改为通过。
