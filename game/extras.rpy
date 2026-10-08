@@ -19,7 +19,7 @@ init python:
         for identity, title, filename, duration in extras_music:
             if playing == filename and extras_music_room.is_unlocked(filename):
                 state = "已暂停" if renpy.music.get_pause(channel="gallery_music") else "播放中"
-                return "%s · %s" % (state, title)
+                return "%s：%s" % (state, title)
         return "已停止，请选择已解锁的音乐。"
 
 screen extras_images_room():
