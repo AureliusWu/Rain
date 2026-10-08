@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "glyph_separator_fixed_new_candidate_verification_pending",
+  "status": "corrected_candidate_windows_in_progress",
   "version": "1.1.1",
   "local_authoring": {
     "status": "passed",
@@ -59,8 +59,14 @@
     "visual_status": "rejected_missing_glyph",
     "record": "docs/evidence/v111-first-visual-failure.json"
   },
-  "current_run": null,
-  "current_candidate": "bound by next source commit and its Windows run",
-  "publication_status": "not_started"
+  "current_run": {
+    "run_id": 37711912728,
+    "status": "in_progress",
+    "url": "https://github.com/AureliusWu/Test/actions/runs/37711912728"
+  },
+  "publication_status": "not_started",
+  "candidate_commit": "491e9859368a402960afcdf856be4f456b885ec5",
+  "candidate_tree": "2221cea3db8c5ff58e82ae4715b6d2346def54b6",
+  "run_id": 37711912728,
+  "job_id": 113099514910
 }
-

@@ -1,3 +1,7 @@
+# v1.1.1 当前断点：缺字修正候选正在 Windows 复验
+
+当前游戏提交 `491e9859368a402960afcdf856be4f456b885ec5` / [Windows CI 37711912728](https://github.com/AureliusWu/Test/actions/runs/37711912728)，根树 `2221cea3db8c5ff58e82ae4715b6d2346def54b6`。本地 118 项 Python（10.876 秒）与全部作者校验通过；当前 Windows 结果与精确新 ZIP 的图像复核仍待本运行完成。维护本候选身份，不借用首批通过计数作为本批结果。
+
 # v1.1.1 当前断点：音乐状态缺字已修复，待新候选复验
 
 首批 Windows CI [37651109153](https://github.com/AureliusWu/Test/actions/runs/37651109153) 已成功：118 项 Python、全部作者校验与 Ren’Py lint；源码 / EXE 各 36 用例 / 448 断言 / 82 截图，新进程 1/16/3、公开 v1.1.0 写档 1/14/3、新版读档 2/26/4。174 原始 PNG 已由 Windows 审计，58 个关键视图中 12 个当前全分辨率 JPEG 副本已实际查看，46 个原图哈希可复用既有审阅。
