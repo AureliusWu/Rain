@@ -79,11 +79,9 @@ jobs:
         run: |
           node scripts/vn-contract.mjs game/data/story.json
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          $manifest = Get-Content docs/production/REUSE-MANIFEST.json -Raw | ConvertFrom-Json
-          foreach ($file in $manifest.files.PSObject.Properties) {
-            $actual = (Get-FileHash -LiteralPath $file.Name -Algorithm SHA256).Hash.ToLower()
-            if ($actual -ne $file.Value) { throw "Shared production file changed: $($file.Name)" }
-          }
+          # The manifest hashes canonical Git bytes; Windows checkout may convert LF to CRLF.
+          python -c "import hashlib,json,subprocess; from pathlib import Path; expected=json.loads(Path('docs/production/REUSE-MANIFEST.json').read_text(encoding='utf-8'))['files']; blobs={name:subprocess.check_output(['git','show','HEAD:'+name]) for name in expected}; actual={name:hashlib.sha256(blob).hexdigest() for name,blob in blobs.items()}; assert actual==expected,actual; assert all(Path(name).read_bytes().replace(b'\r\n',b'\n')==blob for name,blob in blobs.items()),'Working copy differs beyond checkout line endings'; print('Three canonical Git file hashes verified; working copies differ only by checkout line endings.'); print(json.dumps({name:{'repository_sha256':actual[name],'working_copy_sha256':hashlib.sha256(Path(name).read_bytes()).hexdigest()} for name in expected}))"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Verify publication commit contains the identical accepted game source
         shell: pwsh
         env:

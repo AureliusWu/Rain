@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "publication_blocked_before_upload",
+  "version": "1.1.1",
+  "run_id": 37791969239,
+  "job_id": 113361440466,
+  "publication_target": "df663901479d9935d0cdc3c58750037e4b49f1bc",
+  "candidate_commit": "491e9859368a402960afcdf856be4f456b885ec5",
+  "package_sha256": "7f57b4f4d3f2cc4071d7e4d59ff6a2e3c7db0531b78477abae18804c47d6d35b",
+  "exact_artifact_zip_and_preview_gate": "passed",
+  "gate_pass_markers": 2,
+  "shared_structure": "passed",
+  "failed_step": "Verify shared production contract added after the game candidate",
+  "failure": "Shared production file changed: scripts/vn-contract.mjs",
+  "diagnosis": "The new hash check used working-copy bytes; Windows checkout can convert LF to CRLF. The corrected check binds canonical Git bytes to the existing manifest and separately requires working copies to differ only by CRLF-to-LF checkout normalization.",
+  "public_upload_step": "skipped",
+  "game_or_package_changes": false,
+  "log_sha256": "cea5f17e0fee911f2825d2e7c5a6690806fe0502a830a580c9a01cf2ca7da7ee",
+  "retry_policy": "Keep the same accepted candidate, artifact and package SHA; change only the publication workflow and document record, then trigger a new authorization commit."
+}
