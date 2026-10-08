@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "corrected_candidate_full_windows_exe_in_progress",
+  "status": "all_current_native_suites_passed_final_audit_and_visual_pending",
   "version": "1.1.1",
   "local_authoring": {
     "status": "passed",
@@ -51,7 +51,7 @@
     "reading_time"
   ],
   "publication": "not_started",
-  "next": "Run complete authoring checks, native Windows suites and actual image review for the new colon-separator candidate.",
+  "next": "Wait for terminal audited export and artifact uploads, verify the seal, directly view all current copies, then bind acceptance and publish the exact reviewed ZIP.",
   "previous_run": {
     "run_id": 37651109153,
     "candidate_commit": "91cd48641448d48f2bbd97de9f200024ca02dadf",
@@ -85,7 +85,8 @@
     "Build standalone Windows ZIP",
     "Load real saves and extras unlocks from the published v1.1.0 EXE",
     "Upload early real old-save upgrade evidence",
-    "Run actual Windows interaction tests"
+    "Run actual Windows interaction tests",
+    "Verify and boot EXE extracted from distribution"
   ],
   "completed_native_counts": {
     "prefix_iterations": 2,
@@ -104,11 +105,21 @@
       26,
       4
     ],
-    "verification": "Successful Windows steps validated each exact native report against its generated plan. The standalone full suite, fresh process, final sealed audit and direct current image review are still pending.",
+    "verification": "Five successful Windows native processes validated exact generated plans and required screenshot sets. Final sealed original-ZIP/PNG audit, terminal CI artifact identities and actual current image review are still pending.",
     "source": [
       36,
       448,
       82
+    ],
+    "standalone": [
+      36,
+      448,
+      82
+    ],
+    "fresh_process": [
+      1,
+      16,
+      3
     ]
   },
   "early_artifacts": [
