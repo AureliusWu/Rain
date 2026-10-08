@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "corrected_candidate_windows_in_progress",
+  "status": "corrected_candidate_full_windows_source_in_progress",
   "version": "1.1.1",
   "local_authoring": {
     "status": "passed",
@@ -68,5 +68,85 @@
   "candidate_commit": "491e9859368a402960afcdf856be4f456b885ec5",
   "candidate_tree": "2221cea3db8c5ff58e82ae4715b6d2346def54b6",
   "run_id": 37711912728,
-  "job_id": 113099514910
+  "job_id": 113099514910,
+  "windows_steps_completed": [
+    "Set up job",
+    "Run actions/checkout@v4",
+    "Run actions/setup-python@v5",
+    "Install authoring dependencies",
+    "Start-of-batch preflight",
+    "Validate graph, prose, assets, and generated scripts",
+    "Run actions/cache@v4",
+    "Fetch and verify official SDK",
+    "Preserve published statement names for v1 saves",
+    "Ren'Py lint",
+    "Run voice and extras interaction checks first",
+    "Upload first extras interaction evidence",
+    "Build standalone Windows ZIP",
+    "Load real saves and extras unlocks from the published v1.1.0 EXE",
+    "Upload early real old-save upgrade evidence"
+  ],
+  "completed_native_counts": {
+    "prefix_iterations": 2,
+    "prefix_per_iteration": [
+      6,
+      103,
+      29
+    ],
+    "upgrade_writer": [
+      1,
+      14,
+      3
+    ],
+    "upgrade_reader": [
+      2,
+      26,
+      4
+    ],
+    "verification": "Windows steps validate exact generated native reports; sealed final audit and full suites are still pending"
+  },
+  "early_artifacts": [
+    {
+      "id": 11522925116,
+      "name": "upgrade-prefix-491e9859368a402960afcdf856be4f456b885ec5",
+      "size_in_bytes": 20653621,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11522925116",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11522925116/zip",
+      "expired": false,
+      "created_at": "2026-10-08T01:21:35Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "updated_at": "2026-10-08T01:21:35Z",
+      "digest": "sha256:080f111dce3a86be152efc0b88f1acb61b6dd8ec9307c59b264107ace309006e",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    },
+    {
+      "id": 11521949700,
+      "name": "extras-prefix-491e9859368a402960afcdf856be4f456b885ec5",
+      "size_in_bytes": 26436596,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11521949700",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11521949700/zip",
+      "expired": false,
+      "created_at": "2026-10-08T01:20:13Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "updated_at": "2026-10-08T01:20:13Z",
+      "digest": "sha256:9ab7ee109121315e5fe2e475bec3e8941602e04a33c1feee76591272e1186db6",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    }
+  ],
+  "artifact_transport": {
+    "early_prefix": "GitHub artifact preserved; local file-reference fetch returned HTTP 403, so no current prefix image is claimed as directly viewed",
+    "planned_visual_channel": "sealed terminal Windows job-log export containing full-resolution JPEG copies"
+  }
 }
