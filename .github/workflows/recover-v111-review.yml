@@ -1,0 +1,116 @@
+name: Recover sealed v1.1.1 review evidence
+
+on:
+  push:
+    branches: [main]
+    paths: ['docs/evidence/v111-review-recovery-request.json']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  records:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify original Windows log seal and split inspection copies
+        shell: bash
+        run: |
+          python - <<'PY'
+          import base64, hashlib, json, re, subprocess
+          from pathlib import Path
+          candidate = '491e9859368a402960afcdf856be4f456b885ec5'
+          original_run, original_job = 37711912728, 113099514910
+          expected_seal = '0be81309b80b4b380bb5a20ae26a7e17f0df787764ae26bd1e75a230fbbc3ec8'
+          repo = 'AureliusWu/Test'
+          def api(path):
+              return subprocess.check_output(['gh','api',f'repos/{repo}/{path}'])
+          request = json.loads(Path('docs/evidence/v111-review-recovery-request.json').read_text())
+          assert request == {'candidate_commit':candidate,'run_id':original_run,'job_id':original_job,'envelope_sha256':expected_seal}
+          run = json.loads(api(f'actions/runs/{original_run}'))
+          assert run['head_sha'] == candidate and run['conclusion'] == 'success' and run['status'] == 'completed' and run['path'] == '.github/workflows/game.yml'
+          artifacts = json.loads(api(f'actions/runs/{original_run}/artifacts?per_page=100'))['artifacts']
+          package = [a for a in artifacts if a['name'] == 'windows-' + candidate]
+          assert len(package) == 1 and package[0]['id'] == 11523867600 and not package[0]['expired']
+          assert package[0]['digest'] == 'sha256:eb4d2becb987bcef31a7176d4103b522c5c450d6c4ca3c2b6f8d325796fc6cde'
+          raw_log = api(f'actions/jobs/{original_job}/logs').decode('utf-8').replace('\r\n','\n')
+          begins = re.findall(r'(?m)^.*?V11_EXPORT_BEGIN ([0-9a-f]{40})\s*$',raw_log)
+          ends = re.findall(r'(?m)^.*?V11_EXPORT_END ([0-9a-f]{64}) (\d+) (\d+)\s*$',raw_log)
+          chunks = re.findall(r'(?m)^.*?V11_EXPORT_CHUNK (\d{5}) ([A-Za-z0-9+/=]+)\s*$',raw_log)
+          assert begins == [candidate] and len(ends) == 1
+          seal, encoded_length, count = ends[0]
+          assert [int(i) for i,_ in chunks] == list(range(int(count))) and int(count) == 1748
+          encoded = ''.join(value for _,value in chunks)
+          assert len(encoded) == int(encoded_length) == 13976144
+          raw = base64.b64decode(encoded,validate=True)
+          assert len(raw) == 10482106 and hashlib.sha256(raw).hexdigest() == seal == expected_seal
+          audit = json.loads(raw)
+          machine, visual, media = audit['machine'], audit['visual'], audit['media']
+          assert machine['candidate_commit'] == candidate and machine['candidate_tree'] == '2221cea3db8c5ff58e82ae4715b6d2346def54b6'
+          assert machine['run_id'] == original_run and machine['package']['sha256'] == '7f57b4f4d3f2cc4071d7e4d59ff6a2e3c7db0531b78477abae18804c47d6d35b'
+          assert len(visual['inspected']) == 58 and len(media) == 12
+          for item in media:
+              assert hashlib.sha256(base64.b64decode(item['base64'],validate=True)).hexdigest() == item['jpeg_sha256']
+          tests = re.findall(r'Ran (\d+) tests in ([0-9.]+)s',raw_log)
+          assert ('118','15.533') in tests
+          assert 'Exact package/evidence transfer: 457942419 bytes in 22 parts' in raw_log
+          record = {'machine':machine,'visual':visual,'run':run,'artifacts':artifacts,
+              'recovery':{'original_job_id':original_job,'envelope_sha256':seal,'raw_bytes':len(raw),
+                  'encoded_length':len(encoded),'chunks':len(chunks),'decoded_job_log_sha256':hashlib.sha256(raw_log.encode()).hexdigest(),
+                  'python_tests':{'passed':118,'seconds':15.533,'platform':'Windows'},
+                  'seal_verified':True,'jpeg_hashes_verified':True,
+                  'transport':'split terminal job logs; original Windows evidence and package are unchanged'}}
+          def envelope(label,data):
+              blob = json.dumps(data,ensure_ascii=True,separators=(',',':')).encode('ascii')
+              value = base64.b64encode(blob).decode('ascii')
+              assert len(value) < 6000000
+              print('V111_RECOVERY_BEGIN',label,flush=True)
+              for i in range(0,len(value),8000):
+                  print('V111_RECOVERY_CHUNK',f'{i//8000:05d}',value[i:i+8000],flush=True)
+              print('V111_RECOVERY_END',hashlib.sha256(blob).hexdigest(),len(value),(len(value)+7999)//8000,flush=True)
+          envelope('records',record)
+          Path('inspection-groups').mkdir()
+          for group in range(6):
+              Path(f'inspection-groups/group-{group}.json').write_text(json.dumps(media[group*2:group*2+2],ensure_ascii=True,separators=(',',':')),encoding='ascii')
+          print('Original accepted Windows evidence seal verified; no native tests or game assets were modified.')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v111-sealed-inspection-groups
+          path: inspection-groups/
+          if-no-files-found: error
+  images:
+    needs: records
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        group: [0, 1, 2, 3, 4, 5]
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: v111-sealed-inspection-groups
+          path: inspection-groups
+      - name: Export bounded original inspection copies
+        shell: bash
+        env:
+          GROUP_INDEX: ${{ matrix.group }}
+        run: |
+          python - <<'PY'
+          import base64, hashlib, os
+          from pathlib import Path
+          group = int(os.environ['GROUP_INDEX'])
+          blob = Path(f'inspection-groups/group-{group}.json').read_bytes()
+          value = base64.b64encode(blob).decode('ascii')
+          assert len(value) < 6000000
+          print('V111_RECOVERY_BEGIN',f'images-{group}',flush=True)
+          for i in range(0,len(value),8000):
+              print('V111_RECOVERY_CHUNK',f'{i//8000:05d}',value[i:i+8000],flush=True)
+          print('V111_RECOVERY_END',hashlib.sha256(blob).hexdigest(),len(value),(len(value)+7999)//8000,flush=True)
+          PY
