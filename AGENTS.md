@@ -12,3 +12,5 @@
 - User decides final theme, heroine, art style, major plot and ending. Proposed defaults remain reviewable drafts until chosen.
 - Update `CHANGELOG.md`, `docs/STATUS.md` and `docs/TEST_PLAN.md` with evidence and limitations.
 - Report platform-specific execution separately: a cross-built ZIP is not proof of Windows execution.
+
+跨项目复用另读 [三项目制作契约](docs/production/SHARED-VN.md)。本仓库原有引擎、剧情、存档和发行约束继续生效；共用结构检查不能替代原生状态路线与平台验收。
