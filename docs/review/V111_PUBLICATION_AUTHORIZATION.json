@@ -42,5 +42,12 @@
     "scripts/vn-contract.mjs": "42b74123d7e3118fde12be2501c98365b0927330",
     "scripts/vn-contract.d.mts": "6620c50d14ad8df5a23b20cf81827fabf892061d",
     ".github/workflows/recover-v111-review.yml": "9430b339c5dc173e0dd14ba2c8b1ef86251df62b"
+  },
+  "publication_retry": {
+    "previous_run_id": 37791969239,
+    "previous_job_id": 113361440466,
+    "record": "docs/evidence/v111-publication-first-failure.json",
+    "reason": "Verify shared canonical Git bytes separately from Windows checkout line endings.",
+    "candidate_artifact_and_zip_unchanged": true
   }
 }
