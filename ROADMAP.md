@@ -8,6 +8,8 @@ Windows **118 项 Python**、全部作者校验及 Ren’Py 8.5.3.26051504 lint 
 
 新增共享生产契约和结构检查已接入。工程、画面及发行收尾完成；下一步根据用户统一真人操作结果修复实际问题，最终创作定案仍由用户决定。
 
+2026-10-09 补齐有界验收证据导出：Windows / Linux 各130项检查、完整原始封印回放及全部日志取回通过；游戏与正式包沿用v1.1.1。详见 [维护说明](docs/REVIEW_TRANSPORT.md)。
+
 [正式版](https://github.com/AureliusWu/Test/releases/tag/v1.1.1) · [验收](docs/RELEASE_ACCEPTANCE_V111.md) · [当前断点](docs/WORK_CHECKPOINT.md)。真人试听、Normal / True 阅读计时、普通电脑 / 中文路径 / DPI、最终创作定案与冻结继续由用户统一操作，五组保持 pending。Windows 使用 dummy 音频，自动执行耗时不等于阅读时长；真实旧档覆盖两个代表位置，未宣称验证全部玩家旧档或 Linux 原生 UI。
 
 ## v1.1.0 鉴赏室（已正式发布并回读验证）

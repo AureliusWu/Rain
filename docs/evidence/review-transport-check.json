@@ -1,0 +1,552 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "repository": "AureliusWu/Test",
+  "scope": "Bounded review-evidence transport maintenance; unchanged v1.1.1 game",
+  "verified_at": "2026-10-08T23:08:05.734Z",
+  "maintenance_commit": "7487063c8ba6a9cc292367b02d79aab65f9bdefe",
+  "validation_commit": "f65443d3c7f36bf293855456ffe26f415df0356b",
+  "workflow": {
+    "run_id": 37856914418,
+    "url": "https://github.com/AureliusWu/Test/actions/runs/37856914418",
+    "path": ".github/workflows/check-review-transport.yml",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-10-08T23:00:11Z",
+    "updated_at": "2026-10-08T23:02:50Z",
+    "jobs": [
+      {
+        "id": 113583189625,
+        "name": "Author checks (ubuntu-latest)",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 113583189967,
+        "name": "Repackage exact original Windows audit",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 113583190003,
+        "name": "Author checks (windows-latest)",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 113583614485,
+        "name": "Exercise production review export / Verify and export review records",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 113583672876,
+        "name": "Exercise production review export / Export inspection copies (images-0001)",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 113583672888,
+        "name": "Exercise production review export / Export inspection copies (images-0000)",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 113583672893,
+        "name": "Exercise production review export / Export inspection copies (images-0002)",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 113583672937,
+        "name": "Exercise production review export / Export inspection copies (images-0003)",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ]
+  },
+  "author_checks": {
+    "local": {
+      "platform": "Linux",
+      "python_tests": 130,
+      "seconds": 13.363,
+      "all_authoring_validators": "passed",
+      "shared_vn_contract": "passed"
+    },
+    "ci": [
+      {
+        "platform": "Linux",
+        "job_id": 113583189625,
+        "python_tests": 130,
+        "seconds": 12.808,
+        "all_authoring_validators": "passed",
+        "shared_vn_contract": {
+          "version": "1.0.0",
+          "nodes": 26,
+          "node_body_lines": 539,
+          "choices": 4,
+          "endings": 2
+        },
+        "decoded_log_sha256": "d3623590e4512496e9574f10222ccbe5703cd90de952868248b78a42eb1c9ff4",
+        "log_format": "UTF-8 decoded connector job log with CRLF normalized to LF"
+      },
+      {
+        "platform": "Windows",
+        "job_id": 113583190003,
+        "python_tests": 130,
+        "seconds": 14.959,
+        "all_authoring_validators": "passed",
+        "shared_vn_contract": {
+          "version": "1.0.0",
+          "nodes": 26,
+          "node_body_lines": 539,
+          "choices": 4,
+          "endings": 2
+        },
+        "decoded_log_sha256": "43b510c82bf8d0f52c6de5c6257cafd3067245d4210b13043b8121ffe48a0cbc",
+        "log_format": "UTF-8 decoded connector job log with CRLF normalized to LF"
+      }
+    ],
+    "new_transport_tests": 12
+  },
+  "source": {
+    "candidate_commit": "491e9859368a402960afcdf856be4f456b885ec5",
+    "original_windows_run_id": 37711912728,
+    "original_windows_job_id": 113099514910,
+    "original_package_sha256": "7f57b4f4d3f2cc4071d7e4d59ff6a2e3c7db0531b78477abae18804c47d6d35b",
+    "original_audit_sha256": "0be81309b80b4b380bb5a20ae26a7e17f0df787764ae26bd1e75a230fbbc3ec8",
+    "original_audit_bytes": 10482106
+  },
+  "preparation": {
+    "status": "passed",
+    "source_run_id": 37711912728,
+    "source_job_id": 113099514910,
+    "candidate_commit": "491e9859368a402960afcdf856be4f456b885ec5",
+    "original_audit": {
+      "sha256": "0be81309b80b4b380bb5a20ae26a7e17f0df787764ae26bd1e75a230fbbc3ec8",
+      "bytes": 10482106
+    },
+    "manifest_sha256": "8a25a34dbbe9911d863db96cc7be9942a4721b2a259e14fd1962e5437015206a",
+    "inspection_copies": 12,
+    "groups": 4,
+    "group_encoded_bytes": [
+      3813728,
+      3364432,
+      4005956,
+      2641312
+    ],
+    "payload_limit": 4194304,
+    "original_package_sha256": "7f57b4f4d3f2cc4071d7e4d59ff6a2e3c7db0531b78477abae18804c47d6d35b",
+    "game_runtime_retested": false,
+    "human_acceptance_is_not_claimed": true
+  },
+  "readback": {
+    "status": "passed",
+    "original_audit_sha256": "0be81309b80b4b380bb5a20ae26a7e17f0df787764ae26bd1e75a230fbbc3ec8",
+    "original_audit_bytes": 10482106,
+    "exact_original_audit_reassembled": true,
+    "manifest_sha256": "8a25a34dbbe9911d863db96cc7be9942a4721b2a259e14fd1962e5437015206a",
+    "original_png_records": 174,
+    "visual_entries": 58,
+    "jpeg_copies": 12,
+    "groups": 4,
+    "all_jpeg_hashes_verified": true,
+    "all_png_bindings_verified": true,
+    "max_encoded_group_bytes": 4005956,
+    "max_decoded_job_log_bytes": 4049962,
+    "new_visual_inspection_performed": false,
+    "accepted_visual_sha256": "7d92d7f2750e67aa95c0e0a365cd3e8dae2b84498e5429182aed52a1c297df7d",
+    "all_58_visual_png_hashes_match_existing_accepted_review": true,
+    "all_12_jpeg_hashes_match_existing_accepted_review": true
+  },
+  "log_receipts": [
+    {
+      "job_id": 113583614485,
+      "label": "records",
+      "candidate_commit": "491e9859368a402960afcdf856be4f456b885ec5",
+      "run_id": 37711912728,
+      "manifest_sha256": "8a25a34dbbe9911d863db96cc7be9942a4721b2a259e14fd1962e5437015206a",
+      "payload_sha256": "58b2cec465e3d3026d897dcbcc68ebf34642a921fa962b3a78f7066b34b341d3",
+      "raw_bytes": 117152,
+      "encoded_bytes": 156204,
+      "chunks": 20,
+      "decoded_log_bytes": 173366,
+      "decoded_log_sha256": "24a885426c1d41ef752ba44ea69a3c10bce4e291b47b364f26d872f1961ccbf1",
+      "seal_verified": true
+    },
+    {
+      "job_id": 113583672888,
+      "label": "images-0000",
+      "candidate_commit": "491e9859368a402960afcdf856be4f456b885ec5",
+      "run_id": 37711912728,
+      "manifest_sha256": "8a25a34dbbe9911d863db96cc7be9942a4721b2a259e14fd1962e5437015206a",
+      "payload_sha256": "2b35a7c0492071a6681afa05d59a6890f2d7404b35a8f3945f07b2129e125f35",
+      "raw_bytes": 2860294,
+      "encoded_bytes": 3813728,
+      "chunks": 477,
+      "decoded_log_bytes": 3856398,
+      "decoded_log_sha256": "7111ccdd2ba65173754eb5a6b9c16b0ee5f7b9c39d21cf8e89c7460860916110",
+      "seal_verified": true
+    },
+    {
+      "job_id": 113583672876,
+      "label": "images-0001",
+      "candidate_commit": "491e9859368a402960afcdf856be4f456b885ec5",
+      "run_id": 37711912728,
+      "manifest_sha256": "8a25a34dbbe9911d863db96cc7be9942a4721b2a259e14fd1962e5437015206a",
+      "payload_sha256": "16bfcf5694799211b618a0dd3a826eb5912e64b3a89b543d12a6e2fc637aa13c",
+      "raw_bytes": 2523322,
+      "encoded_bytes": 3364432,
+      "chunks": 421,
+      "decoded_log_bytes": 3403958,
+      "decoded_log_sha256": "dbfd7848a03b137fd2414a84290cb902f902b0b4318d0c67f839bb88612e9a72",
+      "seal_verified": true
+    },
+    {
+      "job_id": 113583672893,
+      "label": "images-0002",
+      "candidate_commit": "491e9859368a402960afcdf856be4f456b885ec5",
+      "run_id": 37711912728,
+      "manifest_sha256": "8a25a34dbbe9911d863db96cc7be9942a4721b2a259e14fd1962e5437015206a",
+      "payload_sha256": "013499824a23409f12eab057a95738c26226256ddf339923ac84a0874aba01ad",
+      "raw_bytes": 3004465,
+      "encoded_bytes": 4005956,
+      "chunks": 501,
+      "decoded_log_bytes": 4049962,
+      "decoded_log_sha256": "5c2c8cdad3eaeeb11898b36191c31a0d6e148117e05dc2e37d5961a9c40d150c",
+      "seal_verified": true
+    },
+    {
+      "job_id": 113583672937,
+      "label": "images-0003",
+      "candidate_commit": "491e9859368a402960afcdf856be4f456b885ec5",
+      "run_id": 37711912728,
+      "manifest_sha256": "8a25a34dbbe9911d863db96cc7be9942a4721b2a259e14fd1962e5437015206a",
+      "payload_sha256": "ef29bb3b90c7239a85955323b10a2cb0e6db6444abc04aa346a1ddfcf55758d5",
+      "raw_bytes": 1980984,
+      "encoded_bytes": 2641312,
+      "chunks": 331,
+      "decoded_log_bytes": 2675798,
+      "decoded_log_sha256": "abefdb0c53921f6663d4731325fa5831b4e11f761bebef49cc7384200a77398b",
+      "seal_verified": true
+    }
+  ],
+  "inspection_copy_receipts": [
+    {
+      "scope": "standalone",
+      "name": "native-about",
+      "jpeg_sha256": "82b68de3462671ff04102e7f2e79a89a06d51dcbae7e13382e340f58bcc97c94",
+      "source_png_sha256": "8eb20eefac4034cb71181288efccd9256dd9b0aea51f5e5776bc46026eee80df",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "bytes": 927966,
+      "group": "images-0000",
+      "sha256_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "native-main-menu",
+      "jpeg_sha256": "8e0f12feeeba199b1c6b7050b4c407354a8f44986ff331e6690224cf7267797e",
+      "source_png_sha256": "56b7ddc175d438e8936048cc07cb07f4d434be2489fc71a64d89e1515b088907",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "bytes": 805429,
+      "group": "images-0000",
+      "sha256_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-main-menu",
+      "jpeg_sha256": "99c8b5679389d7f662cb0b4254946078adcb591ce3e0447b2cbc830fcbf4c0aa",
+      "source_png_sha256": "76b7890e5d869c444b88d7c0836e65e706ddd9eee5afac1dfb67fac09a06b502",
+      "pixels": [
+        1280,
+        720
+      ],
+      "bytes": 411262,
+      "group": "images-0000",
+      "sha256_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "native-extras-music",
+      "jpeg_sha256": "85ae0842f6da044a1b2cd753e3901e4fcc4408fd1da3e4ddec712cae26716e86",
+      "source_png_sha256": "0e88744198be90e3e42bc0b355d6d842d4e4ac111b69ff5760e1fa7adb8cf341",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "bytes": 742127,
+      "group": "images-0001",
+      "sha256_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "native-extras-music-locked",
+      "jpeg_sha256": "5b8d72a28d44a16ac129414294eb4cdf02d576bf223edb6324e03ef7d7d7a341",
+      "source_png_sha256": "dead78533fc4552c6067fd9ba6da6ec64ec96e2d8cb8cc0e20f0ccee6566e52b",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "bytes": 765731,
+      "group": "images-0001",
+      "sha256_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-extras-music",
+      "jpeg_sha256": "37ad78360da6a7391a7f9d8e86e0541ca05ec89a94222ecba8922185782535fa",
+      "source_png_sha256": "616c7ddb6ed618b556bf7e51b0ffcb83861a3b881f4c497cd9a8e242cef35fc5",
+      "pixels": [
+        1280,
+        720
+      ],
+      "bytes": 384055,
+      "group": "images-0001",
+      "sha256_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "native-extras-music-paused",
+      "jpeg_sha256": "5f998d148c46d4637ede6e2278880de052808543cda910dbdc0d2d8719f1c2f1",
+      "source_png_sha256": "afdb1ff7ae7a2237543768843493c35de9bbd0d27b624cd0e9df119d29d76321",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "bytes": 741827,
+      "group": "images-0002",
+      "sha256_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "native-extras-music-stopped",
+      "jpeg_sha256": "68a40304f55463cfc80bd090a4d432d3f070c79617ca82cac939f04184603ee4",
+      "source_png_sha256": "c9c3f512f37787fd1b2e5af7722a0aa40b3110bf7ddf5cac41ed31382c1d41bb",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "bytes": 742619,
+      "group": "images-0002",
+      "sha256_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-extras-music-paused",
+      "jpeg_sha256": "18752d53f6e161879e3be5669fcd5a8963b9fb7653ad1068e353b8419f0f4d09",
+      "source_png_sha256": "f261b55a5de575e793cf889e1f5301b3857485932acd296279a3b48ce9475ff5",
+      "pixels": [
+        1280,
+        720
+      ],
+      "bytes": 384014,
+      "group": "images-0002",
+      "sha256_verified": true
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-extras-music-stopped",
+      "jpeg_sha256": "c1df541398d0df36f678efcf56381effc6ea73a5141f01c249965f7e330b68ab",
+      "source_png_sha256": "539289c5f72fa4b9c1f046ac65a8045adf79d7a4e69e485a4bee1b0897c2f6d1",
+      "pixels": [
+        1280,
+        720
+      ],
+      "bytes": 384105,
+      "group": "images-0002",
+      "sha256_verified": true
+    },
+    {
+      "scope": "fresh_process",
+      "name": "native-extras-music-persistent",
+      "jpeg_sha256": "6d940377a78a33a781083c4af8630c40e0f310c4bb1e9685dc1f6e46cb563efe",
+      "source_png_sha256": "d0989ad3ce1507f23e79cd898ed98be7d092cd446eea8ba557a26f4575e659de",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "bytes": 742667,
+      "group": "images-0003",
+      "sha256_verified": true
+    },
+    {
+      "scope": "upgrade_reader",
+      "name": "native-extras-music-persistent",
+      "jpeg_sha256": "6d940377a78a33a781083c4af8630c40e0f310c4bb1e9685dc1f6e46cb563efe",
+      "source_png_sha256": "d0989ad3ce1507f23e79cd898ed98be7d092cd446eea8ba557a26f4575e659de",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "bytes": 742667,
+      "group": "images-0003",
+      "sha256_verified": true
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 11584087772,
+      "name": "review-transport-rehearsal-f65443d3c7f36bf293855456ffe26f415df0356b",
+      "size_in_bytes": 7793081,
+      "digest": "sha256:4697bcfe5e1c0ec1b6567d18bcc24d00bd90a8297663075e9e19cf1a0eb0cb31",
+      "expired": false
+    },
+    {
+      "id": 11583853145,
+      "name": "review-transport-result-f65443d3c7f36bf293855456ffe26f415df0356b",
+      "size_in_bytes": 549,
+      "digest": "sha256:7b2ce94b09a7ca6bcfd4dc896d2ca5bc8ae2579fdc6b6a032bd0e6af9274c777",
+      "expired": false
+    }
+  ],
+  "source_equivalence": {
+    "comparison_base": "13844fda15a4434fa116378143dc908b48d5b7e8",
+    "verified_head": "f65443d3c7f36bf293855456ffe26f415df0356b",
+    "game_tree_before": "e80bbb8123fd306356fbbb483456d4f6c1848ebb",
+    "game_tree_after": "e80bbb8123fd306356fbbb483456d4f6c1848ebb",
+    "changed_runtime_or_content_paths": [],
+    "shared_production_files_unchanged": true,
+    "human_acceptance_records_unchanged": true
+  },
+  "public_releases": [
+    {
+      "version": "v1.1.1",
+      "tag_commit": "75f757b9ce78779a7036a948375f55579990b8e5",
+      "unchanged": true,
+      "release_id": 406921058,
+      "draft": false,
+      "prerelease": false,
+      "all_assets_match_existing_publication_record": true,
+      "assets": [
+        {
+          "id": 622057988,
+          "name": "BeforeTheRainStops-1.1.1-preview.png",
+          "size_in_bytes": 3169910,
+          "digest": "sha256:56b7ddc175d438e8936048cc07cb07f4d434be2489fc71a64d89e1515b088907"
+        },
+        {
+          "id": 622057993,
+          "name": "BeforeTheRainStops-1.1.1-win.zip",
+          "size_in_bytes": 56382628,
+          "digest": "sha256:7f57b4f4d3f2cc4071d7e4d59ff6a2e3c7db0531b78477abae18804c47d6d35b"
+        },
+        {
+          "id": 622057994,
+          "name": "SHA256SUMS.txt",
+          "size_in_bytes": 100,
+          "digest": "sha256:f30c7cdd1bc3a6b30dbcaa6355d85793ee9baf945a1e9f1d773355676db41879"
+        }
+      ],
+      "metadata_rechecked": true
+    },
+    {
+      "version": "v1.1.0",
+      "tag_commit": "f32c2de9b67aa3f46e9e32146239477407b9c450",
+      "unchanged": true,
+      "release_id": 405880463,
+      "draft": false,
+      "prerelease": false,
+      "all_assets_match_existing_publication_record": true,
+      "assets": [
+        {
+          "id": 619005197,
+          "name": "BeforeTheRainStops-1.1.0-preview.png",
+          "size_in_bytes": 3170620,
+          "digest": "sha256:5284066eae27aae5b37436031ce27e77842e6768c065b7fb1d165270ed284746"
+        },
+        {
+          "id": 619005202,
+          "name": "BeforeTheRainStops-1.1.0-win.zip",
+          "size_in_bytes": 56379987,
+          "digest": "sha256:a6ce022d23e5e88e3666d9806ca69a30077d52c56bf74820f4863f9ddc66fca0"
+        },
+        {
+          "id": 619005200,
+          "name": "SHA256SUMS.txt",
+          "size_in_bytes": 100,
+          "digest": "sha256:8f36e4493a7a433d177e4aa28f42f8c2f64293cd5866ec6c7bf7535f7d06fe40"
+        }
+      ],
+      "metadata_rechecked": true
+    },
+    {
+      "version": "v1.0.1",
+      "tag_commit": "4029f6674081d8be870f987cab42d1052d1794be",
+      "unchanged": true,
+      "release_id": 405360576,
+      "draft": false,
+      "prerelease": false,
+      "all_assets_match_existing_publication_record": true,
+      "assets": [
+        {
+          "id": 617495877,
+          "name": "BeforeTheRainStops-1.0.1-preview.png",
+          "size_in_bytes": 3167801,
+          "digest": "sha256:635f705f82173d006c0304a269b4968f5a6a6e8f5c13c4e356d74c15121a067c"
+        },
+        {
+          "id": 617495872,
+          "name": "BeforeTheRainStops-1.0.1-win.zip",
+          "size_in_bytes": 56364666,
+          "digest": "sha256:9238e2d06cb7820056912455765f42b74337bf857dacd5a213be4cc349843f36"
+        },
+        {
+          "id": 617495876,
+          "name": "SHA256SUMS.txt",
+          "size_in_bytes": 100,
+          "digest": "sha256:f2cf3a73b2aa01268c908c258893ad99340347b3ffbfa405edd29332bd901490"
+        }
+      ],
+      "metadata_rechecked": true
+    },
+    {
+      "version": "v1.0.0",
+      "tag_commit": "b4f06f89eebb73ff0494cb18fc4cfc38192c84ce",
+      "unchanged": true,
+      "release_id": 404551815,
+      "draft": false,
+      "prerelease": false,
+      "all_assets_match_existing_publication_record": true,
+      "assets": [
+        {
+          "id": 615114723,
+          "name": "BeforeTheRainStops-1.0.0-preview.png",
+          "size_in_bytes": 3167797,
+          "digest": "sha256:8b8e69f0901cc2626f816534ae6703aa61bc5c106531333ae61842a274cb2855"
+        },
+        {
+          "id": 615114726,
+          "name": "BeforeTheRainStops-1.0.0-win.zip",
+          "size_in_bytes": 56359988,
+          "digest": "sha256:0d09a78a482e2ff0d34e14f51d49c89d5cc0d36b91506d44c6a3bcdcc678d3f1"
+        },
+        {
+          "id": 615114724,
+          "name": "SHA256SUMS.txt",
+          "size_in_bytes": 100,
+          "digest": "sha256:0f34686309db1c558658c70f5f19d9810b91cca72ef3c29a4504105924c0a9f4"
+        }
+      ],
+      "metadata_rechecked": true
+    }
+  ],
+  "current_formal_version": "1.1.1",
+  "new_game_version_or_package_created": false,
+  "new_renpy_lint_or_native_runtime_execution": false,
+  "new_visual_inspection_performed": false,
+  "human_pending": [
+    "ordinary_windows",
+    "display_dpi",
+    "listening",
+    "creative_and_freeze",
+    "reading_time"
+  ],
+  "human_acceptance_is_not_claimed": true,
+  "limits": "This replay verifies new evidence transport against the exact accepted Windows audit. It does not rerun RenPy/EXE, decode original PNG files on the root environment, create a new game package, perform new visual inspection or repeat public ZIP readback. Existing Windows native/PNG, visual and publication records remain authoritative; all 12 JPEG bytes and 58 visual PNG hashes match that accepted record. The root retrieved and resealed all 5 bounded connector job logs and reconstructed the original canonical audit in memory. Human follow-ups remain pending."
+}

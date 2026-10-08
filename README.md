@@ -8,6 +8,8 @@
 
 关键配音使用免费开源 **Qwen3-TTS 1.7B CustomVoice / Serena**，预生成OGG随包提供；当前台词可重听，已读历史可重播，自动模式等待重播结束。
 
+2026-10-09 已完成验收证据导出维护：Windows / Linux 各130项检查通过，原始Windows审计及全部12个截图副本完整取回。正式下载继续为v1.1.1；详见 [维护记录](docs/REVIEW_TRANSPORT.md)。
+
 ## 下载与运行
 
 [v1.1.1 Release](https://github.com/AureliusWu/Test/releases/tag/v1.1.1) · [Windows ZIP](https://github.com/AureliusWu/Test/releases/download/v1.1.1/BeforeTheRainStops-1.1.1-win.zip) · [本次验收](docs/RELEASE_ACCEPTANCE_V111.md) · [统一真人后续](docs/HUMAN_HANDOFF.md)
