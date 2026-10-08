@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "maintenance_commit": "7487063c8ba6a9cc292367b02d79aab65f9bdefe",
+  "candidate_commit": "491e9859368a402960afcdf856be4f456b885ec5",
+  "run_id": 37711912728,
+  "job_id": 113099514910,
+  "envelope_sha256": "0be81309b80b4b380bb5a20ae26a7e17f0df787764ae26bd1e75a230fbbc3ec8",
+  "requested_at": "2026-10-08T22:59:53.711Z",
+  "scope": "Replay unchanged accepted v1.1.1 Windows audit through the new bounded production exporter; no new runtime or human acceptance."
+}
