@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "corrected_candidate_full_windows_source_in_progress",
+  "status": "corrected_candidate_full_windows_exe_in_progress",
   "version": "1.1.1",
   "local_authoring": {
     "status": "passed",
@@ -84,7 +84,8 @@
     "Upload first extras interaction evidence",
     "Build standalone Windows ZIP",
     "Load real saves and extras unlocks from the published v1.1.0 EXE",
-    "Upload early real old-save upgrade evidence"
+    "Upload early real old-save upgrade evidence",
+    "Run actual Windows interaction tests"
   ],
   "completed_native_counts": {
     "prefix_iterations": 2,
@@ -103,7 +104,12 @@
       26,
       4
     ],
-    "verification": "Windows steps validate exact generated native reports; sealed final audit and full suites are still pending"
+    "verification": "Successful Windows steps validated each exact native report against its generated plan. The standalone full suite, fresh process, final sealed audit and direct current image review are still pending.",
+    "source": [
+      36,
+      448,
+      82
+    ]
   },
   "early_artifacts": [
     {
