@@ -133,5 +133,14 @@
       "affects_original_windows_candidate": false
     }
   },
-  "limits": "Generic structure validation is supplementary. The native 16-state-route regression and Windows source/EXE/upgrade checks remain authoritative."
+  "limits": "Generic structure validation is supplementary. The native 16-state-route regression and Windows source/EXE/upgrade checks remain authoritative.",
+  "publication_verification": {
+    "run_id": 37792383846,
+    "job_id": 113362886758,
+    "status": "passed",
+    "canonical_git_sha256_manifest": "all three entries match",
+    "working_copy_equivalence": "Only checkout LF/CRLF differences",
+    "original_game_and_zip_unchanged": true,
+    "first_attempt": "docs/evidence/v111-publication-first-failure.json"
+  }
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "accepted_awaiting_exact_publication",
+  "status": "published_and_exact_public_download_verified",
   "version": "1.1.1",
   "candidate_commit": "491e9859368a402960afcdf856be4f456b885ec5",
   "candidate_tree": "2221cea3db8c5ff58e82ae4715b6d2346def54b6",
@@ -93,6 +93,14 @@
     "creative_and_freeze",
     "reading_time"
   ],
-  "publication": "not_started",
-  "next": "Commit exact user authorization, keep main stable during publication, then verify three gates, public download and preserved old releases."
+  "publication": {
+    "status": "published_and_exact_public_download_verified",
+    "release_id": 406921058,
+    "tag_commit": "75f757b9ce78779a7036a948375f55579990b8e5",
+    "published_at": "2026-10-08T14:26:27Z",
+    "workflow_run_id": 37792383846,
+    "workflow_job_id": 113362886758,
+    "record": "docs/evidence/v111-publication.json"
+  },
+  "next": "Engineering, visual review, formal publication and public ZIP verification are complete. Wait for actual user-operated human findings and fix reported defects in a new version, preserving old releases."
 }

@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "status": "published_and_exact_public_download_verified",
+  "repository": "AureliusWu/Test",
+  "version": "1.1.1",
+  "verified_at": "2026-10-08",
+  "release_id": 406921058,
+  "release_url": "https://github.com/AureliusWu/Test/releases/tag/v1.1.1",
+  "published_at": "2026-10-08T14:26:27Z",
+  "tag_name": "v1.1.1",
+  "tag_commit": "75f757b9ce78779a7036a948375f55579990b8e5",
+  "tag_tree": "6bbd4127213d50fe066b8541c0c16aee170cfe50",
+  "is_latest_formal_release": true,
+  "draft": false,
+  "prerelease": false,
+  "workflow_run_id": 37792383846,
+  "workflow_job_id": 113362886758,
+  "workflow_run_url": "https://github.com/AureliusWu/Test/actions/runs/37792383846",
+  "workflow_status": "completed",
+  "workflow_conclusion": "success",
+  "candidate_commit": "491e9859368a402960afcdf856be4f456b885ec5",
+  "candidate_tree": "2221cea3db8c5ff58e82ae4715b6d2346def54b6",
+  "accepted_run_id": 37711912728,
+  "accepted_artifact_id": 11523867600,
+  "package_sha256": "7f57b4f4d3f2cc4071d7e4d59ff6a2e3c7db0531b78477abae18804c47d6d35b",
+  "package_size_in_bytes": 56382628,
+  "assets": [
+    {
+      "id": 622057988,
+      "name": "BeforeTheRainStops-1.1.1-preview.png",
+      "size_in_bytes": 3169910,
+      "sha256": "56b7ddc175d438e8936048cc07cb07f4d434be2489fc71a64d89e1515b088907",
+      "state": "uploaded",
+      "download_url": "https://github.com/AureliusWu/Test/releases/download/v1.1.1/BeforeTheRainStops-1.1.1-preview.png"
+    },
+    {
+      "id": 622057993,
+      "name": "BeforeTheRainStops-1.1.1-win.zip",
+      "size_in_bytes": 56382628,
+      "sha256": "7f57b4f4d3f2cc4071d7e4d59ff6a2e3c7db0531b78477abae18804c47d6d35b",
+      "state": "uploaded",
+      "download_url": "https://github.com/AureliusWu/Test/releases/download/v1.1.1/BeforeTheRainStops-1.1.1-win.zip"
+    },
+    {
+      "id": 622057994,
+      "name": "SHA256SUMS.txt",
+      "size_in_bytes": 100,
+      "sha256": "f30c7cdd1bc3a6b30dbcaa6355d85793ee9baf945a1e9f1d773355676db41879",
+      "state": "uploaded",
+      "download_url": "https://github.com/AureliusWu/Test/releases/download/v1.1.1/SHA256SUMS.txt"
+    }
+  ],
+  "public_download_verification": {
+    "status": "passed",
+    "execution": "Actual Windows publisher downloaded the public release ZIP and validated accepted filename, size, SHA-256, CRC, version and package cleanliness. Root independently read the terminal job log.",
+    "gate_pass_count": 3,
+    "gate_lines": [
+      "2026-10-08T14:26:01.5862872Z Formal release acceptance passed for the exact reviewed candidate.",
+      "2026-10-08T14:26:09.5913873Z Formal release acceptance passed for the exact reviewed candidate.",
+      "2026-10-08T14:26:29.6452184Z Formal release acceptance passed for the exact reviewed candidate."
+    ],
+    "zip_crc": "passed",
+    "exact_bytes": true,
+    "preview_original_png_sha256": "56b7ddc175d438e8936048cc07cb07f4d434be2489fc71a64d89e1515b088907",
+    "checksum_file_sha256": "f30c7cdd1bc3a6b30dbcaa6355d85793ee9baf945a1e9f1d773355676db41879"
+  },
+  "source_game_equivalence": {
+    "candidate_commit": "491e9859368a402960afcdf856be4f456b885ec5",
+    "tag_commit": "75f757b9ce78779a7036a948375f55579990b8e5",
+    "game_tree": "e80bbb8123fd306356fbbb483456d4f6c1848ebb",
+    "runtime_paths_changed": [],
+    "changed_paths": [
+      ".github/workflows/recover-v111-review.yml",
+      ".github/workflows/release-v111.yml",
+      "AGENTS.md",
+      "docs/RELEASE_ACCEPTANCE_V111.md",
+      "docs/RELEASE_NOTES_V111.md",
+      "docs/REMOTE_REVIEW_V111.md",
+      "docs/REUSE-NETLOVE.md",
+      "docs/STATUS.md",
+      "docs/TEST_PLAN.md",
+      "docs/WORK_CHECKPOINT.md",
+      "docs/evidence/v111-acceptance.json",
+      "docs/evidence/v111-development-checkpoint.json",
+      "docs/evidence/v111-publication-first-failure.json",
+      "docs/evidence/v111-review-recovery-request.json",
+      "docs/evidence/v111-support-review.json",
+      "docs/evidence/v111-visual-review.json",
+      "docs/production/REUSE-MANIFEST.json",
+      "docs/production/SHARED-VN.md",
+      "docs/review/V111_HUMAN_ACCEPTANCE.json",
+      "docs/review/V111_PUBLICATION_AUTHORIZATION.json",
+      "scripts/vn-contract.d.mts",
+      "scripts/vn-contract.mjs"
+    ],
+    "pinned_non_runtime_support_files": {
+      "AGENTS.md": "7f667d701879491da6d3396777a012d85266bcf9",
+      "scripts/vn-contract.mjs": "42b74123d7e3118fde12be2501c98365b0927330",
+      "scripts/vn-contract.d.mts": "6620c50d14ad8df5a23b20cf81827fabf892061d",
+      ".github/workflows/recover-v111-review.yml": "9430b339c5dc173e0dd14ba2c8b1ef86251df62b"
+    },
+    "independent_publisher_statement": "2026-10-08T14:26:22.4792901Z Identical accepted game source: 491e9859368a402960afcdf856be4f456b885ec5; publication tag target: 75f757b9ce78779a7036a948375f55579990b8e5"
+  },
+  "shared_production_check": {
+    "status": "passed",
+    "native_windows_node_result": {
+      "contract": "1.0.0",
+      "scenes": 26,
+      "lines": 539,
+      "choices": 4,
+      "endings": 2
+    },
+    "canonical_git_sha256_manifest": "all three entries match",
+    "working_copy_equivalence": "Only LF/CRLF checkout transformations allowed; all three files validated."
+  },
+  "preserved_releases": [
+    {
+      "version": "v1.1.0",
+      "release_id": 405880463,
+      "tag_commit": "f32c2de9b67aa3f46e9e32146239477407b9c450",
+      "all_assets_preserved": true,
+      "verified_after_publication": true
+    },
+    {
+      "version": "v1.0.1",
+      "release_id": 405360576,
+      "tag_commit": "4029f6674081d8be870f987cab42d1052d1794be",
+      "all_assets_preserved": true,
+      "verified_after_publication": true
+    },
+    {
+      "version": "v1.0.0",
+      "release_id": 404551815,
+      "tag_commit": "b4f06f89eebb73ff0494cb18fc4cfc38192c84ce",
+      "all_assets_preserved": true,
+      "verified_after_publication": true
+    }
+  ],
+  "publication_authorization": "docs/review/V111_PUBLICATION_AUTHORIZATION.json",
+  "human_acceptance": "docs/review/V111_HUMAN_ACCEPTANCE.json",
+  "human_pending": [
+    "ordinary_windows",
+    "display_dpi",
+    "listening",
+    "creative_and_freeze",
+    "reading_time"
+  ],
+  "human_acceptance_is_not_claimed": true,
+  "decoded_job_log_sha256": "d1e62f60d1983771b764bd3cf1168dd7c3b439fe0a9b29e4180a1a6cd1987f70",
+  "decoded_job_log_format": "UTF-8, CRLF normalized to LF",
+  "previous_publication_attempt": {
+    "schema_version": 1,
+    "status": "publication_blocked_before_upload",
+    "version": "1.1.1",
+    "run_id": 37791969239,
+    "job_id": 113361440466,
+    "publication_target": "df663901479d9935d0cdc3c58750037e4b49f1bc",
+    "candidate_commit": "491e9859368a402960afcdf856be4f456b885ec5",
+    "package_sha256": "7f57b4f4d3f2cc4071d7e4d59ff6a2e3c7db0531b78477abae18804c47d6d35b",
+    "exact_artifact_zip_and_preview_gate": "passed",
+    "gate_pass_markers": 2,
+    "shared_structure": "passed",
+    "failed_step": "Verify shared production contract added after the game candidate",
+    "failure": "Shared production file changed: scripts/vn-contract.mjs",
+    "diagnosis": "The new hash check used working-copy bytes; Windows checkout can convert LF to CRLF. The corrected check binds canonical Git bytes to the existing manifest and separately requires working copies to differ only by CRLF-to-LF checkout normalization.",
+    "public_upload_step": "skipped",
+    "game_or_package_changes": false,
+    "log_sha256": "cea5f17e0fee911f2825d2e7c5a6690806fe0502a830a580c9a01cf2ca7da7ee",
+    "retry_policy": "Keep the same accepted candidate, artifact and package SHA; change only the publication workflow and document record, then trigger a new authorization commit."
+  },
+  "limits": "Public ZIP readback ran on the actual Windows publisher. Root independently verified logs, release/tag/latest identities, package/preview/checksum asset digests and preserved old releases. No local original ZIP/PNG byte reassembly is claimed."
+}
