@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "status": "pending",
+  "version": "1.1.1",
+  "candidate_commit": "491e9859368a402960afcdf856be4f456b885ec5",
+  "package_sha256": "7f57b4f4d3f2cc4071d7e4d59ff6a2e3c7db0531b78477abae18804c47d6d35b",
+  "reviewer": "",
+  "reviewed_at": "",
+  "unresolved_issues": [],
+  "ordinary_windows": {
+    "status": "pending",
+    "evidence": ""
+  },
+  "display_dpi": {
+    "status": "pending",
+    "evidence": ""
+  },
+  "listening": {
+    "status": "pending",
+    "evidence": ""
+  },
+  "creative_and_freeze": {
+    "status": "pending",
+    "evidence": ""
+  },
+  "reading_time": {
+    "status": "pending",
+    "evidence": "",
+    "normal_minutes": null,
+    "true_minutes": null
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "reviewed_at": "2026-10-08",
+  "user_update_commit": "72d1389af407aa103f696bba4df1f9e5c0b466e5",
+  "candidate_commit": "491e9859368a402960afcdf856be4f456b885ec5",
+  "package_sha256": "7f57b4f4d3f2cc4071d7e4d59ff6a2e3c7db0531b78477abae18804c47d6d35b",
+  "pinned_non_runtime_support_files": {
+    "AGENTS.md": "7f667d701879491da6d3396777a012d85266bcf9",
+    "scripts/vn-contract.mjs": "42b74123d7e3118fde12be2501c98365b0927330",
+    "scripts/vn-contract.d.mts": "6620c50d14ad8df5a23b20cf81827fabf892061d",
+    ".github/workflows/recover-v111-review.yml": "9430b339c5dc173e0dd14ba2c8b1ef86251df62b"
+  },
+  "shared_contract": {
+    "command": "node scripts/vn-contract.mjs game/data/story.json",
+    "status": "passed",
+    "contract": "1.0.0",
+    "scenes": 26,
+    "lines": 539,
+    "choices": 4,
+    "endings": 2,
+    "sha256_manifest": "all three existing entries match"
+  },
+  "release_gate_tests": {
+    "command": "python -m unittest discover -s tests -p test_release_gate.py",
+    "passed": 20,
+    "seconds": 0.064
+  },
+  "game_source_equivalence": {
+    "candidate_commit": "491e9859368a402960afcdf856be4f456b885ec5",
+    "candidate_tree": "2221cea3db8c5ff58e82ae4715b6d2346def54b6",
+    "compared_to": "5153bca5ff4502c2c444259f36042baa2ff9a0dc",
+    "game_tree": "e80bbb8123fd306356fbbb483456d4f6c1848ebb",
+    "changed_paths": [
+      ".github/workflows/recover-v111-review.yml",
+      "AGENTS.md",
+      "docs/REUSE-NETLOVE.md",
+      "docs/WORK_CHECKPOINT.md",
+      "docs/evidence/v111-development-checkpoint.json",
+      "docs/evidence/v111-review-recovery-request.json",
+      "docs/production/REUSE-MANIFEST.json",
+      "docs/production/SHARED-VN.md",
+      "scripts/vn-contract.d.mts",
+      "scripts/vn-contract.mjs"
+    ],
+    "runtime_paths_changed": [],
+    "pinned_non_runtime_support_files": {
+      "AGENTS.md": "7f667d701879491da6d3396777a012d85266bcf9",
+      "scripts/vn-contract.mjs": "42b74123d7e3118fde12be2501c98365b0927330",
+      "scripts/vn-contract.d.mts": "6620c50d14ad8df5a23b20cf81827fabf892061d",
+      ".github/workflows/recover-v111-review.yml": "9430b339c5dc173e0dd14ba2c8b1ef86251df62b"
+    },
+    "policy": "Only docs/**, README.md, ROADMAP.md, CHANGELOG.md, release-v111.yml and the four exact pinned support blobs may differ; all accepted game/tool/test/assets/license bytes remain unchanged."
+  },
+  "recovery": {
+    "run_id": 37790865785,
+    "status": "success",
+    "records": {
+      "sha256": "da8e1aa601535fd9c0a2f487b0abfa55408dee044b6e24c5edb1ff2f533bacdd",
+      "raw_bytes": 143988,
+      "encoded_length": 191984,
+      "chunks": 24,
+      "seal_verified": true,
+      "job_id": 113357578265,
+      "run_id": 37790865785
+    },
+    "images": [
+      {
+        "sha256": "609f980c48c36735de501da8890f8cc5f27cab5d951c624f959bb884e77cbada",
+        "raw_bytes": 2311693,
+        "encoded_length": 3082260,
+        "chunks": 386,
+        "seal_verified": true,
+        "group": 0,
+        "job_id": 113357703275,
+        "run_id": 37790865785
+      },
+      {
+        "sha256": "cf8c6757b2d62ed4f178f96f72e5e437f362b12f7aa487241387f80a6f08898f",
+        "raw_bytes": 1538359,
+        "encoded_length": 2051148,
+        "chunks": 257,
+        "seal_verified": true,
+        "group": 1,
+        "job_id": 113357703462,
+        "run_id": 37790865785
+      },
+      {
+        "sha256": "5384e630763fd2445f65e14d85a86d8dfe45016935a18c9b216cf0361d0fa9f4",
+        "raw_bytes": 1533565,
+        "encoded_length": 2044756,
+        "chunks": 256,
+        "seal_verified": true,
+        "group": 2,
+        "job_id": 113357703229,
+        "run_id": 37790865785
+      },
+      {
+        "sha256": "7b6461d7dc2b689e399ba0b0c6dd257ebd3e77423f4de26af8473c4259a68a0c",
+        "raw_bytes": 1979786,
+        "encoded_length": 2639716,
+        "chunks": 330,
+        "seal_verified": true,
+        "group": 3,
+        "job_id": 113357703336,
+        "run_id": 37790865785
+      },
+      {
+        "sha256": "ddbd1556b3290d37a835666a44ec89f3520bbf06525b3415dfdf9becc2d1f033",
+        "raw_bytes": 1024680,
+        "encoded_length": 1366240,
+        "chunks": 171,
+        "seal_verified": true,
+        "group": 4,
+        "job_id": 113357703330,
+        "run_id": 37790865785
+      },
+      {
+        "sha256": "ef29bb3b90c7239a85955323b10a2cb0e6db6444abc04aa346a1ddfcf55758d5",
+        "raw_bytes": 1980984,
+        "encoded_length": 2641312,
+        "chunks": 331,
+        "seal_verified": true,
+        "group": 5,
+        "job_id": 113357703509,
+        "run_id": 37790865785
+      }
+    ],
+    "previous_transport_attempt": {
+      "run_id": 37790696499,
+      "status": "failure",
+      "reason": "GitHub CLI terminal escape filtering rejected raw log output; corrected only for captured /logs bytes.",
+      "affects_original_windows_candidate": false
+    }
+  },
+  "limits": "Generic structure validation is supplementary. The native 16-state-route regression and Windows source/EXE/upgrade checks remain authoritative."
+}

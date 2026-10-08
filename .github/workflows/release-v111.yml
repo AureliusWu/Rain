@@ -74,6 +74,16 @@ jobs:
           "$env:PACKAGE_SHA  $env:PACKAGE_NAME" | Set-Content accepted-package/SHA256SUMS.txt -Encoding utf8NoBOM
           # The expected gh 404 probes leave LASTEXITCODE=1; all checks above passed.
           exit 0
+      - name: Verify shared production contract added after the game candidate
+        shell: pwsh
+        run: |
+          node scripts/vn-contract.mjs game/data/story.json
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          $manifest = Get-Content docs/production/REUSE-MANIFEST.json -Raw | ConvertFrom-Json
+          foreach ($file in $manifest.files.PSObject.Properties) {
+            $actual = (Get-FileHash -LiteralPath $file.Name -Algorithm SHA256).Hash.ToLower()
+            if ($actual -ne $file.Value) { throw "Shared production file changed: $($file.Name)" }
+          }
       - name: Verify publication commit contains the identical accepted game source
         shell: pwsh
         env:
@@ -83,7 +93,19 @@ jobs:
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           $changes = @(git diff --name-only $env:ACCEPTED_COMMIT $env:GITHUB_SHA)
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          $allowedMetadata = @('README.md', 'ROADMAP.md', 'CHANGELOG.md', '.github/workflows/release-v111.yml')
+          # These post-candidate support files do not enter the reviewed player ZIP.
+          $pinnedSupportFiles = @{
+            'AGENTS.md' = '7f667d701879491da6d3396777a012d85266bcf9'
+            'scripts/vn-contract.mjs' = '42b74123d7e3118fde12be2501c98365b0927330'
+            'scripts/vn-contract.d.mts' = '6620c50d14ad8df5a23b20cf81827fabf892061d'
+            '.github/workflows/recover-v111-review.yml' = '9430b339c5dc173e0dd14ba2c8b1ef86251df62b'
+          }
+          foreach ($path in $pinnedSupportFiles.Keys) {
+            $object = git rev-parse "$($env:GITHUB_SHA):$path"
+            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+            if ($object.Trim() -ne $pinnedSupportFiles[$path]) { throw "Post-candidate support file differs: $path" }
+          }
+          $allowedMetadata = @('README.md', 'ROADMAP.md', 'CHANGELOG.md', '.github/workflows/release-v111.yml') + @($pinnedSupportFiles.Keys)
           $unexpected = @($changes | Where-Object { $_ -cnotmatch '^docs/' -and $_ -cnotin $allowedMetadata })
           if ($unexpected.Count -ne 0) { throw "Publication changed accepted game source: $($unexpected -join ', ')" }
           $main = gh api "repos/$env:GITHUB_REPOSITORY/branches/main" | ConvertFrom-Json

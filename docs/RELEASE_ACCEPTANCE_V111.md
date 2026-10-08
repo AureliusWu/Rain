@@ -1,4 +1,4 @@
-# 当前断点：v1.1.1 工程与画面验收完成，待同字节发行
+# v1.1.1 发行验收 — 2026-10-08
 
 音乐鉴赏显示已解锁数量、当前曲名及播放 / 暂停 / 停止状态；暂停后显示“继续”，停止后提示选择已解锁音乐。状态分隔符改用现有字体支持的中文冒号，修复方框缺字。
 
@@ -16,10 +16,12 @@ Windows 审计完整解码并核对 **174 张原始 PNG** 的尺寸 / SHA-256；
 
 真人试听、Normal / True 阅读计时、普通电脑 / 中文路径 / DPI、最终创作定案与冻结继续由用户统一操作，五组保持 pending。Windows 使用 dummy 音频，自动执行耗时不等于阅读时长；真实旧档覆盖两个代表位置，未宣称验证全部玩家旧档或 Linux 原生 UI。
 
-首批 `91cd486` / CI 37651109153 因状态分隔符缺字被拒，未发布；修正候选为本页所列 `491e985`，已重新完成全部 Windows 流程与12个新图直接检查。失败记录保留在 [首批视觉记录](evidence/v111-first-visual-failure.json)。
+| 证据 | 位置 |
+|---|---|
+| 机器、ZIP、原生进程、174 PNG | [v111-acceptance.json](evidence/v111-acceptance.json) |
+| 58个逐图结论与原图 / JPEG 绑定 | [v111-visual-review.json](evidence/v111-visual-review.json) |
+| 新增共享文件、精确 blob 与门禁验证 | [v111-support-review.json](evidence/v111-support-review.json) |
+| 用户发布指令及精确候选 / ZIP | [V111_PUBLICATION_AUTHORIZATION.json](review/V111_PUBLICATION_AUTHORIZATION.json) |
+| 五组真实待办 | [V111_HUMAN_ACCEPTANCE.json](review/V111_HUMAN_ACCEPTANCE.json) |
 
-新增共享制作内容来自 `72d1389af407aa103f696bba4df1f9e5c0b466e5`，已保留原样。原始日志过大，使用封印校验和6组有界日志恢复12个图；恢复 CI 37790865785 成功。原始 Windows CI、原始 ZIP、174 PNG 的身份保持相同。
-
-下一步创建已绑定候选与 ZIP 的发布授权提交，保持 main 不变直至发行完成；验证三次门禁、公开 ZIP 回读、最新 Release 及旧版身份后更新本页。
-
-继续工作仅在 `AureliusWu/Test` / `main`。不重复已完成的语音生成、不覆盖任何旧正式版、不虚填真人结果。
+原始 Windows 导出封印 SHA-256 `0be81309b80b4b380bb5a20ae26a7e17f0df787764ae26bd1e75a230fbbc3ec8`，10,482,106 字节，1,748个连续分块。当前12个 JPEG 哈希及46条既有原图审阅链独立核对。原始 ZIP / PNG 字节审计在 Windows runner 执行；未宣称本地下载并重组原始大包。发行 CI 必须实际下载工件及公开 ZIP，通过相同 SHA-256 / CRC 门禁。

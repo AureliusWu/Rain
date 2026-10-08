@@ -1,0 +1,3058 @@
+{
+  "schema_version": 1,
+  "status": "technical_and_visual_passed_with_human_limits",
+  "version": "1.1.1",
+  "candidate_commit": "491e9859368a402960afcdf856be4f456b885ec5",
+  "candidate_tree": "2221cea3db8c5ff58e82ae4715b6d2346def54b6",
+  "run_id": 37711912728,
+  "engine": "RenPy 8.5.3.26051504",
+  "ci_context": {
+    "run_id": "37711912728",
+    "version": "1.1.1",
+    "commit": "491e9859368a402960afcdf856be4f456b885ec5",
+    "audio_driver": "dummy"
+  },
+  "suites": {
+    "source": {
+      "cases": 36,
+      "assertions": 448,
+      "failed": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "skipped": 0,
+      "not_run": 0,
+      "screenshots_checked": 82,
+      "process": {
+        "timeout_seconds": 2400,
+        "elapsed_seconds": 1618.766,
+        "timed_out": false,
+        "returncode": 0,
+        "scope": "native process only; required screenshots are checked separately"
+      },
+      "report_sha256": "b289a0edcdd11b5d0b69030534dc06c0746fdcd055dd1d4ba53b1463908409c4",
+      "report_path": "reports/source-process/stdout.txt",
+      "test_plan_sha256": "da6ea792f451ce1ed5f34072b547ecab9a50cab9fa838f5e26ab4a0f86423db1",
+      "required_screenshots": [
+        "audio-normal-voice",
+        "audio-true-voice",
+        "auto-voice-in-progress",
+        "bg-exit-after-rain",
+        "bg-exit-covered",
+        "bg-nearby-cafe",
+        "bg-s05_separate_path",
+        "bg-s05_shared_path",
+        "branch-s04_open",
+        "branch-s04_reserved",
+        "cg-letter",
+        "chapter-prologue",
+        "chapter-today",
+        "expression-angry",
+        "expression-embarrassed",
+        "expression-happy",
+        "expression-normal",
+        "expression-sad",
+        "expression-smile",
+        "expression-surprised",
+        "first-choice",
+        "first-dialogue",
+        "history",
+        "main-menu",
+        "native-about",
+        "native-choice",
+        "native-extras-cg",
+        "native-extras-locked",
+        "native-extras-music",
+        "native-extras-music-locked",
+        "native-extras-music-paused",
+        "native-extras-music-stopped",
+        "native-extras-unlocked",
+        "native-history-voice-replay",
+        "native-main-menu",
+        "native-settings",
+        "native-voice-replay",
+        "restart-normal-ending",
+        "revisit-choice",
+        "rollback-letter-choice",
+        "rollback-rechoice-normal",
+        "route-01-true",
+        "route-02-normal",
+        "route-03-true",
+        "route-04-normal",
+        "route-05-true",
+        "route-06-normal",
+        "route-07-normal",
+        "route-08-normal",
+        "route-09-true",
+        "route-10-normal",
+        "route-11-normal",
+        "route-12-normal",
+        "route-13-normal",
+        "route-14-normal",
+        "route-15-normal",
+        "route-16-normal",
+        "save-load-before-cg",
+        "save-load-cafe-after-rain-stop",
+        "save-load-cafe-before-rain-stop",
+        "save-load-chapter-four",
+        "save-load-departure",
+        "save-load-letter-cg",
+        "save-load-normal-ending",
+        "save-load-shared-path",
+        "scaled-choice",
+        "scaled-dialogue",
+        "scaled-extras-locked",
+        "scaled-extras-music",
+        "scaled-extras-music-paused",
+        "scaled-extras-music-stopped",
+        "scaled-extras-unlocked",
+        "scaled-history",
+        "scaled-history-voice-replay",
+        "scaled-load",
+        "scaled-main-menu",
+        "scaled-save",
+        "scaled-settings",
+        "scaled-voice-replay",
+        "scaled-voice-replay-after-load",
+        "settings",
+        "skip-final-choice"
+      ]
+    },
+    "standalone": {
+      "cases": 36,
+      "assertions": 448,
+      "failed": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "skipped": 0,
+      "not_run": 0,
+      "screenshots_checked": 82,
+      "process": {
+        "timeout_seconds": 2400,
+        "elapsed_seconds": 1104.312,
+        "timed_out": false,
+        "returncode": 0,
+        "scope": "native process only; required screenshots are checked separately"
+      },
+      "report_sha256": "abfad40797be0d23727093017001740e056d8339ad990dae2a2335b58e4cd67e",
+      "report_path": "reports/package/stdout.txt",
+      "test_plan_sha256": "da6ea792f451ce1ed5f34072b547ecab9a50cab9fa838f5e26ab4a0f86423db1",
+      "required_screenshots": [
+        "audio-normal-voice",
+        "audio-true-voice",
+        "auto-voice-in-progress",
+        "bg-exit-after-rain",
+        "bg-exit-covered",
+        "bg-nearby-cafe",
+        "bg-s05_separate_path",
+        "bg-s05_shared_path",
+        "branch-s04_open",
+        "branch-s04_reserved",
+        "cg-letter",
+        "chapter-prologue",
+        "chapter-today",
+        "expression-angry",
+        "expression-embarrassed",
+        "expression-happy",
+        "expression-normal",
+        "expression-sad",
+        "expression-smile",
+        "expression-surprised",
+        "first-choice",
+        "first-dialogue",
+        "history",
+        "main-menu",
+        "native-about",
+        "native-choice",
+        "native-extras-cg",
+        "native-extras-locked",
+        "native-extras-music",
+        "native-extras-music-locked",
+        "native-extras-music-paused",
+        "native-extras-music-stopped",
+        "native-extras-unlocked",
+        "native-history-voice-replay",
+        "native-main-menu",
+        "native-settings",
+        "native-voice-replay",
+        "restart-normal-ending",
+        "revisit-choice",
+        "rollback-letter-choice",
+        "rollback-rechoice-normal",
+        "route-01-true",
+        "route-02-normal",
+        "route-03-true",
+        "route-04-normal",
+        "route-05-true",
+        "route-06-normal",
+        "route-07-normal",
+        "route-08-normal",
+        "route-09-true",
+        "route-10-normal",
+        "route-11-normal",
+        "route-12-normal",
+        "route-13-normal",
+        "route-14-normal",
+        "route-15-normal",
+        "route-16-normal",
+        "save-load-before-cg",
+        "save-load-cafe-after-rain-stop",
+        "save-load-cafe-before-rain-stop",
+        "save-load-chapter-four",
+        "save-load-departure",
+        "save-load-letter-cg",
+        "save-load-normal-ending",
+        "save-load-shared-path",
+        "scaled-choice",
+        "scaled-dialogue",
+        "scaled-extras-locked",
+        "scaled-extras-music",
+        "scaled-extras-music-paused",
+        "scaled-extras-music-stopped",
+        "scaled-extras-unlocked",
+        "scaled-history",
+        "scaled-history-voice-replay",
+        "scaled-load",
+        "scaled-main-menu",
+        "scaled-save",
+        "scaled-settings",
+        "scaled-voice-replay",
+        "scaled-voice-replay-after-load",
+        "settings",
+        "skip-final-choice"
+      ]
+    },
+    "fresh_process": {
+      "cases": 1,
+      "assertions": 16,
+      "failed": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "skipped": 0,
+      "not_run": 0,
+      "screenshots_checked": 3,
+      "process": {
+        "timeout_seconds": 120,
+        "elapsed_seconds": 8.938,
+        "timed_out": false,
+        "returncode": 0,
+        "scope": "native process only; required screenshots are checked separately"
+      },
+      "report_sha256": "f4f4f024ccc7e99b2d153564d543e16deb23fe5202e0efac32d1fddbad28d389",
+      "report_path": "reports/package/persistence/stdout.txt",
+      "test_plan_sha256": "7cf4267630c2827bc535386d55e79555477630a29eee3d6bf88f0f19077061cc",
+      "required_screenshots": [
+        "cross-process-late-load",
+        "native-extras-music-persistent",
+        "native-extras-persistent"
+      ]
+    },
+    "upgrade_writer": {
+      "cases": 1,
+      "assertions": 14,
+      "failed": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "skipped": 0,
+      "not_run": 0,
+      "screenshots_checked": 3,
+      "process": {
+        "timeout_seconds": 300,
+        "elapsed_seconds": 43.657,
+        "timed_out": false,
+        "returncode": 0,
+        "scope": "native process only; required screenshots are checked separately"
+      },
+      "report_sha256": "a0d7ea7c3132c62e631d4a53b8eb278b84212b4382964a161484fa25ccfd885b",
+      "report_path": "reports/upgrade/writer/stdout.txt",
+      "test_plan_sha256": "838488039784f04cbdaf7ce58fcad08ba62841684555ecda3fcc63ba455261b4",
+      "required_screenshots": [
+        "upgrade-previous-extras-music",
+        "upgrade-previous-first-voice",
+        "upgrade-previous-late-save"
+      ]
+    },
+    "upgrade_reader": {
+      "cases": 2,
+      "assertions": 26,
+      "failed": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "skipped": 0,
+      "not_run": 0,
+      "screenshots_checked": 4,
+      "process": {
+        "timeout_seconds": 300,
+        "elapsed_seconds": 13.687,
+        "timed_out": false,
+        "returncode": 0,
+        "scope": "native process only; required screenshots are checked separately"
+      },
+      "report_sha256": "5d3ba88bbbecf87a335e615dcb0c0bc8e85da76c3a0db029812911663340d6ec",
+      "report_path": "reports/upgrade/reader/stdout.txt",
+      "test_plan_sha256": "8ce95631e67148c91e81f384a021070c61d8c699dd36caa6350145c5d7269eeb",
+      "required_screenshots": [
+        "cross-process-late-load",
+        "native-extras-music-persistent",
+        "native-extras-persistent",
+        "upgrade-current-voice-load"
+      ]
+    }
+  },
+  "package": {
+    "file": "BeforeTheRainStops-1.1.1-win.zip",
+    "size_in_bytes": 56382628,
+    "sha256": "7f57b4f4d3f2cc4071d7e4d59ff6a2e3c7db0531b78477abae18804c47d6d35b",
+    "entries": 1624,
+    "crc": "passed",
+    "test_scripts_in_original_zip": false,
+    "assets_checked": 85,
+    "build_info": {
+      "info": {},
+      "time": 1791422416.022276,
+      "name": "雨停之前",
+      "version": "1.1.1"
+    },
+    "license_and_credits_documents": [
+      {
+        "path": "licenses/Kokoro-model-Apache-2.0.txt",
+        "checkout_sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+        "packaged_sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+        "comparison": "identical_bytes"
+      },
+      {
+        "path": "licenses/SourceHanSans-OFL.txt",
+        "checkout_sha256": "1953855bf1927e7214385bbdd8adb04cc5e8a0ecd0e6eaedeb1bdc281b009481",
+        "packaged_sha256": "1953855bf1927e7214385bbdd8adb04cc5e8a0ecd0e6eaedeb1bdc281b009481",
+        "comparison": "identical_bytes"
+      },
+      {
+        "path": "licenses/Qwen3-TTS-Apache-2.0.txt",
+        "checkout_sha256": "2b8b9e82917d28dacc83fcb496c097c05e2032a8abd9f1bce86b7893167a21d6",
+        "packaged_sha256": "2b8b9e82917d28dacc83fcb496c097c05e2032a8abd9f1bce86b7893167a21d6",
+        "comparison": "identical_bytes"
+      },
+      {
+        "path": "licenses/RENPY.txt",
+        "checkout_sha256": "3aaf0d1a4c1c20eea96d675981883ffc05e17c8426f077190d6ed0a9d2e586d0",
+        "packaged_sha256": "3aaf0d1a4c1c20eea96d675981883ffc05e17c8426f077190d6ed0a9d2e586d0",
+        "comparison": "identical_bytes"
+      },
+      {
+        "path": "LICENSE",
+        "checkout_sha256": "33e85d24e8df239c6eeab0cf6f40ad308f28b4b18470e7baa723ef5665d8549c",
+        "packaged_sha256": "33e85d24e8df239c6eeab0cf6f40ad308f28b4b18470e7baa723ef5665d8549c",
+        "comparison": "identical_bytes"
+      },
+      {
+        "path": "CREDITS.md",
+        "checkout_sha256": "7a5d7aa757638f2510090346227b87efd9f8b27c2726d71e7213f8f7609ea648",
+        "packaged_sha256": "7a5d7aa757638f2510090346227b87efd9f8b27c2726d71e7213f8f7609ea648",
+        "comparison": "identical_bytes"
+      }
+    ]
+  },
+  "screenshots_count": 174,
+  "screenshots": [
+    {
+      "scope": "source",
+      "name": "audio-normal-voice",
+      "path": "reports/screenshots/audio-normal-voice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "e583f6e43b78eda8c5ac503382ca5fefd20b23a7abdadd2984ab4feff82d87a6"
+    },
+    {
+      "scope": "source",
+      "name": "audio-true-voice",
+      "path": "reports/screenshots/audio-true-voice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "6c0aea49bf8a10880cf72475b24bb5e3e9448dcb1194e52b0071c55c8a521154"
+    },
+    {
+      "scope": "source",
+      "name": "auto-voice-in-progress",
+      "path": "reports/screenshots/auto-voice-in-progress.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "866dde11ff3dd20c2eb99a72e9d5ebc5c60a9f5cfd66e4fb597bda35d86d80bb"
+    },
+    {
+      "scope": "source",
+      "name": "bg-exit-after-rain",
+      "path": "reports/screenshots/bg-exit-after-rain.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "00e1e95a6bc8737e37583090ee397a978d706ae9910da20f2cb46476526ce853"
+    },
+    {
+      "scope": "source",
+      "name": "bg-exit-covered",
+      "path": "reports/screenshots/bg-exit-covered.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "18090c7fd3caa3c66260ef016ee06f32db10178a5f31d8c8a4b2aa38e20d21f2"
+    },
+    {
+      "scope": "source",
+      "name": "bg-nearby-cafe",
+      "path": "reports/screenshots/bg-nearby-cafe.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac"
+    },
+    {
+      "scope": "source",
+      "name": "bg-s05_separate_path",
+      "path": "reports/screenshots/bg-s05_separate_path.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "beabea97cd1f928b269877e3c9a7628197a3ae2a7ab0a487b52440bf187226c6"
+    },
+    {
+      "scope": "source",
+      "name": "bg-s05_shared_path",
+      "path": "reports/screenshots/bg-s05_shared_path.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "23a8c42c8b26dda67d5ad1fbedb29337cd5a3b0816f3a9a0ac32d5cd44916ef6"
+    },
+    {
+      "scope": "source",
+      "name": "branch-s04_open",
+      "path": "reports/screenshots/branch-s04_open.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7e5218164815bd8d35a59b6a848bdb8e27b1222265cbaa3fc25a8441d4d6136f"
+    },
+    {
+      "scope": "source",
+      "name": "branch-s04_reserved",
+      "path": "reports/screenshots/branch-s04_reserved.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "f82076c7b1c1649b24f29a9cf5e5992428f522d4ad7029e78602006da58b972f"
+    },
+    {
+      "scope": "source",
+      "name": "cg-letter",
+      "path": "reports/screenshots/cg-letter.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "1d97e32d5261d86436908f9dabd72504d1df1cb3622284750bdb3c83fcca3924"
+    },
+    {
+      "scope": "source",
+      "name": "chapter-prologue",
+      "path": "reports/screenshots/chapter-prologue.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "1dc207749ee71e954341f8a641f9875d99b06d607d5fc7086eb49c794e323b02"
+    },
+    {
+      "scope": "source",
+      "name": "chapter-today",
+      "path": "reports/screenshots/chapter-today.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "6079777cb7cb0231ee102dab0c79f911cbd442714a30e6ef9e2fbdf104a3ef08"
+    },
+    {
+      "scope": "source",
+      "name": "expression-angry",
+      "path": "reports/screenshots/expression-angry.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "98884ee38e325a804ae3ee7599f31cdae89bd7f12b10777189f717b695bcae2d"
+    },
+    {
+      "scope": "source",
+      "name": "expression-embarrassed",
+      "path": "reports/screenshots/expression-embarrassed.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "f48e7538a53ccdef70a2b2c6f1c811ed291e2e492bb8aa4590e4f418152c084e"
+    },
+    {
+      "scope": "source",
+      "name": "expression-happy",
+      "path": "reports/screenshots/expression-happy.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "d4a9a8cd6600c86cfaf011e91c603b3f4cbe51a4ab980fc34ca27baf0d9bca47"
+    },
+    {
+      "scope": "source",
+      "name": "expression-normal",
+      "path": "reports/screenshots/expression-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "eb86566d85033bde110661ce1898ce95c912a4509ec6662f870464ecde024b55"
+    },
+    {
+      "scope": "source",
+      "name": "expression-sad",
+      "path": "reports/screenshots/expression-sad.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "5028bcd7d6888831548cc0c2c3ed13bdd1070f3b222d24c2b32ac7de6942bb28"
+    },
+    {
+      "scope": "source",
+      "name": "expression-smile",
+      "path": "reports/screenshots/expression-smile.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "30c73292f22c4cf234b2b261fa22f33ad68dbf49a2d06b8a91f5cb3cfea11c6a"
+    },
+    {
+      "scope": "source",
+      "name": "expression-surprised",
+      "path": "reports/screenshots/expression-surprised.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "6eb871b901a508842edc10c950fa4c530d59711426101201f8f7be822585d725"
+    },
+    {
+      "scope": "source",
+      "name": "first-choice",
+      "path": "reports/screenshots/first-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "927746409e8975ba56aed6ca17e482f0cabfadcab16396e48d3026ac06a4f0d4"
+    },
+    {
+      "scope": "source",
+      "name": "first-dialogue",
+      "path": "reports/screenshots/first-dialogue.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "30c73292f22c4cf234b2b261fa22f33ad68dbf49a2d06b8a91f5cb3cfea11c6a"
+    },
+    {
+      "scope": "source",
+      "name": "history",
+      "path": "reports/screenshots/history.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "18ec98240a0b8e584397a8165d68fee69557f462654284d4b53f170894b95db6"
+    },
+    {
+      "scope": "source",
+      "name": "main-menu",
+      "path": "reports/screenshots/main-menu.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "56b7ddc175d438e8936048cc07cb07f4d434be2489fc71a64d89e1515b088907"
+    },
+    {
+      "scope": "source",
+      "name": "native-about",
+      "path": "reports/screenshots/native-about.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "8eb20eefac4034cb71181288efccd9256dd9b0aea51f5e5776bc46026eee80df"
+    },
+    {
+      "scope": "source",
+      "name": "native-choice",
+      "path": "reports/screenshots/native-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "36038fe31be4a5536c4b20edef06114fa30fde01cb45ccf48c4bb577a44183d9"
+    },
+    {
+      "scope": "source",
+      "name": "native-extras-cg",
+      "path": "reports/screenshots/native-extras-cg.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "e617e70fcecc59534634e77346069bda0789b9f57368c33847e8c51700ff2b94"
+    },
+    {
+      "scope": "source",
+      "name": "native-extras-locked",
+      "path": "reports/screenshots/native-extras-locked.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "0214e8f48bedf81e91d474892b0d7936cc82ee0ae96ec13902d64c4c0608f6ba"
+    },
+    {
+      "scope": "source",
+      "name": "native-extras-music",
+      "path": "reports/screenshots/native-extras-music.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "0e88744198be90e3e42bc0b355d6d842d4e4ac111b69ff5760e1fa7adb8cf341"
+    },
+    {
+      "scope": "source",
+      "name": "native-extras-music-locked",
+      "path": "reports/screenshots/native-extras-music-locked.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "dead78533fc4552c6067fd9ba6da6ec64ec96e2d8cb8cc0e20f0ccee6566e52b"
+    },
+    {
+      "scope": "source",
+      "name": "native-extras-music-paused",
+      "path": "reports/screenshots/native-extras-music-paused.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "afdb1ff7ae7a2237543768843493c35de9bbd0d27b624cd0e9df119d29d76321"
+    },
+    {
+      "scope": "source",
+      "name": "native-extras-music-stopped",
+      "path": "reports/screenshots/native-extras-music-stopped.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "c9c3f512f37787fd1b2e5af7722a0aa40b3110bf7ddf5cac41ed31382c1d41bb"
+    },
+    {
+      "scope": "source",
+      "name": "native-extras-unlocked",
+      "path": "reports/screenshots/native-extras-unlocked.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "31a2d667f6fece459c8384e40c4998dd809f11b864ebd04b52215420af8c6a94"
+    },
+    {
+      "scope": "source",
+      "name": "native-history-voice-replay",
+      "path": "reports/screenshots/native-history-voice-replay.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "9171031ac7ee173e5e9d37b5e87a93acc1821d14c3c400470819acf5c64e24ad"
+    },
+    {
+      "scope": "source",
+      "name": "native-main-menu",
+      "path": "reports/screenshots/native-main-menu.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "56b7ddc175d438e8936048cc07cb07f4d434be2489fc71a64d89e1515b088907"
+    },
+    {
+      "scope": "source",
+      "name": "native-settings",
+      "path": "reports/screenshots/native-settings.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "0ce265f22d02fdfbe9579ede57e42007e597f302cbdb5e8e7d65e648253b0acd"
+    },
+    {
+      "scope": "source",
+      "name": "native-voice-replay",
+      "path": "reports/screenshots/native-voice-replay.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "f7aacaf5e5f5a844a5e06c2ff4a72b965a851e148966de701fb353254af8465d"
+    },
+    {
+      "scope": "source",
+      "name": "restart-normal-ending",
+      "path": "reports/screenshots/restart-normal-ending.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "name": "revisit-choice",
+      "path": "reports/screenshots/revisit-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "9e952e347a9aef201d6919ffc11c0f0e69a1adc0be5ec662d3fe9c3962bb47d6"
+    },
+    {
+      "scope": "source",
+      "name": "rollback-letter-choice",
+      "path": "reports/screenshots/rollback-letter-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "c5fc67db46fdc44632a70736dc9d27d06c26f141c6e36c22745194d852855393"
+    },
+    {
+      "scope": "source",
+      "name": "rollback-rechoice-normal",
+      "path": "reports/screenshots/rollback-rechoice-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "name": "route-01-true",
+      "path": "reports/screenshots/route-01-true.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "b8de721acc7d807bf3dd8392ebcb1228802e1c7fdfe6c02a87378dec81df2228"
+    },
+    {
+      "scope": "source",
+      "name": "route-02-normal",
+      "path": "reports/screenshots/route-02-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "decec29be269cb2591a52c5c0680ed098ee3cbce549fac0df9208e77394ffcbe"
+    },
+    {
+      "scope": "source",
+      "name": "route-03-true",
+      "path": "reports/screenshots/route-03-true.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "b8de721acc7d807bf3dd8392ebcb1228802e1c7fdfe6c02a87378dec81df2228"
+    },
+    {
+      "scope": "source",
+      "name": "route-04-normal",
+      "path": "reports/screenshots/route-04-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "name": "route-05-true",
+      "path": "reports/screenshots/route-05-true.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "b8de721acc7d807bf3dd8392ebcb1228802e1c7fdfe6c02a87378dec81df2228"
+    },
+    {
+      "scope": "source",
+      "name": "route-06-normal",
+      "path": "reports/screenshots/route-06-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "name": "route-07-normal",
+      "path": "reports/screenshots/route-07-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "name": "route-08-normal",
+      "path": "reports/screenshots/route-08-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "name": "route-09-true",
+      "path": "reports/screenshots/route-09-true.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "b8de721acc7d807bf3dd8392ebcb1228802e1c7fdfe6c02a87378dec81df2228"
+    },
+    {
+      "scope": "source",
+      "name": "route-10-normal",
+      "path": "reports/screenshots/route-10-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "name": "route-11-normal",
+      "path": "reports/screenshots/route-11-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "name": "route-12-normal",
+      "path": "reports/screenshots/route-12-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "name": "route-13-normal",
+      "path": "reports/screenshots/route-13-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "name": "route-14-normal",
+      "path": "reports/screenshots/route-14-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "name": "route-15-normal",
+      "path": "reports/screenshots/route-15-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "name": "route-16-normal",
+      "path": "reports/screenshots/route-16-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "source",
+      "name": "save-load-before-cg",
+      "path": "reports/screenshots/save-load-before-cg.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "a673c03fa76da4db26a192b66ace813d54a53bd2336b9a94a70724c175c695e1"
+    },
+    {
+      "scope": "source",
+      "name": "save-load-cafe-after-rain-stop",
+      "path": "reports/screenshots/save-load-cafe-after-rain-stop.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac"
+    },
+    {
+      "scope": "source",
+      "name": "save-load-cafe-before-rain-stop",
+      "path": "reports/screenshots/save-load-cafe-before-rain-stop.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "581f05e0530f8a721b9cedb41090485d4567cdec089898b6a59feb128571daf7"
+    },
+    {
+      "scope": "source",
+      "name": "save-load-chapter-four",
+      "path": "reports/screenshots/save-load-chapter-four.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "18090c7fd3caa3c66260ef016ee06f32db10178a5f31d8c8a4b2aa38e20d21f2"
+    },
+    {
+      "scope": "source",
+      "name": "save-load-departure",
+      "path": "reports/screenshots/save-load-departure.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "538a5a8a7d70476b47b4c368765e06cc080d66bb3aea706152dc45a297687dcf"
+    },
+    {
+      "scope": "source",
+      "name": "save-load-letter-cg",
+      "path": "reports/screenshots/save-load-letter-cg.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "1d97e32d5261d86436908f9dabd72504d1df1cb3622284750bdb3c83fcca3924"
+    },
+    {
+      "scope": "source",
+      "name": "save-load-normal-ending",
+      "path": "reports/screenshots/save-load-normal-ending.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "00e1e95a6bc8737e37583090ee397a978d706ae9910da20f2cb46476526ce853"
+    },
+    {
+      "scope": "source",
+      "name": "save-load-shared-path",
+      "path": "reports/screenshots/save-load-shared-path.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "23a8c42c8b26dda67d5ad1fbedb29337cd5a3b0816f3a9a0ac32d5cd44916ef6"
+    },
+    {
+      "scope": "source",
+      "name": "scaled-choice",
+      "path": "reports/screenshots/scaled-choice.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "93050dcf561ead5f6911d8751a79cd656d3f18149a5133a3d7cbbfc9350c47d3"
+    },
+    {
+      "scope": "source",
+      "name": "scaled-dialogue",
+      "path": "reports/screenshots/scaled-dialogue.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "c9b69981ee83d0bde20faefbc11149261368a69d1c1163d6e57314947d6229da"
+    },
+    {
+      "scope": "source",
+      "name": "scaled-extras-locked",
+      "path": "reports/screenshots/scaled-extras-locked.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "8bd4a756b8612061c45ba6f6f0ad2c700a0bb758eb231990f9200db4612a613a"
+    },
+    {
+      "scope": "source",
+      "name": "scaled-extras-music",
+      "path": "reports/screenshots/scaled-extras-music.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "616c7ddb6ed618b556bf7e51b0ffcb83861a3b881f4c497cd9a8e242cef35fc5"
+    },
+    {
+      "scope": "source",
+      "name": "scaled-extras-music-paused",
+      "path": "reports/screenshots/scaled-extras-music-paused.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "f261b55a5de575e793cf889e1f5301b3857485932acd296279a3b48ce9475ff5"
+    },
+    {
+      "scope": "source",
+      "name": "scaled-extras-music-stopped",
+      "path": "reports/screenshots/scaled-extras-music-stopped.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "539289c5f72fa4b9c1f046ac65a8045adf79d7a4e69e485a4bee1b0897c2f6d1"
+    },
+    {
+      "scope": "source",
+      "name": "scaled-extras-unlocked",
+      "path": "reports/screenshots/scaled-extras-unlocked.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "2b42c24f4c06d92f34143238d75b4037a7ea714ad96952b7ea9110774ce9fa9c"
+    },
+    {
+      "scope": "source",
+      "name": "scaled-history",
+      "path": "reports/screenshots/scaled-history.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "e014377d3816802d5d1d5ada89e48ee0f720a05caf36636cacee760e7fa9395a"
+    },
+    {
+      "scope": "source",
+      "name": "scaled-history-voice-replay",
+      "path": "reports/screenshots/scaled-history-voice-replay.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "f49bc6817cb4bf9557bbe2c783954b602a7bf5f2081b9a0c023a78bfafb3d126"
+    },
+    {
+      "scope": "source",
+      "name": "scaled-load",
+      "path": "reports/screenshots/scaled-load.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "1c6af37531deeaab7ec91976071d67471cd329648aab35a2cda7d9f07c620eed"
+    },
+    {
+      "scope": "source",
+      "name": "scaled-main-menu",
+      "path": "reports/screenshots/scaled-main-menu.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "76b7890e5d869c444b88d7c0836e65e706ddd9eee5afac1dfb67fac09a06b502"
+    },
+    {
+      "scope": "source",
+      "name": "scaled-save",
+      "path": "reports/screenshots/scaled-save.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "b7825f2a8b71d9eae97070a619d533490d1b1728e2802eae5bba503c388a3680"
+    },
+    {
+      "scope": "source",
+      "name": "scaled-settings",
+      "path": "reports/screenshots/scaled-settings.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "ff949fa006c4032cd572391b268deefb3071eb9b658be5af6e522fd1c65f6b0f"
+    },
+    {
+      "scope": "source",
+      "name": "scaled-voice-replay",
+      "path": "reports/screenshots/scaled-voice-replay.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "96312871a9a3c965285bb0a3b1d69c67ab29fac8a1128dba33fd1030856bffc8"
+    },
+    {
+      "scope": "source",
+      "name": "scaled-voice-replay-after-load",
+      "path": "reports/screenshots/scaled-voice-replay-after-load.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "96312871a9a3c965285bb0a3b1d69c67ab29fac8a1128dba33fd1030856bffc8"
+    },
+    {
+      "scope": "source",
+      "name": "settings",
+      "path": "reports/screenshots/settings.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "c1cd46dc62dcf89c678c7c94602c8fc892c10156d4f2fed96a82657a5396f765"
+    },
+    {
+      "scope": "source",
+      "name": "skip-final-choice",
+      "path": "reports/screenshots/skip-final-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "6552ec267338a996d0003da6f1ff4a59d2b4d23468543710dd2c4ce6540c9723"
+    },
+    {
+      "scope": "standalone",
+      "name": "audio-normal-voice",
+      "path": "reports/package/screenshots/audio-normal-voice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "e583f6e43b78eda8c5ac503382ca5fefd20b23a7abdadd2984ab4feff82d87a6"
+    },
+    {
+      "scope": "standalone",
+      "name": "audio-true-voice",
+      "path": "reports/package/screenshots/audio-true-voice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "6c0aea49bf8a10880cf72475b24bb5e3e9448dcb1194e52b0071c55c8a521154"
+    },
+    {
+      "scope": "standalone",
+      "name": "auto-voice-in-progress",
+      "path": "reports/package/screenshots/auto-voice-in-progress.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "866dde11ff3dd20c2eb99a72e9d5ebc5c60a9f5cfd66e4fb597bda35d86d80bb"
+    },
+    {
+      "scope": "standalone",
+      "name": "bg-exit-after-rain",
+      "path": "reports/package/screenshots/bg-exit-after-rain.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "00e1e95a6bc8737e37583090ee397a978d706ae9910da20f2cb46476526ce853"
+    },
+    {
+      "scope": "standalone",
+      "name": "bg-exit-covered",
+      "path": "reports/package/screenshots/bg-exit-covered.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "18090c7fd3caa3c66260ef016ee06f32db10178a5f31d8c8a4b2aa38e20d21f2"
+    },
+    {
+      "scope": "standalone",
+      "name": "bg-nearby-cafe",
+      "path": "reports/package/screenshots/bg-nearby-cafe.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac"
+    },
+    {
+      "scope": "standalone",
+      "name": "bg-s05_separate_path",
+      "path": "reports/package/screenshots/bg-s05_separate_path.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "beabea97cd1f928b269877e3c9a7628197a3ae2a7ab0a487b52440bf187226c6"
+    },
+    {
+      "scope": "standalone",
+      "name": "bg-s05_shared_path",
+      "path": "reports/package/screenshots/bg-s05_shared_path.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "23a8c42c8b26dda67d5ad1fbedb29337cd5a3b0816f3a9a0ac32d5cd44916ef6"
+    },
+    {
+      "scope": "standalone",
+      "name": "branch-s04_open",
+      "path": "reports/package/screenshots/branch-s04_open.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7e5218164815bd8d35a59b6a848bdb8e27b1222265cbaa3fc25a8441d4d6136f"
+    },
+    {
+      "scope": "standalone",
+      "name": "branch-s04_reserved",
+      "path": "reports/package/screenshots/branch-s04_reserved.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "f82076c7b1c1649b24f29a9cf5e5992428f522d4ad7029e78602006da58b972f"
+    },
+    {
+      "scope": "standalone",
+      "name": "cg-letter",
+      "path": "reports/package/screenshots/cg-letter.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "1d97e32d5261d86436908f9dabd72504d1df1cb3622284750bdb3c83fcca3924"
+    },
+    {
+      "scope": "standalone",
+      "name": "chapter-prologue",
+      "path": "reports/package/screenshots/chapter-prologue.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "1dc207749ee71e954341f8a641f9875d99b06d607d5fc7086eb49c794e323b02"
+    },
+    {
+      "scope": "standalone",
+      "name": "chapter-today",
+      "path": "reports/package/screenshots/chapter-today.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "6079777cb7cb0231ee102dab0c79f911cbd442714a30e6ef9e2fbdf104a3ef08"
+    },
+    {
+      "scope": "standalone",
+      "name": "expression-angry",
+      "path": "reports/package/screenshots/expression-angry.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "98884ee38e325a804ae3ee7599f31cdae89bd7f12b10777189f717b695bcae2d"
+    },
+    {
+      "scope": "standalone",
+      "name": "expression-embarrassed",
+      "path": "reports/package/screenshots/expression-embarrassed.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "f48e7538a53ccdef70a2b2c6f1c811ed291e2e492bb8aa4590e4f418152c084e"
+    },
+    {
+      "scope": "standalone",
+      "name": "expression-happy",
+      "path": "reports/package/screenshots/expression-happy.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "d4a9a8cd6600c86cfaf011e91c603b3f4cbe51a4ab980fc34ca27baf0d9bca47"
+    },
+    {
+      "scope": "standalone",
+      "name": "expression-normal",
+      "path": "reports/package/screenshots/expression-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "eb86566d85033bde110661ce1898ce95c912a4509ec6662f870464ecde024b55"
+    },
+    {
+      "scope": "standalone",
+      "name": "expression-sad",
+      "path": "reports/package/screenshots/expression-sad.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "5028bcd7d6888831548cc0c2c3ed13bdd1070f3b222d24c2b32ac7de6942bb28"
+    },
+    {
+      "scope": "standalone",
+      "name": "expression-smile",
+      "path": "reports/package/screenshots/expression-smile.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "30c73292f22c4cf234b2b261fa22f33ad68dbf49a2d06b8a91f5cb3cfea11c6a"
+    },
+    {
+      "scope": "standalone",
+      "name": "expression-surprised",
+      "path": "reports/package/screenshots/expression-surprised.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "6eb871b901a508842edc10c950fa4c530d59711426101201f8f7be822585d725"
+    },
+    {
+      "scope": "standalone",
+      "name": "first-choice",
+      "path": "reports/package/screenshots/first-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "927746409e8975ba56aed6ca17e482f0cabfadcab16396e48d3026ac06a4f0d4"
+    },
+    {
+      "scope": "standalone",
+      "name": "first-dialogue",
+      "path": "reports/package/screenshots/first-dialogue.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "30c73292f22c4cf234b2b261fa22f33ad68dbf49a2d06b8a91f5cb3cfea11c6a"
+    },
+    {
+      "scope": "standalone",
+      "name": "history",
+      "path": "reports/package/screenshots/history.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "18ec98240a0b8e584397a8165d68fee69557f462654284d4b53f170894b95db6"
+    },
+    {
+      "scope": "standalone",
+      "name": "main-menu",
+      "path": "reports/package/screenshots/main-menu.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "56b7ddc175d438e8936048cc07cb07f4d434be2489fc71a64d89e1515b088907"
+    },
+    {
+      "scope": "standalone",
+      "name": "native-about",
+      "path": "reports/package/screenshots/native-about.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "8eb20eefac4034cb71181288efccd9256dd9b0aea51f5e5776bc46026eee80df"
+    },
+    {
+      "scope": "standalone",
+      "name": "native-choice",
+      "path": "reports/package/screenshots/native-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "36038fe31be4a5536c4b20edef06114fa30fde01cb45ccf48c4bb577a44183d9"
+    },
+    {
+      "scope": "standalone",
+      "name": "native-extras-cg",
+      "path": "reports/package/screenshots/native-extras-cg.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "e617e70fcecc59534634e77346069bda0789b9f57368c33847e8c51700ff2b94"
+    },
+    {
+      "scope": "standalone",
+      "name": "native-extras-locked",
+      "path": "reports/package/screenshots/native-extras-locked.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "0214e8f48bedf81e91d474892b0d7936cc82ee0ae96ec13902d64c4c0608f6ba"
+    },
+    {
+      "scope": "standalone",
+      "name": "native-extras-music",
+      "path": "reports/package/screenshots/native-extras-music.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "0e88744198be90e3e42bc0b355d6d842d4e4ac111b69ff5760e1fa7adb8cf341"
+    },
+    {
+      "scope": "standalone",
+      "name": "native-extras-music-locked",
+      "path": "reports/package/screenshots/native-extras-music-locked.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "dead78533fc4552c6067fd9ba6da6ec64ec96e2d8cb8cc0e20f0ccee6566e52b"
+    },
+    {
+      "scope": "standalone",
+      "name": "native-extras-music-paused",
+      "path": "reports/package/screenshots/native-extras-music-paused.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "afdb1ff7ae7a2237543768843493c35de9bbd0d27b624cd0e9df119d29d76321"
+    },
+    {
+      "scope": "standalone",
+      "name": "native-extras-music-stopped",
+      "path": "reports/package/screenshots/native-extras-music-stopped.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "c9c3f512f37787fd1b2e5af7722a0aa40b3110bf7ddf5cac41ed31382c1d41bb"
+    },
+    {
+      "scope": "standalone",
+      "name": "native-extras-unlocked",
+      "path": "reports/package/screenshots/native-extras-unlocked.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "31a2d667f6fece459c8384e40c4998dd809f11b864ebd04b52215420af8c6a94"
+    },
+    {
+      "scope": "standalone",
+      "name": "native-history-voice-replay",
+      "path": "reports/package/screenshots/native-history-voice-replay.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "9171031ac7ee173e5e9d37b5e87a93acc1821d14c3c400470819acf5c64e24ad"
+    },
+    {
+      "scope": "standalone",
+      "name": "native-main-menu",
+      "path": "reports/package/screenshots/native-main-menu.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "56b7ddc175d438e8936048cc07cb07f4d434be2489fc71a64d89e1515b088907"
+    },
+    {
+      "scope": "standalone",
+      "name": "native-settings",
+      "path": "reports/package/screenshots/native-settings.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "0ce265f22d02fdfbe9579ede57e42007e597f302cbdb5e8e7d65e648253b0acd"
+    },
+    {
+      "scope": "standalone",
+      "name": "native-voice-replay",
+      "path": "reports/package/screenshots/native-voice-replay.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "f7aacaf5e5f5a844a5e06c2ff4a72b965a851e148966de701fb353254af8465d"
+    },
+    {
+      "scope": "standalone",
+      "name": "restart-normal-ending",
+      "path": "reports/package/screenshots/restart-normal-ending.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "name": "revisit-choice",
+      "path": "reports/package/screenshots/revisit-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "9e952e347a9aef201d6919ffc11c0f0e69a1adc0be5ec662d3fe9c3962bb47d6"
+    },
+    {
+      "scope": "standalone",
+      "name": "rollback-letter-choice",
+      "path": "reports/package/screenshots/rollback-letter-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "c5fc67db46fdc44632a70736dc9d27d06c26f141c6e36c22745194d852855393"
+    },
+    {
+      "scope": "standalone",
+      "name": "rollback-rechoice-normal",
+      "path": "reports/package/screenshots/rollback-rechoice-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "name": "route-01-true",
+      "path": "reports/package/screenshots/route-01-true.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "b8de721acc7d807bf3dd8392ebcb1228802e1c7fdfe6c02a87378dec81df2228"
+    },
+    {
+      "scope": "standalone",
+      "name": "route-02-normal",
+      "path": "reports/package/screenshots/route-02-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "decec29be269cb2591a52c5c0680ed098ee3cbce549fac0df9208e77394ffcbe"
+    },
+    {
+      "scope": "standalone",
+      "name": "route-03-true",
+      "path": "reports/package/screenshots/route-03-true.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "b8de721acc7d807bf3dd8392ebcb1228802e1c7fdfe6c02a87378dec81df2228"
+    },
+    {
+      "scope": "standalone",
+      "name": "route-04-normal",
+      "path": "reports/package/screenshots/route-04-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "name": "route-05-true",
+      "path": "reports/package/screenshots/route-05-true.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "b8de721acc7d807bf3dd8392ebcb1228802e1c7fdfe6c02a87378dec81df2228"
+    },
+    {
+      "scope": "standalone",
+      "name": "route-06-normal",
+      "path": "reports/package/screenshots/route-06-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "name": "route-07-normal",
+      "path": "reports/package/screenshots/route-07-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "name": "route-08-normal",
+      "path": "reports/package/screenshots/route-08-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "name": "route-09-true",
+      "path": "reports/package/screenshots/route-09-true.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "b8de721acc7d807bf3dd8392ebcb1228802e1c7fdfe6c02a87378dec81df2228"
+    },
+    {
+      "scope": "standalone",
+      "name": "route-10-normal",
+      "path": "reports/package/screenshots/route-10-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "name": "route-11-normal",
+      "path": "reports/package/screenshots/route-11-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "name": "route-12-normal",
+      "path": "reports/package/screenshots/route-12-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "name": "route-13-normal",
+      "path": "reports/package/screenshots/route-13-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "name": "route-14-normal",
+      "path": "reports/package/screenshots/route-14-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "name": "route-15-normal",
+      "path": "reports/package/screenshots/route-15-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "name": "route-16-normal",
+      "path": "reports/package/screenshots/route-16-normal.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "7bac8fd2e6a47d1cb1bf87ef0770a51bc92f853c0694d4981bcbdf22ddac64e7"
+    },
+    {
+      "scope": "standalone",
+      "name": "save-load-before-cg",
+      "path": "reports/package/screenshots/save-load-before-cg.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "a673c03fa76da4db26a192b66ace813d54a53bd2336b9a94a70724c175c695e1"
+    },
+    {
+      "scope": "standalone",
+      "name": "save-load-cafe-after-rain-stop",
+      "path": "reports/package/screenshots/save-load-cafe-after-rain-stop.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac"
+    },
+    {
+      "scope": "standalone",
+      "name": "save-load-cafe-before-rain-stop",
+      "path": "reports/package/screenshots/save-load-cafe-before-rain-stop.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "581f05e0530f8a721b9cedb41090485d4567cdec089898b6a59feb128571daf7"
+    },
+    {
+      "scope": "standalone",
+      "name": "save-load-chapter-four",
+      "path": "reports/package/screenshots/save-load-chapter-four.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "18090c7fd3caa3c66260ef016ee06f32db10178a5f31d8c8a4b2aa38e20d21f2"
+    },
+    {
+      "scope": "standalone",
+      "name": "save-load-departure",
+      "path": "reports/package/screenshots/save-load-departure.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "538a5a8a7d70476b47b4c368765e06cc080d66bb3aea706152dc45a297687dcf"
+    },
+    {
+      "scope": "standalone",
+      "name": "save-load-letter-cg",
+      "path": "reports/package/screenshots/save-load-letter-cg.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "1d97e32d5261d86436908f9dabd72504d1df1cb3622284750bdb3c83fcca3924"
+    },
+    {
+      "scope": "standalone",
+      "name": "save-load-normal-ending",
+      "path": "reports/package/screenshots/save-load-normal-ending.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "00e1e95a6bc8737e37583090ee397a978d706ae9910da20f2cb46476526ce853"
+    },
+    {
+      "scope": "standalone",
+      "name": "save-load-shared-path",
+      "path": "reports/package/screenshots/save-load-shared-path.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "23a8c42c8b26dda67d5ad1fbedb29337cd5a3b0816f3a9a0ac32d5cd44916ef6"
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-choice",
+      "path": "reports/package/screenshots/scaled-choice.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "93050dcf561ead5f6911d8751a79cd656d3f18149a5133a3d7cbbfc9350c47d3"
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-dialogue",
+      "path": "reports/package/screenshots/scaled-dialogue.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "c9b69981ee83d0bde20faefbc11149261368a69d1c1163d6e57314947d6229da"
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-extras-locked",
+      "path": "reports/package/screenshots/scaled-extras-locked.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "8bd4a756b8612061c45ba6f6f0ad2c700a0bb758eb231990f9200db4612a613a"
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-extras-music",
+      "path": "reports/package/screenshots/scaled-extras-music.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "616c7ddb6ed618b556bf7e51b0ffcb83861a3b881f4c497cd9a8e242cef35fc5"
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-extras-music-paused",
+      "path": "reports/package/screenshots/scaled-extras-music-paused.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "f261b55a5de575e793cf889e1f5301b3857485932acd296279a3b48ce9475ff5"
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-extras-music-stopped",
+      "path": "reports/package/screenshots/scaled-extras-music-stopped.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "539289c5f72fa4b9c1f046ac65a8045adf79d7a4e69e485a4bee1b0897c2f6d1"
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-extras-unlocked",
+      "path": "reports/package/screenshots/scaled-extras-unlocked.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "2b42c24f4c06d92f34143238d75b4037a7ea714ad96952b7ea9110774ce9fa9c"
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-history",
+      "path": "reports/package/screenshots/scaled-history.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "e014377d3816802d5d1d5ada89e48ee0f720a05caf36636cacee760e7fa9395a"
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-history-voice-replay",
+      "path": "reports/package/screenshots/scaled-history-voice-replay.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "f49bc6817cb4bf9557bbe2c783954b602a7bf5f2081b9a0c023a78bfafb3d126"
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-load",
+      "path": "reports/package/screenshots/scaled-load.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "1c6af37531deeaab7ec91976071d67471cd329648aab35a2cda7d9f07c620eed"
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-main-menu",
+      "path": "reports/package/screenshots/scaled-main-menu.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "76b7890e5d869c444b88d7c0836e65e706ddd9eee5afac1dfb67fac09a06b502"
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-save",
+      "path": "reports/package/screenshots/scaled-save.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "b7825f2a8b71d9eae97070a619d533490d1b1728e2802eae5bba503c388a3680"
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-settings",
+      "path": "reports/package/screenshots/scaled-settings.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "ff949fa006c4032cd572391b268deefb3071eb9b658be5af6e522fd1c65f6b0f"
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-voice-replay",
+      "path": "reports/package/screenshots/scaled-voice-replay.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "96312871a9a3c965285bb0a3b1d69c67ab29fac8a1128dba33fd1030856bffc8"
+    },
+    {
+      "scope": "standalone",
+      "name": "scaled-voice-replay-after-load",
+      "path": "reports/package/screenshots/scaled-voice-replay-after-load.png",
+      "pixels": [
+        1280,
+        720
+      ],
+      "sha256": "96312871a9a3c965285bb0a3b1d69c67ab29fac8a1128dba33fd1030856bffc8"
+    },
+    {
+      "scope": "standalone",
+      "name": "settings",
+      "path": "reports/package/screenshots/settings.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "c1cd46dc62dcf89c678c7c94602c8fc892c10156d4f2fed96a82657a5396f765"
+    },
+    {
+      "scope": "standalone",
+      "name": "skip-final-choice",
+      "path": "reports/package/screenshots/skip-final-choice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "6552ec267338a996d0003da6f1ff4a59d2b4d23468543710dd2c4ce6540c9723"
+    },
+    {
+      "scope": "fresh_process",
+      "name": "cross-process-late-load",
+      "path": "reports/package/persistence/screenshots/cross-process-late-load.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac"
+    },
+    {
+      "scope": "fresh_process",
+      "name": "native-extras-music-persistent",
+      "path": "reports/package/persistence/screenshots/native-extras-music-persistent.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "d0989ad3ce1507f23e79cd898ed98be7d092cd446eea8ba557a26f4575e659de"
+    },
+    {
+      "scope": "fresh_process",
+      "name": "native-extras-persistent",
+      "path": "reports/package/persistence/screenshots/native-extras-persistent.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "31a2d667f6fece459c8384e40c4998dd809f11b864ebd04b52215420af8c6a94"
+    },
+    {
+      "scope": "upgrade_writer",
+      "name": "upgrade-previous-extras-music",
+      "path": "reports/upgrade/writer/screenshots/upgrade-previous-extras-music.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "aafabc1e6b991f8dd30436a1068337cefb99d3982721c6eb23bc286bdc810258"
+    },
+    {
+      "scope": "upgrade_writer",
+      "name": "upgrade-previous-first-voice",
+      "path": "reports/upgrade/writer/screenshots/upgrade-previous-first-voice.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "29fe62653e65a9567bfed9c87feb22c7d582dbf6f5e95643a1030dde60edf34b"
+    },
+    {
+      "scope": "upgrade_writer",
+      "name": "upgrade-previous-late-save",
+      "path": "reports/upgrade/writer/screenshots/upgrade-previous-late-save.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "f6997f7e7438680ae60569007905bb1e67e2167fbc7873f6529f0befb175fe55"
+    },
+    {
+      "scope": "upgrade_reader",
+      "name": "cross-process-late-load",
+      "path": "reports/upgrade/reader/screenshots/cross-process-late-load.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "97e496137253a0163604d9d5e176d4ac02f0cec56834e2b2e49a5014749c3aac"
+    },
+    {
+      "scope": "upgrade_reader",
+      "name": "native-extras-music-persistent",
+      "path": "reports/upgrade/reader/screenshots/native-extras-music-persistent.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "d0989ad3ce1507f23e79cd898ed98be7d092cd446eea8ba557a26f4575e659de"
+    },
+    {
+      "scope": "upgrade_reader",
+      "name": "native-extras-persistent",
+      "path": "reports/upgrade/reader/screenshots/native-extras-persistent.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "31a2d667f6fece459c8384e40c4998dd809f11b864ebd04b52215420af8c6a94"
+    },
+    {
+      "scope": "upgrade_reader",
+      "name": "upgrade-current-voice-load",
+      "path": "reports/upgrade/reader/screenshots/upgrade-current-voice-load.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "sha256": "f7aacaf5e5f5a844a5e06c2ff4a72b965a851e148966de701fb353254af8465d"
+    }
+  ],
+  "upgrade": {
+    "status": "passed",
+    "previous_version": "1.1.0",
+    "current_version": "1.1.1",
+    "package_sha256": {
+      "previous": "a6ce022d23e5e88e3666d9806ca69a30077d52c56bf74820f4863f9ddc66fca0",
+      "current": "7f57b4f4d3f2cc4071d7e4d59ff6a2e3c7db0531b78477abae18804c47d6d35b"
+    },
+    "writer": {
+      "cases": 1,
+      "assertions": 14,
+      "failed": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "skipped": 0,
+      "not_run": 0,
+      "screenshots_checked": 3,
+      "native_1080": false
+    },
+    "reader": {
+      "cases": 2,
+      "assertions": 26,
+      "failed": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "skipped": 0,
+      "not_run": 0,
+      "screenshots_checked": 4,
+      "native_1080": true
+    },
+    "original_packages_unmodified": true,
+    "human_listening": false
+  },
+  "compatibility_baseline": {
+    "previous_version": "1.1.0",
+    "package_sha256": "a6ce022d23e5e88e3666d9806ca69a30077d52c56bf74820f4863f9ddc66fca0",
+    "method": "RenPy 8.5.3 old-game statement-name merge",
+    "files": [
+      {
+        "path": "old-game/characters.rpyc",
+        "sha256": "2e82eff67899f33b782762da9c720eede7f250e10ddd2c57ee996ba6ee81fdef"
+      },
+      {
+        "path": "old-game/extras.rpyc",
+        "sha256": "5cf3d46a3e5e085fd269c9ee26abb88d803460b61ba2213fc518cbfd4d405bf9"
+      },
+      {
+        "path": "old-game/gui.rpyc",
+        "sha256": "3d189db687d91adbcb0f17c0c4da583d5e7183f24e4f25d1b7f5d7912db5905a"
+      },
+      {
+        "path": "old-game/options.rpyc",
+        "sha256": "8e1988b1df0309621634fe2cbc5f6becc14dd7fc330b52099a1c26c680db39f2"
+      },
+      {
+        "path": "old-game/screens.rpyc",
+        "sha256": "7816d5a4be1e2d49b65f2b3e3dfd4e845b921aad8a8138e72d8b7840f234addb"
+      },
+      {
+        "path": "old-game/script/extras_generated.rpyc",
+        "sha256": "f4a5c96ecd3f45b11d1209e1831d5d850fb3faf6fdc2cda419a1c962282f4daa"
+      },
+      {
+        "path": "old-game/script/images_generated.rpyc",
+        "sha256": "86ce95551acc997428e6ee520784d7086e66b6fd09139e95c4b72250d868395e"
+      },
+      {
+        "path": "old-game/script/story_generated.rpyc",
+        "sha256": "fc55e2ec4e98183a35d5ec0f683898b791e79b8e0b43926a93a82ad201f1860b"
+      },
+      {
+        "path": "old-game/tl/schinese/common.rpyc",
+        "sha256": "b260a76c3f20e3f31eea16b10d9dd7ca648eb0547c659bc75aaf4304f4448195"
+      },
+      {
+        "path": "old-game/tl/schinese/screens.rpyc",
+        "sha256": "3499929051348c640b0e03970c6e60109ad9fd6ce1b0217129ee92f70fa4e3ca"
+      }
+    ],
+    "baseline_is_not_distributed": true
+  },
+  "voice_smoke": {
+    "status": "passed",
+    "iterations": [
+      {
+        "cases": 6,
+        "assertions": 103,
+        "failed": 0,
+        "xfailed": 0,
+        "xpassed": 0,
+        "skipped": 0,
+        "not_run": 0,
+        "screenshots_checked": 29,
+        "native_1080": true
+      },
+      {
+        "cases": 6,
+        "assertions": 103,
+        "failed": 0,
+        "xfailed": 0,
+        "xpassed": 0,
+        "skipped": 0,
+        "not_run": 0,
+        "screenshots_checked": 29,
+        "native_1080": true
+      }
+    ],
+    "cases": [
+      "native_1080_and_scaled_window",
+      "current_voice_replay_and_restore",
+      "history_voice_replay",
+      "auto_waits_for_replayed_voice",
+      "extras_locked_no_spoilers",
+      "extras_unlock_and_music"
+    ],
+    "prefix_plan_sha256": "11a69a5c39f26bb43f771f0fc76a62cbeed1be3620c635f38dc17fab163819af",
+    "original_project_is_unmodified": true,
+    "game_copies_and_save_directories_are_separate": true,
+    "scope": "Actual full-suite prefix, copied game with only the temporary test plan narrowed"
+  },
+  "display": {
+    "desktop_pixels": [
+      1920,
+      1080
+    ],
+    "bits_per_pixel": 32,
+    "frequency_hz": 64,
+    "display_change_result": 0,
+    "available_modes": [
+      [
+        640,
+        480,
+        32,
+        64
+      ],
+      [
+        800,
+        600,
+        32,
+        64
+      ],
+      [
+        1024,
+        768,
+        32,
+        64
+      ],
+      [
+        1152,
+        864,
+        32,
+        64
+      ],
+      [
+        1280,
+        720,
+        32,
+        64
+      ],
+      [
+        1280,
+        800,
+        32,
+        64
+      ],
+      [
+        1280,
+        1024,
+        32,
+        64
+      ],
+      [
+        1366,
+        768,
+        32,
+        64
+      ],
+      [
+        1440,
+        900,
+        32,
+        64
+      ],
+      [
+        1600,
+        900,
+        32,
+        64
+      ],
+      [
+        1600,
+        1200,
+        32,
+        64
+      ],
+      [
+        1680,
+        1050,
+        32,
+        64
+      ],
+      [
+        1920,
+        1080,
+        32,
+        64
+      ]
+    ],
+    "scope": "Windows CI desktop only; ordinary-PC 100%/150% DPI remains human review"
+  },
+  "voice_upgrade": {
+    "engine": "Qwen3-TTS 1.7B CustomVoice",
+    "speaker": "Serena",
+    "recordings": 17,
+    "generation_sha256": "5180a9ca16c7a01f502350dcdfadf073da06edcb9b054350d7fdec8c3af7336a",
+    "human_listening": false,
+    "all_recording_bytes_unchanged": true
+  },
+  "extras": {
+    "images": 5,
+    "music_tracks": 3,
+    "unlock_source": "native seen-image and seen-audio persistence",
+    "locked_content_hides_titles_and_images": true,
+    "story_state_unchanged_by_gallery": true,
+    "music_controls": "play/previous/next/pause/stop/real slider/real mute; stop on leave or Start",
+    "music_progress_and_current_title_status": "passed",
+    "fresh_process_and_previous_v110_seen_records": "passed"
+  },
+  "human_pending": [
+    "ordinary_windows",
+    "display_dpi",
+    "listening",
+    "creative_and_freeze",
+    "reading_time"
+  ],
+  "human_acceptance_is_not_claimed": true,
+  "unresolved_machine_issues": [],
+  "audit_execution": "Independent package/report audit executed on the Windows runner after all native suites",
+  "limits": "Dummy audio; ordinary hardware, Chinese paths, DPI, human listening, reading time and creative finalization remain pending. Old saves cover two representative positions. No Linux UI pass is claimed. New direct image review uses full-resolution JPEG inspection copies bound to original PNG SHA-256.",
+  "audit_date": "2026-10-08",
+  "job_id": 113099514910,
+  "python_tests": {
+    "passed": 118,
+    "seconds": 15.533,
+    "platform": "Windows"
+  },
+  "lint": "passed",
+  "authoring_validators": "passed",
+  "ci_url": "https://github.com/AureliusWu/Test/actions/runs/37711912728",
+  "ci_completed_at": "2026-10-08T02:12:51Z",
+  "ci_run_status": "completed",
+  "ci_run_conclusion": "success",
+  "artifacts": [
+    {
+      "id": 11524575028,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUyNDU3NTAyOA==",
+      "name": "release-transfer-491e9859368a402960afcdf856be4f456b885ec5-12",
+      "size_in_bytes": 20979303,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524575028",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524575028/zip",
+      "expired": false,
+      "digest": "sha256:67ec4e31389bbe109f7d417b96c25e10b13cfdb79fc682aead2dd3391e4fad40",
+      "created_at": "2026-10-08T02:12:15Z",
+      "updated_at": "2026-10-08T02:12:15Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    },
+    {
+      "id": 11524555396,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUyNDU1NTM5Ng==",
+      "name": "test-evidence-491e9859368a402960afcdf856be4f456b885ec5",
+      "size_in_bytes": 499571223,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524555396",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524555396/zip",
+      "expired": false,
+      "digest": "sha256:5b01e8d049f912cf91c99805e9aa19f275ab70ca730358cae35a4afc76aef9eb",
+      "created_at": "2026-10-08T02:11:07Z",
+      "updated_at": "2026-10-08T02:11:07Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    },
+    {
+      "id": 11524550139,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUyNDU1MDEzOQ==",
+      "name": "release-transfer-491e9859368a402960afcdf856be4f456b885ec5-20",
+      "size_in_bytes": 20978765,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524550139",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524550139/zip",
+      "expired": false,
+      "digest": "sha256:aec32464391b7eb2cc0cfbf58a974e290811e70aab599b81f1316aed8762a8d8",
+      "created_at": "2026-10-08T02:12:41Z",
+      "updated_at": "2026-10-08T02:12:41Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    },
+    {
+      "id": 11524485254,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUyNDQ4NTI1NA==",
+      "name": "release-transfer-491e9859368a402960afcdf856be4f456b885ec5-14",
+      "size_in_bytes": 20979303,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524485254",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524485254/zip",
+      "expired": false,
+      "digest": "sha256:b0bafff5376e9dbbfd3acc524449e0eb5dcd5a4ea4f0a9c7f83ec2cc206322ae",
+      "created_at": "2026-10-08T02:12:22Z",
+      "updated_at": "2026-10-08T02:12:22Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    },
+    {
+      "id": 11524470355,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUyNDQ3MDM1NQ==",
+      "name": "release-transfer-491e9859368a402960afcdf856be4f456b885ec5-11",
+      "size_in_bytes": 20979274,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524470355",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524470355/zip",
+      "expired": false,
+      "digest": "sha256:5b0becc3efc132d8548d95856bff47f9ba60ead0d628436375db8ed2eaac5673",
+      "created_at": "2026-10-08T02:12:12Z",
+      "updated_at": "2026-10-08T02:12:12Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    },
+    {
+      "id": 11524385573,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUyNDM4NTU3Mw==",
+      "name": "release-transfer-491e9859368a402960afcdf856be4f456b885ec5-13",
+      "size_in_bytes": 20979288,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524385573",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524385573/zip",
+      "expired": false,
+      "digest": "sha256:0b19cd86ab2cb5c937cd2007c70994340ff4ce7aca6aee57cb80bbc9d75c52b2",
+      "created_at": "2026-10-08T02:12:18Z",
+      "updated_at": "2026-10-08T02:12:18Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    },
+    {
+      "id": 11524365551,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUyNDM2NTU1MQ==",
+      "name": "release-transfer-491e9859368a402960afcdf856be4f456b885ec5-21",
+      "size_in_bytes": 17530358,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524365551",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524365551/zip",
+      "expired": false,
+      "digest": "sha256:1b0bc5483a10914d7d727f67229a46b2870a1ef3bbfa2d6d93099286cea606a5",
+      "created_at": "2026-10-08T02:12:45Z",
+      "updated_at": "2026-10-08T02:12:45Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    },
+    {
+      "id": 11524346141,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUyNDM0NjE0MQ==",
+      "name": "release-transfer-491e9859368a402960afcdf856be4f456b885ec5-00",
+      "size_in_bytes": 20979223,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524346141",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524346141/zip",
+      "expired": false,
+      "digest": "sha256:5434d22faf32f05dc1c2b556f020f2bf080ad550a09ab3e3a83e30251858d86a",
+      "created_at": "2026-10-08T02:11:32Z",
+      "updated_at": "2026-10-08T02:11:32Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    },
+    {
+      "id": 11524315755,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUyNDMxNTc1NQ==",
+      "name": "release-transfer-491e9859368a402960afcdf856be4f456b885ec5-19",
+      "size_in_bytes": 20979303,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524315755",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524315755/zip",
+      "expired": false,
+      "digest": "sha256:6c3a856b10002560ef03d67b0035e504e1b47f134a16626274b3d0e8acf5acdb",
+      "created_at": "2026-10-08T02:12:38Z",
+      "updated_at": "2026-10-08T02:12:38Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    },
+    {
+      "id": 11524295809,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUyNDI5NTgwOQ==",
+      "name": "release-transfer-491e9859368a402960afcdf856be4f456b885ec5-18",
+      "size_in_bytes": 20979303,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524295809",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524295809/zip",
+      "expired": false,
+      "digest": "sha256:41cc2385543f8aff641b5c67eed6068687433f49b6a952dd3b82eded27af6458",
+      "created_at": "2026-10-08T02:12:35Z",
+      "updated_at": "2026-10-08T02:12:35Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    },
+    {
+      "id": 11524251378,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUyNDI1MTM3OA==",
+      "name": "release-transfer-491e9859368a402960afcdf856be4f456b885ec5-08",
+      "size_in_bytes": 20979303,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524251378",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524251378/zip",
+      "expired": false,
+      "digest": "sha256:f0c7c7b3e6ef2ad381598c330bfb401c094883159840a93b6bdc939e1bce3095",
+      "created_at": "2026-10-08T02:12:02Z",
+      "updated_at": "2026-10-08T02:12:02Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    },
+    {
+      "id": 11524221545,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUyNDIyMTU0NQ==",
+      "name": "release-transfer-491e9859368a402960afcdf856be4f456b885ec5-05",
+      "size_in_bytes": 20979303,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524221545",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524221545/zip",
+      "expired": false,
+      "digest": "sha256:e4b948d3435afc471ad3964c4b18ca8c95df3af898a873faa5760f219e3f349b",
+      "created_at": "2026-10-08T02:11:48Z",
+      "updated_at": "2026-10-08T02:11:48Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    },
+    {
+      "id": 11524206641,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUyNDIwNjY0MQ==",
+      "name": "release-transfer-491e9859368a402960afcdf856be4f456b885ec5-09",
+      "size_in_bytes": 20979303,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524206641",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524206641/zip",
+      "expired": false,
+      "digest": "sha256:d9bd6d3b6d4dd31a5963904607b6d3ec7f158c13138d3cc7a1bef039dbcbed01",
+      "created_at": "2026-10-08T02:12:05Z",
+      "updated_at": "2026-10-08T02:12:05Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    },
+    {
+      "id": 11524195951,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUyNDE5NTk1MQ==",
+      "name": "release-transfer-491e9859368a402960afcdf856be4f456b885ec5-16",
+      "size_in_bytes": 20979281,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524195951",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524195951/zip",
+      "expired": false,
+      "digest": "sha256:15182c0273055679083628acffd06ca364e8ac52693ba5d47715bd08eeb37003",
+      "created_at": "2026-10-08T02:12:28Z",
+      "updated_at": "2026-10-08T02:12:28Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    },
+    {
+      "id": 11524027224,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUyNDAyNzIyNA==",
+      "name": "release-transfer-491e9859368a402960afcdf856be4f456b885ec5-03",
+      "size_in_bytes": 20979209,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524027224",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524027224/zip",
+      "expired": false,
+      "digest": "sha256:b6ff45d84d562e9ae4e2096577612ad39ad2ab1fbb8c7ba7b7ad958e53ec00c4",
+      "created_at": "2026-10-08T02:11:42Z",
+      "updated_at": "2026-10-08T02:11:42Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    },
+    {
+      "id": 11524011417,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUyNDAxMTQxNw==",
+      "name": "release-transfer-491e9859368a402960afcdf856be4f456b885ec5-17",
+      "size_in_bytes": 20979303,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524011417",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11524011417/zip",
+      "expired": false,
+      "digest": "sha256:a10f239908be88e6e203c398821e135225bba4eabbb03d9756f4a34a98090cc5",
+      "created_at": "2026-10-08T02:12:31Z",
+      "updated_at": "2026-10-08T02:12:31Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    },
+    {
+      "id": 11523926529,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUyMzkyNjUyOQ==",
+      "name": "release-transfer-491e9859368a402960afcdf856be4f456b885ec5-15",
+      "size_in_bytes": 20979303,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11523926529",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11523926529/zip",
+      "expired": false,
+      "digest": "sha256:39065af07d9043d3174ffaf33708d57eb505d60af858bd57900da34359800435",
+      "created_at": "2026-10-08T02:12:25Z",
+      "updated_at": "2026-10-08T02:12:25Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    },
+    {
+      "id": 11523917516,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUyMzkxNzUxNg==",
+      "name": "release-transfer-491e9859368a402960afcdf856be4f456b885ec5-01",
+      "size_in_bytes": 20979225,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11523917516",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11523917516/zip",
+      "expired": false,
+      "digest": "sha256:565db06cfbc28f6ca28d5b6c2420ba5bfbf99d1a436c8990519b0fd862ec43e8",
+      "created_at": "2026-10-08T02:11:35Z",
+      "updated_at": "2026-10-08T02:11:35Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    },
+    {
+      "id": 11523907626,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUyMzkwNzYyNg==",
+      "name": "release-transfer-491e9859368a402960afcdf856be4f456b885ec5-06",
+      "size_in_bytes": 20979303,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11523907626",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11523907626/zip",
+      "expired": false,
+      "digest": "sha256:e04f95c600f0ad4cc9ef3dd209d3c7e0e578b3859303d8f43abe43d47023b3c8",
+      "created_at": "2026-10-08T02:11:52Z",
+      "updated_at": "2026-10-08T02:11:52Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    },
+    {
+      "id": 11523867600,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUyMzg2NzYwMA==",
+      "name": "windows-491e9859368a402960afcdf856be4f456b885ec5",
+      "size_in_bytes": 59189594,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11523867600",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11523867600/zip",
+      "expired": false,
+      "digest": "sha256:eb4d2becb987bcef31a7176d4103b522c5c450d6c4ca3c2b6f8d325796fc6cde",
+      "created_at": "2026-10-08T02:11:10Z",
+      "updated_at": "2026-10-08T02:11:10Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    },
+    {
+      "id": 11523788027,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUyMzc4ODAyNw==",
+      "name": "release-transfer-491e9859368a402960afcdf856be4f456b885ec5-02",
+      "size_in_bytes": 20978737,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11523788027",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11523788027/zip",
+      "expired": false,
+      "digest": "sha256:34975fe47277e1c6644315ef6169cd722d2cc739b913c668cd695a97982770bb",
+      "created_at": "2026-10-08T02:11:38Z",
+      "updated_at": "2026-10-08T02:11:38Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    },
+    {
+      "id": 11523753193,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUyMzc1MzE5Mw==",
+      "name": "release-transfer-491e9859368a402960afcdf856be4f456b885ec5-07",
+      "size_in_bytes": 20979287,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11523753193",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11523753193/zip",
+      "expired": false,
+      "digest": "sha256:c19240755eae5860e7540c31a6876c176fa9fb9e52baeea97af3a502ff66c5a9",
+      "created_at": "2026-10-08T02:11:55Z",
+      "updated_at": "2026-10-08T02:11:55Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    },
+    {
+      "id": 11523728287,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUyMzcyODI4Nw==",
+      "name": "release-transfer-491e9859368a402960afcdf856be4f456b885ec5-04",
+      "size_in_bytes": 20979274,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11523728287",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11523728287/zip",
+      "expired": false,
+      "digest": "sha256:d59c22851ba597289f6d87f98e47e90679a1010e2367412fd8ab7d9455d44b12",
+      "created_at": "2026-10-08T02:11:45Z",
+      "updated_at": "2026-10-08T02:11:45Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    },
+    {
+      "id": 11523189947,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUyMzE4OTk0Nw==",
+      "name": "release-transfer-491e9859368a402960afcdf856be4f456b885ec5-10",
+      "size_in_bytes": 20979303,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11523189947",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11523189947/zip",
+      "expired": false,
+      "digest": "sha256:abf008e12231138d2d29229e4fca551aa2c70932fd13b5b182c9cdb4eb85f1fe",
+      "created_at": "2026-10-08T02:12:08Z",
+      "updated_at": "2026-10-08T02:12:08Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    },
+    {
+      "id": 11522925116,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUyMjkyNTExNg==",
+      "name": "upgrade-prefix-491e9859368a402960afcdf856be4f456b885ec5",
+      "size_in_bytes": 20653621,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11522925116",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11522925116/zip",
+      "expired": false,
+      "digest": "sha256:080f111dce3a86be152efc0b88f1acb61b6dd8ec9307c59b264107ace309006e",
+      "created_at": "2026-10-08T01:21:35Z",
+      "updated_at": "2026-10-08T01:21:35Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    },
+    {
+      "id": 11521949700,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUyMTk0OTcwMA==",
+      "name": "extras-prefix-491e9859368a402960afcdf856be4f456b885ec5",
+      "size_in_bytes": 26436596,
+      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11521949700",
+      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11521949700/zip",
+      "expired": false,
+      "digest": "sha256:9ab7ee109121315e5fe2e475bec3e8941602e04a33c1feee76591272e1186db6",
+      "created_at": "2026-10-08T01:20:13Z",
+      "updated_at": "2026-10-08T01:20:13Z",
+      "expires_at": "2027-01-06T01:14:22Z",
+      "workflow_run": {
+        "id": 37711912728,
+        "repository_id": 1403696098,
+        "head_repository_id": 1403696098,
+        "head_branch": "main",
+        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
+      }
+    }
+  ],
+  "decoded_job_log_sha256": "8b3cb5c022c6ef17be6fcbe10865e2a4dfa65634150df9c887d0c5f017d2e506",
+  "decoded_job_log_format": "UTF-8, CRLF normalized to LF",
+  "remote_export_envelope": {
+    "sha256": "0be81309b80b4b380bb5a20ae26a7e17f0df787764ae26bd1e75a230fbbc3ec8",
+    "raw_bytes": 10482106,
+    "encoded_length": 13976144,
+    "chunks": 1748,
+    "seal_verified_on_recovery_runner": true
+  },
+  "evidence_transport": {
+    "original_job_id": 113099514910,
+    "envelope_sha256": "0be81309b80b4b380bb5a20ae26a7e17f0df787764ae26bd1e75a230fbbc3ec8",
+    "raw_bytes": 10482106,
+    "encoded_length": 13976144,
+    "chunks": 1748,
+    "decoded_job_log_sha256": "8b3cb5c022c6ef17be6fcbe10865e2a4dfa65634150df9c887d0c5f017d2e506",
+    "python_tests": {
+      "passed": 118,
+      "seconds": 15.533,
+      "platform": "Windows"
+    },
+    "seal_verified": true,
+    "jpeg_hashes_verified": true,
+    "transport": "split terminal job logs; original Windows evidence and package are unchanged",
+    "recovery_run_id": 37790865785,
+    "records_receipt": {
+      "sha256": "da8e1aa601535fd9c0a2f487b0abfa55408dee044b6e24c5edb1ff2f533bacdd",
+      "raw_bytes": 143988,
+      "encoded_length": 191984,
+      "chunks": 24,
+      "seal_verified": true,
+      "job_id": 113357578265,
+      "run_id": 37790865785
+    },
+    "inspection_receipts": [
+      {
+        "sha256": "609f980c48c36735de501da8890f8cc5f27cab5d951c624f959bb884e77cbada",
+        "raw_bytes": 2311693,
+        "encoded_length": 3082260,
+        "chunks": 386,
+        "seal_verified": true,
+        "group": 0,
+        "job_id": 113357703275,
+        "run_id": 37790865785
+      },
+      {
+        "sha256": "cf8c6757b2d62ed4f178f96f72e5e437f362b12f7aa487241387f80a6f08898f",
+        "raw_bytes": 1538359,
+        "encoded_length": 2051148,
+        "chunks": 257,
+        "seal_verified": true,
+        "group": 1,
+        "job_id": 113357703462,
+        "run_id": 37790865785
+      },
+      {
+        "sha256": "5384e630763fd2445f65e14d85a86d8dfe45016935a18c9b216cf0361d0fa9f4",
+        "raw_bytes": 1533565,
+        "encoded_length": 2044756,
+        "chunks": 256,
+        "seal_verified": true,
+        "group": 2,
+        "job_id": 113357703229,
+        "run_id": 37790865785
+      },
+      {
+        "sha256": "7b6461d7dc2b689e399ba0b0c6dd257ebd3e77423f4de26af8473c4259a68a0c",
+        "raw_bytes": 1979786,
+        "encoded_length": 2639716,
+        "chunks": 330,
+        "seal_verified": true,
+        "group": 3,
+        "job_id": 113357703336,
+        "run_id": 37790865785
+      },
+      {
+        "sha256": "ddbd1556b3290d37a835666a44ec89f3520bbf06525b3415dfdf9becc2d1f033",
+        "raw_bytes": 1024680,
+        "encoded_length": 1366240,
+        "chunks": 171,
+        "seal_verified": true,
+        "group": 4,
+        "job_id": 113357703330,
+        "run_id": 37790865785
+      },
+      {
+        "sha256": "ef29bb3b90c7239a85955323b10a2cb0e6db6444abc04aa346a1ddfcf55758d5",
+        "raw_bytes": 1980984,
+        "encoded_length": 2641312,
+        "chunks": 331,
+        "seal_verified": true,
+        "group": 5,
+        "job_id": 113357703509,
+        "run_id": 37790865785
+      }
+    ],
+    "exact_prior_png_chains_verified": 46,
+    "current_jpeg_hashes_verified": 12,
+    "inspection_copies_directly_viewed": 12
+  },
+  "previous_attempts": [
+    {
+      "file": "docs/evidence/v111-first-visual-failure.json",
+      "candidate_commit": "91cd48641448d48f2bbd97de9f200024ca02dadf",
+      "run_id": 37651109153,
+      "technical_status": "passed",
+      "visual_status": "rejected_missing_glyph",
+      "published": false
+    }
+  ],
+  "transfer_verification": {
+    "status": "remote_artifacts_created_local_reassembly_not_performed",
+    "actual_ci_statement": "Exact package/evidence transfer: 457942419 bytes in 22 parts",
+    "package_and_report_audit": "passed independently on actual Windows runner",
+    "limit": "No local part-byte download, hashing or bundle reassembly claimed. Formal publisher must download and verify exact artifact and public ZIP."
+  },
+  "shared_production_update": {
+    "commit": "72d1389af407aa103f696bba4df1f9e5c0b466e5",
+    "structure_validation": {
+      "status": "passed",
+      "contract": "1.0.0",
+      "scenes": 26,
+      "lines": 539,
+      "choices": 4,
+      "endings": 2
+    },
+    "shared_file_hashes": "all three match docs/production/REUSE-MANIFEST.json",
+    "native_state_routes": 16,
+    "game_source_tree_unchanged": "e80bbb8123fd306356fbbb483456d4f6c1848ebb",
+    "player_zip_is_unchanged": true
+  },
+  "visual_review": {
+    "file": "docs/evidence/v111-visual-review.json",
+    "sha256": "7d92d7f2750e67aa95c0e0a365cd3e8dae2b84498e5429182aed52a1c297df7d",
+    "inspected_count": 58,
+    "direct_new_count": 12,
+    "reused_count": 46
+  },
+  "story_change": {
+    "compared_against_commit": "b1f4f180b7a315fcb9a195889389d5af5e7688d2",
+    "path": "game/data/story.json",
+    "previous_version": "1.1.0",
+    "current_version": "1.1.1",
+    "previous_file_sha256": "499324add35c8a78d13935d204c9596309c69dde1fe69f9daa49493ade8558b6",
+    "current_file_sha256": "3b669e39ccccd13c08da5c4f64162e0b43a1e0cce5e721d94a02d924ae5040a4",
+    "canonical_deep_comparison_after_version_field_only": "identical"
+  },
+  "game_source_equivalence": {
+    "candidate_commit": "491e9859368a402960afcdf856be4f456b885ec5",
+    "candidate_tree": "2221cea3db8c5ff58e82ae4715b6d2346def54b6",
+    "compared_to": "5153bca5ff4502c2c444259f36042baa2ff9a0dc",
+    "game_tree": "e80bbb8123fd306356fbbb483456d4f6c1848ebb",
+    "changed_paths": [
+      ".github/workflows/recover-v111-review.yml",
+      "AGENTS.md",
+      "docs/REUSE-NETLOVE.md",
+      "docs/WORK_CHECKPOINT.md",
+      "docs/evidence/v111-development-checkpoint.json",
+      "docs/evidence/v111-review-recovery-request.json",
+      "docs/production/REUSE-MANIFEST.json",
+      "docs/production/SHARED-VN.md",
+      "scripts/vn-contract.d.mts",
+      "scripts/vn-contract.mjs"
+    ],
+    "runtime_paths_changed": [],
+    "pinned_non_runtime_support_files": {
+      "AGENTS.md": "7f667d701879491da6d3396777a012d85266bcf9",
+      "scripts/vn-contract.mjs": "42b74123d7e3118fde12be2501c98365b0927330",
+      "scripts/vn-contract.d.mts": "6620c50d14ad8df5a23b20cf81827fabf892061d",
+      ".github/workflows/recover-v111-review.yml": "9430b339c5dc173e0dd14ba2c8b1ef86251df62b"
+    },
+    "policy": "Only docs/**, README.md, ROADMAP.md, CHANGELOG.md, release-v111.yml and the four exact pinned support blobs may differ; all accepted game/tool/test/assets/license bytes remain unchanged."
+  },
+  "ci_job": {
+    "id": 113099514910,
+    "status": "completed",
+    "conclusion": "success",
+    "started_at": "2026-10-08T01:14:26Z",
+    "completed_at": "2026-10-08T02:12:50Z",
+    "required_steps_verified": [
+      "Validate graph, prose, assets, and generated scripts",
+      "Ren'Py lint",
+      "Run actual Windows interaction tests",
+      "Verify and boot EXE extracted from distribution",
+      "Audit exact ZIP and export remote visual-review copies"
+    ]
+  }
+}

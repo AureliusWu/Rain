@@ -1,48 +1,91 @@
 {
   "schema_version": 1,
-  "status": "all_current_native_suites_passed_final_audit_and_visual_pending",
+  "status": "accepted_awaiting_exact_publication",
   "version": "1.1.1",
-  "local_authoring": {
-    "status": "passed",
-    "tests": 118,
-    "duration_seconds": 10.876,
-    "command": "python -m tools.validate",
-    "all_validators": "passed"
+  "candidate_commit": "491e9859368a402960afcdf856be4f456b885ec5",
+  "candidate_tree": "2221cea3db8c5ff58e82ae4715b6d2346def54b6",
+  "run_id": 37711912728,
+  "job_id": 113099514910,
+  "current_run": {
+    "run_id": 37711912728,
+    "status": "completed",
+    "conclusion": "success"
   },
-  "planned_counts": {
-    "source": [
-      36,
-      448,
-      82
-    ],
-    "standalone": [
-      36,
-      448,
-      82
-    ],
-    "fresh_process": [
-      1,
-      16,
-      3
-    ],
-    "upgrade_writer": [
-      1,
-      14,
-      3
-    ],
-    "upgrade_reader": [
-      2,
-      26,
-      4
-    ],
-    "prefix_per_iteration": [
-      6,
-      103,
-      29
+  "package": {
+    "file": "BeforeTheRainStops-1.1.1-win.zip",
+    "size_in_bytes": 56382628,
+    "sha256": "7f57b4f4d3f2cc4071d7e4d59ff6a2e3c7db0531b78477abae18804c47d6d35b",
+    "entries": 1624,
+    "crc": "passed",
+    "test_scripts_in_original_zip": false,
+    "assets_checked": 85,
+    "build_info": {
+      "info": {},
+      "time": 1791422416.022276,
+      "name": "雨停之前",
+      "version": "1.1.1"
+    },
+    "license_and_credits_documents": [
+      {
+        "path": "licenses/Kokoro-model-Apache-2.0.txt",
+        "checkout_sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+        "packaged_sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+        "comparison": "identical_bytes"
+      },
+      {
+        "path": "licenses/SourceHanSans-OFL.txt",
+        "checkout_sha256": "1953855bf1927e7214385bbdd8adb04cc5e8a0ecd0e6eaedeb1bdc281b009481",
+        "packaged_sha256": "1953855bf1927e7214385bbdd8adb04cc5e8a0ecd0e6eaedeb1bdc281b009481",
+        "comparison": "identical_bytes"
+      },
+      {
+        "path": "licenses/Qwen3-TTS-Apache-2.0.txt",
+        "checkout_sha256": "2b8b9e82917d28dacc83fcb496c097c05e2032a8abd9f1bce86b7893167a21d6",
+        "packaged_sha256": "2b8b9e82917d28dacc83fcb496c097c05e2032a8abd9f1bce86b7893167a21d6",
+        "comparison": "identical_bytes"
+      },
+      {
+        "path": "licenses/RENPY.txt",
+        "checkout_sha256": "3aaf0d1a4c1c20eea96d675981883ffc05e17c8426f077190d6ed0a9d2e586d0",
+        "packaged_sha256": "3aaf0d1a4c1c20eea96d675981883ffc05e17c8426f077190d6ed0a9d2e586d0",
+        "comparison": "identical_bytes"
+      },
+      {
+        "path": "LICENSE",
+        "checkout_sha256": "33e85d24e8df239c6eeab0cf6f40ad308f28b4b18470e7baa723ef5665d8549c",
+        "packaged_sha256": "33e85d24e8df239c6eeab0cf6f40ad308f28b4b18470e7baa723ef5665d8549c",
+        "comparison": "identical_bytes"
+      },
+      {
+        "path": "CREDITS.md",
+        "checkout_sha256": "7a5d7aa757638f2510090346227b87efd9f8b27c2726d71e7213f8f7609ea648",
+        "packaged_sha256": "7a5d7aa757638f2510090346227b87efd9f8b27c2726d71e7213f8f7609ea648",
+        "comparison": "identical_bytes"
+      }
     ]
   },
-  "previous_version": "1.1.0",
-  "previous_package_sha256": "a6ce022d23e5e88e3666d9806ca69a30077d52c56bf74820f4863f9ddc66fca0",
+  "visual_review": {
+    "file": "docs/evidence/v111-visual-review.json",
+    "sha256": "7d92d7f2750e67aa95c0e0a365cd3e8dae2b84498e5429182aed52a1c297df7d",
+    "inspected_count": 58,
+    "direct_new_count": 12,
+    "reused_count": 46
+  },
+  "shared_production": {
+    "commit": "72d1389af407aa103f696bba4df1f9e5c0b466e5",
+    "structure_validation": {
+      "status": "passed",
+      "contract": "1.0.0",
+      "scenes": 26,
+      "lines": 539,
+      "choices": 4,
+      "endings": 2
+    },
+    "shared_file_hashes": "all three match docs/production/REUSE-MANIFEST.json",
+    "native_state_routes": 16,
+    "game_source_tree_unchanged": "e80bbb8123fd306356fbbb483456d4f6c1848ebb",
+    "player_zip_is_unchanged": true
+  },
   "human_pending": [
     "ordinary_windows",
     "display_dpi",
@@ -51,119 +94,5 @@
     "reading_time"
   ],
   "publication": "not_started",
-  "next": "Wait for terminal audited export and artifact uploads, verify the seal, directly view all current copies, then bind acceptance and publish the exact reviewed ZIP.",
-  "previous_run": {
-    "run_id": 37651109153,
-    "candidate_commit": "91cd48641448d48f2bbd97de9f200024ca02dadf",
-    "technical_status": "passed",
-    "visual_status": "rejected_missing_glyph",
-    "record": "docs/evidence/v111-first-visual-failure.json"
-  },
-  "current_run": {
-    "run_id": 37711912728,
-    "status": "in_progress",
-    "url": "https://github.com/AureliusWu/Test/actions/runs/37711912728"
-  },
-  "publication_status": "not_started",
-  "candidate_commit": "491e9859368a402960afcdf856be4f456b885ec5",
-  "candidate_tree": "2221cea3db8c5ff58e82ae4715b6d2346def54b6",
-  "run_id": 37711912728,
-  "job_id": 113099514910,
-  "windows_steps_completed": [
-    "Set up job",
-    "Run actions/checkout@v4",
-    "Run actions/setup-python@v5",
-    "Install authoring dependencies",
-    "Start-of-batch preflight",
-    "Validate graph, prose, assets, and generated scripts",
-    "Run actions/cache@v4",
-    "Fetch and verify official SDK",
-    "Preserve published statement names for v1 saves",
-    "Ren'Py lint",
-    "Run voice and extras interaction checks first",
-    "Upload first extras interaction evidence",
-    "Build standalone Windows ZIP",
-    "Load real saves and extras unlocks from the published v1.1.0 EXE",
-    "Upload early real old-save upgrade evidence",
-    "Run actual Windows interaction tests",
-    "Verify and boot EXE extracted from distribution"
-  ],
-  "completed_native_counts": {
-    "prefix_iterations": 2,
-    "prefix_per_iteration": [
-      6,
-      103,
-      29
-    ],
-    "upgrade_writer": [
-      1,
-      14,
-      3
-    ],
-    "upgrade_reader": [
-      2,
-      26,
-      4
-    ],
-    "verification": "Five successful Windows native processes validated exact generated plans and required screenshot sets. Final sealed original-ZIP/PNG audit, terminal CI artifact identities and actual current image review are still pending.",
-    "source": [
-      36,
-      448,
-      82
-    ],
-    "standalone": [
-      36,
-      448,
-      82
-    ],
-    "fresh_process": [
-      1,
-      16,
-      3
-    ]
-  },
-  "early_artifacts": [
-    {
-      "id": 11522925116,
-      "name": "upgrade-prefix-491e9859368a402960afcdf856be4f456b885ec5",
-      "size_in_bytes": 20653621,
-      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11522925116",
-      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11522925116/zip",
-      "expired": false,
-      "created_at": "2026-10-08T01:21:35Z",
-      "expires_at": "2027-01-06T01:14:22Z",
-      "updated_at": "2026-10-08T01:21:35Z",
-      "digest": "sha256:080f111dce3a86be152efc0b88f1acb61b6dd8ec9307c59b264107ace309006e",
-      "workflow_run": {
-        "id": 37711912728,
-        "repository_id": 1403696098,
-        "head_repository_id": 1403696098,
-        "head_branch": "main",
-        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
-      }
-    },
-    {
-      "id": 11521949700,
-      "name": "extras-prefix-491e9859368a402960afcdf856be4f456b885ec5",
-      "size_in_bytes": 26436596,
-      "url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11521949700",
-      "archive_download_url": "https://api.github.com/repos/AureliusWu/Test/actions/artifacts/11521949700/zip",
-      "expired": false,
-      "created_at": "2026-10-08T01:20:13Z",
-      "expires_at": "2027-01-06T01:14:22Z",
-      "updated_at": "2026-10-08T01:20:13Z",
-      "digest": "sha256:9ab7ee109121315e5fe2e475bec3e8941602e04a33c1feee76591272e1186db6",
-      "workflow_run": {
-        "id": 37711912728,
-        "repository_id": 1403696098,
-        "head_repository_id": 1403696098,
-        "head_branch": "main",
-        "head_sha": "491e9859368a402960afcdf856be4f456b885ec5"
-      }
-    }
-  ],
-  "artifact_transport": {
-    "early_prefix": "GitHub artifact preserved; local file-reference fetch returned HTTP 403, so no current prefix image is claimed as directly viewed",
-    "planned_visual_channel": "sealed terminal Windows job-log export containing full-resolution JPEG copies"
-  }
+  "next": "Commit exact user authorization, keep main stable during publication, then verify three gates, public download and preserved old releases."
 }
