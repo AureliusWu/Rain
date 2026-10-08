@@ -7,6 +7,7 @@ from tools.compile_tests import render_persistence_tests
 from tools.build.verify_package import validate_native_report, required_screenshots
 from tools.build.verify_upgrade import render_upgrade_writer, render_upgrade_reader, BASELINE_SHA256, BASELINE_VERSION
 from tools.build.verify_voice_smoke import prefix_plan, PREFIX_CASES
+from tools.build.review_transport import write_bundles
 
 def digest(p):
     with Path(p).open("rb") as f: return hashlib.file_digest(f, "sha256").hexdigest()
@@ -136,9 +137,9 @@ def main():
     data={"machine":m,"visual":{"version":version,"candidate_commit":candidate,"run_id":run_id,"inspected":items},"media":media}
     blob=json.dumps(data,ensure_ascii=True,separators=(",",":")).encode("ascii")
     (reports/"remote-audit.json").write_bytes(blob)
-    encoded=base64.b64encode(blob).decode("ascii")
-    print("V11_EXPORT_BEGIN",candidate,flush=True)
-    for i in range(0,len(encoded),8000):print("V11_EXPORT_CHUNK",f"{i//8000:05d}",encoded[i:i+8000],flush=True)
-    print("V11_EXPORT_END",hashlib.sha256(blob).hexdigest(),len(encoded),(len(encoded)+7999)//8000,flush=True)
+    transport=write_bundles(data,reports/"remote-review")
+    print("Sealed Windows review:",hashlib.sha256(blob).hexdigest(),len(blob),"bytes;",
+        len(transport["groups"]),"inspection groups; each base64 log payload <=",
+        transport["payload_limit"],"bytes. Full payloads are exported by separate review jobs.",flush=True)
 
 if __name__=="__main__":main()

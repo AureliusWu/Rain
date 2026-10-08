@@ -1,0 +1,111 @@
+name: Check bounded review transport against sealed Windows evidence
+
+on:
+  push:
+    branches: [main]
+    paths: ['docs/evidence/review-transport-check-request.json']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  author:
+    name: Author checks (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    env:
+      PYTHONUTF8: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-dev.txt
+      - run: python -m tools.preflight --require-clean
+      - run: python -m tools.validate
+      - run: node scripts/vn-contract.mjs game/data/story.json
+  prepare:
+    name: Repackage exact original Windows audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      candidate: ${{ steps.prepare.outputs.candidate }}
+      source_run: ${{ steps.prepare.outputs.source_run }}
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify original source, decode its seal, and run new byte-bounded packing
+        id: prepare
+        shell: bash
+        run: |
+          python - <<'PY'
+          import base64, json, os, re, subprocess
+          from pathlib import Path
+          from tools.build.review_transport import canonical, load_bundles, require, sha256, write_bundles
+          request = json.loads(Path('docs/evidence/review-transport-check-request.json').read_text())
+          accepted = json.loads(Path('docs/evidence/v111-acceptance.json').read_text())
+          candidate, run_id, job_id = request['candidate_commit'], request['run_id'], request['job_id']
+          require(candidate == accepted['candidate_commit'] and run_id == accepted['run_id'] and job_id == accepted['job_id'], 'Rehearsal source differs')
+          require(request['envelope_sha256'] == accepted['remote_export_envelope']['sha256'], 'Expected audit seal differs')
+          def api(path):
+              return subprocess.check_output(['gh', 'api', f'repos/{os.environ["GITHUB_REPOSITORY"]}/{path}', *(['--allow-escape-sequences'] if path.endswith('/logs') else [])])
+          run = json.loads(api(f'actions/runs/{run_id}'))
+          require(run['head_sha'] == candidate and run['conclusion'] == 'success' and run['status'] == 'completed' and run['path'] == '.github/workflows/game.yml', 'Original Windows run differs')
+          job = json.loads(api(f'actions/jobs/{job_id}'))
+          require(job['run_id'] == run_id and job['conclusion'] == 'success' and 'windows-latest' in job['labels'], 'Original Windows job differs')
+          log = api(f'actions/jobs/{job_id}/logs').decode('utf-8').replace('\r\n', '\n')
+          begins = re.findall(r'(?m)^.*?V11_EXPORT_BEGIN ([0-9a-f]{40})\s*$', log)
+          ends = re.findall(r'(?m)^.*?V11_EXPORT_END ([0-9a-f]{64}) (\d+) (\d+)\s*$', log)
+          chunks = re.findall(r'(?m)^.*?V11_EXPORT_CHUNK (\d{5}) ([A-Za-z0-9+/=]+)\s*$', log)
+          require(begins == [candidate] and len(ends) == 1, 'Missing original envelope')
+          seal, length, count = ends[0]
+          require([int(index) for index, _ in chunks] == list(range(int(count))), 'Original chunks differ')
+          encoded = ''.join(value for _, value in chunks)
+          require(len(encoded) == int(length), 'Original encoded length differs')
+          raw = base64.b64decode(encoded, validate=True)
+          require(sha256(raw) == seal == request['envelope_sha256'] and len(raw) == accepted['remote_export_envelope']['raw_bytes'], 'Original audit seal differs')
+          audit = json.loads(raw)
+          require(canonical(audit) == raw, 'Original audit is not canonical')
+          require(audit['machine']['package']['sha256'] == accepted['package']['sha256'], 'Original package binding differs')
+          manifest = write_bundles(audit, Path('review'))
+          loaded, _, _ = load_bundles(Path('review'), candidate, run_id)
+          require(loaded == manifest and manifest['original_audit']['sha256'] == seal, 'Repackaging changed the original audit')
+          result = {'status':'passed', 'source_run_id':run_id, 'source_job_id':job_id, 'candidate_commit':candidate,
+              'original_audit':manifest['original_audit'], 'manifest_sha256':sha256(canonical(manifest)),
+              'inspection_copies':len(audit['media']), 'groups':len(manifest['groups']),
+              'group_encoded_bytes':[item['encoded_bytes'] for item in manifest['groups']],
+              'payload_limit':manifest['payload_limit'], 'original_package_sha256':accepted['package']['sha256'],
+              'game_runtime_retested':False, 'human_acceptance_is_not_claimed':True}
+          Path('rehearsal-result.json').write_bytes(canonical(result))
+          print(json.dumps(result, ensure_ascii=True))
+          with Path(os.environ['GITHUB_OUTPUT']).open('a') as stream:
+              stream.write(f'candidate={candidate}\nsource_run={run_id}\n')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: review-transport-rehearsal-${{ github.sha }}
+          path: review/
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        with:
+          name: review-transport-result-${{ github.sha }}
+          path: rehearsal-result.json
+          if-no-files-found: error
+  review:
+    name: Exercise production review export
+    needs: [author, prepare]
+    uses: ./.github/workflows/export-review.yml
+    with:
+      artifact_name: review-transport-rehearsal-${{ github.sha }}
+      candidate_commit: ${{ needs.prepare.outputs.candidate }}
+      source_run_id: ${{ needs.prepare.outputs.source_run }}

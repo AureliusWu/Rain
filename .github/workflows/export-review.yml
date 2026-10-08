@@ -1,0 +1,65 @@
+name: Export bounded sealed review evidence
+
+on:
+  workflow_call:
+    inputs:
+      artifact_name:
+        required: true
+        type: string
+      candidate_commit:
+        required: true
+        type: string
+      source_run_id:
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  records:
+    name: Verify and export review records
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      groups: ${{ steps.export.outputs.groups }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: ${{ inputs.artifact_name }}
+          path: review
+      - name: Verify original audit seal and export bounded records
+        id: export
+        env:
+          REVIEW_CANDIDATE: ${{ inputs.candidate_commit }}
+          REVIEW_RUN_ID: ${{ inputs.source_run_id }}
+        run: python -m tools.build.review_transport --root review --candidate "$REVIEW_CANDIDATE" --run-id "$REVIEW_RUN_ID" --group records --github-output "$GITHUB_OUTPUT"
+  images:
+    name: Export inspection copies (${{ matrix.group }})
+    needs: records
+    if: ${{ needs.records.outputs.groups != '[]' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        group: ${{ fromJSON(needs.records.outputs.groups) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: ${{ inputs.artifact_name }}
+          path: review
+      - name: Verify all bindings and export one bounded image group
+        env:
+          REVIEW_CANDIDATE: ${{ inputs.candidate_commit }}
+          REVIEW_RUN_ID: ${{ inputs.source_run_id }}
+          REVIEW_GROUP: ${{ matrix.group }}
+        run: python -m tools.build.review_transport --root review --candidate "$REVIEW_CANDIDATE" --run-id "$REVIEW_RUN_ID" --group "$REVIEW_GROUP"
