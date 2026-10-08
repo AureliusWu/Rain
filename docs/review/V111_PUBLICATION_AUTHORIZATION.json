@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "status": "authorized_by_user",
+  "version": "1.1.1",
+  "candidate_commit": "491e9859368a402960afcdf856be4f456b885ec5",
+  "package_sha256": "7f57b4f4d3f2cc4071d7e4d59ff6a2e3c7db0531b78477abae18804c47d6d35b",
+  "instruction": "完成后发布正式版",
+  "condition": "voice_upgrade_completed",
+  "requested_at": "2026-10-06",
+  "context": "用户继续推进《雨停之前》，要求保留2026-10-08新增共享制作文档及结构校验脚本并进行最后收尾；v1.1.1音乐解锁数量、当前曲名和播放/暂停/停止状态已完成Windows与画面验收，沿用完成后发布正式版的明确授权。真人后续由用户统一操作，未虚填通过。",
+  "continuation_instruction": "推进下一版本",
+  "voice_generation_commit": "faad6507d801dd653c4ad10e4ee489b97965acc3",
+  "voice_generation_sha256": "5180a9ca16c7a01f502350dcdfadf073da06edcb9b054350d7fdec8c3af7336a",
+  "pending_human_checks": [
+    "ordinary_windows",
+    "display_dpi",
+    "listening",
+    "creative_and_freeze",
+    "reading_time"
+  ],
+  "human_acceptance_is_not_claimed": true,
+  "tag_target_policy": "current_main_with_identical_accepted_game_source",
+  "tag_difference_allowlist": [
+    "docs/**",
+    "README.md",
+    "ROADMAP.md",
+    "CHANGELOG.md",
+    ".github/workflows/release-v111.yml",
+    "AGENTS.md",
+    "scripts/vn-contract.mjs",
+    "scripts/vn-contract.d.mts",
+    ".github/workflows/recover-v111-review.yml"
+  ],
+  "existing_v100_release_is_preserved": true,
+  "continuation_requested_at": "2026-10-07",
+  "latest_continuation_instruction": "我更新了一些新的内容 你现在进行最后的收尾",
+  "existing_v101_release_is_preserved": true,
+  "latest_continuation_requested_at": "2026-10-08",
+  "existing_v110_release_is_preserved": true,
+  "pinned_non_runtime_support_files": {
+    "AGENTS.md": "7f667d701879491da6d3396777a012d85266bcf9",
+    "scripts/vn-contract.mjs": "42b74123d7e3118fde12be2501c98365b0927330",
+    "scripts/vn-contract.d.mts": "6620c50d14ad8df5a23b20cf81827fabf892061d",
+    ".github/workflows/recover-v111-review.yml": "9430b339c5dc173e0dd14ba2c8b1ef86251df62b"
+  }
+}
