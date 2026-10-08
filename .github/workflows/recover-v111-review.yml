@@ -29,7 +29,7 @@ jobs:
           expected_seal = '0be81309b80b4b380bb5a20ae26a7e17f0df787764ae26bd1e75a230fbbc3ec8'
           repo = 'AureliusWu/Test'
           def api(path):
-              return subprocess.check_output(['gh','api',f'repos/{repo}/{path}'])
+              return subprocess.check_output(['gh','api',f'repos/{repo}/{path}',*(['--allow-escape-sequences'] if path.endswith('/logs') else [])])
           request = json.loads(Path('docs/evidence/v111-review-recovery-request.json').read_text())
           assert request == {'candidate_commit':candidate,'run_id':original_run,'job_id':original_job,'envelope_sha256':expected_seal}
           run = json.loads(api(f'actions/runs/{original_run}'))
