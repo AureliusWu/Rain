@@ -10,6 +10,9 @@ const require = createRequire(import.meta.url);
 const {chromium} = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const root = path.resolve('dist/web');
 const reports = path.resolve('reports/pwa');
+const expectedVersion = (await fs.readFile('VERSION', 'utf8')).trim();
+const buildMetadata = JSON.parse(await fs.readFile('reports/web-build.json', 'utf8'));
+assert.equal(buildMetadata.version, expectedVersion);
 await fs.mkdir(reports, {recursive:true});
 const mime = {'.html':'text/html', '.js':'text/javascript', '.json':'application/json', '.wasm':'application/wasm', '.png':'image/png', '.jpg':'image/jpeg'};
 const requests = [];
@@ -53,7 +56,7 @@ async function boot(page, base) {
     await page.waitForFunction(() => window.rainOfflineReady === true, null, {timeout:120000});
     await waitNative(page,'bool(renpy.get_screen("main_menu"))');
     await waitNative(page,'not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))');
-    assert.equal(await get(page, 'config.version'), '1.2.0');
+    assert.equal(await get(page, 'config.version'), expectedVersion);
     assert.equal(await get(page, 'bool(renpy.get_screen("main_menu"))'), true);
     return Math.round(performance.now() - start);
 }
@@ -103,7 +106,7 @@ try {
     await page.locator('#ContextButton').click();
     await context.setOffline(true);
     assert.ok(await boot(page,'/Rain/') < 120000);
-    assert.equal(await get(page,'config.version'),'1.2.0');
+    assert.equal(await get(page,'config.version'),expectedVersion);
     assert.equal(await get(page,'renpy.can_load("1-1")'),true);
     await startNarrative(page);
     assert.equal(await get(page,'current_scene'),'p00_entry');
@@ -114,7 +117,7 @@ try {
         await page.setViewportSize(size);
         await page.reload({waitUntil:'domcontentloaded'});
         await page.waitForFunction(()=>!document.getElementById('presplash'),null,{timeout:120000});
-        assert.equal(await get(page,'config.version'),'1.2.0');
+        assert.equal(await get(page,'config.version'),expectedVersion);
         assert.equal(await page.locator('#orientationHint').isVisible(),size.height>size.width);
         screenshots.push(await shot(page,`${size.width}x${size.height}`));
     }
@@ -191,10 +194,10 @@ try {
     checks.push('missing engine resource cannot produce an offline-ready marker');
     failFile = null; await failed.close();
     assert.equal(errors.length,0);
-    const offlineBytes = JSON.parse(await fs.readFile('reports/web-build.json','utf8')).offline_bytes;
+    const offlineBytes = buildMetadata.offline_bytes;
     assert.ok(offlineBytes < 100_000_000);
     assert.ok(samples.every(sample=>sample.milliseconds<120000));
-    const report={status:'passed',engine:'RenPy 8.5.3 official WASM',version:'1.2.0',checks,samples,
+    const report={status:'passed',engine:'RenPy 8.5.3 official WASM',version:expectedVersion,checks,samples,
         first_baseline:true,budgets:{offline_bytes:100000000,boot_milliseconds:120000},offline_bytes:offlineBytes,
         screenshots,errors,requests_outside_application:requests.filter(request=>!request.startsWith('/Rain/')&&!request.startsWith('/nested/Rain/')&&!request.startsWith('/foreign-')),
         limits:['Physical device installation and human listening remain separate acceptance.','Smoke exercises beginning and native save export; all 16 full state routes are checked by native Windows suite.']};
