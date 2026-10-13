@@ -8,6 +8,8 @@ PWA 首次联网保存完整内容后可安装、离线重开和导入 / 导出 
 
 三作品共用制作检查和可导出的许可素材包：`node scripts/vn-materials.mjs verify`、`node scripts/vn-materials.mjs export .reuse-kit/v1.1.0`。保留角色、剧情、引擎和存档身份，移植入口见 [可复用素材](docs/production/REUSABLE-MATERIALS.md)。
 
+与《回路》的离线人物语音、声音演出和多角色请求配方已双向整理，见 [双项目制作交流](docs/production/RAIN-CIRCUIT-BRIDGE.md)。本轮新增作者工具与测试，现有游戏素材与运行逻辑沿用。
+
 以下保留已公开的 v1.1.1 Windows 正式版身份证据；它不替代新 PWA 或 v1.2.0 的验收。
 
 **v1.1.1 鉴赏室体验补丁已正式发布。** 六章、24个叙事场景、四次选择、16条路线、Normal / True两个结局，七表情、四背景、旧信CG、17句配音及原创音乐 / 环境音效。

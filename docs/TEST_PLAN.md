@@ -290,3 +290,8 @@ GitHub Actions 在 Windows runner 上运行原生 Ren'Py，测试和构建后从
 正式发布证据清单应绑定最终 commit、版本和 ZIP 哈希，并引用数据 / lint、Windows 源码与独立 EXE 报告、截图完整解码、普通电脑运行、真人试听、计时及创作定案。内容变更或重新构建产生不同哈希后，受影响的检查必须重做。当前 CI dummy 音频输出的限制继续保留。
 
 各阶段机器检查的实际结果见前文和对应验收清单；普通电脑、计时、试听、创作定案与正式发布仍为后续门槛，未执行项目不记为通过。
+
+
+## Rain ↔ Circuit 作者请求配方 · 2026-10-13
+
+`python -m unittest tests.test_voice_request -v` 检查多人物/多台词绑定、稳定指纹、模型配置与文本变更、非法seed/路径ID/重复绑定、未知speaker和正文脱离来源。`node scripts/vn-materials.mjs verify` 核对原三仓共享文件与许可素材；全Python回归检查现有作者工具。此批不修改运行时，未重复原生游戏与平台发行验收。本轮140项Python测试与共享素材检查已通过，详细结果见 production/RAIN-CIRCUIT-VERIFICATION.json。

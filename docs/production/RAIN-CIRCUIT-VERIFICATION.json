@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-13",
+  "scope": "author recipe and bridge documentation only",
+  "pythonTests": 140,
+  "newRecipeTests": 7,
+  "sharedFiles": 9,
+  "materialsEntries": 89,
+  "materialsFileReferences": 212,
+  "status": "passed",
+  "commands": [
+    "voice_runtime/bin/python -m unittest discover -s tests -v",
+    "node scripts/vn-materials.mjs verify"
+  ],
+  "limitations": [
+    "No Rain runtime, story, recordings, shared contract or save identity changed.",
+    "This batch did not rebuild or repeat RenPy Windows/PWA interaction or human listening checks."
+  ]
+}

@@ -1,3 +1,7 @@
+# 跨项目制作交流 — 2026-10-13
+
+与Circuit同步 [语音与声音演出配方](production/RAIN-CIRCUIT-BRIDGE.md)，新增作者侧多角色请求校验和测试。Rain已有语音制作方法已在Circuit落地；本仓原有剧情、录音、运行时与v1.2.0候选身份保持原验收记录。本轮140项Python测试（含7项新增配方测试）、9份共享文件及89项/212文件引用的素材检查通过，见 [交流验收记录](production/RAIN-CIRCUIT-VERIFICATION.json)；没有据此宣称新的原生Windows或PWA玩家包验收。
+
 # v1.2.0 双平台工程候选 — 2026-10-11
 
 Rain 继续 Ren'Py 8.5.3 原生 Windows EXE，并新增官方 WASM 的完整离线 PWA。相对 scope / ID 支持 GitHub Pages `/Rain/` 与嵌套路径；逐文件 SHA-256 / 字节数与完整缓存标记、安装入口、旧窗口关闭后更新、浏览器原生存档 ZIP 导入 / 导出已落地。竖屏提示横屏阅读，保持原16:9美术与原生1920画布。
