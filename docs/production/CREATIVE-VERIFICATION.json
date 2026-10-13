@@ -16,13 +16,24 @@
     "renpyLint": "passed: Ren’Py 8.5.3.26051504",
     "platformVersionMetadata": "passed"
   },
-  "browserRuntime": "pending_ci",
-  "windowsRuntime": "pending_ci",
-  "publicPwa": "pending_ci",
+  "browserRuntime": "passed",
+  "windowsRuntime": "passed",
+  "publicPwa": "passed",
   "sourceHashes": {
     "game/data/story.json": "d98a731f274fed8c5df10b94db3792a97b48927c91142e88f1c6a72370e87d89",
     "game/data/asset_manifest.json": "9393c066f122ff3d76aab6eaa6f57010b2f129e7846ca0338a33095f410dbdd4",
     "game/script/story_generated.rpy": "05e7af61aa51471db9e888a6dc477899ea10a7d623655fd27737594e5ee5e6be"
   },
-  "recoveredBinaryGitObjects": "all 14 match the previously uploaded original blob IDs"
+  "recoveredBinaryGitObjects": "all 14 match the previously uploaded original blob IDs",
+  "runtimeCommit": "7341ea8d1ef01debc4fd905f10032df9438ea159",
+  "webEvidence": {
+    "run": 38419668891,
+    "revision": "e802eb994d9337ab746146df",
+    "browser": "WEB-ACCEPTANCE-v1.2.1.json",
+    "published": "PUBLIC-PWA-v1.2.1.json",
+    "windows": "passed: source, standalone EXE, fresh-process saves and v1.1.0 upgrades"
+  },
+  "windowsEvidence": "WINDOWS-AUDIT-v1.2.1.json",
+  "visualEvidence": "VISUAL-REVIEW-v1.2.1.json",
+  "publicationEvidence": "PUBLISHED-v1.2.1.json"
 }

@@ -1,18 +1,18 @@
-> 2026-10-13：v1.2.1 剧情与美术修订进入本次验收，详见 [精修记录](docs/production/CREATIVE-REVIEW.md)。以下历史下载与预览保留对应旧版身份。
+> 2026-10-13：v1.2.1 精修 43 段剧情并重绘小店背景；Windows 源码、独立 EXE 与公开 PWA 均已通过本次验收。[下载已验证 Windows 候选包](https://github.com/AureliusWu/Rain/actions/runs/38419669031/artifacts/11830300404) · [本轮实机预览](docs/previews/v1.2.1/README.md)。见 [精修记录](docs/production/CREATIVE-REVIEW.md)、[网页原生测试](docs/production/WEB-ACCEPTANCE-v1.2.1.json) 与 [公网离线续读](docs/production/PUBLIC-PWA-v1.2.1.json)。
 
 # 雨停之前 / Before the Rain Stops
 
 离线中文 Ren’Py 视觉小说。雨夜旧车站，两位久未联系的旧友，和一封没有寄出的信。
 
-**v1.2.0 双平台开发候选：Ren'Py 原生 Windows EXE + 同引擎 WebAssembly PWA。** 浏览器入口为 [Rain PWA](https://aureliuswu.github.io/Rain/)；当前提交需完成 CI / Pages 部署后更新公开验收状态，详见 [双平台说明](docs/DUAL_PLATFORM_V12.md)。
+**v1.2.1 双平台开发候选：Ren'Py 原生 Windows EXE + 同引擎 WebAssembly PWA。** 浏览器入口为 [Rain PWA](https://aureliuswu.github.io/Rain/)；旧档身份、16 条路线与 17 句录音保持，当前精修及独立平台证据见 [制作记录](docs/production/CREATIVE-REVIEW.md)。
 
 PWA 首次联网保存完整内容后可安装、离线重开和导入 / 导出 Ren'Py 原生存档。浏览器与 Windows 的本机保存位置独立；请使用浏览器左上角导出备份。新版本下载完成后等待旧窗口关闭再激活，正在阅读的窗口继续使用原版本。
 
-三作品共用制作检查和可导出的许可素材包：`node scripts/vn-materials.mjs verify`、`node scripts/vn-materials.mjs export .reuse-kit/v1.1.0`。保留角色、剧情、引擎和存档身份，移植入口见 [可复用素材](docs/production/REUSABLE-MATERIALS.md)。
+三作品共用制作契约 v1.2.0、[精修方法与场景模板](docs/production/CREATIVE-PLAYBOOK.md) 和可导出的许可素材包：`node scripts/vn-materials.mjs verify`、`node scripts/vn-materials.mjs export .reuse-kit/v1.2.0`。保留角色、剧情、引擎和存档身份，移植入口见 [可复用素材](docs/production/REUSABLE-MATERIALS.md)。
 
 与《回路》的离线人物语音、声音演出和多角色请求配方已双向整理，见 [双项目制作交流](docs/production/RAIN-CIRCUIT-BRIDGE.md)。本轮新增作者工具与测试，现有游戏素材与运行逻辑沿用。
 
-以下保留已公开的 v1.1.1 Windows 正式版身份证据；它不替代新 PWA 或 v1.2.0 的验收。
+以下保留已公开的 v1.1.1 Windows 正式版身份证据；本轮 v1.2.1 使用自己的运行提交、截图和验证包。
 
 **v1.1.1 鉴赏室体验补丁已正式发布。** 六章、24个叙事场景、四次选择、16条路线、Normal / True两个结局，七表情、四背景、旧信CG、17句配音及原创音乐 / 环境音效。
 

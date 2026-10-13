@@ -1,0 +1,75 @@
+{
+  "status": "passed",
+  "engine": "RenPy 8.5.3 official WASM",
+  "version": "1.2.1",
+  "checks": [
+    "manifest parsed and app-scoped start URL; complete offline marker",
+    "actual Start click and native narration",
+    "actual native Save screen writes slot 1",
+    "native export save ZIP produced by actual browser control",
+    "offline reload boots complete native WASM and starts narrative",
+    "412x915, 568x320 and 844x390 native display boots",
+    "complete update waits while old WASM narrative keeps its original controller and state",
+    "closing old windows activates complete update; prior own cache removed and unrelated/other-scope caches retained",
+    "real export ZIP imported into fresh browser context and actual Load restores saved scene",
+    "unrelated parent-scope worker cannot announce this application offline-ready",
+    "nested subpath fresh install and complete offline reopen",
+    "missing engine resource cannot produce an offline-ready marker"
+  ],
+  "samples": [
+    {
+      "mode": "first_install",
+      "milliseconds": 4397
+    },
+    {
+      "mode": "cached_reopen",
+      "milliseconds": 3169
+    },
+    {
+      "mode": "cached_reopen",
+      "milliseconds": 3271
+    }
+  ],
+  "first_baseline": true,
+  "budgets": {
+    "offline_bytes": 100000000,
+    "boot_milliseconds": 120000
+  },
+  "offline_bytes": 73283872,
+  "screenshots": [
+    {
+      "name": "desktop-main-menu",
+      "sha256": "e2a0461018d76d765f44022dfde0cb84cf6bec1a3a632d6aa7da5017356bb434"
+    },
+    {
+      "name": "desktop-story",
+      "sha256": "65a19c63abe7cdba4d38041fd6b076d6d50dedfbcbed733dba870d0fb27233bb"
+    },
+    {
+      "name": "offline-story",
+      "sha256": "830f543fbc6a5dbee636f7ab46965fa82302988a91e6fad6061ce02c74df7d0d"
+    },
+    {
+      "name": "412x915",
+      "sha256": "4d80fe6a9ae04bdfd208b573948d4e2bd15272387a57045b05ef8e13ed56dfc7"
+    },
+    {
+      "name": "568x320",
+      "sha256": "f4fd1336ceae2151c248e5381d6cb16fe57697e1e3abf9c1b2cd867b55e24a42"
+    },
+    {
+      "name": "844x390",
+      "sha256": "9ebc9ab73a5c4a6c31ec1aecc5ccd68637361b76e57483d786cd14030e4f8064"
+    },
+    {
+      "name": "imported-native-save",
+      "sha256": "ca88e81f2f65fe4a997227363c99775ddd0f3881b7265754d6b2128af2770196"
+    }
+  ],
+  "errors": [],
+  "requests_outside_application": [],
+  "limits": [
+    "Physical device installation and human listening remain separate acceptance.",
+    "Smoke exercises beginning and native save export; all 16 full state routes are checked by native Windows suite."
+  ]
+}

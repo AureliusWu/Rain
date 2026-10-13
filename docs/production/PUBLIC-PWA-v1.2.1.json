@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "target": "https://aureliuswu.github.io/Rain/",
+  "version": "1.2.1",
+  "revision": "e802eb994d9337ab746146df",
+  "checks": [
+    "public native menu, exact platform version/revision and own worker scope",
+    "actual public Start and native Save slot 1",
+    "disconnected public reopen, native Load and preserved saved scene"
+  ],
+  "online_milliseconds": 5658,
+  "offline_milliseconds": 3474,
+  "offline_samples_milliseconds": [
+    5339,
+    3474,
+    3453
+  ],
+  "exact_tested_artifact": true,
+  "errors": [],
+  "human_physical_device": false
+}

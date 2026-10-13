@@ -1,0 +1,12 @@
+{
+  "status": "built",
+  "engine": "RenPy 8.5.3 official WASM",
+  "web_sdk_sha256": "954db897e65f51ea63cb2fb7b203d02be0447f4e22069514020bbe6c6691fdfc",
+  "runtime_files": 27,
+  "offline_bytes": 73283872,
+  "revision": "e802eb994d9337ab746146df",
+  "version": "1.2.1",
+  "web_zip_sha256": "f7d604f3889e22174849404ca5e12bb405e12953470b57cf9905e0c671eb0645",
+  "scope": "relative; supports /Rain/ and local test subpaths",
+  "browser_execution": "requires actual smoke test"
+}
