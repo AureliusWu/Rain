@@ -1,3 +1,9 @@
+# v1.2.1 剧情与美术候选 · 2026-10-13
+
+修订 43 段。小店按原参考重绘，减少颗粒和过度反光；17 句录音逐字保留。 共享契约 v1.2.0 已同步，当前验证见 [精修记录](production/CREATIVE-REVIEW.md)。平台结果以本次 CI 为准。
+
+---
+
 # 跨项目制作交流 — 2026-10-13
 
 与Circuit同步 [语音与声音演出配方](production/RAIN-CIRCUIT-BRIDGE.md)，新增作者侧多角色请求校验和测试。Rain已有语音制作方法已在Circuit落地；本仓原有剧情、录音、运行时与v1.2.0候选身份保持原验收记录。本轮140项Python测试（含7项新增配方测试）、9份共享文件及89项/212文件引用的素材检查通过，见 [交流验收记录](production/RAIN-CIRCUIT-VERIFICATION.json)；没有据此宣称新的原生Windows或PWA玩家包验收。

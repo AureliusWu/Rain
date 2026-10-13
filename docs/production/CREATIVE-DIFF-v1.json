@@ -1,0 +1,268 @@
+{
+  "creativeVersion": "1.0.0",
+  "scenes": 26,
+  "revisedParagraphs": 43,
+  "protectedVoices": 17,
+  "savePositionsPreserved": true,
+  "routeContractPreserved": true,
+  "changes": [
+    {
+      "scene": "p00_entry",
+      "section": "lines",
+      "index": 11,
+      "id": "p00_entry_l012"
+    },
+    {
+      "scene": "p00_entry",
+      "section": "lines",
+      "index": 14,
+      "id": "p00_entry_l015"
+    },
+    {
+      "scene": "p00_entry",
+      "section": "lines",
+      "index": 15,
+      "id": "p00_entry_l016"
+    },
+    {
+      "scene": "p00_entry",
+      "section": "lines",
+      "index": 19,
+      "id": "p00_entry_l020"
+    },
+    {
+      "scene": "s02_reunion",
+      "section": "lines",
+      "index": 9,
+      "id": "s02_reunion_l010"
+    },
+    {
+      "scene": "s02_reunion",
+      "section": "lines",
+      "index": 16,
+      "id": "s02_reunion_l017"
+    },
+    {
+      "scene": "s02_reunion",
+      "section": "lines",
+      "index": 21,
+      "id": "s02_reunion_l022"
+    },
+    {
+      "scene": "s02_reunion",
+      "section": "lines",
+      "index": 22,
+      "id": "s02_reunion_l023"
+    },
+    {
+      "scene": "s02_reunion",
+      "section": "lines",
+      "index": 23,
+      "id": "s02_reunion_l024"
+    },
+    {
+      "scene": "s02_reunion",
+      "section": "lines",
+      "index": 25,
+      "id": "s02_reunion_l026"
+    },
+    {
+      "scene": "s03_honest",
+      "section": "lines",
+      "index": 8,
+      "id": "s03_honest_l009"
+    },
+    {
+      "scene": "s03_honest",
+      "section": "lines",
+      "index": 13,
+      "id": "s03_honest_l014"
+    },
+    {
+      "scene": "s03_honest",
+      "section": "lines",
+      "index": 16,
+      "id": "s03_honest_l017"
+    },
+    {
+      "scene": "s03_honest",
+      "section": "lines",
+      "index": 17,
+      "id": "s03_honest_l018"
+    },
+    {
+      "scene": "s03_honest",
+      "section": "lines",
+      "index": 20,
+      "id": "s03_honest_l021"
+    },
+    {
+      "scene": "s03_honest",
+      "section": "lines",
+      "index": 22,
+      "id": "s03_honest_l023"
+    },
+    {
+      "scene": "s03_honest",
+      "section": "lines",
+      "index": 23,
+      "id": "s03_honest_l024"
+    },
+    {
+      "scene": "s03_honest",
+      "section": "lines",
+      "index": 25,
+      "id": "s03_honest_l026"
+    },
+    {
+      "scene": "s03_deferred",
+      "section": "lines",
+      "index": 3,
+      "id": "s03_deferred_l004"
+    },
+    {
+      "scene": "s03_deferred",
+      "section": "lines",
+      "index": 9,
+      "id": "s03_deferred_l010"
+    },
+    {
+      "scene": "s03_deferred",
+      "section": "lines",
+      "index": 14,
+      "id": "s03_deferred_l015"
+    },
+    {
+      "scene": "s03_deferred",
+      "section": "lines",
+      "index": 15,
+      "id": "s03_deferred_l016"
+    },
+    {
+      "scene": "s03_deferred",
+      "section": "lines",
+      "index": 18,
+      "id": "s03_deferred_l019"
+    },
+    {
+      "scene": "s03_deferred",
+      "section": "lines",
+      "index": 19,
+      "id": "s03_deferred_l020"
+    },
+    {
+      "scene": "s03_deferred",
+      "section": "lines",
+      "index": 22,
+      "id": "s03_deferred_l023"
+    },
+    {
+      "scene": "s03_deferred",
+      "section": "lines",
+      "index": 25,
+      "id": "s03_deferred_l026"
+    },
+    {
+      "scene": "s04_waiting",
+      "section": "lines",
+      "index": 22,
+      "id": "s04_waiting_l022"
+    },
+    {
+      "scene": "s04_waiting",
+      "section": "lines",
+      "index": 27,
+      "id": "s04_waiting_l027"
+    },
+    {
+      "scene": "s04_waiting",
+      "section": "lines",
+      "index": 30,
+      "id": "s04_waiting_l030"
+    },
+    {
+      "scene": "s04_waiting",
+      "section": "lines",
+      "index": 34,
+      "id": "s04_waiting_l034"
+    },
+    {
+      "scene": "s04_repair",
+      "section": "lines",
+      "index": 6,
+      "id": "v07_s04_repair_l005"
+    },
+    {
+      "scene": "s04_repair",
+      "section": "lines",
+      "index": 19,
+      "id": "s04_repair_l012"
+    },
+    {
+      "scene": "s07_true",
+      "section": "lines",
+      "index": 10,
+      "id": "v07_s07_true_l005"
+    },
+    {
+      "scene": "s07_true",
+      "section": "lines",
+      "index": 11,
+      "id": "s07_true_l007"
+    },
+    {
+      "scene": "s07_true",
+      "section": "lines",
+      "index": 12,
+      "id": "s07_true_l008"
+    },
+    {
+      "scene": "s07_true",
+      "section": "lines",
+      "index": 13,
+      "id": "s07_true_l009"
+    },
+    {
+      "scene": "s07_true",
+      "section": "lines",
+      "index": 17,
+      "id": "s07_true_l013"
+    },
+    {
+      "scene": "s07_true",
+      "section": "lines",
+      "index": 19,
+      "id": "s07_true_l015"
+    },
+    {
+      "scene": "s08_normal",
+      "section": "lines",
+      "index": 3,
+      "id": "s08_normal_l002"
+    },
+    {
+      "scene": "s08_normal",
+      "section": "lines",
+      "index": 8,
+      "id": "s08_normal_l007"
+    },
+    {
+      "scene": "s08_normal",
+      "section": "lines",
+      "index": 13,
+      "id": "s08_normal_l008"
+    },
+    {
+      "scene": "s08_normal",
+      "section": "lines",
+      "index": 14,
+      "id": "s08_normal_l009"
+    },
+    {
+      "scene": "s08_normal",
+      "section": "lines",
+      "index": 15,
+      "id": "s08_normal_l010"
+    }
+  ]
+}

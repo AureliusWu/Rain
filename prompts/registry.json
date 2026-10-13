@@ -16,6 +16,13 @@
       "sha256": "295372e3460f68593c7984f43c392e4292cfe0e6d394cad90f1e7ad95bd94a00"
     },
     {
+      "id": "background_nearby_cafe_v2",
+      "version": 2,
+      "kind": "background",
+      "file": "prompts/background/nearby_cafe_v2.md",
+      "sha256": "c28aa1d1bfd4eff1050ad818a8ac1a9cd01bb0f7f8af16a71a6995c4ffd436c0"
+    },
+    {
       "id": "background_station_exit_after_rain_v1",
       "version": 1,
       "kind": "background",
@@ -130,6 +137,62 @@
       "kind": "negative",
       "file": "prompts/negative/art_v1.md",
       "sha256": "5745bb8b222e79bf6faea8ecc33b41846446f061947530d2b26b963e398c8606"
+    },
+    {
+      "id": "script_creative_p00_entry_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/creative/p00_entry_v1.md",
+      "sha256": "9d37509e8034988eb15770af442b1b7986cbb0f917528f6ac58b8b7a7274295e"
+    },
+    {
+      "id": "script_creative_s02_reunion_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/creative/s02_reunion_v1.md",
+      "sha256": "55ac324eab8381e04e3da808d90f5c3a0cee955536514873e23371279b471201"
+    },
+    {
+      "id": "script_creative_s03_deferred_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/creative/s03_deferred_v1.md",
+      "sha256": "346800018b43ce94d25721a47367e4923520f4465ff01e56a67b8471b07a77aa"
+    },
+    {
+      "id": "script_creative_s03_honest_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/creative/s03_honest_v1.md",
+      "sha256": "7e365d7ffd17ce9cefeaeff8e3d69826e4196f512e8f87a83f0ebc4d277c0497"
+    },
+    {
+      "id": "script_creative_s04_repair_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/creative/s04_repair_v1.md",
+      "sha256": "37095892e99398c89929542b61d23cd8c457c373970f7199113262c28e2e498c"
+    },
+    {
+      "id": "script_creative_s04_waiting_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/creative/s04_waiting_v1.md",
+      "sha256": "ea7bbfb41804dd4822a48fc257c3ecb90bebb1e9097662c7e2332c6f12d62eeb"
+    },
+    {
+      "id": "script_creative_s07_true_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/creative/s07_true_v1.md",
+      "sha256": "d3aa7d4630e3396fbb8ea1003e9c1d9c51deb923861116d21082b2189672da06"
+    },
+    {
+      "id": "script_creative_s08_normal_v1",
+      "version": 1,
+      "kind": "script",
+      "file": "prompts/script/creative/s08_normal_v1.md",
+      "sha256": "02a1593c381f22f01f032d625a9f1ab6189d66318ea897322b2041593e0d2900"
     },
     {
       "id": "script_scene_v1",

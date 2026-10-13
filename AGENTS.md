@@ -14,3 +14,5 @@
 - Report platform-specific execution separately: a cross-built ZIP is not proof of Windows execution.
 
 跨项目复用另读 [三项目制作契约](docs/production/SHARED-VN.md)。本仓库原有引擎、剧情、存档和发行约束继续生效；共用结构检查不能替代原生状态路线与平台验收。
+
+剧情、美术精修另读 [协作方法](docs/production/CREATIVE-PLAYBOOK.md)。保留原段落、路线与录音句，检查点与实际平台证据分别留档。

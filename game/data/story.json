@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "version": "1.2.0",
+  "version": "1.2.1",
   "title": "雨停之前",
   "status": "v07_alpha_expansion_recovered_through_ch03",
   "entry": "p00_entry",
@@ -73,7 +73,7 @@
         {
           "id": "p00_entry_l012",
           "speaker": "n",
-          "text": "我把这句话当成对取物流程的确认。直到那一刻，我都没有问今晚还有谁会来，也没有翻通讯录找三年前的名字。"
+          "text": "我在登记表旁签了字，顺手翻到通讯录。三年前的名字还在，号码却不知道是不是还用。"
         },
         {
           "id": "p00_entry_l013",
@@ -88,12 +88,12 @@
         {
           "id": "p00_entry_l015",
           "speaker": "n",
-          "text": "我站在檐下甩了甩袖口的水，想起那箱书里还有展览留下的相框和留言册。那封信只是其中一件我早就知道存在、却一直没有处理的东西。"
+          "text": "袖口甩出几滴水。我想起箱里的留言册，那封信夹在哪一页，竟还记得。"
         },
         {
           "id": "p00_entry_l016",
           "speaker": "n",
-          "text": "如果今晚碰不到任何熟人，我也会把箱子带走。想到这里，我反而松了口气，至少不用给这次回来编一个更浪漫的理由。"
+          "text": "我把空布袋展开，试了试能不能装下整箱。既然来了，总不能再留一张移交单。"
         },
         {
           "id": "p00_entry_l017",
@@ -113,7 +113,7 @@
         {
           "id": "p00_entry_l020",
           "speaker": "n",
-          "text": "直到熟悉的声音穿过雨幕，这趟返城才多出一个完全不在行程里的名字。"
+          "text": "有人叫了我一声。我停在第二根柱子边，手里的布袋还没收好。"
         }
       ],
       "chapter": "ch00",
@@ -123,10 +123,10 @@
       "background": "station",
       "bgm": "rain_theme",
       "ambient": "rain_ambience",
-      "draft_prompt": "prompts/script/v07/p00_entry_v1.md",
-      "draft_prompt_sha256": "b7f168be6ed4e004d6c7b573ac3b995f985a1038908750c7ad58881b273b9371",
-      "review_status": "v07_restored_expansion_candidate",
-      "draft_prompt_id": "script_v07_p00_entry_v1"
+      "draft_prompt": "prompts/script/creative/p00_entry_v1.md",
+      "draft_prompt_sha256": "9d37509e8034988eb15770af442b1b7986cbb0f917528f6ac58b8b7a7274295e",
+      "review_status": "creative_revision_2026_10_13",
+      "draft_prompt_id": "script_creative_p00_entry_v1"
     },
     {
       "id": "s01_arrival",
@@ -470,7 +470,7 @@
         {
           "id": "s02_reunion_l010",
           "speaker": "n",
-          "text": "那时我们觉得，旧地方总会等人回来。后来我走得匆忙，连那张照片都没再看过。"
+          "text": "那时我拿报纸垫相机，许澄负责盯着倒计时。跑回长椅的十秒，我记得比后来赶车还清楚。"
         },
         {
           "id": "s02_reunion_l011",
@@ -506,7 +506,7 @@
         {
           "id": "s02_reunion_l017",
           "speaker": "n",
-          "text": "她没有继续解释。我也没有马上追问“为什么不告诉我”。我们都很清楚，没有联系的人没有资格要求对方主动汇报生活。"
+          "text": "我差点问她为什么没告诉我，话到嘴边停了。纸袋上写着新店地址，那几年我一次也没问过。"
         },
         {
           "id": "s02_reunion_l018",
@@ -531,17 +531,17 @@
         {
           "id": "s02_reunion_l022",
           "speaker": "n",
-          "text": "这一次我笑出了声。笑完以后，气氛没有突然变回三年前，只是没那么绷紧了。"
+          "text": "我笑出声。她把压歪的袋口掰正，没有接着笑；我也低头去捡桌边的一张展签。"
         },
         {
           "id": "s02_reunion_l023",
           "speaker": "n",
-          "text": "她把靠雨棚内侧的位置让出半步，又没有替我决定要不要站过去。选择似乎从很小的地方就已经开始。"
+          "text": "她往里挪半步，柱子旁空出一块干地。我看了一眼，没有马上站过去。"
         },
         {
           "id": "s02_reunion_l024",
           "speaker": "n",
-          "text": "我看着她被雨打湿一点的袖口，又看向出口的登记桌。先问她，还是先把自己的事情办完，都不会只是表面顺序。"
+          "text": "出口那边有人喊最后几箱。她的袖口贴在湿胳膊上，我想先问一句，又怕一开口就只会说雨真大。"
         },
         {
           "id": "s02_reunion_l025",
@@ -551,7 +551,7 @@
         {
           "id": "s02_reunion_l026",
           "speaker": "n",
-          "text": "我终于意识到，接下来最重要的不是把过去一次说完，而是先决定怎样对待眼前这个人。"
+          "text": "箱子还在那里。我放慢脚步，先叫了她的名字。"
         }
       ],
       "choices": [
@@ -611,12 +611,12 @@
       ],
       "chapter": "ch01",
       "dramatic_purpose": "在近况与事务之间做第一次选择。",
-      "draft_prompt": "prompts/script/v07/s02_reunion_v1.md",
-      "draft_prompt_sha256": "10fced0c19a7bd10cd23c2241051428c331639c13cbdbc77efb17feeef2fa9e8",
-      "review_status": "v07_restored_expansion_candidate",
+      "draft_prompt": "prompts/script/creative/s02_reunion_v1.md",
+      "draft_prompt_sha256": "55ac324eab8381e04e3da808d90f5c3a0cee955536514873e23371279b471201",
+      "review_status": "creative_revision_2026_10_13",
       "background": "station",
       "sprite": "normal",
-      "draft_prompt_id": "script_v07_s02_reunion_v1"
+      "draft_prompt_id": "script_creative_s02_reunion_v1"
     },
     {
       "id": "s02_care",
@@ -1321,7 +1321,7 @@
         {
           "id": "s03_honest_l009",
           "speaker": "n",
-          "text": "我看着箱子里的书，慢慢点了点头。今晚能先做的一件，是不再替她决定什么时候听。"
+          "text": "我把最上面那本书转了个方向，封面上的字终于朝着自己。许澄还等着，我不能再只点头。"
         },
         {
           "id": "s03_honest_l010",
@@ -1346,7 +1346,7 @@
         {
           "id": "s03_honest_l014",
           "speaker": "n",
-          "text": "她的声音没有抬高。这句话却比责备更准确。我点头，没有拿当时的慌乱替自己减轻责任。"
+          "text": "她没抬高声音。我握住箱沿，纸板在手心折进去一点，只好把刚才那句重新说清楚。"
         },
         {
           "id": "s03_honest_l015",
@@ -1361,12 +1361,12 @@
         {
           "id": "s03_honest_l017",
           "speaker": "n",
-          "text": "她只应了一声。我第一次觉得，这个简单的“嗯”比“没关系”更合适，因为这件事确实还没有到可以轻易过去的时候。"
+          "text": "那个“嗯”落下以后，她继续套相框。我等了几秒，没有听见惯常的“没关系”。"
         },
         {
           "id": "s03_honest_l018",
           "speaker": "p",
-          "text": "我不是想用这封信证明当时有多认真。它只能证明我写过，又没有送出去。"
+          "text": "信是我写的，也一直没交到你手里。报到早了是真的，后来没联系，也是我。"
         },
         {
           "id": "s03_honest_l019",
@@ -1381,7 +1381,7 @@
         {
           "id": "s03_honest_l021",
           "speaker": "h",
-          "text": "等以后真要看，我们再决定在哪里看。不是今天为了把气氛变好就拆。"
+          "text": "以后想看，我会跟你说。今天别拆，免得我刚看第一行，你就盯着等答案。"
         },
         {
           "id": "s03_honest_l022",
@@ -1391,12 +1391,12 @@
         {
           "id": "s03_honest_l023",
           "speaker": "n",
-          "text": "这不是原谅，也不是重新开始的约定。只是我们终于对三年前发生过什么有了同一个事实起点。"
+          "text": "她把第二只相框放进袋里。我低头，把信封从箱盖拿起来，封口仍然整齐。"
         },
         {
           "id": "s03_honest_l024",
           "speaker": "n",
-          "text": "我把信收进口袋内侧，封口朝上。接下来如果还要谈，就该谈现在能做到什么，而不是让一封旧信替我们说完。"
+          "text": "信贴进内袋，我又按了一下。她的手停在照片边上，我等着，没再伸过去。"
         },
         {
           "id": "s03_honest_l025",
@@ -1406,17 +1406,17 @@
         {
           "id": "s03_honest_l026",
           "speaker": "n",
-          "text": "她给的是暂停，不是结论。我把这两个词在心里分开，终于没有急着问她现在怎么看我。"
+          "text": "我把那句“那你现在怎么看我”咽回去。雨棚边有人拖走一张空椅子，声音很长。"
         }
       ],
       "chapter": "ch02",
       "time": "21:49",
       "dramatic_purpose": "承认回避，不要求女主当场给出答复。",
       "next": "s03_archive",
-      "draft_prompt": "prompts/script/v07/s03_honest_v1.md",
-      "draft_prompt_sha256": "e237b7e0eef8e54c065c69e3d1b264540ccbdde727b954347c484ad89bd4b7ce",
-      "review_status": "v07_restored_expansion_candidate",
-      "draft_prompt_id": "script_v07_s03_honest_v1"
+      "draft_prompt": "prompts/script/creative/s03_honest_v1.md",
+      "draft_prompt_sha256": "7e365d7ffd17ce9cefeaeff8e3d69826e4196f512e8f87a83f0ebc4d277c0497",
+      "review_status": "creative_revision_2026_10_13",
+      "draft_prompt_id": "script_creative_s03_honest_v1"
     },
     {
       "id": "s03_deferred",
@@ -1440,7 +1440,7 @@
         {
           "id": "s03_deferred_l004",
           "speaker": "n",
-          "text": "我终于停在这句话上，没有再说“可能”，也没有找一个关于年代太久的理由。"
+          "text": "我盯着那道封口，没再添一句“可能”。她的手指还压着照片边角。"
         },
         {
           "id": "s03_deferred_l005",
@@ -1471,7 +1471,7 @@
         {
           "id": "s03_deferred_l010",
           "speaker": "n",
-          "text": "这句话听上去还算诚实，却不足以让她知道更多。我把手从口袋里拿出来，继续整理眼前的箱子。"
+          "text": "她看了我一眼，没有接话。我把手从口袋里抽出来，重新搬动那摞书。"
         },
         {
           "id": "s03_deferred_l011",
@@ -1496,12 +1496,12 @@
         {
           "id": "s03_deferred_l015",
           "speaker": "n",
-          "text": "我点头。她没有得到信的作者这个事实，所以她的判断只能停在“我认识字迹，却暂时不解释”。这是我这次选择留下的边界。"
+          "text": "她问的字迹，我只答了认识。箱子已经整理到最后一层，我仍没告诉她信是谁写的。"
         },
         {
           "id": "s03_deferred_l016",
           "speaker": "n",
-          "text": "我不能在心里把她的耐心理解成已经知道，也不能因为她没追问，就把沉默当成默认接受。"
+          "text": "许澄把相框装好，拉上袋口。她没有再问，我也没敢把手伸回内袋。"
         },
         {
           "id": "s03_deferred_l017",
@@ -1516,12 +1516,12 @@
         {
           "id": "s03_deferred_l019",
           "speaker": "n",
-          "text": "她说完继续整理东西，语气没有变软。那句比较也让我听见了过去留下的真实重量。"
+          "text": "她把袋子放稳，才说完后半句。我记起那几个一直没点开的旧聊天窗口。"
         },
         {
           "id": "s03_deferred_l020",
           "speaker": "n",
-          "text": "我摸到口袋里的信封，确定边角没有折。它现在更像一项未完成的谈话，而不是可以永久封存的纪念品。"
+          "text": "信封硌着口袋。我挪了挪它，没有拿出来；她看向站台尽头，等下一声关灯通知。"
         },
         {
           "id": "s03_deferred_l021",
@@ -1536,7 +1536,7 @@
         {
           "id": "s03_deferred_l023",
           "speaker": "n",
-          "text": "她没有说“我们的决定”，因为她还不知道信里写给谁。这个称呼上的距离很小，却必须保留。"
+          "text": "她的目光扫过内袋，又转开。我仍然没把“是我写的”说出口，纸袋就横在我们之间。"
         },
         {
           "id": "s03_deferred_l024",
@@ -1551,17 +1551,17 @@
         {
           "id": "s03_deferred_l026",
           "speaker": "n",
-          "text": "我记住这句话。过去会过去，但它留下的空白仍然需要现在的人来处理。"
+          "text": "我把最后一只相框装好，袋口扣了两次才扣上。那句话没有因为东西收齐就过去。"
         }
       ],
       "chapter": "ch02",
       "time": "21:49",
       "dramatic_purpose": "女主接受暂停但没有把沉默理解成解释。",
       "next": "s03_archive",
-      "draft_prompt": "prompts/script/v07/s03_deferred_v2.md",
-      "draft_prompt_sha256": "d4a0ee6fc8995b3c1eaef45e5e3aaf7b011acc09cbdb40a4dffbfa18c0a9d5a0",
-      "review_status": "v07_restored_expansion_candidate",
-      "draft_prompt_id": "script_v07_s03_deferred_v2"
+      "draft_prompt": "prompts/script/creative/s03_deferred_v1.md",
+      "draft_prompt_sha256": "346800018b43ce94d25721a47367e4923520f4465ff01e56a67b8471b07a77aa",
+      "review_status": "creative_revision_2026_10_13",
+      "draft_prompt_id": "script_creative_s03_deferred_v1"
     },
     {
       "id": "s03_archive",
@@ -2107,7 +2107,7 @@
         {
           "id": "s04_waiting_l022",
           "speaker": "n",
-          "text": "她很轻地笑了一声，又把手机收好。这一次，我没有急着替这声笑解释什么。",
+          "text": "她轻轻笑了一声，把手机收好。我还停在那个句号上，删掉输入框里第二个。",
           "expression": "happy"
         },
         {
@@ -2133,7 +2133,7 @@
         {
           "id": "s04_waiting_l027",
           "speaker": "n",
-          "text": "雨棚外有车开过去，轮胎带起一片水声。我等那声音落下，才接着她的话说下去。"
+          "text": "轮胎卷过路边积水。我等水声落下，才接着说。"
         },
         {
           "id": "s04_waiting_l028",
@@ -2148,7 +2148,7 @@
         {
           "id": "s04_waiting_l030",
           "speaker": "n",
-          "text": "我把这个约定记进手机备忘录，又觉得太像工作清单，最后只在心里重复了一遍。她看见我的动作，没忍住笑。"
+          "text": "我打开备忘录，才打了“到住处”三个字，她就探头看过来。"
         },
         {
           "id": "s04_waiting_l031",
@@ -2168,7 +2168,7 @@
         {
           "id": "s04_waiting_l034",
           "speaker": "n",
-          "text": "我把刚打到一半的提醒删了。她看着我关掉备忘录，嘴角又往上扬了一点。"
+          "text": "我删掉那半行字，退出备忘录。她看着我的屏幕，嘴角又扬了一点。"
         },
         {
           "id": "s04_waiting_l035",
@@ -2216,10 +2216,10 @@
       "next": "s04_memory",
       "chapter": "ch03",
       "dramatic_purpose": "女主表达独立生活和对明确联系的需求。",
-      "draft_prompt": "prompts/script/v10/s04_waiting_v1.md",
-      "draft_prompt_sha256": "0552d18d365d27e06e3b8afe34d681c4220ea3b190fe11d614f9ffc4fab8799a",
-      "review_status": "v07_restored_expansion_candidate",
-      "draft_prompt_id": "script_v10_s04_waiting_v1"
+      "draft_prompt": "prompts/script/creative/s04_waiting_v1.md",
+      "draft_prompt_sha256": "ea7bbfb41804dd4822a48fc257c3ecb90bebb1e9097662c7e2332c6f12d62eeb",
+      "review_status": "creative_revision_2026_10_13",
+      "draft_prompt_id": "script_creative_s04_waiting_v1"
     },
     {
       "id": "s04_memory",
@@ -2600,7 +2600,7 @@
         {
           "id": "v07_s04_repair_l005",
           "speaker": "n",
-          "text": "我差点说一个也不发，想起普通问题还是可以问，终于把那句过头的保证留住了。"
+          "text": "我差点答一个也不发。她拿出手机看时间，我只说好，不给今晚再添一条保证。"
         },
         {
           "id": "s04_repair_l003",
@@ -2669,17 +2669,17 @@
         {
           "id": "s04_repair_l012",
           "speaker": "n",
-          "text": "我把到家时间发过去，后面补上“你有空再回”。消息停在屏幕上，这次比一个句号长得多。"
+          "text": "我把到家时间发过去，补上“你有空再回”。她的手机亮了一下，这次不用问句号是什么意思。"
         }
       ],
       "chapter": "ch04",
       "time": "22:10",
       "dramatic_purpose": "补充过去与现在的意思，修复一次早期回避。",
       "next": "s05_departure",
-      "draft_prompt": "prompts/script/v10/s04_repair_v1.md",
-      "draft_prompt_sha256": "e2d637661ae96ea9d0da616daba55ad1c24790d18e055f8268e7921e7ce39bff",
-      "review_status": "agent_reviewed_candidate",
-      "draft_prompt_id": "script_v10_s04_repair_v1"
+      "draft_prompt": "prompts/script/creative/s04_repair_v1.md",
+      "draft_prompt_sha256": "37095892e99398c89929542b61d23cd8c457c373970f7199113262c28e2e498c",
+      "review_status": "creative_revision_2026_10_13",
+      "draft_prompt_id": "script_creative_s04_repair_v1"
     },
     {
       "id": "s04_concrete",
@@ -3189,22 +3189,22 @@
         {
           "id": "v07_s07_true_l005",
           "speaker": "n",
-          "text": "我把桌边的一点水擦掉，才拿起杯子。这间店在她生活里原本就有位置，今晚我刚好坐了进来。"
+          "text": "我擦掉桌边那摊水，杯底终于放稳。许澄把自己的杯子推过来一点，让我也帮她擦。"
         },
         {
           "id": "s07_true_l007",
           "speaker": "p",
-          "text": "回去把箱子安顿好以后，能把那封信重新写一遍吗？"
+          "text": "回去把箱子放好，我再写一封。写好先问你，寄到哪儿。"
         },
         {
           "id": "s07_true_l008",
           "speaker": "h",
-          "text": "旧的也留着。写过的话，不能因为不好意思就当作没发生。"
+          "text": "旧的别扔。新的一起放着，我倒想看看你三年前有多会说。"
         },
         {
           "id": "s07_true_l009",
           "speaker": "p",
-          "text": "那我把现在的放在后面。"
+          "text": "估计没有现在会。那时候还拿报纸垫相机。"
         },
         {
           "id": "s07_true_l010",
@@ -3226,7 +3226,7 @@
         {
           "id": "s07_true_l013",
           "speaker": "n",
-          "text": "她说完，我把水杯挪开一点，让照片有块干燥的地方。窗上的雾气慢慢聚起来，街外的灯模糊成了一团。店员问还要不要添水，她举起杯子，我也把自己的推了过去。"
+          "text": "我把水杯往旁边挪，照片铺在干桌面上。店员问添不添水，她举起杯子，我才发现自己的也快空了。"
         },
         {
           "id": "s07_true_l014",
@@ -3237,7 +3237,7 @@
         {
           "id": "s07_true_l015",
           "speaker": "p",
-          "text": "好。第一条先告诉你，书有没有湿。"
+          "text": "好。先告诉你书有没有湿，再说说我今天见到你是什么样。"
         },
         {
           "id": "v07_s07_true_l006",
@@ -3280,10 +3280,10 @@
       "clear_scene": true,
       "chapter": "ch05",
       "dramatic_purpose": "小店里把今天说清楚并约定下一次联系。",
-      "draft_prompt": "prompts/script/v10/s07_true_v1.md",
-      "draft_prompt_sha256": "1511833e74155ddab8313ce31ae2ec036735a98ddb12217b5e2ba71fde4fac3c",
-      "review_status": "preserved_v03_dialogue_with_route_revision",
-      "draft_prompt_id": "script_v10_s07_true_v1",
+      "draft_prompt": "prompts/script/creative/s07_true_v1.md",
+      "draft_prompt_sha256": "d3aa7d4630e3396fbb8ea1003e9c1d9c51deb923861116d21082b2189672da06",
+      "review_status": "creative_revision_2026_10_13",
+      "draft_prompt_id": "script_creative_s07_true_v1",
       "background": "nearby_cafe",
       "sprite": "smile"
     },
@@ -3310,7 +3310,7 @@
         {
           "id": "s08_normal_l002",
           "speaker": "n",
-          "text": "刚才的话，有些已经说清，有些还留着。下一次联系的时间，也要由我们各自确认。"
+          "text": "她绕过路边那摊水，我留在出口等车。纸袋晃到拐角前，她抬了一下手，我也抬手。"
         },
         {
           "id": "s08_normal_l003",
@@ -3337,7 +3337,7 @@
         {
           "id": "s08_normal_l007",
           "speaker": "n",
-          "text": "我输入了完整的一句话，没有用句号代替。发送以后，又把信封按平了一点。"
+          "text": "我读了一遍刚发出的那句话，才按灭屏幕。信封在口袋里翘起一角，我隔着布料把它压平。"
         },
         {
           "id": "v07_s08_normal_l003",
@@ -3362,17 +3362,17 @@
         {
           "id": "s08_normal_l008",
           "speaker": "n",
-          "text": "车站关闭的时间已经写在告示上。另一些事情，今晚还没有确定。"
+          "text": "值班的人把门拉上。钥匙响过几声，雨棚的灯还替门外的人留着。"
         },
         {
           "id": "s08_normal_l009",
           "speaker": "n",
-          "text": "我可以继续把它们留给以后，也可以在下一次联系时，先把该说的话说出来。"
+          "text": "我打开她的头像，把刚存的名字看了一遍。输入框空着，这回我没先发一个句号。"
         },
         {
           "id": "s08_normal_l010",
           "speaker": "n",
-          "text": "雨停了。这个晚上没有给出所有答案，但我们已经重新有了彼此的号码。",
+          "text": "雨停了。叫车页面的数字跳到一分钟，我把手机留在手里，等到了酒店再给她发消息。",
           "stop_ambient": true
         }
       ],
@@ -3380,11 +3380,11 @@
       "ending_title": "Normal / 留给下一次的话",
       "chapter": "ch05",
       "dramatic_purpose": "分别后保留联系，承认仍有事情留给下一次。",
-      "draft_prompt": "prompts/script/v10/s08_normal_v1.md",
-      "draft_prompt_sha256": "ca96a2945a7f9d280268dbe30d173f725db54a0e21a604a60b85e5f91d7866da",
-      "review_status": "preserved_v03_dialogue_with_route_revision",
+      "draft_prompt": "prompts/script/creative/s08_normal_v1.md",
+      "draft_prompt_sha256": "02a1593c381f22f01f032d625a9f1ab6189d66318ea897322b2041593e0d2900",
+      "review_status": "creative_revision_2026_10_13",
       "clear_scene": true,
-      "draft_prompt_id": "script_v10_s08_normal_v1",
+      "draft_prompt_id": "script_creative_s08_normal_v1",
       "background": "station_exit_after_rain"
     }
   ],

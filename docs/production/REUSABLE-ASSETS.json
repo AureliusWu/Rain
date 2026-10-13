@@ -1,16 +1,16 @@
 {
   "schema": 1,
-  "contractVersion": "1.1.0",
+  "contractVersion": "1.2.0",
   "project": "Rain",
   "repository": "https://github.com/AureliusWu/Rain",
   "sourceCommit": "192cd3438556364bf5125bd333a223f92ce81fbb",
-  "inventoryDate": "2026-10-11",
+  "inventoryDate": "2026-10-13",
   "entries": [
     {
       "id": "shared-vn-production",
       "kind": "tool",
       "reuse": "recipe",
-      "origin": "AureliusWu/Rain, NetLove and Healing; shared production contract v1.1.0",
+      "origin": "AureliusWu/Rain, NetLove and Healing; shared production contract v1.2.0",
       "sourceStatus": "not-applicable",
       "license": {
         "name": "MIT — original project code/procedural material only",
@@ -26,7 +26,7 @@
           "role": "recipe",
           "path": "docs/production/SHARED-VN.md",
           "encoding": "text-lf",
-          "sha256": "f08a062eed6bf65683b8fd4197bbd3852973adb45d5f107a72d303028c571f1d"
+          "sha256": "a44afcc027b434f3972632cb643e04de9c6a350864a983d0ca907c05e3cae674"
         },
         {
           "role": "recipe",
@@ -44,19 +44,19 @@
           "role": "recipe",
           "path": "scripts/vn-materials.mjs",
           "encoding": "text-lf",
-          "sha256": "3b7ad85d6437f85bb376dbe2bf1d72b5c086c1a7a89e5db6e1cfe6ba78d76d6d"
+          "sha256": "4259df6e5a5eb23de52a00b60f3767747226f75759d978258990cbd57361b11e"
         },
         {
           "role": "recipe",
           "path": "scripts/vn-materials.test.mjs",
           "encoding": "text-lf",
-          "sha256": "591898378eab69462e3d8f725486574c7ef7201a0f74fa7441de63b50bce9cab"
+          "sha256": "876f5c0e214cb1f53fe9ab61174446c8ee4c7ae2a415482c7bbcf74abd52ae08"
         },
         {
           "role": "recipe",
           "path": "docs/production/REUSABLE-MATERIALS.md",
           "encoding": "text-lf",
-          "sha256": "68659626d126f1e8751f145123541da02c7592b9ce19fc24d5ee9cab3cbfa6e4"
+          "sha256": "c40da5d6a54ac49325002f535219d377562b2f6337a3f6211ebb5a6c574f2b93"
         },
         {
           "role": "template",
@@ -75,6 +75,36 @@
           "path": "docs/production/templates/DUAL-PLATFORM-CHECKLIST.md",
           "encoding": "text-lf",
           "sha256": "25e938e4294def0b00b34cc4703bfdec7221591fd2ae13ce10109cc390d933d1"
+        },
+        {
+          "role": "recipe",
+          "path": "scripts/vn-creative.mjs",
+          "encoding": "text-lf",
+          "sha256": "a98149f99694e2dcdf13dd30515be122f5caed7e89642ca8ea2a16de19cbe77b"
+        },
+        {
+          "role": "recipe",
+          "path": "scripts/vn-creative.d.mts",
+          "encoding": "text-lf",
+          "sha256": "b47a40eeb01d20019ab755a78a3c8f10bfb917b077be99fac15ea11ed3cc8881"
+        },
+        {
+          "role": "recipe",
+          "path": "scripts/vn-creative.test.mjs",
+          "encoding": "text-lf",
+          "sha256": "d8a5df00c68801afbbb1747b0aac3111a7054588a3a3ccda84e8af00784b01fc"
+        },
+        {
+          "role": "recipe",
+          "path": "docs/production/CREATIVE-PLAYBOOK.md",
+          "encoding": "text-lf",
+          "sha256": "dcf2cc35f28a8c35b648f23ba305b27f8c6337cf025ffd9e525c96a20b627f58"
+        },
+        {
+          "role": "template",
+          "path": "docs/production/templates/SCENE-REVISION.md",
+          "encoding": "text-lf",
+          "sha256": "9d52c9c1fdd94dee530f0607871228a18418e6097f44684eac8dc24a2760351b"
         }
       ]
     },
@@ -3945,19 +3975,25 @@
           "role": "runtime",
           "path": "game/backgrounds/nearby_cafe.png",
           "encoding": "binary",
-          "sha256": "9f67e75ce780a24ba9b38bade112185b4ccd97517c3eb3389eabdd78a144b60a"
+          "sha256": "5ec7f48a3786137e9123ff04422b5b0c8582c1517069e2e8de951635e15db486"
         },
         {
           "role": "source",
-          "path": "assets_source/background/nearby_cafe_v1.png",
+          "path": "assets_source/background/nearby_cafe_v2.png",
           "encoding": "binary",
-          "sha256": "c38c92c40e1fde14f386892c450851eb68577dfe946ffdc52f888792f6afcbcc"
+          "sha256": "dcbc9efb98ca1869f4cd757ad231be16723044b951b2d09696013ff1198b7f7a"
         },
         {
           "role": "prompt",
-          "path": "prompts/background/nearby_cafe_v1.md",
+          "path": "prompts/background/nearby_cafe_v2.md",
           "encoding": "text-lf",
-          "sha256": "295372e3460f68593c7984f43c392e4292cfe0e6d394cad90f1e7ad95bd94a00"
+          "sha256": "c28aa1d1bfd4eff1050ad818a8ac1a9cd01bb0f7f8af16a71a6995c4ffd436c0"
+        },
+        {
+          "role": "reference",
+          "path": "assets_source/background/nearby_cafe_v1.png",
+          "encoding": "binary",
+          "sha256": "c38c92c40e1fde14f386892c450851eb68577dfe946ffdc52f888792f6afcbcc"
         }
       ],
       "licenseNote": "AI-generated output; own project reference; see CREDITS.md",
@@ -3968,7 +4004,7 @@
           "mode": "RGB",
           "format": "PNG",
           "has_alpha": false,
-          "pixel_sha256": "46048bed3825b42730bd5b89180bbcaddd0c6f2cb69e8df5ae3af1ce62f72ff0"
+          "pixel_sha256": "b1156b215379d10b223bcea92b0177c385a8866a91a423818f90a603cecf7e29"
         },
         "approval_scope": "Agent integration review; user final visual choice pending",
         "status": "candidate_user_review"

@@ -39,9 +39,9 @@ jobs:
         run: |
           python -m tools.validate
           node scripts/vn-contract.mjs game/data/story.json
-          node --test scripts/vn-materials.test.mjs
+          node --test scripts/vn-creative.test.mjs scripts/vn-materials.test.mjs
           node scripts/vn-materials.mjs verify
-          node scripts/vn-materials.mjs export .reuse-kit/v1.1.0
+          node scripts/vn-materials.mjs export .reuse-kit/v1.2.0
       - uses: actions/cache@v4
         with:
           path: .runtime
@@ -70,7 +70,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Rain-Reusable-Materials-${{ github.sha }}
-          path: .reuse-kit/v1.1.0/
+          path: .reuse-kit/v1.2.0/
           include-hidden-files: true
           if-no-files-found: error
       - name: Upload verified Pages output

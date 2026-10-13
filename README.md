@@ -1,3 +1,5 @@
+> 2026-10-13：v1.2.1 剧情与美术修订进入本次验收，详见 [精修记录](docs/production/CREATIVE-REVIEW.md)。以下历史下载与预览保留对应旧版身份。
+
 # 雨停之前 / Before the Rain Stops
 
 离线中文 Ren’Py 视觉小说。雨夜旧车站，两位久未联系的旧友，和一封没有寄出的信。

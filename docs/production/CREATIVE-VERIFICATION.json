@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "date": "2026-10-13",
+  "project": "Rain",
+  "version": "1.2.1",
+  "baselineCommit": "3d1bc1c5c598666f77ad2fcaa3397a06a5b5f01d",
+  "revisedParagraphs": 43,
+  "sharedContract": "1.2.0",
+  "sharedPinnedFiles": 14,
+  "localChecks": {
+    "pythonTests": 141,
+    "routes": 16,
+    "sharedToolTests": 10,
+    "authorValidators": "passed",
+    "recordedSentencesPreserved": 17,
+    "renpyLint": "passed: Ren’Py 8.5.3.26051504"
+  },
+  "browserRuntime": "pending_ci",
+  "windowsRuntime": "pending_ci",
+  "publicPwa": "pending_ci",
+  "sourceHashes": {
+    "game/data/story.json": "d98a731f274fed8c5df10b94db3792a97b48927c91142e88f1c6a72370e87d89",
+    "game/data/asset_manifest.json": "9393c066f122ff3d76aab6eaa6f57010b2f129e7846ca0338a33095f410dbdd4",
+    "game/script/story_generated.rpy": "05e7af61aa51471db9e888a6dc477899ea10a7d623655fd27737594e5ee5e6be"
+  },
+  "recoveredBinaryGitObjects": "all 14 match the previously uploaded original blob IDs"
+}
