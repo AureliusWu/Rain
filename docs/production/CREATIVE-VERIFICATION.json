@@ -8,12 +8,13 @@
   "sharedContract": "1.2.0",
   "sharedPinnedFiles": 14,
   "localChecks": {
-    "pythonTests": 141,
+    "pythonTests": 142,
     "routes": 16,
     "sharedToolTests": 10,
     "authorValidators": "passed",
     "recordedSentencesPreserved": 17,
-    "renpyLint": "passed: Ren’Py 8.5.3.26051504"
+    "renpyLint": "passed: Ren’Py 8.5.3.26051504",
+    "platformVersionMetadata": "passed"
   },
   "browserRuntime": "pending_ci",
   "windowsRuntime": "pending_ci",

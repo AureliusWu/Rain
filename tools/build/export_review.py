@@ -1,5 +1,5 @@
 """Export audited native evidence and remote image-review copies from Windows CI."""
-import base64, hashlib, io, json, os, subprocess, zipfile
+import base64, hashlib, io, json, os, re, subprocess, zipfile
 from pathlib import Path
 from PIL import Image
 from tools.story_model import ROOT, load_story
@@ -22,9 +22,10 @@ def safe(z):
 
 def main():
     require(os.name=="nt", "This exporter requires the actual Windows runner")
-    version=(ROOT/"VERSION").read_text().strip(); require(version=="1.2.0", "Wrong version")
+    version=(ROOT/"VERSION").read_text().strip(); require(re.fullmatch(r"\d+\.\d+\.\d+",version), "Invalid version")
     candidate=os.environ["GITHUB_SHA"]; run_id=int(os.environ["GITHUB_RUN_ID"])
     reports=ROOT/"reports"; dist=ROOT/"dist"; story=load_story()
+    require(story["version"]==version, "Story version differs")
     plan=(ROOT/"game/testcases.rpy").read_text(encoding="utf-8")
     plans={
         "source":(plan,"source-process","screenshots"),
