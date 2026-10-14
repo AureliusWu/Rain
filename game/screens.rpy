@@ -919,8 +919,10 @@ style slider_vbox:
 screen history():
 
     tag menu
+    default history_session = rain_history_session_token()
     default history_query = ""
     default history_speaker = ""
+    default history_input_value = RainHistoryInputValue(history_session)
     on "hide" action Stop("voice")
     predict False
 
@@ -943,7 +945,7 @@ screen history():
                         input:
                             id "history_search"
                             style "history_search_input"
-                            value ScreenVariableInputValue("history_query")
+                            value history_input_value
                             length 80
                     hbox:
                         spacing 12
@@ -961,7 +963,7 @@ screen history():
                     textbutton "清除筛选":
                         id "history_clear"
                         style "history_filter_button"
-                        action [Stop("voice"), SetScreenVariable("history_query", ""), SetScreenVariable("history_speaker", "")]
+                        action [Stop("voice"), Function(rain_set_history_query, "", history_session), SetScreenVariable("history_speaker", "")]
                     text ("显示 %d / %d 条记录" % (len(history_rows), len(_history_list))) size 24
             viewport:
                 id "history_records"

@@ -11,23 +11,32 @@
     const queryInput = document.getElementById('historyQuery');
     const searchStatus = document.getElementById('historySearchStatus');
     let queryRevision = 0, latestQuery = '', lastSent = '', writing = false, composing = false;
+    let historySession = null;
     const pythonString = value => JSON.stringify(value).replace(/[^\x00-\x7f]/g,
         character => '\\u' + character.charCodeAt(0).toString(16).padStart(4, '0'));
     async function sendQuery() {
-        if (writing || composing || searchControls.hidden || typeof window.renpy_exec !== 'function') return;
+        if (writing || composing || searchControls.hidden || !historySession || typeof window.renpy_exec !== 'function') return;
         writing = true;
+        let failed = false, attemptedSession = historySession;
         try {
-            while (lastSent !== latestQuery && !searchControls.hidden) {
-                const value = latestQuery;
-                await window.renpy_exec('if renpy.get_screen("history") is not None:\n' +
-                    '    renpy.set_screen_variable("history_query", ' + pythonString(value) + ', screen="history")\n' +
-                    '    renpy.restart_interaction()');
+            while (lastSent !== latestQuery && !searchControls.hidden && !composing) {
+                const value = latestQuery, session = historySession;
+                attemptedSession = session;
+                const accepted = await window.renpy_exec('result = rain_set_history_query(' +
+                    pythonString(value) + ', ' + pythonString(session) + ')');
+                if (!accepted || historySession !== session) { failed = true; break; }
                 lastSent = value;
             }
             searchStatus.textContent = '';
         } catch {
+            failed = true;
             searchStatus.textContent = '暂时无法检索，请重新打开回看。';
-        } finally { writing = false; }
+        } finally {
+            writing = false;
+            // Input may arrive while the previous panel's command completes.
+            if ((!failed || attemptedSession !== historySession) && lastSent !== latestQuery && !searchControls.hidden && !composing)
+                window.setTimeout(sendQuery, 0);
+        }
     }
     function changedQuery() {
         queryRevision++; latestQuery = queryInput.value.slice(0, 80);
@@ -46,10 +55,20 @@
         try {
             if (!document.hidden && !document.getElementById('presplash') && typeof window.renpy_get === 'function') {
                 const revision = queryRevision;
-                const info = await window.renpy_get('[bool(renpy.get_screen("history")), renpy.get_screen("history").scope.get("history_query", "") if renpy.get_screen("history") else ""]');
+                const sentAtRequest = lastSent;
+                const idleAtRequest = !writing && !composing && lastSent === latestQuery;
+                const info = await window.renpy_get('[bool(renpy.get_screen("history")), renpy.get_screen("history").scope.get("history_session", "") if renpy.get_screen("history") else "", renpy.get_screen("history").scope.get("history_query", "") if renpy.get_screen("history") else ""]');
                 searchControls.hidden = !info?.[0];
-                if (!searchControls.hidden && !writing && !composing && revision === queryRevision && lastSent === latestQuery) {
-                    queryInput.value = info[1]; latestQuery = lastSent = info[1];
+                if (searchControls.hidden) {
+                    historySession = null;
+                } else if (historySession !== info[1]) {
+                    // A reopen starts a new independent panel. In-flight input
+                    // from the old panel is rejected by the native token check.
+                    historySession = info[1]; queryRevision++;
+                    queryInput.value = info[2]; latestQuery = lastSent = info[2];
+                } else if (idleAtRequest && !writing && !composing && revision === queryRevision &&
+                           lastSent === sentAtRequest && lastSent === latestQuery) {
+                    queryInput.value = info[2]; latestQuery = lastSent = info[2];
                 }
             }
         } catch { searchControls.hidden = true; }

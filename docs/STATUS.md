@@ -1,6 +1,6 @@
 # v1.2.2 历史检索候选 · 2026-10-14
 
-原生历史/语音保留原索引，网页增加中文输入和自托管字体。本地 145 项 Python、16 路线、lint 和 14 项 PWA 检查通过；当前 Windows CI 与公开 PWA 待执行。详见 [制作记录](production/HISTORY-REVIEW.md)。
+原生历史/语音保留原索引，网页增加中文输入和自托管字体。Windows 首轮 CI 的中文物理按键测试失败已定位；改用真实 SDL TEXTINPUT 输入事件，原生与网页查询共用按面板生命周期校验的入口，筛选变化停止旧重播。浏览器查询轮询防止快速输入被迟到返回覆盖；官方 Web 构建增加新输出目录、ZIP CRC 和 WASM 完整性门禁。本轮 148 项 Python、16 路线、作者校验和 Linux lint 通过；新版原生前缀与 PWA 专项正在执行，Windows 及公开 PWA 继续单独留证。详见 [制作记录](production/HISTORY-REVIEW.md)。
 
 # v1.2.1 剧情与美术工程候选已验收 · 2026-10-13
 

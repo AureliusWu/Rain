@@ -10,6 +10,37 @@ init python:
     def rain_history_speakers(history):
         return replay_search.history_speakers(history, rain_history_plain)
 
+    def rain_history_session_token():
+        # A panel lifetime must not consume the rollback-aware story RNG.
+        return __import__("uuid").uuid4().hex
+
+    def rain_set_history_query(value, session):
+        """Apply native/HTML input only to its original live history panel."""
+        screen = renpy.get_screen("history")
+        if not isinstance(value, str) or screen is None:
+            return False
+        if screen.scope.get("history_session") != session:
+            return False
+        value = value[:80]
+        if screen.scope.get("history_query", "") != value:
+            renpy.music.stop(channel="voice")
+            renpy.set_screen_variable("history_query", value, screen="history")
+            renpy.restart_interaction()
+        return True
+
+    class RainHistoryInputValue(InputValue):
+        def __init__(self, session):
+            self.session = session
+
+        def get_text(self):
+            screen = renpy.get_screen("history")
+            if screen is None or screen.scope.get("history_session") != self.session:
+                return ""
+            return screen.scope.get("history_query", "")
+
+        def set_text(self, value):
+            rain_set_history_query(value, self.session)
+
 style history_search_input is input:
     size 30
     color "#e3edf1"
