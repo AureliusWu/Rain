@@ -5,6 +5,57 @@
     let installPrompt;
     let owner;
     let preparedUpdate;
+    // A browser input supplies IME/Chinese text; Ren'Py still owns the history,
+    // result list, speaker selection and voice replay. No story/save writes.
+    const searchControls = document.getElementById('historySearchControls');
+    const queryInput = document.getElementById('historyQuery');
+    const searchStatus = document.getElementById('historySearchStatus');
+    let queryRevision = 0, latestQuery = '', lastSent = '', writing = false, composing = false;
+    const pythonString = value => JSON.stringify(value).replace(/[^\x00-\x7f]/g,
+        character => '\\u' + character.charCodeAt(0).toString(16).padStart(4, '0'));
+    async function sendQuery() {
+        if (writing || composing || searchControls.hidden || typeof window.renpy_exec !== 'function') return;
+        writing = true;
+        try {
+            while (lastSent !== latestQuery && !searchControls.hidden) {
+                const value = latestQuery;
+                await window.renpy_exec('if renpy.get_screen("history") is not None:\n' +
+                    '    renpy.set_screen_variable("history_query", ' + pythonString(value) + ', screen="history")\n' +
+                    '    renpy.restart_interaction()');
+                lastSent = value;
+            }
+            searchStatus.textContent = '';
+        } catch {
+            searchStatus.textContent = '暂时无法检索，请重新打开回看。';
+        } finally { writing = false; }
+    }
+    function changedQuery() {
+        queryRevision++; latestQuery = queryInput.value.slice(0, 80);
+        void sendQuery();
+    }
+    queryInput.addEventListener('input', changedQuery);
+    queryInput.addEventListener('compositionstart', () => { composing = true; });
+    queryInput.addEventListener('compositionend', () => { composing = false; changedQuery(); });
+    queryInput.addEventListener('keydown', event => event.stopPropagation());
+    queryInput.addEventListener('keyup', event => event.stopPropagation());
+    searchControls.addEventListener('submit', event => event.preventDefault());
+    document.getElementById('historyQueryClear').addEventListener('click', () => {
+        queryInput.value = ''; changedQuery(); queryInput.focus();
+    });
+    async function syncSearch() {
+        try {
+            if (!document.hidden && !document.getElementById('presplash') && typeof window.renpy_get === 'function') {
+                const revision = queryRevision;
+                const info = await window.renpy_get('[bool(renpy.get_screen("history")), renpy.get_screen("history").scope.get("history_query", "") if renpy.get_screen("history") else ""]');
+                searchControls.hidden = !info?.[0];
+                if (!searchControls.hidden && !writing && !composing && revision === queryRevision && lastSent === latestQuery) {
+                    queryInput.value = info[1]; latestQuery = lastSent = info[1];
+                }
+            }
+        } catch { searchControls.hidden = true; }
+        window.setTimeout(syncSearch, 300);
+    }
+    void syncSearch();
     window.addEventListener('beforeinstallprompt', event => {
         event.preventDefault(); installPrompt = event; install.hidden = false;
     });

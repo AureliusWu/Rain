@@ -59,3 +59,39 @@ export async function startNarrative(page) {
     }
     throw new Error('Actual Start did not reach native narration');
 }
+
+export async function verifyReadHistorySearch(page, screenshotPath) {
+    // Build history using genuine input, rather than injecting unread records.
+    for (let attempt = 0; attempt < 8 && !(await get(page, 'bool(_history_list)')); attempt++) {
+        await page.keyboard.press('Space');
+        await page.waitForTimeout(200);
+    }
+    assert.ok(await get(page, 'bool(_history_list)'), 'A real read record is available');
+    const state = '[current_scene, current_chapter, affection, trust, truth_known, list(visited_scenes), len(_history_list), _last_say_what]';
+    const before = await get(page, state);
+    const keyword = (await get(page, 'renpy.filter_text_tags(_history_list[0].what, allow=set())')).slice(0, 4);
+    await clickId(page, 'quick_menu', 'history_open');
+    const input = page.getByRole('searchbox', { name: '搜索已读文字', exact: true });
+    await input.waitFor({ state: 'visible' });
+    await input.fill('XYZahls');
+    await waitNative(page, 'renpy.get_screen("history").scope["history_query"] == "XYZahls"');
+    assert.equal(await get(page, 'len(renpy.get_screen("history").scope["history_rows"])'), 0);
+    await clickId(page, 'history', 'history_clear');
+    await input.fill(keyword);
+    await waitNative(page, `renpy.get_screen("history").scope["history_query"] == ${JSON.stringify(keyword)}`);
+    assert.equal(await page.evaluate(async () => {
+        await document.fonts.load('16px RainInterface'); return document.fonts.check('16px RainInterface');
+    }), true, 'The browser-control font is self-hosted and loaded');
+    const indices = await get(page, '[i for i, h in renpy.get_screen("history").scope["history_rows"]]');
+    assert.ok(indices.includes(0), 'Chinese keyword matches the original first read entry');
+    if (screenshotPath) await page.screenshot({ path: screenshotPath });
+    await clickId(page, 'history', 'history_clear');
+    assert.equal(await get(page, 'len(renpy.get_screen("history").scope["history_rows"])'), before[6]);
+    await clickId(page, 'history', 'game_return');
+    assert.deepEqual(await get(page, state), before);
+    await clickId(page, 'quick_menu', 'history_open');
+    assert.equal(await get(page, 'renpy.get_screen("history").scope["history_query"]'), '');
+    assert.equal(await get(page, 'renpy.get_screen("history").scope["history_speaker"]'), '');
+    await clickId(page, 'history', 'game_return');
+    return { read_records: before[6], matched_original_indices: indices, state_preserved: true };
+}

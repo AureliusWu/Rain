@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {createRequire} from 'node:module';
-import {get, waitNative, clickId, startNarrative, visibleNarration} from './pwa-native-browser.mjs';
+import {get, waitNative, clickId, startNarrative, verifyReadHistorySearch, visibleNarration} from './pwa-native-browser.mjs';
 
 const target = new URL(process.env.PWA_TARGET_URL || 'https://aureliuswu.github.io/Rain/');
 const expectedVersion = (await fs.readFile('VERSION','utf8')).trim();
@@ -45,6 +45,8 @@ try {
     await page.screenshot({path:path.join(reportDirectory,'public-main-menu.png')});
     await startNarrative(page);
     assert.equal(await get(page,'current_scene'),'p00_entry');
+    await verifyReadHistorySearch(page, path.join(reportDirectory, 'public-history-search.png'));
+    checks.push('actual published history search, Chinese input and preserved read route');
     await clickId(page,'quick_menu','save_open');
     await clickId(page,'save','slot_1');
     await waitNative(page,'renpy.can_load("1-1")');
@@ -64,6 +66,8 @@ try {
     await waitNative(page,`${visibleNarration} == ${JSON.stringify(savedText)}`);
     await page.screenshot({path:path.join(reportDirectory,'public-offline-load.png')});
     checks.push('disconnected public reopen, native Load and preserved saved scene');
+    await verifyReadHistorySearch(page, path.join(reportDirectory, 'public-offline-history-search.png'));
+    checks.push('published native history search while disconnected');
     assert.deepEqual(errors,[]);
     const report={status:'passed',target:target.href,version:expectedVersion,revision:expectedRevision,
         checks,online_milliseconds:onlineMilliseconds,offline_milliseconds:offlineMilliseconds,offline_samples_milliseconds:offlineSamples,

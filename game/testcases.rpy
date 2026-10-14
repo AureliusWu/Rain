@@ -108,6 +108,50 @@ testcase native_1080_and_scaled_window:
     pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
     screenshot "native-choice"
 
+testcase history_search_and_original_voice:
+    advance until "你还是和以前一样，出门不看天气。"
+    advance
+    $ _test.history_search_state = (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what)
+    $ test_history_voice_index = next(i for i, h in enumerate(_history_list) if h.voice and h.voice.filename == 'audio/voice/heroine_s01_arrival_l005_v1.ogg')
+    click id "history_open"
+    assert screen "history"
+    click id "history_speaker_许澄"
+    assert eval all(h.who == "许澄" for i, h in renpy.get_screen("history").scope["history_rows"])
+    click id "history_search"
+    type "不存在的记录XYZ"
+    pause until eval renpy.get_screen("history").scope["history_query"] == "不存在的记录XYZ"
+    assert eval not renpy.get_screen("history").scope["history_rows"]
+    assert "没有找到这条记录，可以换个关键词。"
+    pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
+    screenshot "native-history-search-empty"
+    click id "history_clear"
+    assert eval len(renpy.get_screen("history").scope["history_rows"]) == len(_history_list)
+    click id "history_search"
+    type "出门"
+    pause until eval bool(renpy.get_screen("history").scope["history_rows"]) and renpy.get_screen("history").scope["history_query"] == "出门"
+    assert eval all("出门" in h.what for i, h in renpy.get_screen("history").scope["history_rows"])
+    click id "history_clear"
+    click id "history_speaker_许澄"
+    assert eval any(i == test_history_voice_index for i, h in renpy.get_screen("history").scope["history_rows"])
+    move pos (0.5, 0.4)
+    move "重播语音" pos (0.5, 0.5)
+    pause 0.1
+    $ print("History replay target:", renpy.get_physical_size(), preferences.get_mute("voice"), renpy.music.get_playing(channel="voice"))
+    click "重播语音" pos (0.5, 0.5)
+    assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
+    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == _test.history_search_state
+    pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
+    screenshot "native-history-search-voice"
+    click id "game_return"
+    assert not screen "history"
+    pause until eval renpy.music.get_playing(channel="voice") is None
+    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == _test.history_search_state
+    click id "history_open"
+    assert eval renpy.get_screen("history").scope["history_query"] == "" and renpy.get_screen("history").scope["history_speaker"] == ""
+    click id "game_return"
+
 testcase current_voice_replay_and_restore:
     advance until "你还是和以前一样，出门不看天气。"
     assert id "voice_replay"

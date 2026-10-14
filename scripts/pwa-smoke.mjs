@@ -4,7 +4,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
 import {createRequire} from 'node:module';
-import {get, waitNative, clickId, startNarrative, visibleNarration} from './pwa-native-browser.mjs';
+import {get, waitNative, clickId, startNarrative, verifyReadHistorySearch, visibleNarration} from './pwa-native-browser.mjs';
 
 const require = createRequire(import.meta.url);
 const {chromium} = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
@@ -83,6 +83,8 @@ try {
     assert.equal(manifestResult.errors.length, 0);
     checks.push('manifest parsed and app-scoped start URL; complete offline marker');
     await startNarrative(page);
+    await verifyReadHistorySearch(page, path.join(reports, 'desktop-history-search.png'));
+    checks.push('actual native history search, Chinese input, empty/reset states and preserved read position');
     assert.equal(await get(page,'current_scene'),'p00_entry');
     assert.equal(await get(page,'bool(renpy.get_screen("say"))'),true);
     screenshots.push(await shot(page,'desktop-story'));
@@ -111,6 +113,8 @@ try {
     await startNarrative(page);
     assert.equal(await get(page,'current_scene'),'p00_entry');
     screenshots.push(await shot(page,'offline-story'));
+    await verifyReadHistorySearch(page, path.join(reports, 'offline-history-search.png'));
+    checks.push('native history search remains usable during a real offline session');
     checks.push('offline reload boots complete native WASM and starts narrative');
     await context.setOffline(false);
     for (const size of [{width:412,height:915},{width:568,height:320},{width:844,height:390}]) {

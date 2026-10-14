@@ -4,7 +4,7 @@
   "project": "Rain",
   "repository": "https://github.com/AureliusWu/Rain",
   "sourceCommit": "192cd3438556364bf5125bd333a223f92ce81fbb",
-  "inventoryDate": "2026-10-13",
+  "inventoryDate": "2026-10-14",
   "entries": [
     {
       "id": "shared-vn-production",
@@ -229,6 +229,12 @@
           "path": "game/fonts/SourceHanSansLite.ttf",
           "encoding": "binary",
           "sha256": "b2aaf73b7acc23d746b110f1caeaecc93d4292824979af44e96000200591b2a7"
+        },
+        {
+          "role": "runtime",
+          "path": "tools/build/pwa/ui-font.woff2",
+          "encoding": "binary",
+          "sha256": "176acd8fd5f597177ce51f99426be146aba69c9f562b09b34408cf01860f2f7f"
         }
       ],
       "license": {
@@ -4162,13 +4168,13 @@
           "role": "recipe",
           "path": "tools/build/web.py",
           "encoding": "text-lf",
-          "sha256": "b6860479bfb032710a5a3ca12baf28fc2fe4f9135d259f00576fcb6a90bf8b18"
+          "sha256": "3c963dc80e30926d45902df88567f1a36f0e4b0a8cf787be46efad30ecc6d0fb"
         },
         {
           "role": "recipe",
           "path": "tools/build/pwa/client.js",
           "encoding": "text-lf",
-          "sha256": "4e87de5d024a71908052bd21b1ef2eec55970c34d191f868e51411a4b04ec166"
+          "sha256": "9e33ce8d671362d1d194e5161fcae9c5c6e262b7b6fbcfb9d35d17b612e2d690"
         },
         {
           "role": "recipe",
@@ -4205,6 +4211,42 @@
           "path": "requirements-dev.txt",
           "encoding": "text-lf",
           "sha256": "800a1e55ccd24048b4ca48d9d53859be989e05176748610b6f134fc7c2a43829"
+        }
+      ]
+    },
+    {
+      "id": "read-history-search",
+      "kind": "ui",
+      "reuse": "recipe",
+      "origin": "AureliusWu/NetLove, Healing, Rain and Circuit; read-history search v1.0.0 (2026-10-14)",
+      "sourceStatus": "not-applicable",
+      "license": {
+        "name": "MIT — original project code only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "files": [
+        {
+          "role": "recipe",
+          "path": "docs/production/READ-HISTORY.md",
+          "encoding": "text-lf",
+          "sha256": "d56162182346d6eaecc6d8a31557b27cc11609c5c8316f96f3e9086f9a4471c5"
+        },
+        {
+          "role": "recipe",
+          "path": "game/python-packages/replay_search.py",
+          "encoding": "text-lf",
+          "sha256": "729076f7bf1891075867d09930296172da79b17d2bb89e2414e9b47704b48a32"
+        },
+        {
+          "role": "recipe",
+          "path": "game/history_search.rpy",
+          "encoding": "text-lf",
+          "sha256": "a5ca49897af6e26da1cd88ac799b434cae9ebd5010157f6027f42828679a5e71"
         }
       ]
     }

@@ -11,7 +11,7 @@ from tools.story_model import ROOT
 from tools.build.verify_package import (collect_runtime_evidence, positive_timeout,
                                        run_native_tests, validate_suite_evidence)
 
-PREFIX_CASES = ('native_1080_and_scaled_window', 'current_voice_replay_and_restore',
+PREFIX_CASES = ('native_1080_and_scaled_window', 'history_search_and_original_voice', 'current_voice_replay_and_restore',
                 'history_voice_replay', 'auto_waits_for_replayed_voice',
                 'extras_locked_no_spoilers', 'extras_unlock_and_music')
 

@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-14",
+  "project": "Rain",
+  "baseCommit": "9ba33483a25cff2fc07767a4ac055b98b9cd6ab9",
+  "scope": "read-history search; native story/save identities and existing art/voices preserved",
+  "platforms": {
+    "local": "verified; see HISTORY-REVIEW.md",
+    "githubCI": "pending",
+    "publicPWA": "pending",
+    "humanListening": "not performed"
+  },
+  "version": "1.2.2",
+  "localChecks": {
+    "unit": 145,
+    "routes": 16,
+    "pwaChecks": 14,
+    "nativeLint": "passed"
+  },
+  "browser": "Chromium 140.0.7339.186; production build"
+}

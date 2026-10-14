@@ -47,12 +47,21 @@ def add_pwa(destination: Path, version: str) -> dict:
     controls = '''<aside id="pwaControls" aria-label="离线与安装">
       <span id="offlineStatus" role="status">正在保存完整离线内容…</span>
       <button id="installPwa" hidden>安装到设备</button>
+      <form id="historySearchControls" hidden>
+        <label for="historyQuery">搜索已读文字</label>
+        <input id="historyQuery" type="search" maxlength="80" placeholder="输入关键词" autocomplete="off">
+        <button id="historyQueryClear" type="button">清除关键词</button>
+        <span id="historySearchStatus" role="status"></span>
+      </form>
     </aside>
     <p id="orientationHint" role="status">请横屏阅读，画面与文字会更清晰</p>
     <style>#pwaControls{position:fixed;right:8px;top:8px;z-index:30;font:12px sans-serif;color:#d9eff4;background:#112b36dd;padding:6px 9px;border-radius:6px;max-width:70vw}#installPwa{margin-left:8px;border:1px solid #91d4e0;border-radius:4px;color:#fff;background:#234552;cursor:pointer}#pwaControls:focus-within{outline:2px solid #91d4e0}#orientationHint{display:none}@media(max-width:760px) and (orientation:portrait){#orientationHint{display:block;position:fixed;bottom:24px;left:16px;right:16px;margin:0;text-align:center;z-index:30;font:14px sans-serif;color:#d9eff4}}</style>
+    <style>#historySearchControls[hidden]{display:none}#historySearchControls{display:grid;gap:6px;margin-top:8px;max-width:280px}#historyQuery{box-sizing:border-box;min-width:0;width:100%;font:16px sans-serif;color:#e3edf1;background:#142d3c;border:1px solid #91d4e0;border-radius:4px;padding:8px}#historyQueryClear{justify-self:start;padding:6px 8px;color:#e3edf1;background:#20404e;border:1px solid #91d4e0;border-radius:4px}</style>
+    <style>@font-face{font-family:RainInterface;src:url("./ui-font.woff2") format("woff2");font-display:swap}#pwaControls,#historyQuery,#historyQueryClear{font-family:RainInterface,sans-serif}</style>
     <script src="pwa-client.js" defer></script>'''
     html_path.write_text(html.replace('</body>', controls + '\n</body>'), encoding='utf-8', newline='\n')
     shutil.copy2(TEMPLATES / 'client.js', destination / 'pwa-client.js')
+    shutil.copy2(TEMPLATES / 'ui-font.woff2', destination / 'ui-font.woff2')
     manifest_path = destination / 'manifest.json'
     manifest = json.loads(manifest_path.read_text())
     manifest.update({'id':'./', 'name':'雨停之前', 'short_name':'雨停之前', 'lang':'zh-CN',
