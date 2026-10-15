@@ -16,5 +16,51 @@
     "pwaChecks": 14,
     "nativeLint": "passed"
   },
-  "browser": "Chromium 140.0.7339.186; production build"
+  "browser": "Chromium 140.0.7339.186; production build",
+  "ciRepair": {
+    "date": "2026-10-14",
+    "inputCommit": "19641824ab7a7116d101f67b73707b927afea2de",
+    "failedRuns": [
+      {
+        "platform": "Windows",
+        "runId": 38579109574,
+        "jobId": 115903954600,
+        "url": "https://github.com/AureliusWu/Rain/actions/runs/38579109574"
+      },
+      {
+        "platform": "PWA",
+        "runId": 38579109569,
+        "jobId": 115903948953,
+        "url": "https://github.com/AureliusWu/Rain/actions/runs/38579109569"
+      }
+    ],
+    "cause": "Reusable recipe hashes were not synchronized after the final native/HTML input and browser-font integration. Both jobs stopped at tools/build/web.py; exhaustive local verification found client.js and history_search.rpy stale as well.",
+    "updatedRecipeHashes": {
+      "tools/build/web.py": "886fa10d328ee1f68cd60ef6526796712ae7357ed2d728294837744227f3985f",
+      "tools/build/pwa/client.js": "bd86da9c3c72834e9048434927ef48e5a2a7fcfd48f968731c36429da31380e8",
+      "game/history_search.rpy": "454695a542b55b5a2059277e847269efcc4f2c0bef8554da720c4e32c8811945"
+    },
+    "localChecks": {
+      "pythonTests": 148,
+      "pythonSeconds": 11.214,
+      "nativeStateRoutes": 16,
+      "authoringValidation": "passed; assets, audio decode, reproducible imports, character, prompt, story, and generated scripts",
+      "nodeTests": 10,
+      "materialEntries": 90,
+      "materialFiles": 224,
+      "sharedFiles": 15,
+      "reusableExportEntries": 60,
+      "reusableExportFiles": 151,
+      "fontMissingCJK": 0
+    },
+    "platformChecks": {
+      "nativeLinux": "not executed: SDK interpreter terminates with signal SIGBUS before startup",
+      "newWindowsCI": "pending; failed runs above are the prior input commit",
+      "newPWA": "pending; official WASM build/browser execution not performed in this batch",
+      "publicPWA": "not performed",
+      "humanListening": "not performed"
+    },
+    "runtimeFilesChanged": false,
+    "storyVoiceArtSaveIdentityChanged": false
+  }
 }

@@ -4168,13 +4168,13 @@
           "role": "recipe",
           "path": "tools/build/web.py",
           "encoding": "text-lf",
-          "sha256": "3c963dc80e30926d45902df88567f1a36f0e4b0a8cf787be46efad30ecc6d0fb"
+          "sha256": "886fa10d328ee1f68cd60ef6526796712ae7357ed2d728294837744227f3985f"
         },
         {
           "role": "recipe",
           "path": "tools/build/pwa/client.js",
           "encoding": "text-lf",
-          "sha256": "9e33ce8d671362d1d194e5161fcae9c5c6e262b7b6fbcfb9d35d17b612e2d690"
+          "sha256": "bd86da9c3c72834e9048434927ef48e5a2a7fcfd48f968731c36429da31380e8"
         },
         {
           "role": "recipe",
@@ -4211,6 +4211,18 @@
           "path": "requirements-dev.txt",
           "encoding": "text-lf",
           "sha256": "800a1e55ccd24048b4ca48d9d53859be989e05176748610b6f134fc7c2a43829"
+        },
+        {
+          "role": "recipe",
+          "path": "tools/build/subset_pwa_font.py",
+          "encoding": "text-lf",
+          "sha256": "c5498fc5d8a07244807e469f75d429ce7d640caba0b34db46c63190bfcf4a5ac"
+        },
+        {
+          "role": "metadata",
+          "path": "docs/production/PWA-INPUT-FONT.json",
+          "encoding": "text-lf",
+          "sha256": "20de4bbc846376fc01cb3ca32c7bd0fd95837e829d3c80a946180b19692021b8"
         }
       ]
     },
@@ -4246,7 +4258,7 @@
           "role": "recipe",
           "path": "game/history_search.rpy",
           "encoding": "text-lf",
-          "sha256": "a5ca49897af6e26da1cd88ac799b434cae9ebd5010157f6027f42828679a5e71"
+          "sha256": "454695a542b55b5a2059277e847269efcc4f2c0bef8554da720c4e32c8811945"
         }
       ]
     }
