@@ -135,6 +135,9 @@ testcase history_search_and_original_voice:
     pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
     screenshot "native-history-search-empty"
     click id "history_clear"
+    assert screen "history"
+    assert eval renpy.get_screen("history").scope["history_session"] == _test.history_panel_token
+    assert eval renpy.get_screen("history").scope["history_query"] == "" and renpy.get_screen("history").scope["history_speaker"] == ""
     assert eval len(renpy.get_screen("history").scope["history_rows"]) == len(_history_list)
     click id "history_search"
     $ rain_test_text_input("出门")

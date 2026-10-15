@@ -28,6 +28,12 @@ init python:
             renpy.restart_interaction()
         return True
 
+    def rain_clear_history_filters(session):
+        """A screen Function action must return None to keep its menu open."""
+        if rain_set_history_query("", session):
+            renpy.set_screen_variable("history_speaker", "", screen="history")
+            renpy.restart_interaction()
+
     class RainHistoryInputValue(InputValue):
         def __init__(self, session):
             self.session = session

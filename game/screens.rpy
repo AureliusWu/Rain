@@ -963,7 +963,7 @@ screen history():
                     textbutton "清除筛选":
                         id "history_clear"
                         style "history_filter_button"
-                        action [Stop("voice"), Function(rain_set_history_query, "", history_session), SetScreenVariable("history_speaker", "")]
+                        action [Stop("voice"), Function(rain_clear_history_filters, history_session)]
                     text ("显示 %d / %d 条记录" % (len(history_rows), len(_history_list))) size 24
             viewport:
                 id "history_records"

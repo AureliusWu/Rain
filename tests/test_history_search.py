@@ -1,7 +1,10 @@
 import importlib.util
 from pathlib import Path
+import sys
+import textwrap
 from types import SimpleNamespace
 import unittest
+from unittest.mock import patch
 
 MODULE = Path(__file__).resolve().parents[1] / "game/python-packages/replay_search.py"
 spec = importlib.util.spec_from_file_location("replay_search", MODULE)
@@ -31,3 +34,48 @@ class ReadHistorySearchTests(unittest.TestCase):
         plain = lambda value: value.replace("{color=red}", "").replace("{/color}", "")
         self.assertEqual(search.filter_history([tagged], "color", plain=plain), [])
         self.assertEqual(search.filter_history([tagged], "旧信", plain=plain), [(0, tagged)])
+
+
+class NativeHistoryPanelTests(unittest.TestCase):
+    def setUp(self):
+        self.scope = {"history_query": "出门", "history_speaker": "许澄", "history_session": "current-panel"}
+        self.screen = SimpleNamespace(scope=self.scope)
+        self.stops, self.restarts = [], []
+        renpy = SimpleNamespace(
+            get_screen=lambda name: self.screen,
+            set_screen_variable=lambda name, value, **kwargs: self.scope.__setitem__(name, value),
+            restart_interaction=lambda: self.restarts.append(True),
+            music=SimpleNamespace(stop=lambda **kwargs: self.stops.append(kwargs)),
+        )
+        source = MODULE.parents[1].joinpath("history_search.rpy").read_text(encoding="utf-8")
+        block = textwrap.dedent(source.split("init python:\n", 1)[1].split("\nstyle ", 1)[0])
+        self.runtime = {"renpy": renpy, "InputValue": object}
+        with patch.dict(sys.modules, {"replay_search": search}):
+            exec(compile(block, "game/history_search.rpy", "exec"), self.runtime)
+
+    def test_clear_action_returns_none_and_preserves_current_panel(self):
+        self.assertIsNone(self.runtime["rain_clear_history_filters"]("current-panel"), "A non-None Function result closes the Ren'Py menu")
+        self.assertEqual(self.scope, {"history_query": "", "history_speaker": "", "history_session": "current-panel"})
+        self.assertEqual(self.stops, [{"channel": "voice"}])
+
+    def test_late_clear_cannot_change_the_reopened_panel(self):
+        before = dict(self.scope)
+        self.assertIsNone(self.runtime["rain_clear_history_filters"]("closed-panel"))
+        self.assertEqual(self.scope, before)
+        self.assertEqual((self.stops, self.restarts), ([], []))
+
+    def test_query_rejects_nontext_or_closed_panel_and_caps_unicode(self):
+        update = self.runtime["rain_set_history_query"]
+        self.assertFalse(update(None, "current-panel"))
+        self.assertTrue(update("界" * 90, "current-panel"))
+        self.assertEqual(self.scope["history_query"], "界" * 80)
+        self.screen = None
+        self.assertFalse(update("迟到", "current-panel"))
+
+    def test_native_input_value_cannot_write_into_a_new_panel(self):
+        value = self.runtime["RainHistoryInputValue"]("current-panel")
+        self.assertEqual(value.get_text(), "出门")
+        self.scope["history_session"] = "reopened-panel"
+        value.set_text("迟到")
+        self.assertEqual(value.get_text(), "")
+        self.assertEqual(self.scope["history_query"], "出门")
