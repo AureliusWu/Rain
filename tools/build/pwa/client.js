@@ -47,6 +47,7 @@
     queryInput.addEventListener('compositionend', () => { composing = false; changedQuery(); });
     queryInput.addEventListener('keydown', event => event.stopPropagation());
     queryInput.addEventListener('keyup', event => event.stopPropagation());
+    queryInput.addEventListener('keypress', event => event.stopPropagation());
     searchControls.addEventListener('submit', event => event.preventDefault());
     document.getElementById('historyQueryClear').addEventListener('click', () => {
         queryInput.value = ''; changedQuery(); queryInput.focus();

@@ -18,6 +18,10 @@ try {
         <button id="historyQueryClear" type="button">清除关键词</button><span id="historySearchStatus"></span></form>`);
     await page.evaluate(() => {
         window.nativePanel = {open:true, token:'panel-1', query:''};
+        // Match SDL's document-level keypress default prevention. The official
+        // Ren'Py HTML input isolates this event as well as keydown/keyup.
+        window.engineKeypresses = 0;
+        document.addEventListener('keypress', event => { engineKeypresses++; event.preventDefault(); });
         window.renpy_get = async () => [nativePanel.open, nativePanel.token, nativePanel.query];
         window.renpy_exec = async command => {
             const args = command.match(/^result = rain_set_history_query\((.*), (".*")\)$/);
@@ -31,6 +35,8 @@ try {
     const input = page.getByRole('searchbox', {name:'搜索已读文字'});
     await input.waitFor({state:'visible'});
     await input.fill('XYZ'); await input.pressSequentially('ahls');
+    assert.equal(await input.inputValue(), 'XYZahls', 'SDL must not suppress the browser input default');
+    assert.equal(await page.evaluate(() => engineKeypresses), 0, 'Input keypress must not reach the game');
     await page.waitForFunction(() => nativePanel.query === 'XYZahls');
     await input.press('Backspace'); await input.press('Enter');
     await page.waitForFunction(() => nativePanel.query === 'XYZahl');
