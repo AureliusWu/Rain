@@ -8,8 +8,13 @@ on:
   workflow_dispatch:
     inputs:
       native_run:
-        description: Successful main Game validation run for the current commit
+        description: Successful main Game validation run for the authorized tested runtime
         required: true
+        type: string
+      tested_commit:
+        description: Exact authorized runtime commit whose immutable CI artifacts are promoted
+        required: true
+        default: 15d87ef4455b95feb6069e044a1d3a6456f75e0c
         type: string
 
 concurrency:
@@ -27,7 +32,8 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
       PYTHONUTF8: '1'
-      PUBLICATION_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+      PUBLICATION_SHA: ${{ github.sha }}
+      TESTED_SHA: ${{ github.event.workflow_run.head_sha || inputs.tested_commit }}
       NATIVE_RUN: ${{ github.event.workflow_run.id || inputs.native_run }}
     steps:
       - uses: actions/checkout@v4
@@ -38,7 +44,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Verify exact completed CI artifacts, publish draft, read back, and publish stable
-        run: python -m tools.publish_v122 --commit "$PUBLICATION_SHA" --native-run "$NATIVE_RUN"
+        run: python -m tools.publish_v122 --commit "$PUBLICATION_SHA" --runtime-commit "$TESTED_SHA" --native-run "$NATIVE_RUN"
       - name: Upload exact publication record
         if: always()
         uses: actions/upload-artifact@v4

@@ -1,24 +1,35 @@
 import copy
+import io
 import json
 from pathlib import Path
+import subprocess
 import tempfile
 import unittest
+from unittest import mock
 import zipfile
-from tools.publish_v122 import (BASELINE,HUMAN_PENDING,REPO,artifact_for,digest,
-    extract_checked,validate_native,validate_run,validate_source_changes,validate_web)
+from tools.publish_v122 import (BASELINE,HUMAN_PENDING,PUBLICATION_SUPPORT,REPO,SUPPORT,artifact_for,
+    complete_items,digest,extract_checked,upload_window,validate_evidence_runs,validate_native,
+    validate_run,validate_source,validate_source_changes,validate_web,verify_public_worker)
 
 
 class ExactV122PublicationTests(unittest.TestCase):
     def setUp(self):
         self.commit='a'*40
-        self.run={'id':123,'head_sha':self.commit,'head_branch':'main','event':'push',
+        self.run={'id':123,'run_attempt':1,'head_sha':self.commit,'head_branch':'main','event':'push',
             'path':'.github/workflows/game.yml','status':'completed','conclusion':'success',
             'repository':{'full_name':REPO}}
+        self.job={'id':456,'run_id':123,'run_attempt':1,'head_sha':self.commit,'name':'web',
+            'status':'completed','conclusion':'success','started_at':'2026-10-16T00:21:41Z',
+            'completed_at':'2026-10-16T00:25:00Z','steps':[{'name':'Upload PWA','number':11,
+                'status':'completed','conclusion':'success','started_at':'2026-10-16T00:24:51Z',
+                'completed_at':'2026-10-16T00:24:54Z'}]}
+        self.upload=upload_window([self.job],self.run,'web','Upload PWA')
 
     def test_only_successful_exact_main_native_run_is_accepted(self):
         validate_run(self.run,self.commit,'.github/workflows/game.yml')
         for key,value in [('head_sha',BASELINE),('head_branch','feature'),('event','pull_request'),
-            ('conclusion','failure'),('status','in_progress'),('path','.github/workflows/web.yml')]:
+            ('conclusion','failure'),('status','in_progress'),('path','.github/workflows/web.yml'),
+            ('run_attempt',0),('run_attempt',True),('repository',{'full_name':'Other/Rain'})]:
             with self.subTest(key=key),self.assertRaises(ValueError):
                 validate_run({**self.run,key:value},self.commit,'.github/workflows/game.yml')
 
@@ -27,16 +38,111 @@ class ExactV122PublicationTests(unittest.TestCase):
         for path in ['game/history_search.rpy','game/data/story.json','VERSION','tools/build/package.py',
             'scripts/pwa-native-browser.mjs','tools/release_gate.py','.github/workflows/game.yml']:
             with self.subTest(path=path),self.assertRaises(ValueError):validate_source_changes([path])
+        for path in ['tools/build/export_review.py','tests/test_export_review.py',
+            '.github/workflows/game.yml','.github/workflows/web.yml']:
+            with self.subTest(path=path),self.assertRaises(ValueError):
+                validate_source_changes([path],PUBLICATION_SUPPORT)
+
+    def test_metadata_promotion_keeps_both_exact_support_snapshots(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)
+            def git(*args):
+                return subprocess.check_output(['git','-c','user.name=Fixture','-c','user.email=fixture@example.invalid',
+                    *args],cwd=root,text=True).strip()
+            def commit(message):
+                git('add','.');git('commit','--quiet','-m',message)
+                return git('rev-parse','HEAD')
+            git('init','--quiet')
+            for path in SUPPORT:
+                target=root/path;target.parent.mkdir(parents=True,exist_ok=True);target.write_text(path+'\n')
+            (root/'VERSION').write_text('1.2.2\n')
+            baseline=commit('baseline')
+            (root/'docs').mkdir();(root/'docs/STATUS.md').write_text('runtime validated\n')
+            runtime=commit('runtime evidence')
+            runtime_hashes={path:digest(root/path) for path in SUPPORT}
+            (root/'tools/publish_v122.py').write_text('publication-only fix\n')
+            publication=commit('metadata promotion')
+            auth={'schema':1,'version':'1.2.2','repository':REPO,'runtime_baseline':baseline,
+                'publication_authorized':True,'user_instruction':'完成发布版本更新闭环',
+                'human_acceptance_claimed':False,'human_pending':HUMAN_PENDING,
+                'support_sha256':{path:digest(root/path) for path in SUPPORT},
+                'runtime_validation':{'commit':runtime,'support_sha256':runtime_hashes}}
+            with mock.patch('tools.publish_v122.ROOT',root),mock.patch('tools.publish_v122.BASELINE',baseline):
+                result=validate_source(publication,runtime,auth)
+                self.assertEqual(result['publication_difference'],['tools/publish_v122.py'])
+                self.assertEqual(result['runtime_baseline_difference'],['docs/STATUS.md'])
+                for section in ['support_sha256','runtime_validation']:
+                    bad=copy.deepcopy(auth)
+                    hashes=bad[section] if section=='support_sha256' else bad[section]['support_sha256']
+                    hashes['tools/publish_v122.py']='0'*64
+                    with self.subTest(section=section),self.assertRaises(ValueError):
+                        validate_source(publication,runtime,bad)
+                with self.assertRaises(ValueError):validate_source(publication,baseline,auth)
+                with self.assertRaises(ValueError):validate_source(runtime,runtime,auth)
+                (root/'tools/publish_v122.py').write_text('uncommitted executable change\n')
+                with self.assertRaises(ValueError):validate_source(publication,runtime,auth)
+                git('checkout','--','tools/publish_v122.py')
+                (root/'tools/build/export_review.py').write_text('post-validation audit change\n')
+                changed=commit('not publication metadata')
+                bad=copy.deepcopy(auth);bad['support_sha256']['tools/build/export_review.py']=digest(root/'tools/build/export_review.py')
+                with self.assertRaises(ValueError):validate_source(changed,runtime,bad)
+
+    def test_completed_review_rerun_preserves_original_successful_native_attempt(self):
+        web={**self.run,'id':789,'run_attempt':2,'path':'.github/workflows/web.yml'}
+        auth={'runtime_validation':{'native_run':{'id':123,'artifact_attempt':1},
+            'pwa_run':{'id':789,'attempt':2}}}
+        validate_evidence_runs({**self.run,'run_attempt':2},self.run,web,self.commit,auth)
+        for native,origin,pwa in [
+            ({**self.run,'conclusion':'failure'},self.run,web),
+            (self.run,{**self.run,'conclusion':'failure'},web),
+            (self.run,{**self.run,'run_attempt':2},web),
+            (self.run,self.run,{**web,'run_attempt':1}),
+            (self.run,self.run,{**web,'conclusion':'failure'}),
+            (self.run,self.run,{**web,'head_sha':BASELINE})]:
+            with self.subTest(native=native,origin=origin,pwa=pwa),self.assertRaises(ValueError):
+                validate_evidence_runs(native,origin,pwa,self.commit,auth)
+
+    def test_upload_window_requires_exact_successful_attempt_job_and_step(self):
+        self.assertEqual(self.upload['job_id'],456)
+        changes=[{'run_attempt':2},{'run_id':124},{'head_sha':BASELINE},{'conclusion':'failure'},
+            {'steps':[{**self.job['steps'][0],'conclusion':'skipped'}]},
+            {'steps':[{**self.job['steps'][0],'started_at':'2026-10-16T00:18:00Z'}]},
+            {'steps':[{**self.job['steps'][0],'completed_at':'2026-10-16T00:25:01Z'}]},
+            {'steps':[{**self.job['steps'][0],'started_at':None}]},
+            {'steps':self.job['steps']*2}]
+        for change in changes:
+            with self.subTest(change=change),self.assertRaises(ValueError):
+                upload_window([{**self.job,**change}],self.run,'web','Upload PWA')
+        with self.assertRaises(ValueError):upload_window([self.job,self.job],self.run,'web','Upload PWA')
+        with self.assertRaises(ValueError):upload_window([],self.run,'web','Upload PWA')
+
+    def test_partial_api_pages_cannot_hide_ambiguous_jobs_or_artifacts(self):
+        self.assertEqual(complete_items({'total_count':1,'jobs':[self.job]},'jobs'),[self.job])
+        for response in [{'total_count':2,'jobs':[self.job]},{'jobs':[self.job]},
+            {'total_count':True,'jobs':[self.job]}]:
+            with self.subTest(response=response),self.assertRaises(ValueError):complete_items(response,'jobs')
 
     def test_artifact_is_bound_to_run_commit_and_digest(self):
         item={'id':1,'name':'windows-'+self.commit,'expired':False,'digest':'sha256:'+'b'*64,
-            'workflow_run':{'id':123,'head_sha':self.commit}}
-        self.assertEqual(artifact_for([item],item['name'],123,self.commit),item)
+            'created_at':'2026-10-16T00:24:54Z','workflow_run':{'id':123,'head_sha':self.commit}}
+        self.assertEqual(artifact_for([item],item['name'],123,self.commit,self.upload),item)
         for change in [{'expired':True},{'digest':None},{'workflow_run':{'id':124,'head_sha':self.commit}},
-            {'workflow_run':{'id':123,'head_sha':BASELINE}}]:
+            {'workflow_run':{'id':123,'head_sha':BASELINE}},{'id':0},{'created_at':None}]:
             with self.subTest(change=change),self.assertRaises(ValueError):
-                artifact_for([{**item,**change}],item['name'],123,self.commit)
-        with self.assertRaises(ValueError):artifact_for([item,item],item['name'],123,self.commit)
+                artifact_for([{**item,**change}],item['name'],123,self.commit,self.upload)
+        with self.assertRaises(ValueError):artifact_for([item,item],item['name'],123,self.commit,self.upload)
+
+    def test_same_name_from_failed_attempt_is_excluded_by_successful_upload_time(self):
+        failed={'id':12015833673,'name':'Rain-Web-'+self.commit,'expired':False,'digest':'sha256:'+'b'*64,
+            'created_at':'2026-10-16T00:18:56Z','workflow_run':{'id':123,'head_sha':self.commit}}
+        passed={**failed,'id':12016850530,'created_at':'2026-10-16T00:24:54Z'}
+        self.assertEqual(artifact_for([passed,failed],passed['name'],123,self.commit,self.upload),passed)
+        self.assertEqual(artifact_for([failed,passed],passed['name'],123,self.commit,self.upload),passed)
+        for items in [[failed],[passed,passed],[{**passed,'created_at':'2026-10-16T00:24:55Z'}]]:
+            with self.subTest(items=items),self.assertRaises(ValueError):
+                artifact_for(items,passed['name'],123,self.commit,self.upload)
+        with self.assertRaises(ValueError):
+            artifact_for([passed],passed['name'],123,self.commit,{**self.upload,'run_id':124})
 
     def test_archive_traversal_duplicate_and_symlink_are_refused(self):
         with tempfile.TemporaryDirectory() as temp:
@@ -91,6 +197,23 @@ class ExactV122PublicationTests(unittest.TestCase):
             with self.assertRaises(ValueError):validate_web(build,acceptance,{**public,'revision':'old'},package)
             with self.assertRaises(ValueError):validate_web(build,{**acceptance,'errors':['pageerror']},public,package)
             with self.assertRaises(ValueError):validate_web({**build,'web_zip_sha256':'0'*64},acceptance,public,package)
+
+    def test_current_public_worker_must_equal_the_exact_tested_package(self):
+        with tempfile.TemporaryDirectory() as temp:
+            package=Path(temp)/'web.zip'
+            worker=b'const BUILD = {"version":"1.2.2","revision":"tested"};\n'
+            with zipfile.ZipFile(package,'w') as bundle:bundle.writestr('service-worker.js',worker)
+            with mock.patch('urllib.request.urlopen',return_value=io.BytesIO(worker)) as fetch:
+                result=verify_public_worker({'revision':'tested'},package)
+                self.assertEqual(result['status'],'exact_tested_bytes_verified')
+                self.assertEqual(result['revision'],'tested')
+                self.assertEqual(fetch.call_args.args[0].full_url,'https://aureliuswu.github.io/Rain/service-worker.js')
+            for actual in [worker.replace(b'tested',b'newer'),worker+b' ',b'x'*1_048_577]:
+                with self.subTest(bytes=len(actual)),mock.patch('urllib.request.urlopen',return_value=io.BytesIO(actual)):
+                    with self.assertRaises(ValueError):verify_public_worker({'revision':'tested'},package)
+            with self.assertRaises(ValueError):verify_public_worker({'revision':'other'},package)
+            with zipfile.ZipFile(package,'w') as bundle:bundle.writestr('service-worker.js',worker*2)
+            with self.assertRaises(ValueError):verify_public_worker({'revision':'tested'},package)
 
 
 if __name__=='__main__':unittest.main()

@@ -7,7 +7,7 @@
   "user_instruction": "完成发布版本更新闭环",
   "requested_at": "2026-10-16",
   "source": "Current user instruction in this four-game release conversation; repeated after the four draft PR deliveries.",
-  "condition": "Both complete main Game validation and same-commit native WASM PWA/public Pages workflow are successful; publish their exact immutable artifact bytes only.",
+  "condition": "Both complete main Game validation and same-runtime native WASM PWA/public Pages workflows are successful; promote their exact immutable artifact bytes, with a separate checked publication metadata commit.",
   "human_acceptance_claimed": false,
   "human_pending": [
     "ordinary_windows",
@@ -17,13 +17,13 @@
     "reading_time"
   ],
   "visual_acceptance": "Native PNG decode/hash audit and sealed inspection-copy bindings are machine checks; no new direct image or human review is asserted.",
-  "runtime_source_policy": "Only documentation and explicitly pinned non-player publication/audit support may differ from the runtime baseline; no game, asset, package builder or existing release gate changes.",
+  "runtime_source_policy": "The tested runtime must preserve the original runtime-baseline allowlist and exact support hashes. From tested runtime to publication commit, only documentation and exact pinned release-v122 workflow/publisher/test files may differ; no player, asset, package builder, audit exporter, Game/PWA workflow or existing release gate changes.",
   "support_sha256": {
-    ".github/workflows/release-v122.yml": "9246c8ba3d78a430bbb719f33be708be02387ee30165480b64c17d3808d6885c",
+    ".github/workflows/release-v122.yml": "5ea98c13d3971ec68a82ab87856f5dc121762517fe0b8787c0dc8723fde65f47",
     "tests/test_export_review.py": "1631d6e6665eda88c0732bcad26b986876b1f4dbc386fa2bae9a9f996b6de118",
-    "tests/test_publish_v122.py": "fae8a946a194a30701633610e7c57dceb08df42678df797c2ec257f6caa759a7",
+    "tests/test_publish_v122.py": "136f6fd2c3585afc6fd6dc8f811c0c87edc682a14df106da36eca9df896b3c24",
     "tools/build/export_review.py": "e43f621d1a7ebabc47fb23a79379c037b003c43d97c1b721233ac1e9bdac0ae9",
-    "tools/publish_v122.py": "91cad7398818861dc1271d0fa8adc00344d36f4e84ff70ff0d82d72a14818b78"
+    "tools/publish_v122.py": "271d9d8da924bb505fa34e09f37b7b501a95a094bb9ffe1df7ccc47923e5638b"
   },
   "historical_validation": {
     "candidate": "2beeb1776767c281eafb9adbba7df8ae367fe24d",
@@ -49,5 +49,60 @@
     "reuse_policy": "Historical runs explain the fix and do not count as successful v1.2.2 release validation. The new main run and same-commit PWA/public artifacts are mandatory."
   },
   "old_releases_preserved": true,
-  "tag_policy": "Create only a new v1.2.2 tag; refuse existing tag/release; never force or replace."
+  "tag_policy": "Create only a new v1.2.2 tag; refuse existing tag/release; never force or replace.",
+  "runtime_validation": {
+    "commit": "15d87ef4455b95feb6069e044a1d3a6456f75e0c",
+    "native_run": {
+      "id": 38828604885,
+      "artifact_attempt": 1,
+      "status": "complete_success"
+    },
+    "pwa_run": {
+      "id": 38828604848,
+      "attempt": 2,
+      "status": "complete_success_including_public_pages"
+    },
+    "support_sha256": {
+      ".github/workflows/release-v122.yml": "9246c8ba3d78a430bbb719f33be708be02387ee30165480b64c17d3808d6885c",
+      "tests/test_export_review.py": "1631d6e6665eda88c0732bcad26b986876b1f4dbc386fa2bae9a9f996b6de118",
+      "tests/test_publish_v122.py": "fae8a946a194a30701633610e7c57dceb08df42678df797c2ec257f6caa759a7",
+      "tools/build/export_review.py": "e43f621d1a7ebabc47fb23a79379c037b003c43d97c1b721233ac1e9bdac0ae9",
+      "tools/publish_v122.py": "91cad7398818861dc1271d0fa8adc00344d36f4e84ff70ff0d82d72a14818b78"
+    },
+    "native_complete_plan": {
+      "source_and_standalone_each": {
+        "cases": 37,
+        "assertions": 477,
+        "screenshots": 84
+      },
+      "native_pngs": 178,
+      "assets": 85,
+      "fresh_process": [
+        1,
+        16,
+        3
+      ],
+      "old_save_writer": [
+        1,
+        14,
+        3
+      ],
+      "old_save_reader": [
+        2,
+        26,
+        4
+      ],
+      "voice_prefix_each": [
+        7,
+        132,
+        31
+      ]
+    },
+    "pwa_browser_checks": 14,
+    "publication_retry_failure": {
+      "run": 38834051370,
+      "reason": "Same-name immutable Rain-Web artifacts from failed attempt 1 and successful attempt 2; previous publisher refused ambiguity before any tag/release write."
+    },
+    "promotion_policy": "Retain the exact fully successful native artifact attempt 1 and PWA attempt 2. A short sealed review-record export may rerun to emit a fresh workflow_run completion; the latest Game run must still finish successful, and the original successful upload attempt/jobs/steps plus all package and audit gates are independently rechecked. No native suite is skipped or relabeled as a new execution."
+  }
 }
