@@ -1,0 +1,25 @@
+{
+  "source": "game/fonts/SourceHanSansLite.ttf",
+  "source_sha256": "b2aaf73b7acc23d746b110f1caeaecc93d4292824979af44e96000200591b2a7",
+  "output": "tools/build/pwa/ui-font.woff2",
+  "sha256": "176acd8fd5f597177ce51f99426be146aba69c9f562b09b34408cf01860f2f7f",
+  "bytes": 117928,
+  "inputs": [
+    "game/data/story.json",
+    "game/screens.rpy",
+    "tools/build/web.py",
+    "tools/build/pwa/client.js"
+  ],
+  "text_sha256": "c6e7a9929be9c86e567d5f86652683c2ba12221b70d41eeb6cd67a693f0baaa2",
+  "license": "licenses/SourceHanSans-OFL.txt",
+  "cjk_coverage": "complete for current controls and story",
+  "currentInputCheck": {
+    "date": "2026-10-14",
+    "inputCommit": "19641824ab7a7116d101f67b73707b927afea2de",
+    "text_sha256": "d893397bbd45414efef62e6a0574cbcced616352f2d4e02cdb6ede9d84ba6841",
+    "required_cjk_codepoints": 921,
+    "missing_cjk_codepoints": 0,
+    "font_bytes_unchanged": true,
+    "scope": "Existing font decoded and checked against current inputs; original generation fingerprint retained"
+  }
+}

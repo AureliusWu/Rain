@@ -1,9 +1,10 @@
 {
   "name": "rain-native-platform-checks",
   "private": true,
-  "version": "1.2.1",
+  "version": "1.2.2",
   "type": "module",
   "scripts": {
+    "test:history-input": "node scripts/history-input-browser.mjs",
     "test:pwa": "node scripts/pwa-smoke.mjs"
   },
   "devDependencies": {

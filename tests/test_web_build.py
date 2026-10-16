@@ -3,9 +3,10 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+import zipfile
 from unittest.mock import patch
 from PIL import Image
-from tools.build.web import add_pwa, stage_project
+from tools.build.web import add_pwa, stage_project, validate_web_runtime
 
 class WebPackagingTests(unittest.TestCase):
     def fixture(self, root):
@@ -56,5 +57,36 @@ class WebPackagingTests(unittest.TestCase):
             self.assertFalse((author/'web-icon.png').exists())
             self.assertEqual((staged/'web-presplash.png').read_bytes(),(author/'game/background.png').read_bytes())
             self.assertEqual((staged/'progressive_download.txt').read_text(),'- image game/**\n')
+
+    def runtime_fixture(self, root):
+        for name in ('index.html', 'manifest.json', 'renpy.js', 'renpy.data'):
+            (root/name).write_bytes(b'official build fixture')
+        (root/'renpy.wasm').write_bytes(b'\x00asm\x01\x00\x00\x00')
+        with zipfile.ZipFile(root/'game.zip', 'w', zipfile.ZIP_STORED) as archive:
+            archive.writestr('game/script.rpyc', b'compiled-script-fixture')
+
+    def test_truncated_game_zip_is_rejected_even_when_launcher_exits_zero(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp); self.runtime_fixture(root)
+            validate_web_runtime(root)
+            original=(root/'game.zip').read_bytes()
+            (root/'game.zip').write_bytes(original[:-12])
+            with self.assertRaisesRegex(ValueError,'Incomplete or corrupt'):
+                validate_web_runtime(root)
+
+    def test_game_zip_with_intact_directory_but_bad_content_crc_is_rejected(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp); self.runtime_fixture(root)
+            original=(root/'game.zip').read_bytes()
+            (root/'game.zip').write_bytes(original.replace(b'compiled-script-fixture',b'corrupted-script-bytes!'))
+            with self.assertRaisesRegex(ValueError,'CRC mismatch'):
+                validate_web_runtime(root)
+
+    def test_missing_or_empty_engine_file_is_rejected_before_offline_packaging(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp); self.runtime_fixture(root)
+            (root/'renpy.wasm').write_bytes(b'')
+            with self.assertRaisesRegex(ValueError,'Incomplete official web build: renpy.wasm'):
+                validate_web_runtime(root)
 
 if __name__ == '__main__': unittest.main()

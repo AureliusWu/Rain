@@ -1,0 +1,51 @@
+name: Publish exact verified v1.2.2 Windows and PWA
+
+on:
+  workflow_run:
+    workflows: ['Game validation']
+    branches: [main]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      native_run:
+        description: Successful main Game validation run for the current commit
+        required: true
+        type: string
+
+concurrency:
+  group: formal-release-v122
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      actions: read
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PYTHONUTF8: '1'
+      PUBLICATION_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+      NATIVE_RUN: ${{ github.event.workflow_run.id || inputs.native_run }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.PUBLICATION_SHA }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify exact completed CI artifacts, publish draft, read back, and publish stable
+        run: python -m tools.publish_v122 --commit "$PUBLICATION_SHA" --native-run "$NATIVE_RUN"
+      - name: Upload exact publication record
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Rain-v122-publication-${{ github.run_id }}
+          path: |
+            reports/v122-publication.json
+            .runtime/publish-v122/release/RELEASE_METADATA.json
+            .runtime/publish-v122/release/SHA256SUMS.txt
+          if-no-files-found: warn

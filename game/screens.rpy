@@ -919,50 +919,88 @@ style slider_vbox:
 screen history():
 
     tag menu
-
+    default history_session = rain_history_session_token()
+    default history_query = ""
+    default history_speaker = ""
+    default history_input_value = RainHistoryInputValue(history_session)
     on "hide" action Stop("voice")
-
-    ## Avoid predicting this screen, as it can be very large.
     predict False
 
-    use game_menu(_("History"), scroll=("vpgrid" if gui.history_height else "viewport")):
+    $ history_rows = rain_history_rows(_history_list, history_query, history_speaker)
 
-        style_prefix "history"
-
-        for history_index, h in enumerate(_history_list):
-
-            window:
-
-                ## This lays things out properly if history_height is None.
-                has fixed:
-                    yfit True
-
-                if h.who:
-
-                    label h.who:
-                        style "history_name"
-                        substitute False
-
-                        ## Take the color of the who text from the Character, if
-                        ## set.
-                        if "color" in h.who_args:
-                            text_color h.who_args["color"]
-
-                if h.voice and h.voice.filename:
-                    textbutton "重播语音":
-                        id ("history_voice_%d" % history_index)
-                        style "voice_replay_button"
-                        xpos gui.history_name_xpos
-                        xanchor gui.history_name_xalign
-                        ypos 65
-                        action PlayCharacterVoice(h.voice.tag, h.voice.filename, selected=True)
-
-                $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
-                text what:
-                    substitute False
-
-        if not _history_list:
-            label _("The dialogue history is empty.")
+    use game_menu(_("History")):
+        vbox:
+            xfill True
+            spacing 18
+            frame:
+                xfill True
+                background Solid("#142d3c")
+                padding (18, 14)
+                vbox:
+                    spacing 12
+                    text "搜索已读文字" size 26
+                    if renpy.variant("web"):
+                        text "请在右上方输入关键词" size 26 color "#c1d7e1"
+                    else:
+                        input:
+                            id "history_search"
+                            style "history_search_input"
+                            value history_input_value
+                            length 80
+                    hbox:
+                        spacing 12
+                        textbutton "全部人物":
+                            id "history_all"
+                            style "history_filter_button"
+                            selected history_speaker == ""
+                            action [Stop("voice"), SetScreenVariable("history_speaker", "")]
+                        for who in rain_history_speakers(_history_list):
+                            textbutton who:
+                                id ("history_speaker_" + who)
+                                style "history_filter_button"
+                                selected history_speaker == who
+                                action [Stop("voice"), SetScreenVariable("history_speaker", who)]
+                    textbutton "清除筛选":
+                        id "history_clear"
+                        style "history_filter_button"
+                        action [Stop("voice"), Function(rain_clear_history_filters, history_session)]
+                    text ("显示 %d / %d 条记录" % (len(history_rows), len(_history_list))) size 24
+            viewport:
+                id "history_records"
+                yinitial 1.0
+                yfill True
+                scrollbars "vertical"
+                mousewheel True
+                draggable True
+                pagekeys True
+                side_yfill True
+                vbox:
+                    style_prefix "history"
+                    for history_index, h in history_rows:
+                        window:
+                            has fixed:
+                                yfit True
+                            if h.who:
+                                label h.who:
+                                    style "history_name"
+                                    substitute False
+                                    if "color" in h.who_args:
+                                        text_color h.who_args["color"]
+                            if h.voice and h.voice.filename:
+                                textbutton "重播语音":
+                                    id ("history_voice_%d" % history_index)
+                                    style "voice_replay_button"
+                                    xpos gui.history_name_xpos
+                                    xanchor gui.history_name_xalign
+                                    ypos 65
+                                    action PlayCharacterVoice(h.voice.tag, h.voice.filename, selected=True)
+                            $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
+                            text what:
+                                substitute False
+                    if not _history_list:
+                        label _("The dialogue history is empty.")
+                    elif not history_rows:
+                        text "没有找到这条记录，可以换个关键词。" size 28
 
 define gui.history_allow_tags = { "alt", "noalt", "rt", "rb", "art" }
 

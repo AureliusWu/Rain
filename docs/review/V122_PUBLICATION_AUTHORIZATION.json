@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "repository": "AureliusWu/Rain",
+  "version": "1.2.2",
+  "runtime_baseline": "2beeb1776767c281eafb9adbba7df8ae367fe24d",
+  "publication_authorized": true,
+  "user_instruction": "完成发布版本更新闭环",
+  "requested_at": "2026-10-16",
+  "source": "Current user instruction in this four-game release conversation; repeated after the four draft PR deliveries.",
+  "condition": "Both complete main Game validation and same-commit native WASM PWA/public Pages workflow are successful; publish their exact immutable artifact bytes only.",
+  "human_acceptance_claimed": false,
+  "human_pending": [
+    "ordinary_windows",
+    "display_dpi",
+    "listening",
+    "creative_and_freeze",
+    "reading_time"
+  ],
+  "visual_acceptance": "Native PNG decode/hash audit and sealed inspection-copy bindings are machine checks; no new direct image or human review is asserted.",
+  "runtime_source_policy": "Only documentation and explicitly pinned non-player publication/audit support may differ from the runtime baseline; no game, asset, package builder or existing release gate changes.",
+  "support_sha256": {
+    ".github/workflows/release-v122.yml": "9246c8ba3d78a430bbb719f33be708be02387ee30165480b64c17d3808d6885c",
+    "tests/test_export_review.py": "1631d6e6665eda88c0732bcad26b986876b1f4dbc386fa2bae9a9f996b6de118",
+    "tests/test_publish_v122.py": "ada92c3f2007bc1b48459d4e44bc4bf5d45ab2fcf844cb0379bba4959f6309df",
+    "tools/build/export_review.py": "e43f621d1a7ebabc47fb23a79379c037b003c43d97c1b721233ac1e9bdac0ae9",
+    "tools/publish_v122.py": "232de7eeb86dcd15622692d84b0ff54745dff7b2ad6698a3dcf2971f03fe4c7f"
+  },
+  "historical_validation": {
+    "candidate": "2beeb1776767c281eafb9adbba7df8ae367fe24d",
+    "pwa_run": 38744587697,
+    "pwa_status": "success",
+    "native_run": 38744587007,
+    "native_status": "failure_after_all_actual_native_suites_succeeded",
+    "failed_step": "Audit exact ZIP and export remote visual-review copies",
+    "reason": "export_review.py retained old native 36/448/174 PNG and voice-prefix 6/103/29 counts after the new history regression expanded the complete plans.",
+    "current_plan": {
+      "source_and_standalone_each": {
+        "cases": 37,
+        "assertions": 477,
+        "screenshots": 84
+      },
+      "native_pngs": 178,
+      "voice_prefix_each": {
+        "cases": 7,
+        "assertions": 132,
+        "screenshots": 31
+      }
+    },
+    "reuse_policy": "Historical runs explain the fix and do not count as successful v1.2.2 release validation. The new main run and same-commit PWA/public artifacts are mandatory."
+  },
+  "old_releases_preserved": true,
+  "tag_policy": "Create only a new v1.2.2 tag; refuse existing tag/release; never force or replace."
+}

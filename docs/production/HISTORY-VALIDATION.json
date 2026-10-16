@@ -1,0 +1,149 @@
+{
+  "date": "2026-10-14",
+  "project": "Rain",
+  "baseCommit": "9ba33483a25cff2fc07767a4ac055b98b9cd6ab9",
+  "scope": "read-history search; native story/save identities and existing art/voices preserved",
+  "platforms": {
+    "local": "restoration quick checks passed; full authoring and browser controls fixture results belong to previous session",
+    "githubCI": "not run for local repair: push rejected by automatic approval review",
+    "publicPWA": "not deployed for this repair",
+    "humanListening": "not performed"
+  },
+  "version": "1.2.2",
+  "localChecks": {
+    "unit": 145,
+    "routes": 16,
+    "pwaChecks": 14,
+    "nativeLint": "passed"
+  },
+  "browser": "Chromium 140.0.7339.186; production build",
+  "ciRepair": {
+    "date": "2026-10-14",
+    "inputCommit": "19641824ab7a7116d101f67b73707b927afea2de",
+    "failedRuns": [
+      {
+        "platform": "Windows",
+        "runId": 38579109574,
+        "jobId": 115903954600,
+        "url": "https://github.com/AureliusWu/Rain/actions/runs/38579109574"
+      },
+      {
+        "platform": "PWA",
+        "runId": 38579109569,
+        "jobId": 115903948953,
+        "url": "https://github.com/AureliusWu/Rain/actions/runs/38579109569"
+      }
+    ],
+    "cause": "Reusable recipe hashes were not synchronized after the final native/HTML input and browser-font integration. Both jobs stopped at tools/build/web.py; exhaustive local verification found client.js and history_search.rpy stale as well.",
+    "updatedRecipeHashes": {
+      "tools/build/web.py": "886fa10d328ee1f68cd60ef6526796712ae7357ed2d728294837744227f3985f",
+      "tools/build/pwa/client.js": "bd86da9c3c72834e9048434927ef48e5a2a7fcfd48f968731c36429da31380e8",
+      "game/history_search.rpy": "454695a542b55b5a2059277e847269efcc4f2c0bef8554da720c4e32c8811945"
+    },
+    "localChecks": {
+      "pythonTests": 148,
+      "pythonSeconds": 11.214,
+      "nativeStateRoutes": 16,
+      "authoringValidation": "passed; assets, audio decode, reproducible imports, character, prompt, story, and generated scripts",
+      "nodeTests": 10,
+      "materialEntries": 90,
+      "materialFiles": 224,
+      "sharedFiles": 15,
+      "reusableExportEntries": 60,
+      "reusableExportFiles": 151,
+      "fontMissingCJK": 0
+    },
+    "platformChecks": {
+      "nativeLinux": "not executed: SDK interpreter terminates with signal SIGBUS before startup",
+      "newWindowsCI": "pending; failed runs above are the prior input commit",
+      "newPWA": "pending; official WASM build/browser execution not performed in this batch",
+      "publicPWA": "not performed",
+      "humanListening": "not performed"
+    },
+    "runtimeFilesChanged": false,
+    "storyVoiceArtSaveIdentityChanged": false
+  },
+  "latestBatch": "2026-10-15 restored lifecycle repair; earlier top-level localChecks/browser fields are historical records",
+  "lifecycleRepair": {
+    "date": "2026-10-15",
+    "inputCommit": "6ad00314385f566b2af5dd282c9e21f3a0957894",
+    "originalLocalCommits": [
+      "4c8d5c8b40294828ace3f3fa7d2ffa1b30fb9c25",
+      "b296be977a3761e46b9887ce2f3d4495945235a1"
+    ],
+    "restoration": "First patch recovered by root; second patch reconstructed from prior session source. No remote write attempted after the push rejection.",
+    "failedRuns": {
+      "Windows": 38662368205,
+      "PWA": 38662368211
+    },
+    "cause": "A Function action returned the query setter boolean True and ended the history menu interaction. Both platforms then attempted to read None.scope.",
+    "fix": "A dedicated panel-token-checked clear action returns None while preserving the HTML query acknowledgement.",
+    "previousSessionChecks": {
+      "origin": "Previous session actual tool outputs; not re-executed after environment restore",
+      "pythonTests": 152,
+      "pythonSeconds": 10.724,
+      "routes": 16,
+      "authoring": "passed",
+      "nodeTests": 10,
+      "sharedFiles": 15,
+      "materialEntries": 90,
+      "materialFiles": 224,
+      "exportedEntries": 60,
+      "exportedFiles": 151
+    },
+    "restorationChecks": {
+      "historyUnitTests": 7,
+      "historyUnitSeconds": 0.003,
+      "nodeTests": 10,
+      "generatedInteractionPlan": "passed",
+      "materialEntries": 90,
+      "materialFiles": 224,
+      "sharedFiles": 15,
+      "nodeSyntax": "passed",
+      "diffWhitespace": "passed"
+    },
+    "previousBrowserControlsFixture": {
+      "status": "passed in previous session; not re-executed after environment restore",
+      "browser": "153.0.8010.0",
+      "checks": [
+        "real Latin keys, Backspace and Enter preserve the open panel",
+        "Chinese preedit survives two native-state polls without writing a query",
+        "actual CDP Chinese IME commit reaches the query bridge",
+        "controls hide on close, reset on a new token and accept a reopened query",
+        "a delayed old-panel command cannot overwrite or block new-panel input"
+      ],
+      "errors": [],
+      "scope": "Actual production client.js and real Chromium events with a simulated native bridge; not a WASM or Windows game execution."
+    },
+    "filesSha256": {
+      "game/history_search.rpy": "1d3f9ab7e1c1db5f5af5a49d7a414f1b0fdcded22cf67d0147d678a05a019402",
+      "game/screens.rpy": "0ddd5ded018cacf7d1f6694d9f2177c4ed9f3225affde56e1f52ab146e269aa6",
+      "tools/build/pwa/client.js": "bd86da9c3c72834e9048434927ef48e5a2a7fcfd48f968731c36429da31380e8",
+      "scripts/history-input-browser.mjs": "ea24c8c21be0159ed1168a9a8f1cefdf7415272794e26b1062be4982677f8879",
+      "scripts/pwa-native-browser.mjs": "79cf5005ad16031f89c30cb224a4b2e1b63bca6cabbef629a0ed15b277223c0e",
+      "tools/compile_tests.py": "7cf7feeb87b8822dda5525d701d3d0bac89e625fad4798918a96175a56090205",
+      "game/testcases.rpy": "42fe052daf9f554edfddc09e5709dffca3f4f46ed0931494fc28f664819bcf57"
+    },
+    "platforms": {
+      "nativeLint": "not entered in previous session; official SDK interpreter --version exited SIGBUS",
+      "officialWasm": "not built for this repair",
+      "WindowsCI": "pending remote push authorization",
+      "publicPWA": "not deployed",
+      "humanListening": "not performed"
+    }
+  },
+  "latestRestoredControlsExecution": {
+    "status": "passed",
+    "browser": "153.0.8010.0",
+    "checks": [
+      "real Latin keys, Backspace and Enter preserve the open panel",
+      "Chinese preedit survives two native-state polls without writing a query",
+      "actual CDP Chinese IME commit reaches the query bridge",
+      "controls hide on close, reset on a new token and accept a reopened query",
+      "a delayed old-panel command cannot overwrite or block new-panel input"
+    ],
+    "errors": [],
+    "scope": "Actual production client.js and real Chromium events with a simulated native bridge; not a WASM or Windows game execution.",
+    "origin": "Executed again after restoration; result transcribed from the completed npm run test:history-input output."
+  }
+}

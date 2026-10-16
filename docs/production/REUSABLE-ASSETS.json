@@ -4,7 +4,7 @@
   "project": "Rain",
   "repository": "https://github.com/AureliusWu/Rain",
   "sourceCommit": "192cd3438556364bf5125bd333a223f92ce81fbb",
-  "inventoryDate": "2026-10-13",
+  "inventoryDate": "2026-10-14",
   "entries": [
     {
       "id": "shared-vn-production",
@@ -229,6 +229,12 @@
           "path": "game/fonts/SourceHanSansLite.ttf",
           "encoding": "binary",
           "sha256": "b2aaf73b7acc23d746b110f1caeaecc93d4292824979af44e96000200591b2a7"
+        },
+        {
+          "role": "runtime",
+          "path": "tools/build/pwa/ui-font.woff2",
+          "encoding": "binary",
+          "sha256": "176acd8fd5f597177ce51f99426be146aba69c9f562b09b34408cf01860f2f7f"
         }
       ],
       "license": {
@@ -4162,13 +4168,13 @@
           "role": "recipe",
           "path": "tools/build/web.py",
           "encoding": "text-lf",
-          "sha256": "b6860479bfb032710a5a3ca12baf28fc2fe4f9135d259f00576fcb6a90bf8b18"
+          "sha256": "886fa10d328ee1f68cd60ef6526796712ae7357ed2d728294837744227f3985f"
         },
         {
           "role": "recipe",
           "path": "tools/build/pwa/client.js",
           "encoding": "text-lf",
-          "sha256": "4e87de5d024a71908052bd21b1ef2eec55970c34d191f868e51411a4b04ec166"
+          "sha256": "5befb5c7bd8b3651dcd59ef3c3cbc9065db6c8b15b9ff25f116cd1d7392f70f8"
         },
         {
           "role": "recipe",
@@ -4205,6 +4211,54 @@
           "path": "requirements-dev.txt",
           "encoding": "text-lf",
           "sha256": "800a1e55ccd24048b4ca48d9d53859be989e05176748610b6f134fc7c2a43829"
+        },
+        {
+          "role": "recipe",
+          "path": "tools/build/subset_pwa_font.py",
+          "encoding": "text-lf",
+          "sha256": "c5498fc5d8a07244807e469f75d429ce7d640caba0b34db46c63190bfcf4a5ac"
+        },
+        {
+          "role": "metadata",
+          "path": "docs/production/PWA-INPUT-FONT.json",
+          "encoding": "text-lf",
+          "sha256": "20de4bbc846376fc01cb3ca32c7bd0fd95837e829d3c80a946180b19692021b8"
+        }
+      ]
+    },
+    {
+      "id": "read-history-search",
+      "kind": "ui",
+      "reuse": "recipe",
+      "origin": "AureliusWu/NetLove, Healing, Rain and Circuit; read-history search v1.0.0 (2026-10-14)",
+      "sourceStatus": "not-applicable",
+      "license": {
+        "name": "MIT — original project code only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "files": [
+        {
+          "role": "recipe",
+          "path": "docs/production/READ-HISTORY.md",
+          "encoding": "text-lf",
+          "sha256": "d56162182346d6eaecc6d8a31557b27cc11609c5c8316f96f3e9086f9a4471c5"
+        },
+        {
+          "role": "recipe",
+          "path": "game/python-packages/replay_search.py",
+          "encoding": "text-lf",
+          "sha256": "729076f7bf1891075867d09930296172da79b17d2bb89e2414e9b47704b48a32"
+        },
+        {
+          "role": "recipe",
+          "path": "game/history_search.rpy",
+          "encoding": "text-lf",
+          "sha256": "1d3f9ab7e1c1db5f5af5a49d7a414f1b0fdcded22cf67d0147d678a05a019402"
         }
       ]
     }

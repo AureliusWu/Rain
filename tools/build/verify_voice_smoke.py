@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 import re
 import shutil
@@ -11,7 +12,7 @@ from tools.story_model import ROOT
 from tools.build.verify_package import (collect_runtime_evidence, positive_timeout,
                                        run_native_tests, validate_suite_evidence)
 
-PREFIX_CASES = ('native_1080_and_scaled_window', 'current_voice_replay_and_restore',
+PREFIX_CASES = ('native_1080_and_scaled_window', 'history_search_and_original_voice', 'current_voice_replay_and_restore',
                 'history_voice_replay', 'auto_waits_for_replayed_voice',
                 'extras_locked_no_spoilers', 'extras_unlock_and_music')
 
@@ -31,9 +32,10 @@ def main():
     parser.add_argument('--timeout', type=positive_timeout, default=180)
     args = parser.parse_args()
     sdk = args.sdk.resolve()
-    interpreter = sdk/'lib/py3-windows-x86_64/python.exe'
+    platform = 'Windows' if os.name == 'nt' else 'Linux'
+    interpreter = sdk/'lib'/('py3-windows-x86_64/python.exe' if os.name == 'nt' else 'py3-linux-x86_64/python')
     if not interpreter.is_file():
-        raise SystemExit('Windows SDK interpreter missing')
+        raise SystemExit(f'{platform} SDK interpreter missing')
     source = (ROOT/'game/testcases.rpy').read_text(encoding='utf-8')
     prefix = prefix_plan(source)
     results = []
@@ -62,7 +64,7 @@ def main():
             if result.returncode:
                 raise ValueError(f'Voice prefix {iteration} failed with exit {result.returncode}')
             results.append(validate_suite_evidence(result.stdout, prefix, screenshots, evidence))
-    report = {'status':'passed', 'iterations':results, 'cases':list(PREFIX_CASES),
+    report = {'status':'passed', 'platform':platform, 'iterations':results, 'cases':list(PREFIX_CASES),
               'prefix_plan_sha256':hashlib.sha256(prefix.encode('utf-8')).hexdigest(),
               'original_project_is_unmodified':True,
               'game_copies_and_save_directories_are_separate':True,

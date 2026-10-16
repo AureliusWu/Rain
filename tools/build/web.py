@@ -47,12 +47,21 @@ def add_pwa(destination: Path, version: str) -> dict:
     controls = '''<aside id="pwaControls" aria-label="离线与安装">
       <span id="offlineStatus" role="status">正在保存完整离线内容…</span>
       <button id="installPwa" hidden>安装到设备</button>
+      <form id="historySearchControls" hidden>
+        <label for="historyQuery">搜索已读文字</label>
+        <input id="historyQuery" type="search" maxlength="80" placeholder="输入关键词" autocomplete="off">
+        <button id="historyQueryClear" type="button">清除关键词</button>
+        <span id="historySearchStatus" role="status"></span>
+      </form>
     </aside>
     <p id="orientationHint" role="status">请横屏阅读，画面与文字会更清晰</p>
     <style>#pwaControls{position:fixed;right:8px;top:8px;z-index:30;font:12px sans-serif;color:#d9eff4;background:#112b36dd;padding:6px 9px;border-radius:6px;max-width:70vw}#installPwa{margin-left:8px;border:1px solid #91d4e0;border-radius:4px;color:#fff;background:#234552;cursor:pointer}#pwaControls:focus-within{outline:2px solid #91d4e0}#orientationHint{display:none}@media(max-width:760px) and (orientation:portrait){#orientationHint{display:block;position:fixed;bottom:24px;left:16px;right:16px;margin:0;text-align:center;z-index:30;font:14px sans-serif;color:#d9eff4}}</style>
+    <style>#historySearchControls[hidden]{display:none}#historySearchControls{display:grid;gap:6px;margin-top:8px;max-width:280px}#historyQuery{box-sizing:border-box;min-width:0;width:100%;font:16px sans-serif;color:#e3edf1;background:#142d3c;border:1px solid #91d4e0;border-radius:4px;padding:8px}#historyQueryClear{justify-self:start;padding:6px 8px;color:#e3edf1;background:#20404e;border:1px solid #91d4e0;border-radius:4px}</style>
+    <style>@font-face{font-family:RainInterface;src:url("./ui-font.woff2") format("woff2");font-display:swap}#pwaControls,#historyQuery,#historyQueryClear{font-family:RainInterface,sans-serif}</style>
     <script src="pwa-client.js" defer></script>'''
     html_path.write_text(html.replace('</body>', controls + '\n</body>'), encoding='utf-8', newline='\n')
     shutil.copy2(TEMPLATES / 'client.js', destination / 'pwa-client.js')
+    shutil.copy2(TEMPLATES / 'ui-font.woff2', destination / 'ui-font.woff2')
     manifest_path = destination / 'manifest.json'
     manifest = json.loads(manifest_path.read_text())
     manifest.update({'id':'./', 'name':'雨停之前', 'short_name':'雨停之前', 'lang':'zh-CN',
@@ -96,6 +105,29 @@ def stage_project(destination: Path) -> None:
     background = next(asset for asset in assets if asset['id'] == 'station')
     shutil.copy2(ROOT / 'game' / background['file'], destination / 'web-presplash.png')
 
+def validate_web_runtime(destination: Path) -> dict:
+    """The launcher can exit zero after an interrupted archive writer."""
+    for name in ('index.html', 'manifest.json', 'renpy.wasm', 'renpy.js', 'renpy.data', 'game.zip'):
+        file = destination / name
+        if not file.is_file() or not file.stat().st_size:
+            raise ValueError(f'Incomplete official web build: {name}')
+    if (destination / 'renpy.wasm').read_bytes()[:4] != b'\x00asm':
+        raise ValueError('Invalid official web WASM header')
+    try:
+        with zipfile.ZipFile(destination / 'game.zip') as archive:
+            names = archive.namelist()
+            if not names or len(names) != len(set(names)):
+                raise ValueError('Empty or duplicate official game ZIP entries')
+            if any(name.startswith('/') or '..' in Path(name).parts for name in names):
+                raise ValueError('Unsafe official game ZIP path')
+            corrupt = archive.testzip()
+            if corrupt is not None:
+                raise ValueError(f'Official game ZIP CRC mismatch: {corrupt}')
+    except (zipfile.BadZipFile, EOFError, RuntimeError) as error:
+        raise ValueError('Incomplete or corrupt official game ZIP') from error
+    return {'game_zip_entries': len(names), 'game_zip_sha256': sdk_tools._sha256_file(destination / 'game.zip'),
+            'game_zip_crc': 'passed'}
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--sdk', type=Path, default=ROOT / '.runtime/renpy-8.5.3-sdk')
@@ -108,20 +140,37 @@ def main():
     if not sdk_tools.sdk_is_usable(sdk): raise SystemExit('Run python -m tools.build.sdk first')
     ensure_web(sdk, runtime)
     interpreter = sdk / 'lib' / ('py3-windows-x86_64/python.exe' if os.name == 'nt' else 'py3-linux-x86_64/python')
-    with tempfile.TemporaryDirectory(prefix='rain-web-stage-') as temp:
+    version = (ROOT/'VERSION').read_text().strip()
+    archive_path = ROOT / 'dist' / f'BeforeTheRainStops-{version}-web.zip'
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix='rain-web-stage-') as temp, tempfile.TemporaryDirectory(prefix='.rain-web-build-', dir=destination.parent) as output:
         project = Path(temp) / 'project'
+        candidate = Path(output) / 'web'
         stage_project(project)
         environment = {**os.environ, 'RENPY_PATH_TO_SAVES': str(Path(temp) / 'user-saves')}
-        subprocess.run([str(interpreter), str(sdk/'renpy.py'), str(sdk/'launcher'), 'web_build', str(project), '--destination', str(destination)], check=True, env=environment)
-    version = (ROOT/'VERSION').read_text().strip()
-    catalog = add_pwa(destination, version)
-    # Repack the postprocessed artifact; the official web_build ZIP predates PWA customization.
+        subprocess.run([str(interpreter), str(sdk/'renpy.py'), str(sdk/'launcher'), 'web_build', str(project), '--destination', str(candidate)], check=True, env=environment)
+        # A fresh output also prevents a failed command from reusing yesterday's ZIP.
+        runtime_evidence = validate_web_runtime(candidate)
+        catalog = add_pwa(candidate, version)
+        completed_zip = Path(output) / 'delivery.zip'
+        with zipfile.ZipFile(completed_zip, 'w', zipfile.ZIP_DEFLATED) as archive:
+            for path in sorted(candidate.rglob('*')):
+                if path.is_file(): archive.write(path, path.relative_to(candidate).as_posix())
+        with zipfile.ZipFile(completed_zip) as archive:
+            if archive.testzip() is not None: raise ValueError('Final PWA ZIP failed CRC validation')
+        backup = Path(output) / 'previous-web'
+        if destination.exists(): os.replace(destination, backup)
+        try:
+            os.replace(candidate, destination)
+            os.replace(completed_zip, archive_path)
+        except BaseException:
+            if destination.exists(): shutil.rmtree(destination)
+            if backup.exists(): os.replace(backup, destination)
+            raise
+    # The launcher's archive predates PWA customization and is never delivered.
     destination.with_suffix('.zip').unlink(missing_ok=True)
-    archive_path = ROOT / 'dist' / f'BeforeTheRainStops-{version}-web.zip'
-    with zipfile.ZipFile(archive_path, 'w', zipfile.ZIP_DEFLATED) as archive:
-        for path in sorted(destination.rglob('*')):
-            if path.is_file(): archive.write(path, path.relative_to(destination).as_posix())
     report = {'status':'built', 'engine':'RenPy 8.5.3 official WASM', 'web_sdk_sha256':WEB_SHA256,
+        'official_runtime_validation':runtime_evidence,
         'runtime_files':len(catalog['files']), 'offline_bytes':sum(file['bytes'] for file in catalog['files']),
         'revision':catalog['revision'], 'version':version, 'web_zip_sha256':sdk_tools._sha256_file(archive_path),
         'scope':'relative; supports /Rain/ and local test subpaths', 'browser_execution':'requires actual smoke test'}
