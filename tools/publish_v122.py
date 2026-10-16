@@ -260,6 +260,89 @@ def require_absent(endpoint):
     require(result.returncode!=0 and '(HTTP 404)' in result.stderr,'Existing or unverifiable '+endpoint)
 
 
+def find_draft(releases,tag):
+    matches=[release for release in releases if release.get('tag_name')==tag]
+    require(len(matches)==1,'Missing or duplicated draft release')
+    draft=matches[0]
+    require(type(draft.get('id')) is int and draft['id']>0 and draft.get('draft') is True
+        and draft.get('prerelease') is False,'Release is not the expected stable draft')
+    return draft
+
+
+def validate_draft(draft,tag,expected):
+    require(draft.get('tag_name')==tag and draft.get('draft') is True
+        and draft.get('prerelease') is False,'Release must remain the exact draft until readback')
+    assets=draft.get('assets',[])
+    require(len(assets)==len(expected) and {asset.get('name') for asset in assets}==set(expected),
+        'Draft asset set differs')
+    for asset in assets:
+        accepted=expected[asset['name']]
+        require(type(asset.get('id')) is int and asset['id']>0
+            and asset.get('digest')=='sha256:'+accepted['sha256']
+            and asset.get('size')==accepted['bytes'],'Draft asset identity/digest differs')
+        if 'id' in accepted:require(asset['id']==accepted['id'],'Prepared draft asset ID differs')
+
+
+def download_draft(draft,destination,expected):
+    validate_draft(draft,'v'+VERSION,expected)
+    destination.mkdir()
+    for asset in draft['assets']:
+        target=destination/asset['name']
+        with target.open('wb') as stream:
+            subprocess.run(['gh','api','-H','Accept: application/octet-stream',
+                f'repos/{REPO}/releases/assets/{asset["id"]}'],stdout=stream,check=True)
+        require(digest(target)==expected[asset['name']]['sha256']
+            and target.stat().st_size==expected[asset['name']]['bytes'],'Draft download readback differs')
+
+
+def prepared_artifact(item,run,pin,commit):
+    require(run.get('id')==pin['run_id'] and run.get('run_attempt')==pin['run_attempt']
+        and run.get('head_sha')==commit and run.get('head_branch')=='main'
+        and run.get('event')=='workflow_run' and run.get('path')=='.github/workflows/release-v122.yml'
+        and run.get('repository',{}).get('full_name')==REPO
+        and run.get('status')=='completed' and run.get('conclusion')=='failure',
+        'Authorized preparation run differs')
+    require(item.get('id')==pin['id'] and item.get('name')==pin['name']
+        and item.get('digest')==pin['digest'] and item.get('size_in_bytes')==pin['bytes']
+        and item.get('expired') is False and item.get('workflow_run',{}).get('id')==run['id']
+        and item['workflow_run'].get('head_sha')==commit,'Authorized preparation artifact differs')
+    return item
+
+
+def validate_prepared_metadata(record,commit,runtime_commit,authorization,expected):
+    require(isinstance(commit,str) and re.fullmatch('[0-9a-f]{40}',commit) is not None,
+        'Invalid prepared publication commit')
+    require(record.get('schema')==1 and record.get('project')=='Rain' and record.get('version')==VERSION
+        and record.get('tag')=='v'+VERSION and record.get('publication_commit')==commit
+        and record.get('runtime_commit')==runtime_commit and record.get('tag_commit')==runtime_commit
+        and record.get('runtime_baseline')==BASELINE and record.get('human_acceptance_claimed') is False
+        and record.get('human_pending')==HUMAN_PENDING,'Prepared publication identity differs')
+    subprocess.run(['git','merge-base','--is-ancestor',commit,expected['publication_commit']],cwd=ROOT,check=True)
+    previous=json.loads(subprocess.check_output(['git','show',commit+':'+AUTH],cwd=ROOT))
+    require(record.get('publication_authorization')==previous
+        and previous.get('runtime_validation')==authorization['runtime_validation'],
+        'Prepared authorization differs from its committed source')
+    require(set(previous.get('support_sha256',{}))==SUPPORT,'Prepared support allowlist differs')
+    for path,sha in previous['support_sha256'].items():
+        blob=subprocess.check_output(['git','show',commit+':'+path],cwd=ROOT)
+        require(hashlib.sha256(blob).hexdigest()==sha,'Prepared publication support hash differs: '+path)
+    paths=subprocess.check_output(['git','diff','--name-only',runtime_commit,commit],cwd=ROOT,text=True).splitlines()
+    validate_source_changes(paths,PUBLICATION_SUPPORT)
+    require(record.get('source_difference')=={
+        'runtime_baseline_difference':expected['source_difference']['runtime_baseline_difference'],
+        'publication_difference':paths},'Prepared source difference differs')
+    for field in ('artifacts','artifact_upload_steps','files','native_suites','native_screenshot_audit',
+            'pwa_build','pwa_acceptance','published_pwa','current_public_worker','visual_review','source_identity'):
+        require(record.get(field)==expected[field],'Prepared accepted evidence differs: '+field)
+    for field in ('id','url','artifact_attempt'):
+        require(record.get('native_run',{}).get(field)==expected['native_run'][field],
+            'Prepared native evidence origin differs')
+    completed=record['native_run'].get('completed_attempt')
+    require(type(completed) is int and expected['native_run']['artifact_attempt']<=completed
+        <=expected['native_run']['completed_attempt'],'Prepared native completion attempt differs')
+    require(record.get('pwa_run')==expected['pwa_run'],'Prepared PWA evidence origin differs')
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--commit',required=True)
@@ -305,8 +388,10 @@ def main():
     validate_web(build,acceptance,public,webzip)
     live_worker=verify_public_worker(build,webzip)
     tag='v'+VERSION
-    require_absent('git/ref/tags/'+tag)
-    require_absent('releases/tags/'+tag)
+    recovery=authorization.get('draft_recovery')
+    if not recovery:
+        require_absent('git/ref/tags/'+tag)
+        require_absent('releases/tags/'+tag)
     release=work/'release';release.mkdir()
     for package in (winzip,webzip):shutil.copy2(package,release/package.name)
     metadata={'schema':1,'project':'Rain','version':VERSION,'tag':tag,'publication_commit':args.commit,
@@ -322,29 +407,50 @@ def main():
         'human_acceptance_claimed':False,'human_pending':HUMAN_PENDING,
         'visual_review':'178 original PNGs decoded/hashed by native audit; sealed inspection-copy bindings verified; no new direct visual or human acceptance claimed',
         'release_readback':'This build metadata precedes publication; final readback evidence is exported by the publication workflow.'}
-    (release/'RELEASE_METADATA.json').write_text(json.dumps(metadata,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    files=sorted(release.iterdir())
-    sums={p.name:digest(p) for p in files}
-    (release/'SHA256SUMS.txt').write_text(''.join(f'{sums[p.name]}  {p.name}\n' for p in files),encoding='utf-8')
+    publication_commit=args.commit
+    if recovery:
+        publication_commit=recovery['publication_commit']
+        pin=recovery['metadata_artifact']
+        preparation=api(f'actions/runs/{pin["run_id"]}/attempts/{pin["run_attempt"]}')
+        item=prepared_artifact(api(f'actions/artifacts/{pin["id"]}'),preparation,pin,publication_commit)
+        prepared=download_artifact(item,work/'preparation')
+        prepared_metadata=unique(prepared,'RELEASE_METADATA.json')
+        validate_prepared_metadata(read(prepared_metadata),publication_commit,args.runtime_commit,authorization,metadata)
+        shutil.copy2(prepared_metadata,release/'RELEASE_METADATA.json')
+        shutil.copy2(unique(prepared,'SHA256SUMS.txt'),release/'SHA256SUMS.txt')
+        accepted=recovery['files']
+        require(set(accepted)=={p.name for p in release.iterdir()},'Prepared release file set differs')
+        require(all(digest(release/name)==item['sha256'] and (release/name).stat().st_size==item['bytes']
+            for name,item in accepted.items()),'Prepared exact release bytes differ')
+        draft=api(f'releases/{recovery["release_id"]}')
+        require(draft.get('id')==recovery['release_id'],'Prepared release ID differs')
+        validate_draft(draft,tag,accepted)
+    else:
+        (release/'RELEASE_METADATA.json').write_text(json.dumps(metadata,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+        files=sorted(release.iterdir())
+        sums={p.name:digest(p) for p in files}
+        (release/'SHA256SUMS.txt').write_text(''.join(f'{sums[p.name]}  {p.name}\n' for p in files),encoding='utf-8')
     files=sorted(release.iterdir())
     expected={p.name:digest(p) for p in files}
     require_current_main(args.commit)
-    gh('api','--method','POST',f'repos/{REPO}/git/refs','-f','ref=refs/tags/'+tag,'-f','sha='+args.runtime_commit)
-    require(api('git/ref/tags/'+tag)['object']['sha']==args.runtime_commit,'New tag identity differs')
-    gh('release','create',tag,*map(str,files),'--repo',REPO,'--verify-tag','--draft',
-        '--title','雨停之前 '+tag,'--notes-file',str(ROOT/'docs/RELEASE_NOTES_V122.md'))
-    draft=api('releases/tags/'+tag)
-    require(draft.get('draft') is True and draft.get('prerelease') is False,'Release must remain draft until readback')
-    require({a['name'] for a in draft['assets']}==set(expected),'Draft asset set differs')
-    readback=work/'draft-readback';readback.mkdir()
-    gh('release','download',tag,'--repo',REPO,'--dir',str(readback))
-    require({p.name:digest(p) for p in readback.iterdir()}==expected,'Draft download readback differs')
+    if not recovery:
+        gh('api','--method','POST',f'repos/{REPO}/git/refs','-f','ref=refs/tags/'+tag,'-f','sha='+args.runtime_commit)
+        require(api('git/ref/tags/'+tag)['object']['sha']==args.runtime_commit,'New tag identity differs')
+        gh('release','create',tag,*map(str,files),'--repo',REPO,'--verify-tag','--draft',
+            '--title','雨停之前 '+tag,'--notes-file',str(ROOT/'docs/RELEASE_NOTES_V122.md'))
+        draft=find_draft(api('releases?per_page=100'),tag)
+    require(api('git/ref/tags/'+tag)['object']['sha']==args.runtime_commit,'Draft tag identity differs')
+    accepted={p.name:{'sha256':expected[p.name],'bytes':p.stat().st_size} for p in files}
+    download_draft(draft,work/'draft-readback',accepted)
     require_current_main(args.commit)
     require(api('git/ref/tags/'+tag)['object']['sha']==args.runtime_commit,'Tag advanced before publication')
     verify_public_worker(build,webzip)
-    gh('release','edit',tag,'--repo',REPO,'--draft=false','--latest')
-    published=api('releases/tags/'+tag)
-    require(published.get('draft') is False and published.get('prerelease') is False,'Release not publicly stable')
+    gh('api','--method','PATCH',f'repos/{REPO}/releases/{draft["id"]}','-F','draft=false','-f','make_latest=true')
+    published=api(f'releases/{draft["id"]}')
+    require(published.get('id')==draft['id'] and published.get('tag_name')==tag
+        and published.get('draft') is False and published.get('prerelease') is False,'Release not publicly stable')
+    require({asset['name']:asset['id'] for asset in published['assets']}
+        =={asset['name']:asset['id'] for asset in draft['assets']},'Published asset IDs changed')
     require(api('git/ref/tags/'+tag)['object']['sha']==args.runtime_commit,'Published tag target differs')
     public_checks={}
     for asset in published['assets']:
@@ -356,8 +462,10 @@ def main():
         public_checks[asset['name']]={'sha256':digest(target),'bytes':target.stat().st_size,'url':asset['browser_download_url']}
     require(set(public_checks)==set(expected),'Public download asset set incomplete')
     final_worker=verify_public_worker(build,webzip)
-    evidence={'status':'published_and_public_bytes_verified','version':VERSION,'publication_commit':args.commit,
+    evidence={'status':'published_and_public_bytes_verified','version':VERSION,'publication_commit':publication_commit,
+        'completion_commit':args.commit,'completion_authorization_sha256':digest(ROOT/AUTH),
         'runtime_commit':args.runtime_commit,'tag_commit':args.runtime_commit,
+        'release_id':published['id'],'prepared_metadata_artifact':recovery['metadata_artifact'] if recovery else None,
         'release':published['html_url'],'files':public_checks,'pwa_revision':build['revision'],
         'current_public_worker':final_worker,
         'human_pending':HUMAN_PENDING,'human_acceptance_claimed':False}

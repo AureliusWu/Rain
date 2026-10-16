@@ -7,9 +7,10 @@ import tempfile
 import unittest
 from unittest import mock
 import zipfile
-from tools.publish_v122 import (BASELINE,HUMAN_PENDING,PUBLICATION_SUPPORT,REPO,SUPPORT,artifact_for,
-    complete_items,digest,extract_checked,upload_window,validate_evidence_runs,validate_native,
-    validate_run,validate_source,validate_source_changes,validate_web,verify_public_worker)
+from tools.publish_v122 import (AUTH,BASELINE,HUMAN_PENDING,PUBLICATION_SUPPORT,REPO,SUPPORT,artifact_for,
+    complete_items,digest,download_draft,extract_checked,find_draft,prepared_artifact,upload_window,
+    validate_draft,validate_evidence_runs,validate_native,validate_prepared_metadata,validate_run,
+    validate_source,validate_source_changes,validate_web,verify_public_worker)
 
 
 class ExactV122PublicationTests(unittest.TestCase):
@@ -214,6 +215,105 @@ class ExactV122PublicationTests(unittest.TestCase):
             with self.assertRaises(ValueError):verify_public_worker({'revision':'other'},package)
             with zipfile.ZipFile(package,'w') as bundle:bundle.writestr('service-worker.js',worker*2)
             with self.assertRaises(ValueError):verify_public_worker({'revision':'tested'},package)
+
+    def test_draft_is_found_by_release_id_without_the_published_tag_endpoint(self):
+        draft={'id':456,'tag_name':'v1.2.2','draft':True,'prerelease':False}
+        self.assertEqual(find_draft([{'tag_name':'v1.1.1'},draft],'v1.2.2'),draft)
+        for releases in [[],[draft,draft],[{**draft,'draft':False}],[{**draft,'prerelease':True}]]:
+            with self.subTest(releases=releases),self.assertRaises(ValueError):find_draft(releases,'v1.2.2')
+
+    def test_prepared_draft_requires_the_original_asset_ids_and_digests(self):
+        expected={'package.zip':{'id':789,'sha256':'a'*64,'bytes':3}}
+        asset={'id':789,'name':'package.zip','digest':'sha256:'+'a'*64,'size':3}
+        draft={'tag_name':'v1.2.2','draft':True,'prerelease':False,'assets':[asset]}
+        validate_draft(draft,'v1.2.2',expected)
+        for change in [{'draft':False},{'tag_name':'v1.1.1'},{'assets':[]},{'assets':[asset,asset]},
+            {'assets':[{**asset,'id':790}]},{'assets':[{**asset,'digest':'sha256:'+'b'*64}]},
+            {'assets':[{**asset,'size':4}]}]:
+            with self.subTest(change=change),self.assertRaises(ValueError):
+                validate_draft({**draft,**change},'v1.2.2',expected)
+
+    def test_draft_download_uses_authenticated_asset_ids_and_checks_actual_bytes(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);fixture=root/'fixture';fixture.write_bytes(b'raw')
+            expected={'package.zip':{'id':789,'sha256':digest(fixture),'bytes':3}}
+            draft={'tag_name':'v1.2.2','draft':True,'prerelease':False,
+                'assets':[{'id':789,'name':'package.zip','digest':'sha256:'+digest(fixture),'size':3}]}
+            def transfer(command,stdout,check):
+                self.assertEqual(command,['gh','api','-H','Accept: application/octet-stream',
+                    'repos/'+REPO+'/releases/assets/789'])
+                stdout.write(b'raw')
+            with mock.patch('tools.publish_v122.subprocess.run',side_effect=transfer):
+                download_draft(draft,root/'good',expected)
+            def tampered(command,stdout,check):stdout.write(b'bad')
+            with mock.patch('tools.publish_v122.subprocess.run',side_effect=tampered):
+                with self.assertRaises(ValueError):download_draft(draft,root/'bad',expected)
+
+    def test_preparation_artifact_is_pinned_to_the_failed_publisher_and_original_source(self):
+        pin={'id':456,'name':'publication','digest':'sha256:'+'a'*64,'bytes':123,'run_id':789,'run_attempt':1}
+        run={**self.run,'id':789,'path':'.github/workflows/release-v122.yml','event':'workflow_run','conclusion':'failure'}
+        item={'id':456,'name':'publication','digest':pin['digest'],'size_in_bytes':123,'expired':False,
+            'workflow_run':{'id':789,'head_sha':self.commit}}
+        self.assertEqual(prepared_artifact(item,run,pin,self.commit),item)
+        for change in [{'id':457},{'expired':True},{'digest':'sha256:'+'b'*64},
+            {'workflow_run':{'id':789,'head_sha':BASELINE}}]:
+            with self.subTest(change=change),self.assertRaises(ValueError):
+                prepared_artifact({**item,**change},run,pin,self.commit)
+        for change in [{'id':790},{'run_attempt':2},{'head_sha':BASELINE},{'conclusion':'success'},
+            {'repository':{'full_name':'Other/Rain'}}]:
+            with self.subTest(change=change),self.assertRaises(ValueError):
+                prepared_artifact(item,{**run,**change},pin,self.commit)
+
+    def test_recovery_metadata_keeps_original_source_authorization_and_all_accepted_evidence(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)
+            def git(*args):
+                return subprocess.check_output(['git','-c','user.name=Fixture','-c','user.email=fixture@example.invalid',
+                    *args],cwd=root,text=True).strip()
+            def commit(message):
+                git('add','.');git('commit','--quiet','-m',message)
+                return git('rev-parse','HEAD')
+            git('init','--quiet')
+            for path in SUPPORT:
+                target=root/path;target.parent.mkdir(parents=True,exist_ok=True);target.write_text(path+'\n')
+            runtime=commit('complete tested runtime')
+            (root/'tools/publish_v122.py').write_text('preparation publisher\n')
+            previous={'runtime_validation':{'commit':runtime},'support_sha256':{path:digest(root/path) for path in SUPPORT}}
+            auth_file=root/AUTH;auth_file.parent.mkdir(parents=True);auth_file.write_text(json.dumps(previous))
+            publication=commit('original draft preparation')
+            paths=git('diff','--name-only',runtime,publication).splitlines()
+            record={'schema':1,'project':'Rain','version':'1.2.2','tag':'v1.2.2','runtime_baseline':runtime,
+                'publication_commit':publication,'runtime_commit':runtime,'tag_commit':runtime,
+                'human_acceptance_claimed':False,'human_pending':HUMAN_PENDING,
+                'publication_authorization':previous,
+                'source_difference':{'runtime_baseline_difference':[],'publication_difference':paths},
+                'native_run':{'id':123,'url':'native','artifact_attempt':1,'completed_attempt':2},
+                'pwa_run':{'id':789,'url':'web','attempt':2}}
+            for field in ('artifacts','artifact_upload_steps','files','native_suites','native_screenshot_audit',
+                'pwa_build','pwa_acceptance','published_pwa','current_public_worker','visual_review','source_identity'):
+                record[field]={'accepted':field}
+            (root/'tools/publish_v122.py').write_text('completion publisher\n')
+            completion=commit('draft API recovery only')
+            expected=copy.deepcopy(record);expected['publication_commit']=completion
+            expected['native_run']['completed_attempt']=3
+            with mock.patch('tools.publish_v122.ROOT',root),mock.patch('tools.publish_v122.BASELINE',runtime):
+                validate_prepared_metadata(record,publication,runtime,previous,expected)
+                changes=[('runtime_commit',BASELINE),('human_acceptance_claimed',True),
+                    ('publication_authorization',{}),('source_difference',{})]
+                changes.extend((field,{}) for field in ('artifacts','artifact_upload_steps','files','native_suites',
+                    'native_screenshot_audit','pwa_build','pwa_acceptance','published_pwa','current_public_worker',
+                    'visual_review','source_identity','pwa_run'))
+                changes.append(('native_run',{**record['native_run'],'completed_attempt':4}))
+                for field,value in changes:
+                    bad=copy.deepcopy(record);bad[field]=value
+                    with self.subTest(field=field),self.assertRaises(ValueError):
+                        validate_prepared_metadata(bad,publication,runtime,previous,expected)
+                original=subprocess.check_output
+                def changed_blob(command,**kwargs):
+                    if command==['git','show',publication+':tools/publish_v122.py']:return b'tampered support'
+                    return original(command,**kwargs)
+                with mock.patch('tools.publish_v122.subprocess.check_output',side_effect=changed_blob):
+                    with self.assertRaises(ValueError):validate_prepared_metadata(record,publication,runtime,previous,expected)
 
 
 if __name__=='__main__':unittest.main()

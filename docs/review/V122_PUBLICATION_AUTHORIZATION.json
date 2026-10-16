@@ -21,9 +21,9 @@
   "support_sha256": {
     ".github/workflows/release-v122.yml": "5ea98c13d3971ec68a82ab87856f5dc121762517fe0b8787c0dc8723fde65f47",
     "tests/test_export_review.py": "1631d6e6665eda88c0732bcad26b986876b1f4dbc386fa2bae9a9f996b6de118",
-    "tests/test_publish_v122.py": "136f6fd2c3585afc6fd6dc8f811c0c87edc682a14df106da36eca9df896b3c24",
+    "tests/test_publish_v122.py": "2b21677f7a7d81c6fcf040cdbb347ba7897cf2f1f063e308a44dd83a9c56e91f",
     "tools/build/export_review.py": "e43f621d1a7ebabc47fb23a79379c037b003c43d97c1b721233ac1e9bdac0ae9",
-    "tools/publish_v122.py": "271d9d8da924bb505fa34e09f37b7b501a95a094bb9ffe1df7ccc47923e5638b"
+    "tools/publish_v122.py": "47c80a272dffee468d0c3791f8942c14784bab960ebb2bd0581a672cdafc3355"
   },
   "historical_validation": {
     "candidate": "2beeb1776767c281eafb9adbba7df8ae367fe24d",
@@ -104,5 +104,41 @@
       "reason": "Same-name immutable Rain-Web artifacts from failed attempt 1 and successful attempt 2; previous publisher refused ambiguity before any tag/release write."
     },
     "promotion_policy": "Retain the exact fully successful native artifact attempt 1 and PWA attempt 2. A short sealed review-record export may rerun to emit a fresh workflow_run completion; the latest Game run must still finish successful, and the original successful upload attempt/jobs/steps plus all package and audit gates are independently rechecked. No native suite is skipped or relabeled as a new execution."
+  },
+  "draft_recovery": {
+    "release_id": 414618626,
+    "publication_commit": "93c47140332d45a516697a19afc0850b21944f61",
+    "metadata_artifact": {
+      "id": 12028263833,
+      "name": "Rain-v122-publication-38860638607",
+      "digest": "sha256:8dee9a48d74aaf3a6b79737cf94956da42e0d6d64b7e2d180bbf306600439439",
+      "bytes": 6925,
+      "run_id": 38860638607,
+      "run_attempt": 1
+    },
+    "files": {
+      "BeforeTheRainStops-1.2.2-web.zip": {
+        "id": 646367975,
+        "sha256": "b18718ca1df99975f55d1bdd8df3d6a3bc58e82bd9c595b4e958623e2c0e86fb",
+        "bytes": 47790829
+      },
+      "BeforeTheRainStops-1.2.2-win.zip": {
+        "id": 646367981,
+        "sha256": "f5a482cf5a36ec2dfda047d1d3d67610d4c221c37e62b6aaac318ae417a176f3",
+        "bytes": 56170913
+      },
+      "RELEASE_METADATA.json": {
+        "id": 646367985,
+        "sha256": "4c483d7e9262ff67d51029e4d643c310c33a08f1cf69a24a99fe7b658bb1a874",
+        "bytes": 23512
+      },
+      "SHA256SUMS.txt": {
+        "id": 646367972,
+        "sha256": "2dd6f66d9ed7791ef117091c6dc3ce8acb588394d07bb2aa06ec234e9b27d40c",
+        "bytes": 286
+      }
+    },
+    "reason": "The authorized publisher completed every source/artifact/native/PWA/current-worker gate and created the exact tag and four-asset draft, then its published-release-by-tag read returned 404 for that draft.",
+    "policy": "Recheck all complete runtime gates, the original immutable preparation artifact, committed original authorization/support hashes, and exact draft ID/asset IDs/bytes. Preserve all four assets and the tested runtime tag; publish only after authenticated asset-ID readback, then verify public bytes. Retain original publication_commit and separately record completion_commit."
   }
 }
