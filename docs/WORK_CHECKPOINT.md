@@ -1,3 +1,11 @@
+# 当前断点：v1.2.2 正式发布与回读完成 — 2026-10-16
+
+代码已合并 main，[正式 v1.2.2](https://github.com/AureliusWu/Rain/releases/tag/v1.2.2) 与 [公开 PWA](https://aureliuswu.github.io/Rain/) 均已交付。[发布运行 38861929614](https://github.com/AureliusWu/Rain/actions/runs/38861929614) 成功；原生完整运行、PWA / 公网离线验收、最终工件取回、四个正式资产匿名下载 / SHA-256 / CRC 和当前 worker 字节核对均已关闭。游戏 / tag 为 `15d87ef`，原准备 `93c4714`，完成 `a5f0fdf`；这次只归档真实证据，没有重建已发布包。
+
+接续入口为 [完整发行记录](production/PUBLISHED-v1.2.2.json)、[当前状态](STATUS.md) 和 [真人统一后续](HUMAN_HANDOFF.md)。工程发布没有等待中的草稿或上传任务；真人五组和物理设备测试继续按原边界待用户操作。以下旧候选、失败和等待描述是对应日期的历史记录。
+
+---
+
 # v1.2.2 历史检索候选 · 2026-10-14
 
 原生历史/语音保留原索引，网页增加中文输入和自托管字体。本地 145 项 Python、16 路线、lint 和 14 项 PWA 检查通过；当前 Windows CI 与公开 PWA 待执行。详见 [制作记录](production/HISTORY-REVIEW.md)。

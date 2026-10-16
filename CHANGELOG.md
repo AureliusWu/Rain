@@ -1,3 +1,12 @@
+# v1.2.2 双平台正式版已发布 — 2026-10-16
+
+- [v1.2.2](https://github.com/AureliusWu/Rain/releases/tag/v1.2.2) 于 06:34:32Z 正式公开；历史关键词 / 人物筛选、中文输入、清除 / 重开与原索引语音重听已包含在 Windows EXE 和官方 WASM PWA。
+- 完整 Windows 源码 / 独立 EXE、新进程读档、真实 v1.1.0 旧档升级、两遍历史 / 语音前缀，以及 PWA 14 项浏览器与公网离线续读均通过；[最终发布运行 38861929614](https://github.com/AureliusWu/Rain/actions/runs/38861929614) 成功。
+- 保留同一游戏 tag `15d87ef` 和四个原资产。正式公开后独立匿名下载全部资产，完整 SHA-256 / 字节数、两个 ZIP CRC、三条 checksum 及当前公网 worker 原字节一致，README、状态、测试计划和 [完整发布记录](docs/production/PUBLISHED-v1.2.2.json) 同步。
+- 真人五组及物理设备安装继续保留真实待验；不以 dummy 音频、机器 PNG 审计或自动执行耗时替代试听、逐图审阅或阅读计时。以下保留发布前的失败与恢复记录。
+
+---
+
 # v1.2.2 精确草稿恢复 — 2026-10-16
 
 - 修复草稿被已公开版本的 tag 查询返回 404：改用 release ID 读取 / 公开、资产 ID 认证下载，核对草稿及公开下载原字节。

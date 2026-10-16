@@ -1,3 +1,15 @@
+# v1.2.2 正式发行最终验证已完成 — 2026-10-16
+
+[发布运行 38861929614](https://github.com/AureliusWu/Rain/actions/runs/38861929614) 成功。实际下载最终工件 `12029950868`，核对其 8,065 字节 / 完整 API digest 和 ZIP CRC，读取 `reports/v122-publication.json`，确认为 `published_and_public_bytes_verified`。最终报告的游戏 / tag `15d87ef`、原准备 `93c4714`、完成 `a5f0fdf`、授权文件 SHA-256、原草稿 ID 及四资产身份互相一致；原元数据没有改写为新的完成提交。
+
+在工作流之外再次匿名下载正式 Web ZIP、Windows ZIP、RELEASE_METADATA.json、SHA256SUMS.txt：固定 asset ID / 字节数 / SHA-256 全通过，Web ZIP 29 项、Windows ZIP 1,629 项的 CRC 全通过，三条 checksum 全通过，元数据和 checksum 与下载到的 CI 原件逐字节一致。稳定版与 latest 均为 release `414618626` / v1.2.2。当前公开 worker 实际下载 6,667 字节、SHA-256 `2406ed74f8448fde83475b8411825b9882ff2c42441b6cb2f2301c02233b9372`，与正式 Web ZIP 的 worker 完全相同。
+
+Windows 原 attempt 1 的完整源码 / EXE 各 37/477/84、跨进程读档、真实旧 EXE 升级、两遍语音 / 历史前缀和 178 PNG / 85 资源审计继续使用原真实证据；attempt 3 仅重放短审阅封印记录。PWA attempt 2 的 14 项实际浏览器及五项公开原生检查全部通过，包括中文检索、离线重开后 Load 恢复原场景，公开页面错误为 0。本次文档归档没有重新运行 Windows 或浏览器，也未将任何真人项记为通过。
+
+完整 suite 计数、原始报告 SHA-256、精确成功上传 job / step / attempt、工件 digest 和独立匿名回读见 [最终记录](production/PUBLISHED-v1.2.2.json)。下面保留每次修复的原测试结果和失败原因。
+
+---
+
 # v1.2.2 草稿 ID 与精确恢复验证 — 2026-10-16
 
 发布专项扩展至 17 项：草稿从 release collection 以 ID 读取；重复 / 非草稿 / 错 tag / 错资产 ID / digest / 字节数均拒绝，草稿下载使用资产 ID 和 octet-stream 认证并核对真实 bytes。恢复仅接受固定失败准备运行 / 原工件 digest，原元数据必须与其 Git 提交授权及支持文件哈希一致；任一原生 suite、上传来源、双端包、PWA / 公网证据、人工状态或源差异变化均阻止恢复。最终公开资产 ID 也须保持原样。

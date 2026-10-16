@@ -1,3 +1,15 @@
+# v1.2.2 双平台正式发布闭环已完成 — 2026-10-16
+
+[正式 v1.2.2](https://github.com/AureliusWu/Rain/releases/tag/v1.2.2) 已于 **2026-10-16T06:34:32Z** 公开，非 draft / 非 prerelease，GitHub latest 指向该版。[发布运行 38861929614](https://github.com/AureliusWu/Rain/actions/runs/38861929614) / job `116845943523` 完整成功。tag 与已验收游戏均为 `15d87ef4455b95feb6069e044a1d3a6456f75e0c`；准备提交 `93c4714` 与完成提交 `a5f0fdf` 分别记录，原 tag 和四个资产 ID / 原字节没有替换。
+
+Windows [38828604885](https://github.com/AureliusWu/Rain/actions/runs/38828604885) 的原成功 attempt 1 完成源码 / 独立 EXE 各 37/477/84、新进程 1/16/3、真实公开 v1.1.0 旧档写入 1/14/3 / 读取 2/26/4、两遍前缀各 7/132/31、178 PNG 和 85 资源审计。最后 attempt 3 只重放短封印记录导出触发最新发布器，未冒充重新执行原生套件。PWA [38828604848 attempt 2](https://github.com/AureliusWu/Rain/actions/runs/38828604848/attempts/2) 的 14 项实际浏览器、中文输入、存档迁移 / 安全更新 / 完整离线与公网续读均通过，页面错误为 0。
+
+最终工件 `12029950868` 已实际下载，SHA-256 `454708b3622ca2794b3f5492d53b2bb422bb7210aa337991c926d842d3dd18b6` / 8,065 字节与 API 一致，ZIP CRC 通过。正式公开后另行匿名下载全部四个资产，逐一核对固定 ID / SHA-256 / 字节数、两个 ZIP CRC 和三条 SHA256SUMS；元数据与 checksum 等于 CI 原件。当前公开 worker 为 6,667 字节、SHA-256 `2406ed74f8448fde83475b8411825b9882ff2c42441b6cb2f2301c02233b9372`，与正式 Web ZIP 逐字节一致，revision `dacc7624a60ede30f69edece`。
+
+完整最终报告、工件来源、下载与平台证据归档在 [PUBLISHED-v1.2.2.json](production/PUBLISHED-v1.2.2.json)。工程发布与下载验证已完成；[真人五组](HUMAN_HANDOFF.md) 保持原真实 pending，物理设备安装、DPI、试听、计时及创作冻结没有记为通过。以下按日期保留历史检查点，较早的“尚未发布”不代表当前状态。
+
+---
+
 # v1.2.2 精确草稿续接 — 2026-10-16
 
 发布运行 [38860638607](https://github.com/AureliusWu/Rain/actions/runs/38860638607) 已通过完整工件、原生、PWA 和当前公开 worker 字节门禁，创建 `v1.2.2` → `15d87ef4455b95feb6069e044a1d3a6456f75e0c` 和草稿 `414618626`。读取草稿时误用只返回已公开版本的 tag 查询而收到 404，未正式公开；原有四个资产已完整上传。元数据与 checksum 的不可变工件 `12028263833` 已下载核验，两份文件与草稿资产 digest 一致。

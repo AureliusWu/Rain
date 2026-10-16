@@ -1,0 +1,537 @@
+{
+  "schema": 2,
+  "date": "2026-10-16",
+  "project": "Rain",
+  "version": "1.2.2",
+  "status": "published_and_public_bytes_verified",
+  "formal_release": true,
+  "runtime_commit": "15d87ef4455b95feb6069e044a1d3a6456f75e0c",
+  "tag": "v1.2.2",
+  "tag_commit": "15d87ef4455b95feb6069e044a1d3a6456f75e0c",
+  "publication_commit": "93c47140332d45a516697a19afc0850b21944f61",
+  "completion_commit": "a5f0fdf2342ee4ca4edd9cc532126a138b797fde",
+  "release": {
+    "id": 414618626,
+    "url": "https://github.com/AureliusWu/Rain/releases/tag/v1.2.2",
+    "published_at": "2026-10-16T06:34:32Z",
+    "draft": false,
+    "prerelease": false,
+    "latest_verified": true
+  },
+  "publication": {
+    "run_id": 38861929614,
+    "run_attempt": 1,
+    "job_id": 116845943523,
+    "url": "https://github.com/AureliusWu/Rain/actions/runs/38861929614",
+    "status": "success",
+    "artifact": {
+      "id": 12029950868,
+      "name": "Rain-v122-publication-38861929614",
+      "bytes": 8065,
+      "digest": "sha256:454708b3622ca2794b3f5492d53b2bb422bb7210aa337991c926d842d3dd18b6",
+      "url": "https://github.com/AureliusWu/Rain/actions/runs/38861929614/artifacts/12029950868",
+      "downloaded_digest_verified": true,
+      "zip_crc": "passed"
+    },
+    "final_report": {
+      "status": "published_and_public_bytes_verified",
+      "version": "1.2.2",
+      "publication_commit": "93c47140332d45a516697a19afc0850b21944f61",
+      "completion_commit": "a5f0fdf2342ee4ca4edd9cc532126a138b797fde",
+      "completion_authorization_sha256": "e469fb2377f9638de76d91d8e0a90219edce17c4e51f11066e53aad2d2dc79cb",
+      "runtime_commit": "15d87ef4455b95feb6069e044a1d3a6456f75e0c",
+      "tag_commit": "15d87ef4455b95feb6069e044a1d3a6456f75e0c",
+      "release_id": 414618626,
+      "prepared_metadata_artifact": {
+        "id": 12028263833,
+        "name": "Rain-v122-publication-38860638607",
+        "digest": "sha256:8dee9a48d74aaf3a6b79737cf94956da42e0d6d64b7e2d180bbf306600439439",
+        "bytes": 6925,
+        "run_id": 38860638607,
+        "run_attempt": 1
+      },
+      "release": "https://github.com/AureliusWu/Rain/releases/tag/v1.2.2",
+      "files": {
+        "BeforeTheRainStops-1.2.2-web.zip": {
+          "sha256": "b18718ca1df99975f55d1bdd8df3d6a3bc58e82bd9c595b4e958623e2c0e86fb",
+          "bytes": 47790829,
+          "url": "https://github.com/AureliusWu/Rain/releases/download/v1.2.2/BeforeTheRainStops-1.2.2-web.zip"
+        },
+        "BeforeTheRainStops-1.2.2-win.zip": {
+          "sha256": "f5a482cf5a36ec2dfda047d1d3d67610d4c221c37e62b6aaac318ae417a176f3",
+          "bytes": 56170913,
+          "url": "https://github.com/AureliusWu/Rain/releases/download/v1.2.2/BeforeTheRainStops-1.2.2-win.zip"
+        },
+        "RELEASE_METADATA.json": {
+          "sha256": "4c483d7e9262ff67d51029e4d643c310c33a08f1cf69a24a99fe7b658bb1a874",
+          "bytes": 23512,
+          "url": "https://github.com/AureliusWu/Rain/releases/download/v1.2.2/RELEASE_METADATA.json"
+        },
+        "SHA256SUMS.txt": {
+          "sha256": "2dd6f66d9ed7791ef117091c6dc3ce8acb588394d07bb2aa06ec234e9b27d40c",
+          "bytes": 286,
+          "url": "https://github.com/AureliusWu/Rain/releases/download/v1.2.2/SHA256SUMS.txt"
+        }
+      },
+      "pwa_revision": "dacc7624a60ede30f69edece",
+      "current_public_worker": {
+        "url": "https://aureliuswu.github.io/Rain/service-worker.js",
+        "revision": "dacc7624a60ede30f69edece",
+        "sha256": "2406ed74f8448fde83475b8411825b9882ff2c42441b6cb2f2301c02233b9372",
+        "bytes": 6667,
+        "status": "exact_tested_bytes_verified"
+      },
+      "human_pending": [
+        "ordinary_windows",
+        "display_dpi",
+        "listening",
+        "creative_and_freeze",
+        "reading_time"
+      ],
+      "human_acceptance_claimed": false
+    },
+    "recovery": "All original source, artifact, complete native, WASM/public PWA and current worker gates rechecked. Original prepared metadata, tag and four asset IDs/bytes retained; authenticated draft asset-ID downloads and anonymous stable downloads verified. The successful completion is run 38861929614, not the failed preparation run.",
+    "completion_authorization_sha256": "e469fb2377f9638de76d91d8e0a90219edce17c4e51f11066e53aad2d2dc79cb"
+  },
+  "files": {
+    "BeforeTheRainStops-1.2.2-web.zip": {
+      "id": 646367975,
+      "bytes": 47790829,
+      "sha256": "b18718ca1df99975f55d1bdd8df3d6a3bc58e82bd9c595b4e958623e2c0e86fb",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.2.2/BeforeTheRainStops-1.2.2-web.zip",
+      "anonymous_download_verified": true,
+      "zip_crc": "passed",
+      "zip_entries": 29
+    },
+    "BeforeTheRainStops-1.2.2-win.zip": {
+      "id": 646367981,
+      "bytes": 56170913,
+      "sha256": "f5a482cf5a36ec2dfda047d1d3d67610d4c221c37e62b6aaac318ae417a176f3",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.2.2/BeforeTheRainStops-1.2.2-win.zip",
+      "anonymous_download_verified": true,
+      "zip_crc": "passed",
+      "zip_entries": 1629
+    },
+    "RELEASE_METADATA.json": {
+      "id": 646367985,
+      "bytes": 23512,
+      "sha256": "4c483d7e9262ff67d51029e4d643c310c33a08f1cf69a24a99fe7b658bb1a874",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.2.2/RELEASE_METADATA.json",
+      "anonymous_download_verified": true
+    },
+    "SHA256SUMS.txt": {
+      "id": 646367972,
+      "bytes": 286,
+      "sha256": "2dd6f66d9ed7791ef117091c6dc3ce8acb588394d07bb2aa06ec234e9b27d40c",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.2.2/SHA256SUMS.txt",
+      "anonymous_download_verified": true
+    }
+  },
+  "immutable_ci_artifacts": {
+    "windows": {
+      "id": 12018218372,
+      "name": "windows-15d87ef4455b95feb6069e044a1d3a6456f75e0c",
+      "digest": "sha256:08579e47a9ec134bfcd449c36327a8b5e63aa49e37845ec2a0c721f4bd6c5476",
+      "size_in_bytes": 58977989
+    },
+    "review": {
+      "id": 12018243189,
+      "name": "review-15d87ef4455b95feb6069e044a1d3a6456f75e0c",
+      "digest": "sha256:791a2e00aa9bd419655668211cbe6a6b597b4358d3fae40e411ff2366fa49dac",
+      "size_in_bytes": 16196638
+    },
+    "web": {
+      "id": 12016850530,
+      "name": "Rain-Web-15d87ef4455b95feb6069e044a1d3a6456f75e0c",
+      "digest": "sha256:7699bb50eda61a50da58d8a8842f75162d9d3000d3a41963d1e619313123e75a",
+      "size_in_bytes": 55136893
+    },
+    "public": {
+      "id": 12016771419,
+      "name": "Rain-Public-PWA-15d87ef4455b95feb6069e044a1d3a6456f75e0c-2",
+      "digest": "sha256:229974b360160fcb104283bf0fd1be88f7cf071139fb9f5e58b900841dfb8fde",
+      "size_in_bytes": 3313343
+    }
+  },
+  "artifact_upload_steps": {
+    "windows": {
+      "run_id": 38828604885,
+      "run_attempt": 1,
+      "job_id": 116741823744,
+      "job_name": "Test, build, and run Windows package",
+      "step_number": 23,
+      "step_name": "Upload standalone package",
+      "started_at": "2026-10-16T01:11:17Z",
+      "completed_at": "2026-10-16T01:11:21Z"
+    },
+    "review": {
+      "run_id": 38828604885,
+      "run_attempt": 1,
+      "job_id": 116741823744,
+      "job_name": "Test, build, and run Windows package",
+      "step_number": 21,
+      "step_name": "Upload sealed bounded review bundles",
+      "started_at": "2026-10-16T01:10:55Z",
+      "completed_at": "2026-10-16T01:10:59Z"
+    },
+    "web": {
+      "run_id": 38828604848,
+      "run_attempt": 2,
+      "job_id": 116743234430,
+      "job_name": "web",
+      "step_number": 11,
+      "step_name": "Upload complete PWA and browser evidence",
+      "started_at": "2026-10-16T00:24:51Z",
+      "completed_at": "2026-10-16T00:24:54Z"
+    },
+    "public": {
+      "run_id": 38828604848,
+      "run_attempt": 2,
+      "job_id": 116744254706,
+      "job_name": "deploy",
+      "step_number": 9,
+      "step_name": "Upload published browser evidence",
+      "started_at": "2026-10-16T00:26:52Z",
+      "completed_at": "2026-10-16T00:26:53Z"
+    }
+  },
+  "source_identity": "identical player source; only checked publication support/metadata differs",
+  "native": {
+    "run_id": 38828604885,
+    "url": "https://github.com/AureliusWu/Rain/actions/runs/38828604885",
+    "original_windows_job_id": 116741823744,
+    "artifact_attempt": 1,
+    "latest_completed_attempt_verified": 3,
+    "status": "success",
+    "promotion_note": "Complete original Windows validation and package uploads ran in attempt 1. Later attempts only reran the short sealed review-record export to emit workflow_run completion; no new native execution is claimed.",
+    "suites": {
+      "source": {
+        "cases": 37,
+        "assertions": 477,
+        "failed": 0,
+        "xfailed": 0,
+        "xpassed": 0,
+        "skipped": 0,
+        "not_run": 0,
+        "screenshots_checked": 84,
+        "process": {
+          "timeout_seconds": 2400,
+          "elapsed_seconds": 1617.062,
+          "timed_out": false,
+          "returncode": 0,
+          "scope": "native process only; required screenshots are checked separately"
+        },
+        "report_sha256": "d2a0ce3e7dcf2017725d93e8cbb10fd9bc7d901995c26461706ebb394494cff7",
+        "report_path": "reports/source-process/stdout.txt",
+        "test_plan_sha256": "42fe052daf9f554edfddc09e5709dffca3f4f46ed0931494fc28f664819bcf57"
+      },
+      "standalone": {
+        "cases": 37,
+        "assertions": 477,
+        "failed": 0,
+        "xfailed": 0,
+        "xpassed": 0,
+        "skipped": 0,
+        "not_run": 0,
+        "screenshots_checked": 84,
+        "process": {
+          "timeout_seconds": 2400,
+          "elapsed_seconds": 1112.39,
+          "timed_out": false,
+          "returncode": 0,
+          "scope": "native process only; required screenshots are checked separately"
+        },
+        "report_sha256": "cea16ca934a96030cba1fc2c079c74111398c5c79032e29cdc00b5c336d88ab9",
+        "report_path": "reports/package/stdout.txt",
+        "test_plan_sha256": "42fe052daf9f554edfddc09e5709dffca3f4f46ed0931494fc28f664819bcf57"
+      },
+      "fresh_process": {
+        "cases": 1,
+        "assertions": 16,
+        "failed": 0,
+        "xfailed": 0,
+        "xpassed": 0,
+        "skipped": 0,
+        "not_run": 0,
+        "screenshots_checked": 3,
+        "process": {
+          "timeout_seconds": 120,
+          "elapsed_seconds": 8.86,
+          "timed_out": false,
+          "returncode": 0,
+          "scope": "native process only; required screenshots are checked separately"
+        },
+        "report_sha256": "0af5abb4ebc98dddb5364fd56874935447d25472a5030523006abbb39a612eb8",
+        "report_path": "reports/package/persistence/stdout.txt",
+        "test_plan_sha256": "e367d965bbb3779e0472cbb2a8e772e70c07ea207675095c72ce51886dd903a8"
+      },
+      "upgrade_writer": {
+        "cases": 1,
+        "assertions": 14,
+        "failed": 0,
+        "xfailed": 0,
+        "xpassed": 0,
+        "skipped": 0,
+        "not_run": 0,
+        "screenshots_checked": 3,
+        "process": {
+          "timeout_seconds": 300,
+          "elapsed_seconds": 44.515,
+          "timed_out": false,
+          "returncode": 0,
+          "scope": "native process only; required screenshots are checked separately"
+        },
+        "report_sha256": "8ae637c25b6d1239041ee4e02f02b9745f5f733a54644bfa4b35a9724699be3f",
+        "report_path": "reports/upgrade/writer/stdout.txt",
+        "test_plan_sha256": "f4d1d04e07ba4bd258cf12ee75abc58e1384d2e893ddd2b273aa356cb3a67f9d"
+      },
+      "upgrade_reader": {
+        "cases": 2,
+        "assertions": 26,
+        "failed": 0,
+        "xfailed": 0,
+        "xpassed": 0,
+        "skipped": 0,
+        "not_run": 0,
+        "screenshots_checked": 4,
+        "process": {
+          "timeout_seconds": 300,
+          "elapsed_seconds": 13.641,
+          "timed_out": false,
+          "returncode": 0,
+          "scope": "native process only; required screenshots are checked separately"
+        },
+        "report_sha256": "696186beebecc465a1653ff0472ba66408020bde9906615496b38f35fffa85c1",
+        "report_path": "reports/upgrade/reader/stdout.txt",
+        "test_plan_sha256": "c7e3aee9877d61695f14cb9dbc75ce7cceb9a06f4a7d8a3bfe1f0554de2dafa5"
+      }
+    },
+    "voice_history_prefix": {
+      "status": "passed",
+      "iterations": 2,
+      "each": {
+        "cases": 7,
+        "assertions": 132,
+        "screenshots_checked": 31,
+        "failed": 0,
+        "xfailed": 0,
+        "xpassed": 0,
+        "skipped": 0,
+        "not_run": 0
+      }
+    },
+    "original_pngs_decoded_hashed": 178,
+    "assets_checked": 85,
+    "test_scripts_in_original_zip": false,
+    "old_save_scope": "The actual public v1.1.0 EXE wrote two representative old-save positions/read unlocks; the new EXE reopened those saves and retained progress. This does not certify every historical player save."
+  },
+  "pwa": {
+    "run_id": 38828604848,
+    "attempt": 2,
+    "url": "https://github.com/AureliusWu/Rain/actions/runs/38828604848/attempts/2",
+    "status": "success",
+    "build": {
+      "status": "built",
+      "engine": "RenPy 8.5.3 official WASM",
+      "web_sdk_sha256": "954db897e65f51ea63cb2fb7b203d02be0447f4e22069514020bbe6c6691fdfc",
+      "official_runtime_validation": {
+        "game_zip_entries": 512,
+        "game_zip_sha256": "29fdb1cc89a2f0b89614ec4b4ee6ca9f8e3800cd8470c5c6318caab1b200e5a1",
+        "game_zip_crc": "passed"
+      },
+      "runtime_files": 28,
+      "offline_bytes": 73418660,
+      "revision": "dacc7624a60ede30f69edece",
+      "version": "1.2.2",
+      "web_zip_sha256": "b18718ca1df99975f55d1bdd8df3d6a3bc58e82bd9c595b4e958623e2c0e86fb",
+      "scope": "relative; supports /Rain/ and local test subpaths",
+      "browser_execution": "requires actual smoke test"
+    },
+    "browser_acceptance": {
+      "status": "passed",
+      "engine": "RenPy 8.5.3 official WASM",
+      "version": "1.2.2",
+      "checks": [
+        "manifest parsed and app-scoped start URL; complete offline marker",
+        "actual native history search, Chinese input, empty/reset states and preserved read position",
+        "actual Start click and native narration",
+        "actual native Save screen writes slot 1",
+        "native export save ZIP produced by actual browser control",
+        "native history search remains usable during a real offline session",
+        "offline reload boots complete native WASM and starts narrative",
+        "412x915, 568x320 and 844x390 native display boots",
+        "complete update waits while old WASM narrative keeps its original controller and state",
+        "closing old windows activates complete update; prior own cache removed and unrelated/other-scope caches retained",
+        "real export ZIP imported into fresh browser context and actual Load restores saved scene",
+        "unrelated parent-scope worker cannot announce this application offline-ready",
+        "nested subpath fresh install and complete offline reopen",
+        "missing engine resource cannot produce an offline-ready marker"
+      ],
+      "samples": [
+        {
+          "mode": "first_install",
+          "milliseconds": 5945
+        },
+        {
+          "mode": "cached_reopen",
+          "milliseconds": 4544
+        },
+        {
+          "mode": "cached_reopen",
+          "milliseconds": 4089
+        }
+      ],
+      "first_baseline": true,
+      "budgets": {
+        "offline_bytes": 100000000,
+        "boot_milliseconds": 120000
+      },
+      "offline_bytes": 73418660,
+      "screenshots": [
+        {
+          "name": "desktop-main-menu",
+          "sha256": "997a7d341f0284aca72f3a38e535b58588b11d744e8838afe91a21145efdab9c"
+        },
+        {
+          "name": "desktop-story",
+          "sha256": "426656e0d3918521abc26b820cf0912da888d457cd20cd6f942dd8009f759752"
+        },
+        {
+          "name": "offline-story",
+          "sha256": "394663eb2f9e048c31d8f75215926314b88dd30e1bcfbb123b82f8ad80971ed9"
+        },
+        {
+          "name": "412x915",
+          "sha256": "7b38b4944a3a81984236dcf304f6b96d927f225eeeae47c5b01ca5690b3428af"
+        },
+        {
+          "name": "568x320",
+          "sha256": "9a46f6f153fc13735a5ce17647fac38dc30dfd48186aba81199ea9d54d0ba639"
+        },
+        {
+          "name": "844x390",
+          "sha256": "90a35f052d26e0b57ad8b64ae444bb4e2244a89a1778aa8ad96bd4ad6d76aefd"
+        },
+        {
+          "name": "imported-native-save",
+          "sha256": "4eb4ee2186e3d90c57197c4a307cda7317e5fa6b3f52f3328b37d6650f3675d8"
+        }
+      ],
+      "errors": [],
+      "requests_outside_application": [],
+      "limits": [
+        "Physical device installation and human listening remain separate acceptance.",
+        "Smoke exercises beginning and native save export; all 16 full state routes are checked by native Windows suite."
+      ]
+    },
+    "published_acceptance": {
+      "status": "passed",
+      "target": "https://aureliuswu.github.io/Rain/",
+      "version": "1.2.2",
+      "revision": "dacc7624a60ede30f69edece",
+      "checks": [
+        "public native menu, exact platform version/revision and own worker scope",
+        "actual published history search, Chinese input and preserved read route",
+        "actual public Start and native Save slot 1",
+        "disconnected public reopen, native Load and preserved saved scene",
+        "published native history search while disconnected"
+      ],
+      "online_milliseconds": 37690,
+      "offline_milliseconds": 2707,
+      "offline_samples_milliseconds": [
+        4914,
+        2707,
+        2625
+      ],
+      "exact_tested_artifact": true,
+      "errors": [],
+      "human_physical_device": false
+    },
+    "current_public_worker": {
+      "url": "https://aureliuswu.github.io/Rain/service-worker.js",
+      "revision": "dacc7624a60ede30f69edece",
+      "sha256": "2406ed74f8448fde83475b8411825b9882ff2c42441b6cb2f2301c02233b9372",
+      "bytes": 6667,
+      "status": "exact_tested_bytes_verified"
+    }
+  },
+  "independent_public_verification": {
+    "checked_at": "2026-10-16T13:46:56.787880+00:00",
+    "status": "passed",
+    "anonymous_downloads": {
+      "BeforeTheRainStops-1.2.2-web.zip": {
+        "id": 646367975,
+        "bytes": 47790829,
+        "sha256": "b18718ca1df99975f55d1bdd8df3d6a3bc58e82bd9c595b4e958623e2c0e86fb",
+        "url": "https://github.com/AureliusWu/Rain/releases/download/v1.2.2/BeforeTheRainStops-1.2.2-web.zip",
+        "anonymous_download_verified": true,
+        "zip_crc": "passed",
+        "zip_entries": 29
+      },
+      "BeforeTheRainStops-1.2.2-win.zip": {
+        "id": 646367981,
+        "bytes": 56170913,
+        "sha256": "f5a482cf5a36ec2dfda047d1d3d67610d4c221c37e62b6aaac318ae417a176f3",
+        "url": "https://github.com/AureliusWu/Rain/releases/download/v1.2.2/BeforeTheRainStops-1.2.2-win.zip",
+        "anonymous_download_verified": true,
+        "zip_crc": "passed",
+        "zip_entries": 1629
+      },
+      "RELEASE_METADATA.json": {
+        "id": 646367985,
+        "bytes": 23512,
+        "sha256": "4c483d7e9262ff67d51029e4d643c310c33a08f1cf69a24a99fe7b658bb1a874",
+        "url": "https://github.com/AureliusWu/Rain/releases/download/v1.2.2/RELEASE_METADATA.json",
+        "anonymous_download_verified": true
+      },
+      "SHA256SUMS.txt": {
+        "id": 646367972,
+        "bytes": 286,
+        "sha256": "2dd6f66d9ed7791ef117091c6dc3ce8acb588394d07bb2aa06ec234e9b27d40c",
+        "url": "https://github.com/AureliusWu/Rain/releases/download/v1.2.2/SHA256SUMS.txt",
+        "anonymous_download_verified": true
+      }
+    },
+    "sha256sums_rows": {
+      "BeforeTheRainStops-1.2.2-web.zip": "passed",
+      "BeforeTheRainStops-1.2.2-win.zip": "passed",
+      "RELEASE_METADATA.json": "passed"
+    },
+    "metadata_exact_ci_bytes": true,
+    "sha256sums_exact_ci_bytes": true,
+    "worker_exact_pwa_zip_bytes": true,
+    "worker": {
+      "url": "https://aureliuswu.github.io/Rain/service-worker.js",
+      "revision": "dacc7624a60ede30f69edece",
+      "sha256": "2406ed74f8448fde83475b8411825b9882ff2c42441b6cb2f2301c02233b9372",
+      "bytes": 6667,
+      "status": "exact_tested_bytes_verified"
+    },
+    "release_id": 414618626,
+    "draft": false,
+    "prerelease": false,
+    "human_acceptance_claimed": false
+  },
+  "merged_pr": {
+    "number": 1,
+    "url": "https://github.com/AureliusWu/Rain/pull/1",
+    "merged_at": "2026-10-16T00:12:59Z",
+    "merge_commit": "ef1d4e31382af84979d64a41833f8ce63594281c"
+  },
+  "human_acceptance_claimed": false,
+  "human_pending": [
+    "ordinary_windows",
+    "display_dpi",
+    "listening",
+    "creative_and_freeze",
+    "reading_time"
+  ],
+  "limits": [
+    "Windows automation used dummy audio. Human listening and effective reading time remain pending.",
+    "Ordinary hardware, Chinese paths, display DPI and physical device/PWA installation remain pending.",
+    "Final theme, heroine, artwork, major story/ending decisions and creative freeze retain the existing user approval boundaries.",
+    "178 original PNGs were machine-decoded and hashed with sealed inspection-copy bindings; no new direct visual or human acceptance is asserted.",
+    "No Linux native UI acceptance is claimed."
+  ],
+  "prior_releases": "Existing historical tags and assets were not replaced."
+}

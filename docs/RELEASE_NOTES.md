@@ -1,3 +1,11 @@
+# 当前正式版本：雨停之前 v1.2.2
+
+2026-10-16 双平台正式版已发布：[在线游玩](https://aureliuswu.github.io/Rain/) · [Windows / Web 下载](https://github.com/AureliusWu/Rain/releases/tag/v1.2.2) · [v1.2.2 发行说明](RELEASE_NOTES_V122.md) · [完整发布与下载核验](production/PUBLISHED-v1.2.2.json)。真人待验保持 [统一清单](HUMAN_HANDOFF.md) 的真实状态。
+
+以下保留 v1.0.0 原始发行说明供历史发布流程引用。
+
+---
+
 # 雨停之前 v1.0.0
 
 雨夜旧车站，两位久未联系的旧友，一封没有寄出的信。六章、24 个叙事场景、四次选择、16 条路线，Normal / True 两个完整结局。

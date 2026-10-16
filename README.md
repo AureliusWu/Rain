@@ -1,49 +1,43 @@
-> 2026-10-13：v1.2.1 精修 43 段剧情并重绘小店背景；Windows 源码、独立 EXE 与公开 PWA 均已通过本次验收。[下载已验证 Windows 候选包](https://github.com/AureliusWu/Rain/actions/runs/38419669031/artifacts/11830300404) · [本轮实机预览](docs/previews/v1.2.1/README.md)。见 [精修记录](docs/production/CREATIVE-REVIEW.md)、[网页原生测试](docs/production/WEB-ACCEPTANCE-v1.2.1.json) 与 [公网离线续读](docs/production/PUBLIC-PWA-v1.2.1.json)。
+> 2026-10-16：**v1.2.2 双平台正式版已发布。** [在线游玩](https://aureliuswu.github.io/Rain/) · [Windows / Web 下载](https://github.com/AureliusWu/Rain/releases/tag/v1.2.2) · [本次完整发布记录](docs/production/PUBLISHED-v1.2.2.json)。四个公开资产与成功 CI 原字节一致，当前公网 PWA 的 worker 也已逐字节核对。
 
 # 雨停之前 / Before the Rain Stops
 
 离线中文 Ren’Py 视觉小说。雨夜旧车站，两位久未联系的旧友，和一封没有寄出的信。
 
-**v1.2.1 双平台开发候选：Ren'Py 原生 Windows EXE + 同引擎 WebAssembly PWA。** 浏览器入口为 [Rain PWA](https://aureliuswu.github.io/Rain/)；旧档身份、16 条路线与 17 句录音保持，当前精修及独立平台证据见 [制作记录](docs/production/CREATIVE-REVIEW.md)。
+**v1.2.2：Ren'Py 原生 Windows EXE + 同引擎 WebAssembly PWA。** 历史记录增加关键词搜索、人物筛选、结果数量和一键清除；筛选后可重听原台词，关闭重开会重置筛选。网页版支持中文输入，清除筛选后历史面板保持打开。六章、24 个叙事场景、四次选择、16 条路线和 Normal / True 两个结局，沿用 560 台词 ID、17 句录音与 v1 存档身份。见 [版本说明](docs/RELEASE_NOTES_V122.md)。
 
 PWA 首次联网保存完整内容后可安装、离线重开和导入 / 导出 Ren'Py 原生存档。浏览器与 Windows 的本机保存位置独立；请使用浏览器左上角导出备份。新版本下载完成后等待旧窗口关闭再激活，正在阅读的窗口继续使用原版本。
 
 三作品共用制作契约 v1.2.0、[精修方法与场景模板](docs/production/CREATIVE-PLAYBOOK.md) 和可导出的许可素材包：`node scripts/vn-materials.mjs verify`、`node scripts/vn-materials.mjs export .reuse-kit/v1.2.0`。保留角色、剧情、引擎和存档身份，移植入口见 [可复用素材](docs/production/REUSABLE-MATERIALS.md)。
 
-与《回路》的离线人物语音、声音演出和多角色请求配方已双向整理，见 [双项目制作交流](docs/production/RAIN-CIRCUIT-BRIDGE.md)。本轮新增作者工具与测试，现有游戏素材与运行逻辑沿用。
-
-以下保留已公开的 v1.1.1 Windows 正式版身份证据；本轮 v1.2.1 使用自己的运行提交、截图和验证包。
-
-**v1.1.1 鉴赏室体验补丁已正式发布。** 六章、24个叙事场景、四次选择、16条路线、Normal / True两个结局，七表情、四背景、旧信CG、17句配音及原创音乐 / 环境音效。
+与《回路》的离线人物语音、声音演出和多角色请求配方已双向整理，见 [双项目制作交流](docs/production/RAIN-CIRCUIT-BRIDGE.md)。v1.2.1 的 [43 段剧情精修与小店画面](docs/production/CREATIVE-REVIEW.md) 已包含在当前版本。
 
 主菜单进入“鉴赏室”：五张已有背景 / CG、三首音乐随真实剧情解锁，退出后保留进度，未解锁内容隐藏图片和标题。音乐鉴赏显示已解锁数量、当前曲名及播放 / 暂停 / 停止状态；暂停后显示“继续”，停止后提示选择已解锁音乐。状态分隔符改用现有字体支持的中文冒号，修复方框缺字。
 
 关键配音使用免费开源 **Qwen3-TTS 1.7B CustomVoice / Serena**，预生成OGG随包提供；当前台词可重听，已读历史可重播，自动模式等待重播结束。
 
-2026-10-09 已完成验收证据导出维护：Windows / Linux 各130项检查通过，原始Windows审计及全部12个截图副本完整取回。正式下载继续为v1.1.1；详见 [维护记录](docs/REVIEW_TRANSPORT.md)。
-
 ## 下载与运行
 
-[v1.1.1 Release](https://github.com/AureliusWu/Test/releases/tag/v1.1.1) · [Windows ZIP](https://github.com/AureliusWu/Test/releases/download/v1.1.1/BeforeTheRainStops-1.1.1-win.zip) · [本次验收](docs/RELEASE_ACCEPTANCE_V111.md) · [统一真人后续](docs/HUMAN_HANDOFF.md)
+[v1.2.2 Release](https://github.com/AureliusWu/Rain/releases/tag/v1.2.2) · [Windows ZIP](https://github.com/AureliusWu/Rain/releases/download/v1.2.2/BeforeTheRainStops-1.2.2-win.zip) · [Web ZIP](https://github.com/AureliusWu/Rain/releases/download/v1.2.2/BeforeTheRainStops-1.2.2-web.zip) · [SHA-256](https://github.com/AureliusWu/Rain/releases/download/v1.2.2/SHA256SUMS.txt) · [统一真人后续](docs/HUMAN_HANDOFF.md)
 
-1. 完整解压 `BeforeTheRainStops-1.1.1-win.zip` 到可写目录。
+1. 完整解压 `BeforeTheRainStops-1.2.2-win.zip` 到可写目录。
 2. 双击 `BeforeTheRainStops.exe`，无需Python、引擎、模型、账号或语音API，可离线游玩。
 3. 左键 / 空格 / Enter推进，右键 / Esc开菜单，F切换全屏；下方有回退、历史、快进、自动、存读档与设置。
 4. 主菜单进入鉴赏室，看过的图片与听过的音乐自动解锁。
 
 原生1920×1080、默认1280×720；沿用 `AureliusWu-BeforeTheRainStops-v1` 存档目录，已用公开v1.1.0实际写入并验证两个代表存档和原生已读解锁。
 
-游戏验收提交 `491e9859368a402960afcdf856be4f456b885ec5` / [Windows CI 37711912728](https://github.com/AureliusWu/Test/actions/runs/37711912728)；原始 ZIP **56,382,628 字节**，SHA-256 `7f57b4f4d3f2cc4071d7e4d59ff6a2e3c7db0531b78477abae18804c47d6d35b`。
+游戏与 tag 同为 `15d87ef4455b95feb6069e044a1d3a6456f75e0c`。Windows ZIP **56,170,913 字节**，SHA-256 `f5a482cf5a36ec2dfda047d1d3d67610d4c221c37e62b6aaac318ae417a176f3`；Web ZIP **47,790,829 字节**，SHA-256 `b18718ca1df99975f55d1bdd8df3d6a3bc58e82bd9c595b4e958623e2c0e86fb`。
 
-Windows **118 项 Python**、全部作者校验及 Ren’Py 8.5.3.26051504 lint 通过；源码和独立 EXE 各 **36 用例 / 448 断言 / 82 截图**。新进程读档 / 鉴赏持久进度 **1/16/3**，公开 v1.1.0 写档 **1/14/3**、新 EXE 读取旧档 / 已读解锁 **2/26/4**（用例 / 断言 / 截图）。五个完整进程退出 0、未超时，异常计数全为 0；两遍真实前缀另各 **6/103/29** 通过。
+[Windows CI 38828604885](https://github.com/AureliusWu/Rain/actions/runs/38828604885) 的源码和独立 EXE 各 **37 用例 / 477 断言 / 84 截图**，新进程 **1/16/3**、真实 v1.1.0 写档 **1/14/3**、新版读取 **2/26/4**，两遍语音 / 历史前缀各 **7/132/31** 通过；178 张原始 PNG、85 资源、ZIP CRC 与许可完成审计。原生进程退出 0、未超时，异常与跳过计数均为 0。
 
-Windows 审计完整解码并核对 **174 张原始 PNG** 的尺寸 / SHA-256；复核 **58 个关键视图**，其中 12 个直接查看当前全分辨率 JPEG 副本、46 个原始 PNG 与已有审阅哈希完全相同。副本绑定原图哈希，保留 JPEG 检查限制。85 包内资产、ZIP CRC、版本、署名及许可核验通过，原始玩家包无测试注入或模型。
+[PWA CI 38828604848 attempt 2](https://github.com/AureliusWu/Rain/actions/runs/38828604848/attempts/2) 完成官方 WASM 的 14 项实际浏览器检查及公开站点存读档、中文检索、断网重开续读，页面错误为 0。公网 revision `dacc7624a60ede30f69edece`，当前 worker 与正式 Web ZIP 精确一致。正式发布后已独立匿名下载全部四个资产，核对完整 SHA-256、字节数、两个 ZIP CRC 和三条 checksum。
 
-全分支15,065字符，单路线11,303–11,666。真人试听、Normal / True 阅读计时、普通电脑 / 中文路径 / DPI、最终创作定案与冻结继续由用户统一操作，五组保持 pending。Windows 使用 dummy 音频，自动执行耗时不等于阅读时长；真实旧档覆盖两个代表位置，未宣称验证全部玩家旧档或 Linux 原生 UI。
+真人试听、Normal / True 阅读计时、普通电脑 / 中文路径 / DPI、物理设备安装、最终创作定案与冻结继续由用户统一操作，五组保持 pending。Windows 使用 dummy 音频；自动执行耗时不能代替阅读时长，178 PNG 的机器审计也不代表新增直接逐图审阅。真实旧档覆盖两个代表位置；不宣称已验证全部玩家旧档或 Linux 原生 UI。
 
 ## 开发与验证
 
-当前游戏验收提交 `491e9859368a402960afcdf856be4f456b885ec5`。完整机器与图像证据见 [本次验收](docs/RELEASE_ACCEPTANCE_V111.md)，发布进度见 [当前断点](docs/WORK_CHECKPOINT.md)。
+当前游戏验收提交 `15d87ef4455b95feb6069e044a1d3a6456f75e0c`。完整工件、原生 / PWA 与发行身份见 [本次发布记录](docs/production/PUBLISHED-v1.2.2.json)，发布进度见 [当前断点](docs/WORK_CHECKPOINT.md)。
 
 Python 3.12、Pillow、SoundFile / NumPy 只用于开发。模型与推理依赖不进入玩家包。
 
@@ -101,8 +95,8 @@ python -m tools.build.verify_upgrade --previous-zip .runtime/compat/BeforeTheRai
 
 ## 正式发布记录
 
-[正式 v1.1.1](https://github.com/AureliusWu/Test/releases/tag/v1.1.1) 已于 **2026-10-08T14:26:27Z** 发布，非草稿、非预发行，并验证为最新正式版。tag 指向 `75f757b9ce78779a7036a948375f55579990b8e5`，游戏源码与验收候选完全相同；[发布 CI 37792383846](https://github.com/AureliusWu/Test/actions/runs/37792383846) 成功，公开 ZIP 下载回读 SHA-256 / CRC 与验收包一致。v1.1.0、v1.0.1、v1.0.0 标签和全部下载资产保持原样。实际身份见 [发布记录](docs/evidence/v111-publication.json)。
+[正式 v1.2.2](https://github.com/AureliusWu/Rain/releases/tag/v1.2.2) 于 **2026-10-16T06:34:32Z** 发布，非草稿、非预发行，GitHub latest 也指向该版。[发布 CI 38861929614](https://github.com/AureliusWu/Rain/actions/runs/38861929614) 成功，保留已验收的原始 tag 和四个资产，正式公开后逐一无凭证下载回读。原准备提交 `93c4714` 与完成提交 `a5f0fdf` 分别记录；后者仅修复草稿读取 / 恢复，不重建游戏。最后的文档归档也不改变已发布玩家包。
 
-[发布授权](docs/review/V111_PUBLICATION_AUTHORIZATION.json) · [语音方案与来源](docs/VOICE_UPGRADE_V10.md)。
+[发布授权](docs/review/V122_PUBLICATION_AUTHORIZATION.json) · [完整身份证据](docs/production/PUBLISHED-v1.2.2.json) · [语音方案与来源](docs/VOICE_UPGRADE_V10.md)。
 
-保留 [v1.1.0](https://github.com/AureliusWu/Test/releases/tag/v1.1.0)、[v1.0.1](https://github.com/AureliusWu/Test/releases/tag/v1.0.1) 和 [v1.0.0](https://github.com/AureliusWu/Test/releases/tag/v1.0.0) 的原有下载。
+历史 [v1.1.1 发布记录](docs/evidence/v111-publication.json)、[v1.1.0](https://github.com/AureliusWu/Test/releases/tag/v1.1.0)、[v1.0.1](https://github.com/AureliusWu/Test/releases/tag/v1.0.1) 和 [v1.0.0](https://github.com/AureliusWu/Test/releases/tag/v1.0.0) 保留原有下载；v1.2.1 的工程候选证据保留在 [精修记录](docs/production/PUBLISHED-v1.2.1.json)。
