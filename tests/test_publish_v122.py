@@ -43,7 +43,11 @@ class ExactV122PublicationTests(unittest.TestCase):
             root=Path(temp)
             for index,name in enumerate(['../escape','/absolute','C:/drive','a\\b']):
                 archive=root/f'{index}.zip'
-                with zipfile.ZipFile(archive,'w') as bundle:bundle.writestr(name,'bad')
+                # ZipInfo normalizes backslashes on Windows. Write the raw
+                # illegal member name into both ZIP headers on either host.
+                with zipfile.ZipFile(archive,'w') as bundle:bundle.writestr(name.replace('\\','/'),'bad')
+                if '\\' in name:archive.write_bytes(archive.read_bytes().replace(name.replace('\\','/').encode(),name.encode()))
+                with zipfile.ZipFile(archive) as bundle:self.assertEqual([i.orig_filename for i in bundle.infolist()],[name])
                 with self.subTest(name=name),self.assertRaises(ValueError):extract_checked(archive,root/'out')
             archive=root/'link.zip'
             with zipfile.ZipFile(archive,'w') as bundle:

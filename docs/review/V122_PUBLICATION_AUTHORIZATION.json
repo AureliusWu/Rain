@@ -21,9 +21,9 @@
   "support_sha256": {
     ".github/workflows/release-v122.yml": "9246c8ba3d78a430bbb719f33be708be02387ee30165480b64c17d3808d6885c",
     "tests/test_export_review.py": "1631d6e6665eda88c0732bcad26b986876b1f4dbc386fa2bae9a9f996b6de118",
-    "tests/test_publish_v122.py": "ada92c3f2007bc1b48459d4e44bc4bf5d45ab2fcf844cb0379bba4959f6309df",
+    "tests/test_publish_v122.py": "fae8a946a194a30701633610e7c57dceb08df42678df797c2ec257f6caa759a7",
     "tools/build/export_review.py": "e43f621d1a7ebabc47fb23a79379c037b003c43d97c1b721233ac1e9bdac0ae9",
-    "tools/publish_v122.py": "232de7eeb86dcd15622692d84b0ff54745dff7b2ad6698a3dcf2971f03fe4c7f"
+    "tools/publish_v122.py": "91cad7398818861dc1271d0fa8adc00344d36f4e84ff70ff0d82d72a14818b78"
   },
   "historical_validation": {
     "candidate": "2beeb1776767c281eafb9adbba7df8ae367fe24d",

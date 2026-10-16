@@ -94,7 +94,8 @@ def extract_checked(archive,destination):
         names=bundle.namelist()
         require(len(names)==len(set(names)),'Duplicate artifact paths')
         require(all(n and not n.startswith(('/','\\')) and '\\' not in n and ':' not in n
-            and '..' not in n.split('/') for n in names),'Unsafe artifact paths')
+            and '\x00' not in n and '..' not in n.split('/')
+            for n in [*names,*(i.orig_filename for i in bundle.infolist())]),'Unsafe artifact paths')
         require(all((i.external_attr>>16)&0o170000!=0o120000 for i in bundle.infolist()),'Artifact symlink')
         require(sum(i.file_size for i in bundle.infolist())<1_600_000_000,'Artifact expansion exceeds bound')
         require(bundle.testzip() is None,'Artifact CRC failed')
