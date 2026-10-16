@@ -14,6 +14,15 @@ def digest(p):
 def read(p): return json.loads(Path(p).read_text(encoding="utf-8-sig"))
 def require(c, message):
     if not c: raise ValueError(message)
+def validate_plan_summary(summary, plan, scope):
+    """Bind totals to the complete current plan, including history regressions."""
+    expected={"cases":len(re.findall(r"^testcase [a-zA-Z0-9_]+:",plan,re.MULTILINE)),
+        "assertions":len(re.findall(r"^\s+assert ",plan,re.MULTILINE)),
+        "screenshots_checked":len(required_screenshots(plan))}
+    require(all(type(summary.get(k)) is int and summary[k]==v for k,v in expected.items()),scope+" plan totals differ")
+    require(all(type(summary.get(k)) is int and summary[k]==0
+        for k in ("failed","xfailed","xpassed","skipped","not_run")),scope+" incomplete")
+    return expected
 def safe(z):
     names=z.namelist()
     require(len(names)==len(set(names)), "Duplicate ZIP entries")
@@ -48,12 +57,12 @@ def main():
         summary.update({"screenshots_checked":len(required),"process":process,"report_sha256":digest(d/"stdout.txt"),
             "report_path":"reports/"+process_path+"/stdout.txt","test_plan_sha256":hashlib.sha256(test.encode()).hexdigest(),"required_screenshots":required})
         suites[scope]=summary
+        validate_plan_summary(summary,test,scope)
         for name in required:
             p=reports/image_path/(name+".png"); size=(1280,720) if name.startswith("scaled-") else (1920,1080)
             with Image.open(p) as im: im.load(); require(im.size==size,"Wrong PNG dimensions")
             shots.append({"scope":scope,"name":name,"path":"reports/"+image_path+"/"+name+".png","pixels":list(size),"sha256":digest(p)})
-    require(len(shots)==174 and [(suites[s]["cases"],suites[s]["assertions"]) for s in plans]
-        ==[(36,448),(36,448),(1,16),(1,14),(2,26)],"Native counts differ")
+    require(len(shots)==sum(len(required_screenshots(p[0])) for p in plans.values()),"Native image total differs")
     package=dist/f"BeforeTheRainStops-{version}-win.zip"; package_sha=digest(package); licenses=[]
     require((dist/"SHA256SUMS.txt").read_text(encoding="utf-8-sig").split()==[package_sha,package.name],"Checksum file differs")
     with zipfile.ZipFile(package) as z:
@@ -84,8 +93,7 @@ def main():
     require(smoke["status"]=="passed" and smoke["cases"]==list(PREFIX_CASES) and smoke["prefix_plan_sha256"]==hashlib.sha256(quick.encode()).hexdigest()
         and smoke["original_project_is_unmodified"] is True and smoke["game_copies_and_save_directories_are_separate"] is True and len(smoke["iterations"])==2,"Quick checks differ")
     for i,s in enumerate(smoke["iterations"],1):
-        require((s["cases"],s["assertions"],s["screenshots_checked"])==(6,103,29)
-            and all(s[k]==0 for k in ("failed","xfailed","xpassed","skipped","not_run")),"Quick suite incomplete")
+        validate_plan_summary(s,quick,"Quick suite "+str(i))
         validate_native_report((reports/f"source-voice-smoke-prefix-{i}.txt").read_text(encoding="utf-8-sig"),quick)
     voice_sha=digest(ROOT/"docs/evidence/voice-qwen-generation.json")
     require(voice_sha=="5180a9ca16c7a01f502350dcdfadf073da06edcb9b054350d7fdec8c3af7336a","Voice evidence differs")
