@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-17",
+  "project": "Rain",
+  "version": "1.2.2",
+  "sourceCommit": "bc992da82e958e50e2aea76073d2d1effa6385df",
+  "runtimeChanged": false,
+  "sourceChecks": {
+    "pythonTestsPassed": 172,
+    "authoringValidators": "passed",
+    "completeRoutes": 16,
+    "assets": 85,
+    "gameAudioFilesDecoded": 24,
+    "imageRecipesChecked": 60
+  },
+  "publishedArchive": {
+    "status": "verified-published-archive",
+    "engine": "RenPy 8.5.3 official WASM",
+    "version": "1.2.2",
+    "revision": "dacc7624a60ede30f69edece",
+    "offline_bytes": 73418660,
+    "runtime_files": 28,
+    "web_zip_sha256": "b18718ca1df99975f55d1bdd8df3d6a3bc58e82bd9c595b4e958623e2c0e86fb",
+    "source": "Release v1.2.2 downloaded and verified by size and public digest; metadata derived from the complete worker catalog, not a new build."
+  },
+  "browserControls": {
+    "status": "passed",
+    "browser": "153.0.8010.0",
+    "checks": [
+      "real Latin keys, Backspace and Enter preserve the open panel",
+      "Chinese preedit survives two native-state polls without writing a query",
+      "actual CDP Chinese IME commit reaches the query bridge",
+      "controls hide on close, reset on a new token and accept a reopened query",
+      "a delayed old-panel command cannot overwrite or block new-panel input"
+    ],
+    "errors": [],
+    "scope": "Actual production client.js and real Chromium events with a simulated native bridge; not a WASM or Windows game execution."
+  },
+  "publishedOfficialWasm": {
+    "status": "passed",
+    "engine": "RenPy 8.5.3 official WASM",
+    "version": "1.2.2",
+    "checks": [
+      "manifest parsed and app-scoped start URL; complete offline marker",
+      "actual native history search, Chinese input, empty/reset states and preserved read position",
+      "actual Start click and native narration",
+      "actual native Save screen writes slot 1",
+      "native export save ZIP produced by actual browser control",
+      "native history search remains usable during a real offline session",
+      "offline reload boots complete native WASM and starts narrative",
+      "412x915, 568x320 and 844x390 native display boots",
+      "complete update waits while old WASM narrative keeps its original controller and state",
+      "closing old windows activates complete update; prior own cache removed and unrelated/other-scope caches retained",
+      "real export ZIP imported into fresh browser context and actual Load restores saved scene",
+      "unrelated parent-scope worker cannot announce this application offline-ready",
+      "nested subpath fresh install and complete offline reopen",
+      "missing engine resource cannot produce an offline-ready marker"
+    ],
+    "samples": [
+      {
+        "mode": "first_install",
+        "milliseconds": 5149
+      },
+      {
+        "mode": "cached_reopen",
+        "milliseconds": 3424
+      },
+      {
+        "mode": "cached_reopen",
+        "milliseconds": 3751
+      }
+    ],
+    "first_baseline": true,
+    "budgets": {
+      "offline_bytes": 100000000,
+      "boot_milliseconds": 120000
+    },
+    "offline_bytes": 73418660,
+    "screenshots": [
+      {
+        "name": "desktop-main-menu",
+        "sha256": "4f2c43a3ea4a9ae4ff27d642d23618ed7886d7480786d4b47a61dbf67fdb6bc1"
+      },
+      {
+        "name": "desktop-story",
+        "sha256": "b22de2c0e945b6424214e67a442964d05474cedf654283456cac99f52b114ea6"
+      },
+      {
+        "name": "offline-story",
+        "sha256": "7ea5f3c77cbadd3df8ee09edfd8cf5f356914c96e10ae2fdff0a891fe9eab36b"
+      },
+      {
+        "name": "412x915",
+        "sha256": "ba96d8b71a849b4a816c6f6146a2ae263ce14552e20d4d67739fc91688cb0f73"
+      },
+      {
+        "name": "568x320",
+        "sha256": "ecb85262093a76655498f85b4933a68980917b2e111530f0f96b890b5185693c"
+      },
+      {
+        "name": "844x390",
+        "sha256": "c18969f9d3f43331795b8383383bb9e93276236cbf39715ec154508d34b96eaa"
+      },
+      {
+        "name": "imported-native-save",
+        "sha256": "0d55f921d5f59c3720177a8cd59b91dde5570f7326b6112579f46d89398cdb43"
+      }
+    ],
+    "errors": [],
+    "requests_outside_application": [],
+    "limits": [
+      "Physical device installation and human listening remain separate acceptance.",
+      "Smoke exercises beginning and native save export; all 16 full state routes are checked by native Windows suite."
+    ]
+  },
+  "scope": "Fresh execution of the exact public v1.2.2 Web ZIP. This is a verified download and re-execution, not a newly rebuilt SDK/WASM or a new Windows test.",
+  "publishedRelease": "https://github.com/AureliusWu/Rain/releases/tag/v1.2.2"
+}

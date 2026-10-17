@@ -1,3 +1,9 @@
+# 2026-10-17 / v1.2.2 维护复验
+
+本轮完成 172 项 Python、全部作者校验与 5 项历史输入控件检查，并对实际公开 Web ZIP 重新执行完整 14 项官方 WASM 浏览器门禁；0 页面错误、0 站外请求。ZIP 长度/公开 SHA-256/CRC 与 28 份 Worker 资源的长度及哈希全部核对，原生存档实际导出、独立浏览器导入和真实离线恢复通过。
+
+本次使用已发布字节，没有把历史本地 `web-build.json` 当作新包凭据；测试输入中的版本与离线字节数从该包实际 Worker 清单派生，并明确标记为公开包复验。详细检查项、截图摘要和范围见 [MAINTENANCE-20261017](production/MAINTENANCE-20261017.json)。Windows 长链、物理设备和真人阅读沿用各自原有验收范围，本轮未重跑。
+
 # v1.2.2 正式发行最终验证已完成 — 2026-10-16
 
 [发布运行 38861929614](https://github.com/AureliusWu/Rain/actions/runs/38861929614) 成功。实际下载最终工件 `12029950868`，核对其 8,065 字节 / 完整 API digest 和 ZIP CRC，读取 `reports/v122-publication.json`，确认为 `published_and_public_bytes_verified`。最终报告的游戏 / tag `15d87ef`、原准备 `93c4714`、完成 `a5f0fdf`、授权文件 SHA-256、原草稿 ID 及四资产身份互相一致；原元数据没有改写为新的完成提交。
