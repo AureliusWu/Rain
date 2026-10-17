@@ -1,0 +1,193 @@
+{
+  "date": "2026-10-17",
+  "project": "Rain",
+  "version": "1.2.2",
+  "status": "release_update_closed",
+  "auditedMain": "073b5bc8b58fc98b2709e8d04c7de2a7f634b381",
+  "runtimeTag": "v1.2.2",
+  "runtimeCommit": "15d87ef4455b95feb6069e044a1d3a6456f75e0c",
+  "release": {
+    "id": 414618626,
+    "tag": "v1.2.2",
+    "prerelease": false,
+    "draft": false,
+    "url": "https://github.com/AureliusWu/Rain/releases/tag/v1.2.2",
+    "publishedAt": "2026-10-16T06:34:32Z"
+  },
+  "openPullRequests": 0,
+  "unpublishedPlayerChanges": false,
+  "postReleaseChangedPaths": [
+    ".github/workflows/release-v122.yml",
+    "CHANGELOG.md",
+    "README.md",
+    "docs/HUMAN_HANDOFF.md",
+    "docs/RELEASE_NOTES.md",
+    "docs/RELEASE_NOTES_V122.md",
+    "docs/STATUS.md",
+    "docs/TEST_PLAN.md",
+    "docs/WORK_CHECKPOINT.md",
+    "docs/production/HISTORY-REVIEW.md",
+    "docs/production/MAINTENANCE-20261017.json",
+    "docs/production/PUBLISHED-v1.2.2.json",
+    "docs/review/V122_PUBLICATION_AUTHORIZATION.json",
+    "tests/test_publish_v122.py",
+    "tools/publish_v122.py"
+  ],
+  "assets": [
+    {
+      "id": 646367975,
+      "name": "BeforeTheRainStops-1.2.2-web.zip",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.2.2/BeforeTheRainStops-1.2.2-web.zip",
+      "bytes": 47790829,
+      "sha256": "b18718ca1df99975f55d1bdd8df3d6a3bc58e82bd9c595b4e958623e2c0e86fb",
+      "verified": true,
+      "method": "cached bytes rehashed against freshly read GitHub digest"
+    },
+    {
+      "id": 646367981,
+      "name": "BeforeTheRainStops-1.2.2-win.zip",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.2.2/BeforeTheRainStops-1.2.2-win.zip",
+      "bytes": 56170913,
+      "sha256": "f5a482cf5a36ec2dfda047d1d3d67610d4c221c37e62b6aaac318ae417a176f3",
+      "verified": true,
+      "method": "fresh anonymous download, size and SHA-256 verified"
+    },
+    {
+      "id": 646367985,
+      "name": "RELEASE_METADATA.json",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.2.2/RELEASE_METADATA.json",
+      "bytes": 23512,
+      "sha256": "4c483d7e9262ff67d51029e4d643c310c33a08f1cf69a24a99fe7b658bb1a874",
+      "verified": true,
+      "method": "fresh anonymous download, size and SHA-256 verified"
+    },
+    {
+      "id": 646367972,
+      "name": "SHA256SUMS.txt",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.2.2/SHA256SUMS.txt",
+      "bytes": 286,
+      "sha256": "2dd6f66d9ed7791ef117091c6dc3ce8acb588394d07bb2aa06ec234e9b27d40c",
+      "verified": true,
+      "method": "fresh anonymous download, size and SHA-256 verified"
+    }
+  ],
+  "checksumFiles": {
+    "SHA256SUMS.txt": [
+      {
+        "name": "BeforeTheRainStops-1.2.2-web.zip",
+        "publicName": "BeforeTheRainStops-1.2.2-web.zip",
+        "sha256": "b18718ca1df99975f55d1bdd8df3d6a3bc58e82bd9c595b4e958623e2c0e86fb"
+      },
+      {
+        "name": "BeforeTheRainStops-1.2.2-win.zip",
+        "publicName": "BeforeTheRainStops-1.2.2-win.zip",
+        "sha256": "f5a482cf5a36ec2dfda047d1d3d67610d4c221c37e62b6aaac318ae417a176f3"
+      },
+      {
+        "name": "RELEASE_METADATA.json",
+        "publicName": "RELEASE_METADATA.json",
+        "sha256": "4c483d7e9262ff67d51029e4d643c310c33a08f1cf69a24a99fe7b658bb1a874"
+      }
+    ]
+  },
+  "zipChecks": [
+    {
+      "name": "BeforeTheRainStops-1.2.2-web.zip",
+      "crc": "passed",
+      "entries": 29,
+      "files": 29
+    },
+    {
+      "name": "BeforeTheRainStops-1.2.2-win.zip",
+      "crc": "passed",
+      "entries": 1629,
+      "files": 1485
+    }
+  ],
+  "publicPwa": {
+    "expectedBytesSource": "published Web/PWA ZIP",
+    "entryAndWorker": [
+      {
+        "url": "https://aureliuswu.github.io/Rain/index.html",
+        "httpStatus": 200,
+        "bytes": 7784,
+        "sha256": "fec5f80a3b0b4c7581e789bce575df15fa69513bf52f46dee9d825dc547aa394",
+        "matchesVerifiedBuild": true
+      },
+      {
+        "url": "https://aureliuswu.github.io/Rain/service-worker.js",
+        "httpStatus": 200,
+        "bytes": 6667,
+        "sha256": "2406ed74f8448fde83475b8411825b9882ff2c42441b6cb2f2301c02233b9372",
+        "matchesVerifiedBuild": true
+      }
+    ]
+  },
+  "observedWorkflowRuns": [
+    {
+      "id": 38861929614,
+      "name": "Publish exact verified v1.2.2 Windows and PWA",
+      "sha": "a5f0fdf2342ee4ca4edd9cc532126a138b797fde",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 38860638607,
+      "name": "Publish exact verified v1.2.2 Windows and PWA",
+      "sha": "93c47140332d45a516697a19afc0850b21944f61",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "id": 38834051370,
+      "name": "Publish exact verified v1.2.2 Windows and PWA",
+      "sha": "15d87ef4455b95feb6069e044a1d3a6456f75e0c",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "id": 38828604885,
+      "name": "Game validation",
+      "sha": "15d87ef4455b95feb6069e044a1d3a6456f75e0c",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 38828604848,
+      "name": "Native RenPy PWA and shared materials",
+      "sha": "15d87ef4455b95feb6069e044a1d3a6456f75e0c",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "scope": "Source push, release identity, published downloads and deployed PWA consistency. Existing native/offline interaction evidence is retained in the version-specific publication receipt; this audit does not relabel physical-device or human acceptance as completed.",
+  "existingPlatformReceipt": "PUBLISHED-v1.2.2.json",
+  "requiredSuccessfulWorkflows": [
+    {
+      "id": 38828604885,
+      "name": "Game validation",
+      "sha": "15d87ef4455b95feb6069e044a1d3a6456f75e0c",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 38828604848,
+      "name": "Native RenPy PWA and shared materials",
+      "sha": "15d87ef4455b95feb6069e044a1d3a6456f75e0c",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 38861929614,
+      "name": "Publish exact verified v1.2.2 Windows and PWA",
+      "sha": "a5f0fdf2342ee4ca4edd9cc532126a138b797fde",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "receiptUpdate": {
+    "type": "documentation_only",
+    "preservesRuntimeTagAndReleaseAssets": true,
+    "auditedMainIsTheParentOfThisReceipt": true
+  }
+}
