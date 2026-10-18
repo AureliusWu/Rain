@@ -1,0 +1,45 @@
+name: Publish exact verified v1.3.0 Windows and PWA
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/release-v130.yml'
+      - 'tools/publish_v130.py'
+      - 'tests/test_publish_v130.py'
+      - 'docs/review/V130_PUBLICATION_AUTHORIZATION.json'
+  workflow_dispatch:
+concurrency:
+  group: formal-release-v130
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      actions: read
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PYTHONUTF8: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-dev.txt
+      - name: Publication contract tests
+        run: python -m unittest tests.test_publish_v130 tests.test_publish_v122
+      - name: Promote immutable passed native and PWA artifacts
+        run: python -m tools.publish_v130 --commit "${{ github.sha }}" --runtime-commit cf8e0b5ae61b90815eb0f3a16188493e89c1fd05 --native-run 39107156547
+      - name: Upload exact publication evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Rain-v130-publication-${{ github.run_id }}
+          path: |
+            reports/v130-publication.json
+            .runtime/publish-v130/release/RELEASE_METADATA.json
+            .runtime/publish-v130/release/SHA256SUMS.txt
+          if-no-files-found: warn

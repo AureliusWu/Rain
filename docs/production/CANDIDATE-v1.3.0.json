@@ -3,9 +3,9 @@
   "checkedAt": "2026-10-18T07:17:02Z",
   "version": "1.3.0",
   "runtimeCommit": "cb4676378eb8972c48539ed92e0a36941c046cda",
-  "status": "web_verified_legacy_upgrade_test_corrected_revalidation_pending",
+  "status": "both_platforms_verified_exact_artifact_publication_prepared",
   "web": {
-    "runId": 39106420334,
+    "runId": 39107156529,
     "conclusion": "success",
     "localChecks": 16,
     "publicUrl": "https://aureliuswu.github.io/Rain/",
@@ -37,36 +37,41 @@
     ]
   },
   "windows": {
-    "runId": 39106420356,
-    "conclusion": "failure",
-    "authorTests": 180,
+    "runId": 39107156547,
+    "conclusion": "success",
+    "authorTests": 181,
     "lint": "passed",
-    "prefix": {
-      "iterations": 2,
-      "casesEach": 7,
-      "assertionsEach": 142,
-      "screenshotsEach": 32,
-      "status": "passed"
+    "sourceAndStandaloneEach": {
+      "cases": 37,
+      "assertions": 487,
+      "screenshots": 85
     },
-    "step": "legacy reader was incorrectly required to contain a new-version bookmark",
-    "artifacts": [
-      {
-        "id": 12128572336,
-        "name": "extras-prefix-1ed619489332316d8b64de648be79afab1a2a1c5",
-        "bytes": 26419001,
-        "digest": "sha256:81bf12dab465a22b14172c1b4e4dcfd4e415e17c443fc3071d4d3390002a8add"
-      }
+    "nativeScreenshotAudit": 180,
+    "freshProcess": [
+      1,
+      17,
+      3
     ],
-    "upgrade": {
-      "oldWriter": "passed 14 assertions",
-      "newReader": "failed the incorrectly shared bookmark assertion; later testcase timed out as a consequence",
-      "fix": "include_bookmarks=False only for pre-bookmark upgrade plans; all original save, voice, picture and unlock assertions retained"
-    }
+    "realOldSaveWriter": [
+      1,
+      14,
+      3
+    ],
+    "realOldSaveReader": [
+      2,
+      26,
+      4
+    ],
+    "prefixEach": [
+      7,
+      142,
+      32
+    ],
+    "humanAcceptanceClaimed": false
   },
   "formalRelease": "v1.2.2 remains current",
   "pending": [
-    "current main Windows revalidation, old-save upgrade, complete source/EXE suites and audit",
-    "version-specific publication preparation",
+    "publish exact validated v1.3.0 Windows/PWA bytes and read back downloads",
     "human listening, physical device and creative review"
   ],
   "previousValidationCommit": "1ed619489332316d8b64de648be79afab1a2a1c5",

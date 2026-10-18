@@ -1,3 +1,5 @@
+> 2026-10-18 接续：v1.3.0 同一提交的 Windows 全链路与官方 WASM/PWA 均已通过。Windows 源码/成品各37用例、487断言，真实旧档升级通过；已准备将该次原始ZIP直接发布，正式下载仍以已公开版本为准。详见 [候选检查点](docs/production/CANDIDATE-v1.3.0.json)。
+
 > 远端接续：最终提交的 Web/PWA 与公开网站验证已通过；Windows 作者检查、lint、两轮原生前缀与 ZIP 构建通过；旧档升级中的测试范围已修正，Windows 完整验收重新接续。详见 [候选检查点](docs/production/CANDIDATE-v1.3.0.json)。
 
 > 2026-10-18：**v1.3.0 阅读收藏与离线进度候选已实现，完整远端验收接续中。** [本轮实现与验证](docs/production/IMPLEMENTATION-20261018.md)。正式下载仍为 v1.2.2；当前候选不覆盖原发行资产。
