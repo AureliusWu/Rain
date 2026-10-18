@@ -117,3 +117,37 @@ export async function verifyReadHistorySearch(page, screenshotPath) {
     await input.waitFor({state:'hidden'});
     return { read_records: before[6], matched_original_indices: indices, state_preserved: true };
 }
+
+export async function verifyReadBookmarks(page, screenshotPath) {
+    // Chapter cards also enter native history. Find an actual authored record;
+    // never assume history[0] is a line from the story catalog.
+    for (let step=0;step<12;step++) {
+        if (await get(page,'any(rain_history_identity(h) for h in _history_list)')) break;
+        await page.keyboard.press('Space');
+        await page.waitForTimeout(150);
+    }
+    const read = await get(page,'next(((i, rain_history_identity(h)) for i, h in enumerate(_history_list) if rain_history_identity(h)), None)');
+    assert.ok(read, 'An actual read record is required for a bookmark');
+    const [index, identity] = read;
+    const state='[current_scene, current_chapter, visited_scenes, last_ending, renpy.random.getstate(), len(_history_list)]';
+    const before=await get(page,state);
+    await clickId(page,'quick_menu','history_open');
+    await clickId(page,'history',`history_bookmark_${index}`);
+    assert.equal(await get(page,`rain_is_bookmarked(${JSON.stringify(identity)})`),true);
+    await clickId(page,'history','history_bookmarks');
+    await waitNative(page,'bool(renpy.get_screen("rain_bookmarks"))');
+    assert.ok((await get(page,'[row["id"] for row in rain_bookmark_rows()]')).includes(identity));
+    await clickId(page,'rain_bookmarks','bookmark_chapter_ch05');
+    assert.equal(await get(page,'len(rain_bookmark_rows(renpy.get_screen("rain_bookmarks").scope["bookmark_chapter"]))'),0);
+    await clickId(page,'rain_bookmarks','bookmark_chapter_all');
+    if(screenshotPath) await page.screenshot({path:screenshotPath});
+    await clickId(page,'rain_bookmarks',`bookmark_remove_${identity}`);
+    assert.equal(await get(page,`rain_is_bookmarked(${JSON.stringify(identity)})`),false);
+    await clickId(page,'rain_bookmarks','game_return');
+    await clickId(page,'quick_menu','history_open');
+    await clickId(page,'history',`history_bookmark_${index}`);
+    await clickId(page,'history','game_return');
+    assert.equal(await get(page,`rain_is_bookmarked(${JSON.stringify(identity)})`),true);
+    assert.deepEqual(await get(page,state),before);
+    return identity;
+}

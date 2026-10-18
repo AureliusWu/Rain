@@ -1,6 +1,9 @@
 /* Installation status belongs to the browser; gameplay remains in Ren'Py. */
 (() => {
     const status = document.getElementById('offlineStatus');
+    const offlineProgress = document.getElementById('offlineProgress');
+    const retryOffline = document.getElementById('retryOffline');
+    let checking = false;
     const install = document.getElementById('installPwa');
     let installPrompt;
     let owner;
@@ -85,12 +88,24 @@
         installPrompt = null; install.hidden = true;
     });
     window.addEventListener('appinstalled', () => { install.hidden = true; });
+    function showProgress(data) {
+        offlineProgress.textContent = `${data.completedFiles} / ${data.totalFiles} 个文件 · ${(data.verifiedBytes / 1048576).toFixed(1)} / ${(data.totalBytes / 1048576).toFixed(1)} MB`;
+        offlineProgress.dataset.verifiedBytes = String(data.verifiedBytes);
+        offlineProgress.dataset.totalBytes = String(data.totalBytes);
+        retryOffline.hidden = !data.failed;
+    }
+    navigator.serviceWorker?.addEventListener('message', event => {
+        if (event.data?.type !== 'RAIN_OFFLINE_PROGRESS' || !owner || ![owner.active, owner.waiting, owner.installing, preparedUpdate].includes(event.source)) return;
+        showProgress(event.data);
+        if (event.data.failed) status.textContent = '下载未完成，可重试；已有离线版本仍保留';
+    });
     async function check() {
         if (!owner?.active) return;
         const expected = new URL('./service-worker.js', location.href).href;
         if (owner.scope !== new URL('./', location.href).href || owner.active.scriptURL !== expected) return;
         const channel = new MessageChannel();
         channel.port1.onmessage = event => {
+            showProgress(event.data);
             window.rainOfflineReady = event.data.ready;
             window.rainOfflineRevision = event.data.revision;
             status.textContent = owner.waiting || preparedUpdate?.state === 'installed' ? '新版已准备，请关闭此应用的所有窗口后重开' :
@@ -110,7 +125,7 @@
             if (worker.state === 'activated' || worker.state === 'redundant') {
                 if (preparedUpdate === worker) preparedUpdate = null;
             }
-            if (worker.state === 'redundant') status.textContent = '离线保存未完成；联网后重新打开可重试';
+            if (worker.state === 'redundant') { status.textContent = '离线保存未完成；联网后可重试'; retryOffline.hidden = false; }
             if (worker.state === 'installed' || worker.state === 'activated') check();
         };
         worker.addEventListener('statechange', changed);
@@ -120,13 +135,22 @@
         status.textContent = '此浏览器不支持离线安装，建议使用最新版浏览器'; return;
     }
     navigator.serviceWorker.addEventListener('controllerchange', check);
-    navigator.serviceWorker.register('./service-worker.js', {scope: './', updateViaCache: 'none'})
-        .then(registration => {
+    async function register() {
+        if (checking) return;
+        checking = true; retryOffline.disabled = true;
+        try {
+            const registration = await navigator.serviceWorker.register('./service-worker.js', {scope: './', updateViaCache: 'none'});
             owner = registration;
-            registration.addEventListener('updatefound', () => watchWorker(registration.installing));
-            // Registration can finish after updatefound has already fired.
-            watchWorker(registration.installing);
-            watchWorker(registration.waiting);
-            check();
-        }).catch(() => { status.textContent = '离线保存未完成；联网后重新打开可重试'; });
+            if (!registration.rainWatching) {
+                registration.rainWatching = true;
+                registration.addEventListener('updatefound', () => watchWorker(registration.installing));
+            }
+            watchWorker(registration.installing); watchWorker(registration.waiting);
+            await registration.update();
+            await check();
+        } catch { status.textContent = '离线保存未完成；联网后可重试'; retryOffline.hidden = false; }
+        finally { checking = false; retryOffline.disabled = false; }
+    }
+    retryOffline.addEventListener('click', () => { retryOffline.hidden = true; status.textContent = '正在重新下载离线内容…'; void register(); });
+    void register();
 })();

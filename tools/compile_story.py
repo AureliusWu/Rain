@@ -3,7 +3,10 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import sys
 from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "game/python-packages"))
+from reading_bookmarks import make_catalog
 from tools.story_model import ROOT, load_story, enumerate_routes
 
 
@@ -59,6 +62,7 @@ def render_story(story, assets, voices):
                 lines.append(f"    show heroine {line['expression']} at heroine_position")
             if line.get("voice"):
                 lines.append(f"    voice {quote(by_voice[line['voice']]['file'])}")
+            lines.append(f"    $ rain_line_id = {quote(line['id'])}")
             speaker = "" if line["speaker"] == "n" else line["speaker"] + " "
             lines.append(f"    {speaker}{quote(line['text'])}")
         if "ending" in node:
@@ -78,6 +82,7 @@ def render_story(story, assets, voices):
                         lines.append(f"            show heroine {response['expression']} at heroine_position")
                     if response.get("voice"):
                         lines.append(f"            voice {quote(by_voice[response['voice']]['file'])}")
+                    lines.append(f"            $ rain_line_id = {quote(response['id'])}")
                     speaker = "" if response["speaker"] == "n" else response["speaker"] + " "
                     lines.append(f"            {speaker}{quote(response['text'])}")
                 lines.append(f"            jump {c['next']}")
@@ -98,14 +103,18 @@ def render_story(story, assets, voices):
     return "\n".join(lines) + "\n", "\n".join(images) + "\n"
 
 
+def render_bookmarks(story, voices):
+    chapters = [(chapter["id"], chapter["title"]) for chapter in story["chapters"]]
+    return "# Generated from the single story source. Player packages do not read author JSON.\ninit -1 python:\n    RAIN_READING_CATALOG = " + repr(make_catalog(story, voices)) + "\n    RAIN_READING_CHAPTERS = " + repr(chapters) + "\n"
+
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--check", action="store_true", help="Fail if generated scripts are stale")
     args = p.parse_args()
     assets = json.loads((ROOT / "game/data/asset_manifest.json").read_text(encoding="utf-8"))["assets"]
     voices = json.loads((ROOT / "game/data/voice_manifest.json").read_text(encoding="utf-8"))["voices"]
-    outputs = render_story(load_story(), assets, voices)
-    for path, content in zip([ROOT / "game/script/story_generated.rpy", ROOT / "game/script/images_generated.rpy"], outputs):
+    outputs = (*render_story(load_story(), assets, voices), render_bookmarks(load_story(), voices))
+    for path, content in zip([ROOT / "game/script/story_generated.rpy", ROOT / "game/script/images_generated.rpy", ROOT / "game/script/bookmarks_generated.rpy"], outputs):
         if args.check:
             if not path.exists() or path.read_text(encoding="utf-8") != content:
                 raise SystemExit(f"Stale generated script: {path.relative_to(ROOT)}")

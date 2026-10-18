@@ -9,7 +9,7 @@ from tools.story_model import ROOT
 def main():
     source = ROOT / 'game/fonts/SourceHanSansLite.ttf'
     output = ROOT / 'tools/build/pwa/ui-font.woff2'
-    inputs = ['game/data/story.json', 'game/screens.rpy', 'tools/build/web.py', 'tools/build/pwa/client.js']
+    inputs = ['game/data/story.json', 'game/screens.rpy', 'game/bookmarks.rpy', 'tools/build/web.py', 'tools/build/pwa/client.js']
     text = ''.join((ROOT / name).read_text(encoding='utf-8') for name in inputs)
     with TTFont(source) as font:
         options = subset.Options(); options.flavor = 'woff2'

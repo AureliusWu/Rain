@@ -23,7 +23,7 @@ concurrency:
 
 jobs:
   publish:
-    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    if: github.event_name == 'workflow_dispatch' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_sha == '15d87ef4455b95feb6069e044a1d3a6456f75e0c')
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:

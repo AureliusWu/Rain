@@ -234,7 +234,7 @@
           "role": "runtime",
           "path": "tools/build/pwa/ui-font.woff2",
           "encoding": "binary",
-          "sha256": "176acd8fd5f597177ce51f99426be146aba69c9f562b09b34408cf01860f2f7f"
+          "sha256": "1dd9517f887f80f16ab9b5fd98548bb156cf763403933c94b0bf5026a2f9cdb3"
         }
       ],
       "license": {
@@ -4168,19 +4168,19 @@
           "role": "recipe",
           "path": "tools/build/web.py",
           "encoding": "text-lf",
-          "sha256": "886fa10d328ee1f68cd60ef6526796712ae7357ed2d728294837744227f3985f"
+          "sha256": "0f98ca135c7c45c5a033de8dfb2a9e7dabe9ed1b070d97fa32213b3ddb83740b"
         },
         {
           "role": "recipe",
           "path": "tools/build/pwa/client.js",
           "encoding": "text-lf",
-          "sha256": "5befb5c7bd8b3651dcd59ef3c3cbc9065db6c8b15b9ff25f116cd1d7392f70f8"
+          "sha256": "f1f0e2c1d91a9bb56ca0543292f84d8b012385a5ae633847fac66ca28f4f376d"
         },
         {
           "role": "recipe",
           "path": "tools/build/pwa/service-worker.js",
           "encoding": "text-lf",
-          "sha256": "c277d15acf95d7593102b1171d390cabef0cfdb38284d9fb71d0f4d3bf7139f3"
+          "sha256": "a295df44213287994c8fe24c79d90abce0896cfaf71c91a922da8ed1a22d5c81"
         },
         {
           "role": "recipe",
@@ -4216,13 +4216,13 @@
           "role": "recipe",
           "path": "tools/build/subset_pwa_font.py",
           "encoding": "text-lf",
-          "sha256": "c5498fc5d8a07244807e469f75d429ce7d640caba0b34db46c63190bfcf4a5ac"
+          "sha256": "158ad6f99a181e7753516d1681bcc38a51bcc681caba33fa3005d49d821974a0"
         },
         {
           "role": "metadata",
           "path": "docs/production/PWA-INPUT-FONT.json",
           "encoding": "text-lf",
-          "sha256": "20de4bbc846376fc01cb3ca32c7bd0fd95837e829d3c80a946180b19692021b8"
+          "sha256": "ba23a3a160f36b45f6c7bf1237864dce4f1399eb5c5401b32d788cc5d22d6049"
         }
       ]
     },
@@ -4258,7 +4258,7 @@
           "role": "recipe",
           "path": "game/history_search.rpy",
           "encoding": "text-lf",
-          "sha256": "1d3f9ab7e1c1db5f5af5a49d7a414f1b0fdcded22cf67d0147d678a05a019402"
+          "sha256": "3246b467775cf9096864365bcdc0ba36f12ef802e23718156c6a4f6a0474bb3b"
         }
       ]
     }

@@ -13,7 +13,7 @@ try {
     const page = await browser.newPage();
     const errors = [];
     page.on('pageerror', error => errors.push(error.message));
-    await page.setContent(`<span id="offlineStatus"></span><button id="installPwa" hidden></button>
+    await page.setContent(`<span id="offlineProgress"></span><button id="retryOffline" hidden></button><span id="offlineStatus"></span><button id="installPwa" hidden></button>
         <form id="historySearchControls" hidden><input id="historyQuery" type="search" maxlength="80" aria-label="搜索已读文字">
         <button id="historyQueryClear" type="button">清除关键词</button><span id="historySearchStatus"></span></form>`);
     await page.evaluate(() => {

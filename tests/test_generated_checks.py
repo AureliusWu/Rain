@@ -16,6 +16,7 @@ class GeneratedCheckTests(unittest.TestCase):
             (root / 'tools').mkdir()
             for name in ['__init__.py', 'story_model.py', 'compile_story.py', 'compile_tests.py', 'compile_extras.py', 'extras_tests.py']:
                 shutil.copy2(ROOT / 'tools' / name, root / 'tools' / name)
+            shutil.copytree(ROOT / 'game/python-packages', root / 'game/python-packages')
             (root / 'game/data').mkdir(parents=True)
             for name in ['story.json', 'asset_manifest.json', 'voice_manifest.json']:
                 shutil.copy2(ROOT / 'game/data' / name, root / 'game/data' / name)

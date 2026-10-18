@@ -186,6 +186,29 @@ testcase history_search_and_original_voice:
     assert eval renpy.get_screen("history").scope["history_query"] == ""
     assert eval renpy.random.getstate() == _test.history_rng_state
     assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == _test.history_search_state
+    $ _test.bookmark_id = rain_history_identity(_history_list[test_history_voice_index])
+    assert eval _test.bookmark_id == "s01_arrival_l005"
+    click id ("history_bookmark_%d" % test_history_voice_index)
+    assert eval rain_is_bookmarked(_test.bookmark_id)
+    click id "history_bookmarks"
+    assert screen "rain_bookmarks"
+    assert eval any(row["id"] == _test.bookmark_id for row in rain_bookmark_rows())
+    click id "bookmark_chapter_ch05"
+    assert eval not rain_bookmark_rows(renpy.get_screen("rain_bookmarks").scope["bookmark_chapter"])
+    click id "bookmark_chapter_all"
+    click id ("bookmark_voice_" + _test.bookmark_id)
+    assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
+    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == _test.history_search_state
+    pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
+    screenshot "native-bookmark-voice"
+    click id ("bookmark_remove_" + _test.bookmark_id)
+    assert eval not rain_is_bookmarked(_test.bookmark_id)
+    click id "game_return"
+    click id "history_open"
+    click id ("history_bookmark_%d" % test_history_voice_index)
+    assert eval rain_is_bookmarked(_test.bookmark_id)
+    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == _test.history_search_state
     click id "game_return"
 
 testcase current_voice_replay_and_restore:

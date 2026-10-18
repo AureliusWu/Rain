@@ -38,7 +38,7 @@ class ReadHistorySearchTests(unittest.TestCase):
 
 class NativeHistoryPanelTests(unittest.TestCase):
     def setUp(self):
-        self.scope = {"history_query": "出门", "history_speaker": "许澄", "history_session": "current-panel"}
+        self.scope = {"history_query": "出门", "history_speaker": "许澄", "history_chapter": "ch01", "history_session": "current-panel"}
         self.screen = SimpleNamespace(scope=self.scope)
         self.stops, self.restarts = [], []
         renpy = SimpleNamespace(
@@ -55,7 +55,7 @@ class NativeHistoryPanelTests(unittest.TestCase):
 
     def test_clear_action_returns_none_and_preserves_current_panel(self):
         self.assertIsNone(self.runtime["rain_clear_history_filters"]("current-panel"), "A non-None Function result closes the Ren'Py menu")
-        self.assertEqual(self.scope, {"history_query": "", "history_speaker": "", "history_session": "current-panel"})
+        self.assertEqual(self.scope, {"history_query": "", "history_speaker": "", "history_chapter": "", "history_session": "current-panel"})
         self.assertEqual(self.stops, [{"channel": "voice"}])
 
     def test_late_clear_cannot_change_the_reopened_panel(self):

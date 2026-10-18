@@ -40,6 +40,7 @@ jobs:
           python -m tools.validate
           node scripts/vn-contract.mjs game/data/story.json
           node --test scripts/vn-creative.test.mjs scripts/vn-materials.test.mjs
+          node --test tests/pwa-progress.test.mjs
           npm run test:history-input
           node scripts/vn-materials.mjs verify
           node scripts/vn-materials.mjs export .reuse-kit/v1.2.0

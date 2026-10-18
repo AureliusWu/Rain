@@ -1,0 +1,177 @@
+{
+  "schema": 1,
+  "date": "2026-10-18",
+  "version": "1.3.0",
+  "parent": "b6f8f3d88dbe011fccb291cbb86e8660adfa9def",
+  "status": "local_candidate_verified_remote_pending",
+  "pythonTests": 180,
+  "renpyLint": "passed",
+  "native": {
+    "status": "passed",
+    "platform": "Linux",
+    "iterations": [
+      {
+        "cases": 7,
+        "assertions": 142,
+        "failed": 0,
+        "xfailed": 0,
+        "xpassed": 0,
+        "skipped": 0,
+        "not_run": 0,
+        "screenshots_checked": 32,
+        "native_1080": true
+      }
+    ],
+    "cases": [
+      "native_1080_and_scaled_window",
+      "history_search_and_original_voice",
+      "current_voice_replay_and_restore",
+      "history_voice_replay",
+      "auto_waits_for_replayed_voice",
+      "extras_locked_no_spoilers",
+      "extras_unlock_and_music"
+    ],
+    "prefix_plan_sha256": "762f48e073306cb8b8b71f4593788309936d758d60123ec127c3f6500a055f25",
+    "original_project_is_unmodified": true,
+    "game_copies_and_save_directories_are_separate": true,
+    "scope": "Actual full-suite prefix, copied game with only the temporary test plan narrowed"
+  },
+  "webBuild": {
+    "status": "built",
+    "engine": "RenPy 8.5.3 official WASM",
+    "web_sdk_sha256": "954db897e65f51ea63cb2fb7b203d02be0447f4e22069514020bbe6c6691fdfc",
+    "official_runtime_validation": {
+      "game_zip_entries": 516,
+      "game_zip_sha256": "1cf0dea4e5b73db302a43548c1ceb44170a0a347bdc036e07c81049aa2ee21e8",
+      "game_zip_crc": "passed"
+    },
+    "runtime_files": 28,
+    "offline_bytes": 73550072,
+    "revision": "76877a50430f586493a8d221",
+    "version": "1.3.0",
+    "web_zip_sha256": "8020f22c3099e978318165a33484cd238443da7767ccd3480b8c8ff06af39974",
+    "scope": "relative; supports /Rain/ and local test subpaths",
+    "browser_execution": "requires actual smoke test"
+  },
+  "browser": {
+    "status": "passed",
+    "engine": "RenPy 8.5.3 official WASM",
+    "version": "1.3.0",
+    "checks": [
+      "manifest parsed and app-scoped start URL; complete offline marker",
+      "actual native history search, Chinese input, empty/reset states and preserved read position",
+      "actual read bookmark, chapter filter, removal/re-add and unchanged native state",
+      "actual Start click and native narration",
+      "actual native Save screen writes slot 1",
+      "native export save ZIP produced by actual browser control",
+      "native history search remains usable during a real offline session",
+      "offline reload boots complete native WASM and starts narrative",
+      "412x915, 568x320 and 844x390 native display boots",
+      "complete update waits while old WASM narrative keeps its original controller and state",
+      "closing old windows activates complete update; prior own cache removed and unrelated/other-scope caches retained",
+      "real export ZIP imported into fresh browser context and actual Load restores saved scene",
+      "unrelated parent-scope worker cannot announce this application offline-ready",
+      "nested subpath fresh install and complete offline reopen",
+      "missing engine resource cannot produce an offline-ready marker",
+      "failed engine download retries to a verified complete cache and boots the native menu after reopening"
+    ],
+    "samples": [
+      {
+        "mode": "first_install",
+        "milliseconds": 7769
+      },
+      {
+        "mode": "cached_reopen",
+        "milliseconds": 4777
+      },
+      {
+        "mode": "cached_reopen",
+        "milliseconds": 5498
+      }
+    ],
+    "first_baseline": true,
+    "budgets": {
+      "offline_bytes": 100000000,
+      "boot_milliseconds": 120000
+    },
+    "offline_bytes": 73550072,
+    "screenshots": [
+      {
+        "name": "desktop-main-menu",
+        "sha256": "0df984b7407ef5552e9efbe03010dd7a5508c5222e63a466c78241bc8d8c9ec7"
+      },
+      {
+        "name": "desktop-story",
+        "sha256": "744d48260fe6583e8173af780f49de756f87ccaf183b47b16a22bb0aa037aa6b"
+      },
+      {
+        "name": "offline-story",
+        "sha256": "ef1c7a4bcba15aa9f8abc992aa646ad873ae0446dd1f7caa2313553f2d48e350"
+      },
+      {
+        "name": "412x915",
+        "sha256": "2b0bdaf87bf82253e886c4c8c815e8d9582f487e5d9c89c7100fd4122a7c7a5b"
+      },
+      {
+        "name": "568x320",
+        "sha256": "c6ba02f8f0299163b2f0a9e8647162610af9120071e437b7f2cca1bf89ecf929"
+      },
+      {
+        "name": "844x390",
+        "sha256": "0de4006dc2e6fd6c2bdd84136df2f1e64e66483cd7d2eca07e576b7d63cd83d6"
+      },
+      {
+        "name": "imported-native-save",
+        "sha256": "d0bdec0b76ca585b54579044e023facdfc7c12e04636840604dabbf3237ecc47"
+      }
+    ],
+    "errors": [],
+    "requests_outside_application": [],
+    "limits": [
+      "Physical device installation and human listening remain separate acceptance.",
+      "Smoke exercises beginning and native save export; all 16 full state routes are checked by native Windows suite."
+    ]
+  },
+  "workerTests": 2,
+  "imeTests": 5,
+  "sharedFiles": 15,
+  "materialEntries": 90,
+  "materialFiles": 224,
+  "sourceSha256": {
+    ".github/workflows/release-v122.yml": "9b9ce73fd59b4bf7d55a58ddad96101b2e657a847f5d92871f1dee4f5d15b434",
+    ".github/workflows/web.yml": "41e8d8d2c06a166daa97b5f1996d3a1068b7a4c4d3d60edb40341d97a3729de3",
+    "VERSION": "64d23f858ef51b0f996e4966d4e27c0371b437e2d2787890b1f7ad22d4ec5663",
+    "game/bookmarks.rpy": "b69d36a332c0f9f7e3a166f2ca9771ceafc2e703acea74149efcc2aa74bd822d",
+    "game/data/story.json": "fd6cee79a00942b1838b7cdd56e9163b3b332aceba31e45996d907ac3b38309e",
+    "game/history_search.rpy": "3246b467775cf9096864365bcdc0ba36f12ef802e23718156c6a4f6a0474bb3b",
+    "game/options.rpy": "ed6e30063c9abc9cde5313d29a07c4dd2d6dad55962f9be7ae254adbf37f416e",
+    "game/python-packages/reading_bookmarks.py": "a8f012bbe6aa862e5cc067efb4c2d781b09dceab4b2f3287966ce5c7c0002e02",
+    "game/screens.rpy": "203e3b9b72aff0ef46f46ba9aaf6fb3fd429bf5e083ae1f38a9c5172cdbaba03",
+    "game/script/bookmarks_generated.rpy": "092576695d2ffeee87b4963327e9788503b8c0e79798e622b5ec39ebddd00314",
+    "game/script/story_generated.rpy": "eaa1bde3d87ec24a4d08eaf5d2faecf5e0445842153eb07f625959d5f3e11cb2",
+    "game/testcases.rpy": "6ea6ad4f13740bfb171b2239555e7cc4619d3519b24326fd9ba102f380ba5bd1",
+    "package-lock.json": "5bc844c2786e66222a15516ba39acf5b7ad76b42094654d550a3633359cb7fbe",
+    "package.json": "2a065a1f12ac40c62f0a71769455b3e76ec6d155016e89111e77db4d1d3e82b8",
+    "scripts/history-input-browser.mjs": "0199cd9b1825277e1ef99a77040fecfd0ece754471465417fb20545dd4430b53",
+    "scripts/pwa-native-browser.mjs": "943672c6ed5a19c4837f6208f73e9631c8522e1696464a8371ed71f33bc78b83",
+    "scripts/pwa-smoke.mjs": "97a936022396c39423638c9c6c01bf60694ce9fba851fa71752781c120664d4a",
+    "tests/pwa-progress.test.mjs": "fb9385467cf92b7ac788c712e0c5939df67d2faddd01428f610cf61a3ab8be85",
+    "tests/test_bookmarks.py": "2736cd740c90c2468c8d144ed5692d96952260271bfb4959efd3f1fe3222675d",
+    "tests/test_export_review.py": "42c442b2f5ac5520cbca8c25d00a677f9bc9f7ca0e565263f52ecffd2975df46",
+    "tests/test_generated_checks.py": "69e1a87d1ae419ae2ae8f18c2752b4ef6f942d6c85cfd75b00eb6408b6756c05",
+    "tests/test_history_search.py": "e1cd9b727f1acafd452a5b55307d39c64cd56af600c67c0ea324bda3c5534151",
+    "tools/build/pwa/client.js": "f1f0e2c1d91a9bb56ca0543292f84d8b012385a5ae633847fac66ca28f4f376d",
+    "tools/build/pwa/service-worker.js": "a295df44213287994c8fe24c79d90abce0896cfaf71c91a922da8ed1a22d5c81",
+    "tools/build/pwa/ui-font.woff2": "1dd9517f887f80f16ab9b5fd98548bb156cf763403933c94b0bf5026a2f9cdb3",
+    "tools/build/subset_pwa_font.py": "158ad6f99a181e7753516d1681bcc38a51bcc681caba33fa3005d49d821974a0",
+    "tools/build/web.py": "0f98ca135c7c45c5a033de8dfb2a9e7dabe9ed1b070d97fa32213b3ddb83740b",
+    "tools/compile_story.py": "5deb1ae2e08a4aa3465105e3668dbee5be36e52813e6aa03a2e407609200a193",
+    "tools/compile_tests.py": "e5a6c57fdc9fe5125ad6aa269441d29a36c7ca0279d3060c1c3c4d65a34ca115"
+  },
+  "pending": [
+    "complete Windows native suite and upgrade",
+    "candidate public deployment verification",
+    "new version-specific formal publication evidence",
+    "physical device, listening, measured reading time and creative review"
+  ]
+}

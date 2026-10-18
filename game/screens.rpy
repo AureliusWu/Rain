@@ -922,11 +922,12 @@ screen history():
     default history_session = rain_history_session_token()
     default history_query = ""
     default history_speaker = ""
+    default history_chapter = ""
     default history_input_value = RainHistoryInputValue(history_session)
     on "hide" action Stop("voice")
     predict False
 
-    $ history_rows = rain_history_rows(_history_list, history_query, history_speaker)
+    $ history_rows = [(i, h) for i, h in rain_history_rows(_history_list, history_query, history_speaker) if not history_chapter or (rain_history_identity(h) and RAIN_READING_CATALOG[rain_history_identity(h)]["chapter"] == history_chapter)]
 
     use game_menu(_("History")):
         vbox:
@@ -938,7 +939,11 @@ screen history():
                 padding (18, 14)
                 vbox:
                     spacing 12
-                    text "搜索已读文字" size 26
+                    hbox:
+                        spacing 24
+                        text "搜索已读文字" size 26
+                        textbutton "已读收藏" id "history_bookmarks" action ShowMenu("rain_bookmarks")
+                    use rain_chapter_filter("history_chapter")
                     if renpy.variant("web"):
                         text "请在右上方输入关键词" size 26 color "#c1d7e1"
                     else:
@@ -994,6 +999,15 @@ screen history():
                                     xanchor gui.history_name_xalign
                                     ypos 65
                                     action PlayCharacterVoice(h.voice.tag, h.voice.filename, selected=True)
+                            $ identity = rain_history_identity(h)
+                            if identity:
+                                textbutton ("取消收藏" if rain_is_bookmarked(identity) else "收藏原文"):
+                                    id ("history_bookmark_%d" % history_index)
+                                    style "voice_replay_button"
+                                    xpos gui.history_name_xpos
+                                    xanchor gui.history_name_xalign
+                                    ypos 120
+                                    action Function(rain_toggle_bookmark, identity)
                             $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
                             text what:
                                 substitute False

@@ -6,12 +6,24 @@ const PREFIX = `rain-pwa:${SCOPE.pathname}:`;
 const CACHE = PREFIX + BUILD.revision;
 const MARKER = new URL('__rain_complete__', SCOPE).href;
 const FILES = new Map(BUILD.files.map(file => [new URL(file.path, SCOPE).href, file]));
+const TOTAL_BYTES = BUILD.files.reduce((sum, file) => sum + file.bytes, 0);
+let progress = {completedFiles: 0, totalFiles: FILES.size, verifiedBytes: 0, totalBytes: TOTAL_BYTES, failed: false};
+async function reportProgress() {
+    const clients = await self.clients.matchAll({type: 'window', includeUncontrolled: true});
+    for (const client of clients) {
+        const url = new URL(client.url);
+        if (url.origin === SCOPE.origin && url.pathname.startsWith(SCOPE.pathname))
+            client.postMessage({type: 'RAIN_OFFLINE_PROGRESS', revision: BUILD.revision, ...progress});
+    }
+}
 const hex = bytes => Array.from(new Uint8Array(bytes), byte => byte.toString(16).padStart(2, '0')).join('');
 
 self.addEventListener('install', event => event.waitUntil((async () => {
     const cache = await caches.open(CACHE);
     if (!await cache.match(MARKER)) {
+        progress = {...progress, completedFiles: 0, verifiedBytes: 0, failed: false};
         try {
+            await reportProgress();
             for (const [url, file] of FILES) {
                 const response = await fetch(new Request(url, {cache: 'reload', credentials: 'same-origin'}));
                 if (!response.ok || response.type === 'opaque') throw new Error(`Cannot cache ${file.path}`);
@@ -19,10 +31,13 @@ self.addEventListener('install', event => event.waitUntil((async () => {
                 if (bytes.byteLength !== file.bytes || hex(await crypto.subtle.digest('SHA-256', bytes)) !== file.sha256)
                     throw new Error(`Build changed while downloading ${file.path}`);
                 await cache.put(url, response);
+                progress.completedFiles++; progress.verifiedBytes += bytes.byteLength;
+                await reportProgress();
             }
             await cache.put(MARKER, new Response(JSON.stringify({revision: BUILD.revision, files: FILES.size})));
         } catch (error) {
             await caches.delete(CACHE);
+            progress.failed = true; await reportProgress();
             throw error;
         }
     }
@@ -57,6 +72,6 @@ self.addEventListener('message', event => {
     event.waitUntil((async () => {
         const cache = await caches.open(CACHE);
         const ready = Boolean(await cache.match(MARKER));
-        event.ports[0]?.postMessage({ready, revision: BUILD.revision, files: FILES.size});
+        event.ports[0]?.postMessage({ready, revision: BUILD.revision, files: FILES.size, ...progress, ...(ready ? {completedFiles: FILES.size, verifiedBytes: TOTAL_BYTES, failed: false} : {})});
     })());
 });

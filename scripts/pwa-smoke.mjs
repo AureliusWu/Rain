@@ -4,7 +4,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
 import {createRequire} from 'node:module';
-import {get, waitNative, clickId, startNarrative, verifyReadHistorySearch, visibleNarration} from './pwa-native-browser.mjs';
+import {get, waitNative, clickId, startNarrative, verifyReadHistorySearch, verifyReadBookmarks, visibleNarration} from './pwa-native-browser.mjs';
 
 const require = createRequire(import.meta.url);
 const {chromium} = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
@@ -14,6 +14,16 @@ const expectedVersion = (await fs.readFile('VERSION', 'utf8')).trim();
 const buildMetadata = JSON.parse(await fs.readFile('reports/web-build.json', 'utf8'));
 assert.equal(buildMetadata.version, expectedVersion);
 await fs.mkdir(reports, {recursive:true});
+// Refuse a truncated or stale expanded build before asking the WASM engine to boot.
+const workerText = await fs.readFile(path.join(root, 'service-worker.js'), 'utf8');
+const deliveredCatalog = JSON.parse(workerText.match(/^const BUILD = (.*);$/m)[1]);
+assert.equal(deliveredCatalog.version, expectedVersion);
+for (const file of deliveredCatalog.files) {
+    const raw = await fs.readFile(path.join(root, file.path));
+    assert.equal(raw.length, file.bytes, `Expanded build length changed: ${file.path}`);
+    assert.equal(crypto.createHash('sha256').update(raw).digest('hex'), file.sha256, `Expanded build bytes changed: ${file.path}`);
+}
+
 const mime = {'.html':'text/html', '.js':'text/javascript', '.json':'application/json', '.wasm':'application/wasm', '.png':'image/png', '.jpg':'image/jpeg'};
 const requests = [];
 let failFile = null;
@@ -43,21 +53,29 @@ const server = http.createServer(async (request, response) => {
 });
 await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
 const origin = `http://127.0.0.1:${server.address().port}`;
-const launch = {headless:true, args:['--enable-webgl', '--use-gl=angle', '--use-angle=swiftshader']};
+const launch = {headless:true, args:process.env.PLAYWRIGHT_CHROMIUM_ARGS ? JSON.parse(process.env.PLAYWRIGHT_CHROMIUM_ARGS) : ['--enable-webgl', '--use-gl=angle', '--use-angle=swiftshader']};
 if (process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE) launch.executablePath = process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE;
 const browser = await chromium.launch(launch);
 const errors = [];
+const runtimeConsole = [];
 const samples = [];
 const checks = [];
 async function boot(page, base) {
     const start = performance.now();
     await page.goto(origin + base, {waitUntil:'domcontentloaded'});
-    await page.waitForFunction(() => !document.getElementById('presplash'), null, {timeout:120000});
+    try { await page.waitForFunction(() => !document.getElementById('presplash'), null, {timeout:120000}); }
+    catch(error) {
+        await page.screenshot({path:path.join(reports,'boot-failure.png')});
+        await fs.writeFile(path.join(reports,'boot-failure.json'),JSON.stringify({console:runtimeConsole.slice(-100),body:await page.locator('body').innerText(),errors},null,2));
+        throw error;
+    }
     await page.waitForFunction(() => window.rainOfflineReady === true, null, {timeout:120000});
     await waitNative(page,'bool(renpy.get_screen("main_menu"))');
     await waitNative(page,'not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))');
     assert.equal(await get(page, 'config.version'), expectedVersion);
     assert.equal(await get(page, 'bool(renpy.get_screen("main_menu"))'), true);
+    const sizes=await page.locator('#offlineProgress').evaluate(node=>[Number(node.dataset.verifiedBytes),Number(node.dataset.totalBytes)]);
+    assert.deepEqual(sizes,[buildMetadata.offline_bytes,buildMetadata.offline_bytes]);
     return Math.round(performance.now() - start);
 }
 const hash = data => crypto.createHash('sha256').update(data).digest('hex');
@@ -71,8 +89,10 @@ try {
     const context = await browser.newContext({viewport:{width:1440,height:900}, acceptDownloads:true});
     const page = await context.newPage();
     page.on('pageerror',error => errors.push(error.message));
+    page.on('console',message => runtimeConsole.push(message.text()));
     for (let iteration=0;iteration<3;iteration++) {
         samples.push({mode:iteration ? 'cached_reopen':'first_install',milliseconds:await boot(page, '/Rain/')});
+        console.log('Native PWA boot',iteration,samples.at(-1).milliseconds);
     }
     screenshots.push(await shot(page,'desktop-main-menu'));
     const manifest = await page.evaluate(async () => (await fetch('manifest.json')).json());
@@ -85,6 +105,8 @@ try {
     await startNarrative(page);
     await verifyReadHistorySearch(page, path.join(reports, 'desktop-history-search.png'));
     checks.push('actual native history search, Chinese input, empty/reset states and preserved read position');
+    const bookmarked = await verifyReadBookmarks(page, path.join(reports, 'desktop-bookmarks.png'));
+    checks.push('actual read bookmark, chapter filter, removal/re-add and unchanged native state');
     assert.equal(await get(page,'current_scene'),'p00_entry');
     assert.equal(await get(page,'bool(renpy.get_screen("say"))'),true);
     screenshots.push(await shot(page,'desktop-story'));
@@ -109,6 +131,7 @@ try {
     await context.setOffline(true);
     assert.ok(await boot(page,'/Rain/') < 120000);
     assert.equal(await get(page,'config.version'),expectedVersion);
+    assert.equal(await get(page,`rain_is_bookmarked(${JSON.stringify(bookmarked)})`),true);
     assert.equal(await get(page,'renpy.can_load("1-1")'),true);
     await startNarrative(page);
     assert.equal(await get(page,'current_scene'),'p00_entry');
@@ -165,6 +188,7 @@ try {
     if(await get(importedPage,'bool(renpy.get_screen("confirm"))')) await clickId(importedPage,'confirm','confirm_yes');
     await waitNative(importedPage,`current_scene == ${JSON.stringify(savedScene)}`);
     await waitNative(importedPage,`${visibleNarration} == ${JSON.stringify(savedText)}`);
+    assert.equal(await get(importedPage,`rain_is_bookmarked(${JSON.stringify(bookmarked)})`),true);
     screenshots.push(await shot(importedPage,'imported-native-save'));
     checks.push('real export ZIP imported into fresh browser context and actual Load restores saved scene');
     await imported.close();
@@ -196,7 +220,13 @@ try {
     });
     assert.equal(partial,false);
     checks.push('missing engine resource cannot produce an offline-ready marker');
-    failFile = null; await failed.close();
+    await failedPage.getByRole('button',{name:'重试下载',exact:true}).waitFor({state:'visible'});
+    failFile = null;
+    await failedPage.getByRole('button',{name:'重试下载',exact:true}).click();
+    await failedPage.waitForFunction(()=>window.rainOfflineReady === true,null,{timeout:120000});
+    await boot(failedPage,'/Rain/');
+    checks.push('failed engine download retries to a verified complete cache and boots the native menu after reopening');
+    await failed.close();
     assert.equal(errors.length,0);
     const offlineBytes = buildMetadata.offline_bytes;
     assert.ok(offlineBytes < 100_000_000);
