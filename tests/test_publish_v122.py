@@ -54,6 +54,8 @@ class ExactV122PublicationTests(unittest.TestCase):
                 git('add','.');git('commit','--quiet','-m',message)
                 return git('rev-parse','HEAD')
             git('init','--quiet')
+            # Hash fixtures must bind the exact worktree bytes on Windows too.
+            git('config','core.autocrlf','false')
             for path in SUPPORT:
                 target=root/path;target.parent.mkdir(parents=True,exist_ok=True);target.write_text(path+'\n')
             (root/'VERSION').write_text('1.2.2\n')
@@ -274,6 +276,8 @@ class ExactV122PublicationTests(unittest.TestCase):
                 git('add','.');git('commit','--quiet','-m',message)
                 return git('rev-parse','HEAD')
             git('init','--quiet')
+            # Hash fixtures must bind the exact worktree bytes on Windows too.
+            git('config','core.autocrlf','false')
             for path in SUPPORT:
                 target=root/path;target.parent.mkdir(parents=True,exist_ok=True);target.write_text(path+'\n')
             runtime=commit('complete tested runtime')

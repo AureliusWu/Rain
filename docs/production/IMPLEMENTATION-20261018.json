@@ -166,12 +166,18 @@
     "tools/build/subset_pwa_font.py": "158ad6f99a181e7753516d1681bcc38a51bcc681caba33fa3005d49d821974a0",
     "tools/build/web.py": "0f98ca135c7c45c5a033de8dfb2a9e7dabe9ed1b070d97fa32213b3ddb83740b",
     "tools/compile_story.py": "5deb1ae2e08a4aa3465105e3668dbee5be36e52813e6aa03a2e407609200a193",
-    "tools/compile_tests.py": "e5a6c57fdc9fe5125ad6aa269441d29a36c7ca0279d3060c1c3c4d65a34ca115"
+    "tools/compile_tests.py": "e5a6c57fdc9fe5125ad6aa269441d29a36c7ca0279d3060c1c3c4d65a34ca115",
+    "tests/test_publish_v122.py": "dc30e89addbfd2a45ca540edea15142d99859de7713d9159f20bd52766d5d380"
   },
   "pending": [
     "complete Windows native suite and upgrade",
     "candidate public deployment verification",
     "new version-specific formal publication evidence",
     "physical device, listening, measured reading time and creative review"
-  ]
+  ],
+  "windowsFirstRun": {
+    "runId": 39106156651,
+    "result": "failed authoring hash fixtures before native execution",
+    "fix": "two isolated test repositories explicitly disable core.autocrlf; production validators unchanged"
+  }
 }
