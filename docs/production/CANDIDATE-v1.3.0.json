@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "checkedAt": "2026-10-18T07:17:02Z",
+  "checkedAt": "2026-10-18T15:12:40.810Z",
   "version": "1.3.0",
-  "runtimeCommit": "cb4676378eb8972c48539ed92e0a36941c046cda",
-  "status": "both_platforms_verified_exact_artifact_publication_prepared",
+  "runtimeCommit": "cf8e0b5ae61b90815eb0f3a16188493e89c1fd05",
+  "status": "published_exact_downloads_and_public_pwa_verified",
   "web": {
     "runId": 39107156529,
     "conclusion": "success",
@@ -69,10 +69,12 @@
     ],
     "humanAcceptanceClaimed": false
   },
-  "formalRelease": "v1.2.2 remains current",
+  "formalRelease": "v1.3.0 published",
   "pending": [
-    "publish exact validated v1.3.0 Windows/PWA bytes and read back downloads",
-    "human listening, physical device and creative review"
+    "human listening",
+    "Normal/True human reading timing",
+    "physical device installation and ordinary Windows computer/Chinese path/DPI",
+    "final creative review and freeze"
   ],
   "previousValidationCommit": "1ed619489332316d8b64de648be79afab1a2a1c5",
   "supportFix": {
@@ -81,5 +83,8 @@
     "sharedMaterials": "passed",
     "playerRuntimeChanged": false,
     "regression": "current-to-current reader still requires saved bookmarks; v1.1 upgrade reader does not"
-  }
+  },
+  "publicationRun": 39134956684,
+  "publicPwaRestoreRun": 39138941116,
+  "publishedRecord": "PUBLISHED-v1.3.0.json"
 }

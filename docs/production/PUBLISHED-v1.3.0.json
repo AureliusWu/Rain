@@ -1,0 +1,127 @@
+{
+  "schema": 1,
+  "checkedAt": "2026-10-18T15:12:40.810Z",
+  "version": "1.3.0",
+  "status": "published_exact_downloads_and_public_pwa_verified",
+  "runtimeCommit": "cf8e0b5ae61b90815eb0f3a16188493e89c1fd05",
+  "tagCommit": "cf8e0b5ae61b90815eb0f3a16188493e89c1fd05",
+  "publicationCommit": "3c75b09d3ecb470ad076764ca047e2b6d2e4c08f",
+  "release": {
+    "id": 416488854,
+    "url": "https://github.com/AureliusWu/Rain/releases/tag/v1.3.0",
+    "publishedAt": "2026-10-18T14:13:12Z",
+    "draft": false,
+    "prerelease": false,
+    "publicationRun": 39134956684
+  },
+  "assets": [
+    {
+      "id": 653641840,
+      "name": "BeforeTheRainStops-1.3.0-web.zip",
+      "bytes": 47941670,
+      "sha256": "c386a761075dd946096aa5dfd9b40f91a767364a6517c7aee042614bfde5c630",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.3.0/BeforeTheRainStops-1.3.0-web.zip"
+    },
+    {
+      "id": 653641839,
+      "name": "BeforeTheRainStops-1.3.0-win.zip",
+      "bytes": 56321828,
+      "sha256": "0b8297a1d6397d6ea253454ccc2349a8d155fef6091e8d0cb061968539c0641b",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.3.0/BeforeTheRainStops-1.3.0-win.zip"
+    },
+    {
+      "id": 653641838,
+      "name": "RELEASE_METADATA.json",
+      "bytes": 19843,
+      "sha256": "5d9bbf31fdd3c28e5e9f93858bebce8155d81c74f137b53c93822b34cbcebbe2",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.3.0/RELEASE_METADATA.json"
+    },
+    {
+      "id": 653641841,
+      "name": "SHA256SUMS.txt",
+      "bytes": 286,
+      "sha256": "79d8a689cf422fa78a7a6105b8872055242e64096e191fcabee12620c0849339",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.3.0/SHA256SUMS.txt"
+    }
+  ],
+  "downloads": {
+    "independentAnonymousReadback": "all four assets downloaded and matched exact size/SHA-256; both ZIP CRCs and all SHA256SUMS entries passed before local environment disconnected",
+    "publishedBytesReplaced": false
+  },
+  "windows": {
+    "runId": 39107156547,
+    "attempt": 1,
+    "conclusion": "success",
+    "authorTests": 181,
+    "sourceAndStandaloneEach": {
+      "cases": 37,
+      "assertions": 487,
+      "screenshots": 85
+    },
+    "freshProcess": [
+      1,
+      17,
+      3
+    ],
+    "realOldSaveWriter": [
+      1,
+      14,
+      3
+    ],
+    "realOldSaveReader": [
+      2,
+      26,
+      4
+    ],
+    "prefixEach": [
+      7,
+      142,
+      32
+    ],
+    "originalPngAudit": 180,
+    "assetAudit": 85
+  },
+  "pwa": {
+    "validationRun": 39107156529,
+    "attempt": 1,
+    "conclusion": "success",
+    "actualBrowserTests": 16,
+    "url": "https://aureliuswu.github.io/Rain/",
+    "revision": "f2056c1dfda36e3e68704314",
+    "workerSha256": "946e8c8618e600b50cfea509a9242dfec550c87ead389ce5da7cf08d3bd65766",
+    "exactPublishedZipRestoration": {
+      "runId": 39138941116,
+      "jobId": 117709151085,
+      "commit": "51841ef2654e2990b99707d88fa00cffe95409a7",
+      "conclusion": "success",
+      "artifactId": 12141205830,
+      "artifactBytes": 3353179,
+      "artifactSha256": "aee6e184b5fc2c5e1eb28a7bb992bb05c97b4434b80eeae93665682193c2ab76"
+    },
+    "publicChecks": [
+      "exact menu version/revision and own worker scope",
+      "published Chinese history search preserves reading route",
+      "actual native Start and Save slot 1",
+      "disconnected reopen, Load and preserved saved scene",
+      "history search while disconnected"
+    ],
+    "pageErrors": [],
+    "exactTestedArtifact": true
+  },
+  "support": {
+    "publicationRegressionTests": 17,
+    "totalPythonTests": 198,
+    "playerRuntimeChanged": false
+  },
+  "pending": [
+    "human listening",
+    "Normal/True human reading timing",
+    "physical device installation and ordinary Windows computer/Chinese path/DPI",
+    "final creative review and freeze"
+  ],
+  "boundaries": {
+    "automatedAudioOutputDoesNotProveHumanListening": true,
+    "automationTimeDoesNotMeasureReadingTime": true,
+    "physicalDeviceClaimed": false
+  }
+}

@@ -1,3 +1,13 @@
+# v1.3.0 正式发布与在线原包闭环完成 — 2026-10-18
+
+[正式 v1.3.0](https://github.com/AureliusWu/Rain/releases/tag/v1.3.0) 已公开，Windows / 官方 WASM 原始 ZIP 绑定同一冻结提交 `cf8e0b5`。Windows 源码及独立 EXE 各37用例、487断言、85截图；真实 v1.1.0 旧档升级与16项实际 WASM 检查通过。发布运行39134956684成功，四个公开资产已独立下载核对大小、SHA-256，两个ZIP的CRC和全部校验表条目通过。
+
+后续发布支持触发重建造成在线字节漂移，已用正式 Web ZIP 原字节重新部署；[39138941116](https://github.com/AureliusWu/Rain/actions/runs/39138941116) 完成公开 worker 精确哈希、真实存读档、中文历史检索和断网续读，revision `f2056c1dfda36e3e68704314`、0页面错误。文档与发布支持现排除普通 Web 重建，正式下载未替换。
+
+本轮工程交付完成。真人试听、阅读计时、普通电脑/中文路径/DPI、物理设备与创作定案继续按实际体验留待后续。详见 [完整发行记录](production/PUBLISHED-v1.3.0.json)、[闭环说明](production/RELEASE-CLOSURE-v1.3.0.md) 和 [统一真人后续](HUMAN_HANDOFF.md)。下方较早的候选状态为历史记录。
+
+---
+
 > 2026-10-18 接续：v1.3.0 同一提交的 Windows 全链路与官方 WASM/PWA 均已通过。Windows 源码/成品各37用例、487断言，真实旧档升级通过；已准备将该次原始ZIP直接发布，正式下载仍以已公开版本为准。详见 [候选检查点](production/CANDIDATE-v1.3.0.json)。
 
 > 远端接续：最终提交的 Web/PWA 与公开网站验证已通过；Windows 作者检查、lint、两轮原生前缀与 ZIP 构建通过；旧档升级中的测试范围已修正，Windows 完整验收重新接续。详见 [候选检查点](production/CANDIDATE-v1.3.0.json)。

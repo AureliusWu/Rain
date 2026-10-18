@@ -1,3 +1,13 @@
+# v1.3.0 正式发布与在线原包闭环完成 — 2026-10-18
+
+[正式 v1.3.0](https://github.com/AureliusWu/Rain/releases/tag/v1.3.0) 已公开，Windows / 官方 WASM 原始 ZIP 绑定同一冻结提交 `cf8e0b5`。Windows 源码及独立 EXE 各37用例、487断言、85截图；真实 v1.1.0 旧档升级与16项实际 WASM 检查通过。发布运行39134956684成功，四个公开资产已独立下载核对大小、SHA-256，两个ZIP的CRC和全部校验表条目通过。
+
+后续发布支持触发重建造成在线字节漂移，已用正式 Web ZIP 原字节重新部署；[39138941116](https://github.com/AureliusWu/Rain/actions/runs/39138941116) 完成公开 worker 精确哈希、真实存读档、中文历史检索和断网续读，revision `f2056c1dfda36e3e68704314`、0页面错误。文档与发布支持现排除普通 Web 重建，正式下载未替换。
+
+本轮工程交付完成。真人试听、阅读计时、普通电脑/中文路径/DPI、物理设备与创作定案继续按实际体验留待后续。详见 [完整发行记录](production/PUBLISHED-v1.3.0.json)、[闭环说明](production/RELEASE-CLOSURE-v1.3.0.md) 和 [统一真人后续](HUMAN_HANDOFF.md)。下方较早的候选状态为历史记录。
+
+---
+
 # 当前断点：v1.2.2 正式发布与回读完成 — 2026-10-16
 
 代码已合并 main，[正式 v1.2.2](https://github.com/AureliusWu/Rain/releases/tag/v1.2.2) 与 [公开 PWA](https://aureliuswu.github.io/Rain/) 均已交付。[发布运行 38861929614](https://github.com/AureliusWu/Rain/actions/runs/38861929614) 成功；原生完整运行、PWA / 公网离线验收、最终工件取回、四个正式资产匿名下载 / SHA-256 / CRC 和当前 worker 字节核对均已关闭。游戏 / tag 为 `15d87ef`，原准备 `93c4714`，完成 `a5f0fdf`；这次只归档真实证据，没有重建已发布包。
