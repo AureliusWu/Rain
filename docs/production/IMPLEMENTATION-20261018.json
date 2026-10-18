@@ -3,8 +3,8 @@
   "date": "2026-10-18",
   "version": "1.3.0",
   "parent": "b6f8f3d88dbe011fccb291cbb86e8660adfa9def",
-  "status": "local_candidate_verified_remote_pending",
-  "pythonTests": 180,
+  "status": "web_verified_legacy_upgrade_test_corrected_revalidation_pending",
+  "pythonTests": 181,
   "renpyLint": "passed",
   "native": {
     "status": "passed",
@@ -156,7 +156,7 @@
     "scripts/pwa-native-browser.mjs": "943672c6ed5a19c4837f6208f73e9631c8522e1696464a8371ed71f33bc78b83",
     "scripts/pwa-smoke.mjs": "97a936022396c39423638c9c6c01bf60694ce9fba851fa71752781c120664d4a",
     "tests/pwa-progress.test.mjs": "fb9385467cf92b7ac788c712e0c5939df67d2faddd01428f610cf61a3ab8be85",
-    "tests/test_bookmarks.py": "2736cd740c90c2468c8d144ed5692d96952260271bfb4959efd3f1fe3222675d",
+    "tests/test_bookmarks.py": "a350560cba3ca0bd1fb4edd755882b3265a1a2ccb1584c5df05414409ed77849",
     "tests/test_export_review.py": "42c442b2f5ac5520cbca8c25d00a677f9bc9f7ca0e565263f52ecffd2975df46",
     "tests/test_generated_checks.py": "69e1a87d1ae419ae2ae8f18c2752b4ef6f942d6c85cfd75b00eb6408b6756c05",
     "tests/test_history_search.py": "e1cd9b727f1acafd452a5b55307d39c64cd56af600c67c0ea324bda3c5534151",
@@ -166,18 +166,19 @@
     "tools/build/subset_pwa_font.py": "158ad6f99a181e7753516d1681bcc38a51bcc681caba33fa3005d49d821974a0",
     "tools/build/web.py": "0f98ca135c7c45c5a033de8dfb2a9e7dabe9ed1b070d97fa32213b3ddb83740b",
     "tools/compile_story.py": "5deb1ae2e08a4aa3465105e3668dbee5be36e52813e6aa03a2e407609200a193",
-    "tools/compile_tests.py": "e5a6c57fdc9fe5125ad6aa269441d29a36c7ca0279d3060c1c3c4d65a34ca115",
-    "tests/test_publish_v122.py": "dc30e89addbfd2a45ca540edea15142d99859de7713d9159f20bd52766d5d380"
+    "tools/compile_tests.py": "907a2a560ddd7d8e0549158b261b7c4f170bb86216e3a176de5cceb5cd6d0500",
+    "tests/test_publish_v122.py": "dc30e89addbfd2a45ca540edea15142d99859de7713d9159f20bd52766d5d380",
+    "tools/build/verify_upgrade.py": "77379ee4611390da5800a5e264f823cd2f5c66e1837c2042670216e95f8bb5de"
   },
   "pending": [
-    "complete Windows native suite and upgrade",
-    "candidate public deployment verification",
-    "new version-specific formal publication evidence",
+    "current main Windows revalidation, old-save upgrade, complete native suites and audit",
+    "version-specific formal publication evidence",
     "physical device, listening, measured reading time and creative review"
   ],
   "windowsFirstRun": {
     "runId": 39106156651,
     "result": "failed authoring hash fixtures before native execution",
     "fix": "two isolated test repositories explicitly disable core.autocrlf; production validators unchanged"
-  }
+  },
+  "remoteCheckpoint": "CANDIDATE-v1.3.0.json"
 }

@@ -66,3 +66,14 @@ class BookmarkTests(unittest.TestCase):
         self.assertEqual(ast.literal_eval(payload),self.catalog)
         runtime=(ROOT/'game/bookmarks.rpy').read_text()
         self.assertNotIn('game/data',runtime);self.assertNotIn('renpy.file(',runtime)
+
+    def test_new_bookmark_persistence_is_not_required_from_a_pre_bookmark_release(self):
+        from tools.compile_tests import render_persistence_tests
+        from tools.build.verify_upgrade import render_upgrade_reader
+        current = render_persistence_tests(self.story)
+        legacy = render_upgrade_reader(self.story)
+        self.assertIn('assert eval rain_is_bookmarked("s01_arrival_l005")', current)
+        self.assertNotIn('rain_is_bookmarked', legacy)
+        self.assertIn('renpy.can_load("1-2")', legacy)
+        self.assertIn('renpy.can_load("1-4")', legacy)
+        self.assertIn('renpy.music.get_playing(channel="voice")', legacy)

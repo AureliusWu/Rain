@@ -47,7 +47,7 @@ def checkpoint_assertions(story, route, line_id, selected, background, expressio
     ]
 
 
-def render_persistence_tests(story):
+def render_persistence_tests(story, *, include_bookmarks=True):
     """A second EXE process reads the first process's real late-story slot."""
     route = enumerate_routes(story)['routes'][0]
     line = next(x for n in story['nodes'] for x in scene_lines(n) if x['id'] == 's07_true_l006')
@@ -68,7 +68,7 @@ def render_persistence_tests(story):
         '',
         'testcase cross_process_load:',
         *extras_persistence_assertions(),
-        '    assert eval rain_is_bookmarked("s01_arrival_l005")',
+        *(['    assert eval rain_is_bookmarked("s01_arrival_l005")'] if include_bookmarks else []),
         '    assert eval renpy.can_load("1-2")',
         '    click id "load_open"',
         '    pause until screen "load"',

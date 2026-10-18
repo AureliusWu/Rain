@@ -1,0 +1,80 @@
+{
+  "schema": 1,
+  "checkedAt": "2026-10-18T07:17:02Z",
+  "version": "1.3.0",
+  "runtimeCommit": "cb4676378eb8972c48539ed92e0a36941c046cda",
+  "status": "web_verified_legacy_upgrade_test_corrected_revalidation_pending",
+  "web": {
+    "runId": 39106420334,
+    "conclusion": "success",
+    "localChecks": 16,
+    "publicUrl": "https://aureliuswu.github.io/Rain/",
+    "artifacts": [
+      {
+        "id": 12128751668,
+        "name": "Rain-Web-1ed619489332316d8b64de648be79afab1a2a1c5",
+        "bytes": 55363685,
+        "digest": "sha256:a474a84f594253bf82c33c29c8e861f947cbd2b5e6ef573db81a45ac316a3010"
+      },
+      {
+        "id": 12128663065,
+        "name": "Rain-Public-PWA-1ed619489332316d8b64de648be79afab1a2a1c5-1",
+        "bytes": 3352748,
+        "digest": "sha256:b8077fc16c59c9875cd37e152d4a351f773f1a26812f6cdd948742d81f616de9"
+      },
+      {
+        "id": 12128203093,
+        "name": "github-pages-39106420334-1",
+        "bytes": 48065869,
+        "digest": "sha256:06b6a82ac397050a759d74e724a68d6c7bc0d805cf8af52acf6f4790644a4513"
+      },
+      {
+        "id": 12127779081,
+        "name": "Rain-Reusable-Materials-1ed619489332316d8b64de648be79afab1a2a1c5",
+        "bytes": 8322434,
+        "digest": "sha256:fbd8c99220c8a705a5a60628c8f80cc22b170463ce757d500e9e1d9afac86b57"
+      }
+    ]
+  },
+  "windows": {
+    "runId": 39106420356,
+    "conclusion": "failure",
+    "authorTests": 180,
+    "lint": "passed",
+    "prefix": {
+      "iterations": 2,
+      "casesEach": 7,
+      "assertionsEach": 142,
+      "screenshotsEach": 32,
+      "status": "passed"
+    },
+    "step": "legacy reader was incorrectly required to contain a new-version bookmark",
+    "artifacts": [
+      {
+        "id": 12128572336,
+        "name": "extras-prefix-1ed619489332316d8b64de648be79afab1a2a1c5",
+        "bytes": 26419001,
+        "digest": "sha256:81bf12dab465a22b14172c1b4e4dcfd4e415e17c443fc3071d4d3390002a8add"
+      }
+    ],
+    "upgrade": {
+      "oldWriter": "passed 14 assertions",
+      "newReader": "failed the incorrectly shared bookmark assertion; later testcase timed out as a consequence",
+      "fix": "include_bookmarks=False only for pre-bookmark upgrade plans; all original save, voice, picture and unlock assertions retained"
+    }
+  },
+  "formalRelease": "v1.2.2 remains current",
+  "pending": [
+    "current main Windows revalidation, old-save upgrade, complete source/EXE suites and audit",
+    "version-specific publication preparation",
+    "human listening, physical device and creative review"
+  ],
+  "previousValidationCommit": "1ed619489332316d8b64de648be79afab1a2a1c5",
+  "supportFix": {
+    "pythonTests": 181,
+    "generatedChecks": "passed",
+    "sharedMaterials": "passed",
+    "playerRuntimeChanged": false,
+    "regression": "current-to-current reader still requires saved bookmarks; v1.1 upgrade reader does not"
+  }
+}

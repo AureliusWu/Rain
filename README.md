@@ -1,3 +1,5 @@
+> 远端接续：最终提交的 Web/PWA 与公开网站验证已通过；Windows 作者检查、lint、两轮原生前缀与 ZIP 构建通过；旧档升级中的测试范围已修正，Windows 完整验收重新接续。详见 [候选检查点](docs/production/CANDIDATE-v1.3.0.json)。
+
 > 2026-10-18：**v1.3.0 阅读收藏与离线进度候选已实现，完整远端验收接续中。** [本轮实现与验证](docs/production/IMPLEMENTATION-20261018.md)。正式下载仍为 v1.2.2；当前候选不覆盖原发行资产。
 
 > 2026-10-16：**v1.2.2 双平台正式版已发布。** [在线游玩](https://aureliuswu.github.io/Rain/) · [Windows / Web 下载](https://github.com/AureliusWu/Rain/releases/tag/v1.2.2) · [本次完整发布记录](docs/production/PUBLISHED-v1.2.2.json)。四个公开资产与成功 CI 原字节一致，当前公网 PWA 的 worker 也已逐字节核对。 本轮更新与推送的最终核验见 [闭环回执](docs/production/RELEASE-CLOSURE-20261017.md)。 下一版目标与四仓交流见 [更新规划](docs/production/FOUR-GAMES-NEXT-20261017.md)。

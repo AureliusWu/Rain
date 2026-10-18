@@ -25,7 +25,7 @@ def render_upgrade_writer(story):
     route = enumerate_routes(story)['routes'][0]
     dialogue = {line['id']: line for node in story['nodes'] for line in scene_lines(node)}
     choices = {choice['id']: choice for node in story['nodes'] for choice in node.get('choices', [])}
-    setup = render_persistence_tests(story).split('testcase cross_process_load:')[0]
+    setup = render_persistence_tests(story, include_bookmarks=False).split('testcase cross_process_load:')[0]
     setup = setup.replace('reports/persistence-screenshots', 'reports/upgrade-screenshots')
     setup = setup.replace('_test.timeout = 15.0', '_test.timeout = 45.0')
     lines = ['testcase create_previous_saves:', '    click id "menu_start"',
@@ -85,7 +85,9 @@ def render_upgrade_reader(story):
              # the audio thread with a same-frame assertion.
              '    $ print("Old-save history close:", config.fadeout_audio, renpy.music.get_playing(channel="voice"))',
              '    assert eval (not renpy.get_screen("history") and renpy.music.get_playing(channel="voice") is None) timeout 1.0', '']
-    return render_persistence_tests(story) + '\n\n' + '\n'.join(lines)
+    # The old EXE has no bookmark feature. Current-to-current persistence proves
+    # bookmark survival separately; legacy upgrades retain every original check.
+    return render_persistence_tests(story, include_bookmarks=False) + '\n\n' + '\n'.join(lines)
 
 
 def extract_package(file, destination, version):
