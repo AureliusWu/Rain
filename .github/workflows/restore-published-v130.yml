@@ -1,5 +1,8 @@
 name: Restore exact published v1.3.0 PWA
 on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/restore-published-v130.yml']
   workflow_run:
     workflows: ['Native RenPy PWA and shared materials']
     branches: [main]
@@ -15,7 +18,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   restore:
-    if: github.event_name == 'workflow_dispatch' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push' && github.event.workflow_run.head_repository.full_name == github.repository)
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push' && github.event.workflow_run.head_repository.full_name == github.repository)
     runs-on: ubuntu-latest
     timeout-minutes: 15
     environment:
@@ -64,13 +67,13 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         if: steps.stage.outputs.ready == 'true'
         with:
-          name: rain-published-v130-${{ github.run_id }}
+          name: rain-published-v130-${{ github.run_id }}-${{ github.run_attempt }}
           path: dist/web
       - uses: actions/deploy-pages@v4
         if: steps.stage.outputs.ready == 'true'
         id: deployment
         with:
-          artifact_name: rain-published-v130-${{ github.run_id }}
+          artifact_name: rain-published-v130-${{ github.run_id }}-${{ github.run_attempt }}
       - uses: actions/setup-node@v4
         if: steps.stage.outputs.ready == 'true'
         with:
@@ -83,12 +86,19 @@ jobs:
           PWA_EXPECTED_REVISION: ${{ steps.stage.outputs.revision }}
         run: |
           python - <<'PY'
-          import hashlib,json,os,urllib.request
+          import hashlib,json,os,time,urllib.request
           from pathlib import Path
           url='https://aureliuswu.github.io/Rain/service-worker.js'
           expected=Path('dist/web/service-worker.js').read_bytes()
-          actual=urllib.request.urlopen(urllib.request.Request(url+'?verify='+os.environ['GITHUB_RUN_ID'],headers={'Cache-Control':'no-cache'}),timeout=60).read()
-          assert actual==expected,'Published worker differs from immutable release'
+          actual=b''
+          print('Expected published worker SHA-256:',hashlib.sha256(expected).hexdigest(),flush=True)
+          for attempt in range(30):
+              request=urllib.request.Request(url+'?verify='+os.environ['GITHUB_RUN_ID']+'-'+str(attempt),headers={'Cache-Control':'no-cache','Pragma':'no-cache'})
+              actual=urllib.request.urlopen(request,timeout=60).read()
+              if actual==expected:break
+              time.sleep(2)
+          print('Observed published worker SHA-256:',hashlib.sha256(actual).hexdigest(),flush=True)
+          assert actual==expected,'Published worker differs from immutable release after bounded propagation wait'
           out=Path('reports/published-pwa-promotion.json');out.parent.mkdir(exist_ok=True)
           out.write_text(json.dumps({'status':'exact_published_bytes','version':'1.3.0','release':'v1.3.0','workerSha256':hashlib.sha256(actual).hexdigest(),'runtimeCommit':'cf8e0b5ae61b90815eb0f3a16188493e89c1fd05'})+'\n')
           PY
@@ -98,7 +108,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always() && steps.stage.outputs.ready == 'true'
         with:
-          name: Rain-Published-PWA-v130-${{ github.run_id }}
+          name: Rain-Published-PWA-v130-${{ github.run_id }}-${{ github.run_attempt }}
           path: |
             reports/published-pwa-promotion.json
             reports/public-pwa/
