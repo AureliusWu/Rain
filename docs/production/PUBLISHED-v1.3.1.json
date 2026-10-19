@@ -1,0 +1,123 @@
+{
+  "status": "published_and_public_bytes_verified",
+  "version": "1.3.1",
+  "publication_commit": "b99642f7737864739361ff27bedd07983d8c4d4f",
+  "completion_commit": "b99642f7737864739361ff27bedd07983d8c4d4f",
+  "completion_authorization_sha256": "d3828aaef302625f36da4daefa85305929debb812f16e222c862b0ace61d9d88",
+  "runtime_commit": "f1b521db0c7c954a9245411b58438f344b5717f7",
+  "tag_commit": "f1b521db0c7c954a9245411b58438f344b5717f7",
+  "release_id": 416916242,
+  "prepared_metadata_artifact": null,
+  "release": "https://github.com/AureliusWu/Rain/releases/tag/v1.3.1",
+  "files": {
+    "BeforeTheRainStops-1.3.1-web.zip": {
+      "sha256": "86f7ef4888372e32aa916eed2b1a9bb0cc042690394a9bbf61aa01525d928181",
+      "bytes": 47945466,
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.3.1/BeforeTheRainStops-1.3.1-web.zip"
+    },
+    "BeforeTheRainStops-1.3.1-win.zip": {
+      "sha256": "91170f3a6d964ac436b5b8504516821236bc2c490435f29d687fe89940d415e3",
+      "bytes": 56325252,
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.3.1/BeforeTheRainStops-1.3.1-win.zip"
+    },
+    "RELEASE_METADATA.json": {
+      "sha256": "eb09296da845f728b6ee576b15137b754cf96a0bc46d0a904aa781d96c0d1011",
+      "bytes": 19894,
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.3.1/RELEASE_METADATA.json"
+    },
+    "SHA256SUMS.txt": {
+      "sha256": "c29ef7469c9d824d02ad42c9e9feb866727737818a449c8f5312e9169851f0c9",
+      "bytes": 286,
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.3.1/SHA256SUMS.txt"
+    }
+  },
+  "pwa_revision": "a254bfae80d6af5e9d54c0b2",
+  "current_public_worker": {
+    "url": "https://aureliuswu.github.io/Rain/service-worker.js",
+    "revision": "a254bfae80d6af5e9d54c0b2",
+    "sha256": "6f4ccb8967c88640e0afbd70b4230d1ed1f7b530eb97e99ff3e0205cd62cff3f",
+    "bytes": 7675,
+    "status": "exact_tested_bytes_verified"
+  },
+  "human_pending": [
+    "ordinary_windows",
+    "display_dpi",
+    "listening",
+    "creative_and_freeze",
+    "reading_time"
+  ],
+  "human_acceptance_claimed": false,
+  "checkedDate": "2026-10-19",
+  "nativeRun": 39197411208,
+  "pwaRun": 39197411207,
+  "publicationRun": 39202170966,
+  "nativeSuites": {
+    "source": {
+      "cases": 37,
+      "assertions": 494,
+      "screenshots": 86
+    },
+    "standalone": {
+      "cases": 37,
+      "assertions": 494,
+      "screenshots": 86
+    },
+    "freshProcess": {
+      "cases": 1,
+      "assertions": 17,
+      "screenshots": 3
+    },
+    "legacyWriter": {
+      "cases": 1,
+      "assertions": 14,
+      "screenshots": 3
+    },
+    "legacyReader": {
+      "cases": 2,
+      "assertions": 26,
+      "screenshots": 4
+    },
+    "voiceAndBookmarkPrefix": {
+      "iterations": 2,
+      "casesPerIteration": 7,
+      "assertionsPerIteration": 149,
+      "screenshotsPerIteration": 33
+    }
+  },
+  "rawPngAudit": 182,
+  "gameAssetsAudited": 85,
+  "pythonTestsAtRuntimeCommit": 200,
+  "publicationContractTests": 34,
+  "pwaBrowserChecks": 16,
+  "releaseAssets": [
+    {
+      "id": 655282370,
+      "name": "BeforeTheRainStops-1.3.1-web.zip",
+      "bytes": 47945466,
+      "digest": "sha256:86f7ef4888372e32aa916eed2b1a9bb0cc042690394a9bbf61aa01525d928181",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.3.1/BeforeTheRainStops-1.3.1-web.zip"
+    },
+    {
+      "id": 655282374,
+      "name": "BeforeTheRainStops-1.3.1-win.zip",
+      "bytes": 56325252,
+      "digest": "sha256:91170f3a6d964ac436b5b8504516821236bc2c490435f29d687fe89940d415e3",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.3.1/BeforeTheRainStops-1.3.1-win.zip"
+    },
+    {
+      "id": 655282371,
+      "name": "RELEASE_METADATA.json",
+      "bytes": 19894,
+      "digest": "sha256:eb09296da845f728b6ee576b15137b754cf96a0bc46d0a904aa781d96c0d1011",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.3.1/RELEASE_METADATA.json"
+    },
+    {
+      "id": 655282372,
+      "name": "SHA256SUMS.txt",
+      "bytes": 286,
+      "digest": "sha256:c29ef7469c9d824d02ad42c9e9feb866727737818a449c8f5312e9169851f0c9",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.3.1/SHA256SUMS.txt"
+    }
+  ],
+  "humanAcceptanceClaimed": false
+}

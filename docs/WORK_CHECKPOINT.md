@@ -1,3 +1,15 @@
+# v1.3.1 正式发布与下载核验完成 · 2026-10-19
+
+收藏支持关键词、人物与章节交叉检索，显示匹配数量；清除筛选、重听与删除保留当前剧情位置。
+
+[原生 Windows 39197411208](https://github.com/AureliusWu/Rain/actions/runs/39197411208)、[官方 WASM / PWA 39197411207](https://github.com/AureliusWu/Rain/actions/runs/39197411207)、[同字节正式发布 39202170966](https://github.com/AureliusWu/Rain/actions/runs/39202170966) 均成功。
+
+源码与独立 EXE 各 37 用例、494 断言、86 截图；两次语音/收藏前缀各 7 / 149 / 33，182 张原始 PNG 和 85 项资产审计通过，真实 v1.1.0 旧档升级通过。四份公开文件已实际下载，SHA-256、两个 ZIP 及当前公开 Worker 均与同次验收原包匹配。冻结运行 / tag 为 f1b521db0c7c954a9245411b58438f344b5717f7，发布支持提交为 b99642f7737864739361ff27bedd07983d8c4d4f。
+
+真人试听、阅读计时、普通电脑 / 中文路径 / DPI、物理设备和创作定案继续按实际体验登记。[精确发布凭据](production/PUBLISHED-v1.3.1.json)。下方较早候选与历史记录按日期保留。
+
+---
+
 # v1.3.0 正式发布与在线原包闭环完成 — 2026-10-18
 
 [正式 v1.3.0](https://github.com/AureliusWu/Rain/releases/tag/v1.3.0) 已公开，Windows / 官方 WASM 原始 ZIP 绑定同一冻结提交 `cf8e0b5`。Windows 源码及独立 EXE 各37用例、487断言、85截图；真实 v1.1.0 旧档升级与16项实际 WASM 检查通过。发布运行39134956684成功，四个公开资产已独立下载核对大小、SHA-256，两个ZIP的CRC和全部校验表条目通过。

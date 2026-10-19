@@ -1,12 +1,16 @@
+> 2026-10-19：**v1.3.1 已正式发布**，Windows、官方 WASM/PWA、真实旧档升级与公开原包核验通过。[下载](https://github.com/AureliusWu/Rain/releases/tag/v1.3.1) · [发布凭据](docs/production/PUBLISHED-v1.3.1.json)。
+
 # 雨停之前 / Before the Rain Stops
 
-**v1.3.0 正式版：Windows 离线 EXE + 同引擎官方 WebAssembly PWA。**
+**v1.3.1 正式版：Windows 离线 EXE + 同引擎官方 WebAssembly PWA。**
 
-[在线游玩](https://aureliuswu.github.io/Rain/) · [正式下载](https://github.com/AureliusWu/Rain/releases/tag/v1.3.0) · [Windows ZIP](https://github.com/AureliusWu/Rain/releases/download/v1.3.0/BeforeTheRainStops-1.3.0-win.zip) · [Web ZIP](https://github.com/AureliusWu/Rain/releases/download/v1.3.0/BeforeTheRainStops-1.3.0-web.zip) · [校验表](https://github.com/AureliusWu/Rain/releases/download/v1.3.0/SHA256SUMS.txt)
+[在线游玩](https://aureliuswu.github.io/Rain/) · [正式下载](https://github.com/AureliusWu/Rain/releases/tag/v1.3.1) · [Windows ZIP](https://github.com/AureliusWu/Rain/releases/download/v1.3.1/BeforeTheRainStops-1.3.1-win.zip) · [Web ZIP](https://github.com/AureliusWu/Rain/releases/download/v1.3.1/BeforeTheRainStops-1.3.1-web.zip) · [校验表](https://github.com/AureliusWu/Rain/releases/download/v1.3.1/SHA256SUMS.txt)
 
 雨夜旧车站，两位久未联系的旧友，和一封没有寄出的信。六章、24个叙事场景、四次选择、16条路线与Normal / True两个结局；沿用560个台词ID、17句离线录音及原有v1存档身份。
 
-## v1.3.0 阅读与离线体验
+## v1.3.1 阅读与离线体验
+
+- 收藏新增关键词、人物与章节交叉检索，支持数量、无结果提示和统一清除；网页输入保护每次独立面板会话。
 
 - 历史记录保留关键词、人物筛选，增加章节筛选和已读台词收藏。
 - 独立收藏列表可查看、删除及重听原录音；查阅和重听保持当前剧情位置。
@@ -21,7 +25,13 @@
 
 PWA首次保持联网，等待完整离线下载成功后再断网。左上角支持原生存档ZIP导入/导出；浏览器与Windows各自保存本机进度。原生存档目录继续使用AureliusWu-BeforeTheRainStops-v1。关闭或清理站点前可导出备份。
 
-## 本版验收与发布
+## v1.3.1 本版验收与发布
+
+[原生 Windows 39197411208](https://github.com/AureliusWu/Rain/actions/runs/39197411208)、[官方 WASM / PWA 39197411207](https://github.com/AureliusWu/Rain/actions/runs/39197411207)、[同字节正式发布 39202170966](https://github.com/AureliusWu/Rain/actions/runs/39202170966) 均成功。
+
+Windows 源码与独立 EXE 各 37 用例 / 494 断言 / 86 截图，两轮语音与收藏前缀各 7 / 149 / 33，真实旧档升级、182 PNG / 85 资产和 16 项官方 WASM 检查通过。直接提升该次原始 ZIP，四份公开下载及当前 Worker 已回读 SHA-256；冻结运行和 tag 为 `f1b521db0c7c954a9245411b58438f344b5717f7`。真人后续保持原真实状态，详见 [发布凭据](docs/production/PUBLISHED-v1.3.1.json)。
+
+## v1.3.0 历史验收与发布
 
 冻结运行提交：cf8e0b5ae61b90815eb0f3a16188493e89c1fd05。
 
@@ -50,4 +60,4 @@ Ren’Py 8.5.3、Python 3.12。game/data/story.json是剧情唯一来源；改�
 
 原素材、Prompt、台词、许可证和摘要保留于assets_source、prompts、game/data、CREDITS.md及licenses。17句当前录音由固定Qwen3-TTS模型离线生成，模型及推理依赖不进入玩家包。
 
-[本版说明](docs/RELEASE_NOTES_V130.md) · [v1.2.2历史发布](docs/production/PUBLISHED-v1.2.2.json) · [v1.1.1历史发布](docs/evidence/v111-publication.json) · [工作检查点](docs/WORK_CHECKPOINT.md)
+[本版说明](docs/RELEASE_NOTES_V131.md) · [v1.2.2历史发布](docs/production/PUBLISHED-v1.2.2.json) · [v1.1.1历史发布](docs/evidence/v111-publication.json) · [工作检查点](docs/WORK_CHECKPOINT.md)
