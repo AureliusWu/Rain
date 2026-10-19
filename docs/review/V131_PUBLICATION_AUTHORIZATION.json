@@ -17,7 +17,7 @@
     "reading_time"
   ],
   "support_sha256": {
-    ".github/workflows/release-v131.yml": "5340e8bc4adfae9a5f254c77d47fb58acb931308f78a2f7cabf591ea969b34e6",
+    ".github/workflows/release-v131.yml": "66ed749031c0b9ecc8142f3c9e21104bdf6bf5576ddee20ec550ed3337078d00",
     "tools/publish_v131.py": "40862656984372f1c640894035f9f8403d8cc9ab5bd8891ba58fee662f22a8c6",
     "tests/test_publish_v131.py": "090cd8ebb6cb1bc32f595a0cb7dbdf59be60cf03a37ff3bea313bb948c1885cd"
   },
@@ -26,12 +26,12 @@
     "native_run": {
       "id": 39197411208,
       "artifact_attempt": 1,
-      "status": "pending_current_run"
+      "status": "require_completed_success_before_publication"
     },
     "pwa_run": {
       "id": 39197411207,
       "attempt": 1,
-      "status": "pending_current_run"
+      "status": "complete_success_including_public_pages"
     }
   },
   "old_releases_preserved": true,
