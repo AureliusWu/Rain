@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "repository": "AureliusWu/Rain",
+  "version": "1.3.1",
+  "runtime_baseline": "f1b521db0c7c954a9245411b58438f344b5717f7",
+  "publication_authorized": true,
+  "user_instruction": "完成发布版本更新闭环",
+  "requested_at": "2026-10-19",
+  "source": "Standing user instruction: 完成发布版本更新闭环; current continuation: 继续推进. Promote only the new passed candidate and preserve existing downloads.",
+  "condition": "Promote only exact successful same-runtime native and official WASM CI bytes, with full original audit and public worker verification.",
+  "human_acceptance_claimed": false,
+  "human_pending": [
+    "ordinary_windows",
+    "display_dpi",
+    "listening",
+    "creative_and_freeze",
+    "reading_time"
+  ],
+  "support_sha256": {
+    ".github/workflows/release-v131.yml": "5340e8bc4adfae9a5f254c77d47fb58acb931308f78a2f7cabf591ea969b34e6",
+    "tools/publish_v131.py": "40862656984372f1c640894035f9f8403d8cc9ab5bd8891ba58fee662f22a8c6",
+    "tests/test_publish_v131.py": "090cd8ebb6cb1bc32f595a0cb7dbdf59be60cf03a37ff3bea313bb948c1885cd"
+  },
+  "runtime_validation": {
+    "commit": "f1b521db0c7c954a9245411b58438f344b5717f7",
+    "native_run": {
+      "id": 39197411208,
+      "artifact_attempt": 1,
+      "status": "pending_current_run"
+    },
+    "pwa_run": {
+      "id": 39197411207,
+      "attempt": 1,
+      "status": "pending_current_run"
+    }
+  },
+  "old_releases_preserved": true,
+  "tag_policy": "Create v1.3.1 only; never replace tags or release assets."
+}
