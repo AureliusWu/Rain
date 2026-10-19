@@ -4174,7 +4174,7 @@
           "role": "recipe",
           "path": "tools/build/pwa/client.js",
           "encoding": "text-lf",
-          "sha256": "f1f0e2c1d91a9bb56ca0543292f84d8b012385a5ae633847fac66ca28f4f376d"
+          "sha256": "7c46cdbb983cb0ad3398bc78f542f1db254648d1c0df95f6eabb907fa64b9779"
         },
         {
           "role": "recipe",
@@ -4246,7 +4246,7 @@
           "role": "recipe",
           "path": "docs/production/READ-HISTORY.md",
           "encoding": "text-lf",
-          "sha256": "d56162182346d6eaecc6d8a31557b27cc11609c5c8316f96f3e9086f9a4471c5"
+          "sha256": "2d9070b6dee781321f9ef80839e8f7eb296a16a4c48a1d7787646ad05cf39c30"
         },
         {
           "role": "recipe",
@@ -4258,7 +4258,7 @@
           "role": "recipe",
           "path": "game/history_search.rpy",
           "encoding": "text-lf",
-          "sha256": "3246b467775cf9096864365bcdc0ba36f12ef802e23718156c6a4f6a0474bb3b"
+          "sha256": "b7a35e6cc118665ea02685336a8c12bdebdadbbe3b66922f4097e00bb0b78c6e"
         }
       ]
     }

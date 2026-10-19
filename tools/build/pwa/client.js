@@ -61,7 +61,7 @@
                 const revision = queryRevision;
                 const sentAtRequest = lastSent;
                 const idleAtRequest = !writing && !composing && lastSent === latestQuery;
-                const info = await window.renpy_get('[bool(renpy.get_screen("history")), renpy.get_screen("history").scope.get("history_session", "") if renpy.get_screen("history") else "", renpy.get_screen("history").scope.get("history_query", "") if renpy.get_screen("history") else ""]');
+                const info = await window.renpy_get('rain_search_panel_info()');
                 searchControls.hidden = !info?.[0];
                 if (searchControls.hidden) {
                     historySession = null;

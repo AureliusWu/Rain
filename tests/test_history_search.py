@@ -40,9 +40,10 @@ class NativeHistoryPanelTests(unittest.TestCase):
     def setUp(self):
         self.scope = {"history_query": "出门", "history_speaker": "许澄", "history_chapter": "ch01", "history_session": "current-panel"}
         self.screen = SimpleNamespace(scope=self.scope)
+        self.active = "history"
         self.stops, self.restarts = [], []
         renpy = SimpleNamespace(
-            get_screen=lambda name: self.screen,
+            get_screen=lambda name: self.screen if name == self.active else None,
             set_screen_variable=lambda name, value, **kwargs: self.scope.__setitem__(name, value),
             restart_interaction=lambda: self.restarts.append(True),
             music=SimpleNamespace(stop=lambda **kwargs: self.stops.append(kwargs)),
@@ -79,3 +80,18 @@ class NativeHistoryPanelTests(unittest.TestCase):
         value.set_text("迟到")
         self.assertEqual(value.get_text(), "")
         self.assertEqual(self.scope["history_query"], "出门")
+
+    def test_bookmark_search_uses_its_own_panel_token_and_clear_resets_all_filters(self):
+        self.active = "rain_bookmarks"
+        self.scope["bookmark_chapter"] = self.scope.pop("history_chapter")
+        self.assertEqual(self.runtime["rain_search_panel_info"](), [True, "current-panel", "出门"])
+        value = self.runtime["RainHistoryInputValue"]("current-panel")
+        value.set_text("旧信")
+        self.assertEqual(value.get_text(), "旧信")
+        self.assertIsNone(self.runtime["rain_clear_history_filters"]("current-panel"))
+        self.assertEqual(self.scope["history_query"], "")
+        self.assertEqual(self.scope["history_speaker"], "")
+        self.assertEqual(self.scope["bookmark_chapter"], "")
+        self.scope["history_session"] = "new-panel"
+        value.set_text("迟到")
+        self.assertEqual(self.scope["history_query"], "")

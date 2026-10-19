@@ -26,8 +26,8 @@ init python:
         renpy.save_persistent()
         renpy.restart_interaction()
 
-    def rain_bookmark_rows(chapter=""):
-        return reading_bookmarks.bookmark_rows(persistent.rain_bookmarks_v1, RAIN_READING_CATALOG, chapter)
+    def rain_bookmark_rows(chapter="", query="", speaker=""):
+        return reading_bookmarks.bookmark_rows(persistent.rain_bookmarks_v1, RAIN_READING_CATALOG, chapter, query, speaker)
 
 screen rain_chapter_filter(variable):
     grid 3 3:
@@ -49,13 +49,44 @@ screen rain_chapter_filter(variable):
 screen rain_bookmarks():
     tag menu
     default bookmark_chapter = ""
+    default history_session = rain_history_session_token()
+    default history_query = ""
+    default history_speaker = ""
+    default history_input_value = RainHistoryInputValue(history_session)
     on "hide" action Stop("voice")
     on "replaced" action Stop("voice")
+    $ bookmark_rows = rain_bookmark_rows(bookmark_chapter, history_query, history_speaker)
     use game_menu("已读收藏"):
         vbox:
             spacing 18
             use rain_chapter_filter("bookmark_chapter")
             text "收藏只保留已经读过的原文；查看和重听不会推进剧情。" size 24
+            if renpy.variant("web"):
+                text "请在右上方输入关键词" size 26 color "#c1d7e1"
+            else:
+                input:
+                    id "bookmark_search"
+                    style "history_search_input"
+                    value history_input_value
+                    length 80
+            hbox:
+                spacing 12
+                textbutton "全部人物":
+                    id "bookmark_all_speakers"
+                    style "history_filter_button"
+                    selected history_speaker == ""
+                    action [Stop("voice"), SetScreenVariable("history_speaker", "")]
+                for who in dict.fromkeys(record["speaker"] for record in rain_bookmark_rows()):
+                    textbutton who:
+                        id ("bookmark_speaker_" + who)
+                        style "history_filter_button"
+                        selected history_speaker == who
+                        action [Stop("voice"), SetScreenVariable("history_speaker", who)]
+                textbutton "清除筛选":
+                    id "bookmark_clear"
+                    style "history_filter_button"
+                    action [Stop("voice"), Function(rain_clear_history_filters, history_session)]
+            text ("显示 %d / %d 条收藏" % (len(bookmark_rows), len(rain_bookmark_rows()))) size 24
             viewport:
                 yfill True
                 scrollbars "vertical"
@@ -63,7 +94,7 @@ screen rain_bookmarks():
                 draggable True
                 vbox:
                     spacing 18
-                    for record in rain_bookmark_rows(bookmark_chapter):
+                    for record in bookmark_rows:
                         frame:
                             xfill True
                             padding (18, 14)
@@ -80,5 +111,5 @@ screen rain_bookmarks():
                                         textbutton "重播语音":
                                             id ("bookmark_voice_" + record["id"])
                                             action PlayCharacterVoice(record["voice_tag"], record["voice"], selected=True)
-                    if not rain_bookmark_rows(bookmark_chapter):
-                        text "这一章还没有收藏。" size 28
+                    if not bookmark_rows:
+                        text ("没有找到这条收藏，可以换个关键词。" if rain_bookmark_rows() else "还没有收藏已读文字。") size 28

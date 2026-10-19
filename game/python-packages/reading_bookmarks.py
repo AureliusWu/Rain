@@ -1,6 +1,7 @@
 """Stable identities for native read records; no story or save mutation."""
 import math
 import time
+from replay_search import normalize_history_text
 SPEAKERS = {'n': '旁白', 'h': '许澄', 'p': '我'}
 
 
@@ -65,5 +66,9 @@ def toggle(value, identity, history, catalog, plain=lambda value: value, now=Non
     return records
 
 
-def bookmark_rows(value, catalog, chapter=''):
-    return [catalog[key] for key in clean_ids(value, catalog) if not chapter or catalog[key]['chapter'] == chapter]
+def bookmark_rows(value, catalog, chapter='', query='', speaker=''):
+    terms = normalize_history_text(query).split()
+    return [catalog[key] for key in clean_ids(value, catalog)
+        if (not chapter or catalog[key]['chapter'] == chapter)
+        and (not speaker or catalog[key]['speaker'] == speaker)
+        and all(term in normalize_history_text(catalog[key]['speaker'] + ' ' + catalog[key]['text']) for term in terms)]

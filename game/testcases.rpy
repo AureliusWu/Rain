@@ -196,6 +196,19 @@ testcase history_search_and_original_voice:
     click id "bookmark_chapter_ch05"
     assert eval not rain_bookmark_rows(renpy.get_screen("rain_bookmarks").scope["bookmark_chapter"])
     click id "bookmark_chapter_all"
+    $ _test.bookmark_panel_token = renpy.get_screen("rain_bookmarks").scope["history_session"]
+    assert eval rain_set_history_query("没有收藏的文字XYZ", _test.bookmark_panel_token)
+    assert eval not rain_bookmark_rows(query="没有收藏的文字XYZ")
+    assert not id ("bookmark_voice_" + _test.bookmark_id)
+    pause 0.3
+    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
+    screenshot "native-bookmark-no-match"
+    click id "bookmark_clear"
+    assert screen "rain_bookmarks"
+    assert eval renpy.get_screen("rain_bookmarks").scope["history_query"] == ""
+    click id "bookmark_speaker_许澄"
+    assert eval rain_set_history_query("出门", _test.bookmark_panel_token)
+    assert eval any(row["id"] == _test.bookmark_id for row in rain_bookmark_rows(query="出门", speaker="许澄"))
     click id ("bookmark_voice_" + _test.bookmark_id)
     assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
     assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == _test.history_search_state

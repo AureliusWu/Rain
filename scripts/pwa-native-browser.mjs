@@ -140,6 +140,17 @@ export async function verifyReadBookmarks(page, screenshotPath) {
     await clickId(page,'rain_bookmarks','bookmark_chapter_ch05');
     assert.equal(await get(page,'len(rain_bookmark_rows(renpy.get_screen("rain_bookmarks").scope["bookmark_chapter"]))'),0);
     await clickId(page,'rain_bookmarks','bookmark_chapter_all');
+    const input = page.getByRole('searchbox', { name: '搜索已读文字', exact: true });
+    await input.waitFor({state:'visible'});
+    await input.fill('没有收藏的文字XYZ');
+    await waitNative(page, 'renpy.get_screen("rain_bookmarks").scope["history_query"] == "没有收藏的文字XYZ"');
+    assert.equal(await get(page, 'len(renpy.get_screen("rain_bookmarks").scope["bookmark_rows"])'), 0);
+    await clickId(page,'rain_bookmarks','bookmark_clear');
+    await page.waitForFunction(() => document.getElementById('historyQuery').value === '');
+    const text = await get(page, `RAIN_READING_CATALOG[${JSON.stringify(identity)}]["text"]`);
+    await input.fill(text.slice(0, 4));
+    await waitNative(page, 'len(renpy.get_screen("rain_bookmarks").scope["bookmark_rows"]) > 0');
+    assert.ok((await get(page,'[row["id"] for row in renpy.get_screen("rain_bookmarks").scope["bookmark_rows"]]')).includes(identity));
     if(screenshotPath) await page.screenshot({path:screenshotPath});
     await clickId(page,'rain_bookmarks',`bookmark_remove_${identity}`);
     assert.equal(await get(page,`rain_is_bookmarked(${JSON.stringify(identity)})`),false);

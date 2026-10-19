@@ -59,6 +59,18 @@ class BookmarkTests(unittest.TestCase):
         for chapter in self.story['chapters']:
             rows=bookmarks.bookmark_rows(ids,self.catalog,chapter['id'])
             self.assertTrue(all(row['chapter']==chapter['id'] and row['id'] in ids for row in rows))
+    def test_text_speaker_and_chapter_filters_preserve_bookmark_and_voice_identity(self):
+        key = 's01_arrival_l005'
+        row = self.catalog[key]
+        saved = {key: [True, 1], 's01_arrival_l001': [False, 2]}
+        before = json.dumps(saved)
+        found = bookmarks.bookmark_rows(saved, self.catalog, row['chapter'], '  ' + row['text'][:5] + '\n许澄 ', '许澄')
+        self.assertEqual(found, [row])
+        self.assertIs(found[0], row)
+        self.assertEqual(found[0]['voice'], self.catalog[key]['voice'])
+        self.assertEqual(bookmarks.bookmark_rows(saved, self.catalog, query=row['text'][:5], speaker='我'), [])
+        self.assertEqual(bookmarks.bookmark_rows(saved, self.catalog, query='从未收藏XYZ'), [])
+        self.assertEqual(json.dumps(saved), before)
     def test_player_catalog_is_generated_from_the_source_without_runtime_author_json(self):
         generated=render_bookmarks(self.story,self.voices)
         self.assertEqual(generated,(ROOT/'game/script/bookmarks_generated.rpy').read_text())
