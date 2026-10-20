@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "repository": "AureliusWu/Rain",
+  "version": "1.4.0",
+  "runtime_baseline": "011f68e7b411caa3ec85d95813b163a3ac58b3d0",
+  "publication_authorized": true,
+  "user_instruction": "全部完成更新推送闭环",
+  "requested_at": "2026-10-20",
+  "source": "Standing user instruction from 2026-10-17: 全部完成更新推送闭环; current continuation: 继续推进四个项目，推进美术、音乐、CG and 继续. Promote only this new passed candidate and preserve existing downloads.",
+  "condition": "Promote only exact successful same-runtime native and official WASM CI bytes, with the complete 184-image audit, 87 packaged assets, six CGs/four tracks and exact current public worker readback.",
+  "human_acceptance_claimed": false,
+  "human_pending": [
+    "ordinary_windows",
+    "display_dpi",
+    "listening",
+    "creative_and_freeze",
+    "reading_time"
+  ],
+  "support_sha256": {
+    ".github/workflows/release-v140.yml": "256548402b5c9cadd7c73f764902cc78e2ed3bb6ce69d76ffecb65965210d730",
+    "tools/publish_v140.py": "a56b50934ab1e0a59253f2e1b4914d6454adb47caa868c407665131413a50b90",
+    "tests/test_publish_v140.py": "0c3f078d63dfcdb8860bc01dee6dbca5a8047d4c9b4cf4e84b17001117971636"
+  },
+  "runtime_validation": {
+    "commit": "011f68e7b411caa3ec85d95813b163a3ac58b3d0",
+    "native_run": {
+      "id": 39380866238,
+      "artifact_attempt": 1,
+      "status": "require_completed_success_before_publication"
+    },
+    "pwa_run": {
+      "id": 39380866141,
+      "attempt": 1,
+      "status": "complete_success_including_public_pages"
+    }
+  },
+  "old_releases_preserved": true,
+  "tag_policy": "Create v1.4.0 only; never replace tags or release assets."
+}

@@ -1,0 +1,43 @@
+name: Publish exact verified v1.4.0 Windows and PWA
+on:
+  workflow_run:
+    workflows: ['Game validation']
+    branches: [main]
+    types: [completed]
+  workflow_dispatch:
+concurrency:
+  group: formal-release-v140
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.event_name == 'workflow_dispatch' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_sha == '011f68e7b411caa3ec85d95813b163a3ac58b3d0' && github.event.workflow_run.event == 'push' && github.event.workflow_run.head_repository.full_name == github.repository)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      actions: read
+    env:
+      GH_TOKEN: ${{ github.token }}
+      PYTHONUTF8: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-dev.txt
+      - name: Publication contract tests
+        run: python -m unittest tests.test_publish_v140 tests.test_publish_v122
+      - name: Promote immutable passed native and PWA artifacts
+        run: python -m tools.publish_v140 --commit "${{ github.sha }}" --runtime-commit 011f68e7b411caa3ec85d95813b163a3ac58b3d0 --native-run 39380866238
+      - name: Upload exact publication evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Rain-v140-publication-${{ github.run_id }}
+          path: |
+            reports/v140-publication.json
+            .runtime/publish-v140/release/RELEASE_METADATA.json
+            .runtime/publish-v140/release/SHA256SUMS.txt
+          if-no-files-found: warn

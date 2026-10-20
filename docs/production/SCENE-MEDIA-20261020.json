@@ -2,21 +2,33 @@
   "date": "2026-10-20",
   "project": "Rain",
   "version": "1.4.0",
-  "status": "runtime_passed_audit_export_fix_retesting",
+  "status": "pwa_passed_native_current_validation_running_publication_bound",
   "cgManifest": "docs/art/cafe-photo-manifest.json",
   "musicManifest": "docs/audio/cafe-photo-score-manifest.json",
   "tests": {
-    "local_logic_or_python": 222,
+    "local_logic_or_python": 239,
     "passed": true,
     "browser": "official WASM / PWA and public native browser checks passed",
     "windows": "current source and standalone EXE each passed 37 cases / 498 assertions / 87 screenshots; old-save upgrade and fresh-process load passed; final exporter failed stale asset count",
     "humanListening": "pending",
-    "artFinalChoice": "pending"
+    "artFinalChoice": "pending",
+    "currentPwa": "CI 39380866141 completed success including actual published checks",
+    "currentNative": "CI 39380866238 in progress; no final audit or new release success claimed"
   },
   "compatibility": "Stable scene/line IDs, choices, recorded lines and save identity retained",
   "limits": "Earlier release evidence is historical, not validation for this candidate.",
   "authoringValidation": "222 local Python tests and all author validators passed",
   "nativeRun": 39370350441,
   "webRun": 39370350447,
-  "runtimeCommit": "29fe3c8eba43fe253813cdb8b3985ff65c026916"
+  "runtimeCommit": "29fe3c8eba43fe253813cdb8b3985ff65c026916",
+  "publication": {
+    "workflow": ".github/workflows/release-v140.yml",
+    "runtimeCommit": "011f68e7b411caa3ec85d95813b163a3ac58b3d0",
+    "nativeRun": 39380866238,
+    "pwaRun": 39380866141,
+    "requiredNativeAssets": 87,
+    "requiredNativeOriginalScreenshots": 184,
+    "currentFormalDownload": "v1.3.1",
+    "trigger": "Only after exact current Game validation completes successfully"
+  }
 }
