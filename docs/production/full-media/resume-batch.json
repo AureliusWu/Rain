@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "project": "Rain",
+  "batch": "20261020-continue-verified-01",
+  "count": 306,
+  "semanticSha256": "43ef805dc1a881d5fc4736841c0ebee358707ee7db17982ece91fb23437104dd",
+  "attemptOffset": 3,
+  "reuse": "byte-verified accepted takes only",
+  "humanListening": false
+}
