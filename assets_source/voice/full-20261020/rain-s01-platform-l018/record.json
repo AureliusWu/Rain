@@ -1,0 +1,55 @@
+{
+  "id": "rain-s01-platform-l018",
+  "sceneId": "s01_platform",
+  "lineId": "s01_platform_l018",
+  "lineIndex": 17,
+  "speaker": "h",
+  "text": "先别急。还要签字。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 487258133,
+  "textSha256": "61657afca8e2ce65f031f87ca128005d53de6ae6ca9e4c630e03b22643e32119",
+  "medium": "spoken",
+  "requestSha256": "df265a43ee9e41bf4692539ce37b6b06769c3fd34c3b0086cb9a15d6c0d0bfba",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "嫌别急 还要签字",
+    "cer": 0.142857,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.0,
+  "wallSeconds": 83.76,
+  "loudness": {
+    "input_i": "-23.11",
+    "input_tp": "-7.37",
+    "input_lra": "0.00",
+    "input_thresh": "-33.91",
+    "output_i": "-19.98",
+    "output_tp": "-4.26",
+    "output_lra": "0.00",
+    "output_thresh": "-30.77",
+    "normalization_type": "linear",
+    "target_offset": "-0.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s01-platform-l018/raw.wav",
+      "bytes": 192080,
+      "sha256": "25c6808e51fb8b9220e6afa061c11cb16dca005b6d1169a0a1fe9264276dbe3f"
+    },
+    "master": {
+      "path": "rain-s01-platform-l018/master.wav",
+      "bytes": 96078,
+      "sha256": "a8b06904e3a48f40819344b91a44e4cdf05cbd0808d884ff144635150fd7439e"
+    },
+    "runtime": {
+      "path": "rain-s01-platform-l018/runtime.ogg",
+      "bytes": 18033,
+      "sha256": "ccdf289f9a6bd4a699da43cdc60ec924fdeae0f11a61dd87ab2141fcf66bb403"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

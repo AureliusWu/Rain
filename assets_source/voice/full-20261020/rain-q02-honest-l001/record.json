@@ -1,0 +1,56 @@
+{
+  "id": "rain-q02-honest-l001",
+  "sceneId": "s03_letter",
+  "lineId": "q02_honest_l001",
+  "lineIndex": 0,
+  "speaker": "p",
+  "text": "是我写给你的。出发前一天。",
+  "choiceId": "q02_honest",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 12149368,
+  "textSha256": "02e7b97b31f7cff9d48310c61b143f2d79ebd804f0ba2e29a5d55b4784b443ed",
+  "medium": "spoken",
+  "requestSha256": "1d61473522697bb6cf619bbf6ebd714824f6d7aaccd03b87c5017796370a7889",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "是我協给你的出发前一天",
+    "cer": 0.090909,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.56,
+  "wallSeconds": 293.83,
+  "loudness": {
+    "input_i": "-24.64",
+    "input_tp": "-7.80",
+    "input_lra": "0.00",
+    "input_thresh": "-34.83",
+    "output_i": "-19.99",
+    "output_tp": "-3.16",
+    "output_lra": "0.00",
+    "output_thresh": "-30.18",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-q02-honest-l001/raw.wav",
+      "bytes": 245840,
+      "sha256": "aa8cc5045b9f3cf3a50adf8cac331dd1224bfdb6adb568a158fd266ea93f518c"
+    },
+    "master": {
+      "path": "rain-q02-honest-l001/master.wav",
+      "bytes": 122958,
+      "sha256": "c63cda39bedd60d10260fd58a17ef6e415a281705c550c86d0a2647b0f0a1e76"
+    },
+    "runtime": {
+      "path": "rain-q02-honest-l001/runtime.ogg",
+      "bytes": 22257,
+      "sha256": "f5e24d7988e4f0b81e2403c32d93fc63606831056ece943573cd550259ccf169"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

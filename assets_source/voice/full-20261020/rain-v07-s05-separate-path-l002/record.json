@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s05-separate-path-l002",
+  "sceneId": "s05_separate_path",
+  "lineId": "v07_s05_separate_path_l002",
+  "lineIndex": 5,
+  "speaker": "p",
+  "text": "找到了，已经发给司机。明早从新站走，不用再回来。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1304954461,
+  "textSha256": "2bfb6e48726a868b023334d359660694c09efb12e0a8d3b6c88f8c6687c1e669",
+  "medium": "spoken",
+  "requestSha256": "80b10627f218e76bf890816d20cd19de2305f59dcfb03ee03a5e52c8ec2c9d06",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "找到了,已经发给司机,明早重新站走,不用再回来",
+    "cer": 0.05,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.8,
+  "wallSeconds": 268.197,
+  "loudness": {
+    "input_i": "-29.57",
+    "input_tp": "-9.11",
+    "input_lra": "3.40",
+    "input_thresh": "-39.68",
+    "output_i": "-20.83",
+    "output_tp": "-2.00",
+    "output_lra": "2.00",
+    "output_thresh": "-31.01",
+    "normalization_type": "dynamic",
+    "target_offset": "0.83"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s05-separate-path-l002/raw.wav",
+      "bytes": 460880,
+      "sha256": "1ccf2a39d5ecaa04630bed30ea9e7b63453640b93d08795c251f633021e436cb"
+    },
+    "master": {
+      "path": "rain-v07-s05-separate-path-l002/master.wav",
+      "bytes": 230478,
+      "sha256": "39980cf3cea2d07d1b28225a1ebb5bc6384e4fe0c08be015fa21ce84d3937934"
+    },
+    "runtime": {
+      "path": "rain-v07-s05-separate-path-l002/runtime.ogg",
+      "bytes": 39452,
+      "sha256": "5deb98e8a2c00b67635c9bd2ac83725e4bc81bd8783bbd1fdc6a3305cc9ca1c4"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

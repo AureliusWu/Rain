@@ -1,0 +1,55 @@
+{
+  "id": "rain-s01-platform-l021",
+  "sceneId": "s01_platform",
+  "lineId": "s01_platform_l021",
+  "lineIndex": 20,
+  "speaker": "p",
+  "text": "你来拿的是照片？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1665128188,
+  "textSha256": "c894706db44a4476434c4341c9b5de06420986919683a849b88aaed9b78b5830",
+  "medium": "spoken",
+  "requestSha256": "ffe476f642cfac70fde5e07220455fec16e5c08a174f2bf6ebc2bbd981363304",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你来拿的是照片",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.36,
+  "wallSeconds": 15.686,
+  "loudness": {
+    "input_i": "-25.36",
+    "input_tp": "-7.82",
+    "input_lra": "0.00",
+    "input_thresh": "-35.36",
+    "output_i": "-19.99",
+    "output_tp": "-2.46",
+    "output_lra": "0.00",
+    "output_thresh": "-29.99",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s01-platform-l021/raw.wav",
+      "bytes": 130640,
+      "sha256": "0a2cb491bc5a50dbe692725e2760e8e9be529cec956b3ae869eb14ca4daabcd6"
+    },
+    "master": {
+      "path": "rain-s01-platform-l021/master.wav",
+      "bytes": 65358,
+      "sha256": "fa504316b259033141768b1d8427ab3db9bcd09baf63cd07e7085335c23ecc37"
+    },
+    "runtime": {
+      "path": "rain-s01-platform-l021/runtime.ogg",
+      "bytes": 14880,
+      "sha256": "6595984dfd0dcee9407b083aa21e10ffb1d70f3dea6be80437b3a18554bb2973"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

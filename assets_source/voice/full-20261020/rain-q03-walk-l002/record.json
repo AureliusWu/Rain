@@ -1,0 +1,56 @@
+{
+  "id": "rain-q03-walk-l002",
+  "sceneId": "s05_departure",
+  "lineId": "q03_walk_l002",
+  "lineIndex": 1,
+  "speaker": "h",
+  "text": "你拿左边。我不想再湿一次袖口。",
+  "choiceId": "q03_walk",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1634014605,
+  "textSha256": "a43fac603a114ebad85818d19c3c2a9480d0bb72870b084876b2ebeb09f8bb7e",
+  "medium": "spoken",
+  "requestSha256": "f0e6627fb6af6ff8c64a188ec10cf962830b9dafb6c7e061cbeb442b74b52d6a",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你拿左邊我不想再失一次袖口",
+    "cer": 0.076923,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.0,
+  "wallSeconds": 17.534,
+  "loudness": {
+    "input_i": "-30.17",
+    "input_tp": "-13.55",
+    "input_lra": "1.00",
+    "input_thresh": "-41.08",
+    "output_i": "-18.59",
+    "output_tp": "-2.00",
+    "output_lra": "0.90",
+    "output_thresh": "-29.38",
+    "normalization_type": "dynamic",
+    "target_offset": "-1.41"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-q03-walk-l002/raw.wav",
+      "bytes": 384080,
+      "sha256": "7c2db87e159a9100a3c0f28d3afa86655953cee655dd6735f9b0725c1166c1d4"
+    },
+    "master": {
+      "path": "rain-q03-walk-l002/master.wav",
+      "bytes": 192078,
+      "sha256": "e6582a09e4915ffcb43149f7bd38ea1c230b14de5ca1e26226cce25236e861f0"
+    },
+    "runtime": {
+      "path": "rain-q03-walk-l002/runtime.ogg",
+      "bytes": 31193,
+      "sha256": "a1a084d41e232114289b79fa4960da61d492008b978d7345b1aeb6c709d34e4f"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

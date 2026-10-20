@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-reserved-l012",
+  "sceneId": "s04_reserved",
+  "lineId": "s04_reserved_l012",
+  "lineIndex": 11,
+  "speaker": "h",
+  "text": "我知道。我们是碰巧遇见。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 378662562,
+  "textSha256": "8bef697cffed94e88a60271857fcd3c020fb4e9cf66084c2162c2276e2351e85",
+  "medium": "spoken",
+  "requestSha256": "3d6809d7f443adc406471e930def9526ee8d1c7e619a28281e71f431b4639e03",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我知道,我们是碰巧遇见。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.52,
+  "wallSeconds": 183.332,
+  "loudness": {
+    "input_i": "-24.75",
+    "input_tp": "-7.86",
+    "input_lra": "2.30",
+    "input_thresh": "-35.25",
+    "output_i": "-19.38",
+    "output_tp": "-3.24",
+    "output_lra": "0.00",
+    "output_thresh": "-29.85",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.62"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-reserved-l012/raw.wav",
+      "bytes": 338000,
+      "sha256": "0aa202f312b9db4ecabe40ba6ea80670d1b92ba54b565362f2f164bcac33886b"
+    },
+    "master": {
+      "path": "rain-s04-reserved-l012/master.wav",
+      "bytes": 169038,
+      "sha256": "a8c3dad662a8177551368a5d256e85c090bb6a8488c5d8e65c20765fddd44ebd"
+    },
+    "runtime": {
+      "path": "rain-s04-reserved-l012/runtime.ogg",
+      "bytes": 27341,
+      "sha256": "e3dc7c0a64eeba231df0d36494d70d847f612a2e11343744f02f5691a42c3c32"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

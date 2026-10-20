@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-boxes-l026",
+  "sceneId": "s02_boxes",
+  "lineId": "s02_boxes_l026",
+  "lineIndex": 25,
+  "speaker": "h",
+  "text": "不在。所以我才想先问你。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 679583997,
+  "textSha256": "8dd28f6da923c77628e95e7aefdc63d5c47782c2469fac6752c808a003eae5b4",
+  "medium": "spoken",
+  "requestSha256": "9a81057b97908e876f952690bcc61a0343e34e1f8af656f2130e542688d74632",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "不在,所以我才想先問你",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.4,
+  "wallSeconds": 120.64,
+  "loudness": {
+    "input_i": "-26.96",
+    "input_tp": "-13.03",
+    "input_lra": "0.00",
+    "input_thresh": "-37.45",
+    "output_i": "-19.99",
+    "output_tp": "-6.07",
+    "output_lra": "0.00",
+    "output_thresh": "-30.49",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-boxes-l026/raw.wav",
+      "bytes": 230480,
+      "sha256": "e3ff2d03588f2ab27453c7e8d57853420679b862bcb2804ce03742d05f5406a3"
+    },
+    "master": {
+      "path": "rain-s02-boxes-l026/master.wav",
+      "bytes": 115278,
+      "sha256": "7d9289f497876747b2e931f0ad97b0d3d5a35f542858bef0ace5eac34aa69f86"
+    },
+    "runtime": {
+      "path": "rain-s02-boxes-l026/runtime.ogg",
+      "bytes": 20363,
+      "sha256": "196b34fbf1e94e5c80603a9221122040b639b43956ea295024f3fe2ad3ac5031"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

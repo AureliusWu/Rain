@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-boxes-l017",
+  "sceneId": "s02_boxes",
+  "lineId": "s02_boxes_l017",
+  "lineIndex": 16,
+  "speaker": "p",
+  "text": "留言册呢？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 43433626,
+  "textSha256": "87993a05478a73de916d84b293275d4a06d38e680e9272bc8d53961c411ef079",
+  "medium": "spoken",
+  "requestSha256": "f8a92c7ae692457c3dc6c60bbc7450020ac675a83ce972a74489e9d033fc136f",
+  "attempt": 1,
+  "status": "accepted",
+  "asr": {
+    "transcript": "留言册呢",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 0.96,
+  "wallSeconds": 55.863,
+  "loudness": {
+    "input_i": "-21.99",
+    "input_tp": "-6.75",
+    "input_lra": "0.00",
+    "input_thresh": "-31.99",
+    "output_i": "-19.99",
+    "output_tp": "-4.76",
+    "output_lra": "0.00",
+    "output_thresh": "-29.99",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-boxes-l017/raw.wav",
+      "bytes": 92240,
+      "sha256": "514674134dde14dcf49747efaa5b294af291c39b8fc3d03c17cb3eba8ffdb9b2"
+    },
+    "master": {
+      "path": "rain-s02-boxes-l017/master.wav",
+      "bytes": 46158,
+      "sha256": "98b088e863ef61b293b93c3880288cb2eac3b25b53459de45e8660c10d27e63c"
+    },
+    "runtime": {
+      "path": "rain-s02-boxes-l017/runtime.ogg",
+      "bytes": 10575,
+      "sha256": "e38d7b4257ca846c4b5a80ad4c725bd8ea6577eef74a7b0a9113fc0a566453d2"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

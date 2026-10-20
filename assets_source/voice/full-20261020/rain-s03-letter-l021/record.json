@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-letter-l021",
+  "sceneId": "s03_letter",
+  "lineId": "s03_letter_l021",
+  "lineIndex": 20,
+  "speaker": "p",
+  "text": "谢谢。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 998240728,
+  "textSha256": "19a187a36d1dd155afb108686943263ef974a2e6103d87f7041b71e5201b7e56",
+  "medium": "spoken",
+  "requestSha256": "4955631673b9cfd90caf8b150486225acbe04b48f0c1a0450636e7ae47cacbf0",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "謝謝",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 0.72,
+  "wallSeconds": 29.98,
+  "loudness": {
+    "input_i": "-20.63",
+    "input_tp": "-4.75",
+    "input_lra": "0.00",
+    "input_thresh": "-30.63",
+    "output_i": "-20.03",
+    "output_tp": "-4.12",
+    "output_lra": "0.00",
+    "output_thresh": "-30.03",
+    "normalization_type": "linear",
+    "target_offset": "0.03"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-letter-l021/raw.wav",
+      "bytes": 69200,
+      "sha256": "2008f2d58d8d1c895f2f9baf6afe5c377d7edadd8c5e90b7d0d4d782907217a2"
+    },
+    "master": {
+      "path": "rain-s03-letter-l021/master.wav",
+      "bytes": 34638,
+      "sha256": "486ee3619fe02fe83f5a04b76fd1010938d3e6170182fc3030a51bc08a43da00"
+    },
+    "runtime": {
+      "path": "rain-s03-letter-l021/runtime.ogg",
+      "bytes": 8505,
+      "sha256": "828ef69a0833b05c53a8e06433b237f2441e420c341911f8b928324481341f6e"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

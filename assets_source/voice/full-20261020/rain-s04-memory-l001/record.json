@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-memory-l001",
+  "sceneId": "s04_memory",
+  "lineId": "s04_memory_l001",
+  "lineIndex": 0,
+  "speaker": "p",
+  "text": "另一张照片，是什么时候拍的？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 590420776,
+  "textSha256": "9b37b85ad6d8d028b4fa4185b74e6cdf0fc277c36e506100f16bcb1d1356be49",
+  "medium": "spoken",
+  "requestSha256": "bd26c52f0979222e10028982dca9092146dd14859ca8f17f13e558937624f1f1",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "另一张照片是什么时候拍的",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.24,
+  "wallSeconds": 120.708,
+  "loudness": {
+    "input_i": "-25.69",
+    "input_tp": "-7.46",
+    "input_lra": "0.00",
+    "input_thresh": "-35.69",
+    "output_i": "-20.24",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.24",
+    "normalization_type": "linear",
+    "target_offset": "0.24"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-memory-l001/raw.wav",
+      "bytes": 215120,
+      "sha256": "629b75f9473d5db0da38b18133dd0e4e342a3a883b7871159b54a7f81b2b1bc6"
+    },
+    "master": {
+      "path": "rain-s04-memory-l001/master.wav",
+      "bytes": 107598,
+      "sha256": "52b9117758ac556a1be500e6fd26164de42179c322fc2afa0577b924e813c3df"
+    },
+    "runtime": {
+      "path": "rain-s04-memory-l001/runtime.ogg",
+      "bytes": 20772,
+      "sha256": "b059b815ab0b1baf0c5c5dc619a494b1ba667c58432c3851ebd80d7a15d618b3"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

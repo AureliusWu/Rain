@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-boxes-l006",
+  "sceneId": "s02_boxes",
+  "lineId": "s02_boxes_l006",
+  "lineIndex": 5,
+  "speaker": "p",
+  "text": "原来都留着。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1719365789,
+  "textSha256": "cf5832442c7063be0399749f49e876e70880105dbc05e8406089459b1e3faa97",
+  "medium": "spoken",
+  "requestSha256": "70454be3040ecc4771eaa3bbb275936cde810c470c31f3eec0294bb775bbb27d",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "原来都留着",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.28,
+  "wallSeconds": 136.603,
+  "loudness": {
+    "input_i": "-24.26",
+    "input_tp": "-8.65",
+    "input_lra": "0.00",
+    "input_thresh": "-34.26",
+    "output_i": "-19.98",
+    "output_tp": "-4.39",
+    "output_lra": "0.00",
+    "output_thresh": "-29.98",
+    "normalization_type": "linear",
+    "target_offset": "-0.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-boxes-l006/raw.wav",
+      "bytes": 122960,
+      "sha256": "c8177ddf9bc90766d9366d77ebb42cb1790dc75228e1de81ce394d03f837d6b5"
+    },
+    "master": {
+      "path": "rain-s02-boxes-l006/master.wav",
+      "bytes": 61518,
+      "sha256": "b4cf018ecd10b65fa8f8ab12f3ad833433bb95b801e741490613555bc11c88f7"
+    },
+    "runtime": {
+      "path": "rain-s02-boxes-l006/runtime.ogg",
+      "bytes": 13347,
+      "sha256": "42055b8369a60a2bcf003b842138d3edafd3bfb4f5bf70add78f574545622979"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

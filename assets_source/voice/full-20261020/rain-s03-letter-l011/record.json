@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-letter-l011",
+  "sceneId": "s03_letter",
+  "lineId": "s03_letter_l011",
+  "lineIndex": 10,
+  "speaker": "h",
+  "text": "你不用现在打开。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 94008507,
+  "textSha256": "e3ae305e9ca1153375fa5c8a42cd05c11889d124884b4cbde480a4870f5e4f27",
+  "medium": "spoken",
+  "requestSha256": "4f04f246449d459170e8b024fab30e3777b4f4e9a1933eed3b16f9249ee25b63",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你不用现在打开",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.28,
+  "wallSeconds": 135.913,
+  "loudness": {
+    "input_i": "-25.57",
+    "input_tp": "-11.77",
+    "input_lra": "0.00",
+    "input_thresh": "-35.57",
+    "output_i": "-20.01",
+    "output_tp": "-6.20",
+    "output_lra": "0.00",
+    "output_thresh": "-30.01",
+    "normalization_type": "linear",
+    "target_offset": "0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-letter-l011/raw.wav",
+      "bytes": 122960,
+      "sha256": "a3d01bfc4ee79f0a636983907437294302542baa4af9351571e37e1c65bd2bcb"
+    },
+    "master": {
+      "path": "rain-s03-letter-l011/master.wav",
+      "bytes": 61518,
+      "sha256": "321b1b0865c478c1f7f9feb74ff892aee29a584ce307c276c1a00847400a136d"
+    },
+    "runtime": {
+      "path": "rain-s03-letter-l011/runtime.ogg",
+      "bytes": 13475,
+      "sha256": "84b6704211b97a857dd5d9001a4b527018b3474aaf6e530d1f3fc4526f2599ac"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

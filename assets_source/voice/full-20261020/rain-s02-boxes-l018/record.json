@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-boxes-l018",
+  "sceneId": "s02_boxes",
+  "lineId": "s02_boxes_l018",
+  "lineIndex": 17,
+  "speaker": "h",
+  "text": "你留着。里面大部分留言本来就是给那次展览的。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1924830169,
+  "textSha256": "1f3272e86023fbf66aa05495a24704c694827b64df2905b1448b60c24f2f031f",
+  "medium": "spoken",
+  "requestSha256": "51c2fbf4e5214d5c2ef31b82df90221c5056c13963c7c8ed17e1924e61216617",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你留着里面大部分留言本来就是给那次展览的",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.92,
+  "wallSeconds": 37.271,
+  "loudness": {
+    "input_i": "-25.82",
+    "input_tp": "-10.55",
+    "input_lra": "0.30",
+    "input_thresh": "-36.11",
+    "output_i": "-19.36",
+    "output_tp": "-4.09",
+    "output_lra": "0.00",
+    "output_thresh": "-29.77",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.64"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-boxes-l018/raw.wav",
+      "bytes": 376400,
+      "sha256": "53e845cb1b1927e5503e00cbdd5dc20b6eb06367f1c72763a25243b6dafe0135"
+    },
+    "master": {
+      "path": "rain-s02-boxes-l018/master.wav",
+      "bytes": 188238,
+      "sha256": "1a3030fc86b7e40182ede2c23c43bf1c726e465fe600bbaf42ead335d6753869"
+    },
+    "runtime": {
+      "path": "rain-s02-boxes-l018/runtime.ogg",
+      "bytes": 32346,
+      "sha256": "dc60b5039d7805403341d8e76c4160c1d4e084b5e3e293e819c66aa7bc5ba79b"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

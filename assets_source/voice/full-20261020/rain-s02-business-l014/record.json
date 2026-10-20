@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-business-l014",
+  "sceneId": "s02_business",
+  "lineId": "s02_business_l014",
+  "lineIndex": 13,
+  "speaker": "h",
+  "text": "还有确认外包装。底下如果湿了，可以现在换箱。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1295392953,
+  "textSha256": "e16ecebb1896848e0edfdf9a08e6fd069b0ebebc5562499d0d75cb5f765d3985",
+  "medium": "spoken",
+  "requestSha256": "f806c77dc397eb84e78610ad9823ee9af2cfb2d95ea1e3c8aa52067b124cf4b8",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "还有确认外包装,底下如果湿了,可以现在换箱。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.6,
+  "wallSeconds": 159.106,
+  "loudness": {
+    "input_i": "-23.13",
+    "input_tp": "-6.12",
+    "input_lra": "0.60",
+    "input_thresh": "-33.28",
+    "output_i": "-19.72",
+    "output_tp": "-2.87",
+    "output_lra": "0.00",
+    "output_thresh": "-29.87",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.28"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-business-l014/raw.wav",
+      "bytes": 345680,
+      "sha256": "b03f8ab1586b67375af6aff79d3abc9b9f6877aab00dc34acada311cec4eb1ec"
+    },
+    "master": {
+      "path": "rain-s02-business-l014/master.wav",
+      "bytes": 172878,
+      "sha256": "0801400f9ca8be554a2d3a5a74222bc832c100bfc3e90930da91922e29b68431"
+    },
+    "runtime": {
+      "path": "rain-s02-business-l014/runtime.ogg",
+      "bytes": 29554,
+      "sha256": "f0a46979352baf13642af1cc099339ab7cf22519b133bf2b2920976ef53018d8"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

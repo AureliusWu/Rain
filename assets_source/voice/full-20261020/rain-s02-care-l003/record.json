@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-care-l003",
+  "sceneId": "s02_care",
+  "lineId": "s02_care_l003",
+  "lineIndex": 2,
+  "speaker": "p",
+  "text": "那张总晃的桌子也搬了？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 195186774,
+  "textSha256": "4b8449fb2ea009fe2642e672cd85c85333e08f3a511dbfff93f5b4d7b4f35cd5",
+  "medium": "spoken",
+  "requestSha256": "cf605f354da2daa5bce228e3bda7d418625e15b4c7bd1b55d85b97a753bb5f62",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "张总晃的桌子也搬了",
+    "cer": 0.1,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.32,
+  "wallSeconds": 105.611,
+  "loudness": {
+    "input_i": "-23.37",
+    "input_tp": "-7.00",
+    "input_lra": "0.00",
+    "input_thresh": "-33.37",
+    "output_i": "-19.99",
+    "output_tp": "-3.63",
+    "output_lra": "0.00",
+    "output_thresh": "-29.99",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-care-l003/raw.wav",
+      "bytes": 222800,
+      "sha256": "049bf262097ad2bb210b0d3f4bd9d5d7b71dcb322a7fd92f2810e05fab078ec8"
+    },
+    "master": {
+      "path": "rain-s02-care-l003/master.wav",
+      "bytes": 111438,
+      "sha256": "dbad8a2049cbf1bb40f19578af759b526cb5d9454d320b87a8def7d3862d8555"
+    },
+    "runtime": {
+      "path": "rain-s02-care-l003/runtime.ogg",
+      "bytes": 22521,
+      "sha256": "b885d1943fb46da324bb87ba4813d8710ffdef9b4652983967083a173d4cd423"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

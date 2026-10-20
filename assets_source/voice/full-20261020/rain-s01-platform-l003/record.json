@@ -1,0 +1,55 @@
+{
+  "id": "rain-s01-platform-l003",
+  "sceneId": "s01_platform",
+  "lineId": "s01_platform_l003",
+  "lineIndex": 2,
+  "speaker": "h",
+  "text": "底下是干的。比你那只袋子可靠。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1286697396,
+  "textSha256": "0794ae10bb8a0e957380181ce760b8ea3526be7abe87f9c3fba7e1202b484fce",
+  "medium": "spoken",
+  "requestSha256": "d494d707d8cef1abd0edb529456dbf4f24d1322f3b69c88d76862db261ac013b",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "底下是干的比你那只袋子可靠",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.04,
+  "wallSeconds": 155.99,
+  "loudness": {
+    "input_i": "-24.50",
+    "input_tp": "-4.94",
+    "input_lra": "0.10",
+    "input_thresh": "-35.19",
+    "output_i": "-20.16",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.70",
+    "normalization_type": "dynamic",
+    "target_offset": "0.16"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s01-platform-l003/raw.wav",
+      "bytes": 291920,
+      "sha256": "d09ea72899936189969cd1028a45b7b4d6c6284c5f2d45151caac66b2adc7bda"
+    },
+    "master": {
+      "path": "rain-s01-platform-l003/master.wav",
+      "bytes": 145998,
+      "sha256": "18e2da92046f3b60fd72e6914b9f96cfbf124454d23e05b9bf9d833452a06c76"
+    },
+    "runtime": {
+      "path": "rain-s01-platform-l003/runtime.ogg",
+      "bytes": 24880,
+      "sha256": "01f851cef9c7588eedf08acd7e2378b65f33ce3072e217c9e7b3df64604db158"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

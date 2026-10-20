@@ -1,0 +1,56 @@
+{
+  "id": "rain-q03-walk-l001",
+  "sceneId": "s05_departure",
+  "lineId": "q03_walk_l001",
+  "lineIndex": 0,
+  "speaker": "p",
+  "text": "好。纸箱我提着，伞可以借我拿吗？",
+  "choiceId": "q03_walk",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1192181047,
+  "textSha256": "615be118d7a696aef84aa97be006f67167b819792b3f30a13891079b38adafc2",
+  "medium": "spoken",
+  "requestSha256": "540c7736dfe65d924be16812c4b421f6c0d4efe7a227f89ac93c4aeaeab17841",
+  "attempt": 2,
+  "status": "needs_review",
+  "asr": {
+    "transcript": "好 指向我提着 散可以借我拿吗",
+    "cer": 0.230769,
+    "polarityCountsMatch": true,
+    "passed": false
+  },
+  "duration": 3.44,
+  "wallSeconds": 115.557,
+  "loudness": {
+    "input_i": "-25.58",
+    "input_tp": "-5.93",
+    "input_lra": "1.00",
+    "input_thresh": "-35.87",
+    "output_i": "-20.00",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.42",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-q03-walk-l001/raw.wav",
+      "bytes": 330320,
+      "sha256": "05e398212a5014c0eaad6cb5a21404de95cfeb487ac2ea9c105e6582ab734251"
+    },
+    "master": {
+      "path": "rain-q03-walk-l001/master.wav",
+      "bytes": 165198,
+      "sha256": "87ad909582c3eaa85248b15008cf577f5b8c1078947de5581a871850b9c9085b"
+    },
+    "runtime": {
+      "path": "rain-q03-walk-l001/runtime.ogg",
+      "bytes": 29864,
+      "sha256": "fbcc480efcaf8c7fa29eb7dc65471b97af02681a38c00fa739fc72a043f73c4e"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

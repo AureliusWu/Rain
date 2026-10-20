@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s07-true-l009",
+  "sceneId": "s07_true",
+  "lineId": "v07_s07_true_l009",
+  "lineIndex": 23,
+  "speaker": "h",
+  "text": "拍照也行。带三脚架，别再拿报纸垫。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 654759234,
+  "textSha256": "4edebe10420064917bf91f4fe5c7ac196dd801efaa04eaf636507ea0adf13b36",
+  "medium": "spoken",
+  "requestSha256": "f09980b3178aa79bde39110f0ad5d650c502a777a364504b2704a5ef3375c1aa",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "拍照也行,戴三脚架,别再拿报纸垫。",
+    "cer": 0.071429,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.6,
+  "wallSeconds": 33.303,
+  "loudness": {
+    "input_i": "-23.45",
+    "input_tp": "-8.09",
+    "input_lra": "0.80",
+    "input_thresh": "-33.60",
+    "output_i": "-19.57",
+    "output_tp": "-4.48",
+    "output_lra": "0.00",
+    "output_thresh": "-29.85",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.43"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s07-true-l009/raw.wav",
+      "bytes": 345680,
+      "sha256": "0b83fafe17ff50ffb590aad11c40ceffe80612a2e22a0364ae0f02f1a6ae3ed2"
+    },
+    "master": {
+      "path": "rain-v07-s07-true-l009/master.wav",
+      "bytes": 172878,
+      "sha256": "0b19174260f168a3ebf42db423e5698d07ea244f12b5fd10ef52f40ae3f9071e"
+    },
+    "runtime": {
+      "path": "rain-v07-s07-true-l009/runtime.ogg",
+      "bytes": 29159,
+      "sha256": "598ca28693b23c96414a2a5003dc7eda428cd255716ffb487d4b953263602921"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

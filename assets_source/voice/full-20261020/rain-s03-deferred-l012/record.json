@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-deferred-l012",
+  "sceneId": "s03_deferred",
+  "lineId": "s03_deferred_l012",
+  "lineIndex": 11,
+  "speaker": "h",
+  "text": "你不用现在编一个完整版本。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1403169812,
+  "textSha256": "c0aac279f7aff8ec8b2418e1081400733faf695d48953cf928153485b945784a",
+  "medium": "spoken",
+  "requestSha256": "28a8d1b2e85d6a0b925afa20290028d5b607abec310e63de42f142c48c763d33",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你不用现在编一个完整版本。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.08,
+  "wallSeconds": 115.75,
+  "loudness": {
+    "input_i": "-23.49",
+    "input_tp": "-11.77",
+    "input_lra": "0.00",
+    "input_thresh": "-33.49",
+    "output_i": "-20.00",
+    "output_tp": "-8.29",
+    "output_lra": "0.00",
+    "output_thresh": "-30.00",
+    "normalization_type": "linear",
+    "target_offset": "0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-deferred-l012/raw.wav",
+      "bytes": 199760,
+      "sha256": "de121606a62a726fb63c39db31146d473f70bb6f835aa5bad4c67cfdc36cfc1d"
+    },
+    "master": {
+      "path": "rain-s03-deferred-l012/master.wav",
+      "bytes": 99918,
+      "sha256": "df178d30d426b87ffbfb2d5493f8c1ad8b91c1549866e1c49d6c4cc40ef6134a"
+    },
+    "runtime": {
+      "path": "rain-s03-deferred-l012/runtime.ogg",
+      "bytes": 19072,
+      "sha256": "45f964b8f1d872155dc5aad1104213ea0ddcac448138b0dfa3585f6833574bb5"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

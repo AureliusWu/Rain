@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s04-repair-l008",
+  "sceneId": "s04_repair",
+  "lineId": "v07_s04_repair_l008",
+  "lineIndex": 16,
+  "speaker": "p",
+  "text": "我也是。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 969098055,
+  "textSha256": "2226171f6d3e21eb41134bc608f6bc0d5dc15b63e696c35d68dbcbee1f6c00fc",
+  "medium": "spoken",
+  "requestSha256": "e0d4b9914a6682cad54066e1c82f137a20c7fa40b3153f39244cc8ea53698cdd",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我也是",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.04,
+  "wallSeconds": 45.515,
+  "loudness": {
+    "input_i": "-25.63",
+    "input_tp": "-9.47",
+    "input_lra": "0.00",
+    "input_thresh": "-35.63",
+    "output_i": "-19.99",
+    "output_tp": "-3.84",
+    "output_lra": "0.00",
+    "output_thresh": "-29.99",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s04-repair-l008/raw.wav",
+      "bytes": 99920,
+      "sha256": "f3548951c6e561181892c19f971c3f0adfc2df0771d58fb34ee9063a1213856b"
+    },
+    "master": {
+      "path": "rain-v07-s04-repair-l008/master.wav",
+      "bytes": 49998,
+      "sha256": "08b14adea35a93713fc6fc90ff56920ca1acdb560b02b107b49dc58f5046bd06"
+    },
+    "runtime": {
+      "path": "rain-v07-s04-repair-l008/runtime.ogg",
+      "bytes": 11196,
+      "sha256": "5461141d22249a34c741df820f8d84644ff28cf835efee38ac66814aa1674555"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

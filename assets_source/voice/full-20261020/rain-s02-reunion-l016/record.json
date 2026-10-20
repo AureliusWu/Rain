@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-reunion-l016",
+  "sceneId": "s02_reunion",
+  "lineId": "s02_reunion_l016",
+  "lineIndex": 15,
+  "speaker": "h",
+  "text": "还在这一行。店搬过一次，人也换了不少。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1959963962,
+  "textSha256": "cb9a90a596bba43926f167c8b85665fa8189c3f8fec6fced987f4d768bf6606e",
+  "medium": "spoken",
+  "requestSha256": "b2acfbaf2b89474155f95607ab35871ecdd76a1ba22b4d45e20c65c53ccc1352",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "还在这一行,店搬过一次,人也换了不少",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.68,
+  "wallSeconds": 206.725,
+  "loudness": {
+    "input_i": "-23.96",
+    "input_tp": "-8.54",
+    "input_lra": "0.70",
+    "input_thresh": "-34.12",
+    "output_i": "-19.38",
+    "output_tp": "-4.11",
+    "output_lra": "0.00",
+    "output_thresh": "-29.53",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.62"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-reunion-l016/raw.wav",
+      "bytes": 353360,
+      "sha256": "27472927a9fb5e1487c3525c7042f16980af4daa63414162e2edbd0817e6e131"
+    },
+    "master": {
+      "path": "rain-s02-reunion-l016/master.wav",
+      "bytes": 176718,
+      "sha256": "f7b8f9b96f6ccfec94baa8a04b4d2ef208e6160f399cb3b0c776fe392c47d758"
+    },
+    "runtime": {
+      "path": "rain-s02-reunion-l016/runtime.ogg",
+      "bytes": 29217,
+      "sha256": "01e6eed9835285829a85b81e1e760bdf60e6c89bf74356e2ba17d415b3ad86b6"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

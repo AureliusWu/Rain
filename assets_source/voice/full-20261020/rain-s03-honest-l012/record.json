@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-honest-l012",
+  "sceneId": "s03_honest",
+  "lineId": "s03_honest_l012",
+  "lineIndex": 11,
+  "speaker": "p",
+  "text": "写了。可我不敢写“你等我”，也不敢写“别等我”。我觉得哪一种都像替你做决定。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1908463743,
+  "textSha256": "db6f47f15f8e58b24faa7c0479cad7883f3d04adcbbde3049a58c3d617132463",
+  "medium": "spoken",
+  "requestSha256": "49570f2b3695bae7eee256103f7a74faa369d312fa8f627409a3a71c833a864f",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "且了,可我不敢写你等我,也不敢写别等我。我觉得哪一种都想替你做决定。",
+    "cer": 0.066667,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 7.76,
+  "wallSeconds": 247.521,
+  "loudness": {
+    "input_i": "-24.40",
+    "input_tp": "-6.41",
+    "input_lra": "1.90",
+    "input_thresh": "-34.99",
+    "output_i": "-20.18",
+    "output_tp": "-2.19",
+    "output_lra": "3.00",
+    "output_thresh": "-30.75",
+    "normalization_type": "dynamic",
+    "target_offset": "0.18"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-honest-l012/raw.wav",
+      "bytes": 745040,
+      "sha256": "aef9a6b3f70c4fa5bde85af98dbe26d991f2b098cb72a3043483fbf0c2348118"
+    },
+    "master": {
+      "path": "rain-s03-honest-l012/master.wav",
+      "bytes": 372558,
+      "sha256": "b19045bdeffbde77b1f8d8da5675d13b23e76949f66e42b8d28f34eefc1f4a2d"
+    },
+    "runtime": {
+      "path": "rain-s03-honest-l012/runtime.ogg",
+      "bytes": 61688,
+      "sha256": "869f820ae07469ea9ec79accc26093d9fc358b9ac74a143a50ebb6c3286d37b2"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

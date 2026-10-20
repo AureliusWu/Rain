@@ -1,0 +1,56 @@
+{
+  "id": "rain-q01-business-l002",
+  "sceneId": "s02_reunion",
+  "lineId": "q01_business_l002",
+  "lineIndex": 1,
+  "speaker": "h",
+  "text": "能。我刚问过。",
+  "choiceId": "q01_business",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 668486282,
+  "textSha256": "63ab85789d6b6fc91b2688bfef1972ce39a75abdb8b14fc457266ca4b1d86586",
+  "medium": "spoken",
+  "requestSha256": "9c51fe4698e7fb190323cf7e5d1c44620e795bab4afac16513b3665e37c935b7",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "能我剛問過",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.64,
+  "wallSeconds": 111.534,
+  "loudness": {
+    "input_i": "-20.33",
+    "input_tp": "-7.52",
+    "input_lra": "0.00",
+    "input_thresh": "-32.81",
+    "output_i": "-19.96",
+    "output_tp": "-7.18",
+    "output_lra": "0.00",
+    "output_thresh": "-32.43",
+    "normalization_type": "linear",
+    "target_offset": "-0.04"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-q01-business-l002/raw.wav",
+      "bytes": 253520,
+      "sha256": "27d8ca639671a9f19f6e6b8b1e9bc50a9d8eaf76fc5d788d39291ba16fa8b8c7"
+    },
+    "master": {
+      "path": "rain-q01-business-l002/master.wav",
+      "bytes": 126798,
+      "sha256": "1f6a37b4cda52d6230c6dc90fc5dcf5b7d680f90a08a2158ac20424450501667"
+    },
+    "runtime": {
+      "path": "rain-q01-business-l002/runtime.ogg",
+      "bytes": 20519,
+      "sha256": "8d2234a201d4d1df1b768b72fc6f8bed6b6435927e27bf78c8090cdfa8176c99"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

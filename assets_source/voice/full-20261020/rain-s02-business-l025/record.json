@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-business-l025",
+  "sceneId": "s02_business",
+  "lineId": "s02_business_l025",
+  "lineIndex": 24,
+  "speaker": "h",
+  "text": "你箱子搬过来以后，椅子还能坐两个人。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 157156893,
+  "textSha256": "45ed4893f1de4d1068fccbec1aaa7637d55401efd71ff595abf71b200807f176",
+  "medium": "spoken",
+  "requestSha256": "f63009393757390e83c2f9bbe87c1d716747b9180078bb60bcb15e9f58a4e130",
+  "attempt": 1,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你箱子搬过来以后椅子还能做两个人",
+    "cer": 0.0625,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.36,
+  "wallSeconds": 32.107,
+  "loudness": {
+    "input_i": "-24.78",
+    "input_tp": "-9.01",
+    "input_lra": "1.00",
+    "input_thresh": "-35.08",
+    "output_i": "-19.70",
+    "output_tp": "-4.27",
+    "output_lra": "0.00",
+    "output_thresh": "-30.00",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.30"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-business-l025/raw.wav",
+      "bytes": 322640,
+      "sha256": "a3aef80fedb0b0600906b2a683902a54af3b14ab66ffc81ba8a5020b6b3f48af"
+    },
+    "master": {
+      "path": "rain-s02-business-l025/master.wav",
+      "bytes": 161358,
+      "sha256": "08eda545ee6947b4561b66f3ab68793cc4dd0cfef7700266610598148fc6e571"
+    },
+    "runtime": {
+      "path": "rain-s02-business-l025/runtime.ogg",
+      "bytes": 27349,
+      "sha256": "b56c89de23a6c498225b6ab77826820835c09df169027549b1d3d8702b640b62"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

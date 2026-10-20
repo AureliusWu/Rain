@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-waiting-l020",
+  "sceneId": "s04_waiting",
+  "lineId": "s04_waiting_l020",
+  "lineIndex": 20,
+  "speaker": "h",
+  "text": "句号不算消息。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1793824740,
+  "textSha256": "6ec3f4c30fc438f54e9a36d70b331208e1269793d8b2fe0e2bb1ea3b6f2d2250",
+  "medium": "spoken",
+  "requestSha256": "f54269f9511e383545e3f07f4e56f9d8699b1f5fc8d66c8e1f4df95facf012b6",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "句號不算消息",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.36,
+  "wallSeconds": 56.007,
+  "loudness": {
+    "input_i": "-22.28",
+    "input_tp": "-6.59",
+    "input_lra": "0.00",
+    "input_thresh": "-32.28",
+    "output_i": "-20.04",
+    "output_tp": "-4.31",
+    "output_lra": "0.00",
+    "output_thresh": "-30.04",
+    "normalization_type": "linear",
+    "target_offset": "0.04"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-waiting-l020/raw.wav",
+      "bytes": 130640,
+      "sha256": "8a9f0975687c8822b313e610987ed8a0202a192b5ab6a375f00dfaa6b75472fe"
+    },
+    "master": {
+      "path": "rain-s04-waiting-l020/master.wav",
+      "bytes": 65358,
+      "sha256": "377224dc1d52dd6a0201028e5e4f65a2203c3d83e66e6a5a83eacb321b680d8a"
+    },
+    "runtime": {
+      "path": "rain-s04-waiting-l020/runtime.ogg",
+      "bytes": 14159,
+      "sha256": "0c7c2c7f06e5fcab658b6bed75a8db518e684fc49537e4e3a8cffb0885b85949"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

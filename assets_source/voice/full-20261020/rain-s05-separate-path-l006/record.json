@@ -1,0 +1,55 @@
+{
+  "id": "rain-s05-separate-path-l006",
+  "sceneId": "s05_separate_path",
+  "lineId": "s05_separate_path_l006",
+  "lineIndex": 10,
+  "speaker": "h",
+  "text": "看到了会回。路上慢一点。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 925328843,
+  "textSha256": "8b7b60dc48d5d26252416eda8557e400f188ba374902bd328d1bba2448c9916c",
+  "medium": "spoken",
+  "requestSha256": "5ac11d5c9617ddf6f364ebe2eada3a695a7c2887015c8ee2394fffd0b107e78e",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "看到了惠惠,路上慢一點",
+    "cer": 0.2,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.64,
+  "wallSeconds": 104.454,
+  "loudness": {
+    "input_i": "-28.40",
+    "input_tp": "-14.10",
+    "input_lra": "0.00",
+    "input_thresh": "-38.78",
+    "output_i": "-20.00",
+    "output_tp": "-5.70",
+    "output_lra": "0.00",
+    "output_thresh": "-30.38",
+    "normalization_type": "linear",
+    "target_offset": "-0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s05-separate-path-l006/raw.wav",
+      "bytes": 253520,
+      "sha256": "059c51e597c7e895a874e96490f91d1c7bcdee298f0f3c5cb8107ca8ba6082a1"
+    },
+    "master": {
+      "path": "rain-s05-separate-path-l006/master.wav",
+      "bytes": 126798,
+      "sha256": "19d1e819b8ec600f5af2307e6e838237d521cd38ea61bf284a5574b90f2c9f4a"
+    },
+    "runtime": {
+      "path": "rain-s05-separate-path-l006/runtime.ogg",
+      "bytes": 22137,
+      "sha256": "275eae3e3a527eb384a1cae134d6506cf49bb561b899286880567e46e711d0de"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

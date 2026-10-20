@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-care-l001",
+  "sceneId": "s02_care",
+  "lineId": "s02_care_l001",
+  "lineIndex": 0,
+  "speaker": "p",
+  "text": "还在原来那条街吗？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1766336811,
+  "textSha256": "1565377abfab2f1c9730310cc30633c1b0aa9071cf371ef3841c76eaab81f260",
+  "medium": "spoken",
+  "requestSha256": "cd5669eaa3ecb695eb139c145caef0501086f233afbd398e901eb1449f6a41c3",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "还在原来那条街吗",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.52,
+  "wallSeconds": 16.876,
+  "loudness": {
+    "input_i": "-24.86",
+    "input_tp": "-7.14",
+    "input_lra": "0.00",
+    "input_thresh": "-34.86",
+    "output_i": "-20.01",
+    "output_tp": "-2.28",
+    "output_lra": "0.00",
+    "output_thresh": "-30.01",
+    "normalization_type": "linear",
+    "target_offset": "0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-care-l001/raw.wav",
+      "bytes": 146000,
+      "sha256": "f2b1f59a58a6f32b2a96e96e86e3ecd2997885a44b4d67ff0adc9085bd63fb39"
+    },
+    "master": {
+      "path": "rain-s02-care-l001/master.wav",
+      "bytes": 73038,
+      "sha256": "713892c1a9c408a67013c9512352f05e3ca478caced3e9d48b6f8525fa600f34"
+    },
+    "runtime": {
+      "path": "rain-s02-care-l001/runtime.ogg",
+      "bytes": 14332,
+      "sha256": "525a6be632b597ebab43a474f916b15de10b95e45aa9187019d120fed2910040"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

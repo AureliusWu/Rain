@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-business-l017",
+  "sceneId": "s02_business",
+  "lineId": "s02_business_l017",
+  "lineIndex": 16,
+  "speaker": "p",
+  "text": "这样就算办完了。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 262892404,
+  "textSha256": "42d661a64ed02f6ad7a71524b349368b6dccbd109c645e1ed79609fe5f600a50",
+  "medium": "spoken",
+  "requestSha256": "25fc189de7798dcb715598f3e3b13ff26cb40cf4bed6c25032e8f368ed51e67f",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "这样就算办完了",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.28,
+  "wallSeconds": 137.996,
+  "loudness": {
+    "input_i": "-21.46",
+    "input_tp": "-4.92",
+    "input_lra": "0.00",
+    "input_thresh": "-31.46",
+    "output_i": "-20.02",
+    "output_tp": "-3.45",
+    "output_lra": "0.00",
+    "output_thresh": "-30.02",
+    "normalization_type": "linear",
+    "target_offset": "0.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-business-l017/raw.wav",
+      "bytes": 122960,
+      "sha256": "39eae115b2f8af5c4f43b6e88e28e9ff77de7e3147c4424c211bc6f9a5a191f0"
+    },
+    "master": {
+      "path": "rain-s02-business-l017/master.wav",
+      "bytes": 61518,
+      "sha256": "7e31f8848681b15b2aade33a2ca934e756d0664074d321e610f52f978109cde5"
+    },
+    "runtime": {
+      "path": "rain-s02-business-l017/runtime.ogg",
+      "bytes": 12477,
+      "sha256": "444680bbdb34990e769b855d5274487300788b221d5cd27d56391247e6dcf7d3"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

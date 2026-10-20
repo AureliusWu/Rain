@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-concrete-l003",
+  "sceneId": "s04_concrete",
+  "lineId": "s04_concrete_l003",
+  "lineIndex": 2,
+  "speaker": "p",
+  "text": "不用按点。你忙的时候，我也不会一直问。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 388914153,
+  "textSha256": "21a562b01999946f7618f146fb54e8089f52496f272e3e28f1239e2cf3c19da0",
+  "medium": "spoken",
+  "requestSha256": "6f7a418d769d4740e1446e6e7110ef517928a8679ffb557646e82bce781ca374",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "不用按点你忙的时候我也不会一直问",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.2,
+  "wallSeconds": 220.299,
+  "loudness": {
+    "input_i": "-22.21",
+    "input_tp": "-4.27",
+    "input_lra": "0.50",
+    "input_thresh": "-32.35",
+    "output_i": "-19.91",
+    "output_tp": "-2.13",
+    "output_lra": "0.00",
+    "output_thresh": "-30.05",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.09"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-concrete-l003/raw.wav",
+      "bytes": 307280,
+      "sha256": "b01fdc2828dc77d9df545fe474cd9333789bc41565a759eaa0f25787222c444c"
+    },
+    "master": {
+      "path": "rain-s04-concrete-l003/master.wav",
+      "bytes": 153678,
+      "sha256": "86d6790c60d7fcc9edab485ce1de75bd41df063a117ce5114e1ef736cfa1042a"
+    },
+    "runtime": {
+      "path": "rain-s04-concrete-l003/runtime.ogg",
+      "bytes": 28315,
+      "sha256": "87631e30f0fa231ce3bd3ab7948231217d7564c6611be074238e85811abd90cf"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

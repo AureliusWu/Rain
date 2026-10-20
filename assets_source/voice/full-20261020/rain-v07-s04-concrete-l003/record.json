@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s04-concrete-l003",
+  "sceneId": "s04_concrete",
+  "lineId": "v07_s04_concrete_l003",
+  "lineIndex": 5,
+  "speaker": "h",
+  "text": "别把留言册当小说读。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 350151703,
+  "textSha256": "d3db386e81b59d7875b0482465238fb57ad45f6677d8657da46af060a41901ed",
+  "medium": "spoken",
+  "requestSha256": "5d02ad86af2b7dfd68f73beae8a2ba65467b36f0691956f26f1d65c553b3357e",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "别把留言册当小说读",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.68,
+  "wallSeconds": 18.783,
+  "loudness": {
+    "input_i": "-21.24",
+    "input_tp": "-2.78",
+    "input_lra": "0.00",
+    "input_thresh": "-31.24",
+    "output_i": "-20.44",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.44",
+    "normalization_type": "linear",
+    "target_offset": "0.44"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s04-concrete-l003/raw.wav",
+      "bytes": 161360,
+      "sha256": "6dd8580ee0fbd86adf5c01134877d757436d3d86391d84c12c1c9f5482965e3d"
+    },
+    "master": {
+      "path": "rain-v07-s04-concrete-l003/master.wav",
+      "bytes": 80718,
+      "sha256": "e09f9136f637ccd265a5203260a08d921b435a66f2de64943ef1792b86a15326"
+    },
+    "runtime": {
+      "path": "rain-v07-s04-concrete-l003/runtime.ogg",
+      "bytes": 16308,
+      "sha256": "27abdc1283835cc13cb585184b5766a767d0d85502f2493205d6b546c815a16d"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

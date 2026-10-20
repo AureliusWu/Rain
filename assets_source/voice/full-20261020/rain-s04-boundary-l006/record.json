@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-boundary-l006",
+  "sceneId": "s04_boundary",
+  "lineId": "s04_boundary_l006",
+  "lineIndex": 12,
+  "speaker": "p",
+  "text": "我以为不说就不会让你为难。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1316130970,
+  "textSha256": "a9facc9ed7dafd26fe880e6be6f57c138289472213a4197534f36ad3b7be1fa2",
+  "medium": "spoken",
+  "requestSha256": "fce14922c9d6483b8f888382b7fe01f48b9577d240128175028e5b6ac2507246",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我以为不说就不会让你为难",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.24,
+  "wallSeconds": 10.516,
+  "loudness": {
+    "input_i": "-28.42",
+    "input_tp": "-11.51",
+    "input_lra": "0.00",
+    "input_thresh": "-38.42",
+    "output_i": "-19.99",
+    "output_tp": "-3.10",
+    "output_lra": "0.00",
+    "output_thresh": "-29.99",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-boundary-l006/raw.wav",
+      "bytes": 215120,
+      "sha256": "f8742cfeafc8d9fcc9ad2204ebffbe9c2c18cde6e4f35a1204ef0262151c0278"
+    },
+    "master": {
+      "path": "rain-s04-boundary-l006/master.wav",
+      "bytes": 107598,
+      "sha256": "d3fa2409110849a4bfa8bdef1a57623f387c21d06953619864643066722700d3"
+    },
+    "runtime": {
+      "path": "rain-s04-boundary-l006/runtime.ogg",
+      "bytes": 19729,
+      "sha256": "80b07dbbf1c775f6b05097647f1cffa512bbf6286462676c29be17a931ce9e60"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

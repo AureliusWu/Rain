@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-care-l007",
+  "sceneId": "s02_care",
+  "lineId": "s02_care_l007",
+  "lineIndex": 6,
+  "speaker": "h",
+  "text": "也没有。新架子很高，最上层的书每天都有人要。只是麻烦换了一种。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1594912524,
+  "textSha256": "c595340351243dca7f3f6008071dd5f96cb5ff8a49618a0e14f2e3d187e33a5f",
+  "medium": "spoken",
+  "requestSha256": "d990d1ecb709999248f7ead5a64b29bf659a80c63ea925a5c4e0ee9271754321",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "也没有新价值很高最上层的书每天都有人要只是麻烦换了一种",
+    "cer": 0.074074,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 10.08,
+  "wallSeconds": 647.203,
+  "loudness": {
+    "input_i": "-25.79",
+    "input_tp": "-11.36",
+    "input_lra": "5.70",
+    "input_thresh": "-37.21",
+    "output_i": "-19.76",
+    "output_tp": "-6.25",
+    "output_lra": "4.50",
+    "output_thresh": "-31.69",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.24"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-care-l007/raw.wav",
+      "bytes": 967760,
+      "sha256": "cafbbdf48f4430f98daef30eccb4a7ee2452147c50e353716a39350d762b09e3"
+    },
+    "master": {
+      "path": "rain-s02-care-l007/master.wav",
+      "bytes": 483918,
+      "sha256": "b2fafab3075ed13c27c4c9db2d46ee289d90218a8078d9f2e7344379ec740a2f"
+    },
+    "runtime": {
+      "path": "rain-s02-care-l007/runtime.ogg",
+      "bytes": 68539,
+      "sha256": "43a591dbf731be5e4e69187f3a95629125cfe2da4989feccfc605188883b6cc8"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

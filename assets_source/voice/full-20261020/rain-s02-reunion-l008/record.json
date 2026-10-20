@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-reunion-l008",
+  "sceneId": "s02_reunion",
+  "lineId": "s02_reunion_l008",
+  "lineIndex": 7,
+  "speaker": "h",
+  "text": "我知道。你还给照片起了个很长的名字。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 692926700,
+  "textSha256": "f2c410524d244f698c8222b33d04550b2b89a1ffa70974e149d9f71ddf0078b9",
+  "medium": "spoken",
+  "requestSha256": "f3c00411e6bf53436b2ad089ec401fb08707a5ab342be7f2f66f54c8022b8d11",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我知道,你还给照片起了个很长的名字",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.0,
+  "wallSeconds": 18.523,
+  "loudness": {
+    "input_i": "-26.07",
+    "input_tp": "-10.14",
+    "input_lra": "0.60",
+    "input_thresh": "-36.50",
+    "output_i": "-19.22",
+    "output_tp": "-3.34",
+    "output_lra": "0.00",
+    "output_thresh": "-29.74",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.78"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-reunion-l008/raw.wav",
+      "bytes": 384080,
+      "sha256": "4e2fd8a04ec10a258ab489af2ac4c1c1f072b52141931578663c91914ca11741"
+    },
+    "master": {
+      "path": "rain-s02-reunion-l008/master.wav",
+      "bytes": 192078,
+      "sha256": "6a445094fb955721ff408a5de053d90f1ce45b75ddc4608e5acf3ce34542b698"
+    },
+    "runtime": {
+      "path": "rain-s02-reunion-l008/runtime.ogg",
+      "bytes": 32118,
+      "sha256": "2c3aabb51c5a11d4c2715ce0838322a4b222192d0d4582ab132ba493b946ae70"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

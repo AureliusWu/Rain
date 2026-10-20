@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-deferred-l006",
+  "sceneId": "s03_deferred",
+  "lineId": "s03_deferred_l006",
+  "lineIndex": 5,
+  "speaker": "p",
+  "text": "你不会觉得很奇怪吗？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 38875048,
+  "textSha256": "27547baf9d20caf98f0f05e813d0838598e8279fc70076683c76abbf70262f81",
+  "medium": "spoken",
+  "requestSha256": "b232c9dc889905d3739fd132e013e1df1fd25fcc4ca28dabed86e4826d20dd37",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你不會覺得很奇怪嗎",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.84,
+  "wallSeconds": 75.248,
+  "loudness": {
+    "input_i": "-30.10",
+    "input_tp": "-11.51",
+    "input_lra": "0.00",
+    "input_thresh": "-40.10",
+    "output_i": "-20.58",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.58",
+    "normalization_type": "linear",
+    "target_offset": "0.58"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-deferred-l006/raw.wav",
+      "bytes": 176720,
+      "sha256": "d7d884e343e51c083a7838fc49d330880f86097f19fd67dd314b88bc8c91d459"
+    },
+    "master": {
+      "path": "rain-s03-deferred-l006/master.wav",
+      "bytes": 88398,
+      "sha256": "519d3ed0e2005beb5df26677412dbdfc7c4dbe19e2a648e139330e7b2914983b"
+    },
+    "runtime": {
+      "path": "rain-s03-deferred-l006/runtime.ogg",
+      "bytes": 17209,
+      "sha256": "86b631e0586006b04d66b06e72f5f13421a0a2f0dc454d63e1500dced6a8bdc2"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

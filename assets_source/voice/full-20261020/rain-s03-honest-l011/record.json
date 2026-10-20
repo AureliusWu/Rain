@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-honest-l011",
+  "sceneId": "s03_honest",
+  "lineId": "s03_honest_l011",
+  "lineIndex": 10,
+  "speaker": "h",
+  "text": "所以你写了信。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 910861955,
+  "textSha256": "452d214e44c41b6fdcc11ab20e4abc76f74e58bf1dd1fd93573aa31837f30021",
+  "medium": "spoken",
+  "requestSha256": "10da7f3aa2524e4eeaf7002fcf71c1ae23d06630f5b321f74b0478de7d128228",
+  "attempt": 1,
+  "status": "accepted",
+  "asr": {
+    "transcript": "所以你写了信。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.28,
+  "wallSeconds": 137.007,
+  "loudness": {
+    "input_i": "-25.31",
+    "input_tp": "-12.78",
+    "input_lra": "0.00",
+    "input_thresh": "-35.31",
+    "output_i": "-19.98",
+    "output_tp": "-7.47",
+    "output_lra": "0.00",
+    "output_thresh": "-29.98",
+    "normalization_type": "linear",
+    "target_offset": "-0.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-honest-l011/raw.wav",
+      "bytes": 122960,
+      "sha256": "4d4749a7e3bab83e81242ff9e49fdaf1181f42a54c897c7e7b3dbe39501caa67"
+    },
+    "master": {
+      "path": "rain-s03-honest-l011/master.wav",
+      "bytes": 61518,
+      "sha256": "c79767f282e22bc0e1294134aaebc232993c493fabde1b68a62f87329ae3b16a"
+    },
+    "runtime": {
+      "path": "rain-s03-honest-l011/runtime.ogg",
+      "bytes": 13105,
+      "sha256": "664962f24c68e038fe79eb14d542e0b3609b528a5e3b0587800cdf7d40c37b26"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

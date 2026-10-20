@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-deferred-l017",
+  "sceneId": "s03_deferred",
+  "lineId": "s03_deferred_l017",
+  "lineIndex": 16,
+  "speaker": "p",
+  "text": "如果我回去以后还没想好，也会告诉你我还没想好。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 254466733,
+  "textSha256": "46b997aeb335e021dca794ff8513c29dd0b75a76b77768d8fd29456a15f13b43",
+  "medium": "spoken",
+  "requestSha256": "54957c01930a620e176ab310ea7f266e1920cde7904d8173868b4c0a9aa56059",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "如果回去以後還沒想好也會告訴你我還沒想好",
+    "cer": 0.047619,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.6,
+  "wallSeconds": 158.699,
+  "loudness": {
+    "input_i": "-28.55",
+    "input_tp": "-10.82",
+    "input_lra": "0.70",
+    "input_thresh": "-38.55",
+    "output_i": "-20.09",
+    "output_tp": "-2.60",
+    "output_lra": "0.00",
+    "output_thresh": "-30.09",
+    "normalization_type": "dynamic",
+    "target_offset": "0.09"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-deferred-l017/raw.wav",
+      "bytes": 345680,
+      "sha256": "b78c317ae42e18de6db82017a2e3c901815a83d3a16f510c8d4cb51e1b5388a4"
+    },
+    "master": {
+      "path": "rain-s03-deferred-l017/master.wav",
+      "bytes": 172878,
+      "sha256": "789d9a131c921919b039892ed9784fd04eefb97e1772aa665b029be65e4a3b17"
+    },
+    "runtime": {
+      "path": "rain-s03-deferred-l017/runtime.ogg",
+      "bytes": 31265,
+      "sha256": "51f05f05d462c2348b7f1eba845842e2d15ebebae40e5ea3b6362c78ac744779"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

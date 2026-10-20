@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-letter-l003",
+  "sceneId": "s03_letter",
+  "lineId": "s03_letter_l003",
+  "lineIndex": 2,
+  "speaker": "h",
+  "text": "夹在展览那本留言册里。那本书上写了你的联系方式，所以他们把它一起送过来了。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 74601586,
+  "textSha256": "04d1f232c9561e69ff14a277fd59d5c2acc9cf87eb13218602e6c8c74a3a5d21",
+  "medium": "spoken",
+  "requestSha256": "f44cef6059cabb054e8f338a047dd31ed51e726c8e638bd3d33af7d1f99a03f7",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "夹在展览那本留言冊里那本书上写了你的联系方式所以他们把它一起送过来了",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 6.56,
+  "wallSeconds": 391.585,
+  "loudness": {
+    "input_i": "-25.29",
+    "input_tp": "-8.42",
+    "input_lra": "1.80",
+    "input_thresh": "-35.59",
+    "output_i": "-20.46",
+    "output_tp": "-3.61",
+    "output_lra": "1.30",
+    "output_thresh": "-30.97",
+    "normalization_type": "dynamic",
+    "target_offset": "0.46"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-letter-l003/raw.wav",
+      "bytes": 629840,
+      "sha256": "63a8556a9c3eeb63e35d2b6e7440f148383132605e820e4f47e12cd29171d821"
+    },
+    "master": {
+      "path": "rain-s03-letter-l003/master.wav",
+      "bytes": 314958,
+      "sha256": "cdaf1bc8031ae4af78402d1f8efb8cdcb408881eee84babac7200bf290aa0c24"
+    },
+    "runtime": {
+      "path": "rain-s03-letter-l003/runtime.ogg",
+      "bytes": 51661,
+      "sha256": "f2c264e7f84347d37f9712f00a8a77a7d47a197b96b45072a8cc3ef169bb04c8"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

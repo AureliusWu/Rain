@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-waiting-l007",
+  "sceneId": "s04_waiting",
+  "lineId": "s04_waiting_l007",
+  "lineIndex": 6,
+  "speaker": "h",
+  "text": "以前你说要走的时候，我正想着把照片洗出来。还有一张拍得比较端正，没来得及给你。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 259117190,
+  "textSha256": "b16fb6f8f5c5de5a1bf5e4cc3404385e9fc3e54355f5a3a38f631fc822445ae7",
+  "medium": "spoken",
+  "requestSha256": "26ff16720cf61e1c2efb41984b2e5b059d360a6c90f958ce9695477731439327",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "以前你说要走的时候我正想着把照片洗出来还有一张拍的比较端正没来得及给你",
+    "cer": 0.028571,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 8.32,
+  "wallSeconds": 570.243,
+  "loudness": {
+    "input_i": "-29.60",
+    "input_tp": "-13.23",
+    "input_lra": "2.70",
+    "input_thresh": "-40.19",
+    "output_i": "-20.10",
+    "output_tp": "-3.75",
+    "output_lra": "2.40",
+    "output_thresh": "-30.78",
+    "normalization_type": "dynamic",
+    "target_offset": "0.10"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-waiting-l007/raw.wav",
+      "bytes": 798800,
+      "sha256": "70ade0513fbbe7d21dd55868c55832569bfb31530c52308c172f797cb750317f"
+    },
+    "master": {
+      "path": "rain-s04-waiting-l007/master.wav",
+      "bytes": 399438,
+      "sha256": "3a45337537dd4e04aa40b9848fca7c5caebe2595c7130ed41385ae97b3a82612"
+    },
+    "runtime": {
+      "path": "rain-s04-waiting-l007/runtime.ogg",
+      "bytes": 62880,
+      "sha256": "0eb7c4738d60af110bfdf8a65bc23885fd6d62ba5774733d7ae542bef333f1cf"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

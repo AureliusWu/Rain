@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-concrete-l007",
+  "sceneId": "s04_concrete",
+  "lineId": "s04_concrete_l007",
+  "lineIndex": 10,
+  "speaker": "h",
+  "text": "从今天读了什么开始。书店新到了几本，我还没看完。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1438819126,
+  "textSha256": "3bd460d534116086e1bf8ad7bf1c4e0e0b1b1164ea784710fac6db7546db13e6",
+  "medium": "spoken",
+  "requestSha256": "282e4e380f3d6988316523f1deb1663f5cfad2739ce4f23b0214646f9d68ed50",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "从今天读了什么开始, 书店新到了几本,我还没看完。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 5.12,
+  "wallSeconds": 851.735,
+  "loudness": {
+    "input_i": "-26.81",
+    "input_tp": "-11.10",
+    "input_lra": "0.50",
+    "input_thresh": "-37.05",
+    "output_i": "-19.49",
+    "output_tp": "-3.54",
+    "output_lra": "0.70",
+    "output_thresh": "-29.68",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.51"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-concrete-l007/raw.wav",
+      "bytes": 491600,
+      "sha256": "6405c471f4f2b45bde0aa83332cd4c6466143f863d316512b71c0d4fea000a9e"
+    },
+    "master": {
+      "path": "rain-s04-concrete-l007/master.wav",
+      "bytes": 245838,
+      "sha256": "94464ad5e7ce12e507f4f284ea1fe2b495f00a78018c306a94db9b9791e7fc0a"
+    },
+    "runtime": {
+      "path": "rain-s04-concrete-l007/runtime.ogg",
+      "bytes": 39782,
+      "sha256": "7551cb27dbfc02d6f3043695ec58d4975aad7971e9a1b6183d9348ceea9b8cd7"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

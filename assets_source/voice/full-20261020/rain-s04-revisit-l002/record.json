@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-revisit-l002",
+  "sceneId": "s04_revisit",
+  "lineId": "s04_revisit_l002",
+  "lineIndex": 1,
+  "speaker": "p",
+  "text": "明天还是得走。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1539702063,
+  "textSha256": "bcca4edc994e9b046555c3b012737333771f257d2c11d32e1a00691f080348e0",
+  "medium": "spoken",
+  "requestSha256": "a9a2fad9b9cdcd4f36128547f4dd3ee78b51cb95ecb58d27fa7c10fb7fbeed30",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "明天还是得走",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.12,
+  "wallSeconds": 67.008,
+  "loudness": {
+    "input_i": "-26.11",
+    "input_tp": "-10.56",
+    "input_lra": "0.00",
+    "input_thresh": "-36.11",
+    "output_i": "-20.01",
+    "output_tp": "-4.45",
+    "output_lra": "0.00",
+    "output_thresh": "-30.01",
+    "normalization_type": "linear",
+    "target_offset": "0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-revisit-l002/raw.wav",
+      "bytes": 107600,
+      "sha256": "223837a143d8bba853707b2f11c549bc936f58ce498447e33b4de2801f5ed118"
+    },
+    "master": {
+      "path": "rain-s04-revisit-l002/master.wav",
+      "bytes": 53838,
+      "sha256": "91a073efd4f1f3f09755bb9b30d9958c62062ffa2603f83f5ff525e43c2b5298"
+    },
+    "runtime": {
+      "path": "rain-s04-revisit-l002/runtime.ogg",
+      "bytes": 13897,
+      "sha256": "6d695ccc0bc373c33d6eb4c9e47ad8c98eae70457bc2071f788ddaa1d832e560"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

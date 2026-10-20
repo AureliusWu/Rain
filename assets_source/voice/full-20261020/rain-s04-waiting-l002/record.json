@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-waiting-l002",
+  "sceneId": "s04_waiting",
+  "lineId": "s04_waiting_l002",
+  "lineIndex": 1,
+  "speaker": "h",
+  "text": "你明天还要走？",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1538926288,
+  "textSha256": "579b1fa0e87f99298388c41f437f029c00470a6389911dc7626a869b5d1e479b",
+  "medium": "spoken",
+  "requestSha256": "323fd625d91919ac4c4ab8dbc16ab38fcc402cc34c815409fec18469419ab37f",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你明天還要走",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.64,
+  "wallSeconds": 26.6,
+  "loudness": {
+    "input_i": "-24.41",
+    "input_tp": "-9.41",
+    "input_lra": "0.00",
+    "input_thresh": "-35.01",
+    "output_i": "-19.99",
+    "output_tp": "-5.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.59",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-waiting-l002/raw.wav",
+      "bytes": 253520,
+      "sha256": "7edee65af436e64f759a202a81588f8025364a6227229fd079e155a1e677ddfa"
+    },
+    "master": {
+      "path": "rain-s04-waiting-l002/master.wav",
+      "bytes": 126798,
+      "sha256": "9e866d8160459d1422199f109d1a32219162b997fc7ced80a1b598a16365a9a3"
+    },
+    "runtime": {
+      "path": "rain-s04-waiting-l002/runtime.ogg",
+      "bytes": 21100,
+      "sha256": "3f25e421e9c1199f0d8d921d8ad36bf727ca8eb54f5101d1ec79d93433587487"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-s05-departure-l004",
+  "sceneId": "s05_departure",
+  "lineId": "s05_departure_l004",
+  "lineIndex": 8,
+  "speaker": "p",
+  "text": "还是卖热牛奶的那家？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 642641895,
+  "textSha256": "6bb3a2f21f110f42a8ec52b32b79e5fa0f59d3e8e5856737f35e600dafcd5e0f",
+  "medium": "spoken",
+  "requestSha256": "fbe67860d5e3711a39364c2d1589af5470f1e723895670eacbc65a3e85453088",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "还是卖热牛奶的那家",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.76,
+  "wallSeconds": 99.418,
+  "loudness": {
+    "input_i": "-27.66",
+    "input_tp": "-7.93",
+    "input_lra": "0.00",
+    "input_thresh": "-37.66",
+    "output_i": "-21.73",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-31.73",
+    "normalization_type": "linear",
+    "target_offset": "1.73"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s05-departure-l004/raw.wav",
+      "bytes": 169040,
+      "sha256": "90fc7300f1bc701af1f9d16959b968013d2502dcc28158c4687fa82adca14f4e"
+    },
+    "master": {
+      "path": "rain-s05-departure-l004/master.wav",
+      "bytes": 84558,
+      "sha256": "994d04f72181bdc3e9567414eb27c296307464de4158db01df9d71b49ad11928"
+    },
+    "runtime": {
+      "path": "rain-s05-departure-l004/runtime.ogg",
+      "bytes": 16165,
+      "sha256": "0255ec8a58ab897931d3d6cd81364b1c81ff904fb07ca6479352393fb69b110d"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s04-concrete-l002",
+  "sceneId": "s04_concrete",
+  "lineId": "v07_s04_concrete_l002",
+  "lineIndex": 4,
+  "speaker": "p",
+  "text": "好。车上有七本书，应该不会没事做。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 170203181,
+  "textSha256": "b4a036c1b6af4e3b5b0068da02229cb31bb3773182cca37a89c1897098380633",
+  "medium": "spoken",
+  "requestSha256": "b3ae90201d5635cb979811533f5b24d0de65e78db91db84ea4bf8cb60f7a968d",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "好,车上有七本书,应该不会没事做",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.92,
+  "wallSeconds": 168.627,
+  "loudness": {
+    "input_i": "-26.74",
+    "input_tp": "-9.61",
+    "input_lra": "0.20",
+    "input_thresh": "-36.88",
+    "output_i": "-19.73",
+    "output_tp": "-2.63",
+    "output_lra": "0.00",
+    "output_thresh": "-29.97",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.27"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s04-concrete-l002/raw.wav",
+      "bytes": 376400,
+      "sha256": "8a4d586687c98c1737a6a68b4c80aed58c9693f8fb6e71ad1c36b98e5280953e"
+    },
+    "master": {
+      "path": "rain-v07-s04-concrete-l002/master.wav",
+      "bytes": 188238,
+      "sha256": "b23ce1a236d1ac1656c0ef26adb0d3d40b8a6a66fc1451ef1fb2cf05c73a3146"
+    },
+    "runtime": {
+      "path": "rain-v07-s04-concrete-l002/runtime.ogg",
+      "bytes": 32374,
+      "sha256": "11d8aabb360d8a49aef0a429cd11240a84186964fcf38e6a8c9f3570adce6f6d"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

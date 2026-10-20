@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-memory-l005",
+  "sceneId": "s04_memory",
+  "lineId": "s04_memory_l005",
+  "lineIndex": 4,
+  "speaker": "h",
+  "text": "正了。你倒是只剩半边肩膀。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 919548629,
+  "textSha256": "4ff008ee2a7a9deace4f35290092301d7a0154a99b7571a90a72c7eddd4e980f",
+  "medium": "spoken",
+  "requestSha256": "a9aaa835021367f5ad7f6c5c9d80ec264fe7629eb09a61078a617a6fc93e4eea",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "胜了,你倒是只剩半边肩膀",
+    "cer": 0.090909,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.76,
+  "wallSeconds": 35.418,
+  "loudness": {
+    "input_i": "-27.53",
+    "input_tp": "-12.18",
+    "input_lra": "0.90",
+    "input_thresh": "-38.20",
+    "output_i": "-18.99",
+    "output_tp": "-3.83",
+    "output_lra": "0.00",
+    "output_thresh": "-30.15",
+    "normalization_type": "dynamic",
+    "target_offset": "-1.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-memory-l005/raw.wav",
+      "bytes": 361040,
+      "sha256": "377028b8f09d1de3f3311af66b0f11ee8715e9665124e6e8d5980197bbf85f38"
+    },
+    "master": {
+      "path": "rain-s04-memory-l005/master.wav",
+      "bytes": 180558,
+      "sha256": "adf0c972bed2020344928ea63044574aec0ccb2c637c38ab114bf61e19b2ff29"
+    },
+    "runtime": {
+      "path": "rain-s04-memory-l005/runtime.ogg",
+      "bytes": 29277,
+      "sha256": "f974d13796f1f9990caa318e97fb10767a3874e9ba07b544586d869a1d7bcd1c"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

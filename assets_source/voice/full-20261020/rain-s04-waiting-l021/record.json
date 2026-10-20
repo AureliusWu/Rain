@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-waiting-l021",
+  "sceneId": "s04_waiting",
+  "lineId": "s04_waiting_l021",
+  "lineIndex": 21,
+  "speaker": "p",
+  "text": "至少能证明号码没错。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 24176516,
+  "textSha256": "1016efca7ab44c9cb34d4697f3b430aa5e9e42d5637d7d14a63532dbb093dea9",
+  "medium": "spoken",
+  "requestSha256": "d5612c858cc20aedc24ffc50e154cfe80b220e8045a15ccd926c9ee5dd45ec1e",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "至少能证明号码没错",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.76,
+  "wallSeconds": 103.387,
+  "loudness": {
+    "input_i": "-25.71",
+    "input_tp": "-8.84",
+    "input_lra": "0.00",
+    "input_thresh": "-35.71",
+    "output_i": "-20.01",
+    "output_tp": "-3.13",
+    "output_lra": "0.00",
+    "output_thresh": "-30.01",
+    "normalization_type": "linear",
+    "target_offset": "0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-waiting-l021/raw.wav",
+      "bytes": 169040,
+      "sha256": "461d0321deb407b8bd1a1b3a8dec5cf58a05e07b7ddbe5b0279b63f6ee4e1c6a"
+    },
+    "master": {
+      "path": "rain-s04-waiting-l021/master.wav",
+      "bytes": 84558,
+      "sha256": "ae5fb05bafac30c78db022bceb80b5adeeb4cf83fd194e88b4da054117ce3213"
+    },
+    "runtime": {
+      "path": "rain-s04-waiting-l021/runtime.ogg",
+      "bytes": 16397,
+      "sha256": "8a1b893e4851830a11f9692bb2ddfc74a1c5d8400d82e0dfbfc6f7a45460cbbe"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

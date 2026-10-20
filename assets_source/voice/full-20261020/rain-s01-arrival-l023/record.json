@@ -1,0 +1,55 @@
+{
+  "id": "rain-s01-arrival-l023",
+  "sceneId": "s01_arrival",
+  "lineId": "s01_arrival_l023",
+  "lineIndex": 22,
+  "speaker": "h",
+  "text": "右边那块干。左边的地砖会晃。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1394342049,
+  "textSha256": "898794df25feb7ed183cf0fe2af58706f801c89ac9fa87805a7f2b97c7dfc265",
+  "medium": "spoken",
+  "requestSha256": "aed2b02a8771bd30760e8a6d3e313fe1875ddd1bc4ddf46620ef6fb2c9385e9b",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "右边那块干左边的地桩会晃",
+    "cer": 0.083333,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.72,
+  "wallSeconds": 153.769,
+  "loudness": {
+    "input_i": "-21.56",
+    "input_tp": "-5.48",
+    "input_lra": "0.00",
+    "input_thresh": "-32.14",
+    "output_i": "-19.99",
+    "output_tp": "-3.92",
+    "output_lra": "0.00",
+    "output_thresh": "-30.57",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s01-arrival-l023/raw.wav",
+      "bytes": 261200,
+      "sha256": "962b89120d3c27a22639975bd3607b9e6970dda67f62d481aec2eba1dfba8749"
+    },
+    "master": {
+      "path": "rain-s01-arrival-l023/master.wav",
+      "bytes": 130638,
+      "sha256": "3d49ab971b8fb7fc4f5c55604ff6c8eb5f7a70c8a1e6d84c817b854d1936a401"
+    },
+    "runtime": {
+      "path": "rain-s01-arrival-l023/runtime.ogg",
+      "bytes": 23542,
+      "sha256": "65327221e3a01b406e481f107390b2842c42d086d12be98c7837a1cb269daad9"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

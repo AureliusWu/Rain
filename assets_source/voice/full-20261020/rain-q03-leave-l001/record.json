@@ -1,0 +1,56 @@
+{
+  "id": "rain-q03-leave-l001",
+  "sceneId": "s05_departure",
+  "lineId": "q03_leave_l001",
+  "lineIndex": 0,
+  "speaker": "p",
+  "text": "今晚先回去吧。到住处以后，我会给你发消息。",
+  "choiceId": "q03_leave",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1998612034,
+  "textSha256": "727775e4f35fd71714641ceb13e5457ad07579f0ba3dfbd98646a9fc7fdc3f24",
+  "medium": "spoken",
+  "requestSha256": "93ef5e9897af82c8a4a6a9a2a000a552da9029fa3e781eaf98a625eb108159b8",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "今晚先回去吧到住处以后我会给你发消息",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.68,
+  "wallSeconds": 211.132,
+  "loudness": {
+    "input_i": "-24.42",
+    "input_tp": "-5.90",
+    "input_lra": "0.50",
+    "input_thresh": "-34.55",
+    "output_i": "-19.40",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-29.53",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.60"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-q03-leave-l001/raw.wav",
+      "bytes": 353360,
+      "sha256": "4b8d2ca94a7322b1b4454244dfeb3a37cbb859ca867871c6ff5a2c6f52247314"
+    },
+    "master": {
+      "path": "rain-q03-leave-l001/master.wav",
+      "bytes": 176718,
+      "sha256": "8dc5fd0606d08b03f012de0ceca99bf4227463a598b8aec64addf1c82ca443ab"
+    },
+    "runtime": {
+      "path": "rain-q03-leave-l001/runtime.ogg",
+      "bytes": 32246,
+      "sha256": "bea19d2a12411e76cd311c2515d48cef0a1a4173945995daba2ee38aea2ab914"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

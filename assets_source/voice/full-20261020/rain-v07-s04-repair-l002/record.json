@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s04-repair-l002",
+  "sceneId": "s04_repair",
+  "lineId": "v07_s04_repair_l002",
+  "lineIndex": 3,
+  "speaker": "h",
+  "text": "你今晚问过了。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 318352027,
+  "textSha256": "85af4c53a8278458e927ce3f95533d88b562c3eb27e77a607e10b051c5fd7bb3",
+  "medium": "spoken",
+  "requestSha256": "15f60f904d9ed620cac0464b786de896c9d477bc83cd5197a46dd3c466f925b4",
+  "attempt": 1,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你今晚问过了",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.36,
+  "wallSeconds": 55.355,
+  "loudness": {
+    "input_i": "-24.29",
+    "input_tp": "-11.34",
+    "input_lra": "0.00",
+    "input_thresh": "-34.29",
+    "output_i": "-20.00",
+    "output_tp": "-7.05",
+    "output_lra": "0.00",
+    "output_thresh": "-30.00",
+    "normalization_type": "linear",
+    "target_offset": "0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s04-repair-l002/raw.wav",
+      "bytes": 130640,
+      "sha256": "4d042d7b35ba0448981a5cc2d1657dd16554e4b08f0706b261b9b1f59b25ad8c"
+    },
+    "master": {
+      "path": "rain-v07-s04-repair-l002/master.wav",
+      "bytes": 65358,
+      "sha256": "8392cf4c2f7e9440b6f944ce155177fc44e39a4f4117f428612b933c3a7eeb21"
+    },
+    "runtime": {
+      "path": "rain-v07-s04-repair-l002/runtime.ogg",
+      "bytes": 13022,
+      "sha256": "6c8d6439119f5d51df5287eeea02ea9d6cc675cdeceb71b8609de8964faa34b6"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

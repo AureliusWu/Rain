@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-reserved-l011",
+  "sceneId": "s04_reserved",
+  "lineId": "s04_reserved_l011",
+  "lineIndex": 10,
+  "speaker": "p",
+  "text": "今晚我原本没安排见任何人。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 777694000,
+  "textSha256": "57ed9b10d38ddc0bec78570bc347ba285fe1106b335990bf3f8c207a792a6a5e",
+  "medium": "spoken",
+  "requestSha256": "9b2ca040e3dc99387eb26894a6110fcdb4e6f47fabb44a77b3b052c924e11b73",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "今晚我原本没安排见任何人",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.48,
+  "wallSeconds": 99.513,
+  "loudness": {
+    "input_i": "-25.91",
+    "input_tp": "-8.61",
+    "input_lra": "0.00",
+    "input_thresh": "-36.11",
+    "output_i": "-20.01",
+    "output_tp": "-2.70",
+    "output_lra": "0.00",
+    "output_thresh": "-30.20",
+    "normalization_type": "linear",
+    "target_offset": "0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-reserved-l011/raw.wav",
+      "bytes": 238160,
+      "sha256": "49a3ad5c66d58ef3d65259a36066f5fcd60aad834af93a330e76c243f1408ead"
+    },
+    "master": {
+      "path": "rain-s04-reserved-l011/master.wav",
+      "bytes": 119118,
+      "sha256": "fc130ff332d1157a4971dd391dfafbecf912564ebdb205064ae31641e74e480b"
+    },
+    "runtime": {
+      "path": "rain-s04-reserved-l011/runtime.ogg",
+      "bytes": 21366,
+      "sha256": "88924d7bf9b7b5d6c727daae123ebea544e183bb4a5d1552de619169225eea2f"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

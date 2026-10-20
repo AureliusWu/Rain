@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s07-true-l006",
+  "sceneId": "s07_true",
+  "lineId": "v07_s07_true_l006",
+  "lineIndex": 20,
+  "speaker": "p",
+  "text": "下次办展要搬书，可以问我。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1823201087,
+  "textSha256": "97ca90b42fb101151799b07db25ee533963345800d28e403c1ee64890e230e45",
+  "medium": "spoken",
+  "requestSha256": "c6b0c538d1e2661a9dac7f262eb6de8480db9c1eb129311f5f16d9666a89b3bf",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "下次半斩要搬书可以问我",
+    "cer": 0.181818,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.8,
+  "wallSeconds": 95.339,
+  "loudness": {
+    "input_i": "-24.91",
+    "input_tp": "-5.99",
+    "input_lra": "0.00",
+    "input_thresh": "-34.91",
+    "output_i": "-20.92",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.92",
+    "normalization_type": "linear",
+    "target_offset": "0.92"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s07-true-l006/raw.wav",
+      "bytes": 268880,
+      "sha256": "9f5049ed24c41fb6d6aa33f64379606e3b106a203a56c434d006f87ddadd724b"
+    },
+    "master": {
+      "path": "rain-v07-s07-true-l006/master.wav",
+      "bytes": 134478,
+      "sha256": "a580374ab9d199167c6100230044e0d391fcae5785464f9c8b1057486774a0c8"
+    },
+    "runtime": {
+      "path": "rain-v07-s07-true-l006/runtime.ogg",
+      "bytes": 24957,
+      "sha256": "1b88ff6e34c0f07e820243a694b587a7a2a63e3d8dee0e6cb9198c4d4ba3e98f"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

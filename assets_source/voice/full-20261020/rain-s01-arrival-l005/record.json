@@ -1,0 +1,55 @@
+{
+  "id": "rain-s01-arrival-l005",
+  "sceneId": "s01_arrival",
+  "lineId": "s01_arrival_l005",
+  "lineIndex": 4,
+  "speaker": "h",
+  "text": "你还是和以前一样，出门不看天气。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1813499268,
+  "textSha256": "ae9c58e9a4b501b460114b881ee4dc22bce4d24a9f0e73dbacd355fdb5a50dcf",
+  "medium": "spoken",
+  "requestSha256": "3e740ae07f96ed82550daf8613cea385a711b2f67fd8ed8ffdf0e19c19709d40",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你还是和以前一样出门不看天气",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.36,
+  "wallSeconds": 184.81,
+  "loudness": {
+    "input_i": "-24.89",
+    "input_tp": "-9.22",
+    "input_lra": "0.60",
+    "input_thresh": "-35.03",
+    "output_i": "-19.94",
+    "output_tp": "-4.45",
+    "output_lra": "0.00",
+    "output_thresh": "-30.08",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.06"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s01-arrival-l005/raw.wav",
+      "bytes": 322640,
+      "sha256": "05fec643b83eea7468ba72c9b28601c8a6d63f400f9e2f9a958eba7ade492f55"
+    },
+    "master": {
+      "path": "rain-s01-arrival-l005/master.wav",
+      "bytes": 161358,
+      "sha256": "4f107efd3a4cd699d643f63e4bfee2325c4f93543924ebbba73d7d4817d022b9"
+    },
+    "runtime": {
+      "path": "rain-s01-arrival-l005/runtime.ogg",
+      "bytes": 27640,
+      "sha256": "86e9373317e4a82831c2fc2b1f7e13bed922310f50c484b1777c32d276496e6d"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

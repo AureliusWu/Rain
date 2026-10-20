@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-open-l007",
+  "sceneId": "s04_open",
+  "lineId": "s04_open_l007",
+  "lineIndex": 6,
+  "speaker": "p",
+  "text": "我可能还是会说得很慢。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 72414286,
+  "textSha256": "e89052dd42e9fb33309c7c97a3a9c529c1a844993e8c7e218a16f346c07166b9",
+  "medium": "spoken",
+  "requestSha256": "073ccd7d2707c066b5bcfc60c67b064e35dcf62372ccd64d863747e57c8f4f8a",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我可能还是会说的很慢",
+    "cer": 0.1,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.68,
+  "wallSeconds": 68.852,
+  "loudness": {
+    "input_i": "-25.35",
+    "input_tp": "-9.35",
+    "input_lra": "0.00",
+    "input_thresh": "-35.35",
+    "output_i": "-19.98",
+    "output_tp": "-3.99",
+    "output_lra": "0.00",
+    "output_thresh": "-29.98",
+    "normalization_type": "linear",
+    "target_offset": "-0.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-open-l007/raw.wav",
+      "bytes": 161360,
+      "sha256": "c337fe5643835a56c94babf3f801462ed27a83526353f07df654d3573779a73c"
+    },
+    "master": {
+      "path": "rain-s04-open-l007/master.wav",
+      "bytes": 80718,
+      "sha256": "51e4fa1ed797323c725d6945c8c6f87399d18e2595440065f2150cca9a549407"
+    },
+    "runtime": {
+      "path": "rain-s04-open-l007/runtime.ogg",
+      "bytes": 16114,
+      "sha256": "25c1cbdb7a577dc5a45d3d41a84e52492776c3ebdd60e0f4782418beda37857d"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

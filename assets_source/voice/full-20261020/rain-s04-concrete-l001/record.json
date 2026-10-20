@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-concrete-l001",
+  "sceneId": "s04_concrete",
+  "lineId": "s04_concrete_l001",
+  "lineIndex": 0,
+  "speaker": "p",
+  "text": "旧事慢一点说。明天下午我到了，先给你发消息，可以吗？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 317869835,
+  "textSha256": "2e63899d5857b20d3399f9438ddccc8450545fe809d9ad09336f1885b6940fce",
+  "medium": "spoken",
+  "requestSha256": "3851b94747ac8458566be8f2b89d73c93676ea4c49da260b7560bca823ac76b9",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "就是慢一点说明天下午我到了先给你发消息可以吗",
+    "cer": 0.090909,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 5.52,
+  "wallSeconds": 260.318,
+  "loudness": {
+    "input_i": "-25.27",
+    "input_tp": "-6.66",
+    "input_lra": "0.80",
+    "input_thresh": "-35.54",
+    "output_i": "-19.88",
+    "output_tp": "-2.00",
+    "output_lra": "1.90",
+    "output_thresh": "-30.14",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.12"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-concrete-l001/raw.wav",
+      "bytes": 530000,
+      "sha256": "574f86d8d938c5bb6a8ed5ab28252916232b38f5a2999cb5c87bd01d577f714b"
+    },
+    "master": {
+      "path": "rain-s04-concrete-l001/master.wav",
+      "bytes": 265038,
+      "sha256": "8f77d994b98d8b640e6f7b058d08439c16bbdb551ffa3a0a9ed12ab1cc1ad5eb"
+    },
+    "runtime": {
+      "path": "rain-s04-concrete-l001/runtime.ogg",
+      "bytes": 44389,
+      "sha256": "52ba5f62f4de20752451a24a56674c307f7ed55814287cd7e1878b5e526b82d6"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

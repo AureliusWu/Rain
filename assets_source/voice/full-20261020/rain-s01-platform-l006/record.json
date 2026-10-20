@@ -1,0 +1,55 @@
+{
+  "id": "rain-s01-platform-l006",
+  "sceneId": "s01_platform",
+  "lineId": "s01_platform_l006",
+  "lineIndex": 5,
+  "speaker": "h",
+  "text": "那等会儿别把书放进去。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 703599791,
+  "textSha256": "e184632d09979ac6aff6d45b4f61743cab334181c1a7f5293ee0adcf72ef14b1",
+  "medium": "spoken",
+  "requestSha256": "185b92636b5c1a6d4864b16b001c6bc46eb22f7b93c66e5d53ed76c3630f10b5",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "等会别把书放进去",
+    "cer": 0.2,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.76,
+  "wallSeconds": 97.069,
+  "loudness": {
+    "input_i": "-22.84",
+    "input_tp": "-5.89",
+    "input_lra": "0.00",
+    "input_thresh": "-32.84",
+    "output_i": "-20.00",
+    "output_tp": "-3.05",
+    "output_lra": "0.00",
+    "output_thresh": "-30.00",
+    "normalization_type": "linear",
+    "target_offset": "0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s01-platform-l006/raw.wav",
+      "bytes": 169040,
+      "sha256": "5ed5985e571d6e452f374adbcdd10eff07b18ee69b4f33e8f26b7665d2be727c"
+    },
+    "master": {
+      "path": "rain-s01-platform-l006/master.wav",
+      "bytes": 84558,
+      "sha256": "068def15435b30924efacca462d0af7c9c792265fe458a4b8be89bf317d6b1e2"
+    },
+    "runtime": {
+      "path": "rain-s01-platform-l006/runtime.ogg",
+      "bytes": 16733,
+      "sha256": "1f1b1ae3912292d193bc836ea8a64afd80b87e7938b79b5ee15552701c1a58f7"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

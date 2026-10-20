@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-open-l011",
+  "sceneId": "s04_open",
+  "lineId": "s04_open_l011",
+  "lineIndex": 10,
+  "speaker": "p",
+  "text": "明早九点。今晚不需要赶最后一班车，只需要在站里关门前出去。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1534831748,
+  "textSha256": "a4defc7600e726cea03c1f43ff9445824f4f219005ede8f8cb98e6cff786c794",
+  "medium": "spoken",
+  "requestSha256": "6c1aba5a21ca398a51ae445fcbaf846891aeef948ed192e9bd3b444389d68e4b",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "明早九点,今晚不需要赶最后一班车,只需要在站里关门前出去。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 7.2,
+  "wallSeconds": 31.245,
+  "loudness": {
+    "input_i": "-28.81",
+    "input_tp": "-9.50",
+    "input_lra": "1.50",
+    "input_thresh": "-39.21",
+    "output_i": "-20.09",
+    "output_tp": "-2.00",
+    "output_lra": "1.30",
+    "output_thresh": "-30.54",
+    "normalization_type": "dynamic",
+    "target_offset": "0.09"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-open-l011/raw.wav",
+      "bytes": 691280,
+      "sha256": "1c069c4f691bfb81f447d79e4f3dac0051d3461cf2a46d3abf3ad6c970de39ee"
+    },
+    "master": {
+      "path": "rain-s04-open-l011/master.wav",
+      "bytes": 345678,
+      "sha256": "bf3b54a6402808176c79cd97bb852223fc532231b0d44f2777116333d947ccf1"
+    },
+    "runtime": {
+      "path": "rain-s04-open-l011/runtime.ogg",
+      "bytes": 57205,
+      "sha256": "96abf9eb2b0accee613306c33b57928d364bfb91b05fa9cdadc03d249a84bf7e"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

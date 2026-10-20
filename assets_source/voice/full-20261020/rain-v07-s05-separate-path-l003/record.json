@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s05-separate-path-l003",
+  "sceneId": "s05_separate_path",
+  "lineId": "v07_s05_separate_path_l003",
+  "lineIndex": 6,
+  "speaker": "h",
+  "text": "那就好。箱底别放在积水里。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 234713610,
+  "textSha256": "8cb9a826de329230231b198b79fd9a58504f7297157a5a181369fd90b9aba482",
+  "medium": "spoken",
+  "requestSha256": "baebd6bddce43157d5626d5d35c2014502efacd5aac0af9b1f6b904d44a46907",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "那就好 相底别放在鸡水里",
+    "cer": 0.181818,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.96,
+  "wallSeconds": 120.217,
+  "loudness": {
+    "input_i": "-25.79",
+    "input_tp": "-10.82",
+    "input_lra": "0.00",
+    "input_thresh": "-36.71",
+    "output_i": "-19.99",
+    "output_tp": "-5.03",
+    "output_lra": "0.00",
+    "output_thresh": "-30.91",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s05-separate-path-l003/raw.wav",
+      "bytes": 284240,
+      "sha256": "6396d1c8c0980fdffa9639d332015c00b6526ff4186ba985bea3ff500ac5b9ca"
+    },
+    "master": {
+      "path": "rain-v07-s05-separate-path-l003/master.wav",
+      "bytes": 142158,
+      "sha256": "ce15760d02270898a11a678f844ae73583a294d559d3d0079ff857c98c0c7049"
+    },
+    "runtime": {
+      "path": "rain-v07-s05-separate-path-l003/runtime.ogg",
+      "bytes": 24322,
+      "sha256": "00da1419f08773461a57a8f9fa87baa3830e4c949058cc35f4371f0e76e127a0"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

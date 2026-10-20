@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s04-concrete-l008",
+  "sceneId": "s04_concrete",
+  "lineId": "v07_s04_concrete_l008",
+  "lineIndex": 15,
+  "speaker": "h",
+  "text": "不用写读后感。你想说的那一句就行。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 985484163,
+  "textSha256": "a8bd7eaf87804f829ad926d1429e26b6aecbb5e3e2f9df17ef286e1af736c4a0",
+  "medium": "spoken",
+  "requestSha256": "36f84c34cbdb0fa3514f7d6bf4d0f04c4722642462764b5b1c09f87aa186f5a5",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "不用写读后感,你想说的那一句就行。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.12,
+  "wallSeconds": 104.53,
+  "loudness": {
+    "input_i": "-26.81",
+    "input_tp": "-11.42",
+    "input_lra": "0.50",
+    "input_thresh": "-36.96",
+    "output_i": "-19.94",
+    "output_tp": "-4.70",
+    "output_lra": "0.00",
+    "output_thresh": "-30.09",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.06"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s04-concrete-l008/raw.wav",
+      "bytes": 299600,
+      "sha256": "c02c64be31c0cefc0aab1c07304cbf74f2441c90b4ff09fa2e9d4862ccdd8dbf"
+    },
+    "master": {
+      "path": "rain-v07-s04-concrete-l008/master.wav",
+      "bytes": 149838,
+      "sha256": "9ef0da30c12cd338dc9d74f79a6adecb9841be29af167eedaab225ed21a9fca2"
+    },
+    "runtime": {
+      "path": "rain-v07-s04-concrete-l008/runtime.ogg",
+      "bytes": 25861,
+      "sha256": "3eac213a3791b3544b1ed76df5f6a8cfc6945d41c9ae10a29ac1b3f518bb658f"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

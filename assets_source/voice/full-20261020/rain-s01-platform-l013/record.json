@@ -1,0 +1,55 @@
+{
+  "id": "rain-s01-platform-l013",
+  "sceneId": "s01_platform",
+  "lineId": "s01_platform_l013",
+  "lineIndex": 12,
+  "speaker": "p",
+  "text": "现在看起来会直接被请出去。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1295310916,
+  "textSha256": "f77305794dbd30cdba2f064c99f01fded61b5b081d44ac834590d3199e15e3f6",
+  "medium": "spoken",
+  "requestSha256": "d89bd490ae67885ca2be10dde178a72f06a7e3af1c762998af2ba7a5b1707fe7",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "现在看起来会直接被请出去",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.56,
+  "wallSeconds": 301.694,
+  "loudness": {
+    "input_i": "-25.65",
+    "input_tp": "-6.84",
+    "input_lra": "0.00",
+    "input_thresh": "-35.65",
+    "output_i": "-20.80",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.80",
+    "normalization_type": "linear",
+    "target_offset": "0.80"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s01-platform-l013/raw.wav",
+      "bytes": 245840,
+      "sha256": "50f411ff190a220a8957090ddf51cb676acd552156132778742af163c5256c37"
+    },
+    "master": {
+      "path": "rain-s01-platform-l013/master.wav",
+      "bytes": 122958,
+      "sha256": "f97da66894396004f5e3841343f313cb6c734ba94d2ba3e1cc478cae9ebb98c1"
+    },
+    "runtime": {
+      "path": "rain-s01-platform-l013/runtime.ogg",
+      "bytes": 22853,
+      "sha256": "4271ec95537fc4141d9ec33fa342b0934d91a2545106955fe2edb1c472d7fcc9"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

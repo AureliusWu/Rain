@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-concrete-l006",
+  "sceneId": "s04_concrete",
+  "lineId": "s04_concrete_l006",
+  "lineIndex": 9,
+  "speaker": "p",
+  "text": "如果我又不知道该说什么呢？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 778043990,
+  "textSha256": "9c0d7fee80a568ae8f5f2351e55ae138bd23b929a4c6638b473afd8365e602e8",
+  "medium": "spoken",
+  "requestSha256": "7e4d2414b61b02ee13001ac7133918dcbd117d8a2322bd0bbb8a476b29a5e399",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "如果我又不知道该说什么呢",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.08,
+  "wallSeconds": 115.786,
+  "loudness": {
+    "input_i": "-23.80",
+    "input_tp": "-7.46",
+    "input_lra": "0.00",
+    "input_thresh": "-34.04",
+    "output_i": "-20.00",
+    "output_tp": "-3.66",
+    "output_lra": "0.00",
+    "output_thresh": "-30.24",
+    "normalization_type": "linear",
+    "target_offset": "-0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-concrete-l006/raw.wav",
+      "bytes": 199760,
+      "sha256": "87f85a850b2d71e9c4e1a75399ea0127529967f673e83a628e4d6ef37396c53b"
+    },
+    "master": {
+      "path": "rain-s04-concrete-l006/master.wav",
+      "bytes": 99918,
+      "sha256": "25d45585d823df554b0b4bb67c9c183a3388295ba2dbd7a0f0b7e2d65ebb63ab"
+    },
+    "runtime": {
+      "path": "rain-s04-concrete-l006/runtime.ogg",
+      "bytes": 19548,
+      "sha256": "2a164b5d07aba5bcf15ad0f003d45e08d7d7297374fe54d37b5395644823d558"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-boxes-l009",
+  "sceneId": "s02_boxes",
+  "lineId": "s02_boxes_l009",
+  "lineIndex": 8,
+  "speaker": "p",
+  "text": "这些字还看得清。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 218038566,
+  "textSha256": "d800c5078ea2e7a69d1747b8e655139718c702bbfbbab521d9f4e9129ab0495e",
+  "medium": "spoken",
+  "requestSha256": "61c389dc2a1d19908e40233dd02372e5c53fa468546a502388963b47a9cf9b02",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "这些字还看得清",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.36,
+  "wallSeconds": 55.906,
+  "loudness": {
+    "input_i": "-24.01",
+    "input_tp": "-7.18",
+    "input_lra": "0.00",
+    "input_thresh": "-34.01",
+    "output_i": "-19.99",
+    "output_tp": "-3.17",
+    "output_lra": "0.00",
+    "output_thresh": "-29.99",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-boxes-l009/raw.wav",
+      "bytes": 130640,
+      "sha256": "7423ee3c405cf5d9d08e191cd2139a03be8ac6f5b38a73329a8a59081b33dfd1"
+    },
+    "master": {
+      "path": "rain-s02-boxes-l009/master.wav",
+      "bytes": 65358,
+      "sha256": "88f892cfdd948be53268b5cb2a532ecf960599f56f47a78cadc49645e6483fb4"
+    },
+    "runtime": {
+      "path": "rain-s02-boxes-l009/runtime.ogg",
+      "bytes": 13243,
+      "sha256": "ccbe941409985086d66c51325fe61bdefee9b915267387be84eb418c608e5248"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-archive-l016",
+  "sceneId": "s03_archive",
+  "lineId": "s03_archive_l016",
+  "lineIndex": 15,
+  "speaker": "h",
+  "text": "不急。先带回家。店里周一才整理旧展资料。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 465808335,
+  "textSha256": "4d8fd61b3f0ca876baba7376299f1a2fdfa1c892d5d6d8b5d56ff9be69eb1a0e",
+  "medium": "spoken",
+  "requestSha256": "9de82391dd34ddf5cf6c4d50107f2d513fcee0ae246764df9c728b4963c4ad61",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "不急先带回家店里周一才整理救展资料",
+    "cer": 0.058824,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.64,
+  "wallSeconds": 20.709,
+  "loudness": {
+    "input_i": "-29.48",
+    "input_tp": "-14.69",
+    "input_lra": "1.80",
+    "input_thresh": "-39.87",
+    "output_i": "-18.81",
+    "output_tp": "-3.54",
+    "output_lra": "1.00",
+    "output_thresh": "-29.95",
+    "normalization_type": "dynamic",
+    "target_offset": "-1.19"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-archive-l016/raw.wav",
+      "bytes": 445520,
+      "sha256": "e3878c8c289bc6ef5fc66fd5a5edf9ba22b5eb11f37dd053d6e9f27873cd2e05"
+    },
+    "master": {
+      "path": "rain-s03-archive-l016/master.wav",
+      "bytes": 222798,
+      "sha256": "e987ed951ff2fcfb208f5de645e3a36b74f1943a4a6365da149a5937a878a119"
+    },
+    "runtime": {
+      "path": "rain-s03-archive-l016/runtime.ogg",
+      "bytes": 36550,
+      "sha256": "79db2b8677264b0a83d9590d72101b4d61bb05a1c3e4c37b4f52aa639ad8a6ee"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

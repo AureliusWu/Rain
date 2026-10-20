@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-waiting-l032",
+  "sceneId": "s04_waiting",
+  "lineId": "s04_waiting_l032",
+  "lineIndex": 32,
+  "speaker": "p",
+  "text": "差点。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1001711691,
+  "textSha256": "b26208ce68bc1979e8ebf93aefd7ae8e528b44661b70f721dac4fe8c7e7d9863",
+  "medium": "spoken",
+  "requestSha256": "ec7ea8baffd9ce65964bc3e1af915009e0e3b984f43d06058d0b6dad58924cfc",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "差點",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 0.64,
+  "wallSeconds": 52.447,
+  "loudness": {
+    "input_i": "-25.48",
+    "input_tp": "-8.82",
+    "input_lra": "0.00",
+    "input_thresh": "-35.48",
+    "output_i": "-19.98",
+    "output_tp": "-3.34",
+    "output_lra": "0.00",
+    "output_thresh": "-29.98",
+    "normalization_type": "linear",
+    "target_offset": "-0.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-waiting-l032/raw.wav",
+      "bytes": 61520,
+      "sha256": "76d095aeff1158fd090b6ab1c1b9956b7622906b491053f7b72dac89005e5e54"
+    },
+    "master": {
+      "path": "rain-s04-waiting-l032/master.wav",
+      "bytes": 30798,
+      "sha256": "633f5abd2b70e2c4c4b65a0fd81283e4aa54b0f5388e9746b02a2bd44859bc4f"
+    },
+    "runtime": {
+      "path": "rain-s04-waiting-l032/runtime.ogg",
+      "bytes": 8337,
+      "sha256": "65e7e64baaed54c1ebac1af8a8a6bc41f733d65f4f9452e3a195f770cdd4d257"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

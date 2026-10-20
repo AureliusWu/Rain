@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-waiting-l011",
+  "sceneId": "s04_waiting",
+  "lineId": "s04_waiting_l011",
+  "lineIndex": 10,
+  "speaker": "h",
+  "text": "我后来换了工作，也搬了家。这几年，不是在这里等一班早就开走的车。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 401168680,
+  "textSha256": "0b9b646648e52c8b8045beafc50ead0a8a6d0d40cad4ae40934055265c528099",
+  "medium": "spoken",
+  "requestSha256": "d510e8ee6e579877da8dab55ca013911ab94cc9e691bc3306191b5e5e9808836",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我后来换了工作也搬了家这几年不是在这里等一般早就开走的车",
+    "cer": 0.035714,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 7.44,
+  "wallSeconds": 236.398,
+  "loudness": {
+    "input_i": "-27.03",
+    "input_tp": "-10.10",
+    "input_lra": "2.40",
+    "input_thresh": "-37.57",
+    "output_i": "-19.85",
+    "output_tp": "-2.73",
+    "output_lra": "4.50",
+    "output_thresh": "-30.84",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.15"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-waiting-l011/raw.wav",
+      "bytes": 714320,
+      "sha256": "3c2abc1b7d1505a707f2d39f7f6b696e03defecebd1ad8cb1fa6c7ba5ce2a5ed"
+    },
+    "master": {
+      "path": "rain-s04-waiting-l011/master.wav",
+      "bytes": 357198,
+      "sha256": "867f6354a5abddc6b596db13355161e217ed46732c1bcd568c897801a95019f2"
+    },
+    "runtime": {
+      "path": "rain-s04-waiting-l011/runtime.ogg",
+      "bytes": 54685,
+      "sha256": "39f4de22fd0cbf76330f3e964053c47f5a83741452a1b6b099772f862f9d6863"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-waiting-l016",
+  "sceneId": "s04_waiting",
+  "lineId": "s04_waiting_l016",
+  "lineIndex": 15,
+  "speaker": "h",
+  "text": "如果你明天就要走，今天就说今天能做到的事。比如，回去以后给我发个消息。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1678659615,
+  "textSha256": "09647bece61509ed7fcc507b00371bfdcb6b80ed4d17a9142153d35924567b90",
+  "medium": "spoken",
+  "requestSha256": "53cc3ae8b5dd0629f98457113999b95716f3133f22ebd633d0607f377a96b02c",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "如果你明天就要走今天就說今天能做到的事比如回去以後給我發個消息",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 8.4,
+  "wallSeconds": 269.463,
+  "loudness": {
+    "input_i": "-27.60",
+    "input_tp": "-7.71",
+    "input_lra": "3.80",
+    "input_thresh": "-38.60",
+    "output_i": "-20.00",
+    "output_tp": "-2.00",
+    "output_lra": "3.10",
+    "output_thresh": "-31.44",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-waiting-l016/raw.wav",
+      "bytes": 806480,
+      "sha256": "8fdf4a5ba1853470c04f0e0de32c26cd6e214345d5233c81c58f242ee26b2d42"
+    },
+    "master": {
+      "path": "rain-s04-waiting-l016/master.wav",
+      "bytes": 403278,
+      "sha256": "b17642ed7fec55d176a0317edc56572a96c75726f2328d27b0e45e4f3da13e4e"
+    },
+    "runtime": {
+      "path": "rain-s04-waiting-l016/runtime.ogg",
+      "bytes": 60953,
+      "sha256": "709ce1090a2d30a7f4cec0940fd7c802cd6903f8bc425466975c5d29721be1e9"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

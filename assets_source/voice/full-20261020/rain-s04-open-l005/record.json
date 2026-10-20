@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-open-l005",
+  "sceneId": "s04_open",
+  "lineId": "s04_open_l005",
+  "lineIndex": 4,
+  "speaker": "p",
+  "text": "想跟你说说话。如果你不急着走。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1096054902,
+  "textSha256": "9ceed0e0c989e09c3f3fe0bfa9fb7aa114addc413760bcb1605cc1014e0a42b6",
+  "medium": "spoken",
+  "requestSha256": "89e039eb7984f5f1c99fd0c34ff5ca1e95722189db05163417111087938b1b1f",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "想跟你说说话如果你不急着走",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.04,
+  "wallSeconds": 170.232,
+  "loudness": {
+    "input_i": "-22.62",
+    "input_tp": "-4.69",
+    "input_lra": "0.00",
+    "input_thresh": "-32.92",
+    "output_i": "-19.33",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-29.65",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.67"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-open-l005/raw.wav",
+      "bytes": 291920,
+      "sha256": "3aaa43a876d2c838c559e3cbe5c1e30b1a3ee705237ec462f1e497d7889a54ae"
+    },
+    "master": {
+      "path": "rain-s04-open-l005/master.wav",
+      "bytes": 145998,
+      "sha256": "17043604ddc61776d72431d76c24358056eae16fd310771c16dd8ca80d04ae5c"
+    },
+    "runtime": {
+      "path": "rain-s04-open-l005/runtime.ogg",
+      "bytes": 25724,
+      "sha256": "d62432d5af7b670273d16fb1f9f8b12a2e8a01964f1852e8c572a0b5eb1ffe1c"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

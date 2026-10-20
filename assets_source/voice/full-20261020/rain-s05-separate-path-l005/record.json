@@ -1,0 +1,55 @@
+{
+  "id": "rain-s05-separate-path-l005",
+  "sceneId": "s05_separate_path",
+  "lineId": "s05_separate_path_l005",
+  "lineIndex": 9,
+  "speaker": "p",
+  "text": "明天下午我发消息。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1275985259,
+  "textSha256": "e6d52577d3a54830b9d46e04d15a4872c04939ee77e4358db6de1dbcef8c3077",
+  "medium": "spoken",
+  "requestSha256": "b0cc85514dd521e3529492522978bd04f3e358da4a59948b9e8eddeaef828b80",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "明天下午我發消息",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.76,
+  "wallSeconds": 90.868,
+  "loudness": {
+    "input_i": "-30.46",
+    "input_tp": "-12.20",
+    "input_lra": "0.00",
+    "input_thresh": "-40.46",
+    "output_i": "-20.23",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.23",
+    "normalization_type": "linear",
+    "target_offset": "0.23"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s05-separate-path-l005/raw.wav",
+      "bytes": 169040,
+      "sha256": "ba5e85bfbca5cb1c8bba89bec7f53f55930c3ed8d641782c982f066098cb633b"
+    },
+    "master": {
+      "path": "rain-s05-separate-path-l005/master.wav",
+      "bytes": 84558,
+      "sha256": "c55c4ab49ea319589b2181c4b686eadb151d0e07f280b6d5e09fb314e4546bef"
+    },
+    "runtime": {
+      "path": "rain-s05-separate-path-l005/runtime.ogg",
+      "bytes": 16676,
+      "sha256": "254c216c9b011adc968c001f972dc51c4b21e3f096261f8a900518f4c8b58042"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

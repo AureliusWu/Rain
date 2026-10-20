@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-repair-l009",
+  "sceneId": "s04_repair",
+  "lineId": "s04_repair_l009",
+  "lineIndex": 13,
+  "speaker": "h",
+  "text": "那我也说清楚。见面我愿意，什么时候有空，我会自己告诉你。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1716545244,
+  "textSha256": "d66cf8420602a60797bf86d3d793c37e979d9d1e10ad97bdc8b2ac6d0b509fb6",
+  "medium": "spoken",
+  "requestSha256": "c979cc3d11faeb96a77d6c3241c34695056d0108b962a6175c1c01434fcc0fc4",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "那我也說清楚 見面我願意 什麼時候有空 我會自己告訴你",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 8.4,
+  "wallSeconds": 72.478,
+  "loudness": {
+    "input_i": "-25.29",
+    "input_tp": "-6.91",
+    "input_lra": "3.40",
+    "input_thresh": "-36.37",
+    "output_i": "-19.63",
+    "output_tp": "-2.00",
+    "output_lra": "0.60",
+    "output_thresh": "-30.87",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.37"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-repair-l009/raw.wav",
+      "bytes": 806480,
+      "sha256": "9090ddc3ce77e93e04db6a9886ab197bc81575587778b129c08e5c4110ee2b00"
+    },
+    "master": {
+      "path": "rain-s04-repair-l009/master.wav",
+      "bytes": 403278,
+      "sha256": "a006d10893b55f18fae6fc938aae68399780ac7e214a86d12754cad814fd8626"
+    },
+    "runtime": {
+      "path": "rain-s04-repair-l009/runtime.ogg",
+      "bytes": 58007,
+      "sha256": "c49c8a3a3f977ac0ba29f22021b28e9533b942601dd951481e4883ab1373d894"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-repair-l006",
+  "sceneId": "s04_repair",
+  "lineId": "s04_repair_l006",
+  "lineIndex": 10,
+  "speaker": "h",
+  "text": "如果计划变了呢？",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 252172861,
+  "textSha256": "8cd4979e0a3f09defc04f5b8661b3cdf6ceb867aa8d60f9c0e8efbdcdb1a9509",
+  "medium": "spoken",
+  "requestSha256": "c2766b3011de8bbe9d02505a360cee9bb2a1c24bd3fbfe0b1955a15f8362219e",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "如果计划变了呢?",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.36,
+  "wallSeconds": 6.798,
+  "loudness": {
+    "input_i": "-26.37",
+    "input_tp": "-13.58",
+    "input_lra": "0.00",
+    "input_thresh": "-36.37",
+    "output_i": "-20.00",
+    "output_tp": "-7.21",
+    "output_lra": "0.00",
+    "output_thresh": "-30.00",
+    "normalization_type": "linear",
+    "target_offset": "0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-repair-l006/raw.wav",
+      "bytes": 130640,
+      "sha256": "85bc585cf910dd1a34b0727b814b61534f86aaa927a819e9db914bf6ceae9ed5"
+    },
+    "master": {
+      "path": "rain-s04-repair-l006/master.wav",
+      "bytes": 65358,
+      "sha256": "23e14fd47ef5d05a082e499c6f9c340ee0796bbef0aedd2d71d8837b1bafb581"
+    },
+    "runtime": {
+      "path": "rain-s04-repair-l006/runtime.ogg",
+      "bytes": 13571,
+      "sha256": "b3b98d19b154facfd8da0498ecc1e819834aefcbadbeee7a137b7d46f1a019dc"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

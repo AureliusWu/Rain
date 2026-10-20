@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-revisit-l006",
+  "sceneId": "s04_revisit",
+  "lineId": "s04_revisit_l006",
+  "lineIndex": 5,
+  "speaker": "p",
+  "text": "你通常几点能歇一会儿？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1783506889,
+  "textSha256": "ab65ba457ed5df3b86700b0a0032b3c5cf9438d1379099afd326711c9cd30d54",
+  "medium": "spoken",
+  "requestSha256": "6ecfc57887b6bb0d8bce2b153aa1c95d8cdbe029c4e48dc264e6ed853f3cbcd5",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你通常几点能歇一会儿?",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.24,
+  "wallSeconds": 122.22,
+  "loudness": {
+    "input_i": "-32.16",
+    "input_tp": "-13.64",
+    "input_lra": "0.00",
+    "input_thresh": "-42.16",
+    "output_i": "-20.52",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.52",
+    "normalization_type": "linear",
+    "target_offset": "0.52"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-revisit-l006/raw.wav",
+      "bytes": 215120,
+      "sha256": "de7b78bd0c706cf3c1d4ff3597c812d3b744552e919fab0765399bbdc79fcff6"
+    },
+    "master": {
+      "path": "rain-s04-revisit-l006/master.wav",
+      "bytes": 107598,
+      "sha256": "fc29dcfdd0f3bc97d936bbf876997f4504ef653d99fa2f85e891f51689ad99d9"
+    },
+    "runtime": {
+      "path": "rain-s04-revisit-l006/runtime.ogg",
+      "bytes": 20216,
+      "sha256": "e937b761c7215a05223ef6397d1a1a8824e85e06a48c65ff49e527a2b98176ca"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

@@ -1,0 +1,56 @@
+{
+  "id": "rain-q02-honest-l002",
+  "sceneId": "s03_letter",
+  "lineId": "q02_honest_l002",
+  "lineIndex": 1,
+  "speaker": "h",
+  "text": "……那为什么没给我？",
+  "choiceId": "q02_honest",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1724542452,
+  "textSha256": "1ac54649d6652c6247f0bdbaabe12549ca026558c7bd43b8a604e7b13530cd29",
+  "medium": "spoken",
+  "requestSha256": "30d89ba38109a665d763f4bd705f4be4ece603029ca6408199ab17ec8025696e",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "那为什么没给我",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.4,
+  "wallSeconds": 119.786,
+  "loudness": {
+    "input_i": "-22.77",
+    "input_tp": "-9.25",
+    "input_lra": "0.00",
+    "input_thresh": "-33.47",
+    "output_i": "-20.02",
+    "output_tp": "-6.48",
+    "output_lra": "0.00",
+    "output_thresh": "-30.72",
+    "normalization_type": "linear",
+    "target_offset": "0.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-q02-honest-l002/raw.wav",
+      "bytes": 230480,
+      "sha256": "b0ade4ba179cce395f38159819ecc76b4080814f1977d8ac74f0dfc5b7bf91de"
+    },
+    "master": {
+      "path": "rain-q02-honest-l002/master.wav",
+      "bytes": 115278,
+      "sha256": "828a53f0f04117b2518a8a36949852927282a344e8772663ff6417308b558315"
+    },
+    "runtime": {
+      "path": "rain-q02-honest-l002/runtime.ogg",
+      "bytes": 19281,
+      "sha256": "297fdfd4e6bd5130f6241c3ee0ea9aaf779bc8a8050932441d559c1cdfbac160"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

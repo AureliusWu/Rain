@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s04-revisit-l002",
+  "sceneId": "s04_revisit",
+  "lineId": "v07_s04_revisit_l002",
+  "lineIndex": 9,
+  "speaker": "h",
+  "text": "嗯。通常只有十几分钟。消息可以留着，事情不用一次说完。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 19333058,
+  "textSha256": "f96d0d4633b90221314ee249878368caee5ac2eeab34c605f5293db3a544aa96",
+  "medium": "spoken",
+  "requestSha256": "d78685d56b7c70b6df06a77fae8fe3eb65913c823ff94770d0b1bff7913d1ef5",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "嗯 通常只有十幾分鐘消息可以留著 事情不用一次說完",
+    "cer": 0.043478,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 5.76,
+  "wallSeconds": 392.859,
+  "loudness": {
+    "input_i": "-24.93",
+    "input_tp": "-9.71",
+    "input_lra": "1.30",
+    "input_thresh": "-35.33",
+    "output_i": "-19.35",
+    "output_tp": "-3.51",
+    "output_lra": "2.00",
+    "output_thresh": "-29.97",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.65"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s04-revisit-l002/raw.wav",
+      "bytes": 553040,
+      "sha256": "d7a0b90f1eb45c2cf929d694bf156d95b9327059b26ee05e28589b7751feaf23"
+    },
+    "master": {
+      "path": "rain-v07-s04-revisit-l002/master.wav",
+      "bytes": 276558,
+      "sha256": "34171861b821e5075aa2f5bc9fa43eb738683ae9aad4e361b887bdd82f27d7ea"
+    },
+    "runtime": {
+      "path": "rain-v07-s04-revisit-l002/runtime.ogg",
+      "bytes": 42566,
+      "sha256": "43d1c80435fa21242b91ecab0eb559dec86c9addda214dc408eab723e3aad9c7"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

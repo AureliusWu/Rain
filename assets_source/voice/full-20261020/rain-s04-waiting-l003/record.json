@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-waiting-l003",
+  "sceneId": "s04_waiting",
+  "lineId": "s04_waiting_l003",
+  "lineIndex": 2,
+  "speaker": "p",
+  "text": "嗯。请的假不长。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1774736699,
+  "textSha256": "12c3792c807ec82b5c85f0734b267504d7a65ec161907c9e3221013b4d1fc140",
+  "medium": "spoken",
+  "requestSha256": "c8afebc6b042ae56e90ca1a16f13d52ce4afd9a48d90b7d885f9514f4b12b98d",
+  "attempt": 1,
+  "status": "accepted",
+  "asr": {
+    "transcript": "嗯 请的加不长",
+    "cer": 0.166667,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.0,
+  "wallSeconds": 69.847,
+  "loudness": {
+    "input_i": "-26.88",
+    "input_tp": "-10.06",
+    "input_lra": "0.00",
+    "input_thresh": "-37.18",
+    "output_i": "-19.98",
+    "output_tp": "-3.18",
+    "output_lra": "0.00",
+    "output_thresh": "-30.28",
+    "normalization_type": "linear",
+    "target_offset": "-0.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-waiting-l003/raw.wav",
+      "bytes": 192080,
+      "sha256": "bdd38bb7da5b1bbb60f3706c4a4477cf796ef03322ffa359eb103b7d879fd051"
+    },
+    "master": {
+      "path": "rain-s04-waiting-l003/master.wav",
+      "bytes": 96078,
+      "sha256": "ffb708e62c74f034cb81b3a033c372cd9eb596923ab7f9a2b084a89d4d89e077"
+    },
+    "runtime": {
+      "path": "rain-s04-waiting-l003/runtime.ogg",
+      "bytes": 17447,
+      "sha256": "06b0ff4625cf0e7abda955e476ce669bb65002194460e85d2f083cd9ab7c0c12"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

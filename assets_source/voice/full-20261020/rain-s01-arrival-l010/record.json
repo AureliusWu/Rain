@@ -1,0 +1,55 @@
+{
+  "id": "rain-s01-arrival-l010",
+  "sceneId": "s01_arrival",
+  "lineId": "s01_arrival_l010",
+  "lineIndex": 9,
+  "speaker": "p",
+  "text": "……好久不见。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1099281803,
+  "textSha256": "baa4a0a89e2c8f787f2b0b8991bcad9dc8f2b7d66c3c1b9afa5a224e88eacb0c",
+  "medium": "spoken",
+  "requestSha256": "2a7b1c4624f0f2ddd217e0b8e54a0ce69af2614fb6bcc84ab392fe18b57d23b0",
+  "attempt": 1,
+  "status": "accepted",
+  "asr": {
+    "transcript": "好久不见",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.84,
+  "wallSeconds": 73.475,
+  "loudness": {
+    "input_i": "-22.62",
+    "input_tp": "-6.98",
+    "input_lra": "0.00",
+    "input_thresh": "-35.85",
+    "output_i": "-19.99",
+    "output_tp": "-4.37",
+    "output_lra": "0.00",
+    "output_thresh": "-33.23",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s01-arrival-l010/raw.wav",
+      "bytes": 176720,
+      "sha256": "0cda21ae733f1efb9cb6df1a16827b030e49fce117ed4427fca4c0a8fec68d94"
+    },
+    "master": {
+      "path": "rain-s01-arrival-l010/master.wav",
+      "bytes": 88398,
+      "sha256": "7d4021bfc29f6ea40b72fcc6584b541e9aef8a514a636de18da3833c043c17b6"
+    },
+    "runtime": {
+      "path": "rain-s01-arrival-l010/runtime.ogg",
+      "bytes": 17225,
+      "sha256": "39ac8414b3b37e81fc76ddf22a6eb1ee8ee3400c191e5a8a4dbaf92e14aa65a8"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

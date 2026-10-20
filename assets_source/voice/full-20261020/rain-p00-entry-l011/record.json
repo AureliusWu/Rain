@@ -1,0 +1,55 @@
+{
+  "id": "rain-p00-entry-l011",
+  "sceneId": "p00_entry",
+  "lineId": "p00_entry_l011",
+  "lineIndex": 10,
+  "speaker": "p",
+  "text": "还来得及。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 288039096,
+  "textSha256": "dc86f11f17506cf63d43c8c80382913dd2d1f3c50d1505898a0d491f7e6e51cd",
+  "medium": "spoken",
+  "requestSha256": "3e079a19a9bc79e938b5f25f9d8089e7e81e29cf26fa6bcfeba71996d10eced8",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "还来得及",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 0.88,
+  "wallSeconds": 5.219,
+  "loudness": {
+    "input_i": "-24.01",
+    "input_tp": "-7.42",
+    "input_lra": "0.00",
+    "input_thresh": "-34.01",
+    "output_i": "-20.01",
+    "output_tp": "-3.42",
+    "output_lra": "0.00",
+    "output_thresh": "-30.01",
+    "normalization_type": "linear",
+    "target_offset": "0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-p00-entry-l011/raw.wav",
+      "bytes": 84560,
+      "sha256": "0b121a7b9fd10d49a39887358e429024fa03e922e2d9a951b398f61d7940dafc"
+    },
+    "master": {
+      "path": "rain-p00-entry-l011/master.wav",
+      "bytes": 42318,
+      "sha256": "e3826e532bbece6253a722e3944229d60f91d4f51067df7b07d7fad3996588b1"
+    },
+    "runtime": {
+      "path": "rain-p00-entry-l011/runtime.ogg",
+      "bytes": 10961,
+      "sha256": "19c94c5ad7cc5972fdb5fd8874000b78c259806e0a4fd248bd62f75779401c8a"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

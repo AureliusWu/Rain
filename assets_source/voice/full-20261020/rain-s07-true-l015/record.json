@@ -1,0 +1,55 @@
+{
+  "id": "rain-s07-true-l015",
+  "sceneId": "s07_true",
+  "lineId": "s07_true_l015",
+  "lineIndex": 19,
+  "speaker": "p",
+  "text": "好。先告诉你书有没有湿，再说说我今天见到你是什么样。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1566821041,
+  "textSha256": "4bf6ca3971bc9fd5f3732a7aa97e4989c9abb7b344bcfd99a17b07057c4d773b",
+  "medium": "spoken",
+  "requestSha256": "c0bd4c8c15460156a5629c19fcaf735016780c1cfc8eaccc68291cebd64e7c13",
+  "attempt": 1,
+  "status": "accepted",
+  "asr": {
+    "transcript": "好,先告訴你書,有沒有詩再說說我今天見的你,是什麼樣?",
+    "cer": 0.086957,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 5.2,
+  "wallSeconds": 240.51,
+  "loudness": {
+    "input_i": "-25.74",
+    "input_tp": "-7.50",
+    "input_lra": "0.30",
+    "input_thresh": "-36.08",
+    "output_i": "-20.11",
+    "output_tp": "-2.00",
+    "output_lra": "0.80",
+    "output_thresh": "-30.38",
+    "normalization_type": "dynamic",
+    "target_offset": "0.11"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s07-true-l015/raw.wav",
+      "bytes": 499280,
+      "sha256": "87822830a94ecc7619e9d40e027c5537ca160caacb2102fed236487d8839d41c"
+    },
+    "master": {
+      "path": "rain-s07-true-l015/master.wav",
+      "bytes": 249678,
+      "sha256": "b618f11efeee4e8b57a5a1f9dbb2cf84aa9b4f4fa6bc1700e267c366d9de94f1"
+    },
+    "runtime": {
+      "path": "rain-s07-true-l015/runtime.ogg",
+      "bytes": 41875,
+      "sha256": "f0c9c8a73f54f69556189d2b70bed952122d7e42207e59c3c0bd985441ab7338"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

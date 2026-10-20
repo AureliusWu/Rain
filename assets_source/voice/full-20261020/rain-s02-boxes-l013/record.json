@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-boxes-l013",
+  "sceneId": "s02_boxes",
+  "lineId": "s02_boxes_l013",
+  "lineIndex": 12,
+  "speaker": "p",
+  "text": "我记得一本是你借我的。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 657776890,
+  "textSha256": "cc3b7e6dec17ade1a264583761ced8ccf24f2dde8dd092014c291db87239e9fa",
+  "medium": "spoken",
+  "requestSha256": "0863b99f96622a422534411d385cf5ec1aeee145776fd815e04fe8847401586a",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我记得一本是你借我的",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.08,
+  "wallSeconds": 104.882,
+  "loudness": {
+    "input_i": "-26.22",
+    "input_tp": "-9.64",
+    "input_lra": "0.00",
+    "input_thresh": "-36.22",
+    "output_i": "-20.00",
+    "output_tp": "-3.42",
+    "output_lra": "0.00",
+    "output_thresh": "-30.00",
+    "normalization_type": "linear",
+    "target_offset": "0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-boxes-l013/raw.wav",
+      "bytes": 199760,
+      "sha256": "c1ee9e9f43fe020fbc6e07871f0bd9b887cd5b27bc5dc8e3f4680561992305c4"
+    },
+    "master": {
+      "path": "rain-s02-boxes-l013/master.wav",
+      "bytes": 99918,
+      "sha256": "9943aadab3d0e457123a98e1bac5381be55958ac5cb4de7f8b23975a8d976d2c"
+    },
+    "runtime": {
+      "path": "rain-s02-boxes-l013/runtime.ogg",
+      "bytes": 20904,
+      "sha256": "cc56de410abf1c2c47bf45f702bba871ce12ea86d43aec5c756a8030d339d72a"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

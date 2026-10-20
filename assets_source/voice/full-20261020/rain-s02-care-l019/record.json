@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-care-l019",
+  "sceneId": "s02_care",
+  "lineId": "s02_care_l019",
+  "lineIndex": 18,
+  "speaker": "h",
+  "text": "有喜欢的，也有想辞职的时候。正常。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 244462651,
+  "textSha256": "0bef7ebdec56b5b2f90c3012fef01f887d87a37454631a8d5d702c774914de2b",
+  "medium": "spoken",
+  "requestSha256": "b02807e8b1633e8ff34b73c5e5f0699e6b29035595c3f8b4749a582a467f0649",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "有喜欢的,也有想辞职的时候,正常",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 5.52,
+  "wallSeconds": 195.245,
+  "loudness": {
+    "input_i": "-26.33",
+    "input_tp": "-10.36",
+    "input_lra": "3.00",
+    "input_thresh": "-36.96",
+    "output_i": "-20.53",
+    "output_tp": "-4.78",
+    "output_lra": "1.60",
+    "output_thresh": "-31.22",
+    "normalization_type": "dynamic",
+    "target_offset": "0.53"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-care-l019/raw.wav",
+      "bytes": 530000,
+      "sha256": "f949e22e24bbf0389889b2b94d160399970529f8724b6ab4091d1406ad3fd7a8"
+    },
+    "master": {
+      "path": "rain-s02-care-l019/master.wav",
+      "bytes": 265038,
+      "sha256": "377f9dca0f50695c36c2f9cb71b8fa238057079d43a71aadb37f973ffbf56b77"
+    },
+    "runtime": {
+      "path": "rain-s02-care-l019/runtime.ogg",
+      "bytes": 41236,
+      "sha256": "a6cc44a48711ee91399ccd6cb2518cb64625868791be1ae23536e69af9db2f5a"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

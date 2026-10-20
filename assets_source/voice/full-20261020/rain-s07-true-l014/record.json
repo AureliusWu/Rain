@@ -1,0 +1,55 @@
+{
+  "id": "rain-s07-true-l014",
+  "sceneId": "s07_true",
+  "lineId": "s07_true_l014",
+  "lineIndex": 18,
+  "speaker": "h",
+  "text": "到家以后，发一条有内容的消息。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1487212082,
+  "textSha256": "bf717f47a608deec4abe886e211eb6039d08a4e65ba02a9f592ef26dec13d779",
+  "medium": "spoken",
+  "requestSha256": "f4cd8f892500900e0dc609999a96d83b140b553652b4b14d8e670a277c3e8606",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "到家以后,发一条有内容的消息。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.44,
+  "wallSeconds": 145.282,
+  "loudness": {
+    "input_i": "-25.57",
+    "input_tp": "-8.05",
+    "input_lra": "1.60",
+    "input_thresh": "-35.71",
+    "output_i": "-20.09",
+    "output_tp": "-3.15",
+    "output_lra": "0.00",
+    "output_thresh": "-30.23",
+    "normalization_type": "dynamic",
+    "target_offset": "0.09"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s07-true-l014/raw.wav",
+      "bytes": 330320,
+      "sha256": "499bf5f2b64290e191f05d0e01a793dd172c53fc2acd0a81c796a173f818aa80"
+    },
+    "master": {
+      "path": "rain-s07-true-l014/master.wav",
+      "bytes": 165198,
+      "sha256": "3d18445e2697d7891735456200bd392cabf5bfa1b4708ea9c3ef195c645270d3"
+    },
+    "runtime": {
+      "path": "rain-s07-true-l014/runtime.ogg",
+      "bytes": 28140,
+      "sha256": "42b1327739fe3aa29505cca95d353dfe9d334f724e5856a9a517a8dc1e6f74cf"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-boxes-l021",
+  "sceneId": "s02_boxes",
+  "lineId": "s02_boxes_l021",
+  "lineIndex": 20,
+  "speaker": "h",
+  "text": "这样就齐了。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 590124941,
+  "textSha256": "b97584fa478bd21e80154361e0c7e51720ea9233b50eb1749a6e965bdefec162",
+  "medium": "spoken",
+  "requestSha256": "75b1be4e4d5791b494809769d63825a7882068c563887ccaf9284d09f1ef380e",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "這樣就齊了",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.04,
+  "wallSeconds": 40.886,
+  "loudness": {
+    "input_i": "-23.39",
+    "input_tp": "-7.83",
+    "input_lra": "0.00",
+    "input_thresh": "-33.39",
+    "output_i": "-19.99",
+    "output_tp": "-4.44",
+    "output_lra": "0.00",
+    "output_thresh": "-29.99",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-boxes-l021/raw.wav",
+      "bytes": 99920,
+      "sha256": "c168ded5444771971e7273debfdc2d897a58598c2a6bdee32184d08b5a610db3"
+    },
+    "master": {
+      "path": "rain-s02-boxes-l021/master.wav",
+      "bytes": 49998,
+      "sha256": "90905835fabd808701cc4b11c08223a9270a3f7b45d5518e02836912b29aa8d2"
+    },
+    "runtime": {
+      "path": "rain-s02-boxes-l021/runtime.ogg",
+      "bytes": 11094,
+      "sha256": "088aa9ad2ce3334ca7e1ec6e2237bc4c261762a1766e86a0bc9437b21d343310"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

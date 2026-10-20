@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-care-l014",
+  "sceneId": "s02_care",
+  "lineId": "s02_care_l014",
+  "lineIndex": 13,
+  "speaker": "p",
+  "text": "你写这些推荐？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 761011521,
+  "textSha256": "969a3d8f1fc8ee9fcb5995270a1c9ec0bc91cc5465a7cb2b674d57fe4d19d90a",
+  "medium": "spoken",
+  "requestSha256": "7da84acd04fb75f6e8a70ddef9d6dae841820f3bbed5048390cead85118cd4df",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你写这些推荐",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.28,
+  "wallSeconds": 133.921,
+  "loudness": {
+    "input_i": "-37.29",
+    "input_tp": "-21.04",
+    "input_lra": "0.00",
+    "input_thresh": "-47.29",
+    "output_i": "-20.00",
+    "output_tp": "-3.75",
+    "output_lra": "0.00",
+    "output_thresh": "-30.00",
+    "normalization_type": "linear",
+    "target_offset": "-0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-care-l014/raw.wav",
+      "bytes": 122960,
+      "sha256": "a59e44e90fd51f012e22f6558b9a3df451b97413acbca0611ace12f5fcf65e8e"
+    },
+    "master": {
+      "path": "rain-s02-care-l014/master.wav",
+      "bytes": 61518,
+      "sha256": "9dbc295765543a2cb1363a1e82acb06572e395602a1e34a355ccc8cf7d491025"
+    },
+    "runtime": {
+      "path": "rain-s02-care-l014/runtime.ogg",
+      "bytes": 15443,
+      "sha256": "ec04a05fc8e22a09db57fa3e00f2694b33c7ccc28133700ad3463239d27ead72"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

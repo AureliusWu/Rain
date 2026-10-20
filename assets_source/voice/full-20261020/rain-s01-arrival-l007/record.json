@@ -1,0 +1,55 @@
+{
+  "id": "rain-s01-arrival-l007",
+  "sceneId": "s01_arrival",
+  "lineId": "s01_arrival_l007",
+  "lineIndex": 6,
+  "speaker": "p",
+  "text": "许澄？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1898386838,
+  "textSha256": "36c6b49d4c48cc224f3b17086b60b7c5465e9381d37b43a22526357be371c5a3",
+  "medium": "spoken",
+  "requestSha256": "514aff9a33d192359d669a31ee71c318536d76fe39f4a76ed37c32588c85949b",
+  "attempt": 2,
+  "status": "needs_review",
+  "asr": {
+    "transcript": "许诚",
+    "cer": 0.5,
+    "polarityCountsMatch": true,
+    "passed": false
+  },
+  "duration": 0.8,
+  "wallSeconds": 11.309,
+  "loudness": {
+    "input_i": "-28.52",
+    "input_tp": "-11.76",
+    "input_lra": "0.00",
+    "input_thresh": "-38.52",
+    "output_i": "-20.00",
+    "output_tp": "-3.24",
+    "output_lra": "0.00",
+    "output_thresh": "-30.00",
+    "normalization_type": "linear",
+    "target_offset": "0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s01-arrival-l007/raw.wav",
+      "bytes": 76880,
+      "sha256": "7387d0c3c32907a7908b583193f3170e261e32adcbfb500f1ac07c4240100b2a"
+    },
+    "master": {
+      "path": "rain-s01-arrival-l007/master.wav",
+      "bytes": 38478,
+      "sha256": "dcd7a729152286ec7447bb5b3d05343aaab9fefa308a0dad6f0e5b3996169268"
+    },
+    "runtime": {
+      "path": "rain-s01-arrival-l007/runtime.ogg",
+      "bytes": 9613,
+      "sha256": "c791dd67f8c484d35beee4d575980c9a0481d524baaa73bb2a0c6852d856ab87"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

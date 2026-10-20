@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s04-repair-l001",
+  "sceneId": "s04_repair",
+  "lineId": "v07_s04_repair_l001",
+  "lineIndex": 2,
+  "speaker": "p",
+  "text": "我当时希望你愿意见我，却没问过，就把最坏的答复当成已经听到。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1210834577,
+  "textSha256": "652875fb868d4c91109181e75bae2d2edcafbd5c1df919f9e8e5a58a9a24de71",
+  "medium": "spoken",
+  "requestSha256": "32474b65a21d498b661b6019147d833d9b8745b8d6f546d0dafdf340eaab3ced",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我当时希望你愿意见我却没问过就把最坏的答复当场已经听到",
+    "cer": 0.037037,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 5.76,
+  "wallSeconds": 396.154,
+  "loudness": {
+    "input_i": "-26.94",
+    "input_tp": "-7.30",
+    "input_lra": "2.40",
+    "input_thresh": "-37.32",
+    "output_i": "-20.71",
+    "output_tp": "-2.00",
+    "output_lra": "1.60",
+    "output_thresh": "-31.12",
+    "normalization_type": "dynamic",
+    "target_offset": "0.71"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s04-repair-l001/raw.wav",
+      "bytes": 553040,
+      "sha256": "5aa11827716b47811ff2d290c5c5200583c20fe94cb5b11d386607cd6eb8b4e8"
+    },
+    "master": {
+      "path": "rain-v07-s04-repair-l001/master.wav",
+      "bytes": 276558,
+      "sha256": "51f40ac2c31e70c18c8806491bcbc003ee0516bc550d2a2f26f99074a0049731"
+    },
+    "runtime": {
+      "path": "rain-v07-s04-repair-l001/runtime.ogg",
+      "bytes": 46960,
+      "sha256": "647e6855ad39b8bf8447e2ad8ab3fef8ea43720682ac0a6d136dc5a200fd06a5"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

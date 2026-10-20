@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-open-l021",
+  "sceneId": "s04_open",
+  "lineId": "s04_open_l021",
+  "lineIndex": 20,
+  "speaker": "h",
+  "text": "你可以慢慢说，但别只挑听起来最好听的那部分。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 88425475,
+  "textSha256": "789749eec2736a5aabc2b072f1d0bee32fe5bfd4fdc1bc7eaf73c7e8157fd69a",
+  "medium": "spoken",
+  "requestSha256": "b5eab4d431d2f953f46f8e2a1f880e2fe2148a5b9d55ec0f3bf020cb1c5b1242",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你可以慢慢说,但别只挑听起来最好听的那部分。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.16,
+  "wallSeconds": 233.656,
+  "loudness": {
+    "input_i": "-25.45",
+    "input_tp": "-11.19",
+    "input_lra": "0.60",
+    "input_thresh": "-35.70",
+    "output_i": "-19.65",
+    "output_tp": "-5.61",
+    "output_lra": "0.30",
+    "output_thresh": "-29.88",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.35"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-open-l021/raw.wav",
+      "bytes": 399440,
+      "sha256": "14addda5d5b02490e46f7099f42374c67a0217e16ec36037e18c3d6e19487c36"
+    },
+    "master": {
+      "path": "rain-s04-open-l021/master.wav",
+      "bytes": 199758,
+      "sha256": "db2033a528d5e16a19dfc78d826f06d8a13bbc4a3df08728287e4ef05f0aa5db"
+    },
+    "runtime": {
+      "path": "rain-s04-open-l021/runtime.ogg",
+      "bytes": 34685,
+      "sha256": "864ff1d7fcd7900851f7de6528d240bb1090498fb39176eab63f74127eea4b8f"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

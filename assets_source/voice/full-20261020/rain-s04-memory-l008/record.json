@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-memory-l008",
+  "sceneId": "s04_memory",
+  "lineId": "s04_memory_l008",
+  "lineIndex": 12,
+  "speaker": "h",
+  "text": "我喜欢那次展。你没站好，书可是摆好了。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1629958909,
+  "textSha256": "1d0d38cc8d199a42e54143752c0f582c4bd41871458c1f6e420aa92983c51249",
+  "medium": "spoken",
+  "requestSha256": "234ba3dab3a5d11ccaa641b21e9500043ce0a33173b88982e42d6fa4b59ee7a4",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我喜歡那次展你沒賬好書可是擺好了",
+    "cer": 0.0625,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.64,
+  "wallSeconds": 263.98,
+  "loudness": {
+    "input_i": "-24.44",
+    "input_tp": "-5.16",
+    "input_lra": "2.00",
+    "input_thresh": "-34.87",
+    "output_i": "-19.23",
+    "output_tp": "-2.00",
+    "output_lra": "0.30",
+    "output_thresh": "-29.65",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.77"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-memory-l008/raw.wav",
+      "bytes": 445520,
+      "sha256": "1295b7f84fdf49ac3884ed7a1278520f4b534d76d9f1691ceb0c13026f74a4d2"
+    },
+    "master": {
+      "path": "rain-s04-memory-l008/master.wav",
+      "bytes": 222798,
+      "sha256": "d4da08f39a0500a244ece301e1ffc9476d86dd29ed595f186b29547ec48a1e20"
+    },
+    "runtime": {
+      "path": "rain-s04-memory-l008/runtime.ogg",
+      "bytes": 36095,
+      "sha256": "ecdfb5f569b2ebceca97d6f4ee2183f151a12e748657b1b460f48c3024e92e7f"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

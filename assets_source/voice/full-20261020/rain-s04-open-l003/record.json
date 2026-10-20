@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-open-l003",
+  "sceneId": "s04_open",
+  "lineId": "s04_open_l003",
+  "lineIndex": 2,
+  "speaker": "h",
+  "text": "那现在还有一点时间。你想怎么用？",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1257327500,
+  "textSha256": "8d1b32f97d01acd07b7fb75da3f8c33e69ab3eb8e45eb5eb4e596f2776c283da",
+  "medium": "spoken",
+  "requestSha256": "610827e612e4bc9a7bd2ce94a989b5ed5d85694b3bf3d30f62d588c957ebd967",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "那现在还有一点时间,你想怎么用?",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.96,
+  "wallSeconds": 101.495,
+  "loudness": {
+    "input_i": "-24.09",
+    "input_tp": "-11.02",
+    "input_lra": "0.00",
+    "input_thresh": "-34.09",
+    "output_i": "-20.00",
+    "output_tp": "-6.92",
+    "output_lra": "0.00",
+    "output_thresh": "-30.00",
+    "normalization_type": "linear",
+    "target_offset": "0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-open-l003/raw.wav",
+      "bytes": 284240,
+      "sha256": "fabebce4157ba54835a90ecd63f4eb0df89128fbe692e8c5b5a7ed029694a9b9"
+    },
+    "master": {
+      "path": "rain-s04-open-l003/master.wav",
+      "bytes": 142158,
+      "sha256": "5f8babd2240459363731250e66544f1811651955b3b0f40cc21776551d1f9ca1"
+    },
+    "runtime": {
+      "path": "rain-s04-open-l003/runtime.ogg",
+      "bytes": 25281,
+      "sha256": "9fda6d4d98f5894c020f485b9199fe7ff1d9c4226000220acd82746bdd38ca9b"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

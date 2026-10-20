@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-reserved-l005",
+  "sceneId": "s04_reserved",
+  "lineId": "s04_reserved_l005",
+  "lineIndex": 4,
+  "speaker": "h",
+  "text": "可以。但你没说的部分，我不会当作已经知道。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 448912678,
+  "textSha256": "51052322715cfab3c12821341961bb663295f235ace110482bba846d67033b6d",
+  "medium": "spoken",
+  "requestSha256": "02481778a5cbb1f038868a17b744575841a974f78db3af3b2b0b2ec7691d421c",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "可以 但你沒說的部分 我不會當作已經知道",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 5.36,
+  "wallSeconds": 248.599,
+  "loudness": {
+    "input_i": "-25.21",
+    "input_tp": "-9.78",
+    "input_lra": "1.10",
+    "input_thresh": "-35.60",
+    "output_i": "-20.16",
+    "output_tp": "-4.90",
+    "output_lra": "0.70",
+    "output_thresh": "-30.70",
+    "normalization_type": "dynamic",
+    "target_offset": "0.16"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-reserved-l005/raw.wav",
+      "bytes": 514640,
+      "sha256": "01414f72f16e0f74d41f14b6aa28adfe9a0778bfa05670d1fe56905428c98c68"
+    },
+    "master": {
+      "path": "rain-s04-reserved-l005/master.wav",
+      "bytes": 257358,
+      "sha256": "219d012ebe618e05d1244ade04d7a88edd9d014952890f40c2d33b6f8b422b11"
+    },
+    "runtime": {
+      "path": "rain-s04-reserved-l005/runtime.ogg",
+      "bytes": 41128,
+      "sha256": "78364a4f81fc3ba79282fd2e90d43354abf57c75211bee1d82858e1446fd1a33"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

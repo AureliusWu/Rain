@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-repair-l011",
+  "sceneId": "s04_repair",
+  "lineId": "s04_repair_l011",
+  "lineIndex": 18,
+  "speaker": "h",
+  "text": "你把现在的写在后面吧。别拿旧日期当借口。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 741462397,
+  "textSha256": "a7c43f6a8391322786962d076797ba2adb8c2cb6eb271ad9139763c3b4acb889",
+  "medium": "spoken",
+  "requestSha256": "5161f50d77ce3babc9cba45a94c27a3104ca8ee119520ca09d3e4aeb072419a5",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你把現在的寫在後面吧別拿舊日期當藉口",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.68,
+  "wallSeconds": 205.199,
+  "loudness": {
+    "input_i": "-23.35",
+    "input_tp": "-8.49",
+    "input_lra": "2.00",
+    "input_thresh": "-33.83",
+    "output_i": "-19.27",
+    "output_tp": "-5.16",
+    "output_lra": "0.00",
+    "output_thresh": "-29.88",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.73"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-repair-l011/raw.wav",
+      "bytes": 353360,
+      "sha256": "a8bd9efaed9a031a55b8dbc5a9b9e6b5c7781587f471d1961711294f666fe78f"
+    },
+    "master": {
+      "path": "rain-s04-repair-l011/master.wav",
+      "bytes": 176718,
+      "sha256": "b62e92598c5f916f1c992127e09f099fbe494b4c70810e9c369901792da18349"
+    },
+    "runtime": {
+      "path": "rain-s04-repair-l011/runtime.ogg",
+      "bytes": 30055,
+      "sha256": "efb27259c34abcc7b9ceba17a892b7c639dccc05df1ed90cf2cbfcd95b09ba0d"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

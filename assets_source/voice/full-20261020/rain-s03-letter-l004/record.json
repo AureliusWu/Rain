@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-letter-l004",
+  "sceneId": "s03_letter",
+  "lineId": "s03_letter_l004",
+  "lineIndex": 3,
+  "speaker": "p",
+  "text": "你看过吗？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 188565367,
+  "textSha256": "5ac549dff799fca8957a350d16f615acd1446ad3e6cd1347fa453f31997b4ff0",
+  "medium": "spoken",
+  "requestSha256": "63a102b8acbe68b1b486261e78973c621e03fbe2de0106b1900e4758f2ac6dfa",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你看過嗎",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 0.8,
+  "wallSeconds": 46.243,
+  "loudness": {
+    "input_i": "-26.31",
+    "input_tp": "-11.37",
+    "input_lra": "0.00",
+    "input_thresh": "-36.31",
+    "output_i": "-19.98",
+    "output_tp": "-5.07",
+    "output_lra": "0.00",
+    "output_thresh": "-29.98",
+    "normalization_type": "linear",
+    "target_offset": "-0.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-letter-l004/raw.wav",
+      "bytes": 76880,
+      "sha256": "06cb1858089a95cce058952c8aca8408b79ae8d0d4ff12e0234778e305eb927f"
+    },
+    "master": {
+      "path": "rain-s03-letter-l004/master.wav",
+      "bytes": 38478,
+      "sha256": "8d0c87903959281b288310b6a5d8ad80717ff2b2a5fb154b65b75e076d5ac333"
+    },
+    "runtime": {
+      "path": "rain-s03-letter-l004/runtime.ogg",
+      "bytes": 9721,
+      "sha256": "2cc89e24fc2d819f939fff8726c4378c36836f9bda33fbc249e79d145b298ca3"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

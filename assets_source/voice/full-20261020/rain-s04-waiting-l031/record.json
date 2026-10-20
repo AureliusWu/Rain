@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-waiting-l031",
+  "sceneId": "s04_waiting",
+  "lineId": "s04_waiting_l031",
+  "lineIndex": 31,
+  "speaker": "h",
+  "text": "你是不是又在记任务？",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1954058813,
+  "textSha256": "516f4daacf0d1b2377583351286bcc7f58ce94963e7f6905e6695e5789d0a38b",
+  "medium": "spoken",
+  "requestSha256": "703c9c8ed0c7781491bfc5e4c45181f6269686b523cf7f1029050b08102281b8",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你是不是又在寄任务",
+    "cer": 0.111111,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.44,
+  "wallSeconds": 79.872,
+  "loudness": {
+    "input_i": "-23.67",
+    "input_tp": "-8.21",
+    "input_lra": "0.00",
+    "input_thresh": "-33.67",
+    "output_i": "-20.01",
+    "output_tp": "-4.54",
+    "output_lra": "0.00",
+    "output_thresh": "-30.01",
+    "normalization_type": "linear",
+    "target_offset": "0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-waiting-l031/raw.wav",
+      "bytes": 138320,
+      "sha256": "bbdbb5dd0416eeb86605d7149e5d0aca7f658b469062988c32acc57b94b9169a"
+    },
+    "master": {
+      "path": "rain-s04-waiting-l031/master.wav",
+      "bytes": 69198,
+      "sha256": "3b89ac876844161e8fe1e41bc660afdf741d02cb8b062935e3ee3912a4a76697"
+    },
+    "runtime": {
+      "path": "rain-s04-waiting-l031/runtime.ogg",
+      "bytes": 14072,
+      "sha256": "dbda40fc83d55bec73230c78807f09b061cef923a62a4bb2c08a22ac30c0f0af"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

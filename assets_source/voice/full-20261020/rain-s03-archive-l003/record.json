@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-archive-l003",
+  "sceneId": "s03_archive",
+  "lineId": "s03_archive_l003",
+  "lineIndex": 2,
+  "speaker": "p",
+  "text": "照片都找齐了吗？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 602084834,
+  "textSha256": "ffcc7e6e4690d92e968ecf219645f6705305678d4906fcf4a9d98b7d6165c4f2",
+  "medium": "spoken",
+  "requestSha256": "f69164d9d637c59b67cd0e6c710f2a162b38c16266e719a64ec6108368d04d2c",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "照片都找齐了吗",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.44,
+  "wallSeconds": 76.06,
+  "loudness": {
+    "input_i": "-23.83",
+    "input_tp": "-9.47",
+    "input_lra": "0.00",
+    "input_thresh": "-33.83",
+    "output_i": "-20.00",
+    "output_tp": "-5.64",
+    "output_lra": "0.00",
+    "output_thresh": "-30.00",
+    "normalization_type": "linear",
+    "target_offset": "-0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-archive-l003/raw.wav",
+      "bytes": 138320,
+      "sha256": "5af49868fe305caac104b6e50d4f0e4749fa7bc7d45de3b8814b7f26d42b2697"
+    },
+    "master": {
+      "path": "rain-s03-archive-l003/master.wav",
+      "bytes": 69198,
+      "sha256": "37abd414aa781dcaafdf15ef8bc37b877e9b97d4264f289fe54508ba3e173c37"
+    },
+    "runtime": {
+      "path": "rain-s03-archive-l003/runtime.ogg",
+      "bytes": 13823,
+      "sha256": "fb290c9f1ddc3e5bd0696bf256b77eb751368e20752736d5c1b4c67a2cb0305e"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-reserved-l007",
+  "sceneId": "s04_reserved",
+  "lineId": "s04_reserved_l007",
+  "lineIndex": 6,
+  "speaker": "p",
+  "text": "那我先不让你猜。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 709772956,
+  "textSha256": "1fe9a0c6f74c63a41a6ef48cb598d5b67227aa844fab823e8c75ea2a4410ff17",
+  "medium": "spoken",
+  "requestSha256": "832bf91ea4c8e09893d6ee0fd0f145333952c3330a3ef2d01edbeeb8782bf46d",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "那我先不讓你猜",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.36,
+  "wallSeconds": 16.251,
+  "loudness": {
+    "input_i": "-23.82",
+    "input_tp": "-7.49",
+    "input_lra": "0.00",
+    "input_thresh": "-33.82",
+    "output_i": "-20.02",
+    "output_tp": "-3.67",
+    "output_lra": "0.00",
+    "output_thresh": "-30.02",
+    "normalization_type": "linear",
+    "target_offset": "0.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-reserved-l007/raw.wav",
+      "bytes": 130640,
+      "sha256": "60339dfada26ab581f45c84c87c337b5cfbbeb4d799294104c8ead33abd9acc3"
+    },
+    "master": {
+      "path": "rain-s04-reserved-l007/master.wav",
+      "bytes": 65358,
+      "sha256": "ae34d533b2c3db3ebf510bc185353d37de645563a711ec134666267b475f33f2"
+    },
+    "runtime": {
+      "path": "rain-s04-reserved-l007/runtime.ogg",
+      "bytes": 13880,
+      "sha256": "ac6368701daa342e70747c4ffa40a874d45d7bcb1a6744262a1b579b7c4fbad0"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

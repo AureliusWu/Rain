@@ -1,0 +1,56 @@
+{
+  "id": "rain-q01-care-l002",
+  "sceneId": "s02_reunion",
+  "lineId": "q01_care_l002",
+  "lineIndex": 1,
+  "speaker": "h",
+  "text": "还好。书店换了新书架，我少了一项修桌子的工作。",
+  "choiceId": "q01_care",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 99742150,
+  "textSha256": "845886465f30489c5839687e772d65cd43289acd497986acb3a03024ea9f276c",
+  "medium": "spoken",
+  "requestSha256": "32b3a4bb2a6a977e6245105434e0c11211c5f10a70b7be7991a6c2059fbc203b",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "还好,书店换了新书架,我少了一项修桌子的工作",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.88,
+  "wallSeconds": 160.524,
+  "loudness": {
+    "input_i": "-25.27",
+    "input_tp": "-10.03",
+    "input_lra": "3.90",
+    "input_thresh": "-35.78",
+    "output_i": "-17.23",
+    "output_tp": "-2.00",
+    "output_lra": "2.90",
+    "output_thresh": "-27.87",
+    "normalization_type": "dynamic",
+    "target_offset": "-2.77"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-q01-care-l002/raw.wav",
+      "bytes": 468560,
+      "sha256": "5d86ecae2ba1c1bc9490f84686c71f6e98832815f7a13287c3bcd1d858698cad"
+    },
+    "master": {
+      "path": "rain-q01-care-l002/master.wav",
+      "bytes": 234318,
+      "sha256": "9e4a39330872658e2720d6dc5d3b4bdc830a7f8f3d1dc0940b5f4b216897456a"
+    },
+    "runtime": {
+      "path": "rain-q01-care-l002/runtime.ogg",
+      "bytes": 38099,
+      "sha256": "7d3250d872587e16298208dc7a1f74a90cc1350656c2f6fd37ba0d7d9c6cdc87"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

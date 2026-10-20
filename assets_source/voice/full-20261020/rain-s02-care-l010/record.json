@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-care-l010",
+  "sceneId": "s02_care",
+  "lineId": "s02_care_l010",
+  "lineIndex": 9,
+  "speaker": "h",
+  "text": "练了三年。不能一直怪相机。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1977666308,
+  "textSha256": "0ab3e2d0eb8024b266302c41253135e2d9a08b0a66d2097f16dec62d9c380eb9",
+  "medium": "spoken",
+  "requestSha256": "ea02dc992f9f17718bb06cf2877d916795c5ba1b9c822182296d22f9c011d668",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "练了三年不能一直怪相机",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.08,
+  "wallSeconds": 131.626,
+  "loudness": {
+    "input_i": "-25.70",
+    "input_tp": "-11.12",
+    "input_lra": "1.30",
+    "input_thresh": "-37.16",
+    "output_i": "-17.96",
+    "output_tp": "-3.97",
+    "output_lra": "1.20",
+    "output_thresh": "-29.63",
+    "normalization_type": "dynamic",
+    "target_offset": "-2.04"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-care-l010/raw.wav",
+      "bytes": 391760,
+      "sha256": "0f037b6a3d7a76087ed9df7b6c3a35d2881c69dceef82eb6762ad08024ead5b3"
+    },
+    "master": {
+      "path": "rain-s02-care-l010/master.wav",
+      "bytes": 195918,
+      "sha256": "1111dd71db2d3c26ed031445135acf660ec68bba044d97ac2889bda429fe1b6c"
+    },
+    "runtime": {
+      "path": "rain-s02-care-l010/runtime.ogg",
+      "bytes": 31202,
+      "sha256": "b99150aaae092d07075206906b19053e2d58ce247e5d9c83d6afac2e410258f3"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

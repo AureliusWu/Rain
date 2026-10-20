@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-archive-l013",
+  "sceneId": "s03_archive",
+  "lineId": "s03_archive_l013",
+  "lineIndex": 12,
+  "speaker": "p",
+  "text": "先不封死。等走的时候再贴。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1121013694,
+  "textSha256": "60ca9d86d64720cc0ddf588038b614f174bc1546ce6418107f2769fb3ca243cc",
+  "medium": "spoken",
+  "requestSha256": "06aa5bdf4d2241ba08de0add0d13945285c28177aa13e63a5ace7c22099b780d",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "天不封死等早的时候再贴",
+    "cer": 0.181818,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.48,
+  "wallSeconds": 106.266,
+  "loudness": {
+    "input_i": "-27.10",
+    "input_tp": "-8.11",
+    "input_lra": "0.00",
+    "input_thresh": "-37.31",
+    "output_i": "-20.99",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-31.19",
+    "normalization_type": "linear",
+    "target_offset": "0.99"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-archive-l013/raw.wav",
+      "bytes": 238160,
+      "sha256": "ecfd120bc0079b6d85a50401be5d1b26baf895416c8090481d1126c9a7667153"
+    },
+    "master": {
+      "path": "rain-s03-archive-l013/master.wav",
+      "bytes": 119118,
+      "sha256": "e53887d1194dddbc4b0062c1c7ec639c6e656bfd91df33d65222f3a3085b84e0"
+    },
+    "runtime": {
+      "path": "rain-s03-archive-l013/runtime.ogg",
+      "bytes": 23785,
+      "sha256": "3f3387a82bdc779171dffc9b2c15eaf676b6152fd68a91a0d40516c36250a0d0"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

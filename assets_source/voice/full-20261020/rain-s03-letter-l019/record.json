@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-letter-l019",
+  "sceneId": "s03_letter",
+  "lineId": "s03_letter_l019",
+  "lineIndex": 18,
+  "speaker": "h",
+  "text": "如果你认识，就先拿好。这里太潮。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1413672818,
+  "textSha256": "62cbd55d04b369af71be175ebd4542fcd263375ba0f002cc4d8c093b0e4dd783",
+  "medium": "spoken",
+  "requestSha256": "1a504a7faeb82350a4de0ce40d74a1d5935d0c865d68a8825cf42878478bf860",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "如果你认识,就先拿好,这里太潮",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.92,
+  "wallSeconds": 36.989,
+  "loudness": {
+    "input_i": "-24.41",
+    "input_tp": "-5.43",
+    "input_lra": "1.10",
+    "input_thresh": "-35.41",
+    "output_i": "-18.93",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.16",
+    "normalization_type": "dynamic",
+    "target_offset": "-1.07"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-letter-l019/raw.wav",
+      "bytes": 376400,
+      "sha256": "c579be38b10233f4cff01ec49ad8610fd3558e443af49bed77d8571ba0e1fe87"
+    },
+    "master": {
+      "path": "rain-s03-letter-l019/master.wav",
+      "bytes": 188238,
+      "sha256": "7c8b3aa4e5cc5ea1e0642d534ca38aa8041f6ed5d111041a96ac115361af4853"
+    },
+    "runtime": {
+      "path": "rain-s03-letter-l019/runtime.ogg",
+      "bytes": 30721,
+      "sha256": "dca9dfb0aae61748178b361797ec8ca3da4cf45ce8c5113ec984139753a3eafc"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

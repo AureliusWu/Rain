@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-repair-l010",
+  "sceneId": "s04_repair",
+  "lineId": "s04_repair_l010",
+  "lineIndex": 17,
+  "speaker": "p",
+  "text": "好。还有那封旧信，要看之前，我会再问你。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1702275074,
+  "textSha256": "320a3615151c3dac6cc848aaf335242db8e14ef75537094074c9f82f243763b5",
+  "medium": "spoken",
+  "requestSha256": "dcce5fccb9907b60c4d0afc00350ebda0bb771a9b0a0dd3b3081c012f970ae87",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "好,还有那封旧信,要看之前,我会再问你。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.48,
+  "wallSeconds": 310.178,
+  "loudness": {
+    "input_i": "-28.21",
+    "input_tp": "-8.86",
+    "input_lra": "0.70",
+    "input_thresh": "-38.34",
+    "output_i": "-19.44",
+    "output_tp": "-2.00",
+    "output_lra": "0.10",
+    "output_thresh": "-29.66",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.56"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-repair-l010/raw.wav",
+      "bytes": 430160,
+      "sha256": "ecdd1f3f6ceff337bb80c45c80052a88abe3b9c2158941ddd3fbe5a102042bf9"
+    },
+    "master": {
+      "path": "rain-s04-repair-l010/master.wav",
+      "bytes": 215118,
+      "sha256": "e6b2c8c269b3226c08121c38ddf7e952bb95dd6e388de94e25edd5fdbea5f14a"
+    },
+    "runtime": {
+      "path": "rain-s04-repair-l010/runtime.ogg",
+      "bytes": 36600,
+      "sha256": "ef9c7d0998cc1799626f391ad58b4749720e259efccf8545d32ecc67b7f44c39"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

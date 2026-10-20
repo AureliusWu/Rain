@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-revisit-l003",
+  "sceneId": "s04_revisit",
+  "lineId": "s04_revisit_l003",
+  "lineIndex": 2,
+  "speaker": "h",
+  "text": "嗯。车票不用因为今晚变掉。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1290527602,
+  "textSha256": "5a684e267b138aafdb4b2e0bc0032699433edb030ed5cd561137cf721f91a302",
+  "medium": "spoken",
+  "requestSha256": "d51cc541271aa60388b336ce16e9dbf80ce1f766ceb604f4cee77692e9324c4a",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "嗯,車票不用因為今晚變掉",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.08,
+  "wallSeconds": 132.641,
+  "loudness": {
+    "input_i": "-26.13",
+    "input_tp": "-10.28",
+    "input_lra": "1.30",
+    "input_thresh": "-37.87",
+    "output_i": "-17.32",
+    "output_tp": "-2.00",
+    "output_lra": "1.00",
+    "output_thresh": "-29.38",
+    "normalization_type": "dynamic",
+    "target_offset": "-2.68"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-revisit-l003/raw.wav",
+      "bytes": 391760,
+      "sha256": "733a7e9d6c7347fe5f998a16d061eb9f1591921e1ddcd91fba6188e2939b7c19"
+    },
+    "master": {
+      "path": "rain-s04-revisit-l003/master.wav",
+      "bytes": 195918,
+      "sha256": "cfaa7523d291f0258ed69bb2ea5b53a7d7016a6ef0cc0f4fe23b2f3b31342526"
+    },
+    "runtime": {
+      "path": "rain-s04-revisit-l003/runtime.ogg",
+      "bytes": 30285,
+      "sha256": "205aead8f10af642cf4fb8bc03efaff237f078f2ad67f708be0d9d720a13068a"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-reunion-l002",
+  "sceneId": "s02_reunion",
+  "lineId": "s02_reunion_l002",
+  "lineIndex": 1,
+  "speaker": "h",
+  "text": "来取东西。和你一样。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 17536241,
+  "textSha256": "f972365944adcabcf005d978fc54474f29bdb1d2e33205f55d78dc32cbc0dec6",
+  "medium": "spoken",
+  "requestSha256": "56d4b754429caa650ed0001511a8d7ae2560cdf062ac0c92c2e7f31867c9c447",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "来取东西,和你一样。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.76,
+  "wallSeconds": 98.306,
+  "loudness": {
+    "input_i": "-27.30",
+    "input_tp": "-9.04",
+    "input_lra": "0.00",
+    "input_thresh": "-37.62",
+    "output_i": "-20.26",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.58",
+    "normalization_type": "linear",
+    "target_offset": "0.26"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-reunion-l002/raw.wav",
+      "bytes": 169040,
+      "sha256": "52aa32ea2f5ec52b3bf0a1ceee9395e3a42d051b423d27df92826bcfe023c270"
+    },
+    "master": {
+      "path": "rain-s02-reunion-l002/master.wav",
+      "bytes": 84558,
+      "sha256": "5f670ce388652e11c1cc348e65cf8603b4caa5264837ab3e8e7f6463826dbfd4"
+    },
+    "runtime": {
+      "path": "rain-s02-reunion-l002/runtime.ogg",
+      "bytes": 15896,
+      "sha256": "4a8ea8ad53b56521efaa0b0899c4adc954408e2c60ce69fb75921091f9580336"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

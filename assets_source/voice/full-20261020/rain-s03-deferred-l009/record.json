@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-deferred-l009",
+  "sceneId": "s03_deferred",
+  "lineId": "s03_deferred_l009",
+  "lineIndex": 8,
+  "speaker": "p",
+  "text": "至少，这次我记得它在哪。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 880319713,
+  "textSha256": "896bf5f9a4a1a4e533db299ef5074322bae25336ec898508fe69c2dc687fe2b9",
+  "medium": "spoken",
+  "requestSha256": "d1c27e89cf7650d811cd4a9746421dcb973e98debcb3ac4c94606fda40791b6e",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "至少这次我记得它在哪儿",
+    "cer": 0.1,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.24,
+  "wallSeconds": 119.259,
+  "loudness": {
+    "input_i": "-29.55",
+    "input_tp": "-13.05",
+    "input_lra": "0.00",
+    "input_thresh": "-39.55",
+    "output_i": "-20.02",
+    "output_tp": "-3.49",
+    "output_lra": "0.00",
+    "output_thresh": "-30.02",
+    "normalization_type": "linear",
+    "target_offset": "0.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-deferred-l009/raw.wav",
+      "bytes": 215120,
+      "sha256": "3aa192ca6c413ea91b691d479353db1cd831eee2b217bd0cb8525715098d8319"
+    },
+    "master": {
+      "path": "rain-s03-deferred-l009/master.wav",
+      "bytes": 107598,
+      "sha256": "366f4f89c3e09f94ace3033611efb672525d56f36729e1320c921fbbbfdb15bd"
+    },
+    "runtime": {
+      "path": "rain-s03-deferred-l009/runtime.ogg",
+      "bytes": 20472,
+      "sha256": "1baf22ca7d6df49576bdae1f217ec1bfb7dc3f451b40e932d89298be1a7d6699"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-boxes-l004",
+  "sceneId": "s02_boxes",
+  "lineId": "s02_boxes_l004",
+  "lineIndex": 3,
+  "speaker": "h",
+  "text": "你当时说只有几本。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 194579597,
+  "textSha256": "f53d74719a69bce378a7912cb392ce3cfa7072e0946c31113f4ba6fc1c1fdc45",
+  "medium": "spoken",
+  "requestSha256": "f0c0914f948efc727f8eba4511f421460a4dc818a04bfd735df80569173e43a2",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你当时说只有几本。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.0,
+  "wallSeconds": 83.132,
+  "loudness": {
+    "input_i": "-26.97",
+    "input_tp": "-13.35",
+    "input_lra": "0.00",
+    "input_thresh": "-36.97",
+    "output_i": "-20.01",
+    "output_tp": "-6.38",
+    "output_lra": "0.00",
+    "output_thresh": "-30.01",
+    "normalization_type": "linear",
+    "target_offset": "0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-boxes-l004/raw.wav",
+      "bytes": 192080,
+      "sha256": "92b78f29f09b62e751e46dcc8fcee6e7792c0d3c08a7d068904eca48a9c8cee9"
+    },
+    "master": {
+      "path": "rain-s02-boxes-l004/master.wav",
+      "bytes": 96078,
+      "sha256": "0956469900bd53e3ae5e0597cb235191c377aff435476f21b2cb28ec90afdcea"
+    },
+    "runtime": {
+      "path": "rain-s02-boxes-l004/runtime.ogg",
+      "bytes": 17935,
+      "sha256": "b459c1d718f2d0140962b5c6878579ddf6abd7b6f40eea4e0cb8fbf226995ec2"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

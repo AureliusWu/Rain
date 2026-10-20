@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s04-concrete-l005",
+  "sceneId": "s04_concrete",
+  "lineId": "v07_s04_concrete_l005",
+  "lineIndex": 12,
+  "speaker": "p",
+  "text": "你推荐先看哪一本？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 825534056,
+  "textSha256": "27b1c2408050fdf1be4fa8d1c01b5a375e5cc428ea20eda68bf501ea83dcc773",
+  "medium": "spoken",
+  "requestSha256": "6827fa64a9d0f5120d75b981ef58a840f622c27df30565209ad4b1d5571f2d9e",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你推荐先看哪一本",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.36,
+  "wallSeconds": 55.258,
+  "loudness": {
+    "input_i": "-26.61",
+    "input_tp": "-8.81",
+    "input_lra": "0.00",
+    "input_thresh": "-36.61",
+    "output_i": "-20.01",
+    "output_tp": "-2.20",
+    "output_lra": "0.00",
+    "output_thresh": "-30.01",
+    "normalization_type": "linear",
+    "target_offset": "0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s04-concrete-l005/raw.wav",
+      "bytes": 130640,
+      "sha256": "2aed5102144cd0d7806795def95938cc0a6a4df6be49cd89d6405a64bf9b1f62"
+    },
+    "master": {
+      "path": "rain-v07-s04-concrete-l005/master.wav",
+      "bytes": 65358,
+      "sha256": "5e3fe36874711f31b3e6c5c05044752b8c00e9574de86de5fa775a5de2223d44"
+    },
+    "runtime": {
+      "path": "rain-v07-s04-concrete-l005/runtime.ogg",
+      "bytes": 14600,
+      "sha256": "0abc1174b2ac8fa2e3af9887632208df18ecbf0d861f9b5d3a666f47dcb05e5f"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

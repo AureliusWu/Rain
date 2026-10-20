@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-reunion-l006",
+  "sceneId": "s02_reunion",
+  "lineId": "s02_reunion_l006",
+  "lineIndex": 5,
+  "speaker": "h",
+  "text": "你按了定时快门，又跑回来。照片还是斜了，大半张都是雨棚。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 567552501,
+  "textSha256": "1911eab97689cc878fb8a0e70d31ed590c188b8491d60363e328ed5067b84a01",
+  "medium": "spoken",
+  "requestSha256": "37795d7cf5189dfc1a8fe9320ef40785b0ee8a746f8a178a088cf9e1b0318aa6",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你按了定时快门又跑回来照片还是斜了大半掌都是雨棚",
+    "cer": 0.041667,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 5.76,
+  "wallSeconds": 382.69,
+  "loudness": {
+    "input_i": "-26.31",
+    "input_tp": "-9.24",
+    "input_lra": "1.60",
+    "input_thresh": "-36.75",
+    "output_i": "-19.02",
+    "output_tp": "-2.00",
+    "output_lra": "1.40",
+    "output_thresh": "-29.61",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.98"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-reunion-l006/raw.wav",
+      "bytes": 553040,
+      "sha256": "083bff96d27820bb383e6e9d9f04885def6a3163886d9e4048fbdf791f15b1e7"
+    },
+    "master": {
+      "path": "rain-s02-reunion-l006/master.wav",
+      "bytes": 276558,
+      "sha256": "15fa57ecb9957effdaad237537a7096fa26dd786cf6bae7ff275b398d123daf9"
+    },
+    "runtime": {
+      "path": "rain-s02-reunion-l006/runtime.ogg",
+      "bytes": 44352,
+      "sha256": "95f05faeb13b2d0812d1ba04453748c6eea1d9f0a7a9bde0146c3342a0a26af5"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

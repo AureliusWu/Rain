@@ -1,0 +1,55 @@
+{
+  "id": "rain-s05-departure-l003",
+  "sceneId": "s05_departure",
+  "lineId": "s05_departure_l003",
+  "lineIndex": 7,
+  "speaker": "h",
+  "text": "外面那家小店还开着。雨太大时，我会进去坐一会儿。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 98720193,
+  "textSha256": "4e2c3c36d9d5aa61dbac68a981f3ed1a1aa096788fae6f7a4c258ef7044cde0f",
+  "medium": "spoken",
+  "requestSha256": "2be00366cc71dd52b1fd745319e8dd89355513c78d09cbd3135f1ba59ebaedfb",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "外面那家小店还开着与他大时我会进去坐一会儿",
+    "cer": 0.095238,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.32,
+  "wallSeconds": 207.239,
+  "loudness": {
+    "input_i": "-26.50",
+    "input_tp": "-7.18",
+    "input_lra": "3.70",
+    "input_thresh": "-36.89",
+    "output_i": "-20.82",
+    "output_tp": "-2.22",
+    "output_lra": "3.10",
+    "output_thresh": "-31.16",
+    "normalization_type": "dynamic",
+    "target_offset": "0.82"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s05-departure-l003/raw.wav",
+      "bytes": 414800,
+      "sha256": "cfb960284d9ba91cd921bd03e1bdeb38ee11f4edda2adeb8ad9e591755807a5d"
+    },
+    "master": {
+      "path": "rain-s05-departure-l003/master.wav",
+      "bytes": 207438,
+      "sha256": "eeff7077a8f3c7327703ddca2567db962a55145d14f2246e0cff37b62b774854"
+    },
+    "runtime": {
+      "path": "rain-s05-departure-l003/runtime.ogg",
+      "bytes": 34646,
+      "sha256": "bedadae57f961e70676734268cd94aced1ef92e4f389f6f82ce9fc5827c19b2b"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

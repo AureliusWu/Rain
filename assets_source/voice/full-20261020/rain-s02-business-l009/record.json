@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-business-l009",
+  "sceneId": "s02_business",
+  "lineId": "s02_business_l009",
+  "lineIndex": 8,
+  "speaker": "p",
+  "text": "没有那么急。我帮你照一下？这里有点暗。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1845923592,
+  "textSha256": "5b8340b5f34b8e4e70fa09496ec60a41f668f24b1947772e19c6f0b88d577f7c",
+  "medium": "spoken",
+  "requestSha256": "7d4226aa62943212c0b2d3c411cdee35367b9b19e265a253a31e164169dea049",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "没有那么急我帮你照一下这里有点暗",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.28,
+  "wallSeconds": 110.042,
+  "loudness": {
+    "input_i": "-27.24",
+    "input_tp": "-5.95",
+    "input_lra": "1.10",
+    "input_thresh": "-37.54",
+    "output_i": "-20.12",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.42",
+    "normalization_type": "dynamic",
+    "target_offset": "0.12"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-business-l009/raw.wav",
+      "bytes": 314960,
+      "sha256": "e0f0ee2cfc0fe5807142d606ef8c3fdfd51ac707a298ef756f65fc21ecdd6586"
+    },
+    "master": {
+      "path": "rain-s02-business-l009/master.wav",
+      "bytes": 157518,
+      "sha256": "74d4e9ff3c163526d3577f51263a9e8060829d8e2b1c702c74d4dadf86af8dfb"
+    },
+    "runtime": {
+      "path": "rain-s02-business-l009/runtime.ogg",
+      "bytes": 27535,
+      "sha256": "3ae91e4f6119358275cfc198e1b38e1fb1749a17bc8ead9e688fc5d43380e72d"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

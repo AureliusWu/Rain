@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-reserved-l015",
+  "sceneId": "s04_reserved",
+  "lineId": "s04_reserved_l015",
+  "lineIndex": 14,
+  "speaker": "h",
+  "text": "可以。只是如果你又不知道怎么说，就直接说不知道。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1704162239,
+  "textSha256": "3e54cba9528b397473331b8baaed4eed28037ceb958424fa8b5f698e6bd68c34",
+  "medium": "spoken",
+  "requestSha256": "edbeb1203f96ba89e73fad7ec24f35e76df833d788880b34ea3c5fbfd27640bb",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "可以只是如果你又不知道怎么说就直接说不知道",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.24,
+  "wallSeconds": 184.756,
+  "loudness": {
+    "input_i": "-24.81",
+    "input_tp": "-6.94",
+    "input_lra": "2.30",
+    "input_thresh": "-34.94",
+    "output_i": "-19.35",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-29.58",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.65"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-reserved-l015/raw.wav",
+      "bytes": 407120,
+      "sha256": "4f7fee9a8016039b8934c243ca514fbb4ed071e54ea0b32f6a35ab158a09a90c"
+    },
+    "master": {
+      "path": "rain-s04-reserved-l015/master.wav",
+      "bytes": 203598,
+      "sha256": "59fb5daec9b0a8269ae9c7a746fe87957d7277a4bc01bcaa70404f7973ec5741"
+    },
+    "runtime": {
+      "path": "rain-s04-reserved-l015/runtime.ogg",
+      "bytes": 35257,
+      "sha256": "55acc4c9b9123b20936622e4caf89c21d2cfd66602e7d1143714d345f63168d0"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

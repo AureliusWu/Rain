@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-repair-l007",
+  "sceneId": "s04_repair",
+  "lineId": "s04_repair_l007",
+  "lineIndex": 11,
+  "speaker": "p",
+  "text": "说计划变了。不是等到都安排好了，才敢联系。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 595844074,
+  "textSha256": "69b9fdd9de82a22a216b2674a73d84e46798b660cd04c81fe8c1b8a290d887d8",
+  "medium": "spoken",
+  "requestSha256": "04efcc1d41b8635604fe2e7ddb3f4e38a4f50596b4ad3531bbafdbf3da0c5700",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "说计划变了,不是等着都安排好了,才敢联系",
+    "cer": 0.055556,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.08,
+  "wallSeconds": 193.568,
+  "loudness": {
+    "input_i": "-26.24",
+    "input_tp": "-5.50",
+    "input_lra": "1.30",
+    "input_thresh": "-36.58",
+    "output_i": "-19.94",
+    "output_tp": "-2.00",
+    "output_lra": "1.60",
+    "output_thresh": "-30.43",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.06"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-repair-l007/raw.wav",
+      "bytes": 391760,
+      "sha256": "61e7a824034daaa358f2fa3929a2745b80405facb65d5914536f22c638423ec7"
+    },
+    "master": {
+      "path": "rain-s04-repair-l007/master.wav",
+      "bytes": 195918,
+      "sha256": "477b864ffb03fa4fb247659a49ac369d4a71cffb96bb23767505f13e49798a0a"
+    },
+    "runtime": {
+      "path": "rain-s04-repair-l007/runtime.ogg",
+      "bytes": 34838,
+      "sha256": "4179affad02fa0526528a9616f11f0e7d8f6817d62e8fd0a2c3bb39e86c866e1"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

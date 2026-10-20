@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s05-shared-path-l003",
+  "sceneId": "s05_shared_path",
+  "lineId": "v07_s05_shared_path_l003",
+  "lineIndex": 8,
+  "speaker": "p",
+  "text": "我在找以前松的那一块。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1130791057,
+  "textSha256": "46159d4e1fd2246f4a7f2d7b7370a8f34ff65ef4c9afd1c5a312352de67d6162",
+  "medium": "spoken",
+  "requestSha256": "6190c7185cc063a6b848b3e934e0294b270eb97546804ee96d53522054e0f86f",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我在找以前松的那一块",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.84,
+  "wallSeconds": 78.194,
+  "loudness": {
+    "input_i": "-25.00",
+    "input_tp": "-7.07",
+    "input_lra": "0.00",
+    "input_thresh": "-35.00",
+    "output_i": "-20.00",
+    "output_tp": "-2.07",
+    "output_lra": "0.00",
+    "output_thresh": "-30.00",
+    "normalization_type": "linear",
+    "target_offset": "0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s05-shared-path-l003/raw.wav",
+      "bytes": 176720,
+      "sha256": "2590ae67467eb45be3ffbd0bf714e9a7e99dc624bb8f110dae8c7e57d0f54399"
+    },
+    "master": {
+      "path": "rain-v07-s05-shared-path-l003/master.wav",
+      "bytes": 88398,
+      "sha256": "a11292ee3fcef901435b5e96ac0a9b92b474a06e82328c281a37469b08767432"
+    },
+    "runtime": {
+      "path": "rain-v07-s05-shared-path-l003/runtime.ogg",
+      "bytes": 19205,
+      "sha256": "500fa806f7028ce72d3a41e05740df83dc8ac8cb68f566e39db1b011dd11d4b1"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-boxes-l014",
+  "sceneId": "s02_boxes",
+  "lineId": "s02_boxes_l014",
+  "lineIndex": 13,
+  "speaker": "h",
+  "text": "借你三年，按我们店的规则早该赔了。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 420862376,
+  "textSha256": "2bc7c0d923a23274175ce6e999e44eea4f06b1aeefc8a59d1b4e60b362f26f54",
+  "medium": "spoken",
+  "requestSha256": "47ed9d82d0ac2272198afb7b40e37ac56fe40dce9dfdd197328d68becc6fa3f9",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "建立三年,按我们店的规则早该赔了",
+    "cer": 0.133333,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.04,
+  "wallSeconds": 14.005,
+  "loudness": {
+    "input_i": "-26.39",
+    "input_tp": "-9.84",
+    "input_lra": "0.20",
+    "input_thresh": "-36.73",
+    "output_i": "-19.10",
+    "output_tp": "-2.64",
+    "output_lra": "0.00",
+    "output_thresh": "-29.62",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.90"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-boxes-l014/raw.wav",
+      "bytes": 291920,
+      "sha256": "6fac5d0da5e9dfec04450c2e9d1c111f645023ffa32e821af6b812b9dd533a24"
+    },
+    "master": {
+      "path": "rain-s02-boxes-l014/master.wav",
+      "bytes": 145998,
+      "sha256": "e5adc01dc0f65631e0ccfabf3f5dc6bfc83eb0ae6839c8d4d095338ae4adff7f"
+    },
+    "runtime": {
+      "path": "rain-s02-boxes-l014/runtime.ogg",
+      "bytes": 25749,
+      "sha256": "69ce341d15c04ac796bc45d497db508c0ba9a497463085e169f50e949e32a310"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

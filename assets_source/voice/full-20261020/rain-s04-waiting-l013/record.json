@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-waiting-l013",
+  "sceneId": "s04_waiting",
+  "lineId": "s04_waiting_l013",
+  "lineIndex": 12,
+  "speaker": "h",
+  "text": "我知道。但有些话，如果只放在心里，别人听不见。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1327288726,
+  "textSha256": "7b16f6ef17573ff73ed39bca4bf160d3039c8efe7b4f8f4c55316e7f0145f8ed",
+  "medium": "spoken",
+  "requestSha256": "15476fac9e03b68d6d2370a7daa87dfaa4de9b63008cbb229c2d83bdf9e8dcf8",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我知道,但有些话如果只放在心里,别人听不见。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 5.6,
+  "wallSeconds": 339.325,
+  "loudness": {
+    "input_i": "-27.92",
+    "input_tp": "-7.75",
+    "input_lra": "2.20",
+    "input_thresh": "-38.23",
+    "output_i": "-20.50",
+    "output_tp": "-2.00",
+    "output_lra": "1.60",
+    "output_thresh": "-30.90",
+    "normalization_type": "dynamic",
+    "target_offset": "0.50"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-waiting-l013/raw.wav",
+      "bytes": 537680,
+      "sha256": "87fbf4e03a8cfbdb94a3b6cd26d3a99069fbb93d3089754b897b7db792a46c91"
+    },
+    "master": {
+      "path": "rain-s04-waiting-l013/master.wav",
+      "bytes": 268878,
+      "sha256": "e00848e6c022de339376b654dd24d8ceb40faf83c68a5761c5c2f1ea148f6482"
+    },
+    "runtime": {
+      "path": "rain-s04-waiting-l013/runtime.ogg",
+      "bytes": 41281,
+      "sha256": "4ebbc4aa9ff6c741db9fa7b12000a9d54b7a278154c0bbb84f02bbb36087e5c5"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

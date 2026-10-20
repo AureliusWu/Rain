@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-reserved-l021",
+  "sceneId": "s04_reserved",
+  "lineId": "s04_reserved_l021",
+  "lineIndex": 20,
+  "speaker": "h",
+  "text": "如果说到一半不想说了，也可以停。至少告诉我你在停。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 138112157,
+  "textSha256": "8a6b5865ea9df8bbdff14823a0fecedfee473aafa914ab9e0281e6b5a94cd3ed",
+  "medium": "spoken",
+  "requestSha256": "b3554f99650e3e991b6badbcfad1910a7cbbafa2ffe8ebe1bf5110aa9d3c0bc3",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "如果说到一半不想说了也可以停,至少告诉我你在停。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.48,
+  "wallSeconds": 304.274,
+  "loudness": {
+    "input_i": "-25.82",
+    "input_tp": "-7.38",
+    "input_lra": "1.00",
+    "input_thresh": "-36.08",
+    "output_i": "-19.37",
+    "output_tp": "-2.00",
+    "output_lra": "0.50",
+    "output_thresh": "-29.59",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.63"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-reserved-l021/raw.wav",
+      "bytes": 430160,
+      "sha256": "115eae6c873c97a5cae6012968224600d4aa2887464a184d40e567f8422b2f14"
+    },
+    "master": {
+      "path": "rain-s04-reserved-l021/master.wav",
+      "bytes": 215118,
+      "sha256": "ecb819dd8965cc274a5dd15181d15570efd947cea5184da40a311eca486d5eb1"
+    },
+    "runtime": {
+      "path": "rain-s04-reserved-l021/runtime.ogg",
+      "bytes": 36268,
+      "sha256": "5469e83c46e500ee6e4a407bba9579375e9a6d640b088eb107a8e5fb1879f781"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

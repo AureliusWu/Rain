@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-open-l014",
+  "sceneId": "s04_open",
+  "lineId": "s04_open_l014",
+  "lineIndex": 13,
+  "speaker": "p",
+  "text": "我习惯先想怎么把事情做完。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 639171323,
+  "textSha256": "685fcc760f69760400ce7f9123b0eaa757cfb39034b385a55b91109b1de2e872",
+  "medium": "spoken",
+  "requestSha256": "7700b7cea1474eaac8a5c26f640ff2e462783f73b5afa336a0745297d7182f5b",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我习惯先想怎么把事情做完",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.48,
+  "wallSeconds": 25.137,
+  "loudness": {
+    "input_i": "-24.30",
+    "input_tp": "-3.56",
+    "input_lra": "0.00",
+    "input_thresh": "-34.30",
+    "output_i": "-22.74",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-32.74",
+    "normalization_type": "linear",
+    "target_offset": "2.74"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-open-l014/raw.wav",
+      "bytes": 238160,
+      "sha256": "25292e95e78db95ab6085b62cff129fe089c423e232da0826d20ac3227c8bce9"
+    },
+    "master": {
+      "path": "rain-s04-open-l014/master.wav",
+      "bytes": 119118,
+      "sha256": "53c9426e042a7cfd94bea2571bf7399b850b20f5a770f45aabdada1cb2307844"
+    },
+    "runtime": {
+      "path": "rain-s04-open-l014/runtime.ogg",
+      "bytes": 22414,
+      "sha256": "b2f9f1dba33f729d1784b6be3033ac36ecae9d626938655245866e17453552e5"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

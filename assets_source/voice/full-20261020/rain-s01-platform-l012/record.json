@@ -1,0 +1,55 @@
+{
+  "id": "rain-s01-platform-l012",
+  "sceneId": "s01_platform",
+  "lineId": "s01_platform_l012",
+  "lineIndex": 11,
+  "speaker": "h",
+  "text": "以前你每次都从那边翻过去。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 80350371,
+  "textSha256": "fedda223e4f009fd919346e64269d69de6a5cd5933e5e3e1739a41172e8b0429",
+  "medium": "spoken",
+  "requestSha256": "74d95f64cbab0c11725f73de19ed813c7a939bbf0da71be060c633bace2f1055",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "以前你每次都從那邊翻過去",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.16,
+  "wallSeconds": 90.906,
+  "loudness": {
+    "input_i": "-22.67",
+    "input_tp": "-8.25",
+    "input_lra": "0.00",
+    "input_thresh": "-32.67",
+    "output_i": "-20.01",
+    "output_tp": "-5.58",
+    "output_lra": "0.00",
+    "output_thresh": "-30.01",
+    "normalization_type": "linear",
+    "target_offset": "0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s01-platform-l012/raw.wav",
+      "bytes": 207440,
+      "sha256": "1af00310945bee64a160520c7d58ee2c97b9f349f9ec726deb0e6e716b0c4f7f"
+    },
+    "master": {
+      "path": "rain-s01-platform-l012/master.wav",
+      "bytes": 103758,
+      "sha256": "f06668c0586b052f5439af0dccf6bcbbabf90258fc17a02884b158da37fe035c"
+    },
+    "runtime": {
+      "path": "rain-s01-platform-l012/runtime.ogg",
+      "bytes": 20595,
+      "sha256": "6ada45a134de59ec1402b482405fc2930245a47206b00b2b3cfdf589e166fa8c"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

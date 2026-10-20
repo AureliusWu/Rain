@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-care-l002",
+  "sceneId": "s02_care",
+  "lineId": "s02_care_l002",
+  "lineIndex": 1,
+  "speaker": "h",
+  "text": "搬到街口了。小一点，窗户倒比以前大。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 790291558,
+  "textSha256": "92d260a1f84f78c1581e54cd8d72986c15886aad0d411a7fd7ef0da5f5845269",
+  "medium": "spoken",
+  "requestSha256": "8e9dff9b6998448aefd0aa1be5faa6d3b6d62ff55cd1e97bd2f6d702075e5ae7",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "搬到借口了,想一点,窗户倒比以前大",
+    "cer": 0.133333,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.4,
+  "wallSeconds": 152.651,
+  "loudness": {
+    "input_i": "-28.22",
+    "input_tp": "-10.98",
+    "input_lra": "1.20",
+    "input_thresh": "-38.75",
+    "output_i": "-19.49",
+    "output_tp": "-2.56",
+    "output_lra": "1.20",
+    "output_thresh": "-30.18",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.51"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-care-l002/raw.wav",
+      "bytes": 422480,
+      "sha256": "03033a0eb45f4495be468ace6b4378abba1466dc4186d332c473f30652362761"
+    },
+    "master": {
+      "path": "rain-s02-care-l002/master.wav",
+      "bytes": 211278,
+      "sha256": "b44c4c41dc74b4811ddca375c1ff317bc65e47b62ab80bc92525933383d49a42"
+    },
+    "runtime": {
+      "path": "rain-s02-care-l002/runtime.ogg",
+      "bytes": 34042,
+      "sha256": "b2a1f891b9d80f5a0c8bb3b61874b581a1e88756df828d93c1ad800f15c3cfa4"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

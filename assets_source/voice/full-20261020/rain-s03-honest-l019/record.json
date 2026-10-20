@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-honest-l019",
+  "sceneId": "s03_honest",
+  "lineId": "s03_honest_l019",
+  "lineIndex": 18,
+  "speaker": "h",
+  "text": "这句话我听得懂。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 722550609,
+  "textSha256": "5c3cc3f2d8cd27fbdc41a9dfa361755e65b6888156b0371e824db40c4b395551",
+  "medium": "spoken",
+  "requestSha256": "b0dab3cc6fcc48e69fc3d66770ab7ca271d9a6c9f7db1269a6a500a05b8944ba",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "这句话我听得懂",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.12,
+  "wallSeconds": 65.445,
+  "loudness": {
+    "input_i": "-23.57",
+    "input_tp": "-10.20",
+    "input_lra": "0.00",
+    "input_thresh": "-33.57",
+    "output_i": "-20.00",
+    "output_tp": "-6.63",
+    "output_lra": "0.00",
+    "output_thresh": "-30.00",
+    "normalization_type": "linear",
+    "target_offset": "0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-honest-l019/raw.wav",
+      "bytes": 107600,
+      "sha256": "b834038f17913b4d7814fb1eee4f687d1066a5cac428368b20f849f77e387392"
+    },
+    "master": {
+      "path": "rain-s03-honest-l019/master.wav",
+      "bytes": 53838,
+      "sha256": "cf12bcd2a76fecf6b3930cf906c208f857f47042444a8e7ff0b95c4fe0399665"
+    },
+    "runtime": {
+      "path": "rain-s03-honest-l019/runtime.ogg",
+      "bytes": 11867,
+      "sha256": "27b2bd3188980e2c7c72f03ab35345f517a84c3768605fca2470f0a446541b95"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

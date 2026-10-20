@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-honest-l025",
+  "sceneId": "s03_honest",
+  "lineId": "s03_honest_l025",
+  "lineIndex": 24,
+  "speaker": "h",
+  "text": "今晚先到这里也可以。你承认是你写的，已经比让我猜强。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 533204765,
+  "textSha256": "3800743e175a73f5b742dc80918ac33d4da0e817d5bc3bf815939f992eca226e",
+  "medium": "spoken",
+  "requestSha256": "5e18769206b922e64340aadcabf8c105e674acc310edcb874f9d6c7ce82766a1",
+  "attempt": 1,
+  "status": "accepted",
+  "asr": {
+    "transcript": "今晚先到這裏也可以你承認是你寫的已經比讓我猜強",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 5.52,
+  "wallSeconds": 262.656,
+  "loudness": {
+    "input_i": "-26.03",
+    "input_tp": "-8.02",
+    "input_lra": "2.40",
+    "input_thresh": "-36.51",
+    "output_i": "-20.41",
+    "output_tp": "-2.68",
+    "output_lra": "3.60",
+    "output_thresh": "-31.23",
+    "normalization_type": "dynamic",
+    "target_offset": "0.41"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-honest-l025/raw.wav",
+      "bytes": 530000,
+      "sha256": "9b3f5a2d869a827050cc37ee0710f07936879524eed5c4cc9a96c316ca90dcda"
+    },
+    "master": {
+      "path": "rain-s03-honest-l025/master.wav",
+      "bytes": 265038,
+      "sha256": "e90192006f421761bcf507a00c2f9c6d42ca4bee5f5f6d3ed55d9b71a5d0f47f"
+    },
+    "runtime": {
+      "path": "rain-s03-honest-l025/runtime.ogg",
+      "bytes": 42038,
+      "sha256": "8551f3cfd97427cd5d914ecf44430d9aa7a2b5a761e253a1d201bbd8dd3d479f"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

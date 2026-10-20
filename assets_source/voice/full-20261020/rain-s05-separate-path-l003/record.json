@@ -1,0 +1,55 @@
+{
+  "id": "rain-s05-separate-path-l003",
+  "sceneId": "s05_separate_path",
+  "lineId": "s05_separate_path_l003",
+  "lineIndex": 2,
+  "speaker": "h",
+  "text": "好。我往街角走，那边有路灯。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 871051693,
+  "textSha256": "6b84727ebbc3d6972804923865cb3a971e7ada180038840e3950300369f97a48",
+  "medium": "spoken",
+  "requestSha256": "2ed11cd7e2956d55d5c0fef7340bc2974d75a2ad1d90a3e4bbf5620f734bb37f",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "好,我往街角走,那边有路灯。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 7.28,
+  "wallSeconds": 379.381,
+  "loudness": {
+    "input_i": "-24.06",
+    "input_tp": "-7.30",
+    "input_lra": "4.50",
+    "input_thresh": "-34.75",
+    "output_i": "-21.02",
+    "output_tp": "-5.15",
+    "output_lra": "4.80",
+    "output_thresh": "-31.95",
+    "normalization_type": "dynamic",
+    "target_offset": "1.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s05-separate-path-l003/raw.wav",
+      "bytes": 698960,
+      "sha256": "e746c6bd04e3515bafb5d4b60212b1b3f7a09c33398707a785f201378c515672"
+    },
+    "master": {
+      "path": "rain-s05-separate-path-l003/master.wav",
+      "bytes": 349518,
+      "sha256": "f024b6cefb71511beef7215f7071daf41a98027b060822af4116a78addc6a8a3"
+    },
+    "runtime": {
+      "path": "rain-s05-separate-path-l003/runtime.ogg",
+      "bytes": 50547,
+      "sha256": "7799ef078d3773296a671bfc5f4e99cb76d01422751690ddbe06e06e919d6260"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

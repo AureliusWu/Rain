@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s04-boundary-l004",
+  "sceneId": "s04_boundary",
+  "lineId": "v07_s04_boundary_l004",
+  "lineIndex": 7,
+  "speaker": "h",
+  "text": "说了以后，你别再用“最后一句”往下接。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 120899898,
+  "textSha256": "25bbbf6de690f404acb52c003b993296146b83a663c6bf4a90c9475192d358a8",
+  "medium": "spoken",
+  "requestSha256": "372a5638bd789b3423db8446ea48fce0dacee6b067b45e64d735f10596f0dffb",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "说了以后,你别再用最后一句往下接。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.96,
+  "wallSeconds": 124.487,
+  "loudness": {
+    "input_i": "-26.78",
+    "input_tp": "-12.02",
+    "input_lra": "0.00",
+    "input_thresh": "-37.10",
+    "output_i": "-20.00",
+    "output_tp": "-5.24",
+    "output_lra": "0.00",
+    "output_thresh": "-30.31",
+    "normalization_type": "linear",
+    "target_offset": "-0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s04-boundary-l004/raw.wav",
+      "bytes": 284240,
+      "sha256": "4df5292116c5ef481666ee616b8c738a1bf466869a7ffe5b7c63bde0007aae77"
+    },
+    "master": {
+      "path": "rain-v07-s04-boundary-l004/master.wav",
+      "bytes": 142158,
+      "sha256": "200efff8b207012d42ab1d363b097f21af6073dca4dbbc1c16e9fdaa053b7799"
+    },
+    "runtime": {
+      "path": "rain-v07-s04-boundary-l004/runtime.ogg",
+      "bytes": 24472,
+      "sha256": "252d1f774c1033b0e62a90e9d377887c739cb66ff32a950d31ba354c3222bf11"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s05-departure-l003",
+  "sceneId": "s05_departure",
+  "lineId": "v07_s05_departure_l003",
+  "lineIndex": 3,
+  "speaker": "p",
+  "text": "晾干还能装书。下次不用它挡雨了。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 80446518,
+  "textSha256": "fceaa1e6b0fdbc4c517357f8167e5c419ec0de07eb0750ea449c491b3bdd871b",
+  "medium": "spoken",
+  "requestSha256": "9ce321672beb8437836c7cb12d18e18aaa3113c99c9686fa78eae28b0c61e223",
+  "attempt": 2,
+  "status": "needs_review",
+  "asr": {
+    "transcript": "两杆还能装疏下次不用他当雨了",
+    "cer": 0.357143,
+    "polarityCountsMatch": true,
+    "passed": false
+  },
+  "duration": 3.36,
+  "wallSeconds": 165.459,
+  "loudness": {
+    "input_i": "-26.23",
+    "input_tp": "-7.02",
+    "input_lra": "1.30",
+    "input_thresh": "-36.37",
+    "output_i": "-20.27",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.40",
+    "normalization_type": "dynamic",
+    "target_offset": "0.27"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s05-departure-l003/raw.wav",
+      "bytes": 322640,
+      "sha256": "4daf6fa7cb70d225af75453e4bc2e8b5985484fa00fc891d4bc4ba27086e2f3c"
+    },
+    "master": {
+      "path": "rain-v07-s05-departure-l003/master.wav",
+      "bytes": 161358,
+      "sha256": "086b543fa4fab07a79fe37b334e3f449731ab3e04589ef9360406639d7474769"
+    },
+    "runtime": {
+      "path": "rain-v07-s05-departure-l003/runtime.ogg",
+      "bytes": 27782,
+      "sha256": "ad7df6b2168ca784f4b4d8575f84702f005c1b68c34815188c219c01379ef449"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

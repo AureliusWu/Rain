@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-open-l016",
+  "sceneId": "s04_open",
+  "lineId": "s04_open_l016",
+  "lineIndex": 15,
+  "speaker": "p",
+  "text": "那我先说一件没做完的。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1328613824,
+  "textSha256": "1669134870809ba3c2d2b2c636d4f5c9a8cef13cf7f9fd6dc788ccdec83a75c9",
+  "medium": "spoken",
+  "requestSha256": "98c0d02c7bab4f320594fee219eb7ed60f03e1fc8a65e17d6e70e970bcdfb9bb",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "那我先说一件没做完的",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.68,
+  "wallSeconds": 66.067,
+  "loudness": {
+    "input_i": "-25.09",
+    "input_tp": "-9.61",
+    "input_lra": "0.00",
+    "input_thresh": "-35.09",
+    "output_i": "-19.99",
+    "output_tp": "-4.52",
+    "output_lra": "0.00",
+    "output_thresh": "-29.99",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-open-l016/raw.wav",
+      "bytes": 161360,
+      "sha256": "14d9b00e30eea36a4c5390b0a18a458c287ea2c307a7cc7d71f6e89443cd85c6"
+    },
+    "master": {
+      "path": "rain-s04-open-l016/master.wav",
+      "bytes": 80718,
+      "sha256": "f4f79acc15469730351924c81d5cbee5af2aa23276ea92aed34b0a3dffe45a5a"
+    },
+    "runtime": {
+      "path": "rain-s04-open-l016/runtime.ogg",
+      "bytes": 16659,
+      "sha256": "15a84b1a995dc66387a5b38d7b7d42dfdd32e8f8fb1cf79ece627f7acd2fe945"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

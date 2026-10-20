@@ -1,0 +1,56 @@
+{
+  "id": "rain-q02-defer-l002",
+  "sceneId": "s03_letter",
+  "lineId": "q02_defer_l002",
+  "lineIndex": 1,
+  "speaker": "h",
+  "text": "嗯。",
+  "choiceId": "q02_defer",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1761249572,
+  "textSha256": "5c7a9f97adb5bed9d4c6aca666dffd0e37fda970ebcfc2c8c0060523a483e295",
+  "medium": "spoken",
+  "requestSha256": "e0610cb3279648084381de5e1967e4aeebd1dbab908e3984fba9ed1b6e6ea015",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "嗯",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 0.72,
+  "wallSeconds": 4.092,
+  "loudness": {
+    "input_i": "-22.12",
+    "input_tp": "-14.67",
+    "input_lra": "0.00",
+    "input_thresh": "-32.12",
+    "output_i": "-20.02",
+    "output_tp": "-12.55",
+    "output_lra": "0.00",
+    "output_thresh": "-30.02",
+    "normalization_type": "linear",
+    "target_offset": "0.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-q02-defer-l002/raw.wav",
+      "bytes": 69200,
+      "sha256": "adba1f3e86975aab85151a96b982e69873cc9d8dc2ea2d6e33dff0d025040b9b"
+    },
+    "master": {
+      "path": "rain-q02-defer-l002/master.wav",
+      "bytes": 34638,
+      "sha256": "4cfc3f250dece48326c471b20971e2eb77c11f7f9ce7183b2fe45a9b3177f551"
+    },
+    "runtime": {
+      "path": "rain-q02-defer-l002/runtime.ogg",
+      "bytes": 8107,
+      "sha256": "daa9df6bbbe91379d1b7eee4a2802d265879d263ad8c63d6c426568c90ebed30"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

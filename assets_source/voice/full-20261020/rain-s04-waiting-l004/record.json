@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-waiting-l004",
+  "sceneId": "s04_waiting",
+  "lineId": "s04_waiting_l004",
+  "lineIndex": 3,
+  "speaker": "h",
+  "text": "我不是问你能留多久。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 419045350,
+  "textSha256": "35bdd9aa34f86aa16f608c1b2fb8ef8b219b74cdf485a6da814155c4e6d16dd9",
+  "medium": "spoken",
+  "requestSha256": "135695b00192c437e3cc6ea383384c22a0df06e24c05b6819b1001489a07ef66",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我不是問你能留多久",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.76,
+  "wallSeconds": 96.953,
+  "loudness": {
+    "input_i": "-23.64",
+    "input_tp": "-7.30",
+    "input_lra": "0.00",
+    "input_thresh": "-33.64",
+    "output_i": "-20.02",
+    "output_tp": "-3.66",
+    "output_lra": "0.00",
+    "output_thresh": "-30.02",
+    "normalization_type": "linear",
+    "target_offset": "0.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-waiting-l004/raw.wav",
+      "bytes": 169040,
+      "sha256": "fdf734abe5e5fa9d46ceb280e81c4470ead74b78ce287eb551ba0a6036c3151a"
+    },
+    "master": {
+      "path": "rain-s04-waiting-l004/master.wav",
+      "bytes": 84558,
+      "sha256": "6c70c25291983490a15de65854edbd505a65b07e628640f671263fac84b9d06d"
+    },
+    "runtime": {
+      "path": "rain-s04-waiting-l004/runtime.ogg",
+      "bytes": 16160,
+      "sha256": "daa2cff321686db1b6c436f74a915aff7c9a1863910944411cf245f6c7e95966"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

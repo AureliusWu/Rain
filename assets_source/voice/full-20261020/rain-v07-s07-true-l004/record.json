@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s07-true-l004",
+  "sceneId": "s07_true",
+  "lineId": "v07_s07_true_l004",
+  "lineIndex": 9,
+  "speaker": "h",
+  "text": "晚班结束也会来买东西。不是每次都下雨。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 81769971,
+  "textSha256": "8edb08261b347e96854527a3265891bfc1f1c9e318d91fb837cc7ee03dbe5da2",
+  "medium": "spoken",
+  "requestSha256": "2ae29018a8a5b52cc9cea6a348bc65958328977f772531f340866f77445c35b2",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "晚班结束也会来买东西,不是每次都下雨。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.36,
+  "wallSeconds": 31.677,
+  "loudness": {
+    "input_i": "-25.00",
+    "input_tp": "-9.23",
+    "input_lra": "0.60",
+    "input_thresh": "-35.14",
+    "output_i": "-19.84",
+    "output_tp": "-4.31",
+    "output_lra": "0.00",
+    "output_thresh": "-29.98",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.16"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s07-true-l004/raw.wav",
+      "bytes": 322640,
+      "sha256": "87e0650805372655c91c047d858d6234c196e77a5c1710c81685ef4d0d8aece3"
+    },
+    "master": {
+      "path": "rain-v07-s07-true-l004/master.wav",
+      "bytes": 161358,
+      "sha256": "a4e4e1e23e261aa9dccaac1c7aeffd5c7187b5e0bd76b887208879d20c8bf300"
+    },
+    "runtime": {
+      "path": "rain-v07-s07-true-l004/runtime.ogg",
+      "bytes": 28276,
+      "sha256": "c37297134fab7ac6a8a65b2775b2291c8a06b1a2ba5b2c583496d4ef49e9a72c"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

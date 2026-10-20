@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-memory-l004",
+  "sceneId": "s04_memory",
+  "lineId": "s04_memory_l004",
+  "lineIndex": 3,
+  "speaker": "p",
+  "text": "结果正了吗？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 249787989,
+  "textSha256": "72f64e35cc02e65412b9811ca5f0b0b20f81da2545d32644c68e2465114ea2ea",
+  "medium": "spoken",
+  "requestSha256": "40b8dd88d7d9f933e9b6f9e530777987774127b11f66da3b7f9ad0c42c36ebd7",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "结果正了吗",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.04,
+  "wallSeconds": 45.049,
+  "loudness": {
+    "input_i": "-22.30",
+    "input_tp": "-5.90",
+    "input_lra": "0.00",
+    "input_thresh": "-32.30",
+    "output_i": "-19.98",
+    "output_tp": "-3.60",
+    "output_lra": "0.00",
+    "output_thresh": "-29.98",
+    "normalization_type": "linear",
+    "target_offset": "-0.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-memory-l004/raw.wav",
+      "bytes": 99920,
+      "sha256": "2e20b5f1be2e2c7681944732f4b0a832dc2da878ffc3d9cdbcc024a2279628b6"
+    },
+    "master": {
+      "path": "rain-s04-memory-l004/master.wav",
+      "bytes": 49998,
+      "sha256": "e61746d562924f585bf91f6e5268c92acfd386f62bd3e768f5c55703d727005c"
+    },
+    "runtime": {
+      "path": "rain-s04-memory-l004/runtime.ogg",
+      "bytes": 11519,
+      "sha256": "20b0421c33b675555b8a35a0365229d9943df4c2b0849b00d2442ed643a0f366"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

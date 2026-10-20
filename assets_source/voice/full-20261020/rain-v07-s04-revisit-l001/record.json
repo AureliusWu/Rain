@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s04-revisit-l001",
+  "sceneId": "s04_revisit",
+  "lineId": "v07_s04_revisit_l001",
+  "lineIndex": 8,
+  "speaker": "p",
+  "text": "四点休息的时候，你就在店里？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 533035786,
+  "textSha256": "4c511a16562bb177ffaec007bd13add2ff30394efddeec246161afe0daf7828c",
+  "medium": "spoken",
+  "requestSha256": "7800a82ba1283ffbf8c73bea6eb8b7b7938d49c055608470814a2dac1ab0ffd6",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "四点休息的时候你就在店里",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.48,
+  "wallSeconds": 105.821,
+  "loudness": {
+    "input_i": "-25.86",
+    "input_tp": "-9.81",
+    "input_lra": "0.00",
+    "input_thresh": "-35.86",
+    "output_i": "-20.01",
+    "output_tp": "-3.95",
+    "output_lra": "0.00",
+    "output_thresh": "-30.01",
+    "normalization_type": "linear",
+    "target_offset": "0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s04-revisit-l001/raw.wav",
+      "bytes": 238160,
+      "sha256": "98bcff58c725239592cb7d4b77c5fc281d3c4485939a7fcd8cdf6bc370a9015d"
+    },
+    "master": {
+      "path": "rain-v07-s04-revisit-l001/master.wav",
+      "bytes": 119118,
+      "sha256": "7d6338ba0faa86d7835c6c172ef54fa5687921b6c6668a2b6bf487957d9afe4b"
+    },
+    "runtime": {
+      "path": "rain-v07-s04-revisit-l001/runtime.ogg",
+      "bytes": 22504,
+      "sha256": "2da6c0c35d8cfcebafe1a84d389d043ee885528441c048f0d8420230f36f137e"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

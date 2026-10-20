@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-memory-l007",
+  "sceneId": "s04_memory",
+  "lineId": "s04_memory_l007",
+  "lineIndex": 11,
+  "speaker": "p",
+  "text": "我都不记得还有这张。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1433031615,
+  "textSha256": "d56ad3106486e80459b5fed46838d4c6362cfac81a0d0c7f9e56aab0976f2e38",
+  "medium": "spoken",
+  "requestSha256": "63d0eb52addde43d59aac81e45fa0f20569f8b0d06192bd419155b2cddece964",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我都不记得还有这张",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.6,
+  "wallSeconds": 89.388,
+  "loudness": {
+    "input_i": "-25.97",
+    "input_tp": "-8.66",
+    "input_lra": "0.00",
+    "input_thresh": "-35.97",
+    "output_i": "-19.99",
+    "output_tp": "-2.69",
+    "output_lra": "0.00",
+    "output_thresh": "-29.99",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-memory-l007/raw.wav",
+      "bytes": 153680,
+      "sha256": "400bf91521fabf855c13e891d95ed26bbb262608e0ac8360f52e8e793ef8b80d"
+    },
+    "master": {
+      "path": "rain-s04-memory-l007/master.wav",
+      "bytes": 76878,
+      "sha256": "df2dfb89acd91fdae909fb5e3a05f29218fea4f167158fc754480a8ae915f4d2"
+    },
+    "runtime": {
+      "path": "rain-s04-memory-l007/runtime.ogg",
+      "bytes": 15833,
+      "sha256": "b128c8668c467a21e88f49cb99c5197ee4243738f278841de33a9cb4da6c6d4a"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

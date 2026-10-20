@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-waiting-l017",
+  "sceneId": "s04_waiting",
+  "lineId": "s04_waiting_l017",
+  "lineIndex": 16,
+  "speaker": "p",
+  "text": "这个能做到。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 147039180,
+  "textSha256": "f7e565630a420547165e036f16261f2517902cd4475e5c59ba894e9e5c02b180",
+  "medium": "spoken",
+  "requestSha256": "c7d3857b5a05a6ad9ebbcf005335630fdb478cf1efafc79dcf87fb92b8504812",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "这个能做到",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.44,
+  "wallSeconds": 80.964,
+  "loudness": {
+    "input_i": "-23.07",
+    "input_tp": "-6.65",
+    "input_lra": "0.00",
+    "input_thresh": "-33.07",
+    "output_i": "-19.99",
+    "output_tp": "-3.58",
+    "output_lra": "0.00",
+    "output_thresh": "-29.99",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-waiting-l017/raw.wav",
+      "bytes": 138320,
+      "sha256": "df39927090286d4354b4e66ed7609777c9f24ae8d66ee461cf8bdd6025c23194"
+    },
+    "master": {
+      "path": "rain-s04-waiting-l017/master.wav",
+      "bytes": 69198,
+      "sha256": "84df648118f3ca7662b157504f69ade7108192c5b727e76638a0cc5e412e8671"
+    },
+    "runtime": {
+      "path": "rain-s04-waiting-l017/runtime.ogg",
+      "bytes": 14817,
+      "sha256": "23b0452b348d8edae7e6b5254824e781697b1eb4885afb204ac275b83624d649"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

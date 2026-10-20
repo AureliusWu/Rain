@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s04-revisit-l003",
+  "sceneId": "s04_revisit",
+  "lineId": "v07_s04_revisit_l003",
+  "lineIndex": 10,
+  "speaker": "p",
+  "text": "车要是晚点，我会先说一声。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1996610037,
+  "textSha256": "0ddc9ce799a071fa8be594265811a0c61d89b3418c7113e7a362071770a63056",
+  "medium": "spoken",
+  "requestSha256": "95ed0fd90c4a5b706608cd1ef2708185dfeff3cfc19e463ef8dc2b79110b0e15",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "车要是晚点我会先说一声",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.16,
+  "wallSeconds": 10.156,
+  "loudness": {
+    "input_i": "-23.58",
+    "input_tp": "-7.08",
+    "input_lra": "0.00",
+    "input_thresh": "-34.05",
+    "output_i": "-19.99",
+    "output_tp": "-3.50",
+    "output_lra": "0.00",
+    "output_thresh": "-30.47",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s04-revisit-l003/raw.wav",
+      "bytes": 207440,
+      "sha256": "69bfe64012433b4613982d16ab084cee3a5213e6354cb3988f0adb57d11c8603"
+    },
+    "master": {
+      "path": "rain-v07-s04-revisit-l003/master.wav",
+      "bytes": 103758,
+      "sha256": "354b25157dd95c8356c2d7d45cdbd0298cd3f3fc597e3864b87820198ac2c443"
+    },
+    "runtime": {
+      "path": "rain-v07-s04-revisit-l003/runtime.ogg",
+      "bytes": 19372,
+      "sha256": "cd30e1cc622f2f86b0d872473d1ae255ec525f6bd353bcf311d5728db7957b3d"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}

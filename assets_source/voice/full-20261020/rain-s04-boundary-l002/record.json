@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-boundary-l002",
+  "sceneId": "s04_boundary",
+  "lineId": "s04_boundary_l002",
+  "lineIndex": 3,
+  "speaker": "h",
+  "text": "你可以先问我愿不愿意听。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1028334819,
+  "textSha256": "65e54f26279bcaa0d1b91cccc95c16abda5d1ab24a01800c70f68552f618f30f",
+  "medium": "spoken",
+  "requestSha256": "72d3484762f45f0631dda946478860306f82b7a604ef4b1a75950dd7fa722625",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你可以先问我愿不愿意听",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.92,
+  "wallSeconds": 135.467,
+  "loudness": {
+    "input_i": "-24.76",
+    "input_tp": "-10.09",
+    "input_lra": "0.00",
+    "input_thresh": "-34.76",
+    "output_i": "-20.00",
+    "output_tp": "-5.33",
+    "output_lra": "0.00",
+    "output_thresh": "-30.00",
+    "normalization_type": "linear",
+    "target_offset": "0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-boundary-l002/raw.wav",
+      "bytes": 184400,
+      "sha256": "abdd324ea9c7ba0608ad8746588f17f135906e080253f2f3e69e9571278a2a83"
+    },
+    "master": {
+      "path": "rain-s04-boundary-l002/master.wav",
+      "bytes": 92238,
+      "sha256": "bae619a23d9e78ad989915dd7463e526719962ef58b59416571119f5b491af2c"
+    },
+    "runtime": {
+      "path": "rain-s04-boundary-l002/runtime.ogg",
+      "bytes": 16715,
+      "sha256": "f7f460672ac602dd1a8c71d2d26dd19fbbf980b9013e9c78d5feb586baa7dc2a"
+    }
+  },
+  "recoveredFromRun": 39387606134
+}
