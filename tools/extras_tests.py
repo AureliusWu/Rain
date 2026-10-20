@@ -24,7 +24,7 @@ def render_extras_tests(story):
              '    assert not id "extras_music_unspoken_theme"',
              '    assert not id "extras_music_next_message_theme"',
              '    assert eval renpy.music.get_playing(channel="gallery_music") is None',
-             '    assert eval renpy.get_widget("extras_music_room_screen", "extras_music_progress")._tts_all(False) == "已解锁 %d/3" % sum(extras_music_room.is_unlocked(filename) for key, title, filename, duration in extras_music)',
+             '    assert eval renpy.get_widget("extras_music_room_screen", "extras_music_progress")._tts_all(False) == "已解锁 %d/4" % sum(extras_music_room.is_unlocked(filename) for key, title, filename, duration in extras_music)',
              music_text_assertion('extras_music_status', '已停止，请选择已解锁的音乐。'),
              '    screenshot "native-extras-music-locked"',
              '    click id "extras_images_tab"', '    $ renpy.set_physical_size((1280, 720))',
@@ -40,7 +40,7 @@ def render_extras_tests(story):
               '    $ _test.extras_volume = preferences.get_volume("music")',
               '    click id "menu_extras"',
               '    assert eval all(extras_gallery.Action(key) is not None for key, title, filename in extras_images)',
-              '    assert eval extras_gallery.get_fraction(None) == "5/5"',
+              '    assert eval extras_gallery.get_fraction(None) == "6/6"',
               '    screenshot "native-extras-unlocked"',
               '    click id "extras_image_unsent_letter"', '    pause until screen "extras_image_viewer"',
               '    assert id "extras_image_return"', '    screenshot "native-extras-cg"',
@@ -48,7 +48,7 @@ def render_extras_tests(story):
               '    assert eval (affection, trust, truth_known, last_ending, list(visited_scenes)) == _test.extras_state',
               '    click id "extras_music_tab"',
               '    assert eval all(extras_music_room.is_unlocked(filename) for key, title, filename, duration in extras_music)',
-              music_text_assertion('extras_music_progress', '已解锁 3/3'),
+              music_text_assertion('extras_music_progress', '已解锁 4/4'),
               music_text_assertion('extras_music_status', '已停止，请选择已解锁的音乐。'),
               '    click id "extras_music_rain_theme"',
               f'    pause until eval renpy.music.get_playing(channel="gallery_music") == {assets["rain_theme"]!r}',
@@ -81,7 +81,7 @@ def render_extras_tests(story):
               '    $ renpy.set_physical_size((1280, 720))',
               '    pause until eval renpy.get_physical_size() == (1280, 720)',
               '    pause 0.3', '    screenshot "scaled-extras-music"',
-              music_text_assertion('extras_music_progress', '已解锁 3/3'),
+              music_text_assertion('extras_music_progress', '已解锁 4/4'),
               music_text_assertion('extras_music_status', '播放中：下一条消息'),
               '    click id "extras_pause"', '    assert eval renpy.music.get_pause(channel="gallery_music")',
               music_text_assertion('extras_music_status', '已暂停：下一条消息'),
@@ -107,13 +107,13 @@ def render_extras_tests(story):
         output.append(line)
     return output
 
-def extras_persistence_assertions():
-    return ['    assert eval all(extras_gallery.Action(key) is not None for key, title, filename in extras_images)',
-            '    assert eval all(extras_music_room.is_unlocked(filename) for key, title, filename, duration in extras_music)',
+def extras_persistence_assertions(include_new=True):
+    return ['    assert eval all(extras_gallery.Action(key) is not None for key, title, filename in extras_images' + (')' if include_new else ' if key != "cafe_photo")'),
+            '    assert eval all(extras_music_room.is_unlocked(filename) for key, title, filename, duration in extras_music' + (')' if include_new else ' if key != "cafe_photo_theme")'),
             '    click id "menu_extras"', '    assert screen "extras_images_room"',
             '    screenshot "native-extras-persistent"',
             '    click id "extras_music_tab"',
-            music_text_assertion('extras_music_progress', '已解锁 3/3'),
+            music_text_assertion('extras_music_progress', '已解锁 4/4' if include_new else '已解锁 3/4'),
             music_text_assertion('extras_music_status', '已停止，请选择已解锁的音乐。'),
             '    screenshot "native-extras-music-persistent"', '    click id "game_return"',
             '    assert screen "main_menu"']

@@ -2,6 +2,13 @@
   "schema_version": 1,
   "prompts": [
     {
+      "id": "audio_cafe_photo_v1",
+      "version": 1,
+      "kind": "audio",
+      "file": "prompts/audio/cafe_photo_v1.json",
+      "sha256": "9db0b07f666fbf3aa1397ea6596eb458f6bd324126b2e123aae4ccdfd348b4a3"
+    },
+    {
       "id": "audio_soundtrack_v1",
       "version": 1,
       "kind": "audio",
@@ -42,6 +49,13 @@
       "kind": "background",
       "file": "prompts/background/station_rain_v1.md",
       "sha256": "b6380c85f29b6bfe7c800d363cb61596f4858872ec30419a844aac8c888a1d83"
+    },
+    {
+      "id": "cg_cafe_photo_v1",
+      "version": 1,
+      "kind": "cg",
+      "file": "prompts/cg/cafe_photo_v1.json",
+      "sha256": "bf4e11135b578270d8a22ca3957869f00f02e000802b0e01a42e0b2d0d945e75"
     },
     {
       "id": "cg_unsent_letter_v1",

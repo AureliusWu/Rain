@@ -415,7 +415,7 @@ testcase extras_locked_no_spoilers:
     assert not id "extras_music_unspoken_theme"
     assert not id "extras_music_next_message_theme"
     assert eval renpy.music.get_playing(channel="gallery_music") is None
-    assert eval renpy.get_widget("extras_music_room_screen", "extras_music_progress")._tts_all(False) == "已解锁 %d/3" % sum(extras_music_room.is_unlocked(filename) for key, title, filename, duration in extras_music)
+    assert eval renpy.get_widget("extras_music_room_screen", "extras_music_progress")._tts_all(False) == "已解锁 %d/4" % sum(extras_music_room.is_unlocked(filename) for key, title, filename, duration in extras_music)
     assert eval renpy.get_widget("extras_music_room_screen", 'extras_music_status')._tts_all(False) == '已停止，请选择已解锁的音乐。' timeout 1.0
     pause 0.3
     pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
@@ -447,7 +447,7 @@ testcase extras_unlock_and_music:
     $ _test.extras_volume = preferences.get_volume("music")
     click id "menu_extras"
     assert eval all(extras_gallery.Action(key) is not None for key, title, filename in extras_images)
-    assert eval extras_gallery.get_fraction(None) == "5/5"
+    assert eval extras_gallery.get_fraction(None) == "6/6"
     pause 0.3
     pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
     screenshot "native-extras-unlocked"
@@ -462,7 +462,7 @@ testcase extras_unlock_and_music:
     assert eval (affection, trust, truth_known, last_ending, list(visited_scenes)) == _test.extras_state
     click id "extras_music_tab"
     assert eval all(extras_music_room.is_unlocked(filename) for key, title, filename, duration in extras_music)
-    assert eval renpy.get_widget("extras_music_room_screen", 'extras_music_progress')._tts_all(False) == '已解锁 3/3' timeout 1.0
+    assert eval renpy.get_widget("extras_music_room_screen", 'extras_music_progress')._tts_all(False) == '已解锁 4/4' timeout 1.0
     assert eval renpy.get_widget("extras_music_room_screen", 'extras_music_status')._tts_all(False) == '已停止，请选择已解锁的音乐。' timeout 1.0
     click id "extras_music_rain_theme"
     pause until eval renpy.music.get_playing(channel="gallery_music") == 'audio/bgm/rain_theme.ogg'
@@ -509,7 +509,7 @@ testcase extras_unlock_and_music:
     pause 0.3
     pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
     screenshot "scaled-extras-music"
-    assert eval renpy.get_widget("extras_music_room_screen", 'extras_music_progress')._tts_all(False) == '已解锁 3/3' timeout 1.0
+    assert eval renpy.get_widget("extras_music_room_screen", 'extras_music_progress')._tts_all(False) == '已解锁 4/4' timeout 1.0
     assert eval renpy.get_widget("extras_music_room_screen", 'extras_music_status')._tts_all(False) == '播放中：下一条消息' timeout 1.0
     click id "extras_pause"
     assert eval renpy.music.get_pause(channel="gallery_music")
@@ -1068,6 +1068,14 @@ testcase audio_true_ending:
     pause 0.1
     assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s07_true_l010_v1.ogg'
     screenshot "audio-true-voice"
+    advance until "她从纸袋里抽出那张照片，放到桌子中间。拍得确实有些歪。雨棚、长椅，还有并肩站着的两个人，都在里面。"
+    assert eval renpy.showing("cg/cafe-photo.png")
+    assert eval not renpy.showing("heroine")
+    pause until eval renpy.music.get_playing(channel="music") == "audio/bgm/cafe-photo.ogg"
+    screenshot "cg-cafe-photo"
+    advance until "她收好照片，把纸袋重新放回椅脚内侧。我也把箱子挪近一些，让店员能从我们身边过去。"
+    assert eval renpy.showing("backgrounds/nearby_cafe.png")
+    assert eval renpy.showing("heroine smile")
     advance until screen "ending_card"
     pause until eval renpy.music.get_playing(channel="music") is None
     assert eval renpy.music.get_playing(channel="music") is None

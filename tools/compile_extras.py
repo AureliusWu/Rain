@@ -1,7 +1,7 @@
 """Bind the native extras room to canonical, story-used assets."""
 import argparse
 import json
-from tools.story_model import ROOT, load_story
+from tools.story_model import ROOT, load_story, scene_lines
 
 IMAGE_TITLES = (
     ('station', '雨夜站台'),
@@ -9,18 +9,20 @@ IMAGE_TITLES = (
     ('station_exit_after_rain', '雨后的出口'),
     ('nearby_cafe', '街角咖啡馆'),
     ('unsent_letter', '未寄出的信'),
+    ('cafe_photo', '把今天说清楚'),
 )
 MUSIC_TITLES = (
     ('rain_theme', '雨夜'),
     ('unspoken_theme', '未说出口'),
     ('next_message_theme', '下一条消息'),
+    ('cafe_photo_theme', '把今天说清楚'),
 )
 
 def render_extras(story, assets):
     by_id = {a['id']: a for a in assets}
     images, music = [], []
-    used_images = {n.get('background') for n in story['nodes']}
-    used_music = {n.get('bgm') for n in story['nodes']}
+    used_images = {n.get('background') for n in story['nodes']} | {line.get('background') for n in story['nodes'] for line in scene_lines(n)}
+    used_music = {n.get('bgm') for n in story['nodes']} | {line.get('bgm') for n in story['nodes'] for line in scene_lines(n)}
     for identity, title in IMAGE_TITLES:
         asset = by_id[identity]
         if asset['type'] not in ('background', 'cg') or identity not in used_images:

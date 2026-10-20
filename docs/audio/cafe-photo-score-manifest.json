@@ -1,0 +1,19 @@
+{
+  "id": "cafe-photo",
+  "title": "把今天说清楚",
+  "generator": "original composition and additive program synthesis; no samples or music model",
+  "recipe": "docs/audio/cafe-photo-score.json",
+  "recipe_sha256": "9db0b07f666fbf3aa1397ea6596eb458f6bd324126b2e123aae4ccdfd348b4a3",
+  "source": "assets_source/audio/scene-20261020/cafe-photo.wav",
+  "source_sha256": "25a932e0b4b5412545dc0a9a736a8e2674f03802f9cf4f88de72fbd1ce2c7a0b",
+  "output": "game/audio/bgm/cafe-photo.ogg",
+  "sha256": "565d323f4e9348019f941d22d508a906275300c4283ac8f4f054ee7389cd586f",
+  "duration_seconds": 60.0,
+  "sample_rate": 24000,
+  "channels": 2,
+  "peak": 0.275482,
+  "rms_dbfs": -23.997,
+  "loop_boundary_delta": 0.001035,
+  "human_listening_review": "pending",
+  "license": "Project-original composition, MIT code; no external recordings"
+}

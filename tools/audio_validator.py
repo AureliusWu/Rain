@@ -49,6 +49,10 @@ def validate_audio(root=ROOT, assets=None, story=None):
                 if asset.get('type') != 'audio' or asset.get('audio_role') != role:
                     errors.append(f"{node['id']}: wrong audio role for {key}")
         for line in scene_lines(node):
+            if line.get('bgm'):
+                asset = by_id.get(line['bgm'], {})
+                if asset.get('type') != 'audio' or asset.get('audio_role') != 'bgm':
+                    errors.append(f"{line['id']}: missing/wrong line music {line['bgm']}")
             if line.get('sound'):
                 asset = by_id.get(line['sound'], {})
                 if asset.get('type') != 'audio' or asset.get('audio_role') != 'sfx':

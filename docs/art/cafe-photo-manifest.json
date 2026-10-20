@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "id": "cafe-photo",
+  "source": "assets_source/cg/scene-20261020/cafe-photo.png",
+  "sourceSha256": "8e6c517e48d20fa4f96b982528169d9b644f0770901698d249e71f523bab108e",
+  "sourceDimensions": [
+    1672,
+    941
+  ],
+  "output": "game/cg/cafe-photo.png",
+  "sha256": "a98fa4e892da8d515ab3550c2bb6b8b27e5a159f8f5b1c9096295b2b658ab20c",
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "bytes": 2410774,
+  "prompt": "docs/art/cafe-photo-prompt.json",
+  "promptSha256": "bf4e11135b578270d8a22ca3957869f00f02e000802b0e01a42e0b2d0d945e75",
+  "references": [
+    {
+      "path": "assets_source/background/nearby_cafe_v2.png",
+      "sha256": "dcbc9efb98ca1869f4cd757ad231be16723044b951b2d09696013ff1198b7f7a"
+    }
+  ],
+  "tool": "built-in image_gen",
+  "license": "AI-generated project-only artwork; platform output terms apply",
+  "integrationReview": "full generated image inspected; scene and UI cropping pending",
+  "humanApproval": "pending",
+  "processing": "RGB ImageOps.fit 1920x1080 using existing fit_1920x1080_v1 importer"
+}

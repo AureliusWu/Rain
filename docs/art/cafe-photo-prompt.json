@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "tool": "built-in image_gen",
+  "intent": "new event CG using project style reference",
+  "prompt": "Use case: illustration-story. Asset type: full-screen 16:9 event CG for the visual novel Before the Rain Stops. Reference image 1 is this same small late-night cafe: preserve its honey-brown wood table, cream ceramic mugs with a thin blue stripe, quiet amber lamp and dark blue rainy street outside, clean 2D anime painting. New camera angle is close to the tabletop. Exactly two mugs partly filled with hot water, a small plate of plain biscuits, paper tissues, and ONE slightly crooked old printed photograph on the dry center of the table. The small photo depicts a simple rainy station canopy, a bench and two distant unidentifiable silhouettes standing side by side, no facial details. One blue-gray knit cardigan cuff and a natural hand gently sliding the photo toward the center; character face remains outside the frame. This is the moment before the heroine asks for a meaningful message after arriving home. Do not add a new letter, phone, writing, candles or romantic props. Emotional tone: quiet relieved conversation after rain. Photo and cups occupy upper middle 65 percent; lower 25 percent restrained dark wood suitable for dialogue. Crisp hand-drawn contours, simple soft shadows, restrained reflections, 16:9 landscape. No text, no logos, no interface.",
+  "references": [
+    "assets_source/background/nearby_cafe_v2.png"
+  ],
+  "humanApproval": "pending"
+}

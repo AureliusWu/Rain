@@ -51,7 +51,7 @@ class AudioTests(unittest.TestCase):
     def test_current_project_audio_and_selected_voice_bindings(self):
         errors, measured = validate_audio()
         self.assertEqual(errors, [])
-        self.assertEqual(len(measured), 24)
+        self.assertEqual(len(measured), 25)
         voices = json.loads((ROOT / 'game/data/voice_manifest.json').read_text())['voices']
         self.assertEqual(len(voices), 17)
         bound = {line['voice'] for n in load_story()['nodes'] for line in scene_lines(n) if line.get('voice')}

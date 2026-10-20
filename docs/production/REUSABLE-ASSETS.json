@@ -4261,6 +4261,62 @@
           "sha256": "b7a35e6cc118665ea02685336a8c12bdebdadbbe3b66922f4097e00bb0b78c6e"
         }
       ]
+    },
+    {
+      "id": "cafe_photo-20261020",
+      "kind": "art",
+      "reuse": "project-only",
+      "origin": "Original project scene media; exact image request or score recipe retained",
+      "sourceStatus": "present",
+      "licenseNote": "Project-only generated art or original composition; human review pending",
+      "files": [
+        {
+          "role": "source",
+          "path": "assets_source/cg/scene-20261020/cafe-photo.png",
+          "encoding": "binary",
+          "sha256": "8e6c517e48d20fa4f96b982528169d9b644f0770901698d249e71f523bab108e"
+        },
+        {
+          "role": "runtime",
+          "path": "game/cg/cafe-photo.png",
+          "encoding": "binary",
+          "sha256": "a98fa4e892da8d515ab3550c2bb6b8b27e5a159f8f5b1c9096295b2b658ab20c"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/cg/cafe_photo_v1.json",
+          "encoding": "text-lf",
+          "sha256": "bf4e11135b578270d8a22ca3957869f00f02e000802b0e01a42e0b2d0d945e75"
+        }
+      ]
+    },
+    {
+      "id": "cafe_photo_theme-20261020",
+      "kind": "audio",
+      "reuse": "project-only",
+      "origin": "Original project scene media; exact image request or score recipe retained",
+      "sourceStatus": "present",
+      "licenseNote": "Project-only generated art or original composition; human review pending",
+      "files": [
+        {
+          "role": "source",
+          "path": "assets_source/audio/scene-20261020/cafe-photo.wav",
+          "encoding": "binary",
+          "sha256": "25a932e0b4b5412545dc0a9a736a8e2674f03802f9cf4f88de72fbd1ce2c7a0b"
+        },
+        {
+          "role": "runtime",
+          "path": "game/audio/bgm/cafe-photo.ogg",
+          "encoding": "binary",
+          "sha256": "565d323f4e9348019f941d22d508a906275300c4283ac8f4f054ee7389cd586f"
+        },
+        {
+          "role": "recipe",
+          "path": "docs/audio/cafe-photo-score.json",
+          "encoding": "text-lf",
+          "sha256": "9db0b07f666fbf3aa1397ea6596eb458f6bd324126b2e123aae4ccdfd348b4a3"
+        }
+      ]
     }
   ]
 }

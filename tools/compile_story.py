@@ -54,6 +54,10 @@ def render_story(story, assets, voices):
         if node.get("ambient"):
             lines.append(f"    play ambient {quote(by_asset[node['ambient']]['file'])} fadeout 1.0 fadein 1.0 if_changed")
         for line in node.get("lines", []):
+            if line.get("background"):
+                lines.append(f"    scene expression {quote(by_asset[line['background']]['file'])} with dissolve")
+            if line.get("bgm"):
+                lines.append(f"    play music {quote(by_asset[line['bgm']]['file'])} fadeout 1.0 fadein 1.0 if_changed")
             if line.get("sound"):
                 lines.append(f"    play sound {quote(by_asset[line['sound']]['file'])}")
             if line.get("stop_ambient"):

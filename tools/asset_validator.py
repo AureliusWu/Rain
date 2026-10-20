@@ -110,6 +110,9 @@ def validate_assets(root=ROOT, story=None, manifest=None, voices=None):
                     errors.append(f"{node['id']}: missing {key} {node[key]}")
                 elif asset['type'] not in kinds:
                     errors.append(f"{node['id']}: wrong asset type for {key}")
+        for line in scene_lines(node):
+            if line.get('background') and lookup.get(line['background'], {}).get('type') not in {'background', 'cg'}:
+                errors.append(f"{line['id']}: missing/wrong line background {line['background']}")
         for expression in [node.get('sprite')] + [line.get('expression') for line in scene_lines(node)]:
             if expression and expression not in sprite_expressions:
                 errors.append(f"{node['id']}: missing sprite expression {expression}")

@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-20",
+  "project": "Rain",
+  "version": "1.4.0",
+  "status": "candidate_pending_current_CI",
+  "cgManifest": "docs/art/cafe-photo-manifest.json",
+  "musicManifest": "docs/audio/cafe-photo-score-manifest.json",
+  "tests": {
+    "local_logic_or_python": 220,
+    "passed": true,
+    "browser": "not executed locally: browser archive download was truncated",
+    "windows": "not executed locally; current CI required",
+    "humanListening": "pending",
+    "artFinalChoice": "pending"
+  },
+  "compatibility": "Stable scene/line IDs, choices, recorded lines and save identity retained",
+  "limits": "Earlier release evidence is historical, not validation for this candidate.",
+  "authoringValidation": "220 Python tests; route/story/Prompt/87 assets/25 audio/61 image recipes/7 expressions/generated scripts passed"
+}

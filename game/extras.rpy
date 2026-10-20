@@ -59,7 +59,6 @@ screen extras_images_room():
                                         text title id "extras_title_" + identity size 28 xalign 0.5
                                     else:
                                         text "继续阅读后解锁" id "extras_locked_" + identity size 25 color "#8da9b8" xalign 0.5
-                null width 420 height 294
 
 screen extras_music_room_screen():
     tag menu
