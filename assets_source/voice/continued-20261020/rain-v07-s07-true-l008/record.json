@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s07-true-l008",
+  "sceneId": "s07_true",
+  "lineId": "v07_s07_true_l008",
+  "lineIndex": 22,
+  "speaker": "p",
+  "text": "这回会先确认请假。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 913169293,
+  "textSha256": "d2d849f0b6da2ad0a35c628d0b7d591b9b242bcf2f3444703a6c6f9265ad0df0",
+  "medium": "spoken",
+  "requestSha256": "3eaf974f9a93f3176c47639c5904af7fb99d8c7f147ef3d3eec6218c4e347435",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "这回会先确认请假",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.52,
+  "wallSeconds": 63.991,
+  "loudness": {
+    "input_i": "-22.07",
+    "input_tp": "-3.98",
+    "input_lra": "0.00",
+    "input_thresh": "-32.07",
+    "output_i": "-20.08",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.08",
+    "normalization_type": "linear",
+    "target_offset": "0.08"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s07-true-l008/raw.wav",
+      "bytes": 146000,
+      "sha256": "9c82bb96231b53c510fca31df76cb646c40f24940157bb240c3e803c6fd80296"
+    },
+    "master": {
+      "path": "rain-v07-s07-true-l008/master.wav",
+      "bytes": 73038,
+      "sha256": "ba90edc35adc45620fe13eeea26c09a042db50802809bb2409122882bb1281ee"
+    },
+    "runtime": {
+      "path": "rain-v07-s07-true-l008/runtime.ogg",
+      "bytes": 14880,
+      "sha256": "63bfff52c846d9343e811213739e9ed11073f305ca4c6a15dec46859eea845db"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

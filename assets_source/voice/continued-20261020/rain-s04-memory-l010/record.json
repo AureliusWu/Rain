@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-memory-l010",
+  "sceneId": "s04_memory",
+  "lineId": "s04_memory_l010",
+  "lineIndex": 14,
+  "speaker": "p",
+  "text": "那天你摆了好久的书。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 127037254,
+  "textSha256": "7aa85a3512f894e870f40bd09dfb2362e7bed36e1aee63e74625bd7bbede23a2",
+  "medium": "spoken",
+  "requestSha256": "98ae8a20a587d058b4458ae0058a463ca4f6a9d2be769923ba64ccfb24c8fedb",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "哪天你摆了好久的书",
+    "cer": 0.111111,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.84,
+  "wallSeconds": 77.027,
+  "loudness": {
+    "input_i": "-28.94",
+    "input_tp": "-10.45",
+    "input_lra": "0.00",
+    "input_thresh": "-38.94",
+    "output_i": "-20.48",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.48",
+    "normalization_type": "linear",
+    "target_offset": "0.48"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-memory-l010/raw.wav",
+      "bytes": 176720,
+      "sha256": "a717215aa90e2032a8c61fb4c3912edb75d883a1a8f0351eaab45f40679d4cb5"
+    },
+    "master": {
+      "path": "rain-s04-memory-l010/master.wav",
+      "bytes": 88398,
+      "sha256": "3973d7dc36048bd83dd0c06e28d9a4d6e2c92b7690193538b6cd77703e0fbd5c"
+    },
+    "runtime": {
+      "path": "rain-s04-memory-l010/runtime.ogg",
+      "bytes": 18295,
+      "sha256": "9cfbfbc0fc68631a9e14d3df0e6914b0f4685f4cae9d17e7cf2d71b23a31c684"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

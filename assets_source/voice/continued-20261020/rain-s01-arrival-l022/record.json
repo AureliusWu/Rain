@@ -1,0 +1,55 @@
+{
+  "id": "rain-s01-arrival-l022",
+  "sceneId": "s01_arrival",
+  "lineId": "s01_arrival_l022",
+  "lineIndex": 21,
+  "speaker": "p",
+  "text": "先找个不漏雨的地方吧。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1362741066,
+  "textSha256": "0c25d6543b68b70139caf33757effeb4095cc26dc993c81721299f025a8c76cc",
+  "medium": "spoken",
+  "requestSha256": "004300048c5fe1f0131b367d1a643f6c1ee989c10add0bce50f24f6be5e640af",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "先找个不漏雨的地方吧",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.76,
+  "wallSeconds": 8.876,
+  "loudness": {
+    "input_i": "-24.80",
+    "input_tp": "-4.44",
+    "input_lra": "0.00",
+    "input_thresh": "-34.80",
+    "output_i": "-22.35",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-32.35",
+    "normalization_type": "linear",
+    "target_offset": "2.35"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s01-arrival-l022/raw.wav",
+      "bytes": 169040,
+      "sha256": "2fe611f4e961c061a1799b1d36816aab89675c86fef8a48b8ff5f429a2670956"
+    },
+    "master": {
+      "path": "rain-s01-arrival-l022/master.wav",
+      "bytes": 84558,
+      "sha256": "5fc1aa373507e37adbb6356a0074fffcc3d7a6855f22277ab1f5c1440d39c666"
+    },
+    "runtime": {
+      "path": "rain-s01-arrival-l022/runtime.ogg",
+      "bytes": 16865,
+      "sha256": "40bd9a7f7efb4e9da074576bb4f1c05bfe6938512cea16eceab756b41099bb91"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

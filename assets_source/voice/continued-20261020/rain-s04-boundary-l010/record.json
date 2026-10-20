@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-boundary-l010",
+  "sceneId": "s04_boundary",
+  "lineId": "s04_boundary_l010",
+  "lineIndex": 16,
+  "speaker": "h",
+  "text": "可以。只说你自己能确定的部分。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 748425330,
+  "textSha256": "6cc6fc979066f8081d639696c7720fd86d22ea5e9c72a2002d740ae6d060a060",
+  "medium": "spoken",
+  "requestSha256": "07a4fc960e5f82d36c4cb5036bcaf9741e06d5146203bb26f61ae386aa4b079a",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "可以 只说你自己能确定的部分",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.76,
+  "wallSeconds": 123.399,
+  "loudness": {
+    "input_i": "-23.84",
+    "input_tp": "-7.46",
+    "input_lra": "0.60",
+    "input_thresh": "-34.42",
+    "output_i": "-19.45",
+    "output_tp": "-3.30",
+    "output_lra": "0.00",
+    "output_thresh": "-30.13",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.55"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-boundary-l010/raw.wav",
+      "bytes": 361040,
+      "sha256": "16b5481246c979905f30cbae27a3fa33419274d0c8ab2de0aad7751f4222b74e"
+    },
+    "master": {
+      "path": "rain-s04-boundary-l010/master.wav",
+      "bytes": 180558,
+      "sha256": "dd5cc9014ead1e842f5b99e758b4e4b8733d737ec11c3214563005a4533f0fc1"
+    },
+    "runtime": {
+      "path": "rain-s04-boundary-l010/runtime.ogg",
+      "bytes": 28942,
+      "sha256": "c21ae9f66ab3382aafb7a25fb1236e661854db78a589687f221cad1022efd4e3"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-honest-l021",
+  "sceneId": "s03_honest",
+  "lineId": "s03_honest_l021",
+  "lineIndex": 20,
+  "speaker": "h",
+  "text": "以后想看，我会跟你说。今天别拆，免得我刚看第一行，你就盯着等答案。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1207889590,
+  "textSha256": "8f957b2ce97d96189abe431b0f09eee5a5fc601818db1a83496e0d1937e3f7c4",
+  "medium": "spoken",
+  "requestSha256": "dfd57703d3aa280a6b55fd6399f410e68184f319abc35801c58d54379d731a40",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "以后想看,我会跟你说,今天别拆,免得我刚看第一行,你就盯着等答案",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 9.28,
+  "wallSeconds": 470.241,
+  "loudness": {
+    "input_i": "-26.70",
+    "input_tp": "-9.26",
+    "input_lra": "4.70",
+    "input_thresh": "-37.55",
+    "output_i": "-19.00",
+    "output_tp": "-3.09",
+    "output_lra": "2.10",
+    "output_thresh": "-30.10",
+    "normalization_type": "dynamic",
+    "target_offset": "-1.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-honest-l021/raw.wav",
+      "bytes": 890960,
+      "sha256": "ae6eda8cb690c2feda2da77151177bb109d3a77750b422369d77dd529d32830e"
+    },
+    "master": {
+      "path": "rain-s03-honest-l021/master.wav",
+      "bytes": 445518,
+      "sha256": "3babd6f3510eb3f8f84cb6572ef83754d2359882eb37301e5cafc30fe7758fd2"
+    },
+    "runtime": {
+      "path": "rain-s03-honest-l021/runtime.ogg",
+      "bytes": 65919,
+      "sha256": "2596b55b1495bca75353103e8a03582489795e7b99d8e33fa8e3ae46f4cba30f"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

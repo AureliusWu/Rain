@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-open-l006",
+  "sceneId": "s04_open",
+  "lineId": "s04_open_l006",
+  "lineIndex": 5,
+  "speaker": "h",
+  "text": "我不急。不过也不是为了让你把三年一次说完。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1084413838,
+  "textSha256": "774ed8f6f43c9038ebcbb192bf270a2afbad73d5f2b04d402b400c1d81ae3197",
+  "medium": "spoken",
+  "requestSha256": "f7aaf894399c5ff3003e1169e770a75a4466c1a29bf99d90f96d49a843a4f00c",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我不急,不过也不是为了让你把三年一次说完。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.6,
+  "wallSeconds": 159.025,
+  "loudness": {
+    "input_i": "-22.84",
+    "input_tp": "-6.73",
+    "input_lra": "0.40",
+    "input_thresh": "-33.10",
+    "output_i": "-19.58",
+    "output_tp": "-3.36",
+    "output_lra": "0.00",
+    "output_thresh": "-29.83",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.42"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-open-l006/raw.wav",
+      "bytes": 345680,
+      "sha256": "85403e82f123ec8ec826d311591a7eadab31754d826f28816e4e8127749d8943"
+    },
+    "master": {
+      "path": "rain-s04-open-l006/master.wav",
+      "bytes": 172878,
+      "sha256": "8ed91289ea2e9e052cafc8c573a109369d3c48f735665860933ebb711613a24d"
+    },
+    "runtime": {
+      "path": "rain-s04-open-l006/runtime.ogg",
+      "bytes": 29431,
+      "sha256": "498d3531dd66f7a7be56854e09a3efd1b6bfbc9409322766aa6da1b93f58857f"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

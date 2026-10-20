@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-care-l021",
+  "sceneId": "s02_care",
+  "lineId": "s02_care_l021",
+  "lineIndex": 20,
+  "speaker": "p",
+  "text": "我刚才问得像在核对你过得好不好。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1928208446,
+  "textSha256": "40d32290e5f2a22e838c45378785e665f9e30662248d525e04f19151bb24a237",
+  "medium": "spoken",
+  "requestSha256": "ba92f58bc44546d9e14b8239c255ff55cab5440207d204dfc2c7e1c07adbfddf",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我刚才问像在核对你过得好不好",
+    "cer": 0.066667,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.72,
+  "wallSeconds": 147.572,
+  "loudness": {
+    "input_i": "-24.72",
+    "input_tp": "-4.91",
+    "input_lra": "0.00",
+    "input_thresh": "-34.89",
+    "output_i": "-21.81",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-31.99",
+    "normalization_type": "linear",
+    "target_offset": "1.81"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-care-l021/raw.wav",
+      "bytes": 261200,
+      "sha256": "8febbe430794280fff2e3ddf6527c821bd72db2b36bc8ed9bac25eb4f06540d4"
+    },
+    "master": {
+      "path": "rain-s02-care-l021/master.wav",
+      "bytes": 130638,
+      "sha256": "f11cccfc62fe9ba49c9e1e466b4a988c46778290c6a006c7eb388ddbe43eb8d7"
+    },
+    "runtime": {
+      "path": "rain-s02-care-l021/runtime.ogg",
+      "bytes": 24113,
+      "sha256": "eedb9074abc390c280a5a89e27c4afbf3f805d018a66bf7fd335a121f10c53ff"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

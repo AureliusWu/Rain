@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-open-l001",
+  "sceneId": "s04_open",
+  "lineId": "s04_open_l001",
+  "lineIndex": 0,
+  "speaker": "h",
+  "text": "你这次回来，原本只安排了取东西？",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 469765353,
+  "textSha256": "a4de7a1aeb68008b22f0d964d0c16a894d0a5dfb3d9e207ce42c2c2f43062915",
+  "medium": "spoken",
+  "requestSha256": "7858299be2013d8160cdcb306333234dcd49417dd5dfbaf68f58dcffb1336147",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你这次回来,原本只安排了取东西。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.28,
+  "wallSeconds": 111.545,
+  "loudness": {
+    "input_i": "-23.53",
+    "input_tp": "-8.75",
+    "input_lra": "0.30",
+    "input_thresh": "-33.83",
+    "output_i": "-19.64",
+    "output_tp": "-4.93",
+    "output_lra": "0.00",
+    "output_thresh": "-29.94",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.36"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-open-l001/raw.wav",
+      "bytes": 314960,
+      "sha256": "c7f218c34b5f92b87a9959f6138cac9c3b8798dd2b59441fe4961cd111ce6252"
+    },
+    "master": {
+      "path": "rain-s04-open-l001/master.wav",
+      "bytes": 157518,
+      "sha256": "6dd594f1933a56b456172b9102a2adf7a36d6368b339782971dc1090382f7881"
+    },
+    "runtime": {
+      "path": "rain-s04-open-l001/runtime.ogg",
+      "bytes": 27450,
+      "sha256": "de09134494c645c4703569a6fc617f50ab835a4f44e97fe3a73e3f7f0bbd68c9"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

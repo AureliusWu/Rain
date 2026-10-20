@@ -1,0 +1,55 @@
+{
+  "id": "rain-s01-platform-l009",
+  "sceneId": "s01_platform",
+  "lineId": "s01_platform_l009",
+  "lineIndex": 8,
+  "speaker": "p",
+  "text": "谢谢。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1260885464,
+  "textSha256": "19a187a36d1dd155afb108686943263ef974a2e6103d87f7041b71e5201b7e56",
+  "medium": "spoken",
+  "requestSha256": "150444f775be6e85f4bd80acbe91c3c6f82d9e441371413b9ea49c149d6f29b0",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "謝謝",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 0.64,
+  "wallSeconds": 50.905,
+  "loudness": {
+    "input_i": "-22.15",
+    "input_tp": "-7.98",
+    "input_lra": "0.00",
+    "input_thresh": "-32.15",
+    "output_i": "-19.98",
+    "output_tp": "-5.84",
+    "output_lra": "0.00",
+    "output_thresh": "-29.98",
+    "normalization_type": "linear",
+    "target_offset": "-0.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s01-platform-l009/raw.wav",
+      "bytes": 61520,
+      "sha256": "54055dcfcc5192483fe200366e7b3b6baef216382729f6f3ff3b36265b950358"
+    },
+    "master": {
+      "path": "rain-s01-platform-l009/master.wav",
+      "bytes": 30798,
+      "sha256": "15292dfd88c3b1f89401a641dc9145052f64c8f8ae2d441bbc5607a4b56c7812"
+    },
+    "runtime": {
+      "path": "rain-s01-platform-l009/runtime.ogg",
+      "bytes": 8305,
+      "sha256": "2673852892717e1abfe753e6fc94534134d4bfbdf9408b9a64eaf4732077b0df"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

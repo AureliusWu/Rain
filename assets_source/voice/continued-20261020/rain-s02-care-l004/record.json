@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-care-l004",
+  "sceneId": "s02_care",
+  "lineId": "s02_care_l004",
+  "lineIndex": 3,
+  "speaker": "h",
+  "text": "没搬。老板终于同意，它不适合当收银台。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1541662327,
+  "textSha256": "eaaaf024b06352f0680795954b598013994e86e6465a3dee127f7c010d080502",
+  "medium": "spoken",
+  "requestSha256": "a85d8c9fd8d2bae9e69c647b0d2133f96401ee40cbe4065308823feb9369b5fd",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "沒搬老闆終於同意他不適合當收音臺",
+    "cer": 0.125,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.64,
+  "wallSeconds": 230.477,
+  "loudness": {
+    "input_i": "-22.22",
+    "input_tp": "-5.05",
+    "input_lra": "1.80",
+    "input_thresh": "-33.26",
+    "output_i": "-18.49",
+    "output_tp": "-2.00",
+    "output_lra": "1.00",
+    "output_thresh": "-30.08",
+    "normalization_type": "dynamic",
+    "target_offset": "-1.51"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-care-l004/raw.wav",
+      "bytes": 445520,
+      "sha256": "3eae2a14ed8f0282b06fc9b20850127ce380c6c8591ba74c596227233f9d9669"
+    },
+    "master": {
+      "path": "rain-s02-care-l004/master.wav",
+      "bytes": 222798,
+      "sha256": "c6417931885a82c6c9eea0687ae562141118b619e5f0ca31a060402f53f0aadb"
+    },
+    "runtime": {
+      "path": "rain-s02-care-l004/runtime.ogg",
+      "bytes": 34946,
+      "sha256": "468a78d6ceeee9a787cce5e84b8fb04ace848a9ff6b7fbe88d1302c197566a23"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

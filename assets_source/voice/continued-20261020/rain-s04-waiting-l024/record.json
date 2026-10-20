@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-waiting-l024",
+  "sceneId": "s04_waiting",
+  "lineId": "s04_waiting_l024",
+  "lineIndex": 24,
+  "speaker": "h",
+  "text": "我不是要求你每天报到。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 196722709,
+  "textSha256": "395f26f3d72d72aed4092ea0e106716417066261d6eecb01f4b996a2c6efd7ca",
+  "medium": "spoken",
+  "requestSha256": "e01b269a17f561e282d91af3f74512aea6bab2d5c01ddb536fa708244c0f805d",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我不是要求你每天報到",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.4,
+  "wallSeconds": 135.936,
+  "loudness": {
+    "input_i": "-21.95",
+    "input_tp": "-6.84",
+    "input_lra": "0.00",
+    "input_thresh": "-31.95",
+    "output_i": "-19.98",
+    "output_tp": "-4.88",
+    "output_lra": "0.00",
+    "output_thresh": "-29.98",
+    "normalization_type": "linear",
+    "target_offset": "-0.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-waiting-l024/raw.wav",
+      "bytes": 230480,
+      "sha256": "a39236ccdc9624448a11d040b279bf7bdd5ff29c3e7b2a359ec904891769be69"
+    },
+    "master": {
+      "path": "rain-s04-waiting-l024/master.wav",
+      "bytes": 115278,
+      "sha256": "100936ae71cb942fc4d5ddeedb032bbda3b30986c2842534369cf88cfeb3a78a"
+    },
+    "runtime": {
+      "path": "rain-s04-waiting-l024/runtime.ogg",
+      "bytes": 20692,
+      "sha256": "e782ec107489c797408b135b6c375cdc1e6c1128c23d6ea4e2ecffabba18b821"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

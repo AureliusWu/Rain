@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-concrete-l009",
+  "sceneId": "s04_concrete",
+  "lineId": "s04_concrete_l009",
+  "lineIndex": 17,
+  "speaker": "p",
+  "text": "回去找找。有的话，拍给你看。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1125753784,
+  "textSha256": "93c1448870ec967aa6160c28ff5c1cc975c33f67fee9e4b35203c83eb3e2e30b",
+  "medium": "spoken",
+  "requestSha256": "b31670d0d519b846bf4610ce9531de9bdfcb3fff6311cbf0096920675fcc98b5",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "回去找找有的话拍给你看",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.04,
+  "wallSeconds": 13.512,
+  "loudness": {
+    "input_i": "-26.42",
+    "input_tp": "-8.16",
+    "input_lra": "0.00",
+    "input_thresh": "-36.74",
+    "output_i": "-19.80",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.13",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.20"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-concrete-l009/raw.wav",
+      "bytes": 291920,
+      "sha256": "c0169b17d2be8cec99dce2c65d300269586aac0f26cec253728045eedfc87880"
+    },
+    "master": {
+      "path": "rain-s04-concrete-l009/master.wav",
+      "bytes": 145998,
+      "sha256": "b5ccb956f16c5151bf2f629dd8ca9f48176ebb5668803e6cfbc0b0bdffbf2675"
+    },
+    "runtime": {
+      "path": "rain-s04-concrete-l009/runtime.ogg",
+      "bytes": 27289,
+      "sha256": "399baad55938a4f53c9189c6a9ffbc155f440c9ba5ae0fd766a64914f88eb1ee"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

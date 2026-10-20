@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-letter-l009",
+  "sceneId": "s03_letter",
+  "lineId": "s03_letter_l009",
+  "lineIndex": 8,
+  "speaker": "h",
+  "text": "不知道是谁留下的。名字倒是和我一样。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1580012059,
+  "textSha256": "7a89e14b6a00756aa7a20df7f96469b44105791a548b73eeb075c1f231c1d49f",
+  "medium": "spoken",
+  "requestSha256": "0635986e55dd9a05276ecfda972ce9717a9c6df11d5be1592479c8755a1daf1f",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "不知道是誰留下的 名字倒是和我一樣",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.6,
+  "wallSeconds": 16.272,
+  "loudness": {
+    "input_i": "-27.05",
+    "input_tp": "-9.42",
+    "input_lra": "1.50",
+    "input_thresh": "-37.69",
+    "output_i": "-19.19",
+    "output_tp": "-2.07",
+    "output_lra": "0.00",
+    "output_thresh": "-29.92",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.81"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-letter-l009/raw.wav",
+      "bytes": 345680,
+      "sha256": "0818984201ef8af34184cf631f2ae9d9a817d7ef39fab7938c78700284d5c829"
+    },
+    "master": {
+      "path": "rain-s03-letter-l009/master.wav",
+      "bytes": 172878,
+      "sha256": "a63f6658786241ffcb89d4b2e1ee8cab2e209b4ca39bd05dfdda6699ed846977"
+    },
+    "runtime": {
+      "path": "rain-s03-letter-l009/runtime.ogg",
+      "bytes": 28477,
+      "sha256": "0ec5b0f22b4079eb384a05b24dc54c9873d63685dadbe4f9ecfc510c87d7b997"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

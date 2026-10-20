@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-repair-l005",
+  "sceneId": "s04_repair",
+  "lineId": "s04_repair_l005",
+  "lineIndex": 9,
+  "speaker": "p",
+  "text": "还没。下一次假期得先问公司，我不会先给一个日期。明天到家以后，我会告诉你。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 942087547,
+  "textSha256": "b16075d0c42ed33b43699f7a2e796793dbb2bb9550490907f364440fce3c7cb1",
+  "medium": "spoken",
+  "requestSha256": "679aa10f40a709241d3b68aa7e494578c1b596d340fe094354c36dc779b9cd37",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "还没,下一次假期得先问公司我不会先给一个日期明天到家以后我会告诉你",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 8.24,
+  "wallSeconds": 264.926,
+  "loudness": {
+    "input_i": "-26.36",
+    "input_tp": "-7.05",
+    "input_lra": "1.50",
+    "input_thresh": "-36.98",
+    "output_i": "-19.89",
+    "output_tp": "-2.00",
+    "output_lra": "1.30",
+    "output_thresh": "-30.42",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.11"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-repair-l005/raw.wav",
+      "bytes": 791120,
+      "sha256": "d761ebb6cd97b94d9e35162b3381311f6be71eea2d79536a1761fd27071ed7be"
+    },
+    "master": {
+      "path": "rain-s04-repair-l005/master.wav",
+      "bytes": 395598,
+      "sha256": "ba714b9b7f6a119211e302dffdade3c83b6d9a4cb57d491e3eb21485e176d485"
+    },
+    "runtime": {
+      "path": "rain-s04-repair-l005/runtime.ogg",
+      "bytes": 62262,
+      "sha256": "bffc2e068ec6be574e23f5974eef34afeb9aaa738b35cb353e46879419da551f"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

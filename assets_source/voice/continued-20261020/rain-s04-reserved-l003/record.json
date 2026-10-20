@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-reserved-l003",
+  "sceneId": "s04_reserved",
+  "lineId": "s04_reserved_l003",
+  "lineIndex": 2,
+  "speaker": "h",
+  "text": "一会儿。我想先确认，你是要聊，还是只想安静等雨小一点。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 216783444,
+  "textSha256": "09cfb0b035e2aa85292784b278f210bad60f20270cf45d4f1378b508598fe3e4",
+  "medium": "spoken",
+  "requestSha256": "298244f16a34a0a5eba4bd5a2ea5ca8ead39a10fd46c69fc85b9e98abf43f0e5",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "一会儿 我想先确认 你是要聊 还是只想安静等于小一点",
+    "cer": 0.043478,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 5.44,
+  "wallSeconds": 282.183,
+  "loudness": {
+    "input_i": "-27.42",
+    "input_tp": "-9.95",
+    "input_lra": "0.30",
+    "input_thresh": "-37.71",
+    "output_i": "-20.10",
+    "output_tp": "-2.70",
+    "output_lra": "0.20",
+    "output_thresh": "-30.57",
+    "normalization_type": "dynamic",
+    "target_offset": "0.10"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-reserved-l003/raw.wav",
+      "bytes": 522320,
+      "sha256": "b884acbd734e46c7f3969168b04da733eb297b5dd11e8af0d6c265966f669d14"
+    },
+    "master": {
+      "path": "rain-s04-reserved-l003/master.wav",
+      "bytes": 261198,
+      "sha256": "fac3cdcbf6990e4d607e59432af4f144491bffbf4e77a432d9a7429dce32eb36"
+    },
+    "runtime": {
+      "path": "rain-s04-reserved-l003/runtime.ogg",
+      "bytes": 40769,
+      "sha256": "eb5b3c9cedfdec0b95422d0e08407c0040900dcffe4e7f0e5f0103920ad1bcb0"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

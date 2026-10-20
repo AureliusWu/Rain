@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-repair-l004",
+  "sceneId": "s04_repair",
+  "lineId": "s04_repair_l004",
+  "lineIndex": 8,
+  "speaker": "h",
+  "text": "我听懂了。下次什么时候回来，你定了吗？",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 450376283,
+  "textSha256": "429f4362c9fb29886a943d93e811a33513f07eb4e69fe28b5eeb577fdf44296e",
+  "medium": "spoken",
+  "requestSha256": "544651b143ece44ef807fd061d952f0e6a4e9e74a168f3633600c28f70920c80",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我听到了,下次什么时候回来,你订了吗?",
+    "cer": 0.125,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.24,
+  "wallSeconds": 183.937,
+  "loudness": {
+    "input_i": "-26.58",
+    "input_tp": "-11.66",
+    "input_lra": "1.40",
+    "input_thresh": "-36.98",
+    "output_i": "-20.28",
+    "output_tp": "-5.58",
+    "output_lra": "1.30",
+    "output_thresh": "-30.74",
+    "normalization_type": "dynamic",
+    "target_offset": "0.28"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-repair-l004/raw.wav",
+      "bytes": 407120,
+      "sha256": "9c5afc4f3f388f6334bfa3c65094405f2f41f9a8b485a662d1024afd853b6fd9"
+    },
+    "master": {
+      "path": "rain-s04-repair-l004/master.wav",
+      "bytes": 203598,
+      "sha256": "35caebb39fde20dd8085c0b9f588ee4d8426e5fb998186c29731338023869788"
+    },
+    "runtime": {
+      "path": "rain-s04-repair-l004/runtime.ogg",
+      "bytes": 33152,
+      "sha256": "874496a147fdb47cc221b532306a7fff4d01601ff2ac23d7eaf0c4d91a2496e7"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

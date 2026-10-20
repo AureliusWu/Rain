@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-business-l021",
+  "sceneId": "s02_business",
+  "lineId": "s02_business_l021",
+  "lineIndex": 20,
+  "speaker": "p",
+  "text": "你的日期分完了吗？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1159085581,
+  "textSha256": "5829f32f9f66ee041acaaab2e7808c776a48b2e3966c8d5d3bcfd54db1109737",
+  "medium": "spoken",
+  "requestSha256": "0debe9368a5c8b165eb5747dcc7b49ae39c18610fb4f15f44d19f4f2ace1cb1a",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你的日期分完了吗",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.76,
+  "wallSeconds": 8.292,
+  "loudness": {
+    "input_i": "-24.05",
+    "input_tp": "-6.85",
+    "input_lra": "0.00",
+    "input_thresh": "-34.05",
+    "output_i": "-20.00",
+    "output_tp": "-2.80",
+    "output_lra": "0.00",
+    "output_thresh": "-30.00",
+    "normalization_type": "linear",
+    "target_offset": "-0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-business-l021/raw.wav",
+      "bytes": 169040,
+      "sha256": "38ca4f56ac43678c2711a7e5ce2c19901f7600ac1f2876d353046265df3bf7cc"
+    },
+    "master": {
+      "path": "rain-s02-business-l021/master.wav",
+      "bytes": 84558,
+      "sha256": "2c6e01b441bd278db084fa4e79c315baff12234f5a8b1a4a46fe059b3984af90"
+    },
+    "runtime": {
+      "path": "rain-s02-business-l021/runtime.ogg",
+      "bytes": 16484,
+      "sha256": "99ac3869abbde112ab554551805729d9cbf819bb5a1a19f637c36821baa5eac2"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

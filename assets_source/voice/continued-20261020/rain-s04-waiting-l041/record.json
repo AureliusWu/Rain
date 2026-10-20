@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-waiting-l041",
+  "sceneId": "s04_waiting",
+  "lineId": "s04_waiting_l041",
+  "lineIndex": 41,
+  "speaker": "h",
+  "text": "先留着。要不要给你看，是另一件事。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1389681101,
+  "textSha256": "b70a15a261adf4a78d4f387cc193eec6a152070e8d098938385249561da5c87f",
+  "medium": "spoken",
+  "requestSha256": "9588ea7285a8545916e4db765cc312a9d856d6126fdf503b3d76bdd731865205",
+  "attempt": 1,
+  "status": "accepted",
+  "asr": {
+    "transcript": "先留著要不要給你看是另一件事",
+    "cer": 0.071429,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 5.92,
+  "wallSeconds": 352.303,
+  "loudness": {
+    "input_i": "-26.95",
+    "input_tp": "-12.78",
+    "input_lra": "2.60",
+    "input_thresh": "-38.05",
+    "output_i": "-18.23",
+    "output_tp": "-3.05",
+    "output_lra": "2.80",
+    "output_thresh": "-29.98",
+    "normalization_type": "dynamic",
+    "target_offset": "-1.77"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-waiting-l041/raw.wav",
+      "bytes": 568400,
+      "sha256": "506ec07f414fddfc0ae5fc618f34088b21c38026e547465bf82f10d8e3ced3b5"
+    },
+    "master": {
+      "path": "rain-s04-waiting-l041/master.wav",
+      "bytes": 284238,
+      "sha256": "0c38dac06303892112fa892e6005c6870b42c6988851dcd6c97f5ad5d7062ece"
+    },
+    "runtime": {
+      "path": "rain-s04-waiting-l041/runtime.ogg",
+      "bytes": 41851,
+      "sha256": "777ccb9f2adb09cbcc2c91a0f5e3358a4c79bdb5946c9d1b17cec7f6c4ff382d"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

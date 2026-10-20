@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-care-l015",
+  "sceneId": "s02_care",
+  "lineId": "s02_care_l015",
+  "lineIndex": 14,
+  "speaker": "h",
+  "text": "一半。字最丑的那几张不是我。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 763720222,
+  "textSha256": "ba22222ff444bf43f4e2675e6e96281b289ff039437fbc97da999e50e52fc5fe",
+  "medium": "spoken",
+  "requestSha256": "3249c9e67ac564b1ea59612bdc6baebd1f229bb582cb58140faf9bcdea9368b3",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "一半自罪丑的那几张不是我",
+    "cer": 0.166667,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.64,
+  "wallSeconds": 40.969,
+  "loudness": {
+    "input_i": "-22.60",
+    "input_tp": "-6.67",
+    "input_lra": "2.30",
+    "input_thresh": "-32.92",
+    "output_i": "-19.97",
+    "output_tp": "-4.50",
+    "output_lra": "2.40",
+    "output_thresh": "-30.42",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.03"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-care-l015/raw.wav",
+      "bytes": 445520,
+      "sha256": "000726cbd2a44a4041896544aa71e87e5e4f663ae735fd83bccd6db2bc245f56"
+    },
+    "master": {
+      "path": "rain-s02-care-l015/master.wav",
+      "bytes": 222798,
+      "sha256": "d743c229cf691aa69e39dac16f6c53b1e7f7e36be25649507a2dd2b850b22455"
+    },
+    "runtime": {
+      "path": "rain-s02-care-l015/runtime.ogg",
+      "bytes": 34786,
+      "sha256": "90a7fc3e8587c17cfd7354280fb6499cfe2bf7d58356d1bda4449ccf8d6df100"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

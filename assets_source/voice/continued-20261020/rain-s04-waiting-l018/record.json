@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-waiting-l018",
+  "sceneId": "s04_waiting",
+  "lineId": "s04_waiting_l018",
+  "lineIndex": 17,
+  "speaker": "h",
+  "text": "那就记着。别再拿手机没电当理由。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 6816972,
+  "textSha256": "c4438196d4cb4cfccd03f31df15ab805bfe7339e313cf08a090bffc9ff725fb0",
+  "medium": "spoken",
+  "requestSha256": "e215feb71f16400c1434b48d93203aa8970f7076ddd7c50efb4d1a5e1b5f8c02",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "那就记着,别再拿手机没电当理由。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.32,
+  "wallSeconds": 210.341,
+  "loudness": {
+    "input_i": "-24.31",
+    "input_tp": "-6.72",
+    "input_lra": "3.20",
+    "input_thresh": "-34.66",
+    "output_i": "-17.80",
+    "output_tp": "-2.00",
+    "output_lra": "1.00",
+    "output_thresh": "-28.41",
+    "normalization_type": "dynamic",
+    "target_offset": "-2.20"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-waiting-l018/raw.wav",
+      "bytes": 414800,
+      "sha256": "651637c9e4e5a62e1f9b68191beb841a7fea1d1b81a11db9b03c1d99dfe9a3bb"
+    },
+    "master": {
+      "path": "rain-s04-waiting-l018/master.wav",
+      "bytes": 207438,
+      "sha256": "839814b7176f7f7533cc1ca6a4d4a6b955e8960fb3263302b3aa28a066183017"
+    },
+    "runtime": {
+      "path": "rain-s04-waiting-l018/runtime.ogg",
+      "bytes": 34818,
+      "sha256": "6e440d51085570869717fe049b2476b28f136c2d5d11b39ef8592d31b11b2dd9"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-boundary-l003",
+  "sceneId": "s04_boundary",
+  "lineId": "s04_boundary_l003",
+  "lineIndex": 4,
+  "speaker": "p",
+  "text": "问完以后呢？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1415271969,
+  "textSha256": "76871a98d6408f591c94171a0c2b442c8dd7eadab091607fb9c8733cc4d021e6",
+  "medium": "spoken",
+  "requestSha256": "bece837f94689d48475ce9ca9fa316135af7863de2ca88350fd684a7e0ce0ec8",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "问完以后呢",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.28,
+  "wallSeconds": 139.23,
+  "loudness": {
+    "input_i": "-21.07",
+    "input_tp": "-6.69",
+    "input_lra": "0.00",
+    "input_thresh": "-31.07",
+    "output_i": "-20.01",
+    "output_tp": "-5.62",
+    "output_lra": "0.00",
+    "output_thresh": "-30.01",
+    "normalization_type": "linear",
+    "target_offset": "0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-boundary-l003/raw.wav",
+      "bytes": 122960,
+      "sha256": "41b9c79b91f2b6f11447bfbcfc952474df4818620030fe947b48ac0c34930c2d"
+    },
+    "master": {
+      "path": "rain-s04-boundary-l003/master.wav",
+      "bytes": 61518,
+      "sha256": "45975b5a654e8430da65f5b8f47d4a51263cc66dfa82b9b241b851d7862ea6f1"
+    },
+    "runtime": {
+      "path": "rain-s04-boundary-l003/runtime.ogg",
+      "bytes": 12938,
+      "sha256": "d5c590b5f7aff9ac811629400abbbb99a19f3809e6f2a9f34d1a2dfb0436f43f"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

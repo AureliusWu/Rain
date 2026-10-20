@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s07-true-l002",
+  "sceneId": "s07_true",
+  "lineId": "v07_s07_true_l002",
+  "lineIndex": 7,
+  "speaker": "h",
+  "text": "杯子拿里面那个。外边的刚洗过，烫。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 826821877,
+  "textSha256": "4b1e62ca3694ddc1fe4c42172745aafcd3d8c39e7021cb451199cde8d94ec000",
+  "medium": "spoken",
+  "requestSha256": "134d9b6d303d5de6d8e655dd103e2426f278b92db326b07655ee3c3c58d61b72",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "杯子拿里面那个,外边的刚洗过,烫。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.0,
+  "wallSeconds": 17.539,
+  "loudness": {
+    "input_i": "-22.15",
+    "input_tp": "-4.73",
+    "input_lra": "1.80",
+    "input_thresh": "-33.37",
+    "output_i": "-19.40",
+    "output_tp": "-2.00",
+    "output_lra": "1.70",
+    "output_thresh": "-30.44",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.60"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s07-true-l002/raw.wav",
+      "bytes": 384080,
+      "sha256": "568d9a8016ed3eba3898a25f63119ebd54ae1965e1f235d210deb665c2633506"
+    },
+    "master": {
+      "path": "rain-v07-s07-true-l002/master.wav",
+      "bytes": 192078,
+      "sha256": "15cf5820d0219bec58ea972d16a74bc7d5e8f5778eae7b2b6d9dcbb4c5e56175"
+    },
+    "runtime": {
+      "path": "rain-v07-s07-true-l002/runtime.ogg",
+      "bytes": 30857,
+      "sha256": "a1c6bca513dee40eef5132440fa83918a996adba9e6f55fa9517423e74b92812"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

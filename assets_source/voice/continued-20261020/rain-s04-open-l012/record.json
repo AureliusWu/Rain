@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-open-l012",
+  "sceneId": "s04_open",
+  "lineId": "s04_open_l012",
+  "lineIndex": 11,
+  "speaker": "h",
+  "text": "那就别把剩下这点时间也排成任务。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1273120017,
+  "textSha256": "93b011100f55a33a6842566ec271757eb0b157bd272c824d0372ab87e1fecdba",
+  "medium": "spoken",
+  "requestSha256": "a5735583bfc1ef9418b0a693ce071fc15b120bd5f3fed66a70e0523246784683",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "那就别把剩下这点时间也排成任务",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.64,
+  "wallSeconds": 112.678,
+  "loudness": {
+    "input_i": "-26.50",
+    "input_tp": "-11.00",
+    "input_lra": "0.00",
+    "input_thresh": "-36.50",
+    "output_i": "-20.00",
+    "output_tp": "-4.49",
+    "output_lra": "0.00",
+    "output_thresh": "-30.00",
+    "normalization_type": "linear",
+    "target_offset": "0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-open-l012/raw.wav",
+      "bytes": 253520,
+      "sha256": "179426928d55376f5b684c1a2b016e3ce424bccb1cd2ec345a0d327686656c62"
+    },
+    "master": {
+      "path": "rain-s04-open-l012/master.wav",
+      "bytes": 126798,
+      "sha256": "c959f4ab2bae3953e682295705d805e39832992340f7e03e502a07a22dcb0001"
+    },
+    "runtime": {
+      "path": "rain-s04-open-l012/runtime.ogg",
+      "bytes": 24156,
+      "sha256": "340df1f1ffe054930e8ae566abfd063e3fb1eddacc4850eaa173c3b0eaec0f24"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

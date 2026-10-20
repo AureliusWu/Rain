@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-concrete-l010",
+  "sceneId": "s04_concrete",
+  "lineId": "s04_concrete_l010",
+  "lineIndex": 18,
+  "speaker": "h",
+  "text": "没有也能说没有。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 384049734,
+  "textSha256": "892bd1dcffcc88849cc9b6957640656e8e7f850c2857c987b4d193cc41abbe35",
+  "medium": "spoken",
+  "requestSha256": "956a192299cb40827c4f11d5cc8706afde6388962de450514a49f1953eb2b043",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "没有也能说没有",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.36,
+  "wallSeconds": 55.784,
+  "loudness": {
+    "input_i": "-22.33",
+    "input_tp": "-10.78",
+    "input_lra": "0.00",
+    "input_thresh": "-32.33",
+    "output_i": "-20.01",
+    "output_tp": "-8.45",
+    "output_lra": "0.00",
+    "output_thresh": "-30.01",
+    "normalization_type": "linear",
+    "target_offset": "0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-concrete-l010/raw.wav",
+      "bytes": 130640,
+      "sha256": "5bad4ae0127011302c50bab05807681cd2d8b701eb9c30491f3c6621c29baba6"
+    },
+    "master": {
+      "path": "rain-s04-concrete-l010/master.wav",
+      "bytes": 65358,
+      "sha256": "13ef6f4f930d8bc01a2582249c191f95be538f8a6821c8a687ee871d3200693e"
+    },
+    "runtime": {
+      "path": "rain-s04-concrete-l010/runtime.ogg",
+      "bytes": 13080,
+      "sha256": "9147ba16d57f1f91fb47e04ec2ddfb691be085e069a7ece5ac94102a8e7451aa"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

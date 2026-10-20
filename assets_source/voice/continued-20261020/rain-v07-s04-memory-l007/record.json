@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s04-memory-l007",
+  "sceneId": "s04_memory",
+  "lineId": "v07_s04_memory_l007",
+  "lineIndex": 17,
+  "speaker": "h",
+  "text": "办。不过会留地方给人走。上次过道塞得连推车都进不来。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 336153181,
+  "textSha256": "3eab0a07756b2fec7dd6a87024b3250bdf90c607c872e4ffa28033130e884639",
+  "medium": "spoken",
+  "requestSha256": "18b36c2b57bc98d81b961687fd10a91422698a1af736b7871a7717d795f8ca2d",
+  "attempt": 1,
+  "status": "accepted",
+  "asr": {
+    "transcript": "半 不過會留地方給人走上次過道賽的連推車都進不來",
+    "cer": 0.130435,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 6.32,
+  "wallSeconds": 27.715,
+  "loudness": {
+    "input_i": "-24.16",
+    "input_tp": "-4.74",
+    "input_lra": "0.90",
+    "input_thresh": "-35.05",
+    "output_i": "-20.34",
+    "output_tp": "-2.00",
+    "output_lra": "2.20",
+    "output_thresh": "-31.45",
+    "normalization_type": "dynamic",
+    "target_offset": "0.34"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s04-memory-l007/raw.wav",
+      "bytes": 606800,
+      "sha256": "e926c396d01f2aa5d1bc77131c17626fd8a7038a4e69a82aa81fa861089bda8a"
+    },
+    "master": {
+      "path": "rain-v07-s04-memory-l007/master.wav",
+      "bytes": 303438,
+      "sha256": "5e60547463f43fc440fa21638f329ddffb802da02d90767642fcd659987001fa"
+    },
+    "runtime": {
+      "path": "rain-v07-s04-memory-l007/runtime.ogg",
+      "bytes": 47509,
+      "sha256": "5a18457738ba39c7d41eb9b92e4a658a5852664e8ead2146c6c52ff5d605659c"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

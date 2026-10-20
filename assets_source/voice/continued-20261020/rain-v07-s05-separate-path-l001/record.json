@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s05-separate-path-l001",
+  "sceneId": "s05_separate_path",
+  "lineId": "v07_s05_separate_path_l001",
+  "lineIndex": 4,
+  "speaker": "h",
+  "text": "酒店的地址找到了？",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 505086144,
+  "textSha256": "cf256b2153210f0ebeb7f683c83dac80bdead5c76a7d84e5dbcdc97e57993252",
+  "medium": "spoken",
+  "requestSha256": "fbff1a17ea2e1b2fc737168ead9fc4296a11d8780c83fcc3772324901cfc71f1",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "酒店的地址找到了",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.44,
+  "wallSeconds": 16.634,
+  "loudness": {
+    "input_i": "-23.69",
+    "input_tp": "-7.50",
+    "input_lra": "0.00",
+    "input_thresh": "-33.69",
+    "output_i": "-19.99",
+    "output_tp": "-3.81",
+    "output_lra": "0.00",
+    "output_thresh": "-29.99",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s05-separate-path-l001/raw.wav",
+      "bytes": 138320,
+      "sha256": "67e5c4dfa4c28381d7ce62c5398a2b3a2a52fedc0a4f36836c001b9bc759613d"
+    },
+    "master": {
+      "path": "rain-v07-s05-separate-path-l001/master.wav",
+      "bytes": 69198,
+      "sha256": "b35bc3d3369bfc5343cdc633189f56dcdddc5df3e92404dd3995f0dff21387ce"
+    },
+    "runtime": {
+      "path": "rain-v07-s05-separate-path-l001/runtime.ogg",
+      "bytes": 15082,
+      "sha256": "b5b26ec511d8505a5ecf8e3a218a7f3156baf3d3c6bd21ff35d24bd8d6760a91"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s04-memory-l006",
+  "sceneId": "s04_memory",
+  "lineId": "v07_s04_memory_l006",
+  "lineIndex": 16,
+  "speaker": "p",
+  "text": "现在的店也办这样的展吗？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 906341936,
+  "textSha256": "9dd5d9e0bf4228de40454c76ef7132593894df99639383905d97265fed86ca5f",
+  "medium": "spoken",
+  "requestSha256": "6a36550779a2f2313b65c0c20bc9c45b6cdfcef880cfe90923856360ae30e8a6",
+  "attempt": 4,
+  "status": "accepted",
+  "asr": {
+    "transcript": "现在的电影也办这样的展吗",
+    "cer": 0.181818,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.32,
+  "wallSeconds": 115.875,
+  "loudness": {
+    "input_i": "-23.68",
+    "input_tp": "-5.97",
+    "input_lra": "0.00",
+    "input_thresh": "-34.11",
+    "output_i": "-20.01",
+    "output_tp": "-2.29",
+    "output_lra": "0.00",
+    "output_thresh": "-30.45",
+    "normalization_type": "linear",
+    "target_offset": "0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s04-memory-l006/raw.wav",
+      "bytes": 222800,
+      "sha256": "bf1b06a018ab16a6a6bb7228727db586cb397789916c60d73638e9e41f6ec39e"
+    },
+    "master": {
+      "path": "rain-v07-s04-memory-l006/master.wav",
+      "bytes": 111438,
+      "sha256": "435dcdcb66dd5e57d84782b0956111907cf0d5ffa3df2781d014437cca346071"
+    },
+    "runtime": {
+      "path": "rain-v07-s04-memory-l006/runtime.ogg",
+      "bytes": 21762,
+      "sha256": "aa6c151ca7ce8b60d26e594b868e2a125a726a41666994937a0a24e41e69e424"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-reserved-l004",
+  "sceneId": "s04_reserved",
+  "lineId": "s04_reserved_l004",
+  "lineIndex": 3,
+  "speaker": "p",
+  "text": "两个都想。只是有些话，我一时找不到开头。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1512051686,
+  "textSha256": "408c65bd6ec642e4b941b49f441bcbf3c4ca8f3aec8ca02706ea0dbab4a9979f",
+  "medium": "spoken",
+  "requestSha256": "ff877315da7c5e0c23f56b1e348612dc0581265aab9c5b38366e2e0b11e8e02f",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "两个都想只是有些话我一时找不到开头",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.44,
+  "wallSeconds": 15.517,
+  "loudness": {
+    "input_i": "-28.59",
+    "input_tp": "-10.94",
+    "input_lra": "0.20",
+    "input_thresh": "-38.88",
+    "output_i": "-19.57",
+    "output_tp": "-2.03",
+    "output_lra": "0.00",
+    "output_thresh": "-29.85",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.43"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-reserved-l004/raw.wav",
+      "bytes": 330320,
+      "sha256": "447c4cce942c9dba3f3688cd4dc7a4a5c3aa9af115985f72b11150e21a1a6a56"
+    },
+    "master": {
+      "path": "rain-s04-reserved-l004/master.wav",
+      "bytes": 165198,
+      "sha256": "f61c134ddc6625a19fb600f343cee79e528b0bf5cf97a8de7aa66d0843b9374e"
+    },
+    "runtime": {
+      "path": "rain-s04-reserved-l004/runtime.ogg",
+      "bytes": 31171,
+      "sha256": "031a3be31b115fd49b863fa75cb9a28bb7c308675a415967117c77117ce6a071"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

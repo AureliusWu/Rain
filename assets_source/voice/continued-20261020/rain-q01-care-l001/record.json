@@ -1,0 +1,56 @@
+{
+  "id": "rain-q01-care-l001",
+  "sceneId": "s02_reunion",
+  "lineId": "q01_care_l001",
+  "lineIndex": 0,
+  "speaker": "p",
+  "text": "你站里面吧。最近过得怎么样？",
+  "choiceId": "q01_care",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1983043144,
+  "textSha256": "b080ff01d597887f3eb2b1f3864ee510383d1c3a715bd21adf402810f1fe28f7",
+  "medium": "spoken",
+  "requestSha256": "e385cf5d25b5f493fafd24df108f1d29ceea6831b1bf3d5ad49319f2137a143b",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你站里边吧,最近过得怎么样",
+    "cer": 0.083333,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.92,
+  "wallSeconds": 134.848,
+  "loudness": {
+    "input_i": "-25.26",
+    "input_tp": "-5.03",
+    "input_lra": "0.00",
+    "input_thresh": "-35.51",
+    "output_i": "-22.23",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-32.48",
+    "normalization_type": "linear",
+    "target_offset": "2.23"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-q01-care-l001/raw.wav",
+      "bytes": 184400,
+      "sha256": "d44469995d7d396f872273fc90558bd2c2b411e6151fd0fc8e7b18158106a451"
+    },
+    "master": {
+      "path": "rain-q01-care-l001/master.wav",
+      "bytes": 92238,
+      "sha256": "8efecebec97529346a09032da4692843d3455d7c1278c08e31f444df6fc8d746"
+    },
+    "runtime": {
+      "path": "rain-q01-care-l001/runtime.ogg",
+      "bytes": 18730,
+      "sha256": "edbf88545a744dfc8f0b0a6b3caa73dc530c69a102143834cd756c948cc040e8"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

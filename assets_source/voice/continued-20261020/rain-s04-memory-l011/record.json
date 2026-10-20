@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-memory-l011",
+  "sceneId": "s04_memory",
+  "lineId": "s04_memory_l011",
+  "lineIndex": 15,
+  "speaker": "h",
+  "text": "下次摆展的时候，我可不想再拿报纸垫相机。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 276233434,
+  "textSha256": "bc4d790b6e4e99cc57fed549dec9912b19e57025df26c7ca59994d697103ffad",
+  "medium": "spoken",
+  "requestSha256": "bf0c47e6b751cf28af4aeca9b63e3739735cad6f43fdfe4d994f737d98c98d71",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "下次擺展的时候,我可不想再拿报纸垫相机。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.2,
+  "wallSeconds": 214.2,
+  "loudness": {
+    "input_i": "-23.86",
+    "input_tp": "-7.94",
+    "input_lra": "0.40",
+    "input_thresh": "-33.86",
+    "output_i": "-19.96",
+    "output_tp": "-4.16",
+    "output_lra": "0.00",
+    "output_thresh": "-29.96",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.04"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-memory-l011/raw.wav",
+      "bytes": 307280,
+      "sha256": "ca3f539c32d109b1a1bbf14a361954283557a532f04e002ba22e074c66d313d2"
+    },
+    "master": {
+      "path": "rain-s04-memory-l011/master.wav",
+      "bytes": 153678,
+      "sha256": "f21a88bbe5344faeb286291b6a5c9818007e08a26922d31b0b39c27afc93da96"
+    },
+    "runtime": {
+      "path": "rain-s04-memory-l011/runtime.ogg",
+      "bytes": 28403,
+      "sha256": "ec94e6b4c3ac99952893961b612305ad73861233e053fb72d17436636c1faa57"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

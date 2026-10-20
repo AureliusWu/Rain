@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-waiting-l015",
+  "sceneId": "s04_waiting",
+  "lineId": "s04_waiting_l015",
+  "lineIndex": 14,
+  "speaker": "p",
+  "text": "你说得对。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 451911944,
+  "textSha256": "e1492b9511c87e0f950d044fc0402469f7a747f8977d5935e41c1e52db1122a5",
+  "medium": "spoken",
+  "requestSha256": "866a8818ede1fb67b53ab2bd2a37f9c586a81795d3978d31e74b056a06c39e83",
+  "attempt": 5,
+  "status": "needs_review",
+  "asr": {
+    "transcript": "你说的对",
+    "cer": 0.25,
+    "polarityCountsMatch": true,
+    "passed": false
+  },
+  "duration": 0.8,
+  "wallSeconds": 45.899,
+  "loudness": {
+    "input_i": "-24.08",
+    "input_tp": "-8.95",
+    "input_lra": "0.00",
+    "input_thresh": "-34.08",
+    "output_i": "-20.02",
+    "output_tp": "-4.87",
+    "output_lra": "0.00",
+    "output_thresh": "-30.02",
+    "normalization_type": "linear",
+    "target_offset": "0.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-waiting-l015/raw.wav",
+      "bytes": 76880,
+      "sha256": "af8e419fee3a3218cb3784f4cd3cd58172c28ab0a825446497e3a637eff4f906"
+    },
+    "master": {
+      "path": "rain-s04-waiting-l015/master.wav",
+      "bytes": 38478,
+      "sha256": "d7a8037cf37516c25b3b3f99797c803a9b9aed47e9512905c72f7ffc0ffd04b8"
+    },
+    "runtime": {
+      "path": "rain-s04-waiting-l015/runtime.ogg",
+      "bytes": 10056,
+      "sha256": "e234b3d2dc76e7f10c97bee24c14ea15727d0583673cd4cfe391e9fbf5bc88c0"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-s01-arrival-l014",
+  "sceneId": "s01_arrival",
+  "lineId": "s01_arrival_l014",
+  "lineIndex": 13,
+  "speaker": "p",
+  "text": "你等很久了吗？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 896887712,
+  "textSha256": "6fb93e04391b21a6bcbb7dafa3e7d08d3fd7febb740c87bd1b6d8497cab93a6d",
+  "medium": "spoken",
+  "requestSha256": "96681035bd04dc200368b4fca849b2d6a513ef2f920894416c16f689b01f3f3c",
+  "attempt": 1,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你等很久了吗",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.2,
+  "wallSeconds": 47.839,
+  "loudness": {
+    "input_i": "-24.53",
+    "input_tp": "-6.69",
+    "input_lra": "0.00",
+    "input_thresh": "-34.99",
+    "output_i": "-19.99",
+    "output_tp": "-2.16",
+    "output_lra": "0.00",
+    "output_thresh": "-30.46",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s01-arrival-l014/raw.wav",
+      "bytes": 115280,
+      "sha256": "2f01f570e9dc1e81997c7a8868e12253711571d8d22a48d3ca8d48f9c2262814"
+    },
+    "master": {
+      "path": "rain-s01-arrival-l014/master.wav",
+      "bytes": 57678,
+      "sha256": "04ac2810b5f4060ac1851256ab278d5af0748ccf0eb59dd278b1b0e8cc1cec69"
+    },
+    "runtime": {
+      "path": "rain-s01-arrival-l014/runtime.ogg",
+      "bytes": 12750,
+      "sha256": "b9ccf30ba42442032dc1af17c96f6f7bf9eaedb760eecbc8552c0c55f6fa10ef"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

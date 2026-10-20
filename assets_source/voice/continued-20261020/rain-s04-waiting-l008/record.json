@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-waiting-l008",
+  "sceneId": "s04_waiting",
+  "lineId": "s04_waiting_l008",
+  "lineIndex": 7,
+  "speaker": "p",
+  "text": "你一直留着？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1028162550,
+  "textSha256": "812d9d6ff2c5191cf1833859643ca66b5276753f98d97f71cd65348e2e4682d6",
+  "medium": "spoken",
+  "requestSha256": "a08385526ea1490b575560b177280b4eb9735f8f80e7219d889fd8060ba4648f",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你一直留着",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 0.88,
+  "wallSeconds": 36.734,
+  "loudness": {
+    "input_i": "-21.39",
+    "input_tp": "-8.98",
+    "input_lra": "0.00",
+    "input_thresh": "-31.39",
+    "output_i": "-19.99",
+    "output_tp": "-7.59",
+    "output_lra": "0.00",
+    "output_thresh": "-29.99",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-waiting-l008/raw.wav",
+      "bytes": 84560,
+      "sha256": "5e52901007bac48b9691b20f4f5f0582a483406c65dc29eb6e3cdc339f6889cc"
+    },
+    "master": {
+      "path": "rain-s04-waiting-l008/master.wav",
+      "bytes": 42318,
+      "sha256": "cf98c7cdac62a4130bb75845f203f1507eb1abe1bd56e870bcc604c36ce762b7"
+    },
+    "runtime": {
+      "path": "rain-s04-waiting-l008/runtime.ogg",
+      "bytes": 9933,
+      "sha256": "77ab13ba6712031a6c75263d93f912b8586e401df2933d9e990abe596e15ed40"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

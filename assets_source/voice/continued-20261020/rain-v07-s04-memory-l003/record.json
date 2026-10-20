@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s04-memory-l003",
+  "sceneId": "s04_memory",
+  "lineId": "v07_s04_memory_l003",
+  "lineIndex": 8,
+  "speaker": "h",
+  "text": "可以。别碰到箱盖上那滴水。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1232907687,
+  "textSha256": "2d68e1e7a0138f33c29a848af92134eaac94597f74593dd0474d52d3ca3a39b8",
+  "medium": "spoken",
+  "requestSha256": "6130484d772e1a46eb80cf371afe05397d877b0ae7c69407a8548d556ed4c9b6",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "可以,別碰到箱蓋上的滴水",
+    "cer": 0.090909,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.96,
+  "wallSeconds": 121.311,
+  "loudness": {
+    "input_i": "-24.73",
+    "input_tp": "-9.45",
+    "input_lra": "0.00",
+    "input_thresh": "-34.91",
+    "output_i": "-20.01",
+    "output_tp": "-4.72",
+    "output_lra": "0.00",
+    "output_thresh": "-30.20",
+    "normalization_type": "linear",
+    "target_offset": "0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s04-memory-l003/raw.wav",
+      "bytes": 284240,
+      "sha256": "df03923a95d2c55e61fa13b0f2b8a2b95c295875f33372b61d81879389ce1f97"
+    },
+    "master": {
+      "path": "rain-v07-s04-memory-l003/master.wav",
+      "bytes": 142158,
+      "sha256": "28b1b2fb3d0491112aab18900a03ce27cd9661a2acb6d12c121653117cc61dd6"
+    },
+    "runtime": {
+      "path": "rain-v07-s04-memory-l003/runtime.ogg",
+      "bytes": 23941,
+      "sha256": "5cd90b39ccfbd632796b282cc57d095f4be4700db13525cd0474204d4519a841"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

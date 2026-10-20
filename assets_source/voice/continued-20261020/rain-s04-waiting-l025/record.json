@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-waiting-l025",
+  "sceneId": "s04_waiting",
+  "lineId": "s04_waiting_l025",
+  "lineIndex": 25,
+  "speaker": "p",
+  "text": "我知道。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1884270188,
+  "textSha256": "4b4d6b7994f867c64cc18a4a86830cf1cd887960b58ac9f001f7a4902f93dc98",
+  "medium": "spoken",
+  "requestSha256": "820b2fd8026a2bbc5cd216a272d9ce411c549534e844bc366b4c2387476fd3ca",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我知道",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 0.72,
+  "wallSeconds": 30.155,
+  "loudness": {
+    "input_i": "-22.82",
+    "input_tp": "-6.77",
+    "input_lra": "0.00",
+    "input_thresh": "-32.82",
+    "output_i": "-20.02",
+    "output_tp": "-3.95",
+    "output_lra": "0.00",
+    "output_thresh": "-30.02",
+    "normalization_type": "linear",
+    "target_offset": "0.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-waiting-l025/raw.wav",
+      "bytes": 69200,
+      "sha256": "6f3626fb8e586d7ada6a0c8ea8d3294834fbdaa6ed4b1c77e22e9e6b22a28be3"
+    },
+    "master": {
+      "path": "rain-s04-waiting-l025/master.wav",
+      "bytes": 34638,
+      "sha256": "aa7bb06e4484b70417f28fffd05f925a904202f2b3222a544822dc31272663eb"
+    },
+    "runtime": {
+      "path": "rain-s04-waiting-l025/runtime.ogg",
+      "bytes": 9010,
+      "sha256": "27655250468ba0a8ae1f0e99949c0ebbd47c7a8d34612196b49c2f1ddf9cb04b"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

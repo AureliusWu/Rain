@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-waiting-l029",
+  "sceneId": "s04_waiting",
+  "lineId": "s04_waiting_l029",
+  "lineIndex": 29,
+  "speaker": "h",
+  "text": "嗯，先这样。后面的事，等有话想说再说。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 109954830,
+  "textSha256": "2962c6f16cec5576016814a9c3973b0e0e4d3ab714caa64ca15dc3c0db2cab6d",
+  "medium": "spoken",
+  "requestSha256": "1300262f9574b77677ce7b99b926dc2ffbc8f1cebedd368054a3c82cfad13bd9",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "嗯,先這樣,後面的事等有話想說再說",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 5.04,
+  "wallSeconds": 46.012,
+  "loudness": {
+    "input_i": "-26.67",
+    "input_tp": "-12.38",
+    "input_lra": "0.50",
+    "input_thresh": "-37.21",
+    "output_i": "-19.70",
+    "output_tp": "-5.34",
+    "output_lra": "1.00",
+    "output_thresh": "-30.40",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.30"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-waiting-l029/raw.wav",
+      "bytes": 483920,
+      "sha256": "0a90d1762ce286d73c3990844053d19f2a41cda5f29bdfd44828be6e109f0464"
+    },
+    "master": {
+      "path": "rain-s04-waiting-l029/master.wav",
+      "bytes": 241998,
+      "sha256": "b4fbaf95784d3923734682de32388d72e7400b77dcce9372849381882b25dbdb"
+    },
+    "runtime": {
+      "path": "rain-s04-waiting-l029/runtime.ogg",
+      "bytes": 37414,
+      "sha256": "3963b9a5fd6f18c061a0ffdd9773033c311652e8789df1b75382b54bd2333330"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

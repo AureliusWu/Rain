@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-boundary-l007",
+  "sceneId": "s04_boundary",
+  "lineId": "s04_boundary_l007",
+  "lineIndex": 13,
+  "speaker": "h",
+  "text": "不说，也不能替我决定我会不会为难。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 515750956,
+  "textSha256": "dc967399dfabbcfa02b6abc92d88dbb79464cc81df495eee2e911bf953497f0f",
+  "medium": "spoken",
+  "requestSha256": "9a80d24efddf4946b93cbb389e3838040235426a6a32b5ed906357f10999f9dc",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "不说,也不能替我决定,我会不会为难?",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.64,
+  "wallSeconds": 272.301,
+  "loudness": {
+    "input_i": "-28.32",
+    "input_tp": "-8.60",
+    "input_lra": "1.00",
+    "input_thresh": "-38.82",
+    "output_i": "-19.77",
+    "output_tp": "-2.00",
+    "output_lra": "1.10",
+    "output_thresh": "-31.04",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.23"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-boundary-l007/raw.wav",
+      "bytes": 445520,
+      "sha256": "9d62ffc5f820e65354fc99a2ecc2929bbc6f9173c0517390e1d420bcc08518f9"
+    },
+    "master": {
+      "path": "rain-s04-boundary-l007/master.wav",
+      "bytes": 222798,
+      "sha256": "5d906f47e5c4a307d0ad919fc80f6915bff68263589211bd0f48ec07fa51634c"
+    },
+    "runtime": {
+      "path": "rain-s04-boundary-l007/runtime.ogg",
+      "bytes": 34418,
+      "sha256": "b2845dd8773de9f92287c2ff52b996276c2c371de8f7db763004287fd4b2266a"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

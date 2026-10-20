@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-boxes-l007",
+  "sceneId": "s02_boxes",
+  "lineId": "s02_boxes_l007",
+  "lineIndex": 6,
+  "speaker": "h",
+  "text": "照片是书店借出去的。我来拿走，下次做展览还能用。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 538117844,
+  "textSha256": "3a054fba68dc5109d3b62b78a69c057fee438022359f6df9f4abd5e7c61c6363",
+  "medium": "spoken",
+  "requestSha256": "ec6cd0aa3778a16e70cfbd0aefd40b7317bf4b86376dfc6545eb18c99fdcdc72",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "照片是书店借出去的我来拿走下次作展了还能用",
+    "cer": 0.095238,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 5.36,
+  "wallSeconds": 242.156,
+  "loudness": {
+    "input_i": "-24.98",
+    "input_tp": "-9.36",
+    "input_lra": "0.80",
+    "input_thresh": "-35.60",
+    "output_i": "-19.13",
+    "output_tp": "-3.40",
+    "output_lra": "1.90",
+    "output_thresh": "-29.90",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.87"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-boxes-l007/raw.wav",
+      "bytes": 514640,
+      "sha256": "ad19fe30224d50475475205aa0967b1858351d215fc3e85a14968b553316e344"
+    },
+    "master": {
+      "path": "rain-s02-boxes-l007/master.wav",
+      "bytes": 257358,
+      "sha256": "0ecdf960bde9162f3c203414a797a6f72617025d89de449f8390b47a863f96dc"
+    },
+    "runtime": {
+      "path": "rain-s02-boxes-l007/runtime.ogg",
+      "bytes": 41396,
+      "sha256": "fc2797279d8572429a10f8b2e5d7f73ec49cab45deffcea79f71aa1991d89941"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

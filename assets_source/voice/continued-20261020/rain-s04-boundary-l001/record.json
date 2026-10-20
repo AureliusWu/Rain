@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-boundary-l001",
+  "sceneId": "s04_boundary",
+  "lineId": "s04_boundary_l001",
+  "lineIndex": 2,
+  "speaker": "p",
+  "text": "我有时候分不清，什么现在说还来得及，什么说了只会添麻烦。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1960466063,
+  "textSha256": "c65be8988227a4559bfbffdbbe14861bcbf6f007b3e14b33a4f2104ca9a829e7",
+  "medium": "spoken",
+  "requestSha256": "8bd7344a64c9e891119a018899bc1d5bf0bf0ac26e91e86c55044fbe73220c38",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我有时候分不清什么现在说还来得及什么说了只会添麻烦",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.96,
+  "wallSeconds": 45.164,
+  "loudness": {
+    "input_i": "-24.21",
+    "input_tp": "-6.60",
+    "input_lra": "3.10",
+    "input_thresh": "-34.66",
+    "output_i": "-20.53",
+    "output_tp": "-3.48",
+    "output_lra": "2.00",
+    "output_thresh": "-30.91",
+    "normalization_type": "dynamic",
+    "target_offset": "0.53"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-boundary-l001/raw.wav",
+      "bytes": 476240,
+      "sha256": "b4ebf094331023d505628783a0f1255f4f4ea939e4f54ce2fe6979260b4324df"
+    },
+    "master": {
+      "path": "rain-s04-boundary-l001/master.wav",
+      "bytes": 238158,
+      "sha256": "5c03db85316c11bd8fad1135745dce412b71d0763f46ee96f25664e90e1d21ec"
+    },
+    "runtime": {
+      "path": "rain-s04-boundary-l001/runtime.ogg",
+      "bytes": 42582,
+      "sha256": "82033d06a01314944c15d6648a11f19d24425d6f0054e8530f18f83a180e0557"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

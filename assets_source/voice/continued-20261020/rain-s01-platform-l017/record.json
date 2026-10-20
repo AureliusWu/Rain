@@ -1,0 +1,55 @@
+{
+  "id": "rain-s01-platform-l017",
+  "sceneId": "s01_platform",
+  "lineId": "s01_platform_l017",
+  "lineIndex": 16,
+  "speaker": "p",
+  "text": "看来真搬出来了。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1714356338,
+  "textSha256": "c0fe53b955afc82fd1d1f25cdfd645c2229d3b3e1a663562d7dc699f23fbd95f",
+  "medium": "spoken",
+  "requestSha256": "3632b9896869e606f86d208c6268b843df7b4966af0e392a3b612bdc66d28c48",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "看来真搬出来了",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.6,
+  "wallSeconds": 8.166,
+  "loudness": {
+    "input_i": "-26.44",
+    "input_tp": "-7.64",
+    "input_lra": "0.00",
+    "input_thresh": "-36.75",
+    "output_i": "-20.79",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-31.10",
+    "normalization_type": "linear",
+    "target_offset": "0.79"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s01-platform-l017/raw.wav",
+      "bytes": 153680,
+      "sha256": "f78a8202a6f42b2f1b86d9092b74302080cafb02ca83bcf83e5a37d7a1fa3137"
+    },
+    "master": {
+      "path": "rain-s01-platform-l017/master.wav",
+      "bytes": 76878,
+      "sha256": "57568b7fbf5b16e7d50b6cf6ef060a58782d88127c4c004702585769c4186671"
+    },
+    "runtime": {
+      "path": "rain-s01-platform-l017/runtime.ogg",
+      "bytes": 15429,
+      "sha256": "0262f9734448400bed3acbf3e220d6a8eb338d9afa60bd9fd7c29684e00f098a"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

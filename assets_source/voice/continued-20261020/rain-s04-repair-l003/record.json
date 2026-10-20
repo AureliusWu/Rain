@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-repair-l003",
+  "sceneId": "s04_repair",
+  "lineId": "s04_repair_l003",
+  "lineIndex": 7,
+  "speaker": "p",
+  "text": "现在也一样。但你不需要替我保证这件事会变成什么。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 375362516,
+  "textSha256": "58c927bee53f6670608c49ee1749b30e2f7eed4cd87d019dce1d94d6355df4b9",
+  "medium": "spoken",
+  "requestSha256": "480269ef224aea9fea8a2ac5222719ec3326ddbcef067b16591e460cddcfda42",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "现在也一样但你不需要替我保证这件事会变成什么",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.72,
+  "wallSeconds": 212.818,
+  "loudness": {
+    "input_i": "-23.72",
+    "input_tp": "-6.26",
+    "input_lra": "0.40",
+    "input_thresh": "-34.33",
+    "output_i": "-19.35",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.07",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.65"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-repair-l003/raw.wav",
+      "bytes": 453200,
+      "sha256": "b44c1a117e4a856c1ae1fae5b047e0a8bbbe4e52d4be76c7ac2f8c6ed810ead0"
+    },
+    "master": {
+      "path": "rain-s04-repair-l003/master.wav",
+      "bytes": 226638,
+      "sha256": "b7d30ea0ff7e9c860dfecd17f0fd0ca11c3b49ab4720a471e518dd8621dfd30f"
+    },
+    "runtime": {
+      "path": "rain-s04-repair-l003/runtime.ogg",
+      "bytes": 38363,
+      "sha256": "e1d9982d539ecda07d107df4a1480dca5c2966b03eeb9402a38a4618afc8c130"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

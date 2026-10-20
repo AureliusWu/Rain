@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-reunion-l020",
+  "sceneId": "s02_reunion",
+  "lineId": "s02_reunion_l020",
+  "lineIndex": 19,
+  "speaker": "p",
+  "text": "我记得只有几本。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1690208885,
+  "textSha256": "0b650ae1e124eb583c4b7e0532d303e988d49a118ae400dddd24fdfe271d8611",
+  "medium": "spoken",
+  "requestSha256": "3b86c2568989ffedcb66ede82f30f2198b51d884be66db131a6f4423d5bfaa5f",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我记得只有几本",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.44,
+  "wallSeconds": 81.232,
+  "loudness": {
+    "input_i": "-24.68",
+    "input_tp": "-6.95",
+    "input_lra": "0.00",
+    "input_thresh": "-34.68",
+    "output_i": "-20.00",
+    "output_tp": "-2.27",
+    "output_lra": "0.00",
+    "output_thresh": "-30.00",
+    "normalization_type": "linear",
+    "target_offset": "-0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-reunion-l020/raw.wav",
+      "bytes": 138320,
+      "sha256": "58823ab1782d1c31f2be4b3b4cbca494aee4c576e72d545bea9702c373382020"
+    },
+    "master": {
+      "path": "rain-s02-reunion-l020/master.wav",
+      "bytes": 69198,
+      "sha256": "ade531ba04e1878411d4a63f99d1134acbb309fb9801880814b83093c6ada560"
+    },
+    "runtime": {
+      "path": "rain-s02-reunion-l020/runtime.ogg",
+      "bytes": 15219,
+      "sha256": "cbc6e4bd025cdac10b53ea75455d8cd3fd65cfac34469356ba967ec1ec0235d6"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

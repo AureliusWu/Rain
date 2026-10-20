@@ -1,0 +1,55 @@
+{
+  "id": "rain-s07-true-l002",
+  "sceneId": "s07_true",
+  "lineId": "s07_true_l002",
+  "lineIndex": 1,
+  "speaker": "h",
+  "text": "你把伞全偏过来了。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 736020012,
+  "textSha256": "2ed16c32c5d44e9f4791614b4c41e259ad63ffeb35a3c0cd79308d9c3a3104aa",
+  "medium": "spoken",
+  "requestSha256": "cd05c3f9af948ff89f331effa8bf271a85183a1b14cbccf9668bba6c7d110dc5",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你把散全偏过来了",
+    "cer": 0.125,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.84,
+  "wallSeconds": 77.317,
+  "loudness": {
+    "input_i": "-21.84",
+    "input_tp": "-5.04",
+    "input_lra": "0.00",
+    "input_thresh": "-31.84",
+    "output_i": "-19.99",
+    "output_tp": "-3.20",
+    "output_lra": "0.00",
+    "output_thresh": "-29.99",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s07-true-l002/raw.wav",
+      "bytes": 176720,
+      "sha256": "b066293febe23d5fa5b867e17c6e89a77a205e138b88d80d91935f3ea97825c6"
+    },
+    "master": {
+      "path": "rain-s07-true-l002/master.wav",
+      "bytes": 88398,
+      "sha256": "1ef9428f42083c385881e23823818e5808094e0f6e88c156b81f9a23452a70ca"
+    },
+    "runtime": {
+      "path": "rain-s07-true-l002/runtime.ogg",
+      "bytes": 17353,
+      "sha256": "1ac4bf0383fa690ac020b9639d5228250f74068deb5d316c4f5bcdd41fac4ea4"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

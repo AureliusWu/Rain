@@ -1,0 +1,55 @@
+{
+  "id": "rain-s07-true-l009",
+  "sceneId": "s07_true",
+  "lineId": "s07_true_l009",
+  "lineIndex": 13,
+  "speaker": "p",
+  "text": "估计没有现在会。那时候还拿报纸垫相机。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 160024801,
+  "textSha256": "8ea1a04f561c80dc8028c7ad7bb7040eb693292ee8dab183d34a16d9e2581085",
+  "medium": "spoken",
+  "requestSha256": "feabea2500509008645a03bdf4ed1354411160ecceab152d85e434d387425a4f",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "估计没有现在会那时候还拿报纸电相机",
+    "cer": 0.058824,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.68,
+  "wallSeconds": 178.767,
+  "loudness": {
+    "input_i": "-25.88",
+    "input_tp": "-7.98",
+    "input_lra": "0.70",
+    "input_thresh": "-36.32",
+    "output_i": "-19.37",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-29.92",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.63"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s07-true-l009/raw.wav",
+      "bytes": 353360,
+      "sha256": "8c7a5161266e64c8580a4b59459d42750ac83922858cfd06d5e8fc61cce860dc"
+    },
+    "master": {
+      "path": "rain-s07-true-l009/master.wav",
+      "bytes": 176718,
+      "sha256": "b7129f1cf92c19dc12f6015c27c5af5c493d4e0f1877137a68275e3a5406996e"
+    },
+    "runtime": {
+      "path": "rain-s07-true-l009/runtime.ogg",
+      "bytes": 31325,
+      "sha256": "ee551f3b1b54511783bf48db22668bdf9e8daed909b8ae5231b36f60e00bc4c7"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

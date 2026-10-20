@@ -1,0 +1,56 @@
+{
+  "id": "rain-q03-leave-l002",
+  "sceneId": "s05_departure",
+  "lineId": "q03_leave_l002",
+  "lineIndex": 1,
+  "speaker": "h",
+  "text": "好。我听见了。",
+  "choiceId": "q03_leave",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1106983203,
+  "textSha256": "a6b38d97eef0995d5237ad27c93ffde8c0d4bcf82377056d9b1ef24962aafc86",
+  "medium": "spoken",
+  "requestSha256": "16ed028fb89f4c35c83af7484aab29fb0f7f4a641fc46d8f346558de2305c1e9",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "好,我听见了。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.08,
+  "wallSeconds": 21.092,
+  "loudness": {
+    "input_i": "-27.02",
+    "input_tp": "-9.99",
+    "input_lra": "0.00",
+    "input_thresh": "-37.79",
+    "output_i": "-20.02",
+    "output_tp": "-2.97",
+    "output_lra": "0.00",
+    "output_thresh": "-31.14",
+    "normalization_type": "linear",
+    "target_offset": "0.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-q03-leave-l002/raw.wav",
+      "bytes": 199760,
+      "sha256": "653124106ad98a8b573662c26b5431bf31b87fa336f0132ba6a4c66e1352e18c"
+    },
+    "master": {
+      "path": "rain-q03-leave-l002/master.wav",
+      "bytes": 99918,
+      "sha256": "b93177951a347c88a8f6abe55d10da964b797bf532eb7a26425e841cc0ce9939"
+    },
+    "runtime": {
+      "path": "rain-q03-leave-l002/runtime.ogg",
+      "bytes": 16906,
+      "sha256": "702fccc173fae1202c354f219754eccf5eae45d4cb8ea599d124fedd0a221a87"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

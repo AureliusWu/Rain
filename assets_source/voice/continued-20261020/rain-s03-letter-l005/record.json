@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-letter-l005",
+  "sceneId": "s03_letter",
+  "lineId": "s03_letter_l005",
+  "lineIndex": 4,
+  "speaker": "h",
+  "text": "没拆。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 220404362,
+  "textSha256": "d2376e3ea041459d82ceed039217f04a6d045794ddeb1c7caa84e209dfc67417",
+  "medium": "spoken",
+  "requestSha256": "7702d628f853a3d6e4933edc0a9a7593b176b55f293713ae95fc07ffcccf3b89",
+  "attempt": 3,
+  "status": "accepted",
+  "asr": {
+    "transcript": "没拆",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 0.64,
+  "wallSeconds": 51.837,
+  "loudness": {
+    "input_i": "-21.89",
+    "input_tp": "-9.72",
+    "input_lra": "0.00",
+    "input_thresh": "-31.89",
+    "output_i": "-20.03",
+    "output_tp": "-7.84",
+    "output_lra": "0.00",
+    "output_thresh": "-30.03",
+    "normalization_type": "linear",
+    "target_offset": "0.03"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-letter-l005/raw.wav",
+      "bytes": 61520,
+      "sha256": "0edbdb73b5d5216a6f0ce35914920acbe01ebd3187ea94f6a0b712e2a161948a"
+    },
+    "master": {
+      "path": "rain-s03-letter-l005/master.wav",
+      "bytes": 30798,
+      "sha256": "85560ccdafbfda1d978d4a6e398eb5160ad7eeae9cf85c394214b4241197c696"
+    },
+    "runtime": {
+      "path": "rain-s03-letter-l005/runtime.ogg",
+      "bytes": 8261,
+      "sha256": "6ebca67fe1f5219a228547851e50603cb8f83c738d04ba922aecd98539d33973"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

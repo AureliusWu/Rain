@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-archive-l002",
+  "sceneId": "s03_archive",
+  "lineId": "s03_archive_l002",
+  "lineIndex": 1,
+  "speaker": "h",
+  "text": "这本书你带走吧。书店不用了。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1327706053,
+  "textSha256": "0ccc670c3e35a47d986a0b639a9fba21524503cfa085907ae36793e533933a34",
+  "medium": "spoken",
+  "requestSha256": "b5ec224d8840bed1a5e86d7eaca8734ad7a0f9e7dd4b978680a06e5b52ba5a31",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "这本书你带走吧书店不用了",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.96,
+  "wallSeconds": 29.309,
+  "loudness": {
+    "input_i": "-25.59",
+    "input_tp": "-11.84",
+    "input_lra": "0.00",
+    "input_thresh": "-36.13",
+    "output_i": "-20.00",
+    "output_tp": "-6.25",
+    "output_lra": "0.00",
+    "output_thresh": "-30.54",
+    "normalization_type": "linear",
+    "target_offset": "0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-archive-l002/raw.wav",
+      "bytes": 284240,
+      "sha256": "0ee1e234b98c0a2b883168627e105fcf3e97b2472d7db9d2c5e88fd9e6fd3bed"
+    },
+    "master": {
+      "path": "rain-s03-archive-l002/master.wav",
+      "bytes": 142158,
+      "sha256": "000140f921c4b11b2093ec6be565ac68f2c00d750808b807c3586acdb61fece2"
+    },
+    "runtime": {
+      "path": "rain-s03-archive-l002/runtime.ogg",
+      "bytes": 24775,
+      "sha256": "532059d814a52a8127cea5095ee2b3d04025513e2b3de8d0d1e9829f2e691a52"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

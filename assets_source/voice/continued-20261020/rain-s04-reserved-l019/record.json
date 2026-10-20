@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-reserved-l019",
+  "sceneId": "s04_reserved",
+  "lineId": "s04_reserved_l019",
+  "lineIndex": 18,
+  "speaker": "p",
+  "text": "那我只答应能做到的。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1682367395,
+  "textSha256": "bd1bf11fcf50b0185d4a65e93e6df197254209ed706b5d701b4e575ab17a2523",
+  "medium": "spoken",
+  "requestSha256": "6ad98b547ee0de83a75b947c536097e285cf1e074d56e857facb374edec0133e",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "那我只答应能做到的",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.52,
+  "wallSeconds": 7.455,
+  "loudness": {
+    "input_i": "-24.34",
+    "input_tp": "-8.81",
+    "input_lra": "0.00",
+    "input_thresh": "-34.34",
+    "output_i": "-20.02",
+    "output_tp": "-4.47",
+    "output_lra": "0.00",
+    "output_thresh": "-30.02",
+    "normalization_type": "linear",
+    "target_offset": "0.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-reserved-l019/raw.wav",
+      "bytes": 146000,
+      "sha256": "290f847622e37f9e7684d132b5eea6c4e9c1fdfc458402feb31083c665aacb51"
+    },
+    "master": {
+      "path": "rain-s04-reserved-l019/master.wav",
+      "bytes": 73038,
+      "sha256": "ad389cb10f4c359f05d418260aff3b1128c106e94f768471af1c8e7d3fc2f800"
+    },
+    "runtime": {
+      "path": "rain-s04-reserved-l019/runtime.ogg",
+      "bytes": 14947,
+      "sha256": "b1a120f0825c641fabdb9441bcb7f864380eef53b2336e64fc2f3b4e55b61f21"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-business-l001",
+  "sceneId": "s02_business",
+  "lineId": "s02_business_l001",
+  "lineIndex": 0,
+  "speaker": "p",
+  "text": "出口那边还要登记吗？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1646324930,
+  "textSha256": "ca6be5fb98a01f5dc9aa65b06a02d4f89ebbbb7f8496d87e2b2956632514a0d4",
+  "medium": "spoken",
+  "requestSha256": "2c65b09a86b7cebc083604b72da636c4a7606508525137931acd5ca41a3f4e09",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "出口那边还有登记吗",
+    "cer": 0.111111,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.92,
+  "wallSeconds": 134.551,
+  "loudness": {
+    "input_i": "-25.32",
+    "input_tp": "-8.01",
+    "input_lra": "0.00",
+    "input_thresh": "-35.32",
+    "output_i": "-20.00",
+    "output_tp": "-2.69",
+    "output_lra": "0.00",
+    "output_thresh": "-30.00",
+    "normalization_type": "linear",
+    "target_offset": "-0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-business-l001/raw.wav",
+      "bytes": 184400,
+      "sha256": "5f026041b1d71bf6d409b114b2d958a323c3c1805b2e7b7ae97bce74064d622a"
+    },
+    "master": {
+      "path": "rain-s02-business-l001/master.wav",
+      "bytes": 92238,
+      "sha256": "c153db27025f0c648f05aefd4fefac47398455bc9bf6ab9db324f4781d649835"
+    },
+    "runtime": {
+      "path": "rain-s02-business-l001/runtime.ogg",
+      "bytes": 17617,
+      "sha256": "0c6583ad7c280ecc89d0a27838a2f733b60c87e92424c79d11bc71350afcb287"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

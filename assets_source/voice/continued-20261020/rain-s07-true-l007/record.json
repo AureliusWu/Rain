@@ -1,0 +1,55 @@
+{
+  "id": "rain-s07-true-l007",
+  "sceneId": "s07_true",
+  "lineId": "s07_true_l007",
+  "lineIndex": 11,
+  "speaker": "p",
+  "text": "回去把箱子放好，我再写一封。写好先问你，寄到哪儿。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 270106546,
+  "textSha256": "d63548200a4b26e1c7f755d0a1ead124575e8277fc350695324a70779ab4067c",
+  "medium": "spoken",
+  "requestSha256": "0494fb87bd233f7b9d3a24f198ec00c9670427dc2d2c00b172999f42fed9ba18",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "回去把箱子放好我再写一封写好先问你寄到哪儿",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 5.28,
+  "wallSeconds": 254.511,
+  "loudness": {
+    "input_i": "-24.06",
+    "input_tp": "-6.76",
+    "input_lra": "1.20",
+    "input_thresh": "-34.29",
+    "output_i": "-20.13",
+    "output_tp": "-3.11",
+    "output_lra": "1.00",
+    "output_thresh": "-30.39",
+    "normalization_type": "dynamic",
+    "target_offset": "0.13"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s07-true-l007/raw.wav",
+      "bytes": 506960,
+      "sha256": "f911379a3fb1de6bf29d1c0b322fe1765661708d1327ece99cc3858ecc8f63a6"
+    },
+    "master": {
+      "path": "rain-s07-true-l007/master.wav",
+      "bytes": 253518,
+      "sha256": "651e411d6188f8fcabf2e41270e39d95b3720c0f84838ca5d424f018b1260f30"
+    },
+    "runtime": {
+      "path": "rain-s07-true-l007/runtime.ogg",
+      "bytes": 44351,
+      "sha256": "f802a703518e9c28f1ab18dcd518eff0effc6c33d64c4281bbc9386532497d99"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

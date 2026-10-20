@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-reunion-l007",
+  "sceneId": "s02_reunion",
+  "lineId": "s02_reunion_l007",
+  "lineIndex": 6,
+  "speaker": "p",
+  "text": "那时我说，这叫构图。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1175456734,
+  "textSha256": "d760537a9111f44e0dce6b6ba4e949f13964d14b5aac89007c9f90f162723169",
+  "medium": "spoken",
+  "requestSha256": "c6e11b4f204717bfb60f0a369940ff087dc14187c733fa002f3f7b07744321e6",
+  "attempt": 1,
+  "status": "accepted",
+  "asr": {
+    "transcript": "那时我说这叫构图",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.24,
+  "wallSeconds": 121.135,
+  "loudness": {
+    "input_i": "-24.05",
+    "input_tp": "-7.40",
+    "input_lra": "0.00",
+    "input_thresh": "-34.05",
+    "output_i": "-20.01",
+    "output_tp": "-3.35",
+    "output_lra": "0.00",
+    "output_thresh": "-30.01",
+    "normalization_type": "linear",
+    "target_offset": "0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-reunion-l007/raw.wav",
+      "bytes": 215120,
+      "sha256": "39733e52fc62fd9e87148812aab4193d9cc4fb8ee423585bcc7f3b14493f182d"
+    },
+    "master": {
+      "path": "rain-s02-reunion-l007/master.wav",
+      "bytes": 107598,
+      "sha256": "4c28e563d0376c20736c618f1d46efa0804ace696c7f045fe786e1c0b3ab4be4"
+    },
+    "runtime": {
+      "path": "rain-s02-reunion-l007/runtime.ogg",
+      "bytes": 20131,
+      "sha256": "9ee3b7ef45e9dbf08d4af22a704044cd2ae2a43cb339b8c4fa145440ce87d76a"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

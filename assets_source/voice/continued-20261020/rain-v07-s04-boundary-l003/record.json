@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s04-boundary-l003",
+  "sceneId": "s04_boundary",
+  "lineId": "v07_s04_boundary_l003",
+  "lineIndex": 6,
+  "speaker": "p",
+  "text": "如果你今晚不想听，也可以直接说。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1844544856,
+  "textSha256": "8aef63bace78c509c45faf26e1ccb26e6b74208c70eb15e679b93a2150d87e68",
+  "medium": "spoken",
+  "requestSha256": "684100661485cbcfbe0b0578db2a4ea01957316e90040433edaee20dd4f60ede",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "如果你今晚不想听也可以直接说",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.72,
+  "wallSeconds": 150.576,
+  "loudness": {
+    "input_i": "-28.85",
+    "input_tp": "-11.31",
+    "input_lra": "0.00",
+    "input_thresh": "-38.85",
+    "output_i": "-20.00",
+    "output_tp": "-2.46",
+    "output_lra": "0.00",
+    "output_thresh": "-30.00",
+    "normalization_type": "linear",
+    "target_offset": "-0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s04-boundary-l003/raw.wav",
+      "bytes": 261200,
+      "sha256": "ae30f28a4bf25efdbe31daa341b5f2c5774e6b7eebfb41fe4ffb4f045b819782"
+    },
+    "master": {
+      "path": "rain-v07-s04-boundary-l003/master.wav",
+      "bytes": 130638,
+      "sha256": "68b98cbfb17a6f028e607887404657bbb891bb90d32b415f3b62cc843f6b7a16"
+    },
+    "runtime": {
+      "path": "rain-v07-s04-boundary-l003/runtime.ogg",
+      "bytes": 24666,
+      "sha256": "41643a51662264013bd438c5c1e71c728869df764bd460ab529652411f5cc588"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

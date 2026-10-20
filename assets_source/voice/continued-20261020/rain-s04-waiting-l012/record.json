@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-waiting-l012",
+  "sceneId": "s04_waiting",
+  "lineId": "s04_waiting_l012",
+  "lineIndex": 11,
+  "speaker": "p",
+  "text": "我也不想你那样等。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1057349876,
+  "textSha256": "593b6e600d4f50bfa173d81d4e0de12ba2f5d006525ccb9c5cbfba57acd1dd21",
+  "medium": "spoken",
+  "requestSha256": "802389eda7093956790a4aff5d561d549e58c02191634a58c7d44a3c05fd0997",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我也不想你那樣倒",
+    "cer": 0.125,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.52,
+  "wallSeconds": 7.439,
+  "loudness": {
+    "input_i": "-24.15",
+    "input_tp": "-6.60",
+    "input_lra": "0.00",
+    "input_thresh": "-34.15",
+    "output_i": "-19.98",
+    "output_tp": "-2.45",
+    "output_lra": "0.00",
+    "output_thresh": "-29.98",
+    "normalization_type": "linear",
+    "target_offset": "-0.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-waiting-l012/raw.wav",
+      "bytes": 146000,
+      "sha256": "77c51516c267f1ebbd9696af81ccf30bb95c11913b1aca40374915f6a7f630f2"
+    },
+    "master": {
+      "path": "rain-s04-waiting-l012/master.wav",
+      "bytes": 73038,
+      "sha256": "0074a86d04916baeabb648c166dcccf53de29667e389993529bb5c2162de5aa7"
+    },
+    "runtime": {
+      "path": "rain-s04-waiting-l012/runtime.ogg",
+      "bytes": 15907,
+      "sha256": "9374bb796d4daf4318e72543b39e6d39b3022cf47a9c87a04b9b74bc0d3bdfd3"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

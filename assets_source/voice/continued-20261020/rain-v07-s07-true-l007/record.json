@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s07-true-l007",
+  "sceneId": "s07_true",
+  "lineId": "v07_s07_true_l007",
+  "lineIndex": 21,
+  "speaker": "h",
+  "text": "先告诉我哪天有空。没空就说没空。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1150505256,
+  "textSha256": "18e7cbe5ed33f9f466ec9a78e9951901bc835f8619526224e8f65501d2657bba",
+  "medium": "spoken",
+  "requestSha256": "6a5af1f2373601d8671cad66fd9435fce1ffddac31a6ee1ced720205d199c622",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "先告訴我哪天有空 沒空就說沒空",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.96,
+  "wallSeconds": 13.26,
+  "loudness": {
+    "input_i": "-28.34",
+    "input_tp": "-14.23",
+    "input_lra": "0.00",
+    "input_thresh": "-38.34",
+    "output_i": "-20.00",
+    "output_tp": "-5.90",
+    "output_lra": "0.00",
+    "output_thresh": "-30.00",
+    "normalization_type": "linear",
+    "target_offset": "0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s07-true-l007/raw.wav",
+      "bytes": 284240,
+      "sha256": "502d3724fe2c25940e1b444d5be9501f62d4c615f793e6655a3367cef16d1d05"
+    },
+    "master": {
+      "path": "rain-v07-s07-true-l007/master.wav",
+      "bytes": 142158,
+      "sha256": "ae473def5cd0e41d5caad6ac16f66da4fd1db9ad8922384e8934fb96c1c9f530"
+    },
+    "runtime": {
+      "path": "rain-v07-s07-true-l007/runtime.ogg",
+      "bytes": 25261,
+      "sha256": "42397b9b79d6416f7bd3d06aadcbffd17dc6fbbba73282ae00f1566481eec567"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

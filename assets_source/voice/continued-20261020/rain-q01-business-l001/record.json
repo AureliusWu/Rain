@@ -1,0 +1,56 @@
+{
+  "id": "rain-q01-business-l001",
+  "sceneId": "s02_reunion",
+  "lineId": "q01_business_l001",
+  "lineIndex": 0,
+  "speaker": "p",
+  "text": "那我先确认一下，东西今晚能拿走吗？",
+  "choiceId": "q01_business",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 853082980,
+  "textSha256": "03beef4311fd1234bae908a0ccc1aa7a868d04f0b71104d13db5002d4414b2d4",
+  "medium": "spoken",
+  "requestSha256": "61c9e010a8d119bbe3ebe5e66d061591154eb75a1bdb7588751e6bbf5949a52d",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "那我先确认一下东西今晚能拿走吗",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.88,
+  "wallSeconds": 13.232,
+  "loudness": {
+    "input_i": "-25.06",
+    "input_tp": "-9.79",
+    "input_lra": "0.00",
+    "input_thresh": "-35.59",
+    "output_i": "-20.01",
+    "output_tp": "-4.73",
+    "output_lra": "0.00",
+    "output_thresh": "-30.54",
+    "normalization_type": "linear",
+    "target_offset": "0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-q01-business-l001/raw.wav",
+      "bytes": 276560,
+      "sha256": "723d1c24fac9242d1fb5e9c5d1963ac3811969afbfc76bb426ba5f14fece4f9a"
+    },
+    "master": {
+      "path": "rain-q01-business-l001/master.wav",
+      "bytes": 138318,
+      "sha256": "9ab1890bbe77282b2b9a4de631791e96f5acc3d70280d3a965db3ba0e26ce39f"
+    },
+    "runtime": {
+      "path": "rain-q01-business-l001/runtime.ogg",
+      "bytes": 24566,
+      "sha256": "894f31f525e223f0aaa9f0cf697d9902741ef5cb3fc1481e7a9b96a6198b30c1"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

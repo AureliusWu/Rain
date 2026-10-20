@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-concrete-l002",
+  "sceneId": "s04_concrete",
+  "lineId": "s04_concrete_l002",
+  "lineIndex": 1,
+  "speaker": "h",
+  "text": "可以。我四点不一定看得到，忙完了会回。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1556421013,
+  "textSha256": "798e421ac52c80c2e134edfe4455cd991fdbc66d3b4b200df9c0a3950d62d70a",
+  "medium": "spoken",
+  "requestSha256": "7d56c287ebbe7068dd53469782c54279012bef51c5bf10605bf928a961709f58",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "可以 我4点不一定看得到 忙完了会回",
+    "cer": 0.0625,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.76,
+  "wallSeconds": 165.206,
+  "loudness": {
+    "input_i": "-25.34",
+    "input_tp": "-9.56",
+    "input_lra": "0.40",
+    "input_thresh": "-35.77",
+    "output_i": "-19.14",
+    "output_tp": "-3.45",
+    "output_lra": "0.00",
+    "output_thresh": "-29.56",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.86"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-concrete-l002/raw.wav",
+      "bytes": 361040,
+      "sha256": "aa69481d0cccf7fa6e913e474200096bc2a67e94304b4fa4801117ff14ecfea6"
+    },
+    "master": {
+      "path": "rain-s04-concrete-l002/master.wav",
+      "bytes": 180558,
+      "sha256": "130e0a336bea927df3e56f24251237d7ba919dd8b01400d1fc95912e0c6e1a03"
+    },
+    "runtime": {
+      "path": "rain-s04-concrete-l002/runtime.ogg",
+      "bytes": 30096,
+      "sha256": "25c239c837acf99dbb31ffafc77e458f61b304a61d8c58e381c20e9e4f937a60"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

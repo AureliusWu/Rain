@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "project": "Rain",
+  "sourceRun": 39436530718,
+  "semanticSha256": "43ef805dc1a881d5fc4736841c0ebee358707ee7db17982ece91fb23437104dd",
+  "target": 306,
+  "accepted": 301,
+  "pendingCount": 5,
+  "pending": [
+    {
+      "id": "rain-s01-arrival-l007",
+      "text": "许澄？",
+      "status": "needs_review",
+      "asr": {
+        "transcript": "续成",
+        "cer": 1.0,
+        "polarityCountsMatch": true,
+        "passed": false
+      },
+      "error": null
+    },
+    {
+      "id": "rain-s02-business-l013",
+      "text": "姓名、柜号、件数……就这些？",
+      "status": "needs_review",
+      "asr": {
+        "transcript": "姓娘,贵号,建书就这些",
+        "cer": 0.444444,
+        "polarityCountsMatch": true,
+        "passed": false
+      },
+      "error": null
+    },
+    {
+      "id": "rain-s04-waiting-l015",
+      "text": "你说得对。",
+      "status": "needs_review",
+      "asr": {
+        "transcript": "你说的对",
+        "cer": 0.25,
+        "polarityCountsMatch": true,
+        "passed": false
+      },
+      "error": null
+    },
+    {
+      "id": "rain-v07-s05-departure-l003",
+      "text": "晾干还能装书。下次不用它挡雨了。",
+      "status": "needs_review",
+      "asr": {
+        "transcript": "量杆还能装梳下次不用它当雨了",
+        "cer": 0.285714,
+        "polarityCountsMatch": true,
+        "passed": false
+      },
+      "error": null
+    },
+    {
+      "id": "rain-q03-walk-l001",
+      "text": "好。纸箱我提着，伞可以借我拿吗？",
+      "status": "needs_review",
+      "asr": {
+        "transcript": "好,只想我提着,散可以借我拿吗?",
+        "cer": 0.230769,
+        "polarityCountsMatch": true,
+        "passed": false
+      },
+      "error": null
+    }
+  ],
+  "status": "recovered_verified_takes",
+  "archive": "assets_source/voice/continued-20261020",
+  "humanListening": false,
+  "runtimeIntegration": "pending",
+  "release": "not_published"
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s05-departure-l004",
+  "sceneId": "s05_departure",
+  "lineId": "v07_s05_departure_l004",
+  "lineIndex": 4,
+  "speaker": "h",
+  "text": "那就带着。书别再装进去。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 584885477,
+  "textSha256": "aa9c36a10e77c75aa4662e03cd72b78b62d90eb979594d205d2941ea1f473a96",
+  "medium": "spoken",
+  "requestSha256": "7cb0a5a7e0fc22133d6437dff75bc8423eb873ac8bb3472a9ea9ac06a339bb22",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "那就戴着书别再装进去",
+    "cer": 0.1,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.96,
+  "wallSeconds": 120.548,
+  "loudness": {
+    "input_i": "-24.16",
+    "input_tp": "-8.74",
+    "input_lra": "0.00",
+    "input_thresh": "-34.71",
+    "output_i": "-20.00",
+    "output_tp": "-4.59",
+    "output_lra": "0.00",
+    "output_thresh": "-30.55",
+    "normalization_type": "linear",
+    "target_offset": "-0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s05-departure-l004/raw.wav",
+      "bytes": 284240,
+      "sha256": "4887589fd75bd27d1464cd632b20f4d8eedcf101a6366aa211ed28b932eeb209"
+    },
+    "master": {
+      "path": "rain-v07-s05-departure-l004/master.wav",
+      "bytes": 142158,
+      "sha256": "c9acc031246c99fd37755863ffbcc71c155e40710be8f63eb913addaba4d973b"
+    },
+    "runtime": {
+      "path": "rain-v07-s05-departure-l004/runtime.ogg",
+      "bytes": 24442,
+      "sha256": "10a65015616627f9018a83ed501205eb09d53259f6ddd185fdc4569a3b34d29a"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

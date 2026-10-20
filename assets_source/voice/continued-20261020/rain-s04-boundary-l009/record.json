@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-boundary-l009",
+  "sceneId": "s04_boundary",
+  "lineId": "s04_boundary_l009",
+  "lineIndex": 15,
+  "speaker": "p",
+  "text": "那今晚可以再听一点吗？不是要你马上答应什么。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1382524487,
+  "textSha256": "015b8a9e8149b8656cacb9d16ee93e506bc5fa2ffff45824327475ed5d3fd04e",
+  "medium": "spoken",
+  "requestSha256": "6e428695fd2402bb16d623d38407c9ea47d42da7fded7ffed76aef8abb5b7a0c",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "那今晚可以再听一点吗不是要你马上答应什么",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.6,
+  "wallSeconds": 34.09,
+  "loudness": {
+    "input_i": "-25.33",
+    "input_tp": "-5.02",
+    "input_lra": "0.30",
+    "input_thresh": "-35.73",
+    "output_i": "-19.84",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.09",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.16"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-boundary-l009/raw.wav",
+      "bytes": 345680,
+      "sha256": "089a5a9ee4f12609d2b332823e4431bf5e6b5f7190a5921272eecf4b59ffa404"
+    },
+    "master": {
+      "path": "rain-s04-boundary-l009/master.wav",
+      "bytes": 172878,
+      "sha256": "e0a2a48015bec5297c2e2be631e0ababfddcef329980d31cb147ef0adcbe295b"
+    },
+    "runtime": {
+      "path": "rain-s04-boundary-l009/runtime.ogg",
+      "bytes": 31344,
+      "sha256": "3462b0b5790cc7adaf70328ec6c448d83d8634e2439a09c13561de4fa3defa72"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

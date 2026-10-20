@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-honest-l004",
+  "sceneId": "s03_honest",
+  "lineId": "s03_honest_l004",
+  "lineIndex": 3,
+  "speaker": "p",
+  "text": "我会重新说。你也不用今天就给我答复。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1373782668,
+  "textSha256": "a25c391c039046edd484f5914660b88c0baabc384b5a7d87ccbdafef55c62f2f",
+  "medium": "spoken",
+  "requestSha256": "1df0af9bfec0223fc657364c4baa26554a6f3a4780c1ea768b00f63c7e8f64b0",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我會重新說你也不用今天就給我答覆",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.6,
+  "wallSeconds": 124.067,
+  "loudness": {
+    "input_i": "-25.14",
+    "input_tp": "-8.04",
+    "input_lra": "0.80",
+    "input_thresh": "-35.43",
+    "output_i": "-19.71",
+    "output_tp": "-2.90",
+    "output_lra": "0.00",
+    "output_thresh": "-29.98",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.29"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-honest-l004/raw.wav",
+      "bytes": 345680,
+      "sha256": "c9418aeadd029092fd42c09c4c2ff9c44005118d99f85c5026f304b72d6c6db0"
+    },
+    "master": {
+      "path": "rain-s03-honest-l004/master.wav",
+      "bytes": 172878,
+      "sha256": "0c7d1a38d58e7ef164e7f650302a70e4ff7f64cef4c628a20a071c5c5a6f1b1b"
+    },
+    "runtime": {
+      "path": "rain-s03-honest-l004/runtime.ogg",
+      "bytes": 29928,
+      "sha256": "688a102ed12dc7e3f2c5b36d8e73c48936a1035788346077de7a2fcda13162c7"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

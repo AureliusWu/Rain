@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-honest-l015",
+  "sceneId": "s03_honest",
+  "lineId": "s03_honest_l015",
+  "lineIndex": 14,
+  "speaker": "p",
+  "text": "后来住处和工作都稳定了。我还是没联系。那部分已经不能怪报到时间。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 414147570,
+  "textSha256": "e048aa98fe87b12b1c69645ce60959d681e43694d05c77a035e1d79e46ff47a4",
+  "medium": "spoken",
+  "requestSha256": "275291c8daf4c6ef424a81a57dc916173c133d07a02e39142fe692bada978fb2",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "后来住处和工作都稳定了我还是没联系那部分已经不能怪报到时间",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 6.8,
+  "wallSeconds": 317.024,
+  "loudness": {
+    "input_i": "-26.25",
+    "input_tp": "-6.76",
+    "input_lra": "2.30",
+    "input_thresh": "-36.78",
+    "output_i": "-20.53",
+    "output_tp": "-2.00",
+    "output_lra": "2.20",
+    "output_thresh": "-31.01",
+    "normalization_type": "dynamic",
+    "target_offset": "0.53"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-honest-l015/raw.wav",
+      "bytes": 652880,
+      "sha256": "cb8c9c9ff6f720a017d1fb390ee842487d2b28d8307d4457ef9e79b7b7a6bbe1"
+    },
+    "master": {
+      "path": "rain-s03-honest-l015/master.wav",
+      "bytes": 326478,
+      "sha256": "44b9b89fa2272dde8fad1f1e6500c7c1c40d36167dd38769c012060be178d7b8"
+    },
+    "runtime": {
+      "path": "rain-s03-honest-l015/runtime.ogg",
+      "bytes": 54232,
+      "sha256": "a086b9f64b0d54f3b8d5365af7980cb8a8c99a9c2188953519ebcb3b8113871b"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

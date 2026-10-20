@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-waiting-l040",
+  "sceneId": "s04_waiting",
+  "lineId": "s04_waiting_l040",
+  "lineIndex": 40,
+  "speaker": "p",
+  "text": "那张没给我的照片，你现在还想留着吗？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1001215045,
+  "textSha256": "e8e6378aa3258d7e667e7d503caea2bdd78a0a74a82fcd63d619e0efd3a3a669",
+  "medium": "spoken",
+  "requestSha256": "8211191a89d8a86125679e052e3aceedc7c976ccbaefea68fd7fcf805f9abb78",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "那张没给我的照片你现在还想留着吗",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.12,
+  "wallSeconds": 138.02,
+  "loudness": {
+    "input_i": "-22.19",
+    "input_tp": "-4.99",
+    "input_lra": "0.70",
+    "input_thresh": "-32.19",
+    "output_i": "-20.12",
+    "output_tp": "-3.09",
+    "output_lra": "0.00",
+    "output_thresh": "-30.12",
+    "normalization_type": "dynamic",
+    "target_offset": "0.12"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-waiting-l040/raw.wav",
+      "bytes": 299600,
+      "sha256": "0d0944bb2ea9d93b83dc09fc18a4dbf5897ea36591f8adaa19c3ada0d9124957"
+    },
+    "master": {
+      "path": "rain-s04-waiting-l040/master.wav",
+      "bytes": 149838,
+      "sha256": "c692d6f3a95ba9981d6673710de29e2c87abdc23d1e9e99d20ede772ab89b540"
+    },
+    "runtime": {
+      "path": "rain-s04-waiting-l040/runtime.ogg",
+      "bytes": 27484,
+      "sha256": "14fa1987cc3d91317d33333ca9ed4289a1073325be080563f5d52afd704b200d"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-s01-platform-l023",
+  "sceneId": "s01_platform",
+  "lineId": "s01_platform_l023",
+  "lineIndex": 22,
+  "speaker": "h",
+  "text": "照片是站务下午从旧库房找出来的。里面还有几张展签。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 565315843,
+  "textSha256": "b3486b6d459c609860a311eb5e39a4a30c56e5d2e57af64370201e9dac0b78e5",
+  "medium": "spoken",
+  "requestSha256": "ac89d5f70df990be4e9587f275b2846a720b6917aa3f142bdc8860c88306da1f",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "照片是账户下午从旧库房找出来的里面还有几张展签",
+    "cer": 0.086957,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.64,
+  "wallSeconds": 238.516,
+  "loudness": {
+    "input_i": "-24.98",
+    "input_tp": "-7.42",
+    "input_lra": "2.20",
+    "input_thresh": "-35.36",
+    "output_i": "-20.18",
+    "output_tp": "-3.17",
+    "output_lra": "1.50",
+    "output_thresh": "-30.59",
+    "normalization_type": "dynamic",
+    "target_offset": "0.18"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s01-platform-l023/raw.wav",
+      "bytes": 445520,
+      "sha256": "b18d0463162207c59d29a65001189aec49093b797026feb5595b28d3a1374d64"
+    },
+    "master": {
+      "path": "rain-s01-platform-l023/master.wav",
+      "bytes": 222798,
+      "sha256": "fee2aaff76d639c8846e4b0fd1a4005aca56051153e67eed8630df4996a9d7ff"
+    },
+    "runtime": {
+      "path": "rain-s01-platform-l023/runtime.ogg",
+      "bytes": 37836,
+      "sha256": "ee8ed3ed529c38ebd6b8ad44813baeb52ee60dbdb246daa65fade5e319341844"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

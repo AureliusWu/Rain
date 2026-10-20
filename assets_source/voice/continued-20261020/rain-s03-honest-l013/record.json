@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-honest-l013",
+  "sceneId": "s03_honest",
+  "lineId": "s03_honest_l013",
+  "lineIndex": 12,
+  "speaker": "h",
+  "text": "不替我决定，和什么都不告诉我，是两回事。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1537023568,
+  "textSha256": "a3ac92810a3cc99a83fc5a76b46dc89cf039e4757ec892786b655d029314f577",
+  "medium": "spoken",
+  "requestSha256": "05e323e24bc7152514bc24861cd896381bb52a6c2101f010dfa033827485d5d7",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "不替我決定喝什麼都不告訴我是兩回事",
+    "cer": 0.058824,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.96,
+  "wallSeconds": 13.551,
+  "loudness": {
+    "input_i": "-23.43",
+    "input_tp": "-7.53",
+    "input_lra": "0.00",
+    "input_thresh": "-33.43",
+    "output_i": "-20.00",
+    "output_tp": "-4.10",
+    "output_lra": "0.00",
+    "output_thresh": "-30.00",
+    "normalization_type": "linear",
+    "target_offset": "0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-honest-l013/raw.wav",
+      "bytes": 284240,
+      "sha256": "6f6a3e705cf17db1b962daa818f741ed1406ed8199f5369886af77d9f412d650"
+    },
+    "master": {
+      "path": "rain-s03-honest-l013/master.wav",
+      "bytes": 142158,
+      "sha256": "07dd7c0a2bc26a4dd131e8c21dcc126200ac18a86aff77a605c116b6857f5015"
+    },
+    "runtime": {
+      "path": "rain-s03-honest-l013/runtime.ogg",
+      "bytes": 25084,
+      "sha256": "4142f02d42c9d6f35ce46ac06f216169f70964a746770f23a1970b5eb58570bd"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s04-concrete-l001",
+  "sceneId": "s04_concrete",
+  "lineId": "v07_s04_concrete_l001",
+  "lineIndex": 3,
+  "speaker": "h",
+  "text": "我没看消息的时候，你照常吃饭。回了也不用马上答。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1841243575,
+  "textSha256": "293139a7bc3a033cc65c69d7c461e30e05481c6e5aa981dd867707633f607e8a",
+  "medium": "spoken",
+  "requestSha256": "e683067c5768d134f743b699b4980b7fa441493598d224fef9d90ee9f859ab2e",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我没看消息的时候,你照常吃饭回了也不用马上打",
+    "cer": 0.047619,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.64,
+  "wallSeconds": 20.16,
+  "loudness": {
+    "input_i": "-22.37",
+    "input_tp": "-6.83",
+    "input_lra": "1.20",
+    "input_thresh": "-32.74",
+    "output_i": "-18.49",
+    "output_tp": "-3.04",
+    "output_lra": "1.10",
+    "output_thresh": "-28.90",
+    "normalization_type": "dynamic",
+    "target_offset": "-1.51"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s04-concrete-l001/raw.wav",
+      "bytes": 445520,
+      "sha256": "a5efa3275b94183d89cb08bee0975f654cab8e0a99d3a6e2e977d2ee2c9d194d"
+    },
+    "master": {
+      "path": "rain-v07-s04-concrete-l001/master.wav",
+      "bytes": 222798,
+      "sha256": "a69920306a0547e3d5598e7522c59742880c4b20dca649891acb94b5ebebd91b"
+    },
+    "runtime": {
+      "path": "rain-v07-s04-concrete-l001/runtime.ogg",
+      "bytes": 36910,
+      "sha256": "26f341d5a28848d39fca117063da536539bbcbf6d60518b31c8a73d560811dd5"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s05-departure-l002",
+  "sceneId": "s05_departure",
+  "lineId": "v07_s05_departure_l002",
+  "lineIndex": 2,
+  "speaker": "h",
+  "text": "那只袋子还要带？",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 487064300,
+  "textSha256": "12fd1abe1656afce9dcd687be97df5f9135c76ac3e65fd21d01fcfa32a0373ea",
+  "medium": "spoken",
+  "requestSha256": "9e3e7e2924ce5442e957aa9c10a0dd6d929a843001deef64ea06a7a078ea05ae",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "那只袋子还要带",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.16,
+  "wallSeconds": 22.513,
+  "loudness": {
+    "input_i": "-25.27",
+    "input_tp": "-8.62",
+    "input_lra": "0.00",
+    "input_thresh": "-35.27",
+    "output_i": "-20.01",
+    "output_tp": "-3.35",
+    "output_lra": "0.00",
+    "output_thresh": "-30.01",
+    "normalization_type": "linear",
+    "target_offset": "0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s05-departure-l002/raw.wav",
+      "bytes": 207440,
+      "sha256": "6810c3ee38d87ea2de2bffc69fb5614f9c048fa67dfe8303f321f7f242717d8a"
+    },
+    "master": {
+      "path": "rain-v07-s05-departure-l002/master.wav",
+      "bytes": 103758,
+      "sha256": "3d7b76fe0f51f0722148719f27506545583c361b78bac311a9b41a853d395a70"
+    },
+    "runtime": {
+      "path": "rain-v07-s05-departure-l002/runtime.ogg",
+      "bytes": 18560,
+      "sha256": "1538323749f4bae12bfdab154940305ad561b851eb1f6b1ed0f581462799420a"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

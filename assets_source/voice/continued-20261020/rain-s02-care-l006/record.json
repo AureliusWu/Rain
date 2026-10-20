@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-care-l006",
+  "sceneId": "s02_care",
+  "lineId": "s02_care_l006",
+  "lineIndex": 5,
+  "speaker": "p",
+  "text": "听起来现在省心一些。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1265430770,
+  "textSha256": "3ed1860431c8f4db9409ffb6fe75104ba1d4238e9c57b1e6228430f6d85d6811",
+  "medium": "spoken",
+  "requestSha256": "f6b73688f1ef3b00830dfd3e06fc02b8a06f445e2ab11c762985a6a23e72d59f",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "听起来现在省心一些",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.68,
+  "wallSeconds": 66.693,
+  "loudness": {
+    "input_i": "-25.27",
+    "input_tp": "-6.97",
+    "input_lra": "0.00",
+    "input_thresh": "-35.27",
+    "output_i": "-20.28",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.28",
+    "normalization_type": "linear",
+    "target_offset": "0.28"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-care-l006/raw.wav",
+      "bytes": 161360,
+      "sha256": "dc1a924bc4dc2bd6aa2586998c508ca32d6774fd818e79587b588cb1b45ca1c8"
+    },
+    "master": {
+      "path": "rain-s02-care-l006/master.wav",
+      "bytes": 80718,
+      "sha256": "d65b196853b1c2c9f98227d1090eff1cda02d4feebed2aabd68f761c2c4165c8"
+    },
+    "runtime": {
+      "path": "rain-s02-care-l006/runtime.ogg",
+      "bytes": 16530,
+      "sha256": "cb0d37a31584e5a9ea087cf0663872e200ba552d6c0f7a5ba6436dce0db2d760"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

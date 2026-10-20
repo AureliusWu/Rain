@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-waiting-l009",
+  "sceneId": "s04_waiting",
+  "lineId": "s04_waiting_l009",
+  "lineIndex": 8,
+  "speaker": "h",
+  "text": "那是我自己也在里面的一张照片。当然要留。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1552223031,
+  "textSha256": "79f6d48cbc69f2c6850f6518e3785ae5cb9cc352bf82bb53c85019169195c875",
+  "medium": "spoken",
+  "requestSha256": "1ecf2d0f172a9811dfc7d24aafc7426528ed5586eebf12d988518a43e309fac5",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "那是我自己也在裡面的一張照片,當然要留",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.68,
+  "wallSeconds": 208.497,
+  "loudness": {
+    "input_i": "-23.11",
+    "input_tp": "-7.93",
+    "input_lra": "1.10",
+    "input_thresh": "-33.26",
+    "output_i": "-19.29",
+    "output_tp": "-4.59",
+    "output_lra": "0.00",
+    "output_thresh": "-29.44",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.71"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-waiting-l009/raw.wav",
+      "bytes": 353360,
+      "sha256": "aada406a653db6dde0d9d17500f27f8e457cc1437f858acf51ff08e6148700e7"
+    },
+    "master": {
+      "path": "rain-s04-waiting-l009/master.wav",
+      "bytes": 176718,
+      "sha256": "ddf99252315faec9200182719aa123fdba74ce6aa5877b18bc05e9f1f30dba69"
+    },
+    "runtime": {
+      "path": "rain-s04-waiting-l009/runtime.ogg",
+      "bytes": 28931,
+      "sha256": "d20a0fba64aade20149a063668dfcefa4d084aa04152d682cf58e73a81c9434a"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

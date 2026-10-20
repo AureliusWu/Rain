@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-business-l005",
+  "sceneId": "s02_business",
+  "lineId": "s02_business_l005",
+  "lineIndex": 4,
+  "speaker": "h",
+  "text": "我已经签好了。怕下雨，就在这里整理。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 554978234,
+  "textSha256": "2a355edb087600ab7f32547ce794927fddc919236b74ec9d8889d12fe2d5f675",
+  "medium": "spoken",
+  "requestSha256": "b84d8620896754d342038c9305aa477507cff75137ec204a3415ae989fc56403",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我已經切好了,它下雨就在這裡整理。",
+    "cer": 0.133333,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.04,
+  "wallSeconds": 28.54,
+  "loudness": {
+    "input_i": "-26.81",
+    "input_tp": "-12.39",
+    "input_lra": "0.20",
+    "input_thresh": "-37.13",
+    "output_i": "-19.56",
+    "output_tp": "-5.19",
+    "output_lra": "0.00",
+    "output_thresh": "-29.89",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.44"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-business-l005/raw.wav",
+      "bytes": 291920,
+      "sha256": "d6ee334f2740773876ec441d58f5339b0d8ea64bdb5291cd1bad7c28bbf7ee59"
+    },
+    "master": {
+      "path": "rain-s02-business-l005/master.wav",
+      "bytes": 145998,
+      "sha256": "ec1de44d26503555933f0b405c257a7380c2ab160bf3dad4fd0ded958fc80634"
+    },
+    "runtime": {
+      "path": "rain-s02-business-l005/runtime.ogg",
+      "bytes": 25306,
+      "sha256": "36e1117ca1318872482d414ef785630e5d720598a807ea75bce11ce71c669627"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

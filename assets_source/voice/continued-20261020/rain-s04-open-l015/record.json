@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-open-l015",
+  "sceneId": "s04_open",
+  "lineId": "s04_open_l015",
+  "lineIndex": 14,
+  "speaker": "h",
+  "text": "聊天不一定有“做完”。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 167291020,
+  "textSha256": "422c90189b53784ffc504dea89b97c9a3de0363a324937aae657f6904a4b4f1f",
+  "medium": "spoken",
+  "requestSha256": "7fa82986b6a342615243aee6ab898b37e20d6bcc1d0f199d5a43c3d0b77312a6",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "聊天不一定有做完。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.68,
+  "wallSeconds": 61.757,
+  "loudness": {
+    "input_i": "-23.28",
+    "input_tp": "-9.15",
+    "input_lra": "0.00",
+    "input_thresh": "-33.28",
+    "output_i": "-20.00",
+    "output_tp": "-5.87",
+    "output_lra": "0.00",
+    "output_thresh": "-30.00",
+    "normalization_type": "linear",
+    "target_offset": "0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-open-l015/raw.wav",
+      "bytes": 161360,
+      "sha256": "2f42704af4e83d143f84ea7dd67ad903c296f220175f1e59fce191ac8b0ef4f6"
+    },
+    "master": {
+      "path": "rain-s04-open-l015/master.wav",
+      "bytes": 80718,
+      "sha256": "7da03bbece6ff28eebaa8bd5519961353954fa321445a63954c77b8836ebf00f"
+    },
+    "runtime": {
+      "path": "rain-s04-open-l015/runtime.ogg",
+      "bytes": 15557,
+      "sha256": "a84e54754f8100f46da83a25b0a72937aa9352aa5a47b98de271958b431825f3"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

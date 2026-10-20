@@ -1,0 +1,56 @@
+{
+  "id": "rain-q02-honest-l004",
+  "sceneId": "s03_letter",
+  "lineId": "q02_honest_l004",
+  "lineIndex": 3,
+  "speaker": "h",
+  "text": "你至少可以告诉我，你还没决定。",
+  "choiceId": "q02_honest",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1127623125,
+  "textSha256": "51f7b7965aa60e8307e171200d7799c0e02abfcbd6c6758556f24af2a026d975",
+  "medium": "spoken",
+  "requestSha256": "6e2d8b1989898ec57f8dab6926b5cb8dd63cb297437c5efd05d933c5542da916",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你至少可以告訴我,你還沒決定",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.64,
+  "wallSeconds": 113.867,
+  "loudness": {
+    "input_i": "-26.84",
+    "input_tp": "-10.40",
+    "input_lra": "0.00",
+    "input_thresh": "-37.27",
+    "output_i": "-19.99",
+    "output_tp": "-3.57",
+    "output_lra": "0.00",
+    "output_thresh": "-30.42",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-q02-honest-l004/raw.wav",
+      "bytes": 253520,
+      "sha256": "5633375f10a5550221ad2a35f8d66fe00a371cfffce02daab1cc796cb85d820a"
+    },
+    "master": {
+      "path": "rain-q02-honest-l004/master.wav",
+      "bytes": 126798,
+      "sha256": "433a5da9155bc4290a59b703b1a9f4be233844e954d2edff6c931fbbe459e75a"
+    },
+    "runtime": {
+      "path": "rain-q02-honest-l004/runtime.ogg",
+      "bytes": 22420,
+      "sha256": "b7721709270adbc809a6bfe13b996871082cc7249f29ebd7cf5bbf34860236ff"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

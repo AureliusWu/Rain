@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-archive-l020",
+  "sceneId": "s03_archive",
+  "lineId": "s03_archive_l020",
+  "lineIndex": 19,
+  "speaker": "p",
+  "text": "先去酒店。明早再走。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 283385626,
+  "textSha256": "acff0e2281f318532bc645faaa0d9e8daa28c7c614d32d9a25df443af3c84e4a",
+  "medium": "spoken",
+  "requestSha256": "6467f34403b96582707b4654da6fa19b896d05a7fcbb86535199ec41d6373be0",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "先去酒店明早再走",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.92,
+  "wallSeconds": 20.756,
+  "loudness": {
+    "input_i": "-26.57",
+    "input_tp": "-6.22",
+    "input_lra": "0.00",
+    "input_thresh": "-36.57",
+    "output_i": "-22.36",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-32.36",
+    "normalization_type": "linear",
+    "target_offset": "2.36"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-archive-l020/raw.wav",
+      "bytes": 184400,
+      "sha256": "0297052a59df82363927273db9e9fe96ad421e9568dd6dbb30b345ec5bca33ad"
+    },
+    "master": {
+      "path": "rain-s03-archive-l020/master.wav",
+      "bytes": 92238,
+      "sha256": "44bc540e2c3cd48ad7da11ba790f6bdea3d48e7682b33d3baeacd64d07bb6192"
+    },
+    "runtime": {
+      "path": "rain-s03-archive-l020/runtime.ogg",
+      "bytes": 18318,
+      "sha256": "dd66fa49d368ba2fbc07b63df4b24d701fea00ea010b1248e114626cf45ba5f7"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

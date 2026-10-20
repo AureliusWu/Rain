@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-memory-l002",
+  "sceneId": "s04_memory",
+  "lineId": "s04_memory_l002",
+  "lineIndex": 1,
+  "speaker": "h",
+  "text": "收展那天。你说这次一定拍正，又把相机垫在了报纸上。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 908427740,
+  "textSha256": "b96ecd47eb584bcfcc40a40363232ed6e456ea39a1a3bec6fc0020fe0db9e74e",
+  "medium": "spoken",
+  "requestSha256": "0cc5ce8201de1cadd83fc7b62f7fb37be6c46cb0553cbf64181aca50a67d3801",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "收展那天,你說這次一定拍正,又把相機墊在了報紙上",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 5.04,
+  "wallSeconds": 22.147,
+  "loudness": {
+    "input_i": "-27.12",
+    "input_tp": "-7.07",
+    "input_lra": "0.20",
+    "input_thresh": "-37.43",
+    "output_i": "-19.39",
+    "output_tp": "-2.00",
+    "output_lra": "0.50",
+    "output_thresh": "-29.90",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.61"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-memory-l002/raw.wav",
+      "bytes": 483920,
+      "sha256": "1fe66aca85160629f1492e98eab69389e1b25896b76ef8485db25b3eb5cb59a7"
+    },
+    "master": {
+      "path": "rain-s04-memory-l002/master.wav",
+      "bytes": 241998,
+      "sha256": "0af7555e93db01b7cc52dea647fa4f25d4dcb31e238a5e3552e867d342f19a2c"
+    },
+    "runtime": {
+      "path": "rain-s04-memory-l002/runtime.ogg",
+      "bytes": 39432,
+      "sha256": "37f4b5e341989a62b19a19e8da042a99efd7fc665cdb5420d1f79083bd2f701d"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

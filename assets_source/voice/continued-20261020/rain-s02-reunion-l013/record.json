@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-reunion-l013",
+  "sceneId": "s02_reunion",
+  "lineId": "s02_reunion_l013",
+  "lineIndex": 12,
+  "speaker": "h",
+  "text": "不只一张。还有几张展签和底片袋，店里说能留就留。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1374667035,
+  "textSha256": "5529c6e1a8421615afba0d1959a7d23005f549b915bb71067e9d7c1c1b98677a",
+  "medium": "spoken",
+  "requestSha256": "1a1dc2b52a93b3639b7b2128769c7fb1a8d2fb6de2f1ece9acc63c95b314c750",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "啊 不只一张还有几张展签和底片带店里说能留就留",
+    "cer": 0.095238,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 5.92,
+  "wallSeconds": 50.968,
+  "loudness": {
+    "input_i": "-25.67",
+    "input_tp": "-11.17",
+    "input_lra": "0.90",
+    "input_thresh": "-36.79",
+    "output_i": "-19.53",
+    "output_tp": "-5.12",
+    "output_lra": "2.50",
+    "output_thresh": "-30.98",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.47"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-reunion-l013/raw.wav",
+      "bytes": 568400,
+      "sha256": "3c123b62565ba9b4110e994f0a5df5154ec643de021d6c7e737477b2f27a2a9c"
+    },
+    "master": {
+      "path": "rain-s02-reunion-l013/master.wav",
+      "bytes": 284238,
+      "sha256": "56dbc8f8adc5de6c7f3174a5f56591cc8687a20ec8cd5841adb4ca8d4a33c528"
+    },
+    "runtime": {
+      "path": "rain-s02-reunion-l013/runtime.ogg",
+      "bytes": 43849,
+      "sha256": "aee9fb1e72f238fdceef14c5ed1112a37c61440a9d0f0a68b53094cd5d0e0da3"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

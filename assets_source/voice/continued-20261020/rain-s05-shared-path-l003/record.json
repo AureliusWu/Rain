@@ -1,0 +1,55 @@
+{
+  "id": "rain-s05-shared-path-l003",
+  "sceneId": "s05_shared_path",
+  "lineId": "s05_shared_path_l003",
+  "lineIndex": 2,
+  "speaker": "p",
+  "text": "难怪看着少了点什么。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 934089219,
+  "textSha256": "a6714250efc36f8cd58832a0448f580c1fd232d1b986b2befe6df3393adc56b0",
+  "medium": "spoken",
+  "requestSha256": "e4b964e7ba8327da76cfaed86f1861272952c0f86ae677f51aa66edc6d078a68",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "难怪看着少了点什么",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.76,
+  "wallSeconds": 96.822,
+  "loudness": {
+    "input_i": "-24.37",
+    "input_tp": "-5.33",
+    "input_lra": "0.00",
+    "input_thresh": "-34.37",
+    "output_i": "-21.02",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-31.02",
+    "normalization_type": "linear",
+    "target_offset": "1.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s05-shared-path-l003/raw.wav",
+      "bytes": 169040,
+      "sha256": "33edb879b2514d6418b9a5d663a3eeb309b5cc59d71433a12d479883f8eba2c2"
+    },
+    "master": {
+      "path": "rain-s05-shared-path-l003/master.wav",
+      "bytes": 84558,
+      "sha256": "20cf4ef7b83ab0a055439e14f147fbb6852c2928db933f11e0457362afbb6625"
+    },
+    "runtime": {
+      "path": "rain-s05-shared-path-l003/runtime.ogg",
+      "bytes": 17951,
+      "sha256": "1ca00aa73834ae87ca489e89bd9a9827a2086b26ae46d1f24da066581dcb225f"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

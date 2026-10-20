@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-concrete-l005",
+  "sceneId": "s04_concrete",
+  "lineId": "s04_concrete_l005",
+  "lineIndex": 8,
+  "speaker": "h",
+  "text": "这样就够了。你晚一点也可以说，不必等到晚上才解释。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 45947623,
+  "textSha256": "0ffd33b09c8b04f452d2f81b034413848d4bcd3f43bc041085a252ed1fc4ebc7",
+  "medium": "spoken",
+  "requestSha256": "b6867bc34b7bd6092232e2898c574cdbef17cbac99ed38ff323f62e6abf8747b",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "这样就够了,你晚一点也可以说。不必等到晚上才解释。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.72,
+  "wallSeconds": 154.537,
+  "loudness": {
+    "input_i": "-24.24",
+    "input_tp": "-5.58",
+    "input_lra": "3.20",
+    "input_thresh": "-34.56",
+    "output_i": "-20.07",
+    "output_tp": "-2.26",
+    "output_lra": "2.60",
+    "output_thresh": "-30.60",
+    "normalization_type": "dynamic",
+    "target_offset": "0.07"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-concrete-l005/raw.wav",
+      "bytes": 453200,
+      "sha256": "66f1a415352b22ac6c282672d9f4ea9beeb589cd29eb2930bdc69e14faa4d540"
+    },
+    "master": {
+      "path": "rain-s04-concrete-l005/master.wav",
+      "bytes": 226638,
+      "sha256": "9bec33c67d98d6c973ef740c9a9c8e723341885f99db28facf934835f56fe4ad"
+    },
+    "runtime": {
+      "path": "rain-s04-concrete-l005/runtime.ogg",
+      "bytes": 36315,
+      "sha256": "68baf2fe719821243912ce943400206ae23e5669a7dfdb41088697364e89b6e8"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

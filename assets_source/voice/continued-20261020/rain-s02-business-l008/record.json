@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-business-l008",
+  "sceneId": "s02_business",
+  "lineId": "s02_business_l008",
+  "lineIndex": 7,
+  "speaker": "h",
+  "text": "照片背面有几个日期，要分清。你要赶时间，可以先办你的。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1540441109,
+  "textSha256": "c54783f47390696e83f39fe2803cb6c027dd7904021e873b0338f6f7bfee76e7",
+  "medium": "spoken",
+  "requestSha256": "bbb47ed0d90e8ac0d2e2e2a7ca04cb386551ce8f09d4c2e72bfad13dbb7d0f99",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "照片背面有几个日期要分清你要赶时间可以先办你的",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 5.76,
+  "wallSeconds": 380.634,
+  "loudness": {
+    "input_i": "-25.21",
+    "input_tp": "-8.75",
+    "input_lra": "2.10",
+    "input_thresh": "-35.72",
+    "output_i": "-19.91",
+    "output_tp": "-3.44",
+    "output_lra": "3.00",
+    "output_thresh": "-30.29",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.09"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-business-l008/raw.wav",
+      "bytes": 553040,
+      "sha256": "54f50aa991f729d209d790e1c8c511be39671263b9f859bc663452812212f726"
+    },
+    "master": {
+      "path": "rain-s02-business-l008/master.wav",
+      "bytes": 276558,
+      "sha256": "0881619788b0bf3168409e79749c5169b98b55bbf05fad0dd5557b071e348249"
+    },
+    "runtime": {
+      "path": "rain-s02-business-l008/runtime.ogg",
+      "bytes": 43022,
+      "sha256": "cceed918b3e70178345e62e5f8f440b0c805c2f147bdc01b76fe2c823220c309"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

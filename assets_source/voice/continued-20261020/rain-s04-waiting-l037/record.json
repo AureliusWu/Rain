@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-waiting-l037",
+  "sceneId": "s04_waiting",
+  "lineId": "s04_waiting_l037",
+  "lineIndex": 37,
+  "speaker": "h",
+  "text": "嗯。听起来都闲不了。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 422046780,
+  "textSha256": "57230646ce8b0346d743ce2273192cf9affaf33935c2ab1e1d9d82d77c1d0b4a",
+  "medium": "spoken",
+  "requestSha256": "8c36fd7979a02819a98845b082b5a4d158eafb635594bcd3744a081fecd4a583",
+  "attempt": 1,
+  "status": "accepted",
+  "asr": {
+    "transcript": "嗯,听起来都嫌不了",
+    "cer": 0.125,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.32,
+  "wallSeconds": 113.294,
+  "loudness": {
+    "input_i": "-21.77",
+    "input_tp": "-7.52",
+    "input_lra": "0.00",
+    "input_thresh": "-32.21",
+    "output_i": "-20.00",
+    "output_tp": "-5.75",
+    "output_lra": "0.00",
+    "output_thresh": "-30.44",
+    "normalization_type": "linear",
+    "target_offset": "0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-waiting-l037/raw.wav",
+      "bytes": 222800,
+      "sha256": "b524860ab00ef15a466fe0519051972c3ce88a4728ef683de629204e0e023e5e"
+    },
+    "master": {
+      "path": "rain-s04-waiting-l037/master.wav",
+      "bytes": 111438,
+      "sha256": "22eaaffca19974e24c0629487664ba4916bd5d17f6e45ebbe2293ad4698c5242"
+    },
+    "runtime": {
+      "path": "rain-s04-waiting-l037/runtime.ogg",
+      "bytes": 20158,
+      "sha256": "49cb5d6be298da6b51e0a87b5e370d78ce50f14730cc3d597d1404da5e1e29ba"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

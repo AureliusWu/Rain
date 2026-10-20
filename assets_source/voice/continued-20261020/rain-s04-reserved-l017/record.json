@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-reserved-l017",
+  "sceneId": "s04_reserved",
+  "lineId": "s04_reserved_l017",
+  "lineIndex": 16,
+  "speaker": "p",
+  "text": "我明白。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1959436127,
+  "textSha256": "ba736588cd60ca843853aafdfb3d966883d5897a0fe771a68136e15bc88249f7",
+  "medium": "spoken",
+  "requestSha256": "912cfb75f0ef4351c73dd5d8124fdfc438c3239959c19d552efc75eed59a15cb",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我明白",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 0.88,
+  "wallSeconds": 37.303,
+  "loudness": {
+    "input_i": "-25.03",
+    "input_tp": "-6.95",
+    "input_lra": "0.00",
+    "input_thresh": "-35.03",
+    "output_i": "-20.11",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.11",
+    "normalization_type": "linear",
+    "target_offset": "0.11"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-reserved-l017/raw.wav",
+      "bytes": 84560,
+      "sha256": "75cf14232fc6c763808b8074e4b3cc53d80bbd811e259ba165387de77ca977dc"
+    },
+    "master": {
+      "path": "rain-s04-reserved-l017/master.wav",
+      "bytes": 42318,
+      "sha256": "6d28fb6ab0c1535bc541653bb6e153ea4f17004931b65caab308ba1f372abfed"
+    },
+    "runtime": {
+      "path": "rain-s04-reserved-l017/runtime.ogg",
+      "bytes": 11412,
+      "sha256": "45d585202b8af1b4fa3cfa065e9466a4a8ad55426338064baab634eeda63ead1"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

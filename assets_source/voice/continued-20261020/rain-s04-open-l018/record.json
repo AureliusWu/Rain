@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-open-l018",
+  "sceneId": "s04_open",
+  "lineId": "s04_open_l018",
+  "lineIndex": 17,
+  "speaker": "p",
+  "text": "我回来之前没有计划见你。见到以后，我想把今晚剩下的时间留给我们两个。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 4062655,
+  "textSha256": "43a044993e0983970c9724bf1f35ccee028a8649838b07209dae93cea9d1a730",
+  "medium": "spoken",
+  "requestSha256": "732430d11079db61e7b594a6d48d0574be8a5e6a314ff9edb507d27876fdd9d2",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我回了之前没有计划见你见到以后我想把今晚剩下的时间留给我们两个",
+    "cer": 0.032258,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 6.24,
+  "wallSeconds": 303.953,
+  "loudness": {
+    "input_i": "-25.10",
+    "input_tp": "-5.85",
+    "input_lra": "1.80",
+    "input_thresh": "-35.25",
+    "output_i": "-20.58",
+    "output_tp": "-2.00",
+    "output_lra": "1.60",
+    "output_thresh": "-30.81",
+    "normalization_type": "dynamic",
+    "target_offset": "0.58"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-open-l018/raw.wav",
+      "bytes": 599120,
+      "sha256": "d2f7335324b6ca6216069a416cafa08a3cca697a235ef0bee81bc878077840c6"
+    },
+    "master": {
+      "path": "rain-s04-open-l018/master.wav",
+      "bytes": 299598,
+      "sha256": "9ca4c53745319af3160f1e32f952b47a943b15f8a5f5c5d31c6c31bf814f2d52"
+    },
+    "runtime": {
+      "path": "rain-s04-open-l018/runtime.ogg",
+      "bytes": 51424,
+      "sha256": "5f9dd12c269dbebd9636eeb8d4c05b9d362402146e1728b69a2d0da7004dcec5"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-reunion-l015",
+  "sceneId": "s02_reunion",
+  "lineId": "s02_reunion_l015",
+  "lineIndex": 14,
+  "speaker": "p",
+  "text": "你还在那家书店？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1310311554,
+  "textSha256": "e5cac6e12c57a311f72e56f163e4b0eecba36763ef14a034dbc3bdbaed883f43",
+  "medium": "spoken",
+  "requestSha256": "af4e95825f6469161058595cb8ada75bcf86dc16f93115d0c477a42ccc8c05a9",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你还在那家书店",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.68,
+  "wallSeconds": 62.881,
+  "loudness": {
+    "input_i": "-22.77",
+    "input_tp": "-6.86",
+    "input_lra": "0.00",
+    "input_thresh": "-32.77",
+    "output_i": "-20.02",
+    "output_tp": "-4.09",
+    "output_lra": "0.00",
+    "output_thresh": "-30.02",
+    "normalization_type": "linear",
+    "target_offset": "0.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-reunion-l015/raw.wav",
+      "bytes": 161360,
+      "sha256": "cc07c88766430587364e51bff2c5180e53f20ba21207ce03cbc2f95b4cb4cc0d"
+    },
+    "master": {
+      "path": "rain-s02-reunion-l015/master.wav",
+      "bytes": 80718,
+      "sha256": "52138895e411330ce24894fcf2732059d64aba05ea29a62bb3c48368e346e980"
+    },
+    "runtime": {
+      "path": "rain-s02-reunion-l015/runtime.ogg",
+      "bytes": 16453,
+      "sha256": "e30a258a5183dee909915ce2f517fd5a60ea8a2c90d7a65762c643dbcab98d9b"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s04-revisit-l004",
+  "sceneId": "s04_revisit",
+  "lineId": "v07_s04_revisit_l004",
+  "lineIndex": 11,
+  "speaker": "h",
+  "text": "好。也不用为了回消息下车找信号。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1906515522,
+  "textSha256": "561fbb578cd90c68745114f0a57db6c3651fc95a562db2c5f86f4848c57908d9",
+  "medium": "spoken",
+  "requestSha256": "d10175b1f1cf5d4d82a5bcbc59d9fc8aa18ecb7c558af58cd4f401d6b839d714",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "好,也不用为了回消息,下车找信号。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 6.48,
+  "wallSeconds": 307.026,
+  "loudness": {
+    "input_i": "-24.82",
+    "input_tp": "-8.97",
+    "input_lra": "1.50",
+    "input_thresh": "-35.68",
+    "output_i": "-19.55",
+    "output_tp": "-2.78",
+    "output_lra": "2.50",
+    "output_thresh": "-30.61",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.45"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s04-revisit-l004/raw.wav",
+      "bytes": 622160,
+      "sha256": "0bacb11c7df6d5872481400d19927d3874c7a7d9bf6f4cb2a14672c5354b1222"
+    },
+    "master": {
+      "path": "rain-v07-s04-revisit-l004/master.wav",
+      "bytes": 311118,
+      "sha256": "2719b32f816335ac1e1ab3a6f5c3b902aedb9c1c02aa1933054f4565f1cfc6e1"
+    },
+    "runtime": {
+      "path": "rain-v07-s04-revisit-l004/runtime.ogg",
+      "bytes": 46305,
+      "sha256": "7972eeb3c0b633a36a8970c88b295fdf374c6be38bb340c6167df25b078e155e"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

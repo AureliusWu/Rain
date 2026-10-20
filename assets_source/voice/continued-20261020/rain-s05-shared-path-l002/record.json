@@ -1,0 +1,55 @@
+{
+  "id": "rain-s05-shared-path-l002",
+  "sceneId": "s05_shared_path",
+  "lineId": "s05_shared_path_l002",
+  "lineIndex": 1,
+  "speaker": "h",
+  "text": "别照着以前走。门口那级台阶拆了。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1781692320,
+  "textSha256": "a85e3a7a0b506807a52146d8c9ddd6d8ceb10341d7dbe0b891e54982df32aa59",
+  "medium": "spoken",
+  "requestSha256": "e61a842b401d80db52877ef8a72294e3399b864bd429109b86291b1f63d1e80e",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "别照着以前走门口那几台接拆了",
+    "cer": 0.142857,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.2,
+  "wallSeconds": 222.056,
+  "loudness": {
+    "input_i": "-25.85",
+    "input_tp": "-9.34",
+    "input_lra": "0.70",
+    "input_thresh": "-36.17",
+    "output_i": "-19.42",
+    "output_tp": "-3.30",
+    "output_lra": "0.00",
+    "output_thresh": "-29.91",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.58"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s05-shared-path-l002/raw.wav",
+      "bytes": 307280,
+      "sha256": "da1ce8dc40af1247c3d7b86937515ce6d3f4889e335312fd37c11d1434fbd711"
+    },
+    "master": {
+      "path": "rain-s05-shared-path-l002/master.wav",
+      "bytes": 153678,
+      "sha256": "f061ff3355221e1c393a7465e5b2b17a0843f610b79ab06951da6ab01dd212ca"
+    },
+    "runtime": {
+      "path": "rain-s05-shared-path-l002/runtime.ogg",
+      "bytes": 26903,
+      "sha256": "aea35b64e65b14a8a9720a743a1b4b7b0413f2fc9985b465accfeab29f9b21ac"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

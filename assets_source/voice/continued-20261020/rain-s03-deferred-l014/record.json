@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-deferred-l014",
+  "sceneId": "s03_deferred",
+  "lineId": "s03_deferred_l014",
+  "lineIndex": 13,
+  "speaker": "h",
+  "text": "但以后如果要说，别只告诉我“事情很复杂”。复杂也可以一件一件说。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1366077540,
+  "textSha256": "7548c2ffec8e8d3f1cde28da948387851acc34a0efee77a2ea18ef2364128596",
+  "medium": "spoken",
+  "requestSha256": "37f7b2395668376eddf92220ee3175476945c3cb9f8a72944e89f8fe93f0c2db",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "但以後如果要說,別只告訴我事情很複雜,複雜也可以一件一件說。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 5.68,
+  "wallSeconds": 262.576,
+  "loudness": {
+    "input_i": "-26.40",
+    "input_tp": "-8.85",
+    "input_lra": "3.30",
+    "input_thresh": "-36.84",
+    "output_i": "-20.76",
+    "output_tp": "-3.86",
+    "output_lra": "1.60",
+    "output_thresh": "-31.09",
+    "normalization_type": "dynamic",
+    "target_offset": "0.76"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-deferred-l014/raw.wav",
+      "bytes": 545360,
+      "sha256": "535cb3fe4b4b36493fea219117642f3f5dd46c721dcd06394556d4160a579c62"
+    },
+    "master": {
+      "path": "rain-s03-deferred-l014/master.wav",
+      "bytes": 272718,
+      "sha256": "b01f4ca59b92832cbc209131cd38bb3a76fd56ea0ab188b4feb1935bd9d80497"
+    },
+    "runtime": {
+      "path": "rain-s03-deferred-l014/runtime.ogg",
+      "bytes": 43375,
+      "sha256": "3c542d32cf1009aec65253fb5e2a6a5bfc8261d40159ef5e40316ee175bf1a59"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

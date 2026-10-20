@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-honest-l016",
+  "sceneId": "s03_honest",
+  "lineId": "s03_honest_l016",
+  "lineIndex": 15,
+  "speaker": "h",
+  "text": "嗯。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 138769824,
+  "textSha256": "5c7a9f97adb5bed9d4c6aca666dffd0e37fda970ebcfc2c8c0060523a483e295",
+  "medium": "spoken",
+  "requestSha256": "3f29f4c348827dfed34b82f7439a04bc81e5883b6796b11ff96268d54465497d",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "嗯",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 0.48,
+  "wallSeconds": 8.842,
+  "loudness": {
+    "input_i": "-22.25",
+    "input_tp": "-13.53",
+    "input_lra": "0.00",
+    "input_thresh": "-32.25",
+    "output_i": "-20.05",
+    "output_tp": "-11.28",
+    "output_lra": "0.00",
+    "output_thresh": "-30.05",
+    "normalization_type": "linear",
+    "target_offset": "0.05"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-honest-l016/raw.wav",
+      "bytes": 46160,
+      "sha256": "e70f18accf3f2648afc785a5051bd38cc4edba77abe55b039c64a5ba81d5a16f"
+    },
+    "master": {
+      "path": "rain-s03-honest-l016/master.wav",
+      "bytes": 23118,
+      "sha256": "0f0509b2b2b247897a533ad06debbd58b5a81e3555abc03bd1a41cfc506456c4"
+    },
+    "runtime": {
+      "path": "rain-s03-honest-l016/runtime.ogg",
+      "bytes": 6752,
+      "sha256": "f9355fd4b37900cb1e640cbdc5df0e50745dd77448ba29253648224b7674be7a"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-care-l017",
+  "sceneId": "s02_care",
+  "lineId": "s02_care_l017",
+  "lineIndex": 16,
+  "speaker": "h",
+  "text": "以前总觉得店小是缺点。后来发现，小一点也能把每个角落照顾到。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1399539150,
+  "textSha256": "a9158db3b5090d516c6e04cae8dbd842267573a6a85b6117589e12e748534f78",
+  "medium": "spoken",
+  "requestSha256": "beb721308e06d7abd98a445f5d27a37cac47ec41d7416550c8ba7382da4220dc",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "以前总觉得电小是缺点后来发现小一点也能把每个角落照顾到",
+    "cer": 0.037037,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 7.36,
+  "wallSeconds": 400.14,
+  "loudness": {
+    "input_i": "-23.71",
+    "input_tp": "-8.08",
+    "input_lra": "0.90",
+    "input_thresh": "-34.26",
+    "output_i": "-19.64",
+    "output_tp": "-3.48",
+    "output_lra": "2.80",
+    "output_thresh": "-30.23",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.36"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-care-l017/raw.wav",
+      "bytes": 706640,
+      "sha256": "ff4ecd8519961ba65c1fdb1a9b323b14d3af1c2fa6e118c441ac55b39504ce8a"
+    },
+    "master": {
+      "path": "rain-s02-care-l017/master.wav",
+      "bytes": 353358,
+      "sha256": "08eff4c38402529ea5d2c6bd1e3d40e395a10d5e28349b9acc96abeac0ea0475"
+    },
+    "runtime": {
+      "path": "rain-s02-care-l017/runtime.ogg",
+      "bytes": 57094,
+      "sha256": "d5bbc8a1bbf322b2853ce96be20097b2de2872dd3d65287110d6276ab86ac686"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

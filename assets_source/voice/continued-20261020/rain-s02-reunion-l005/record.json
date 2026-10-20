@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-reunion-l005",
+  "sceneId": "s02_reunion",
+  "lineId": "s02_reunion_l005",
+  "lineIndex": 4,
+  "speaker": "p",
+  "text": "这张是那次展览拍的？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 964186961,
+  "textSha256": "758cb20cd2f4b218327781b48b67f78cfc9f8810b60708074cc836a20fc8cb72",
+  "medium": "spoken",
+  "requestSha256": "6e56fc723a71d1acb5042b1a4b96f5e95541c6452582a83461182da0d15f0792",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "这张是那次展览拍的",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.08,
+  "wallSeconds": 113.208,
+  "loudness": {
+    "input_i": "-27.34",
+    "input_tp": "-9.22",
+    "input_lra": "0.00",
+    "input_thresh": "-37.34",
+    "output_i": "-20.12",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.12",
+    "normalization_type": "linear",
+    "target_offset": "0.12"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-reunion-l005/raw.wav",
+      "bytes": 199760,
+      "sha256": "d77d96a4b031822d38ede8681a8261948d182c93d700f4149d947e9c90c15194"
+    },
+    "master": {
+      "path": "rain-s02-reunion-l005/master.wav",
+      "bytes": 99918,
+      "sha256": "d563ff4e52cd79698fc47b152a2a4d3415d059e2a98dbd0245201ed2e2fd7b94"
+    },
+    "runtime": {
+      "path": "rain-s02-reunion-l005/runtime.ogg",
+      "bytes": 19223,
+      "sha256": "ad34fc89546968d36442f5d35d1afbaf228410b59e43f28edbeef4d9b57ad39a"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

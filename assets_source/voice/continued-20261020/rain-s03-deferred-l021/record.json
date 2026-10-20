@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-deferred-l021",
+  "sceneId": "s03_deferred",
+  "lineId": "s03_deferred_l021",
+  "lineIndex": 20,
+  "speaker": "p",
+  "text": "我不会今晚拆。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1911731271,
+  "textSha256": "d6680985f5a9b7a805dc23d852004957cfa110159ab9a7ea71bc2fe225659745",
+  "medium": "spoken",
+  "requestSha256": "171b78a9fc7b2b890b8840efab2f13f42e33d39b7b36724570fa8695a1738b17",
+  "attempt": 1,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我不会今晚拆",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.12,
+  "wallSeconds": 60.337,
+  "loudness": {
+    "input_i": "-23.93",
+    "input_tp": "-6.36",
+    "input_lra": "0.00",
+    "input_thresh": "-33.93",
+    "output_i": "-19.98",
+    "output_tp": "-2.44",
+    "output_lra": "0.00",
+    "output_thresh": "-29.98",
+    "normalization_type": "linear",
+    "target_offset": "-0.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-deferred-l021/raw.wav",
+      "bytes": 107600,
+      "sha256": "8353b01e6536d9dd29705a3e45ee62bc0bfadd4c602c95d39aa1bf3c7266bc7e"
+    },
+    "master": {
+      "path": "rain-s03-deferred-l021/master.wav",
+      "bytes": 53838,
+      "sha256": "7b91fddefd926a4893d5dbdee172b73dba3184c942833a36e6ca9ef70598ba24"
+    },
+    "runtime": {
+      "path": "rain-s03-deferred-l021/runtime.ogg",
+      "bytes": 12804,
+      "sha256": "4afa9e8cfdc9b4b305508fa5e755d1cc5d1238962d648eca772edca56fc103f8"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

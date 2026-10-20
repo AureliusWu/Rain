@@ -1,0 +1,55 @@
+{
+  "id": "rain-s05-separate-path-l002",
+  "sceneId": "s05_separate_path",
+  "lineId": "s05_separate_path_l002",
+  "lineIndex": 1,
+  "speaker": "p",
+  "text": "车快到了。你不用陪我等。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 485938359,
+  "textSha256": "984d735b5bb669e3fce123f2e5f772cd9d6248496026f99b0297524f89d716ec",
+  "medium": "spoken",
+  "requestSha256": "eb81abf43577f7b30d72bd31681f7f3c1ae4bafa876f70ea4d3d57fd3195a483",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "车快到了你不用陪我等",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.48,
+  "wallSeconds": 11.386,
+  "loudness": {
+    "input_i": "-25.18",
+    "input_tp": "-8.02",
+    "input_lra": "0.00",
+    "input_thresh": "-35.80",
+    "output_i": "-20.00",
+    "output_tp": "-2.84",
+    "output_lra": "0.00",
+    "output_thresh": "-30.61",
+    "normalization_type": "linear",
+    "target_offset": "-0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s05-separate-path-l002/raw.wav",
+      "bytes": 238160,
+      "sha256": "a63a0cec308b4b1feafe39dd88635d9e3473f5b5016f7f9c62dc8f11590f481a"
+    },
+    "master": {
+      "path": "rain-s05-separate-path-l002/master.wav",
+      "bytes": 119118,
+      "sha256": "63f01ee6247ba2b1826d7c281b7d72541b69eb49e0ed12023457c7a24ff20c97"
+    },
+    "runtime": {
+      "path": "rain-s05-separate-path-l002/runtime.ogg",
+      "bytes": 23823,
+      "sha256": "c61b4ec0a08a89b2cdee46fd3afe54422620deb31688e3dd1038d7916366d835"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

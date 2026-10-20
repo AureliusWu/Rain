@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-open-l008",
+  "sceneId": "s04_open",
+  "lineId": "s04_open_l008",
+  "lineIndex": 7,
+  "speaker": "h",
+  "text": "慢一点可以。你说到哪，我就听到哪。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 992050137,
+  "textSha256": "fd5612aff798808c39c5d78851c68bc55458f722a734ee5af9eeaa7165cfec8c",
+  "medium": "spoken",
+  "requestSha256": "cafcf2bf198a6b90c3d4cf72b0b2e8deb5e8a6097460cc46d76770994057f1ea",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "慢一点可以你说到哪儿我就听到哪儿",
+    "cer": 0.142857,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.28,
+  "wallSeconds": 110.8,
+  "loudness": {
+    "input_i": "-26.18",
+    "input_tp": "-9.27",
+    "input_lra": "1.40",
+    "input_thresh": "-36.51",
+    "output_i": "-19.70",
+    "output_tp": "-3.26",
+    "output_lra": "0.00",
+    "output_thresh": "-30.03",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.30"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-open-l008/raw.wav",
+      "bytes": 314960,
+      "sha256": "47032c236bf6734476ea94d4ce3afd24faee97dfc490d922ee452b1f6ab3e21b"
+    },
+    "master": {
+      "path": "rain-s04-open-l008/master.wav",
+      "bytes": 157518,
+      "sha256": "19ce65a2ce7d05c0d5b3685eb3de5ecc12f952cc20513971fe1690bd90d27042"
+    },
+    "runtime": {
+      "path": "rain-s04-open-l008/runtime.ogg",
+      "bytes": 26763,
+      "sha256": "190446bd7eeaf4040e6d4b4455db467f2181e9e96325c2c5e3e526e395dff60d"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

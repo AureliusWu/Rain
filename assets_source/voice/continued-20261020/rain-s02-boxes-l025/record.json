@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-boxes-l025",
+  "sceneId": "s02_boxes",
+  "lineId": "s02_boxes_l025",
+  "lineIndex": 24,
+  "speaker": "p",
+  "text": "这封信也在清单上？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1196645194,
+  "textSha256": "85609972ca8d0e7a509f9949703e9280c043651bf649d4bfde1a142afa38a332",
+  "medium": "spoken",
+  "requestSha256": "caa0ce24a6ee529569929881008a141cb561ce9bfeccf28e99c38e551d99c7e0",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "这封线也在清单上",
+    "cer": 0.125,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.16,
+  "wallSeconds": 87.749,
+  "loudness": {
+    "input_i": "-23.61",
+    "input_tp": "-8.26",
+    "input_lra": "0.00",
+    "input_thresh": "-33.61",
+    "output_i": "-19.99",
+    "output_tp": "-4.65",
+    "output_lra": "0.00",
+    "output_thresh": "-29.99",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-boxes-l025/raw.wav",
+      "bytes": 207440,
+      "sha256": "0de73b932f190c4dedcc415d8d488e9347f3ee19ca968efdf2a2ee892d77a123"
+    },
+    "master": {
+      "path": "rain-s02-boxes-l025/master.wav",
+      "bytes": 103758,
+      "sha256": "0b05616829435cc0ffa6c90f3dd1b44e1aeaf5eaec809a9e0307c4be474e2402"
+    },
+    "runtime": {
+      "path": "rain-s02-boxes-l025/runtime.ogg",
+      "bytes": 18939,
+      "sha256": "3ea2a228516f890477257be1f357b84ead0e2f70fb4e50a4b900efcdd5da58b4"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

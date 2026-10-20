@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-reserved-l008",
+  "sceneId": "s04_reserved",
+  "lineId": "s04_reserved_l008",
+  "lineIndex": 7,
+  "speaker": "h",
+  "text": "也不用为了填空，随便答应什么。今天能说哪一件，就说哪一件。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1886604185,
+  "textSha256": "90df5992356b8338c04aceedc171398c835ddbd2274b9e473c9ad38e03d94e99",
+  "medium": "spoken",
+  "requestSha256": "471fb86620018732ea176033d470a382f6326320020769008d9fde628da1a682",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "也不用为了填空 随便答应什么今天能说哪一件 就说哪一件",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 5.84,
+  "wallSeconds": 187.31,
+  "loudness": {
+    "input_i": "-27.02",
+    "input_tp": "-10.16",
+    "input_lra": "1.80",
+    "input_thresh": "-37.23",
+    "output_i": "-20.45",
+    "output_tp": "-3.73",
+    "output_lra": "2.50",
+    "output_thresh": "-30.86",
+    "normalization_type": "dynamic",
+    "target_offset": "0.45"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-reserved-l008/raw.wav",
+      "bytes": 560720,
+      "sha256": "b7c8695ed5745d1cec1f4a206272850650a4c899e85be9aca4a2a227cf59217e"
+    },
+    "master": {
+      "path": "rain-s04-reserved-l008/master.wav",
+      "bytes": 280398,
+      "sha256": "db3f047ac01f8571858951f109bd9537f1b74a1a71ca5bdc6de8878dea5fce71"
+    },
+    "runtime": {
+      "path": "rain-s04-reserved-l008/runtime.ogg",
+      "bytes": 45468,
+      "sha256": "51204bf480ade4fa7fece2ef6db2a1ef4778a189f8df647350f22ec042a37f3a"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-s08-normal-l005",
+  "sceneId": "s08_normal",
+  "lineId": "s08_normal_l005",
+  "lineIndex": 6,
+  "speaker": "h",
+  "text": "这张没有拍歪。你回去以后，慢慢看。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1394699419,
+  "textSha256": "ebab304ce31dc1ec2397b8a16dcb97b8bc8d8ab868833e02f7a0eb5426eb492a",
+  "medium": "spoken",
+  "requestSha256": "70fe8cf83cdb9b40daf98c89e2897eb98ebd2e72067622b97b07fb202a93c00c",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "這張沒有拍歪,你回去以後慢慢看",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.96,
+  "wallSeconds": 100.925,
+  "loudness": {
+    "input_i": "-26.20",
+    "input_tp": "-11.43",
+    "input_lra": "0.00",
+    "input_thresh": "-36.56",
+    "output_i": "-20.00",
+    "output_tp": "-5.23",
+    "output_lra": "0.00",
+    "output_thresh": "-30.36",
+    "normalization_type": "linear",
+    "target_offset": "0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s08-normal-l005/raw.wav",
+      "bytes": 284240,
+      "sha256": "37eb18a6532b83f96b411e0ecf6720aa9d399d07df6c77b755d1af467365c3c1"
+    },
+    "master": {
+      "path": "rain-s08-normal-l005/master.wav",
+      "bytes": 142158,
+      "sha256": "1b4054df86b27f20a31184f7720e1f1ca1cc69934ab18e3f738fce682a160558"
+    },
+    "runtime": {
+      "path": "rain-s08-normal-l005/runtime.ogg",
+      "bytes": 24173,
+      "sha256": "38bb92c0c9df895f5778a518e1267aeda5e657972c95a89dbe365c510e05a553"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

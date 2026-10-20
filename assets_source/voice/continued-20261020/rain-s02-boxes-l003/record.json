@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-boxes-l003",
+  "sceneId": "s02_boxes",
+  "lineId": "s02_boxes_l003",
+  "lineIndex": 2,
+  "speaker": "p",
+  "text": "比记得的重。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 585626596,
+  "textSha256": "022415e2b6073f0031afe322ae0fe6004f9f72c9ace47a03d017b786270d3a36",
+  "medium": "spoken",
+  "requestSha256": "d64034243b070564835e89c449e59e7f228612de27f86f952ab9713aa03f6b04",
+  "attempt": 1,
+  "status": "accepted",
+  "asr": {
+    "transcript": "比记录的重",
+    "cer": 0.2,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.6,
+  "wallSeconds": 90.969,
+  "loudness": {
+    "input_i": "-36.81",
+    "input_tp": "-18.20",
+    "input_lra": "0.00",
+    "input_thresh": "-46.81",
+    "output_i": "-20.61",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.61",
+    "normalization_type": "linear",
+    "target_offset": "0.61"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-boxes-l003/raw.wav",
+      "bytes": 153680,
+      "sha256": "0739b58f4061c549a6bf9d7e3f740778cb67003d47278b4905cf41bafcef048a"
+    },
+    "master": {
+      "path": "rain-s02-boxes-l003/master.wav",
+      "bytes": 76878,
+      "sha256": "a09eae878dd025d821ef10270888885c049970bcb885e6dd2f09a0bf84f59c8b"
+    },
+    "runtime": {
+      "path": "rain-s02-boxes-l003/runtime.ogg",
+      "bytes": 15525,
+      "sha256": "71cca3613dbb8cce1c60512dcc2bd1a4bb638a70c24174410a97f28dd16f39f5"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

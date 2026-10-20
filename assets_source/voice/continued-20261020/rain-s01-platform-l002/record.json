@@ -1,0 +1,55 @@
+{
+  "id": "rain-s01-platform-l002",
+  "sceneId": "s01_platform",
+  "lineId": "s01_platform_l002",
+  "lineIndex": 1,
+  "speaker": "p",
+  "text": "里面没湿吧？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 357262345,
+  "textSha256": "a9a7f210c5ac868113221cc45651134fac882b6a48006216ac577cf0b005d697",
+  "medium": "spoken",
+  "requestSha256": "5ff2a26884ec1261fdaf0ebba76010af07990ef687eef1e35b9a1e728440d6af",
+  "attempt": 3,
+  "status": "accepted",
+  "asr": {
+    "transcript": "里面没事吧",
+    "cer": 0.2,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.52,
+  "wallSeconds": 64.995,
+  "loudness": {
+    "input_i": "-26.16",
+    "input_tp": "-8.03",
+    "input_lra": "0.00",
+    "input_thresh": "-36.16",
+    "output_i": "-20.12",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.12",
+    "normalization_type": "linear",
+    "target_offset": "0.12"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s01-platform-l002/raw.wav",
+      "bytes": 146000,
+      "sha256": "96e7b47abdb64a7ca894c647ed8e7e71cf65bba00b339eaeea36f0664ecc704d"
+    },
+    "master": {
+      "path": "rain-s01-platform-l002/master.wav",
+      "bytes": 73038,
+      "sha256": "5ac6f85520e0ac53384aba6c1e57884057ddf4fdc38c709dbf7fe863c43a2d58"
+    },
+    "runtime": {
+      "path": "rain-s01-platform-l002/runtime.ogg",
+      "bytes": 16088,
+      "sha256": "335da4a58cd91f7476113a278dcebcaa6ae248ee98379d1d22887538c5224434"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

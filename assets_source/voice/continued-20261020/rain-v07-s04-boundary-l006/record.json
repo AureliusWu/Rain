@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s04-boundary-l006",
+  "sceneId": "s04_boundary",
+  "lineId": "v07_s04_boundary_l006",
+  "lineIndex": 9,
+  "speaker": "h",
+  "text": "我只是先说明白，没叫你一直不出声。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 440218304,
+  "textSha256": "a1430d62098ee59925affee362cd4e5c56867805ce327415b677eb681e86e9fe",
+  "medium": "spoken",
+  "requestSha256": "c1f71ab80b5ec007dac110c18aadb495f0099c6b3332caddb6b0eafde33e16e4",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我只是先說明白,沒叫你一直不出聲",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.44,
+  "wallSeconds": 148.296,
+  "loudness": {
+    "input_i": "-23.48",
+    "input_tp": "-8.26",
+    "input_lra": "0.30",
+    "input_thresh": "-33.64",
+    "output_i": "-19.70",
+    "output_tp": "-4.54",
+    "output_lra": "0.00",
+    "output_thresh": "-30.00",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.30"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s04-boundary-l006/raw.wav",
+      "bytes": 330320,
+      "sha256": "e6049ac7766df1e1b3ef21172c2cc754c7b14f736973efa257164f7c79050fa2"
+    },
+    "master": {
+      "path": "rain-v07-s04-boundary-l006/master.wav",
+      "bytes": 165198,
+      "sha256": "14a80be7dec56c55f39de861ac66172c229195d184381ae31126d2dd46d506a5"
+    },
+    "runtime": {
+      "path": "rain-v07-s04-boundary-l006/runtime.ogg",
+      "bytes": 27802,
+      "sha256": "15afb89878251ecfbd16de5827a0fa3a349b6c5947ed9b08c2edb3ab71b1b65b"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

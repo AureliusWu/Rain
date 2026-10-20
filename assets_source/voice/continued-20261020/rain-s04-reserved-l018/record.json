@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-reserved-l018",
+  "sceneId": "s04_reserved",
+  "lineId": "s04_reserved_l018",
+  "lineIndex": 17,
+  "speaker": "h",
+  "text": "还有，别因为明天要走就一次答应很多。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 125184571,
+  "textSha256": "483f161c1987ee3ada71ea57eccae1fd0798634c44a85198d6cdd2d6b16bd5c3",
+  "medium": "spoken",
+  "requestSha256": "23442055a9cefa2fe2ce3ef69a5b6d6a0112baed55f7d6870ab266cabc28bc85",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "還有,別因為明天要走,就一次答應很多",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.56,
+  "wallSeconds": 147.365,
+  "loudness": {
+    "input_i": "-28.07",
+    "input_tp": "-11.17",
+    "input_lra": "0.70",
+    "input_thresh": "-38.32",
+    "output_i": "-19.51",
+    "output_tp": "-2.58",
+    "output_lra": "0.60",
+    "output_thresh": "-29.93",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.49"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-reserved-l018/raw.wav",
+      "bytes": 437840,
+      "sha256": "b24fc454b5a397ce95665c4758644e5b50ec8f91eae23eb43d24c8cc37a9f806"
+    },
+    "master": {
+      "path": "rain-s04-reserved-l018/master.wav",
+      "bytes": 218958,
+      "sha256": "a0f4ef4d04c4bebdafc3d0ceb5036641a1201c65b6c09040fa4142525c19373a"
+    },
+    "runtime": {
+      "path": "rain-s04-reserved-l018/runtime.ogg",
+      "bytes": 34732,
+      "sha256": "e08f82d2075c4ce54c86a783cc11ce1ec04056d5ed6f5eee0f05e972cac2d1b8"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

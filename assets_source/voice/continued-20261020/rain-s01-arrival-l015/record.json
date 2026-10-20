@@ -1,0 +1,55 @@
+{
+  "id": "rain-s01-arrival-l015",
+  "sceneId": "s01_arrival",
+  "lineId": "s01_arrival_l015",
+  "lineIndex": 14,
+  "speaker": "h",
+  "text": "没有。我那边已经登记完了。雨太大，想等小一点再走。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1510948474,
+  "textSha256": "5ac0b8272375202112e7718a4de3c1eff0ae7b3d76b74c51fac48abdabccfbfa",
+  "medium": "spoken",
+  "requestSha256": "09377d590f542e53aae6e096c2bb60f95ee3ea3f19925115956e73e3fcf3f632",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "没有,我那边已经登记完了。雨太大,想等小一点再走。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 6.0,
+  "wallSeconds": 275.14,
+  "loudness": {
+    "input_i": "-24.60",
+    "input_tp": "-10.14",
+    "input_lra": "0.40",
+    "input_thresh": "-34.92",
+    "output_i": "-19.59",
+    "output_tp": "-5.36",
+    "output_lra": "1.00",
+    "output_thresh": "-29.99",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.41"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s01-arrival-l015/raw.wav",
+      "bytes": 576080,
+      "sha256": "6cb9b88054454ce376034887f12eae47063fa15b434fd6f52db82eb2da66d0ae"
+    },
+    "master": {
+      "path": "rain-s01-arrival-l015/master.wav",
+      "bytes": 288078,
+      "sha256": "b49775855b0b123e8ae6b1329ca57326ded7b1b12bd585865f3f0b3db9730f23"
+    },
+    "runtime": {
+      "path": "rain-s01-arrival-l015/runtime.ogg",
+      "bytes": 45645,
+      "sha256": "f33724f31b365b322f976bec61a4096becc9cec6d8007ce0aa99cda8ee7c3a21"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

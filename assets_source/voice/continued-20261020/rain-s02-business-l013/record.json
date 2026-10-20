@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-business-l013",
+  "sceneId": "s02_business",
+  "lineId": "s02_business_l013",
+  "lineIndex": 12,
+  "speaker": "p",
+  "text": "姓名、柜号、件数……就这些？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 854633812,
+  "textSha256": "f3ffb6a3e20e1960a2c3ec5517e7fbf7a78073c6c8e011eefe07d6dfb46c4531",
+  "medium": "spoken",
+  "requestSha256": "de85762d08b2407f8c693bdf4d507457ef6dbd5d6b761d78ec4128a82e576b17",
+  "attempt": 5,
+  "status": "needs_review",
+  "asr": {
+    "transcript": "姓娘,贵号,建书就这些",
+    "cer": 0.444444,
+    "polarityCountsMatch": true,
+    "passed": false
+  },
+  "duration": 3.36,
+  "wallSeconds": 189.512,
+  "loudness": {
+    "input_i": "-24.45",
+    "input_tp": "-7.53",
+    "input_lra": "0.70",
+    "input_thresh": "-35.09",
+    "output_i": "-18.88",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-29.65",
+    "normalization_type": "dynamic",
+    "target_offset": "-1.12"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-business-l013/raw.wav",
+      "bytes": 322640,
+      "sha256": "0aeedb62481dcb4918c48a2e3ef142c4c8edc8e71a979f9d7aa07dc46406f720"
+    },
+    "master": {
+      "path": "rain-s02-business-l013/master.wav",
+      "bytes": 161358,
+      "sha256": "a1ddb16c5aa86f9e588a3260fc0ddafddc76500987939a4b8ca1bccdcbdcc40c"
+    },
+    "runtime": {
+      "path": "rain-s02-business-l013/runtime.ogg",
+      "bytes": 27110,
+      "sha256": "f292f38277efcbbc53a3800bac04f2ce8aada7b423de58a911428d9959a7a650"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

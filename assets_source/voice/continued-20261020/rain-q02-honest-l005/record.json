@@ -1,0 +1,56 @@
+{
+  "id": "rain-q02-honest-l005",
+  "sceneId": "s03_letter",
+  "lineId": "q02_honest_l005",
+  "lineIndex": 4,
+  "speaker": "p",
+  "text": "嗯。那是我应该做的。",
+  "choiceId": "q02_honest",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 404576465,
+  "textSha256": "17bea5351a1fd3bbcd045340e7adddbb7cf2410cc745599bf36847cc89bb944f",
+  "medium": "spoken",
+  "requestSha256": "def97f9c70c3e43108b12e4755d98bae604f522970d66e05747265f41bad026d",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "嗯 那是我應該做的",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.84,
+  "wallSeconds": 77.767,
+  "loudness": {
+    "input_i": "-22.63",
+    "input_tp": "-4.73",
+    "input_lra": "0.00",
+    "input_thresh": "-32.93",
+    "output_i": "-20.00",
+    "output_tp": "-2.09",
+    "output_lra": "0.00",
+    "output_thresh": "-30.30",
+    "normalization_type": "linear",
+    "target_offset": "0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-q02-honest-l005/raw.wav",
+      "bytes": 176720,
+      "sha256": "3cf101df175115b763f4cc741e3d794304433405fe6a5d3a61b913fe70f1e390"
+    },
+    "master": {
+      "path": "rain-q02-honest-l005/master.wav",
+      "bytes": 88398,
+      "sha256": "2b7d9c02205002378f45c6bad5983726cfd67d2c4b837ca5f3d43682f01cec54"
+    },
+    "runtime": {
+      "path": "rain-q02-honest-l005/runtime.ogg",
+      "bytes": 17189,
+      "sha256": "340f02de0e1cbe6badfa006386828329b0a930b3e84345e815ea8076d480671f"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

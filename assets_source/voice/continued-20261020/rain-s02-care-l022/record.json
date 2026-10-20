@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-care-l022",
+  "sceneId": "s02_care",
+  "lineId": "s02_care_l022",
+  "lineIndex": 21,
+  "speaker": "h",
+  "text": "那就别核对。你想知道什么可以直接问。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 241151175,
+  "textSha256": "2c261a13777ad83b3abdf1c12fc3a919964a0c38c2f071a4fb15d884ed632c4b",
+  "medium": "spoken",
+  "requestSha256": "c397ea483cf3ca1864ec395d6e5ff2d2c727fb75fe509b30e30d6ac2fc83a0f2",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "那就别核对你想知道什么可以直接问",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.08,
+  "wallSeconds": 191.098,
+  "loudness": {
+    "input_i": "-26.64",
+    "input_tp": "-11.14",
+    "input_lra": "1.30",
+    "input_thresh": "-37.20",
+    "output_i": "-19.73",
+    "output_tp": "-4.57",
+    "output_lra": "0.40",
+    "output_thresh": "-30.22",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.27"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-care-l022/raw.wav",
+      "bytes": 391760,
+      "sha256": "a7f967ede5ad2a32420c9480cc397b77808cb2138a55444a10ad9ba3261faa1b"
+    },
+    "master": {
+      "path": "rain-s02-care-l022/master.wav",
+      "bytes": 195918,
+      "sha256": "d50c40f74cdf717d4e834c1faf0e62c504975e21e7006a40e431942413b7a3d0"
+    },
+    "runtime": {
+      "path": "rain-s02-care-l022/runtime.ogg",
+      "bytes": 32415,
+      "sha256": "cd7bc55ba21d955f08b642670de0e8b05815c746238d32cd20ce0994fe612626"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

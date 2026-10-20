@@ -1,0 +1,55 @@
+{
+  "id": "rain-s05-departure-l007",
+  "sceneId": "s05_departure",
+  "lineId": "s05_departure_l007",
+  "lineIndex": 11,
+  "speaker": "h",
+  "text": "要一起走到那边吗？",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 234498734,
+  "textSha256": "d28eed718da8b0d5ecda5139a742fcd4e8412f80d7e55c4e4afd645777db1864",
+  "medium": "spoken",
+  "requestSha256": "3303d3f4262846af779f0172eb903784e427164c7558a6d2040b803f552a9ffe",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "要一起走到那边吗",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.52,
+  "wallSeconds": 66.199,
+  "loudness": {
+    "input_i": "-21.39",
+    "input_tp": "-6.54",
+    "input_lra": "0.00",
+    "input_thresh": "-31.39",
+    "output_i": "-20.01",
+    "output_tp": "-5.15",
+    "output_lra": "0.00",
+    "output_thresh": "-30.01",
+    "normalization_type": "linear",
+    "target_offset": "0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s05-departure-l007/raw.wav",
+      "bytes": 146000,
+      "sha256": "d0d13716a2dab2f2649281ae124b76df291e37e8127751077faa9f6a7ebb5813"
+    },
+    "master": {
+      "path": "rain-s05-departure-l007/master.wav",
+      "bytes": 73038,
+      "sha256": "77236a013c2ee888c79b8694bcd893ffb79af77642cb311e12f84bc4eda00def"
+    },
+    "runtime": {
+      "path": "rain-s05-departure-l007/runtime.ogg",
+      "bytes": 15470,
+      "sha256": "88ba1aea3e3d339afffd546df2b639d793361803df5a87b4a93745602b006c8c"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

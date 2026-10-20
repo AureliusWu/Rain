@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s04-boundary-l002",
+  "sceneId": "s04_boundary",
+  "lineId": "v07_s04_boundary_l002",
+  "lineIndex": 1,
+  "speaker": "h",
+  "text": "就放那儿吧。等会儿我能自己拿袋子。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1682818260,
+  "textSha256": "e389a0743f2886510c9b0d99cb29306b2d76760254fb93cf843cc35a0acc9f62",
+  "medium": "spoken",
+  "requestSha256": "af8fcc85ed25961f2b9fa0f70413b7ae44d06adc1b55bd1a43fb7ac68b41ff17",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "就放那吧等会我能自己拿袋子",
+    "cer": 0.133333,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.08,
+  "wallSeconds": 115.159,
+  "loudness": {
+    "input_i": "-22.19",
+    "input_tp": "-5.45",
+    "input_lra": "0.00",
+    "input_thresh": "-32.19",
+    "output_i": "-20.00",
+    "output_tp": "-3.27",
+    "output_lra": "0.00",
+    "output_thresh": "-30.00",
+    "normalization_type": "linear",
+    "target_offset": "0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s04-boundary-l002/raw.wav",
+      "bytes": 199760,
+      "sha256": "d467d9b5d409c78952a18076716bd69211ef1a99910a43d6299fef1691a48867"
+    },
+    "master": {
+      "path": "rain-v07-s04-boundary-l002/master.wav",
+      "bytes": 99918,
+      "sha256": "7ccb74ae42fa8dd37cdcb19818a77f246c27b554abf324718ada638100503bdd"
+    },
+    "runtime": {
+      "path": "rain-v07-s04-boundary-l002/runtime.ogg",
+      "bytes": 19105,
+      "sha256": "a46eaf553ddc4ba1262cdd4b44ff09775c2a418227985bf2da9ec9404ec08402"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

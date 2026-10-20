@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-care-l025",
+  "sceneId": "s02_care",
+  "lineId": "s02_care_l025",
+  "lineIndex": 24,
+  "speaker": "h",
+  "text": "明天上午我休息，下午才去店里。你不用因为我改行程。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 297237039,
+  "textSha256": "10a11dfa256bf1d6d5d0b9e624d5dc2eec5b941a9d4962d697d37278412f396c",
+  "medium": "spoken",
+  "requestSha256": "b28f6212983879a7adb0a25c0be05019ad35a5c4c018dad1b693082f39fa0b1d",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "明天上午我休息下午才去店裡你不用因為我改行程",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.48,
+  "wallSeconds": 295.89,
+  "loudness": {
+    "input_i": "-23.89",
+    "input_tp": "-7.24",
+    "input_lra": "1.40",
+    "input_thresh": "-34.53",
+    "output_i": "-19.13",
+    "output_tp": "-2.80",
+    "output_lra": "1.30",
+    "output_thresh": "-29.84",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.87"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-care-l025/raw.wav",
+      "bytes": 430160,
+      "sha256": "20140aa47431dd8be9f79cc41c17191bfdb5d7d95875d2a07da5a4aad593d51f"
+    },
+    "master": {
+      "path": "rain-s02-care-l025/master.wav",
+      "bytes": 215118,
+      "sha256": "ffbb0bac9b21640cf25c37f0c8c8b1e1463bb2c36ee810911dc0f88653800563"
+    },
+    "runtime": {
+      "path": "rain-s02-care-l025/runtime.ogg",
+      "bytes": 34717,
+      "sha256": "eb24748e2c75277e3d5f1804d59d91f8b01d9ff0f31167b5f4f489d89012772a"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

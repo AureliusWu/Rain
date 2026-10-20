@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-deferred-l002",
+  "sceneId": "s03_deferred",
+  "lineId": "s03_deferred_l002",
+  "lineIndex": 1,
+  "speaker": "h",
+  "text": "你认识那上面的字吗？",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 969214583,
+  "textSha256": "433d5c8fade637c7bcf59abbd69f2537608b4c4a76e9ec7456fff324bfd5ddbd",
+  "medium": "spoken",
+  "requestSha256": "12823de2cb882525bf993bb9beb75dba528f692c39df82f61f069ebcf4dfc9e5",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你认识那上面的字吗?",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.52,
+  "wallSeconds": 66.441,
+  "loudness": {
+    "input_i": "-20.49",
+    "input_tp": "-9.38",
+    "input_lra": "0.00",
+    "input_thresh": "-30.49",
+    "output_i": "-19.99",
+    "output_tp": "-8.88",
+    "output_lra": "0.00",
+    "output_thresh": "-29.99",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-deferred-l002/raw.wav",
+      "bytes": 146000,
+      "sha256": "aa3169423b1610a685d306ded4200444ccbf366954532afa71e159af81c61634"
+    },
+    "master": {
+      "path": "rain-s03-deferred-l002/master.wav",
+      "bytes": 73038,
+      "sha256": "b62a6e77c0f4548ee43b8d70734d37ad4b8dc0539c3c551adc8de723a665e1c2"
+    },
+    "runtime": {
+      "path": "rain-s03-deferred-l002/runtime.ogg",
+      "bytes": 14494,
+      "sha256": "c140cf7517aa6fc487d52a420644ecd73b21d0e77ca74659b34bf3daf5fe4061"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

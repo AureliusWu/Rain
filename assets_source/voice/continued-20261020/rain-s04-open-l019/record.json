@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-open-l019",
+  "sceneId": "s04_open",
+  "lineId": "s04_open_l019",
+  "lineIndex": 18,
+  "speaker": "h",
+  "text": "可以。前提是你明天该走还是走，不用为了证明什么临时改票。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 909823079,
+  "textSha256": "e3b1d4b36f84f58f40495aae886c821e9dd40fc33cbf8033cbaa579a77b463d0",
+  "medium": "spoken",
+  "requestSha256": "8c5fbd837e98b73762885ceeb3e931339fb4a888fc1eda34a6a4eced964391a5",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "可以前提是你明天該走還是走不用為了證明什麼臨時改票",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 5.68,
+  "wallSeconds": 256.717,
+  "loudness": {
+    "input_i": "-24.78",
+    "input_tp": "-6.74",
+    "input_lra": "1.50",
+    "input_thresh": "-35.05",
+    "output_i": "-19.92",
+    "output_tp": "-2.00",
+    "output_lra": "0.80",
+    "output_thresh": "-30.27",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.08"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-open-l019/raw.wav",
+      "bytes": 545360,
+      "sha256": "ab3d56a832e30116f503e64e2c5ba95f80d32e66e16c6516bc1da4c8aeadff21"
+    },
+    "master": {
+      "path": "rain-s04-open-l019/master.wav",
+      "bytes": 272718,
+      "sha256": "cdadf910c2a32e7523afde676e951fbad0725c8edf9cb2929ea4251842d41408"
+    },
+    "runtime": {
+      "path": "rain-s04-open-l019/runtime.ogg",
+      "bytes": 42897,
+      "sha256": "6b35209774ad2cabb1057ca66ef6dd772977d3978c693108bed93f7009b9f77d"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

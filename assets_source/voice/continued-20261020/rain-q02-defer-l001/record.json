@@ -1,0 +1,56 @@
+{
+  "id": "rain-q02-defer-l001",
+  "sceneId": "s03_letter",
+  "lineId": "q02_defer_l001",
+  "lineIndex": 0,
+  "speaker": "p",
+  "text": "可能是以前遗漏的东西。我先收起来。",
+  "choiceId": "q02_defer",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1738256599,
+  "textSha256": "b83eaeff646b20a6aa7f2e81521d7b33a20cc9071e0222ca84cf383103558425",
+  "medium": "spoken",
+  "requestSha256": "ebd1150c86cf1735bd784588dbcc791dbe44f1e97b97678a4251cd0a3e693cee",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "可能是以前遗漏的东西我先收起来",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.04,
+  "wallSeconds": 148.438,
+  "loudness": {
+    "input_i": "-26.65",
+    "input_tp": "-8.38",
+    "input_lra": "0.50",
+    "input_thresh": "-37.31",
+    "output_i": "-19.15",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-29.83",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.85"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-q02-defer-l001/raw.wav",
+      "bytes": 291920,
+      "sha256": "032c6cfd8d24942779b01c549b3fd9ddd0db16bb3b176b6dae075925b8762b8b"
+    },
+    "master": {
+      "path": "rain-q02-defer-l001/master.wav",
+      "bytes": 145998,
+      "sha256": "225826d9ed8d94fdbfb99839177a8731d3250857b96e01ec1187f57a014a77b5"
+    },
+    "runtime": {
+      "path": "rain-q02-defer-l001/runtime.ogg",
+      "bytes": 27048,
+      "sha256": "27b6bb2725c06fda03b90cb3c04c066903b12b55e73a688c08e60126ce5a5313"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

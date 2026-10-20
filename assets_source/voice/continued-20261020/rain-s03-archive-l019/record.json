@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-archive-l019",
+  "sceneId": "s03_archive",
+  "lineId": "s03_archive_l019",
+  "lineIndex": 18,
+  "speaker": "h",
+  "text": "你住哪边？",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 948973488,
+  "textSha256": "d40c087395acc884ee47e5ec1c8910502f0890df3dda9283569580f740183974",
+  "medium": "spoken",
+  "requestSha256": "a95317e02b3fdf5b7d60b933ccb2abae43d5028a1066f4f2205c9d6e10361952",
+  "attempt": 1,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你住哪边",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.28,
+  "wallSeconds": 138.571,
+  "loudness": {
+    "input_i": "-23.26",
+    "input_tp": "-12.00",
+    "input_lra": "0.00",
+    "input_thresh": "-33.26",
+    "output_i": "-20.01",
+    "output_tp": "-8.75",
+    "output_lra": "0.00",
+    "output_thresh": "-30.01",
+    "normalization_type": "linear",
+    "target_offset": "0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-archive-l019/raw.wav",
+      "bytes": 122960,
+      "sha256": "ccb9e47aa60f4d62602d18abe5b4e412a1b34f6c793cda1096f53f441d392745"
+    },
+    "master": {
+      "path": "rain-s03-archive-l019/master.wav",
+      "bytes": 61518,
+      "sha256": "4db565cc6d6055bc330e959d0dd264dd4b62498240558823e27639db88b9e0ff"
+    },
+    "runtime": {
+      "path": "rain-s03-archive-l019/runtime.ogg",
+      "bytes": 12956,
+      "sha256": "3856d17c4e0d2d762269ec3b18d229901c9e39ea5e86c878c6f015a3f5e5741f"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

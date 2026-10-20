@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-reunion-l019",
+  "sceneId": "s02_reunion",
+  "lineId": "s02_reunion_l019",
+  "lineIndex": 18,
+  "speaker": "h",
+  "text": "你那箱东西应该更多。以前展览撤得急，很多书都是你直接塞进去的。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1401092083,
+  "textSha256": "74d18bd774045527e0e203b836c60d5e7ad50297f897286977d1018df4842937",
+  "medium": "spoken",
+  "requestSha256": "6792e4f871c5a4f6a5140c5dcdc782fdea1abf9b017cf61925e927f0b71499c9",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你那一箱东西应该更多以前展览彻的棋很多书都是你直接塞进去的",
+    "cer": 0.142857,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 5.92,
+  "wallSeconds": 298.149,
+  "loudness": {
+    "input_i": "-24.44",
+    "input_tp": "-8.14",
+    "input_lra": "0.20",
+    "input_thresh": "-34.60",
+    "output_i": "-19.73",
+    "output_tp": "-3.69",
+    "output_lra": "1.10",
+    "output_thresh": "-29.96",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.27"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-reunion-l019/raw.wav",
+      "bytes": 568400,
+      "sha256": "df740cb93c8409bb2140c24a64c42822a15f85242fc2594c0237637e77dfeb8e"
+    },
+    "master": {
+      "path": "rain-s02-reunion-l019/master.wav",
+      "bytes": 284238,
+      "sha256": "887f8aa473f3b54f728d5d90994d1c4180fe435ca944fc6fbe61cc3e57a7fc2e"
+    },
+    "runtime": {
+      "path": "rain-s02-reunion-l019/runtime.ogg",
+      "bytes": 47232,
+      "sha256": "1290baf7a094ccfb8858aea9b0c49bdd656bc96a43449d04a2e8cdf72484ae6c"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-waiting-l026",
+  "sceneId": "s04_waiting",
+  "lineId": "s04_waiting_l026",
+  "lineIndex": 26,
+  "speaker": "h",
+  "text": "忙的时候说一声就好。哪天不想聊，也告诉我，我就去做自己的事。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 131053810,
+  "textSha256": "fe911f060b2ac012858f8bd81188000a9f808ae5487f7d24bb7a72e0a1f3c3f8",
+  "medium": "spoken",
+  "requestSha256": "d658b76b93352f0a8e4880f4b64951cc2ca0de4c83c9f488fc19ab6f2032da89",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "忙的時候說一聲就好哪天不想聊也告訴我我就去做自己的事",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 5.52,
+  "wallSeconds": 24.446,
+  "loudness": {
+    "input_i": "-25.24",
+    "input_tp": "-7.07",
+    "input_lra": "0.80",
+    "input_thresh": "-35.63",
+    "output_i": "-20.12",
+    "output_tp": "-2.00",
+    "output_lra": "1.00",
+    "output_thresh": "-30.55",
+    "normalization_type": "dynamic",
+    "target_offset": "0.12"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-waiting-l026/raw.wav",
+      "bytes": 530000,
+      "sha256": "99410fd183ea664451d75a02fbf9a3979a518a87ed90cdba2e2417e23876c807"
+    },
+    "master": {
+      "path": "rain-s04-waiting-l026/master.wav",
+      "bytes": 265038,
+      "sha256": "483126edd5003d07e066b490a44948661bdfe8359a96a56a91668eb7f93859e2"
+    },
+    "runtime": {
+      "path": "rain-s04-waiting-l026/runtime.ogg",
+      "bytes": 43074,
+      "sha256": "2a75a6128c82fe213e5f6c48d7c37b070509a19bb1e95550ffc2b0c6aebcb82a"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s04-concrete-l007",
+  "sceneId": "s04_concrete",
+  "lineId": "v07_s04_concrete_l007",
+  "lineIndex": 14,
+  "speaker": "p",
+  "text": "我把第一页看完再开口。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1359591155,
+  "textSha256": "dae4192677f55aae8463e064f40d315e2ee7be3fa61ac0c73c9059f2d668ee53",
+  "medium": "spoken",
+  "requestSha256": "5060b0aa065009742a6193ae2369bb78ff0c499377fbb6f33c33c57e34ea3fd7",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我把第一页看完再开口",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.16,
+  "wallSeconds": 92.859,
+  "loudness": {
+    "input_i": "-28.99",
+    "input_tp": "-9.31",
+    "input_lra": "0.00",
+    "input_thresh": "-38.99",
+    "output_i": "-21.69",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-31.69",
+    "normalization_type": "linear",
+    "target_offset": "1.69"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s04-concrete-l007/raw.wav",
+      "bytes": 207440,
+      "sha256": "591f0606cb828747e264bea1fffa6028775eefaf8402ec5bb952c05d4ca8a526"
+    },
+    "master": {
+      "path": "rain-v07-s04-concrete-l007/master.wav",
+      "bytes": 103758,
+      "sha256": "e7336f646f152ace6b115d4b9db6e66fa69287e459e904161afd360ab2db9b4b"
+    },
+    "runtime": {
+      "path": "rain-v07-s04-concrete-l007/runtime.ogg",
+      "bytes": 19999,
+      "sha256": "a0267e429685cd15d8ee6bcb16d7640caa7c34f9ac885b6449bf2e516a6c367e"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

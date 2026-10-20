@@ -1,0 +1,56 @@
+{
+  "id": "rain-q02-honest-l003",
+  "sceneId": "s03_letter",
+  "lineId": "q02_honest_l003",
+  "lineIndex": 2,
+  "speaker": "p",
+  "text": "我怕答应了做不到，也怕你说不用等。所以把这个决定，一起拖下去了。",
+  "choiceId": "q02_honest",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 952972815,
+  "textSha256": "f8b2eba399b217efc44ecbe1853743abd2c4ca8a779d46989321a41711addbd7",
+  "medium": "spoken",
+  "requestSha256": "85d302708597d991710dbf6299b754492363a0480a4e90f232c22cee6686af7b",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我怕答应了做不到也怕你说不用等所以把这个决定一起拖下去了",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 5.92,
+  "wallSeconds": 345.465,
+  "loudness": {
+    "input_i": "-26.48",
+    "input_tp": "-5.61",
+    "input_lra": "1.30",
+    "input_thresh": "-37.06",
+    "output_i": "-20.47",
+    "output_tp": "-2.00",
+    "output_lra": "1.30",
+    "output_thresh": "-30.86",
+    "normalization_type": "dynamic",
+    "target_offset": "0.47"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-q02-honest-l003/raw.wav",
+      "bytes": 568400,
+      "sha256": "e858f96177cd112539cf9f5feae319fd0298080f0faa80d244172059c8485753"
+    },
+    "master": {
+      "path": "rain-q02-honest-l003/master.wav",
+      "bytes": 284238,
+      "sha256": "48986b846441be7f97c6df18649e79a72f5ee20dc74afae1c08bcc06742dde51"
+    },
+    "runtime": {
+      "path": "rain-q02-honest-l003/runtime.ogg",
+      "bytes": 48336,
+      "sha256": "84af2326d9945a96a300a2751882369a45a7e5baab484cfb8c50def366664bb1"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

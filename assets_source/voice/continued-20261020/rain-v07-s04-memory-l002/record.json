@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s04-memory-l002",
+  "sceneId": "s04_memory",
+  "lineId": "v07_s04_memory_l002",
+  "lineIndex": 7,
+  "speaker": "p",
+  "text": "能看看完整的画面吗？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1686636696,
+  "textSha256": "e18f5dd1a99a21dac1f13cacb0bf5f7e1d1b22455842116d3c27973e9ca674e6",
+  "medium": "spoken",
+  "requestSha256": "7389af28105f49e1b9acfc4b0c6c4997c0eec47d1e455c4b58a54b3211fb4d27",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "能看个完整的画面吗",
+    "cer": 0.111111,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.76,
+  "wallSeconds": 90.643,
+  "loudness": {
+    "input_i": "-23.62",
+    "input_tp": "-8.78",
+    "input_lra": "0.00",
+    "input_thresh": "-33.62",
+    "output_i": "-20.00",
+    "output_tp": "-5.16",
+    "output_lra": "0.00",
+    "output_thresh": "-30.00",
+    "normalization_type": "linear",
+    "target_offset": "0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s04-memory-l002/raw.wav",
+      "bytes": 169040,
+      "sha256": "5f5cd8935a029d722135b5098877d1ff66cb476c463715c536fcf8e2e395e293"
+    },
+    "master": {
+      "path": "rain-v07-s04-memory-l002/master.wav",
+      "bytes": 84558,
+      "sha256": "6f39197be3e8ced4b585104b146b112254b5df9140ba14259114227c6f6a7960"
+    },
+    "runtime": {
+      "path": "rain-v07-s04-memory-l002/runtime.ogg",
+      "bytes": 16706,
+      "sha256": "01887760069e4e488ba367cd48817f2085e9bf2a76c36d5e4eb765ac82f1ee69"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

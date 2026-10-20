@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-deferred-l025",
+  "sceneId": "s03_deferred",
+  "lineId": "s03_deferred_l025",
+  "lineIndex": 24,
+  "speaker": "h",
+  "text": "等你真准备说的时候，别从“那都过去了”开始。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 704195859,
+  "textSha256": "712023e4b6318f8c23469d3ea1f5a60db32e9ec096e13355649a8de9304bf3a7",
+  "medium": "spoken",
+  "requestSha256": "6d3419e0862111bcd677740a3fbc4f2d24103248e04c68d5ad6f99cc46951982",
+  "attempt": 1,
+  "status": "accepted",
+  "asr": {
+    "transcript": "当你真准备说的时候别从那都过去了开始",
+    "cer": 0.055556,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.08,
+  "wallSeconds": 186.721,
+  "loudness": {
+    "input_i": "-23.80",
+    "input_tp": "-9.51",
+    "input_lra": "1.80",
+    "input_thresh": "-34.08",
+    "output_i": "-19.93",
+    "output_tp": "-6.13",
+    "output_lra": "1.10",
+    "output_thresh": "-30.17",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.07"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-deferred-l025/raw.wav",
+      "bytes": 391760,
+      "sha256": "18d0e787872ef3a9b5dd963268b4533b0146fdf6607af28a874c7c5369f2b03a"
+    },
+    "master": {
+      "path": "rain-s03-deferred-l025/master.wav",
+      "bytes": 195918,
+      "sha256": "1c8e761696ce3b58d25687208b5e5007fa300fc265c31b9ce1af382a36e3ddcc"
+    },
+    "runtime": {
+      "path": "rain-s03-deferred-l025/runtime.ogg",
+      "bytes": 32608,
+      "sha256": "6724c25b82233bf3f13bf99e04bd24d1250cd9cb00d826eff7bb97a8144cdea8"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

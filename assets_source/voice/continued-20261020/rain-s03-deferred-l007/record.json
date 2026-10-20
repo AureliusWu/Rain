@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-deferred-l007",
+  "sceneId": "s03_deferred",
+  "lineId": "s03_deferred_l007",
+  "lineIndex": 6,
+  "speaker": "h",
+  "text": "会。但我可以等你说，不用替你猜一个答案。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1922115662,
+  "textSha256": "4db2052ef22149879e4e952b76421267ec4256f814928b6040dbb1926951332d",
+  "medium": "spoken",
+  "requestSha256": "07ef2015f1b4a910f9bd622e3b21bf48db8bdd7fc1b14e819675a0b52af4ece2",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "會,但我可以等你說,不用替你猜一個答案",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.88,
+  "wallSeconds": 44.858,
+  "loudness": {
+    "input_i": "-22.93",
+    "input_tp": "-5.75",
+    "input_lra": "1.60",
+    "input_thresh": "-33.46",
+    "output_i": "-18.73",
+    "output_tp": "-2.00",
+    "output_lra": "1.50",
+    "output_thresh": "-29.70",
+    "normalization_type": "dynamic",
+    "target_offset": "-1.27"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-deferred-l007/raw.wav",
+      "bytes": 468560,
+      "sha256": "32d89107cdcdf61a73ba4f0a3df8abf8ce03126f2110a62f02cdb7577520cffe"
+    },
+    "master": {
+      "path": "rain-s03-deferred-l007/master.wav",
+      "bytes": 234318,
+      "sha256": "df4245e01d77a7ae0534beba6d0654b719bbf7c0f1458ad55229acc4f1b49ce0"
+    },
+    "runtime": {
+      "path": "rain-s03-deferred-l007/runtime.ogg",
+      "bytes": 37172,
+      "sha256": "9aba78fa6dd99475fe611d0b02f846d3f34a48fbb5b7cdb172a8ffb231fbdd5d"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

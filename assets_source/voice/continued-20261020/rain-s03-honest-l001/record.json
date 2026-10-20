@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-honest-l001",
+  "sceneId": "s03_honest",
+  "lineId": "s03_honest_l001",
+  "lineIndex": 0,
+  "speaker": "p",
+  "text": "里面写的是那时候的打算。有些后来没有做到。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 116663450,
+  "textSha256": "98e0d4953f6a1aaebc533fb860841075cb5b8a5c0b6aaddcfcd3a9d2a78c8565",
+  "medium": "spoken",
+  "requestSha256": "7152e4a022149c3e8090b5d01cd800f31462293d6f561a0e7f3b430de4338312",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "里面写的是那时候的打算有些后来没有做的",
+    "cer": 0.052632,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.84,
+  "wallSeconds": 380.147,
+  "loudness": {
+    "input_i": "-25.82",
+    "input_tp": "-8.90",
+    "input_lra": "0.50",
+    "input_thresh": "-35.96",
+    "output_i": "-19.16",
+    "output_tp": "-2.42",
+    "output_lra": "0.00",
+    "output_thresh": "-29.28",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.84"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-honest-l001/raw.wav",
+      "bytes": 368720,
+      "sha256": "eef17c2deb14d4ed864041b49adc8549ad2677c7f178055a71e19028197b1bbb"
+    },
+    "master": {
+      "path": "rain-s03-honest-l001/master.wav",
+      "bytes": 184398,
+      "sha256": "bb085f58db0321662d685636347cd5360849b4ea6fed32eb95d2d4446f47d08e"
+    },
+    "runtime": {
+      "path": "rain-s03-honest-l001/runtime.ogg",
+      "bytes": 32772,
+      "sha256": "821c226c7f23b893fd54b4d525ddac9c98f737ef0649bc0420e08f8adabc0ea6"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

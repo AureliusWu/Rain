@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-business-l022",
+  "sceneId": "s02_business",
+  "lineId": "s02_business_l022",
+  "lineIndex": 21,
+  "speaker": "h",
+  "text": "还差两张。你愿意照灯就照灯，别替我猜年份。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 920939461,
+  "textSha256": "965b4a18c7429373de25276a14f4b6836c863caff0203c3aa06d1c86025d2e71",
+  "medium": "spoken",
+  "requestSha256": "19ee0ba299baec435bc05520c207d86d1b20d6b3efdf981ad869a14c805f1e17",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "还差两张你愿意照灯就照灯别替我猜年份",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.76,
+  "wallSeconds": 165.25,
+  "loudness": {
+    "input_i": "-24.85",
+    "input_tp": "-7.75",
+    "input_lra": "0.30",
+    "input_thresh": "-35.30",
+    "output_i": "-19.36",
+    "output_tp": "-2.06",
+    "output_lra": "0.00",
+    "output_thresh": "-29.78",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.64"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-business-l022/raw.wav",
+      "bytes": 361040,
+      "sha256": "b74f129c8e9cf511148fab99c8360d30385c6a9c21d68c46d684fcd95a1ab784"
+    },
+    "master": {
+      "path": "rain-s02-business-l022/master.wav",
+      "bytes": 180558,
+      "sha256": "e35c6842e2a25f2cbeda63ddb8fb507efe542537ca9a071d279fa408a681206f"
+    },
+    "runtime": {
+      "path": "rain-s02-business-l022/runtime.ogg",
+      "bytes": 30664,
+      "sha256": "12477be3d3f1f7048d49612f172b60d68eafcaf0c9265e66e76268880ab4271c"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

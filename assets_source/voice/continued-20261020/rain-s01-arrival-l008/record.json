@@ -1,0 +1,55 @@
+{
+  "id": "rain-s01-arrival-l008",
+  "sceneId": "s01_arrival",
+  "lineId": "s01_arrival_l008",
+  "lineIndex": 7,
+  "speaker": "h",
+  "text": "嗯。你倒是记得名字。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1889785043,
+  "textSha256": "9d909c2d8cf3ac6d1f683a2d3b375636397938de4c7323a4c66972165975384a",
+  "medium": "spoken",
+  "requestSha256": "b3088840b2ca462cdb8c905a9b59785bc479b2434bdb730b6b274f729c21e1c9",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "嗯,你倒是记得名字",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.24,
+  "wallSeconds": 124.707,
+  "loudness": {
+    "input_i": "-25.92",
+    "input_tp": "-12.58",
+    "input_lra": "0.00",
+    "input_thresh": "-36.70",
+    "output_i": "-19.99",
+    "output_tp": "-6.66",
+    "output_lra": "0.00",
+    "output_thresh": "-31.01",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s01-arrival-l008/raw.wav",
+      "bytes": 215120,
+      "sha256": "f71c02db97f94b88eed6ec39fb2206e5b687e093def3c78d36f4ef301e86857d"
+    },
+    "master": {
+      "path": "rain-s01-arrival-l008/master.wav",
+      "bytes": 107598,
+      "sha256": "082fd3d4c161ac83abcbb9e8fb597dad4e292365d99e63c7a49d3a9c3f501ce3"
+    },
+    "runtime": {
+      "path": "rain-s01-arrival-l008/runtime.ogg",
+      "bytes": 19037,
+      "sha256": "e3ae7b15e5de7f464528aee7bf134311a6584ebed50790b263ca0dc09d218608"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

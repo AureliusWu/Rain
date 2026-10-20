@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-deferred-l003",
+  "sceneId": "s03_deferred",
+  "lineId": "s03_deferred_l003",
+  "lineIndex": 2,
+  "speaker": "p",
+  "text": "认识。只是现在还没想好怎么说。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 213413955,
+  "textSha256": "4b9d354ccc9bb95175f6c67894366afd245b0d439930bf3b96a38b58fe0aea74",
+  "medium": "spoken",
+  "requestSha256": "ebcc13db7167d38967f1cd77922784764f90828602d855458acc0a39fc115c71",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "认识只是现在还没想好怎么说",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.56,
+  "wallSeconds": 291.905,
+  "loudness": {
+    "input_i": "-24.44",
+    "input_tp": "-4.17",
+    "input_lra": "0.00",
+    "input_thresh": "-34.44",
+    "output_i": "-22.26",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-32.26",
+    "normalization_type": "linear",
+    "target_offset": "2.26"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-deferred-l003/raw.wav",
+      "bytes": 245840,
+      "sha256": "b29e2b13ba49e85bc283cb491ac19c2d92061ffeb6a09ea5fdb342eb3efaabe5"
+    },
+    "master": {
+      "path": "rain-s03-deferred-l003/master.wav",
+      "bytes": 122958,
+      "sha256": "8814fc58d308c10b768d99cbe14dbaa2f8b49109aac079a6ab234d723c6e8005"
+    },
+    "runtime": {
+      "path": "rain-s03-deferred-l003/runtime.ogg",
+      "bytes": 22132,
+      "sha256": "ece186ed9328f38799a2b3baeba28113dbe13bf606d752d3bf00854354d970bd"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-reunion-l011",
+  "sceneId": "s02_reunion",
+  "lineId": "s02_reunion_l011",
+  "lineIndex": 10,
+  "speaker": "h",
+  "text": "站务的人说，寄存柜里的东西都搬到出口了。已经替你留好，不用赶。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 886517744,
+  "textSha256": "ba527f3ac9e78782e8a2af79437e703c84f18614e1312a28246174117b913a81",
+  "medium": "spoken",
+  "requestSha256": "9908f3c10a34bf1de9e167f4cbb35be72257d9bf2da237d53029fb1677b13b4c",
+  "attempt": 2,
+  "status": "accepted",
+  "asr": {
+    "transcript": "戰物的人說,既存貴禮的東西都搬到出口了,已經替你留好,不用趕。",
+    "cer": 0.185185,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 6.64,
+  "wallSeconds": 308.31,
+  "loudness": {
+    "input_i": "-25.65",
+    "input_tp": "-6.65",
+    "input_lra": "6.10",
+    "input_thresh": "-36.89",
+    "output_i": "-21.08",
+    "output_tp": "-2.43",
+    "output_lra": "5.90",
+    "output_thresh": "-31.99",
+    "normalization_type": "dynamic",
+    "target_offset": "1.08"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-reunion-l011/raw.wav",
+      "bytes": 637520,
+      "sha256": "3cc805b0037664f168e1368bac8958048f7cefbc0f72e26ded48128001de2a76"
+    },
+    "master": {
+      "path": "rain-s02-reunion-l011/master.wav",
+      "bytes": 318798,
+      "sha256": "9b4d6ee7b092ed6637dbdea38f3f937c7e475a26142e4daa280cc1023d33e8c7"
+    },
+    "runtime": {
+      "path": "rain-s02-reunion-l011/runtime.ogg",
+      "bytes": 49409,
+      "sha256": "c3ad7d583127c764ea1e43e311a6250abf8f715865691c56feb8525efe0c4e97"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

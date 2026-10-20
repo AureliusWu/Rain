@@ -1,0 +1,55 @@
+{
+  "id": "rain-s05-departure-l005",
+  "sceneId": "s05_departure",
+  "lineId": "s05_departure_l005",
+  "lineIndex": 9,
+  "speaker": "h",
+  "text": "已经换了老板。不过热水还是免费的。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1780610706,
+  "textSha256": "b09277a9236cb7e4aafeb9e9927f55640fb8e67d5a0b432804eb3e761653803c",
+  "medium": "spoken",
+  "requestSha256": "c0d6061b0f5a1f9a70ace3fbdfa8c1eb0328cfa7aaa11d24a804a2f2e847a6f0",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "已经换了老板不过热水还是免费的",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.2,
+  "wallSeconds": 220.421,
+  "loudness": {
+    "input_i": "-25.20",
+    "input_tp": "-6.70",
+    "input_lra": "0.50",
+    "input_thresh": "-36.00",
+    "output_i": "-19.57",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.37",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.43"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s05-departure-l005/raw.wav",
+      "bytes": 307280,
+      "sha256": "df3072813b792eabf76e4013eeb4b16b7ba28549fe7f2b8cbd1b6cd074789be4"
+    },
+    "master": {
+      "path": "rain-s05-departure-l005/master.wav",
+      "bytes": 153678,
+      "sha256": "b2f93f6c00f507bbc19907b1017459ae8db342ab81e8b175811cfed51180a126"
+    },
+    "runtime": {
+      "path": "rain-s05-departure-l005/runtime.ogg",
+      "bytes": 25813,
+      "sha256": "954dae730c39a2281312a1c15135158a84e7c88f9f83de9295b73b35cfacac5f"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

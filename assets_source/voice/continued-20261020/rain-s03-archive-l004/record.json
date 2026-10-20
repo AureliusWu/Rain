@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-archive-l004",
+  "sceneId": "s03_archive",
+  "lineId": "s03_archive_l004",
+  "lineIndex": 3,
+  "speaker": "h",
+  "text": "齐了。相框没必要全拿，有两个边角已经坏了。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 618840374,
+  "textSha256": "6983b1ce38484baf2a9b5f2b4839a26fb08edee3f5dce1d80425889c4582ac06",
+  "medium": "spoken",
+  "requestSha256": "5daa00423f59ef08c7e35bf9b61ecb8dcc25d1b2a2d1e38a239ca513f21e62dd",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "齊了,相框没必要全拿,有两个边角已经坏了",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.0,
+  "wallSeconds": 232.37,
+  "loudness": {
+    "input_i": "-24.03",
+    "input_tp": "-9.30",
+    "input_lra": "0.50",
+    "input_thresh": "-34.16",
+    "output_i": "-19.71",
+    "output_tp": "-4.84",
+    "output_lra": "0.50",
+    "output_thresh": "-30.20",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.29"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-archive-l004/raw.wav",
+      "bytes": 384080,
+      "sha256": "0038466847161ed212e24e068d8125186527d191c420b3608e92e5c4c03774c9"
+    },
+    "master": {
+      "path": "rain-s03-archive-l004/master.wav",
+      "bytes": 192078,
+      "sha256": "9c94bc8afbf49ee30d4c5b6a1163fad5f1adb372c6af2000725817c190811ce4"
+    },
+    "runtime": {
+      "path": "rain-s03-archive-l004/runtime.ogg",
+      "bytes": 32121,
+      "sha256": "3d4e00fae7c69f88a2cda88927401344097a07f1676bdb97f04a3f73e179b4e4"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

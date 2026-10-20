@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-honest-l010",
+  "sceneId": "s03_honest",
+  "lineId": "s03_honest_l010",
+  "lineIndex": 9,
+  "speaker": "p",
+  "text": "那时候公司把报到时间提前了。我以为自己只是先去几个月，等试用期结束就回来一次。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1691505479,
+  "textSha256": "97a9162d310cb4a7bbf213f0619d0f1e3193a3771b1ee9bf79ef40ed7f180c93",
+  "medium": "spoken",
+  "requestSha256": "c0b5395ebe3cda5613f20fb10c40c46b4fdd5f6d26aca332baf305bc5736cd0f",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "那时候公司把报道时间提前了我以为自己也只是先去几个月等试用期结束就回来一次",
+    "cer": 0.055556,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 7.6,
+  "wallSeconds": 391.288,
+  "loudness": {
+    "input_i": "-27.47",
+    "input_tp": "-7.08",
+    "input_lra": "0.70",
+    "input_thresh": "-37.64",
+    "output_i": "-20.18",
+    "output_tp": "-2.00",
+    "output_lra": "1.00",
+    "output_thresh": "-30.36",
+    "normalization_type": "dynamic",
+    "target_offset": "0.18"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-honest-l010/raw.wav",
+      "bytes": 729680,
+      "sha256": "b2d0966ad666176057e2aab9864cbd5712299d676d50625a15b0d8f1db5fde73"
+    },
+    "master": {
+      "path": "rain-s03-honest-l010/master.wav",
+      "bytes": 364878,
+      "sha256": "bd5d0859e0380b365836ec038c1a7a0cdb499f655f261a6d8758171530a8a617"
+    },
+    "runtime": {
+      "path": "rain-s03-honest-l010/runtime.ogg",
+      "bytes": 58874,
+      "sha256": "766169696279d12dc271300e184151d435cfda9ca0409150274beb1bafd1ff59"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

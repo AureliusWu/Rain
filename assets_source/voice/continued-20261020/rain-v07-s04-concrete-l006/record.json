@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s04-concrete-l006",
+  "sceneId": "s04_concrete",
+  "lineId": "v07_s04_concrete_l006",
+  "lineIndex": 13,
+  "speaker": "h",
+  "text": "那册摄影集，第一页只有三行。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 174161616,
+  "textSha256": "8140898bfcdfba8a2065382d4ce8bf9be4ad1e06acba16b4ca1ba8888e31b9fe",
+  "medium": "spoken",
+  "requestSha256": "c3778351cd02b567bf1aa2f378eb2e3c83f7cf1ae0391034e66bd00789de2bab",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "那側攝影機,第一頁只有三行",
+    "cer": 0.166667,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.04,
+  "wallSeconds": 169.138,
+  "loudness": {
+    "input_i": "-23.75",
+    "input_tp": "-8.96",
+    "input_lra": "0.10",
+    "input_thresh": "-34.24",
+    "output_i": "-19.58",
+    "output_tp": "-4.85",
+    "output_lra": "0.00",
+    "output_thresh": "-30.08",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.42"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s04-concrete-l006/raw.wav",
+      "bytes": 291920,
+      "sha256": "2f0938559bac41a21ee2dad529841999ca8d4d69414896559be65924c38cc9ba"
+    },
+    "master": {
+      "path": "rain-v07-s04-concrete-l006/master.wav",
+      "bytes": 145998,
+      "sha256": "a2ecc56518cec7ef430fc32f1a852ebbb23bc18c1180bb2061d90ef734e91f00"
+    },
+    "runtime": {
+      "path": "rain-v07-s04-concrete-l006/runtime.ogg",
+      "bytes": 24716,
+      "sha256": "27c7b31fdbd1bf41f3fea46adea2f57b6452a6e0d4d56541367adea4426b643b"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

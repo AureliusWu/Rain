@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s04-repair-l003",
+  "sceneId": "s04_repair",
+  "lineId": "v07_s04_repair_l003",
+  "lineIndex": 4,
+  "speaker": "p",
+  "text": "嗯。这次等你自己回答。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 365045998,
+  "textSha256": "a71f0768427fe81bcfdb3892b06f17cfa6155fee60e452e98dcdbb3cd1bf3160",
+  "medium": "spoken",
+  "requestSha256": "0078a351e02d4406d2c8630834fcaa2e94d294474869bc36f50eae6afb46c58e",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "嗯这次等你自己回答",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.24,
+  "wallSeconds": 120.958,
+  "loudness": {
+    "input_i": "-27.57",
+    "input_tp": "-8.78",
+    "input_lra": "0.00",
+    "input_thresh": "-38.04",
+    "output_i": "-20.81",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-31.28",
+    "normalization_type": "linear",
+    "target_offset": "0.81"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s04-repair-l003/raw.wav",
+      "bytes": 215120,
+      "sha256": "cbfb1f6d0d672d5eaef06e58c041e9e348195d90541ab3308aad28ba4f7212eb"
+    },
+    "master": {
+      "path": "rain-v07-s04-repair-l003/master.wav",
+      "bytes": 107598,
+      "sha256": "8eaee3beb681f411786a747a62fa1b264bbe292b84ad02f8125876de82b04f9e"
+    },
+    "runtime": {
+      "path": "rain-v07-s04-repair-l003/runtime.ogg",
+      "bytes": 20494,
+      "sha256": "ecf77e45211773439896212889f1011ae0f199e73dd8956da0093e2ac8f8a998"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

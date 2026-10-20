@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-care-l018",
+  "sceneId": "s02_care",
+  "lineId": "s02_care_l018",
+  "lineIndex": 17,
+  "speaker": "p",
+  "text": "听起来你挺喜欢现在的地方。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1239283847,
+  "textSha256": "0b7aa808d9675019918a69b284dbdf586d8aae50193dc92bc3a38492c58282cb",
+  "medium": "spoken",
+  "requestSha256": "fd99cd4f0e6b27ced1e31017b2d82a5bf12901c43b4da37a7321b458c6a4c8e7",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "听起来你挺喜欢现在的地方",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.16,
+  "wallSeconds": 87.271,
+  "loudness": {
+    "input_i": "-25.21",
+    "input_tp": "-5.24",
+    "input_lra": "0.00",
+    "input_thresh": "-35.44",
+    "output_i": "-21.99",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-32.22",
+    "normalization_type": "linear",
+    "target_offset": "1.99"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-care-l018/raw.wav",
+      "bytes": 207440,
+      "sha256": "1719e143655ac17c674a32c6c323bef524b7461daa7be062eb780aa038e0932b"
+    },
+    "master": {
+      "path": "rain-s02-care-l018/master.wav",
+      "bytes": 103758,
+      "sha256": "6ad69d9d656e30fd7e1a7525fc527f7a78acbb88ea879ab93e8ce2925be6a6af"
+    },
+    "runtime": {
+      "path": "rain-s02-care-l018/runtime.ogg",
+      "bytes": 22103,
+      "sha256": "23ea2c1c3cb3642fa73a49fa09e35a82eeb15966a1dfa3d9ea71ce7b7002c997"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-boxes-l012",
+  "sceneId": "s02_boxes",
+  "lineId": "s02_boxes_l012",
+  "lineIndex": 11,
+  "speaker": "h",
+  "text": "这两本不是书店的，你可以带走。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1148182605,
+  "textSha256": "086bc33914b6389347b8d9f19ac75da63b4d8cc449be8fca9e471c263f4a6303",
+  "medium": "spoken",
+  "requestSha256": "a30025c9c8bf539cfa94937f98e36aa6491ff36b6e1f1936683ce3966467ac31",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "这两本不是书店的你可以带走",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.2,
+  "wallSeconds": 212.915,
+  "loudness": {
+    "input_i": "-28.99",
+    "input_tp": "-14.02",
+    "input_lra": "0.20",
+    "input_thresh": "-39.73",
+    "output_i": "-19.12",
+    "output_tp": "-4.07",
+    "output_lra": "0.00",
+    "output_thresh": "-29.92",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.88"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-boxes-l012/raw.wav",
+      "bytes": 307280,
+      "sha256": "45178457b0bdcf2e1f92b6a4d9c7278fca98ea0c6ade9acc957cff8af3d2806d"
+    },
+    "master": {
+      "path": "rain-s02-boxes-l012/master.wav",
+      "bytes": 153678,
+      "sha256": "3c258a117369b803b4913ddbe77f382585d29c2e7bc06b583c88f032375710f2"
+    },
+    "runtime": {
+      "path": "rain-s02-boxes-l012/runtime.ogg",
+      "bytes": 26164,
+      "sha256": "f7bc2744fcd327e464b23da0bc859ccabd8855fc1e5189e23e93e2cda9c33b02"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

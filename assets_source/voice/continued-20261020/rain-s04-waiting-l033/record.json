@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-waiting-l033",
+  "sceneId": "s04_waiting",
+  "lineId": "s04_waiting_l033",
+  "lineIndex": 33,
+  "speaker": "h",
+  "text": "还用写下来？又不是盘点。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1978899508,
+  "textSha256": "117a8ce35eef37d0f71a2d439dd7dce6ea0fc79b665b973b27c9f5fcf2ab3bdc",
+  "medium": "spoken",
+  "requestSha256": "cb30eb85696aa7e946b9b052b9700253e525032113f8da0451cbe09f0c1090c2",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "还用写下来又不是盘点",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.32,
+  "wallSeconds": 80.389,
+  "loudness": {
+    "input_i": "-29.95",
+    "input_tp": "-13.94",
+    "input_lra": "0.00",
+    "input_thresh": "-40.15",
+    "output_i": "-20.02",
+    "output_tp": "-4.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.22",
+    "normalization_type": "linear",
+    "target_offset": "0.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-waiting-l033/raw.wav",
+      "bytes": 222800,
+      "sha256": "f4da549373b33e676708097f206b5ba28a4ccc3f02b6566cb50d2e8154c79cb2"
+    },
+    "master": {
+      "path": "rain-s04-waiting-l033/master.wav",
+      "bytes": 111438,
+      "sha256": "7382570126566b8f00eabf4507dfd26583a6c077a7905343f874547086af381c"
+    },
+    "runtime": {
+      "path": "rain-s04-waiting-l033/runtime.ogg",
+      "bytes": 20132,
+      "sha256": "e793fc1d17e88fdb296e16d9a9269599251bdeb6f2306b2f085d3d312c87cce5"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

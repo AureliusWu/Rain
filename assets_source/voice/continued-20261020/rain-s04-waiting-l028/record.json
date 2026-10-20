@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-waiting-l028",
+  "sceneId": "s04_waiting",
+  "lineId": "s04_waiting_l028",
+  "lineIndex": 28,
+  "speaker": "p",
+  "text": "那我到住处后发一条。明早上车前也会说一声。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1644585448,
+  "textSha256": "6f1f0162e8415b892ad224965558f4adbe182ab5fd177d8a3546844202c8e94b",
+  "medium": "spoken",
+  "requestSha256": "4b8ba3aba71976f45a28813bbe93620500030e73d9ce8dbc5a5faef309bade54",
+  "attempt": 1,
+  "status": "accepted",
+  "asr": {
+    "transcript": "那我到住处后发一条明早上车前也会说一声",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.4,
+  "wallSeconds": 193.079,
+  "loudness": {
+    "input_i": "-25.39",
+    "input_tp": "-6.49",
+    "input_lra": "1.80",
+    "input_thresh": "-35.39",
+    "output_i": "-20.30",
+    "output_tp": "-2.00",
+    "output_lra": "0.40",
+    "output_thresh": "-30.39",
+    "normalization_type": "dynamic",
+    "target_offset": "0.30"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-waiting-l028/raw.wav",
+      "bytes": 422480,
+      "sha256": "f0a3ed08d19823ebe1a1b4d5aef30b615e52c38c148708892b62cedc0ebb0870"
+    },
+    "master": {
+      "path": "rain-s04-waiting-l028/master.wav",
+      "bytes": 211278,
+      "sha256": "f2761302236d149642ea315c8de479e7bc3812c9ef6134fb45e576d32ae795cd"
+    },
+    "runtime": {
+      "path": "rain-s04-waiting-l028/runtime.ogg",
+      "bytes": 36798,
+      "sha256": "ac8072aca2bbc8b0c9125dd07843935c8878201c7274e593136d0f725f09d3d3"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

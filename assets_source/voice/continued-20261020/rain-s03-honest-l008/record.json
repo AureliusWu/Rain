@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-honest-l008",
+  "sceneId": "s03_honest",
+  "lineId": "s03_honest_l008",
+  "lineIndex": 7,
+  "speaker": "h",
+  "text": "还有，别把所有没做到的事都算成一件。有的已经过去了，有的现在还能说明白。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1299504159,
+  "textSha256": "504a67121ba58bce28e23f5f4223102c50296668fb8cde0fef33edb6cdeb222c",
+  "medium": "spoken",
+  "requestSha256": "09d860e5f642f74e2789dee229f612d378acde0ed095190083e3b35370411290",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "還有 別把所有沒做到的事都算成一件有的已經過去了 有的現在還能說明白",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 8.0,
+  "wallSeconds": 484.908,
+  "loudness": {
+    "input_i": "-26.06",
+    "input_tp": "-10.06",
+    "input_lra": "0.90",
+    "input_thresh": "-36.52",
+    "output_i": "-19.94",
+    "output_tp": "-3.73",
+    "output_lra": "1.10",
+    "output_thresh": "-30.83",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.06"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-honest-l008/raw.wav",
+      "bytes": 768080,
+      "sha256": "ad49dc5596c62d16becc3937bf76a0353463c8000a2cd23f50ded0d5f93ba388"
+    },
+    "master": {
+      "path": "rain-s03-honest-l008/master.wav",
+      "bytes": 384078,
+      "sha256": "88b78c6156c92a37bc9f73302e12b55378ffef6f42eb36c3dd8319fa1f8a889e"
+    },
+    "runtime": {
+      "path": "rain-s03-honest-l008/runtime.ogg",
+      "bytes": 59652,
+      "sha256": "49a0b0ef593b3c3ecd66cc5793838558d53d2a3d5212e7d11d3bfb2300b4a76b"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-honest-l005",
+  "sceneId": "s03_honest",
+  "lineId": "s03_honest_l005",
+  "lineIndex": 4,
+  "speaker": "h",
+  "text": "我还不知道你写了什么。要不要看，也得让我自己决定。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 923934247,
+  "textSha256": "1b1e42033107f4a4ef9ed18bdf380ceff562aea68e27d635f5b2dbea54e73772",
+  "medium": "spoken",
+  "requestSha256": "64bc1de02cdf1acaa54de1ddd2e1610fcb8bb631c46b8b94972953d838f8a680",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我还不知道你写了什么,要不要看,也得让我自己决定。",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 7.52,
+  "wallSeconds": 451.651,
+  "loudness": {
+    "input_i": "-26.03",
+    "input_tp": "-10.62",
+    "input_lra": "3.20",
+    "input_thresh": "-36.31",
+    "output_i": "-20.65",
+    "output_tp": "-6.21",
+    "output_lra": "2.20",
+    "output_thresh": "-31.18",
+    "normalization_type": "dynamic",
+    "target_offset": "0.65"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-honest-l005/raw.wav",
+      "bytes": 722000,
+      "sha256": "7999a76e925e15385d42a9f5cf5b7a95cdf733f5990124a7dfc746e2ecf6a7a9"
+    },
+    "master": {
+      "path": "rain-s03-honest-l005/master.wav",
+      "bytes": 361038,
+      "sha256": "58a65763b87b51e09bf04a24d43492bd48b097a67d924d820a2e181ab0a79e75"
+    },
+    "runtime": {
+      "path": "rain-s03-honest-l005/runtime.ogg",
+      "bytes": 54254,
+      "sha256": "2fc51e835e9608db8503eb187ad22e7f3b37215702e64b49199612cbceafd7d7"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

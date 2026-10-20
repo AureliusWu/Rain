@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-reserved-l002",
+  "sceneId": "s04_reserved",
+  "lineId": "s04_reserved_l002",
+  "lineIndex": 1,
+  "speaker": "p",
+  "text": "你要走了吗？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 496585251,
+  "textSha256": "734f58aae1db10bcdcb8b9ace737137d44ca088c85cda766be0fff8f891065df",
+  "medium": "spoken",
+  "requestSha256": "32904981bebf76348a8273128261fff3525b33af7a97facc95c2adc134a4b66a",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你要走了吗?",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 0.88,
+  "wallSeconds": 37.477,
+  "loudness": {
+    "input_i": "-27.45",
+    "input_tp": "-9.67",
+    "input_lra": "0.00",
+    "input_thresh": "-37.45",
+    "output_i": "-20.01",
+    "output_tp": "-2.22",
+    "output_lra": "0.00",
+    "output_thresh": "-30.01",
+    "normalization_type": "linear",
+    "target_offset": "0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-reserved-l002/raw.wav",
+      "bytes": 84560,
+      "sha256": "897f713e9315a94211aa2a87d181173f5ca26da73549a51ca3c436fa432e5dbc"
+    },
+    "master": {
+      "path": "rain-s04-reserved-l002/master.wav",
+      "bytes": 42318,
+      "sha256": "bc2ec3e6ef404c28902089a26f20e167e2200bdb7d2ec010013f0722766b5b61"
+    },
+    "runtime": {
+      "path": "rain-s04-reserved-l002/runtime.ogg",
+      "bytes": 10988,
+      "sha256": "90205c9cb7c3072720c4d22beb3574aa21169c51f33d506ca2822e5dc5c0c91c"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-business-l018",
+  "sceneId": "s02_business",
+  "lineId": "s02_business_l018",
+  "lineIndex": 17,
+  "speaker": "h",
+  "text": "嗯。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1687688426,
+  "textSha256": "5c7a9f97adb5bed9d4c6aca666dffd0e37fda970ebcfc2c8c0060523a483e295",
+  "medium": "spoken",
+  "requestSha256": "93803a58883401146939e84b7021ba7d6c4937447ba900fe6a00ee9d230c85ef",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "嗯",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 0.72,
+  "wallSeconds": 30.542,
+  "loudness": {
+    "input_i": "-24.80",
+    "input_tp": "-17.76",
+    "input_lra": "0.00",
+    "input_thresh": "-34.80",
+    "output_i": "-20.00",
+    "output_tp": "-12.96",
+    "output_lra": "0.00",
+    "output_thresh": "-30.00",
+    "normalization_type": "linear",
+    "target_offset": "0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-business-l018/raw.wav",
+      "bytes": 69200,
+      "sha256": "c22332bcdf408255c465116710c66df311f8259c66e00c84243857709adebd5d"
+    },
+    "master": {
+      "path": "rain-s02-business-l018/master.wav",
+      "bytes": 34638,
+      "sha256": "87a29582ca625ff05ca3b0ebf9b55a7b5c25c32603ca66db3397f98feeffa336"
+    },
+    "runtime": {
+      "path": "rain-s02-business-l018/runtime.ogg",
+      "bytes": 8503,
+      "sha256": "4551b63a86a4590be472fdec5cc4f0987de040ada51d2c5aa6f4c912bec275e8"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

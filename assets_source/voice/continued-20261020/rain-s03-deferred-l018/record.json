@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-deferred-l018",
+  "sceneId": "s03_deferred",
+  "lineId": "s03_deferred_l018",
+  "lineIndex": 17,
+  "speaker": "h",
+  "text": "这比消失好。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1727756821,
+  "textSha256": "2c543e2c6f6dc7820684d091f4abf4e9b0c210f8f46021570de9445b8ca36d53",
+  "medium": "spoken",
+  "requestSha256": "77a7ff44da3eceda03535c521c408fb75180c1f1d53fe7e85bfd4747d4a65249",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "这笔消失好",
+    "cer": 0.2,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.28,
+  "wallSeconds": 138.457,
+  "loudness": {
+    "input_i": "-23.58",
+    "input_tp": "-11.41",
+    "input_lra": "0.00",
+    "input_thresh": "-33.58",
+    "output_i": "-19.99",
+    "output_tp": "-7.83",
+    "output_lra": "0.00",
+    "output_thresh": "-29.99",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-deferred-l018/raw.wav",
+      "bytes": 122960,
+      "sha256": "46975b73812e8536919f68209615358aa92465dc3d29bae7585038da84aaa6d0"
+    },
+    "master": {
+      "path": "rain-s03-deferred-l018/master.wav",
+      "bytes": 61518,
+      "sha256": "f9388c43b8a0e459a942ae356bf0ab6ccb5e454521ebeaf4eff6cbbb716036ec"
+    },
+    "runtime": {
+      "path": "rain-s03-deferred-l018/runtime.ogg",
+      "bytes": 13210,
+      "sha256": "d3148d7b9d916d25587ae4c37c058cfbc975bc762a7820a4cbd6375eb607692b"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

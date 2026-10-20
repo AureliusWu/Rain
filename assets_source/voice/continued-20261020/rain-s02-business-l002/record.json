@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-business-l002",
+  "sceneId": "s02_business",
+  "lineId": "s02_business_l002",
+  "lineIndex": 1,
+  "speaker": "h",
+  "text": "签一下名字就行。箱子上写了柜号。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1817696105,
+  "textSha256": "5c0ac666d46731047c0e0ada18679ec1f740c0eee07a57a12656b1bf2742ee4d",
+  "medium": "spoken",
+  "requestSha256": "2f705077093e44eea30e52549bd4f418d26e2ac91bf7ea1b14f5ca04a345a998",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "签一下名字就行箱子上写了贵号",
+    "cer": 0.071429,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.96,
+  "wallSeconds": 13.718,
+  "loudness": {
+    "input_i": "-24.32",
+    "input_tp": "-7.59",
+    "input_lra": "0.00",
+    "input_thresh": "-34.66",
+    "output_i": "-20.00",
+    "output_tp": "-3.27",
+    "output_lra": "0.00",
+    "output_thresh": "-30.34",
+    "normalization_type": "linear",
+    "target_offset": "-0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-business-l002/raw.wav",
+      "bytes": 284240,
+      "sha256": "411ca9368e239bd9b1d841960d3587b512cfb48bd800696d5a5c572d2d82a31c"
+    },
+    "master": {
+      "path": "rain-s02-business-l002/master.wav",
+      "bytes": 142158,
+      "sha256": "633c184df678e4a136cd70bd8fc41ffc79d8641eae34fbd3fd7e798681214c9a"
+    },
+    "runtime": {
+      "path": "rain-s02-business-l002/runtime.ogg",
+      "bytes": 25217,
+      "sha256": "d9cfc09d91551d7f55a1bb39bb6be552c54b481f0298bd8705c99fedadb7cab5"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

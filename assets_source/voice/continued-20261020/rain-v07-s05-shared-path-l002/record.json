@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s05-shared-path-l002",
+  "sceneId": "s05_shared_path",
+  "lineId": "v07_s05_shared_path_l002",
+  "lineIndex": 7,
+  "speaker": "h",
+  "text": "看看路。这里不是每块地砖都一样。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1938062360,
+  "textSha256": "b86025eb4d93ae699f620c9a6dbc442c516a3960d22ad3196dd057b6f68ee1d6",
+  "medium": "spoken",
+  "requestSha256": "94f59eeae166d0d94e5c6b98d83b7ab9a66e057edb3f50c0752b2937203d66c1",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "看看路,这里不是每块地砖都一样",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.88,
+  "wallSeconds": 167.839,
+  "loudness": {
+    "input_i": "-24.90",
+    "input_tp": "-8.87",
+    "input_lra": "0.00",
+    "input_thresh": "-35.25",
+    "output_i": "-20.00",
+    "output_tp": "-3.97",
+    "output_lra": "0.00",
+    "output_thresh": "-30.35",
+    "normalization_type": "linear",
+    "target_offset": "-0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s05-shared-path-l002/raw.wav",
+      "bytes": 276560,
+      "sha256": "5cdb1e949c4499663c42f667c1f6912d59062f54995d365da32a31a27f82c4e1"
+    },
+    "master": {
+      "path": "rain-v07-s05-shared-path-l002/master.wav",
+      "bytes": 138318,
+      "sha256": "973ec26770ebaad972c80765d607fc08a7a844eb0822d0f067e91604dd406dac"
+    },
+    "runtime": {
+      "path": "rain-v07-s05-shared-path-l002/runtime.ogg",
+      "bytes": 24063,
+      "sha256": "523ddb67d5742946c68dbd9656b7c6c65a42374d0b95c9d9248cf2f65c2ae1ac"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

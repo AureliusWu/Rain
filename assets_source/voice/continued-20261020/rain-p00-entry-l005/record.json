@@ -1,0 +1,55 @@
+{
+  "id": "rain-p00-entry-l005",
+  "sceneId": "p00_entry",
+  "lineId": "p00_entry_l005",
+  "lineIndex": 4,
+  "speaker": "p",
+  "text": "书应该还在吧。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1274860699,
+  "textSha256": "bcc2d9544fe98fcb154763b2d0a0fc7dab74789f256d871ae8f34241b59899dd",
+  "medium": "spoken",
+  "requestSha256": "25547f8c9fa44445e69b5e8295be07046f5b7eabb6f7923d91aad222d64b53dd",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "書應該還在吧",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.44,
+  "wallSeconds": 74.149,
+  "loudness": {
+    "input_i": "-21.55",
+    "input_tp": "-3.59",
+    "input_lra": "0.00",
+    "input_thresh": "-31.55",
+    "output_i": "-20.02",
+    "output_tp": "-2.04",
+    "output_lra": "0.00",
+    "output_thresh": "-30.02",
+    "normalization_type": "linear",
+    "target_offset": "0.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-p00-entry-l005/raw.wav",
+      "bytes": 138320,
+      "sha256": "5abc91797aad9708829266e7aac8f61f45a3162fe2426576d1c5122a0a1c0407"
+    },
+    "master": {
+      "path": "rain-p00-entry-l005/master.wav",
+      "bytes": 69198,
+      "sha256": "7e3ee7cc1d6e4f0e84fb040ab4ffde0bec798fe7ca2877626728c95ec8aa1424"
+    },
+    "runtime": {
+      "path": "rain-p00-entry-l005/runtime.ogg",
+      "bytes": 13906,
+      "sha256": "3b3908d6df7c2e131c159157e66011448ea4bed617e3c539b9f7490ef37d4ed0"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

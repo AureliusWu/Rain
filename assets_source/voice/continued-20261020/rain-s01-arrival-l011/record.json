@@ -1,0 +1,55 @@
+{
+  "id": "rain-s01-arrival-l011",
+  "sceneId": "s01_arrival",
+  "lineId": "s01_arrival_l011",
+  "lineIndex": 10,
+  "speaker": "h",
+  "text": "三年。差两个月。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1060508138,
+  "textSha256": "b5ef166554a892e22e78fc501f173042128f514319a4bc54f4f67011cfb2e6ac",
+  "medium": "spoken",
+  "requestSha256": "f7139b5081d3ad4a8f4f3cd2979ef8edd4b67c1fa87446e9752e43614ef036ca",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "三年差两个月",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.64,
+  "wallSeconds": 87.612,
+  "loudness": {
+    "input_i": "-24.18",
+    "input_tp": "-8.49",
+    "input_lra": "0.00",
+    "input_thresh": "-34.58",
+    "output_i": "-20.00",
+    "output_tp": "-4.31",
+    "output_lra": "0.00",
+    "output_thresh": "-30.40",
+    "normalization_type": "linear",
+    "target_offset": "-0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s01-arrival-l011/raw.wav",
+      "bytes": 253520,
+      "sha256": "a468c63c3f290634d66f7ee51ebc65065e18008127c986593a42ce402c84f4fc"
+    },
+    "master": {
+      "path": "rain-s01-arrival-l011/master.wav",
+      "bytes": 126798,
+      "sha256": "f90ac6e69991686dcc1e3cee86e32a7f39153e9a28eea83bf9eb29ccae3ea91a"
+    },
+    "runtime": {
+      "path": "rain-s01-arrival-l011/runtime.ogg",
+      "bytes": 21449,
+      "sha256": "f29a42625d9502b33e0674065c2db4626fd6b6ae5ce57888e873851a3c05a050"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

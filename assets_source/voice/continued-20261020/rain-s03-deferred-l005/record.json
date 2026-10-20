@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-deferred-l005",
+  "sceneId": "s03_deferred",
+  "lineId": "s03_deferred_l005",
+  "lineIndex": 4,
+  "speaker": "h",
+  "text": "那就先不说。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1380913716,
+  "textSha256": "6846304605df803dd8889ab60000f439b20ce1c276dfee67850811c58da3f21b",
+  "medium": "spoken",
+  "requestSha256": "71260861c6f8405d89c344df4b264cfd7f1b5b9cc4dfdca1d9f188b9f00034e1",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "那就先不说",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.12,
+  "wallSeconds": 5.737,
+  "loudness": {
+    "input_i": "-23.26",
+    "input_tp": "-8.88",
+    "input_lra": "0.00",
+    "input_thresh": "-33.26",
+    "output_i": "-20.00",
+    "output_tp": "-5.63",
+    "output_lra": "0.00",
+    "output_thresh": "-30.00",
+    "normalization_type": "linear",
+    "target_offset": "-0.00"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-deferred-l005/raw.wav",
+      "bytes": 107600,
+      "sha256": "bf677698cca96cce2a2497f9411cbe684e292fc924b700c983db02daf3010712"
+    },
+    "master": {
+      "path": "rain-s03-deferred-l005/master.wav",
+      "bytes": 53838,
+      "sha256": "afdfbc3221faab3caf3d9a2fe0e7a7ba6e32887ee1c6643184840ca7dd4f66d1"
+    },
+    "runtime": {
+      "path": "rain-s03-deferred-l005/runtime.ogg",
+      "bytes": 12612,
+      "sha256": "68d6870167be38dd3657a5ee8180950230b7274b2bf3b5ec31e05a2128b212c0"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

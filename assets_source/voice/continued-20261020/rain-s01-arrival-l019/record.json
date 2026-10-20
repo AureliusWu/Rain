@@ -1,0 +1,55 @@
+{
+  "id": "rain-s01-arrival-l019",
+  "sceneId": "s01_arrival",
+  "lineId": "s01_arrival_l019",
+  "lineIndex": 18,
+  "speaker": "h",
+  "text": "我也是。店里那个旧号码早停用了，他们绕了一圈才找到现在的联系方式。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1974107648,
+  "textSha256": "9cdf5bfb72856ca2dff4b8ece20929e11a72c5461accd6abdcb72f115e08f4ba",
+  "medium": "spoken",
+  "requestSha256": "13917304ccf7a7d62d35b3655de28e5abb68f906a6150d97db83dc73dbf4b7c8",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我也是,店裡那個舊號碼早停用了他們繞了一圈才找到現在的聯繫方式",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 6.16,
+  "wallSeconds": 202.057,
+  "loudness": {
+    "input_i": "-25.68",
+    "input_tp": "-8.87",
+    "input_lra": "2.70",
+    "input_thresh": "-35.88",
+    "output_i": "-20.87",
+    "output_tp": "-4.67",
+    "output_lra": "2.70",
+    "output_thresh": "-31.26",
+    "normalization_type": "dynamic",
+    "target_offset": "0.87"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s01-arrival-l019/raw.wav",
+      "bytes": 591440,
+      "sha256": "2bb40ccf8ad8b26c8d78a65f141237d243c3a810601e480ff960d1cb6a48504f"
+    },
+    "master": {
+      "path": "rain-s01-arrival-l019/master.wav",
+      "bytes": 295758,
+      "sha256": "a5a0b7311f387ae7a1ba7138693d3fc36fe52a17489a27a988d9c6d2ae5fb9e1"
+    },
+    "runtime": {
+      "path": "rain-s01-arrival-l019/runtime.ogg",
+      "bytes": 47179,
+      "sha256": "f8de874ad0ba37c7f0e518034e66cb10665998c1faebfa3f9290a986e62f34aa"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

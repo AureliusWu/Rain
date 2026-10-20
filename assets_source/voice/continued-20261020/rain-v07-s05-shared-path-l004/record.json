@@ -1,0 +1,55 @@
+{
+  "id": "rain-v07-s05-shared-path-l004",
+  "sceneId": "s05_shared_path",
+  "lineId": "v07_s05_shared_path_l004",
+  "lineIndex": 9,
+  "speaker": "h",
+  "text": "那块修好了。现在松的是另一块。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 940531540,
+  "textSha256": "0ce3921e975745dbf30c68c9ac0a03a9859d761871a52ce6f9e54aa3ad07e41d",
+  "medium": "spoken",
+  "requestSha256": "2428e68eb15d12bee182904da04f1f25ef0e9e57fec243f8f7b3a129d27e239e",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "那块修好了 现在松的是另一块",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.16,
+  "wallSeconds": 215.693,
+  "loudness": {
+    "input_i": "-25.29",
+    "input_tp": "-7.70",
+    "input_lra": "1.10",
+    "input_thresh": "-35.83",
+    "output_i": "-18.93",
+    "output_tp": "-2.00",
+    "output_lra": "1.00",
+    "output_thresh": "-29.83",
+    "normalization_type": "dynamic",
+    "target_offset": "-1.07"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-v07-s05-shared-path-l004/raw.wav",
+      "bytes": 399440,
+      "sha256": "e15a53e2d6d4139fcda65702a5b92317bf1e41ea231f2cad7ab028f1c77ad2a4"
+    },
+    "master": {
+      "path": "rain-v07-s05-shared-path-l004/master.wav",
+      "bytes": 199758,
+      "sha256": "9b2de66c30be34b1de5464040a16d16d26821f57eded93a1b276427d3ffca955"
+    },
+    "runtime": {
+      "path": "rain-v07-s05-shared-path-l004/runtime.ogg",
+      "bytes": 31766,
+      "sha256": "fd858b44678f37e3645642eae5a261863a7f4593da092342d707cecfeb661438"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

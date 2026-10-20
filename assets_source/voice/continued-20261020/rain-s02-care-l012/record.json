@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-care-l012",
+  "sceneId": "s02_care",
+  "lineId": "s02_care_l012",
+  "lineIndex": 11,
+  "speaker": "h",
+  "text": "晚班不固定。这个月我主要负责新书上架和活动区，闭店的时候反而比较晚。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1929617497,
+  "textSha256": "4740a321850027e5102240957d5c2e9ce75be94908eb19109f24ab7d3ad8e467",
+  "medium": "spoken",
+  "requestSha256": "7b974cdf7e87d4ede73d650e824e59c66b17f434ab06cc9bcfa32c3c069a517a",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "晚班不固定这个月我主要负责新书上架和活动区闭店的时候反而比较晚",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 6.4,
+  "wallSeconds": 27.765,
+  "loudness": {
+    "input_i": "-26.22",
+    "input_tp": "-7.82",
+    "input_lra": "2.30",
+    "input_thresh": "-36.79",
+    "output_i": "-20.37",
+    "output_tp": "-2.30",
+    "output_lra": "2.00",
+    "output_thresh": "-31.06",
+    "normalization_type": "dynamic",
+    "target_offset": "0.37"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-care-l012/raw.wav",
+      "bytes": 614480,
+      "sha256": "71302f1937ba8e58a266f05419621ea7b5bc6824a457de7b6198bec78ec4f663"
+    },
+    "master": {
+      "path": "rain-s02-care-l012/master.wav",
+      "bytes": 307278,
+      "sha256": "fdf1527c1485073c5658151e1ec4c5014768a075f717acb216c024dc545517de"
+    },
+    "runtime": {
+      "path": "rain-s02-care-l012/runtime.ogg",
+      "bytes": 48473,
+      "sha256": "8a1bb20fd894e8233fd551f015bcf5a972c57737a60438d83438e7c2420b92a2"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-s05-shared-path-l005",
+  "sceneId": "s05_shared_path",
+  "lineId": "s05_shared_path_l005",
+  "lineIndex": 4,
+  "speaker": "p",
+  "text": "这样拿得住吗？",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 957206346,
+  "textSha256": "e9c890d27916e65bc7ea06dbb75df0c1d99b6032151747c7eac2162121e3a321",
+  "medium": "spoken",
+  "requestSha256": "56273aff9991183a0b6ec1f859924184a9f862c0b8316edc3c3c7f08f7ae7079",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "这样拿得住吗",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 1.28,
+  "wallSeconds": 135.754,
+  "loudness": {
+    "input_i": "-21.36",
+    "input_tp": "-8.76",
+    "input_lra": "0.00",
+    "input_thresh": "-31.36",
+    "output_i": "-19.99",
+    "output_tp": "-7.39",
+    "output_lra": "0.00",
+    "output_thresh": "-29.99",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s05-shared-path-l005/raw.wav",
+      "bytes": 122960,
+      "sha256": "57294ff239cdb44696ad4dc6fa18408255fb85d55771eaa5a4e25b9647ff6ded"
+    },
+    "master": {
+      "path": "rain-s05-shared-path-l005/master.wav",
+      "bytes": 61518,
+      "sha256": "4df73c5588d868cfd643d0901d3c08538b730dc1a0fb750a99679c261878e2f4"
+    },
+    "runtime": {
+      "path": "rain-s05-shared-path-l005/runtime.ogg",
+      "bytes": 13071,
+      "sha256": "7fbe8529ca040c55caf65a65739d5b7fcc7739992d6ee4adf7fa36187928d6c3"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rain-s07-true-l008",
+  "sceneId": "s07_true",
+  "lineId": "s07_true_l008",
+  "lineIndex": 12,
+  "speaker": "h",
+  "text": "旧的别扔。新的一起放着，我倒想看看你三年前有多会说。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 198000077,
+  "textSha256": "abf9467da5fe9ebd53a042ae02fd03730a2fdea0040974e04469e011fbabf964",
+  "medium": "spoken",
+  "requestSha256": "51c5a460f55637b00117b8ae84047fb82a98699040896583fce91bab0d9678a8",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "舊的别扔心的一起放着我倒想看看你三年前有多会说",
+    "cer": 0.043478,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.88,
+  "wallSeconds": 215.32,
+  "loudness": {
+    "input_i": "-29.14",
+    "input_tp": "-7.84",
+    "input_lra": "1.20",
+    "input_thresh": "-39.87",
+    "output_i": "-19.78",
+    "output_tp": "-2.00",
+    "output_lra": "0.10",
+    "output_thresh": "-30.86",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.22"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s07-true-l008/raw.wav",
+      "bytes": 468560,
+      "sha256": "b4abc880e3a80695b61d66eb3546c57a3cfa0cb9b68da125f65654803888ddab"
+    },
+    "master": {
+      "path": "rain-s07-true-l008/master.wav",
+      "bytes": 234318,
+      "sha256": "d6789fa88cf26ba232f6d6c99f7d8a94ea93770afe6ea2e7de6c64d5caa68eac"
+    },
+    "runtime": {
+      "path": "rain-s07-true-l008/runtime.ogg",
+      "bytes": 38736,
+      "sha256": "937fca1b637f35cf59a46dc6fc51b9f78edf13b63fa16c203ab13852dedb3862"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

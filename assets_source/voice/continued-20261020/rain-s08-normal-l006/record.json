@@ -1,0 +1,55 @@
+{
+  "id": "rain-s08-normal-l006",
+  "sceneId": "s08_normal",
+  "lineId": "s08_normal_l006",
+  "lineIndex": 7,
+  "speaker": "p",
+  "text": "谢谢。到住处我给你发消息。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 221013088,
+  "textSha256": "2aad24bf7bac9723d3db0d4d1d2692f47ef3915c6d106af995bf6a6235b8e48d",
+  "medium": "spoken",
+  "requestSha256": "1f9e049cf5f7a8488ce5e216947ed7dc307168db7c0aaa61db008fae52b20ad7",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "謝謝,到處處我給你發消息",
+    "cer": 0.090909,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.88,
+  "wallSeconds": 162.3,
+  "loudness": {
+    "input_i": "-27.67",
+    "input_tp": "-9.21",
+    "input_lra": "0.00",
+    "input_thresh": "-38.21",
+    "output_i": "-20.46",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-31.00",
+    "normalization_type": "linear",
+    "target_offset": "0.46"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s08-normal-l006/raw.wav",
+      "bytes": 276560,
+      "sha256": "d9433f47b241968e6b934cc2baf171e10821175f3025eb74d596478e2b78c3b3"
+    },
+    "master": {
+      "path": "rain-s08-normal-l006/master.wav",
+      "bytes": 138318,
+      "sha256": "ac41f30b8ee56d6f87cee15ce05b2491c68cd7022c90d81aef8dd61d8586fc9f"
+    },
+    "runtime": {
+      "path": "rain-s08-normal-l006/runtime.ogg",
+      "bytes": 25356,
+      "sha256": "82464cc7eba5bb318c5fb02dbfb881ee48fb28195c2eba479bc3de1306ce7fee"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

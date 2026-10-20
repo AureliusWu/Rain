@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-honest-l018",
+  "sceneId": "s03_honest",
+  "lineId": "s03_honest_l018",
+  "lineIndex": 17,
+  "speaker": "p",
+  "text": "信是我写的，也一直没交到你手里。报到早了是真的，后来没联系，也是我。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1354091248,
+  "textSha256": "de541f3bac32bf3e6420d7605daca1f37790a7a3522645b6fdb04a43ad8577bf",
+  "medium": "spoken",
+  "requestSha256": "09f5387cf740cfeadfd266ded8c6651f7cbc57d17625cec76d8e168997425ad8",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "信是我写的也一直没交到你手里包的早了是真的后来没联系也是我",
+    "cer": 0.068966,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 6.88,
+  "wallSeconds": 335.525,
+  "loudness": {
+    "input_i": "-26.78",
+    "input_tp": "-6.09",
+    "input_lra": "1.20",
+    "input_thresh": "-37.26",
+    "output_i": "-20.45",
+    "output_tp": "-2.00",
+    "output_lra": "1.20",
+    "output_thresh": "-30.86",
+    "normalization_type": "dynamic",
+    "target_offset": "0.45"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-honest-l018/raw.wav",
+      "bytes": 660560,
+      "sha256": "31b1666333543e4060ff2088b2561a6fb5ba62fa02f85952e7eab0a75728f216"
+    },
+    "master": {
+      "path": "rain-s03-honest-l018/master.wav",
+      "bytes": 330318,
+      "sha256": "43da9a2f46a931af3b8aee3b043bf5380c713a088ead7092fd64f188c38ca4cc"
+    },
+    "runtime": {
+      "path": "rain-s03-honest-l018/runtime.ogg",
+      "bytes": 55665,
+      "sha256": "08012f640f27ddcab6c38c029118913184c44711d46cd26622964f2b59a130da"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

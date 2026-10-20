@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-honest-l002",
+  "sceneId": "s03_honest",
+  "lineId": "s03_honest_l002",
+  "lineIndex": 1,
+  "speaker": "h",
+  "text": "那就别让我拿三年前的打算，猜你现在要说什么。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 515784181,
+  "textSha256": "4c91065b6625cad7ad6d3586fe4c697703e1c4616e7193cdc9e43c929d453aac",
+  "medium": "spoken",
+  "requestSha256": "d3728739949b6db7cf616db222f91da2bcc805302ae237ff417946d5a59abb95",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "那就别让我拿三年前的打算猜你现在要说什么",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.92,
+  "wallSeconds": 37.517,
+  "loudness": {
+    "input_i": "-24.49",
+    "input_tp": "-9.04",
+    "input_lra": "1.90",
+    "input_thresh": "-34.75",
+    "output_i": "-19.86",
+    "output_tp": "-5.11",
+    "output_lra": "0.00",
+    "output_thresh": "-30.10",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.14"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-honest-l002/raw.wav",
+      "bytes": 376400,
+      "sha256": "4e1aff4b533d3c9326736598f0fdbafc6e5120338dc6d765c811140851912fa1"
+    },
+    "master": {
+      "path": "rain-s03-honest-l002/master.wav",
+      "bytes": 188238,
+      "sha256": "c52a4ae4e6da9a7d5293d5a254c356d21b47b54ce6989481fbf6c6cacb9714b9"
+    },
+    "runtime": {
+      "path": "rain-s03-honest-l002/runtime.ogg",
+      "bytes": 32567,
+      "sha256": "c9f48c4a8ee766e5b62dde3257ceda097862e43ef4694a72f97c1eb90d637206"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

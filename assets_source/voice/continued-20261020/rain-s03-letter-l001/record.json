@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-letter-l001",
+  "sceneId": "s03_letter",
+  "lineId": "s03_letter_l001",
+  "lineIndex": 0,
+  "speaker": "h",
+  "text": "还有一样东西，应该也是你的。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1436118893,
+  "textSha256": "33ef742a0efc473defebc5a0dde24e4743d34e4518fbf9d5d8368a45e0008570",
+  "medium": "spoken",
+  "requestSha256": "6172aa2221376deb05509680a979e6ec468aa9266d536d95b5622165ee00201f",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "還有一樣東西 應該也是你的",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.4,
+  "wallSeconds": 128.403,
+  "loudness": {
+    "input_i": "-25.07",
+    "input_tp": "-8.67",
+    "input_lra": "0.00",
+    "input_thresh": "-35.47",
+    "output_i": "-20.01",
+    "output_tp": "-3.60",
+    "output_lra": "0.00",
+    "output_thresh": "-30.41",
+    "normalization_type": "linear",
+    "target_offset": "0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-letter-l001/raw.wav",
+      "bytes": 230480,
+      "sha256": "c63ff785ec99a3be4fcd7d5bc1ebe0390f63cbb52770267f121fc3e7b43e22d9"
+    },
+    "master": {
+      "path": "rain-s03-letter-l001/master.wav",
+      "bytes": 115278,
+      "sha256": "477248f8e8c3b8aa3854b53d3dd69c51ece8cd2f38cd7c33ed18b714588f8cf4"
+    },
+    "runtime": {
+      "path": "rain-s03-letter-l001/runtime.ogg",
+      "bytes": 20666,
+      "sha256": "334844a70c29ea2938b562e24d9740da836ea1588250489804041c6058d00149"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

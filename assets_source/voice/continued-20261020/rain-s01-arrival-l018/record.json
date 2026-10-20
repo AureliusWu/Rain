@@ -1,0 +1,55 @@
+{
+  "id": "rain-s01-arrival-l018",
+  "sceneId": "s01_arrival",
+  "lineId": "s01_arrival_l018",
+  "lineIndex": 17,
+  "speaker": "p",
+  "text": "我收到的是清库通知。下午才看到。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1221058114,
+  "textSha256": "cb8e2ee53cd9c4434c3789002f8c0ae647bb8c505040835e6a5f26793f8fbc3a",
+  "medium": "spoken",
+  "requestSha256": "f9e119ad9dd585ccc175a24a96b17f93765534eaf0944787aaaecbf30b1309fa",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我收到的是清庫通知下午才看到",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 3.44,
+  "wallSeconds": 144.835,
+  "loudness": {
+    "input_i": "-26.67",
+    "input_tp": "-6.88",
+    "input_lra": "1.90",
+    "input_thresh": "-36.96",
+    "output_i": "-19.98",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.26",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.02"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s01-arrival-l018/raw.wav",
+      "bytes": 330320,
+      "sha256": "c00e8ee412e98ad5ab764a2268e7605bbbc4041ec4956cfec574cdd1f80857ac"
+    },
+    "master": {
+      "path": "rain-s01-arrival-l018/master.wav",
+      "bytes": 165198,
+      "sha256": "9648373750126508b5562fee53858268348a68245c040414fdc0b943c243e502"
+    },
+    "runtime": {
+      "path": "rain-s01-arrival-l018/runtime.ogg",
+      "bytes": 29842,
+      "sha256": "a2f1ed0854b773f75121e4630dc83b51cefc69c1f40afa553ffd4da7ac46a000"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

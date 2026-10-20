@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-repair-l001",
+  "sceneId": "s04_repair",
+  "lineId": "s04_repair_l001",
+  "lineIndex": 0,
+  "speaker": "p",
+  "text": "那封信，是我出发前写给你的。里面说我想再回来，也想跟你继续见面。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1568088232,
+  "textSha256": "f07296eb7c0cceb92c16d39f21cdc27705bd5f3104f1d071c87aeba275dbd62a",
+  "medium": "spoken",
+  "requestSha256": "a38ac0fe72cb141b90d1da20ef38e0e55bfa15b73b253604302c47ed2b2fdae7",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "那封信是我出發前寫給你的裡面說我想再回來也想跟你繼續見面",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 6.48,
+  "wallSeconds": 57.428,
+  "loudness": {
+    "input_i": "-24.19",
+    "input_tp": "-5.76",
+    "input_lra": "0.60",
+    "input_thresh": "-34.49",
+    "output_i": "-19.79",
+    "output_tp": "-2.00",
+    "output_lra": "1.20",
+    "output_thresh": "-30.16",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.21"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-repair-l001/raw.wav",
+      "bytes": 622160,
+      "sha256": "2bcf74c076c98cc7ce255b02a5a404ac814fbd7c25b5a8a2468a5e877647ffbe"
+    },
+    "master": {
+      "path": "rain-s04-repair-l001/master.wav",
+      "bytes": 311118,
+      "sha256": "398b190f887165adc38921710b37fb4db1434ca18786c82133040313e96d2b4b"
+    },
+    "runtime": {
+      "path": "rain-s04-repair-l001/runtime.ogg",
+      "bytes": 51713,
+      "sha256": "7039229dc9824dfd3d8b198fb370d48eb00f99a726043ad30bf62eece31e8d0e"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

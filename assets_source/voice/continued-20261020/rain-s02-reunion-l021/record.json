@@ -1,0 +1,55 @@
+{
+  "id": "rain-s02-reunion-l021",
+  "sceneId": "s02_reunion",
+  "lineId": "s02_reunion_l021",
+  "lineIndex": 20,
+  "speaker": "h",
+  "text": "你对“几本”的理解一直很宽。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1845746132,
+  "textSha256": "06ec5b4750c183b1b04d88ae5fc5b80d1fa33c2357cff02fc8a51d9aaebe445d",
+  "medium": "spoken",
+  "requestSha256": "1b00a8361c4c1f4233b4f03a283c8f9cc5a1fce375506ba10ef6fe2583cdd5c0",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "你對極本的理解一直很寬",
+    "cer": 0.090909,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.4,
+  "wallSeconds": 135.81,
+  "loudness": {
+    "input_i": "-23.34",
+    "input_tp": "-4.96",
+    "input_lra": "0.00",
+    "input_thresh": "-33.34",
+    "output_i": "-20.37",
+    "output_tp": "-2.00",
+    "output_lra": "0.00",
+    "output_thresh": "-30.37",
+    "normalization_type": "linear",
+    "target_offset": "0.37"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s02-reunion-l021/raw.wav",
+      "bytes": 230480,
+      "sha256": "a9f160b5d629ed2abe8ba799dde3b67e92a915cfd51bbb9394446edfa7c0d01d"
+    },
+    "master": {
+      "path": "rain-s02-reunion-l021/master.wav",
+      "bytes": 115278,
+      "sha256": "07c853eb19665d6e9eb9f3dc0f18f1eb4c9a5c4892ea19aefb67bde46ebe0a26"
+    },
+    "runtime": {
+      "path": "rain-s02-reunion-l021/runtime.ogg",
+      "bytes": 21520,
+      "sha256": "ad0089732166b7b4eeeba7b5487dbf7117798623dabd8e360a88cda0d67aff58"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

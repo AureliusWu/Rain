@@ -1,0 +1,55 @@
+{
+  "id": "rain-s04-boundary-l004",
+  "sceneId": "s04_boundary",
+  "lineId": "s04_boundary_l004",
+  "lineIndex": 5,
+  "speaker": "h",
+  "text": "我可能一时答不上来。你得给我点时间。",
+  "actorId": "h",
+  "voice": "Serena",
+  "instruct": "二十三岁成年女性，普通话，温和清楚，安静但有主见，克制自然，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1736328151,
+  "textSha256": "8f32f7d1c93c99652c90961837120294726ffefc812366bf18c3d8ad34d0a5e5",
+  "medium": "spoken",
+  "requestSha256": "2c9175836f741abd2c9a9e3f3f07ffa39fcfa66fb87bf3aa0f976d8247a7a296",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "我可能一世打不上来,你得给我点时间",
+    "cer": 0.125,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 2.72,
+  "wallSeconds": 137.995,
+  "loudness": {
+    "input_i": "-24.09",
+    "input_tp": "-11.18",
+    "input_lra": "0.00",
+    "input_thresh": "-34.27",
+    "output_i": "-19.99",
+    "output_tp": "-7.09",
+    "output_lra": "0.00",
+    "output_thresh": "-30.17",
+    "normalization_type": "linear",
+    "target_offset": "-0.01"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s04-boundary-l004/raw.wav",
+      "bytes": 261200,
+      "sha256": "9a49cd3e466cb335066735e631a85a8e57b8476d165019de40dc04cff1e8aa22"
+    },
+    "master": {
+      "path": "rain-s04-boundary-l004/master.wav",
+      "bytes": 130638,
+      "sha256": "04b2af3aba18500023cb4c473eb80c4c1c633daec5f203e057c8dc37d0c49136"
+    },
+    "runtime": {
+      "path": "rain-s04-boundary-l004/runtime.ogg",
+      "bytes": 23329,
+      "sha256": "a3702ea4367101d07aa0f6f9be7a1cbfd3627c6db171aae5504370661da2b8f0"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}

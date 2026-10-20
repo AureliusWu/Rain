@@ -1,0 +1,55 @@
+{
+  "id": "rain-s03-honest-l006",
+  "sceneId": "s03_honest",
+  "lineId": "s03_honest_l006",
+  "lineIndex": 5,
+  "speaker": "p",
+  "text": "好。我先把信收好，等我们都愿意谈的时候再拿出来。",
+  "actorId": "p",
+  "voice": "Dylan",
+  "instruct": "二十五岁成年男性，普通话，日常交谈，克制自然，清楚适中，不朗诵。 只朗读给定台词，不添加词语或音效。",
+  "seed": 1667217593,
+  "textSha256": "4d49b28904f9bcd8ac5b8f1db0fc025e4ebf5d2686ecf9697a0343dc773690df",
+  "medium": "spoken",
+  "requestSha256": "c557e7b7b79b56b436a4f3675cb2a008ca0958b461d887ce2563853c386f4ea6",
+  "attempt": 0,
+  "status": "accepted",
+  "asr": {
+    "transcript": "好,我先把信收好等我们都愿意谈的时候再拿出来",
+    "cer": 0.0,
+    "polarityCountsMatch": true,
+    "passed": true
+  },
+  "duration": 4.4,
+  "wallSeconds": 148.952,
+  "loudness": {
+    "input_i": "-25.52",
+    "input_tp": "-7.50",
+    "input_lra": "0.90",
+    "input_thresh": "-35.52",
+    "output_i": "-20.44",
+    "output_tp": "-2.57",
+    "output_lra": "0.20",
+    "output_thresh": "-30.44",
+    "normalization_type": "dynamic",
+    "target_offset": "0.44"
+  },
+  "files": {
+    "raw": {
+      "path": "rain-s03-honest-l006/raw.wav",
+      "bytes": 422480,
+      "sha256": "b97c324ee8ad4ad1ff4f11b43b17a0d15ef88fe953a052ec4916a3e866090175"
+    },
+    "master": {
+      "path": "rain-s03-honest-l006/master.wav",
+      "bytes": 211278,
+      "sha256": "2eb59ba2aa258f732075498a8bd073af4a8d550c738a02536cd34a32e176b3ad"
+    },
+    "runtime": {
+      "path": "rain-s03-honest-l006/runtime.ogg",
+      "bytes": 37134,
+      "sha256": "acc17b1f0dc88f0cea9f1fbf7e71e2bb0054606b7f48e10c073b5f1533c2a058"
+    }
+  },
+  "recoveredFromRun": 39436530718
+}
