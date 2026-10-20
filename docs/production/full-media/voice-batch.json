@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "batch": "20261020-full-dialogue-01",
+  "project": "Rain",
+  "count": 306,
+  "semanticSha256": "43ef805dc1a881d5fc4736841c0ebee358707ee7db17982ece91fb23437104dd",
+  "scope": "All characters and branches, including written dialogue; narration excluded.",
+  "humanListening": false
+}

@@ -2,7 +2,7 @@
   "date": "2026-10-20",
   "project": "Rain",
   "version": "1.4.0",
-  "status": "pwa_passed_native_current_validation_running_publication_bound",
+  "status": "published_and_public_bytes_verified",
   "cgManifest": "docs/art/cafe-photo-manifest.json",
   "musicManifest": "docs/audio/cafe-photo-score-manifest.json",
   "tests": {
@@ -13,7 +13,7 @@
     "humanListening": "pending",
     "artFinalChoice": "pending",
     "currentPwa": "CI 39380866141 completed success including actual published checks",
-    "currentNative": "CI 39380866238 in progress; no final audit or new release success claimed"
+    "currentNative": "CI 39380866238 completed success; 37/498/87 source and standalone, 184 original screenshots and 87 packaged assets audited"
   },
   "compatibility": "Stable scene/line IDs, choices, recorded lines and save identity retained",
   "limits": "Earlier release evidence is historical, not validation for this candidate.",
@@ -28,8 +28,10 @@
     "pwaRun": 39380866141,
     "requiredNativeAssets": 87,
     "requiredNativeOriginalScreenshots": 184,
-    "currentFormalDownload": "v1.3.1",
-    "trigger": "Only after exact current Game validation completes successfully"
+    "currentFormalDownload": "v1.4.0",
+    "trigger": "Only after exact current Game validation completes successfully",
+    "runId": 39385239637,
+    "status": "published_and_public_bytes_verified"
   },
   "jointOffline": {
     "status": "passed",

@@ -1,0 +1,50 @@
+{
+  "status": "published_and_public_bytes_verified",
+  "version": "1.4.0",
+  "publication_commit": "3940f68996075bd8c7a165bc5e6605957ff285ce",
+  "completion_commit": "3940f68996075bd8c7a165bc5e6605957ff285ce",
+  "completion_authorization_sha256": "21d8492cf92b1203b74edbb1f8fc40db7f9f4ade32b56ac4c891ede24f20b1f3",
+  "runtime_commit": "011f68e7b411caa3ec85d95813b163a3ac58b3d0",
+  "tag_commit": "011f68e7b411caa3ec85d95813b163a3ac58b3d0",
+  "release_id": 418104702,
+  "prepared_metadata_artifact": null,
+  "release": "https://github.com/AureliusWu/Rain/releases/tag/v1.4.0",
+  "files": {
+    "BeforeTheRainStops-1.4.0-web.zip": {
+      "sha256": "5eae0319c5b1893b395bedcb88b7a49f5bc6751af39a9f1558763a3eec3adcbb",
+      "bytes": 50551331,
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.4.0/BeforeTheRainStops-1.4.0-web.zip"
+    },
+    "BeforeTheRainStops-1.4.0-win.zip": {
+      "sha256": "6f8daad02ce89f70349982bdf61fba9e789ea46c76e3194f3477ced120b63980",
+      "bytes": 58930808,
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.4.0/BeforeTheRainStops-1.4.0-win.zip"
+    },
+    "RELEASE_METADATA.json": {
+      "sha256": "43cb730914ab103b054ac8257c0c43f7baf901d05c74cd078eee65b84a2567bd",
+      "bytes": 20221,
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.4.0/RELEASE_METADATA.json"
+    },
+    "SHA256SUMS.txt": {
+      "sha256": "068721a4e2dabf2af5cad88e7eb5fce12a8b4b72f2ebcb59accffcd9bfb064e4",
+      "bytes": 286,
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.4.0/SHA256SUMS.txt"
+    }
+  },
+  "pwa_revision": "a47044e73371900b0409e632",
+  "current_public_worker": {
+    "url": "https://aureliuswu.github.io/Rain/service-worker.js",
+    "revision": "a47044e73371900b0409e632",
+    "sha256": "aef489b9cc21ea83a0afcf04478f97de923a375d1fa466e59b34b4f0c4342433",
+    "bytes": 7675,
+    "status": "exact_tested_bytes_verified"
+  },
+  "human_pending": [
+    "ordinary_windows",
+    "display_dpi",
+    "listening",
+    "creative_and_freeze",
+    "reading_time"
+  ],
+  "human_acceptance_claimed": false
+}
