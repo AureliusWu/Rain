@@ -1,0 +1,115 @@
+name: Restore exact published v1.4.0 PWA
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/restore-published-v140.yml']
+  workflow_run:
+    workflows: ['Native RenPy PWA and shared materials']
+    branches: [main]
+    types: [completed]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+  pages: write
+  id-token: write
+concurrency:
+  group: rain-pages
+  cancel-in-progress: false
+jobs:
+  restore:
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push' && github.event.workflow_run.head_repository.full_name == github.repository)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      TARGET_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TARGET_SHA }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Stage only immutable published bytes for the unchanged verified runtime
+        id: stage
+        shell: bash
+        run: |
+          python - <<'PY'
+          import hashlib,json,os,subprocess,urllib.request
+          from pathlib import Path
+          from tools.publish_v140 import extract_checked
+          baseline='011f68e7b411caa3ec85d95813b163a3ac58b3d0'
+          current=json.loads(subprocess.check_output(['gh','api','repos/AureliusWu/Rain/git/ref/heads/main']))['object']['sha']
+          paths=subprocess.check_output(['git','diff','--name-only',baseline,os.environ['TARGET_SHA']],text=True).splitlines()
+          allowed=lambda p:p.startswith(('docs/','.github/workflows/','tools/publish_','tests/test_publish_','tools/production/')) or p in {'README.md','CHANGELOG.md','ROADMAP.md'}
+          ready=current==os.environ['TARGET_SHA'] and Path('VERSION').read_text().strip()=='1.4.0' and all(map(allowed,paths))
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('ready='+str(ready).lower()+'\n')
+          if not ready:
+              print('Runtime or main has advanced; no old PWA promotion')
+              raise SystemExit(0)
+          url='https://github.com/AureliusWu/Rain/releases/download/v1.4.0/'
+          archive=Path('.runtime/published-v140.zip');archive.parent.mkdir(exist_ok=True)
+          urllib.request.urlretrieve(url+ 'BeforeTheRainStops-1.4.0-web.zip',archive)
+          assert archive.stat().st_size==50551331
+          assert hashlib.file_digest(archive.open('rb'),'sha256').hexdigest()=='5eae0319c5b1893b395bedcb88b7a49f5bc6751af39a9f1558763a3eec3adcbb'
+          metadata=urllib.request.urlopen(url+'RELEASE_METADATA.json',timeout=60).read()
+          assert hashlib.sha256(metadata).hexdigest()=='43cb730914ab103b054ac8257c0c43f7baf901d05c74cd078eee65b84a2567bd'
+          record=json.loads(metadata)
+          assert record['version']=='1.4.0' and record['runtime_commit']==baseline
+          extract_checked(archive,Path('dist/web'))
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('revision='+record['pwa_build']['revision']+'\n')
+          PY
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.stage.outputs.ready == 'true'
+        with:
+          name: rain-published-v140-${{ github.run_id }}-${{ github.run_attempt }}
+          path: dist/web
+      - uses: actions/deploy-pages@v4
+        if: steps.stage.outputs.ready == 'true'
+        id: deployment
+        with:
+          artifact_name: rain-published-v140-${{ github.run_id }}-${{ github.run_attempt }}
+      - uses: actions/setup-node@v4
+        if: steps.stage.outputs.ready == 'true'
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Verify public exact worker and actual native offline play
+        if: steps.stage.outputs.ready == 'true'
+        env:
+          PWA_TARGET_URL: ${{ steps.deployment.outputs.page_url }}
+          PWA_EXPECTED_REVISION: ${{ steps.stage.outputs.revision }}
+        run: |
+          python - <<'PY'
+          import hashlib,json,os,time,urllib.request
+          from pathlib import Path
+          url='https://aureliuswu.github.io/Rain/service-worker.js'
+          expected=Path('dist/web/service-worker.js').read_bytes()
+          actual=b''
+          print('Expected published worker SHA-256:',hashlib.sha256(expected).hexdigest(),flush=True)
+          for attempt in range(30):
+              request=urllib.request.Request(url+'?verify='+os.environ['GITHUB_RUN_ID']+'-'+str(attempt),headers={'Cache-Control':'no-cache','Pragma':'no-cache'})
+              actual=urllib.request.urlopen(request,timeout=60).read()
+              if actual==expected:break
+              time.sleep(2)
+          print('Observed published worker SHA-256:',hashlib.sha256(actual).hexdigest(),flush=True)
+          assert actual==expected,'Published worker differs from immutable release after bounded propagation wait'
+          out=Path('reports/published-pwa-promotion.json');out.parent.mkdir(exist_ok=True)
+          out.write_text(json.dumps({'status':'exact_published_bytes','version':'1.4.0','release':'v1.4.0','workerSha256':hashlib.sha256(actual).hexdigest(),'runtimeCommit':'011f68e7b411caa3ec85d95813b163a3ac58b3d0'})+'\n')
+          PY
+          npm ci
+          npx playwright install --with-deps chromium
+          node scripts/pwa-live-smoke.mjs
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.stage.outputs.ready == 'true'
+        with:
+          name: Rain-Published-PWA-v140-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            reports/published-pwa-promotion.json
+            reports/public-pwa/
+          if-no-files-found: warn
