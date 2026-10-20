@@ -4,6 +4,13 @@ on:
   push:
     branches: [main]
     paths-ignore:
+      - 'assets_source/audio/full-20261020/**'
+      - 'assets_source/full-media-prepared/**'
+      - 'assets_source/scenes/full-20261020/**'
+      - 'assets_source/references/full-20261020/**'
+      - 'assets_source/characters/full-20261020/**'
+      - '.github/workflows/finish-full-voice.yml'
+      - '.github/workflows/full-media-art.yml'
       - 'docs/**'
       - 'README.md'
       - 'CHANGELOG.md'

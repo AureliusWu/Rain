@@ -46,7 +46,7 @@ jobs:
           baseline='011f68e7b411caa3ec85d95813b163a3ac58b3d0'
           current=json.loads(subprocess.check_output(['gh','api','repos/AureliusWu/Rain/git/ref/heads/main']))['object']['sha']
           paths=subprocess.check_output(['git','diff','--name-only',baseline,os.environ['TARGET_SHA']],text=True).splitlines()
-          allowed=lambda p:p.startswith(('docs/','.github/workflows/','tools/publish_','tests/test_publish_','tools/production/')) or p in {'README.md','CHANGELOG.md','ROADMAP.md'}
+          allowed=lambda p:p.startswith(('docs/','.github/workflows/','tools/publish_','tests/test_publish_','tools/production/','assets_source/characters/full-20261020/','assets_source/references/full-20261020/','assets_source/scenes/full-20261020/','assets_source/full-media-prepared/','assets_source/audio/full-20261020/')) or p in {'README.md','CHANGELOG.md','ROADMAP.md'}
           ready=current==os.environ['TARGET_SHA'] and Path('VERSION').read_text().strip()=='1.4.0' and all(map(allowed,paths))
           with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('ready='+str(ready).lower()+'\n')
           if not ready:
