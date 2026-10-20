@@ -30,5 +30,26 @@
     "requiredNativeOriginalScreenshots": 184,
     "currentFormalDownload": "v1.3.1",
     "trigger": "Only after exact current Game validation completes successfully"
+  },
+  "jointOffline": {
+    "status": "passed",
+    "runId": 39382250096,
+    "report": "docs/production/FOUR-GAMES-OFFLINE-20261020.json",
+    "games": 4,
+    "cachedFiles": 192,
+    "pageErrors": 0,
+    "cacheAndSaveIsolation": true
+  },
+  "publicRuntimeReadback": {
+    "runtimeCommit": "011f68e7b411caa3ec85d95813b163a3ac58b3d0",
+    "pwaRun": 39380866141,
+    "artifactId": 12244888320,
+    "artifactSha256": "68faf77e1e70840edbaf05d252abd36d02b58a8d5584366303bc5c7c1c235b3a",
+    "pwaZipSha256": "5eae0319c5b1893b395bedcb88b7a49f5bc6751af39a9f1558763a3eec3adcbb",
+    "pwaZipCRC": "passed",
+    "nestedGameZipCRC": "passed",
+    "newCgAndOggExactSourceBytes": true,
+    "currentPublishedWorkerExactTestedBytes": true,
+    "revision": "a47044e73371900b0409e632"
   }
 }
