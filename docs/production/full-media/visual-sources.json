@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "project": "Rain",
+  "date": "2026-10-20",
+  "status": "raw_sources_saved_runtime_integration_pending",
+  "newCharacterCount": 1,
+  "assets": [
+    {
+      "id": "hechuan-layout-only",
+      "kind": "reference",
+      "active": false,
+      "source": "assets_source/references/full-20261020/hechuan-layout-only.png",
+      "sourceBytes": 1592893,
+      "gitBlobSha": "f1f5f619b3e883f56b5ca35bbb1ece2557f519cc",
+      "prompt": "Layout reference only. Never reuse this school character's identity or uniform in Rain.",
+      "references": [],
+      "tool": "image_gen",
+      "status": "reference_source_preserved"
+    },
+    {
+      "id": "player",
+      "kind": "atlas",
+      "active": true,
+      "source": "assets_source/characters/full-20261020/player-expressions.png",
+      "sourceBytes": 1607600,
+      "gitBlobSha": "e511f75aa62cbe1cd57ef07ee075808988cd3375",
+      "prompt": "Use case: illustration-story. Create an original visual-novel full-body character expression atlas for the adult 25-year-old male first-person player character in Before the Rain Stops, not a portrait of the actual user. Chinese adult man, short slightly wavy dark brown hair, gray-brown eyes, a reserved ordinary adult face and slender realistic adult proportions. Modest unbranded slate-gray lightweight rain jacket over an ivory shirt, dark navy straight trousers, plain charcoal walking shoes, a small empty beige cloth tote held in his left hand. Quiet clean hand-drawn Chinese/Japanese indie visual-novel linework and restrained cool rain-night colors matching the supplied heroine's rendering style, but do not copy her face, hair clip, skirt or female identity. The second reference supplies layout only. ONE 3-column by 2-row expression atlas with exactly SIX separate, equal-sized, SMALL full-body standing figures of the SAME person in exactly the same pose/outfit/scale. All head, hands, legs and both complete shoes visible. Top row neutral, smile, surprised; bottom row worried, quietly hurt/disappointed, slightly shy with eyes open. Landscape 1536x1024 composition, figures no taller than about 420px, large empty transparent gutter about 85px between the rows and 45px outer margins. No body touches a canvas edge. Match the clear full-body layout of the second reference only; never copy that person's identity or clothing. True transparent RGBA everywhere behind the figures; no floor, glow, cast shadow, gradient, frame, grid, labels or text.",
+      "references": [
+        "game/characters/heroine_normal.png",
+        "assets_source/references/full-20261020/hechuan-layout-only.png"
+      ],
+      "tool": "image_gen",
+      "status": "source_saved_runtime_integration_pending"
+    }
+  ],
+  "limitations": [
+    "The 25-year-old first-person player is an original fictional design, never an image of the user; gallery/production reference only.",
+    "Ren'Py 8.5.3 and the original first-person staging remain required.",
+    "Full CG production, runtime integration and next release are pending."
+  ]
+}
