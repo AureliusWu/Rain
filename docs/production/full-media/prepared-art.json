@@ -1,0 +1,142 @@
+{
+  "schema": 1,
+  "project": "Rain",
+  "status": "all_active_images_decoded_and_checked",
+  "count": 1,
+  "assets": [
+    {
+      "id": "player",
+      "kind": "atlas",
+      "active": true,
+      "source": "assets_source/characters/full-20261020/player-expressions.png",
+      "sourceBytes": 1607600,
+      "gitBlobSha": "e511f75aa62cbe1cd57ef07ee075808988cd3375",
+      "prompt": "Use case: illustration-story. Create an original visual-novel full-body character expression atlas for the adult 25-year-old male first-person player character in Before the Rain Stops, not a portrait of the actual user. Chinese adult man, short slightly wavy dark brown hair, gray-brown eyes, a reserved ordinary adult face and slender realistic adult proportions. Modest unbranded slate-gray lightweight rain jacket over an ivory shirt, dark navy straight trousers, plain charcoal walking shoes, a small empty beige cloth tote held in his left hand. Quiet clean hand-drawn Chinese/Japanese indie visual-novel linework and restrained cool rain-night colors matching the supplied heroine's rendering style, but do not copy her face, hair clip, skirt or female identity. The second reference supplies layout only. ONE 3-column by 2-row expression atlas with exactly SIX separate, equal-sized, SMALL full-body standing figures of the SAME person in exactly the same pose/outfit/scale. All head, hands, legs and both complete shoes visible. Top row neutral, smile, surprised; bottom row worried, quietly hurt/disappointed, slightly shy with eyes open. Landscape 1536x1024 composition, figures no taller than about 420px, large empty transparent gutter about 85px between the rows and 45px outer margins. No body touches a canvas edge. Match the clear full-body layout of the second reference only; never copy that person's identity or clothing. True transparent RGBA everywhere behind the figures; no floor, glow, cast shadow, gradient, frame, grid, labels or text.",
+      "tool": "image_gen",
+      "sourceSha256": "82c7931f77ef428bcc0bdc26f6a33bb59fc4d3fc3c364e4e6d4cf9c4564bd439",
+      "referenceHashes": [
+        {
+          "path": "game/characters/heroine_normal.png",
+          "sha256": "d7d7f53dfe3d53d64fb12469eba21a31e8d7eeeb5c3b0021195ca68a22d9ae0b"
+        },
+        {
+          "path": "assets_source/references/full-20261020/hechuan-layout-only.png",
+          "sha256": "97e3e95d67102a63e29eb420b7c916d0a451ded2c891944097769a47eb787f23"
+        }
+      ],
+      "qa": {
+        "kind": "atlas",
+        "width": 1536,
+        "height": 1024,
+        "transparentFraction": 0.7611,
+        "alphaBounds": [
+          185,
+          0,
+          1450,
+          1011
+        ],
+        "solidAlphaBounds": [
+          225,
+          15,
+          1329,
+          1008
+        ],
+        "columns": 3,
+        "rows": 2,
+        "rowSeparator": 510,
+        "expressions": [
+          "neutral",
+          "smile",
+          "surprised",
+          "worried",
+          "hurt",
+          "shy"
+        ],
+        "figureBounds": [
+          [
+            226,
+            15,
+            410,
+            497
+          ],
+          [
+            678,
+            15,
+            862,
+            497
+          ],
+          [
+            1144,
+            15,
+            1329,
+            497
+          ],
+          [
+            225,
+            525,
+            409,
+            1008
+          ],
+          [
+            678,
+            525,
+            862,
+            1008
+          ],
+          [
+            1143,
+            524,
+            1329,
+            1008
+          ]
+        ],
+        "frames": [
+          [
+            209,
+            9,
+            218,
+            496
+          ],
+          [
+            661,
+            9,
+            218,
+            496
+          ],
+          [
+            1128,
+            9,
+            218,
+            496
+          ],
+          [
+            208,
+            519,
+            218,
+            496
+          ],
+          [
+            661,
+            519,
+            218,
+            496
+          ],
+          [
+            1127,
+            518,
+            218,
+            496
+          ]
+        ],
+        "path": "assets_source/full-media-prepared/player-expressions.webp",
+        "bytes": 1027798,
+        "sha256": "c25a2e8fb65eeeae159a6cf4018590e6149a39698f2995a8e3cff05dec3c8e01"
+      },
+      "status": "decoded_and_alpha_or_scene_checked",
+      "runtimeIntegration": "pending"
+    }
+  ],
+  "humanVisualApproval": false,
+  "runtimeIntegration": "pending",
+  "release": "not_published"
+}
