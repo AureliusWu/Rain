@@ -2,18 +2,21 @@
   "date": "2026-10-20",
   "project": "Rain",
   "version": "1.4.0",
-  "status": "candidate_pending_current_CI",
+  "status": "runtime_passed_audit_export_fix_retesting",
   "cgManifest": "docs/art/cafe-photo-manifest.json",
   "musicManifest": "docs/audio/cafe-photo-score-manifest.json",
   "tests": {
-    "local_logic_or_python": 220,
+    "local_logic_or_python": 222,
     "passed": true,
-    "browser": "not executed locally: browser archive download was truncated",
-    "windows": "not executed locally; current CI required",
+    "browser": "official WASM / PWA and public native browser checks passed",
+    "windows": "current source and standalone EXE each passed 37 cases / 498 assertions / 87 screenshots; old-save upgrade and fresh-process load passed; final exporter failed stale asset count",
     "humanListening": "pending",
     "artFinalChoice": "pending"
   },
   "compatibility": "Stable scene/line IDs, choices, recorded lines and save identity retained",
   "limits": "Earlier release evidence is historical, not validation for this candidate.",
-  "authoringValidation": "220 Python tests; route/story/Prompt/87 assets/25 audio/61 image recipes/7 expressions/generated scripts passed"
+  "authoringValidation": "222 local Python tests and all author validators passed",
+  "nativeRun": 39370350441,
+  "webRun": 39370350447,
+  "runtimeCommit": "29fe3c8eba43fe253813cdb8b3985ff65c026916"
 }

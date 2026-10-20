@@ -1,7 +1,8 @@
 import copy
+import json
 from pathlib import Path
 import unittest
-from tools.build.export_review import validate_plan_summary
+from tools.build.export_review import validate_plan_summary, validate_asset_inventory
 from tools.build.verify_voice_smoke import prefix_plan
 
 
@@ -26,6 +27,17 @@ class ExportReviewCurrentPlanTests(unittest.TestCase):
         for field,value in [('failed',1),('skipped',1),('not_run',1),('xfailed',1),('xpassed',1),('failed',False),('cases',37.0)]:
             with self.subTest(field=field),self.assertRaises(ValueError):
                 validate_plan_summary({**self.summary,field:value},self.plan,'source')
+
+    def test_current_manifest_audits_all_87_assets(self):
+        root = Path(__file__).resolve().parents[1]
+        assets = json.loads((root/'game/data/asset_manifest.json').read_text())['assets']
+        self.assertEqual(validate_asset_inventory(assets), 87)
+
+    def test_empty_or_duplicate_manifest_cannot_be_counted_as_audit_success(self):
+        for assets in [[], [{'id': 'a', 'file': 'one.png'}] * 2,
+                       [{'id': 'a', 'file': 'one.png'}, {'id': 'b', 'file': 'one.png'}]]:
+            with self.subTest(assets=assets), self.assertRaises(ValueError):
+                validate_asset_inventory(assets)
 
 
 if __name__=='__main__':unittest.main()

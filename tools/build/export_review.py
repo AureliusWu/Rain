@@ -8,6 +8,7 @@ from tools.build.verify_package import validate_native_report, required_screensh
 from tools.build.verify_upgrade import render_upgrade_writer, render_upgrade_reader, BASELINE_SHA256, BASELINE_VERSION
 from tools.build.verify_voice_smoke import prefix_plan, PREFIX_CASES
 from tools.build.review_transport import write_bundles
+from tools.compile_extras import IMAGE_TITLES, MUSIC_TITLES
 
 def digest(p):
     with Path(p).open("rb") as f: return hashlib.file_digest(f, "sha256").hexdigest()
@@ -28,6 +29,16 @@ def safe(z):
     require(len(names)==len(set(names)), "Duplicate ZIP entries")
     require(all(not n.startswith(("/", "\\")) and "\\" not in n and ":" not in n and ".." not in n.split("/") for n in names), "Unsafe ZIP entries")
     require(z.testzip() is None, "ZIP CRC failed")
+
+def validate_asset_inventory(assets):
+    """Audit every current manifest entry without a stale release-specific count."""
+    require(isinstance(assets, list) and bool(assets), "Asset inventory is empty")
+    ids = [a.get("id") for a in assets]
+    paths = [a.get("file") for a in assets]
+    require(all(isinstance(value, str) and value for value in ids + paths)
+        and len(set(ids)) == len(ids) and len(set(paths)) == len(paths),
+        "Asset inventory has missing or duplicate identities")
+    return len(assets)
 
 def main():
     require(os.name=="nt", "This exporter requires the actual Windows runner")
@@ -72,7 +83,8 @@ def main():
         for name in z.namelist():
             relative=name[len(root):]
             require(not relative.startswith(("game/data/","game/tests/","game/saves/","assets_source/","tools/","tests/","prompts/",".git/","old-game/","game/testcases.")) and not relative.endswith((".onnx",".pt",".pth",".safetensors")),"Private files in package")
-        assets=read(ROOT/"game/data/asset_manifest.json")["assets"];require(len(assets)==85,"Asset count differs")
+        assets=read(ROOT/"game/data/asset_manifest.json")["assets"]
+        asset_count=validate_asset_inventory(assets)
         for a in assets:
             raw=z.read(root+"game/"+a["file"])
             require(hashlib.sha256(raw).hexdigest()==a["sha256"] and raw==(ROOT/"game"/a["file"]).read_bytes(),"Asset differs "+a["id"])
@@ -84,7 +96,7 @@ def main():
         require(player.replace("\r\n","\n")== (ROOT/"PLAYER_README.txt").read_text() and f"版本：{version}" in player and "鉴赏室" in player,"Player instructions differ")
         info=json.loads(z.read(root+"game/cache/build_info.json")); require(info["version"]==version,"Build version differs")
         pkg={"file":package.name,"size_in_bytes":package.stat().st_size,"sha256":package_sha,"entries":len(z.namelist()),"crc":"passed",
-            "test_scripts_in_original_zip":False,"assets_checked":85,"build_info":info,"license_and_credits_documents":licenses}
+            "test_scripts_in_original_zip":False,"assets_checked":asset_count,"build_info":info,"license_and_credits_documents":licenses}
     upgrade=read(reports/"upgrade/acceptance.json")
     require(upgrade["status"]=="passed" and upgrade["previous_version"]==BASELINE_VERSION and upgrade["current_version"]==version
         and upgrade["package_sha256"]=={"previous":BASELINE_SHA256,"current":package_sha}
@@ -110,7 +122,7 @@ def main():
         "screenshots_count":len(shots),"screenshots":shots,"upgrade":upgrade,"compatibility_baseline":baseline,"voice_smoke":smoke,
         "display":read(reports/"display.json"),"voice_upgrade":{"engine":"Qwen3-TTS 1.7B CustomVoice","speaker":"Serena","recordings":17,
             "generation_sha256":voice_sha,"human_listening":False,"all_recording_bytes_unchanged":True},
-        "extras":{"images":5,"music_tracks":3,"unlock_source":"native seen-image and seen-audio persistence",
+        "extras":{"images":len(IMAGE_TITLES),"music_tracks":len(MUSIC_TITLES),"unlock_source":"native seen-image and seen-audio persistence",
             "locked_content_hides_titles_and_images":True,"story_state_unchanged_by_gallery":True,
             "music_controls":"play/previous/next/pause/stop/real slider/real mute; stop on leave or Start",
             "music_progress_and_current_title_status":"passed",
@@ -123,9 +135,10 @@ def main():
     old={(x["scope"],x["name"]):x for x in prior}
     planned=[(x["scope"],x["name"]) for x in prior]
     planned += [("standalone",n) for n in required_screenshots(plan) if "-extras-" in n]
+    planned += [("standalone",n) for n in required_screenshots(plan) if n.startswith("cg-")]
     planned += [("fresh_process","native-extras-music-persistent"),("upgrade_reader","native-extras-music-persistent")]
     planned=list(dict.fromkeys(planned))
-    require(len(planned)==58,"Visual plan differs")
+    require(len(planned) >= len(prior) and all((scope,name) in {(x["scope"],x["name"]) for x in shots} for scope,name in planned),"Visual plan lacks current screenshots")
     items=[];media=[]
     for scope,name in planned:
         shot=next(x for x in shots if x["scope"]==scope and x["name"]==name)
