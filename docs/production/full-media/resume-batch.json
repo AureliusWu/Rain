@@ -1,10 +1,12 @@
 {
   "schema": 1,
   "project": "Rain",
-  "batch": "20261020-continue-verified-01",
+  "batch": "20261021-continue-latest-02",
   "count": 306,
   "semanticSha256": "43ef805dc1a881d5fc4736841c0ebee358707ee7db17982ece91fb23437104dd",
-  "attemptOffset": 3,
+  "attemptOffset": 6,
   "reuse": "byte-verified accepted takes only",
-  "humanListening": false
+  "humanListening": false,
+  "sourceArchive": "assets_source/voice/continued-20261020",
+  "homophoneReview": "exact same length, syllables and tones; raw ASR retained"
 }
