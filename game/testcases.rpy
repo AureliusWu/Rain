@@ -306,6 +306,7 @@ testcase history_voice_replay:
     assert screen "history"
     assert eval [h.voice.filename for h in _history_list if h.voice and h.voice.filename] == ['audio/voice/full-20261021/rain-p00-entry-l005.ogg', 'audio/voice/full-20261021/rain-p00-entry-l011.ogg', 'audio/voice/heroine_s01_arrival_l005_v1.ogg']
     assert eval renpy.get_widget("history", "history_voice_%d" % test_silent_history_index) is None
+    click id "history_speaker_许澄"
     move pos (0.5, 0.4)
     move id ("history_voice_%d" % test_history_voice_index)
     pause 0.1
@@ -322,6 +323,7 @@ testcase history_voice_replay:
     $ renpy.set_physical_size((1280, 720))
     pause until eval renpy.get_physical_size() == (1280, 720)
     pause 0.3
+    click id "history_speaker_许澄"
     move pos (0.5, 0.4)
     move id ("history_voice_%d" % test_history_voice_index)
     pause 0.1
@@ -337,6 +339,7 @@ testcase history_voice_replay:
     assert eval preferences.get_mute("voice")
     click "历史"
     pause until screen "history"
+    click id "history_speaker_许澄"
     move pos (0.5, 0.4)
     move id ("history_voice_%d" % test_history_voice_index)
     pause 0.1
@@ -351,6 +354,7 @@ testcase history_voice_replay:
     assert eval not preferences.get_mute("voice")
     click "历史"
     pause until screen "history"
+    click id "history_speaker_许澄"
     move pos (0.5, 0.4)
     move id ("history_voice_%d" % test_history_voice_index)
     pause 0.1

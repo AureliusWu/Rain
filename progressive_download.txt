@@ -1,5 +1,7 @@
-# Complete offline distribution. Every asset is included in game.zip before play.
-# Ren'Py's image/music/voice streaming is intentionally disabled for this short game.
+# RenPy first-match rules. CGs are separate files to keep game.zip below 50 MB.
+# The application worker still hashes and atomically caches EVERY build file
+# before announcing offline readiness; CG reads then resolve from that cache.
++ image game/cg/**
 - image game/**
 - music game/**
 - voice game/**

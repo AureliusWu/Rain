@@ -469,6 +469,7 @@ def render_tests(story):
             continue
         break
     history_replay_click = [
+        '    click id "history_speaker_许澄"',
         '    move pos (0.5, 0.4)',
         '    move id ("history_voice_%d" % test_history_voice_index)',
         '    pause 0.1',
