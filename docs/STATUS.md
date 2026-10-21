@@ -1,3 +1,9 @@
+# 2026-10-21 · v1.4.1 引擎优化候选
+
+本轮完成资源生命周期优化与回归，正在接续平台验证。具体改动和实际结果见 [引擎同步记录](production/ENGINE-SYNC-20261021.md)。下面已发布版本与验收证据按日期保留。
+
+---
+
 # 2026-10-20 · v1.4.0 已正式发布，开始全量素材制作
 
 [v1.4.0 正式下载](https://github.com/AureliusWu/Rain/releases/tag/v1.4.0) 已公开。[原生 39380866238](https://github.com/AureliusWu/Rain/actions/runs/39380866238) 和[同字节发布 39385239637](https://github.com/AureliusWu/Rain/actions/runs/39385239637) 成功；源码与独立 EXE 各 37 用例 / 498 断言 / 87 截图，184 张原始截图、87 资产、真实旧档升级和官方 WASM/PWA 检查通过。四项公开附件已实际下载回读，两个原始 ZIP 与当前公开 worker 保持同次验收字节。[精确发布结果](production/PUBLISHED-v1.4.0.json)。

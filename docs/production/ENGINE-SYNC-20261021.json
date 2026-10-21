@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-21",
+  "project": "Rain",
+  "version": "1.4.1",
+  "base_commit": "69f1f37c7ed7c23b576c1e1cbe58088aa98eb3c2",
+  "local": {
+    "unit_tests_passed": 239,
+    "production_build": "WASM build delegated to CI; native lint passed locally",
+    "browser": {
+      "passed": 5,
+      "kind": "actual Chromium service-worker fixture; RenPy/WASM not booted",
+      "report": {
+        "status": "passed",
+        "scope": "actual Chromium worker fixture; no RenPy/WASM execution",
+        "checks": [
+          "actual install runs at most two downloads together",
+          "real progress messages count each verified file in completion order",
+          "corrupt parallel update cleans its candidate and keeps the active complete build",
+          "successful retry waits for old reading windows to close",
+          "activation removes only the old cache in this exact application scope"
+        ],
+        "errors": [],
+        "peakDownloads": 2
+      }
+    },
+    "worker_unit_tests_passed": 4,
+    "authoring_validation": "all validators, 16 routes, 87 assets, 25 audio decodes passed",
+    "renpy_lint": "8.5.3.26051504 passed",
+    "materials": "92 entries / 230 files passed"
+  },
+  "platform_validation": {
+    "github_ci": "pending push",
+    "windows_actual_package": "pending exact-commit CI",
+    "public_pwa": "pending exact-commit deployment"
+  },
+  "fingerprints": {
+    "tools/build/pwa/service-worker.js": "cd214e21c8bd7fb3cdaadc3126d6b09e15c87f77b261204ada50dfa33bcaf132",
+    "scripts/pwa-download-browser.mjs": "e41e0619c8178244088fb82d85e266ccde72ab513ed9fbba42c1407329e457d8",
+    "tests/pwa-progress.test.mjs": "f72065858e9aa21e9d80955f801a9bf7a67d7c98ffd73e220a5edd3e2a7213ac",
+    "tests/pwa-downloads.test.mjs": "4ea7af91e4b34729fadde1691605f12935c998ddd28e2e3fca3dd7d6f1337f4b"
+  }
+}

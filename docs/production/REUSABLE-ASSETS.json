@@ -4180,7 +4180,7 @@
           "role": "recipe",
           "path": "tools/build/pwa/service-worker.js",
           "encoding": "text-lf",
-          "sha256": "a295df44213287994c8fe24c79d90abce0896cfaf71c91a922da8ed1a22d5c81"
+          "sha256": "cd214e21c8bd7fb3cdaadc3126d6b09e15c87f77b261204ada50dfa33bcaf132"
         },
         {
           "role": "recipe",

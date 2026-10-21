@@ -1,11 +1,12 @@
 {
   "name": "rain-native-platform-checks",
   "private": true,
-  "version": "1.4.0",
+  "version": "1.4.1",
   "type": "module",
   "scripts": {
     "test:history-input": "node scripts/history-input-browser.mjs",
-    "test:pwa": "node scripts/pwa-smoke.mjs"
+    "test:pwa": "node scripts/pwa-smoke.mjs",
+    "test:pwa-downloads": "node scripts/pwa-download-browser.mjs"
   },
   "devDependencies": {
     "playwright": "1.62.1"

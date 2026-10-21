@@ -1,3 +1,7 @@
+## 2026-10-21 · PWA 资源并发回归
+
+`node --test tests/pwa-progress.test.mjs tests/pwa-downloads.test.mjs` 覆盖两路并行上限、逐文件完整性、单调进度、失败取消及等待所有任务结束后删除候选缓存。全量成功前不得写完整标记，旧版和相邻 scope 保留。实际平台结果见 production/ENGINE-SYNC-20261021.json。
+
 # v1.3.1 正式发布与下载核验完成 · 2026-10-19
 
 收藏支持关键词、人物与章节交叉检索，显示匹配数量；清除筛选、重听与删除保留当前剧情位置。

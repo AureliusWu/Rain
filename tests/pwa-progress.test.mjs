@@ -11,14 +11,14 @@ async function fixture(corrupt=false){
  const events=new Map(),messages=[];const cache={open:async name=>{if(!stores.has(name))stores.set(name,new Map());const data=stores.get(name);return{match:async key=>data.get(String(key)),put:async(key,value)=>{data.set(String(key),value);}};},delete:async name=>stores.delete(name),keys:async()=>[...stores.keys()]};
  const clients=[{url:'https://games.test/Rain/',postMessage:message=>messages.push(structuredClone(message))},{url:'https://games.test/Other/',postMessage:()=>assert.fail('cross-scope progress leak')}];
  const self={location:{href:'https://games.test/Rain/service-worker.js'},clients:{matchAll:async()=>clients,claim:async()=>{}},addEventListener:(name,fn)=>events.set(name,fn)};
- vm.runInNewContext(source.replace('/* BUILD_CONFIG */',JSON.stringify(build)),{self,caches:cache,crypto:webcrypto,URL,Request,Response,fetch:async request=>{const path=new URL(request.url).pathname.split('/').at(-1);return new Response(corrupt&&path==='renpy.wasm'?'wrong wasm':payloads.get(path));},Uint8Array,Map});
+ vm.runInNewContext(source.replace('/* BUILD_CONFIG */',JSON.stringify(build)),{self,caches:cache,crypto:webcrypto,URL,Request,Response,AbortController,fetch:async request=>{const path=new URL(request.url).pathname.split('/').at(-1);return new Response(corrupt&&path==='renpy.wasm'?'wrong wasm':payloads.get(path));},Uint8Array,Map});
  const fire=async(name,data={})=>{let promise;events.get(name)({...data,waitUntil:p=>{promise=p;}});await promise;};
  return{fire,stores,messages,build};
 }
 test('counts bytes only after verifying hashes and committing each file to its own cache',async()=>{
  const f=await fixture();await f.fire('install');
  assert.deepEqual(f.messages.map(x=>x.completedFiles),[0,1,2]);
- assert.deepEqual(f.messages.map(x=>x.verifiedBytes),[0,10,19]);
+ assert.equal(f.messages[0].verifiedBytes,0);assert.ok([9,10].includes(f.messages[1].verifiedBytes));assert.equal(f.messages.at(-1).verifiedBytes,19);
  assert.ok(f.messages.every(x=>x.totalBytes===19&&x.totalFiles===2&&!x.failed));
  assert.ok(f.stores.get('rain-pwa:/Rain/:candidate').has('https://games.test/Rain/__rain_complete__'));
  let status;await f.fire('message',{data:{type:'RAIN_OFFLINE_STATUS'},ports:[{postMessage:value=>{status=value;}}]});
@@ -28,6 +28,6 @@ test('counts bytes only after verifying hashes and committing each file to its o
 });
 test('a corrupt file reports failure, never counts its bytes and preserves the complete old build',async()=>{
  const f=await fixture(true);await assert.rejects(()=>f.fire('install'),/Build changed/);
- assert.equal(f.messages.at(-1).failed,true);assert.equal(f.messages.at(-1).completedFiles,1);assert.equal(f.messages.at(-1).verifiedBytes,10);
+ assert.equal(f.messages.at(-1).failed,true);assert.ok(f.messages.at(-1).completedFiles<=1);assert.equal(f.messages.at(-1).verifiedBytes,f.messages.at(-1).completedFiles*10);
  assert.equal(f.stores.has('rain-pwa:/Rain/:candidate'),false);assert.ok(f.stores.has('rain-pwa:/Rain/:old'));
 });

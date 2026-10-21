@@ -8,13 +8,19 @@ const MARKER = new URL('__rain_complete__', SCOPE).href;
 const FILES = new Map(BUILD.files.map(file => [new URL(file.path, SCOPE).href, file]));
 const TOTAL_BYTES = BUILD.files.reduce((sum, file) => sum + file.bytes, 0);
 let progress = {completedFiles: 0, totalFiles: FILES.size, verifiedBytes: 0, totalBytes: TOTAL_BYTES, failed: false};
-async function reportProgress() {
-    const clients = await self.clients.matchAll({type: 'window', includeUncontrolled: true});
-    for (const client of clients) {
-        const url = new URL(client.url);
-        if (url.origin === SCOPE.origin && url.pathname.startsWith(SCOPE.pathname))
-            client.postMessage({type: 'RAIN_OFFLINE_PROGRESS', revision: BUILD.revision, ...progress});
-    }
+let reporting = Promise.resolve();
+function reportProgress() {
+    // Concurrent downloads publish snapshots in completion order.
+    const message = {type: 'RAIN_OFFLINE_PROGRESS', revision: BUILD.revision, ...progress};
+    reporting = reporting.then(async () => {
+        const clients = await self.clients.matchAll({type: 'window', includeUncontrolled: true});
+        for (const client of clients) {
+            const url = new URL(client.url);
+            if (url.origin === SCOPE.origin && url.pathname.startsWith(SCOPE.pathname))
+                client.postMessage(message);
+        }
+    });
+    return reporting;
 }
 const hex = bytes => Array.from(new Uint8Array(bytes), byte => byte.toString(16).padStart(2, '0')).join('');
 
@@ -24,16 +30,31 @@ self.addEventListener('install', event => event.waitUntil((async () => {
         progress = {...progress, completedFiles: 0, verifiedBytes: 0, failed: false};
         try {
             await reportProgress();
-            for (const [url, file] of FILES) {
-                const response = await fetch(new Request(url, {cache: 'reload', credentials: 'same-origin'}));
-                if (!response.ok || response.type === 'opaque') throw new Error(`Cannot cache ${file.path}`);
-                const bytes = await response.clone().arrayBuffer();
-                if (bytes.byteLength !== file.bytes || hex(await crypto.subtle.digest('SHA-256', bytes)) !== file.sha256)
-                    throw new Error(`Build changed while downloading ${file.path}`);
-                await cache.put(url, response);
-                progress.completedFiles++; progress.verifiedBytes += bytes.byteLength;
-                await reportProgress();
+            const pending = [...FILES], controller = new AbortController();
+            let cursor = 0, failure;
+            async function download() {
+                while (!controller.signal.aborted && cursor < pending.length) {
+                    const [url, file] = pending[cursor++];
+                    try {
+                        const response = await fetch(new Request(url, {cache: 'reload', credentials: 'same-origin'}), {signal: controller.signal});
+                        if (controller.signal.aborted) return;
+                        if (!response.ok || response.type === 'opaque') throw new Error(`Cannot cache ${file.path}`);
+                        const bytes = await response.clone().arrayBuffer();
+                        if (bytes.byteLength !== file.bytes || hex(await crypto.subtle.digest('SHA-256', bytes)) !== file.sha256)
+                            throw new Error(`Build changed while downloading ${file.path}`);
+                        if (controller.signal.aborted) return;
+                        await cache.put(url, response);
+                        progress.completedFiles++; progress.verifiedBytes += bytes.byteLength;
+                        await reportProgress();
+                    } catch (error) {
+                        if (!controller.signal.aborted) failure = error;
+                        controller.abort();
+                    }
+                }
             }
+            // Bound the number of full-file hash buffers, including WASM/game ZIP.
+            await Promise.all(Array.from({length: Math.min(2, pending.length)}, download));
+            if (controller.signal.aborted) throw failure;
             await cache.put(MARKER, new Response(JSON.stringify({revision: BUILD.revision, files: FILES.size})));
         } catch (error) {
             await caches.delete(CACHE);
