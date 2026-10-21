@@ -12,89 +12,63 @@
   "textSha256": "36c6b49d4c48cc224f3b17086b60b7c5465e9381d37b43a22526357be371c5a3",
   "medium": "spoken",
   "requestSha256": "514aff9a33d192359d669a31ee71c318536d76fe39f4a76ed37c32588c85949b",
-  "attempt": 8,
-  "status": "needs_review",
+  "attempt": 11,
+  "status": "accepted",
   "asr": {
-    "transcript": "虚诚",
-    "cer": 1.0,
+    "transcript": "许诚",
+    "cer": 0.5,
     "polarityCountsMatch": true,
-    "passed": false,
+    "passed": true,
+    "expectedSpokenText": "许澄？",
     "phoneticReview": {
-      "method": "exact_all_syllables_and_tones_pypinyin_0.53.0",
+      "method": "exact_all_syllables_tones_and_explicit_numeric_values_v2_pypinyin_0.53.0",
       "expected": "许澄",
-      "observed": "虚诚",
+      "observed": "许诚",
       "expectedSyllables": [
         "xu3",
         "cheng2"
       ],
       "observedSyllables": [
-        "xu1",
+        "xu3",
         "cheng2"
       ],
       "sameLength": true,
       "polarityCountsMatch": true,
-      "passed": false,
+      "passed": true,
       "humanListening": false
     },
-    "model": "Systran/faster-whisper-medium",
-    "revision": "08e178d48790749d25932bbc082711ddcfdfbc4f",
-    "audioSha256": "eb3ce03b03063fe6ce7ab36a8cf7362090167ffb4b78c750e07530d1d10362c0"
+    "acceptance": "exact_toned_homophones"
   },
-  "duration": 0.8,
-  "wallSeconds": 4.439,
+  "duration": 0.88,
+  "wallSeconds": 35.224,
   "loudness": {
-    "input_i": "-26.34",
-    "input_tp": "-8.95",
+    "input_i": "-31.93",
+    "input_tp": "-12.75",
     "input_lra": "0.00",
-    "input_thresh": "-36.34",
-    "output_i": "-19.98",
-    "output_tp": "-2.61",
+    "input_thresh": "-41.93",
+    "output_i": "-21.14",
+    "output_tp": "-2.00",
     "output_lra": "0.00",
-    "output_thresh": "-29.98",
+    "output_thresh": "-31.14",
     "normalization_type": "linear",
-    "target_offset": "-0.02"
+    "target_offset": "1.14"
   },
   "files": {
     "raw": {
       "path": "rain-s01-arrival-l007/raw.wav",
-      "bytes": 76880,
-      "sha256": "408173d9dd22fa4d4c80b43663bc52d9940cbd305e2f51f34abb677f039528bd"
+      "bytes": 84560,
+      "sha256": "cd1aad5c1be3da63d393e429a8277a2fc9ca70baab2ff88adcee251dc1c35f15"
     },
     "master": {
       "path": "rain-s01-arrival-l007/master.wav",
-      "bytes": 38478,
-      "sha256": "23eb13306461484f54f26dc3d326f3936b308b3a716596c184915e8b5a081eea"
+      "bytes": 42318,
+      "sha256": "12f3970f32a740471f571e903c3d08880059a5d6da6285386f45a4b59766e97f"
     },
     "runtime": {
       "path": "rain-s01-arrival-l007/runtime.ogg",
-      "bytes": 9495,
-      "sha256": "eb3ce03b03063fe6ce7ab36a8cf7362090167ffb4b78c750e07530d1d10362c0"
+      "bytes": 9867,
+      "sha256": "37765170f868c8e7be4ca49c50ff1bf846c8a41e6fc2717607b48c595ac85387"
     }
   },
-  "recoveredFromRun": 39522082173,
-  "asrReviewHistory": [
-    {
-      "transcript": "去尝",
-      "cer": 1.0,
-      "polarityCountsMatch": true,
-      "passed": false,
-      "phoneticReview": {
-        "method": "exact_all_syllables_and_tones_pypinyin_0.53.0",
-        "expected": "许澄",
-        "observed": "去尝",
-        "expectedSyllables": [
-          "xu3",
-          "cheng2"
-        ],
-        "observedSyllables": [
-          "qu4",
-          "chang2"
-        ],
-        "sameLength": true,
-        "polarityCountsMatch": true,
-        "passed": false,
-        "humanListening": false
-      }
-    }
-  ]
+  "recoveredFromRun": 39525791617
 }
