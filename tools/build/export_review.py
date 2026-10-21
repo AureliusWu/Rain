@@ -120,7 +120,7 @@ def main():
         "candidate_tree":subprocess.check_output(["git","rev-parse","HEAD^{tree}"],cwd=ROOT,text=True).strip(),
         "run_id":run_id,"engine":"RenPy 8.5.3.26051504","ci_context":context,"suites":suites,"package":pkg,
         "screenshots_count":len(shots),"screenshots":shots,"upgrade":upgrade,"compatibility_baseline":baseline,"voice_smoke":smoke,
-        "display":read(reports/"display.json"),"voice_upgrade":{"engine":"Qwen3-TTS 1.7B CustomVoice","speaker":"Serena","recordings":17,
+        "display":read(reports/"display.json"),"full_dialogue":read(reports/"full-media.json"),"voice_upgrade":{"engine":"Qwen3-TTS 1.7B CustomVoice","speaker":"Serena","recordings":17,
             "generation_sha256":voice_sha,"human_listening":False,"all_recording_bytes_unchanged":True},
         "extras":{"images":len(IMAGE_TITLES),"music_tracks":len(MUSIC_TITLES),"unlock_source":"native seen-image and seen-audio persistence",
             "locked_content_hides_titles_and_images":True,"story_state_unchanged_by_gallery":True,

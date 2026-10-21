@@ -54,6 +54,10 @@ def validate_native(machine, commit, run_id, package):
     require(machine.get('human_acceptance_is_not_claimed') is True
             and machine.get('human_pending') == HUMAN_PENDING and machine.get('unresolved_machine_issues') == [],
             'Native limitations or unresolved issues differ')
+    media = machine.get('full_dialogue', {})
+    require(media.get('project') == 'Rain' and media.get('target') == media.get('accepted') == 306
+            and media.get('complete') is True and media.get('status') == 'passed'
+            and media.get('humanListening') is False, 'Complete dialogue acceptance missing from native evidence')
     plans = native_plans()
     shots = set()
     for scope, plan in plans.items():

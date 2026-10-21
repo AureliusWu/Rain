@@ -4168,7 +4168,7 @@
           "role": "recipe",
           "path": "tools/build/web.py",
           "encoding": "text-lf",
-          "sha256": "0f98ca135c7c45c5a033de8dfb2a9e7dabe9ed1b070d97fa32213b3ddb83740b"
+          "sha256": "b758a8bf152a37a1ba2db6a391293a72efaf9bfc5b9b52988e7d149bde516740"
         },
         {
           "role": "recipe",

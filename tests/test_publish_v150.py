@@ -28,6 +28,7 @@ class CurrentPublicationTests(unittest.TestCase):
         shots = [dict(scope=scope, name=name) for scope, plan in plans.items() for name in required_screenshots(plan)]
         cls.machine = dict(version='1.5.0', candidate_commit=cls.sha, run_id=123,
             status='technical_passed_visual_pending', human_acceptance_is_not_claimed=True,
+            full_dialogue=dict(project='Rain',target=306,accepted=306,complete=True,status='passed',humanListening=False),
             human_pending=publication.HUMAN_PENDING, unresolved_machine_issues=[],
             suites={scope: suite(plan) for scope, plan in plans.items()}, screenshots=shots, screenshots_count=len(shots),
             voice_smoke=dict(status='passed', iterations=[suite(prefix_plan(plans['source']))]*2),
@@ -43,13 +44,14 @@ class CurrentPublicationTests(unittest.TestCase):
         publication.validate_native(self.machine, self.sha, 123, self.package)
 
     def test_rejects_stale_inventory_and_omitted_native_cases(self):
-        for kind in ('assets', 'cases', 'screenshots', 'skipped', 'human'):
+        for kind in ('assets', 'cases', 'screenshots', 'skipped', 'human', 'dialogue'):
             machine = copy.deepcopy(self.machine)
             if kind == 'assets': machine['package']['assets_checked'] = 87
             if kind == 'cases': machine['suites']['source']['cases'] -= 1
             if kind == 'screenshots': machine['screenshots'].pop()
             if kind == 'skipped': machine['suites']['standalone']['skipped'] = 1
             if kind == 'human': machine['human_acceptance_is_not_claimed'] = False
+            if kind == 'dialogue': machine['full_dialogue']['accepted'] = 305
             with self.subTest(kind=kind), self.assertRaises(ValueError):
                 publication.validate_native(machine, self.sha, 123, self.package)
 
