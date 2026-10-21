@@ -602,7 +602,7 @@ testcase route_01:
     click "把信里的意思和今天的打算说清楚"
     advance until screen "choice"
     click "和她一起走，继续聊一会儿"
-    advance until "纸箱底角擦过椅背，响了一声。我检查胶带有没有贴牢，握稳左手的伞，许澄绕过那块松动的地砖。"
+    advance until "别照着以前走。门口那级台阶拆了。"
     pause 0.2
     assert eval renpy.showing('backgrounds/station_exit_after_rain.png')
     assert eval renpy.showing("heroine normal")

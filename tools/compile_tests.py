@@ -159,7 +159,7 @@ def render_tests(story):
             lines += ['    advance until screen "choice"', f"    click {quote(choices[choice_id]['text'])}"]
             if index in (1, 2) and choice_id.startswith('q03_') and 'station_exit_after_rain' in assets:
                 path_scene = 's05_shared_path' if choice_id == 'q03_walk' else 's05_separate_path'
-                text = quote(next(n['lines'][0]['text'] for n in story['nodes'] if n['id'] == path_scene))
+                text = quote(next(n['lines'][1 if path_scene == 's05_shared_path' else 0]['text'] for n in story['nodes'] if n['id'] == path_scene))
                 lines += [f'    advance until {text}', '    pause 0.2',
                           f"    assert eval renpy.showing({assets['station_exit_after_rain']!r})",
                           '    assert eval renpy.showing("heroine normal")',
