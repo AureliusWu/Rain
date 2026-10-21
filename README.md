@@ -1,4 +1,4 @@
-> 2026-10-21：v1.4.1 引擎优化候选；改动及本次验证见[同步记录](docs/production/ENGINE-SYNC-20261021.md)。
+> 2026-10-21：v1.4.1 引擎补丁通过本次 Windows、浏览器与公开离线验证；PWA 已更新，已验收桌面包见 CI 工件。详见[最终同步记录](docs/production/ENGINE-SYNC-20261021.md)。
 
 > 2026-10-19：**v1.3.1 已正式发布**，Windows、官方 WASM/PWA、真实旧档升级与公开原包核验通过。[下载](https://github.com/AureliusWu/Rain/releases/tag/v1.3.1) · [发布凭据](docs/production/PUBLISHED-v1.3.1.json)。
 

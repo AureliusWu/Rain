@@ -29,14 +29,63 @@
     "materials": "92 entries / 230 files passed"
   },
   "platform_validation": {
-    "github_ci": "pending push",
-    "windows_actual_package": "pending exact-commit CI",
-    "public_pwa": "pending exact-commit deployment"
+    "github_ci": [
+      {
+        "id": 39528122222,
+        "name": "Native RenPy PWA and shared materials",
+        "status": "completed",
+        "conclusion": "success",
+        "commit": "e9fe11cbae90a465fd2ec0ada49d448adc888c39",
+        "url": "https://github.com/AureliusWu/Rain/actions/runs/39528122222"
+      },
+      {
+        "id": 39528122230,
+        "name": "Game validation",
+        "status": "completed",
+        "conclusion": "success",
+        "commit": "e9fe11cbae90a465fd2ec0ada49d448adc888c39",
+        "url": "https://github.com/AureliusWu/Rain/actions/runs/39528122230"
+      }
+    ],
+    "windows_actual_package": {
+      "status": "passed",
+      "run_id": 39528122230,
+      "details": {
+        "source": {
+          "cases": 37,
+          "assertions": 498,
+          "screenshots": 87
+        },
+        "standalone_exe": {
+          "cases": 37,
+          "assertions": 498,
+          "screenshots": 87
+        },
+        "fresh_process_load": {
+          "cases": 1,
+          "assertions": 17,
+          "screenshots": 3
+        },
+        "real_v110_upgrade": "passed",
+        "voice_extras_prefix": "two passes of 7 cases / 149 assertions"
+      }
+    },
+    "public_pwa": {
+      "status": "passed",
+      "url": "https://aureliuswu.github.io/Rain/",
+      "run_id": 39528122222
+    },
+    "release": {
+      "status": "not_published",
+      "version": "1.4.1",
+      "note": "Native and PWA artifacts passed; v1.4.1 formal release has not been promoted."
+    }
   },
   "fingerprints": {
     "tools/build/pwa/service-worker.js": "cd214e21c8bd7fb3cdaadc3126d6b09e15c87f77b261204ada50dfa33bcaf132",
     "scripts/pwa-download-browser.mjs": "e41e0619c8178244088fb82d85e266ccde72ab513ed9fbba42c1407329e457d8",
     "tests/pwa-progress.test.mjs": "f72065858e9aa21e9d80955f801a9bf7a67d7c98ffd73e220a5edd3e2a7213ac",
     "tests/pwa-downloads.test.mjs": "4ea7af91e4b34729fadde1691605f12935c998ddd28e2e3fca3dd7d6f1337f4b"
-  }
+  },
+  "runtime_commit": "e9fe11cbae90a465fd2ec0ada49d448adc888c39"
 }
