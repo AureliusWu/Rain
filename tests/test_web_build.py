@@ -49,13 +49,18 @@ class WebPackagingTests(unittest.TestCase):
             persistent.write_bytes(b'player data must stay untouched')
             (author/'progressive_download.txt').write_text('- image game/**\n')
             Image.new('RGBA',(256,256),(17,43,54,255)).save(author/'game/gui/window_icon.png')
-            Image.new('RGB',(32,18),(17,43,54)).save(author/'game/background.png')
+            Image.new('RGB',(1920,1080),(17,43,54)).save(author/'game/background.png')
+            original = (author/'game/background.png').read_bytes()
             (author/'game/data/asset_manifest.json').write_text(json.dumps({'assets':[{'id':'station','file':'background.png'}]}))
             with patch('tools.build.web.ROOT',author): stage_project(staged)
             self.assertFalse((staged/'game/saves').exists())
             self.assertEqual(persistent.read_bytes(),b'player data must stay untouched')
             self.assertFalse((author/'web-icon.png').exists())
-            self.assertEqual((staged/'web-presplash.png').read_bytes(),(author/'game/background.png').read_bytes())
+            self.assertEqual((author/'game/background.png').read_bytes(), original)
+            self.assertEqual((staged/'game/background.png').read_bytes(), original)
+            with Image.open(staged/'web-presplash.png') as preview:
+                self.assertEqual(preview.size, (640, 360))
+                self.assertEqual(preview.getpixel((320, 180)), (17, 43, 54))
             self.assertEqual((staged/'progressive_download.txt').read_text(),'- image game/**\n')
 
     def runtime_fixture(self, root):

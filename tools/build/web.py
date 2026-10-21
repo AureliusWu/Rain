@@ -105,7 +105,16 @@ def stage_project(destination: Path) -> None:
         icon.convert('RGBA').resize((512,512), Image.Resampling.LANCZOS).save(destination / 'web-icon.png')
     assets = json.loads((ROOT / 'game/data/asset_manifest.json').read_text())['assets']
     background = next(asset for asset in assets if asset['id'] == 'station')
-    shutil.copy2(ROOT / 'game' / background['file'], destination / 'web-presplash.png')
+    # The loading image is included both in the wrapper and official game.zip.
+    # A bounded preview avoids duplicating a full 1080p scene twice on download.
+    source = ROOT / 'game' / background['file']
+    with Image.open(source) as image:
+        if image.width <= 640 and image.height <= 360:
+            shutil.copy2(source, destination / 'web-presplash.png')
+        else:
+            image = image.convert('RGB')
+            image.thumbnail((640, 360), Image.Resampling.LANCZOS)
+            image.save(destination / 'web-presplash.png', optimize=True)
 
 def validate_web_runtime(destination: Path) -> dict:
     """The launcher can exit zero after an interrupted archive writer."""
