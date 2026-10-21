@@ -7,6 +7,7 @@ SPEAKERS = {'n': '旁白', 'h': '许澄', 'p': '我'}
 
 def make_catalog(story, voices):
     voice_map = {voice['voice_id']: voice for voice in voices}
+    by_line = {voice['line_id']: voice for voice in voices}
     chapters = {chapter['id']: chapter['title'] for chapter in story['chapters']}
     catalog = {}
     for node in story['nodes']:
@@ -14,7 +15,7 @@ def make_catalog(story, voices):
         for choice in node.get('choices', []):
             lines.extend(choice.get('response', []))
         for line in lines:
-            voice = voice_map.get(line.get('voice'), {})
+            voice = voice_map.get(line.get('voice')) or by_line.get(line['id'], {})
             catalog[line['id']] = dict(id=line['id'], chapter=node['chapter'], chapter_title=chapters[node['chapter']],
                 speaker=SPEAKERS[line['speaker']], text=line['text'], voice=voice.get('file'), voice_tag=None)
     return catalog

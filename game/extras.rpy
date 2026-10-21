@@ -25,13 +25,13 @@ init python:
 screen extras_images_room():
     tag menu
 
-    use game_menu("图片鉴赏"):
+    use game_menu("图片鉴赏", scroll="viewport"):
         vbox:
             spacing 18
             use extras_tabs("images")
             text "在故事中看过的画面，会在这里点亮。" size 27 color "#becdd7"
             text "已解锁 [extras_gallery.get_fraction(None)]" size 27 color "#9fdbe5"
-            grid 3 2:
+            grid 3 ((len(extras_images) + 2) // 3):
                 spacing 24
                 for identity, title, filename in extras_images:
                     vbox:
@@ -110,6 +110,7 @@ screen extras_tabs(selected):
     hbox:
         spacing 24
         textbutton "图片鉴赏" id "extras_images_tab" style "extras_control" selected selected == "images" action ShowMenu("extras_images_room")
+        textbutton "人物立绘" id "extras_characters_tab" style "extras_control" selected selected == "characters" action ShowMenu("extras_characters_room")
         textbutton "音乐鉴赏" id "extras_music_tab" style "extras_control" selected selected == "music" action ShowMenu("extras_music_room_screen")
 
 screen extras_image_viewer(locked, displayables, index, count, gallery, **properties):
@@ -145,3 +146,23 @@ style extras_control_text is button_text:
     hover_color "#ffffff"
     selected_color "#a9e1e9"
     insensitive_color "#8da9b8"
+
+
+screen extras_characters_room():
+    tag menu
+    default person = "heroine"
+    default expression = "normal"
+    use game_menu("人物立绘"):
+        vbox:
+            spacing 18
+            use extras_tabs("characters")
+            hbox:
+                spacing 24
+                textbutton "许澄" id "extras_person_heroine" style "extras_control" selected person == "heroine" action [SetScreenVariable("person", "heroine"), SetScreenVariable("expression", "normal")]
+                textbutton "玩家角色" id "extras_person_player" style "extras_control" selected person == "player" action [SetScreenVariable("person", "player"), SetScreenVariable("expression", "neutral")]
+            hbox:
+                spacing 24
+                $ options = (("normal", "平静"), ("smile", "微笑"), ("sad", "低落"), ("angry", "生气"), ("surprised", "惊讶"), ("shy", "害羞"), ("happy", "开心")) if person == "heroine" else (("neutral", "平静"), ("smile", "微笑"), ("surprised", "惊讶"), ("worried", "担忧"), ("hurt", "失落"), ("shy", "害羞"))
+                for identity, title in options:
+                    textbutton title id "extras_expression_" + identity style "extras_control" selected expression == identity action SetScreenVariable("expression", identity)
+            add Transform(person + " " + expression, xysize=(540, 630), fit="contain") xalign 0.5

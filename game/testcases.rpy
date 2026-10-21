@@ -304,13 +304,13 @@ testcase history_voice_replay:
     $ _test.voice_replay_state = (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what)
     click id "history_open"
     assert screen "history"
-    assert eval [h.voice.filename for h in _history_list if h.voice and h.voice.filename] == ['audio/voice/heroine_s01_arrival_l005_v1.ogg']
+    assert eval [h.voice.filename for h in _history_list if h.voice and h.voice.filename] == ['audio/voice/full-20261021/rain-p00-entry-l005.ogg', 'audio/voice/full-20261021/rain-p00-entry-l011.ogg', 'audio/voice/heroine_s01_arrival_l005_v1.ogg']
     assert eval renpy.get_widget("history", "history_voice_%d" % test_silent_history_index) is None
     move pos (0.5, 0.4)
-    move "重播语音" pos (0.5, 0.5)
+    move id ("history_voice_%d" % test_history_voice_index)
     pause 0.1
     $ print("History replay target:", renpy.get_physical_size(), preferences.get_mute("voice"), renpy.music.get_playing(channel="voice"))
-    click "重播语音" pos (0.5, 0.5)
+    click id ("history_voice_%d" % test_history_voice_index)
     assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
     assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what) == _test.voice_replay_state
     assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/rain_theme.ogg'
@@ -323,10 +323,10 @@ testcase history_voice_replay:
     pause until eval renpy.get_physical_size() == (1280, 720)
     pause 0.3
     move pos (0.5, 0.4)
-    move "重播语音" pos (0.5, 0.5)
+    move id ("history_voice_%d" % test_history_voice_index)
     pause 0.1
     $ print("History replay target:", renpy.get_physical_size(), preferences.get_mute("voice"), renpy.music.get_playing(channel="voice"))
-    click "重播语音" pos (0.5, 0.5)
+    click id ("history_voice_%d" % test_history_voice_index)
     assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
     pause 0.3
     pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
@@ -338,10 +338,10 @@ testcase history_voice_replay:
     click "历史"
     pause until screen "history"
     move pos (0.5, 0.4)
-    move "重播语音" pos (0.5, 0.5)
+    move id ("history_voice_%d" % test_history_voice_index)
     pause 0.1
     $ print("History replay target:", renpy.get_physical_size(), preferences.get_mute("voice"), renpy.music.get_playing(channel="voice"))
-    click "重播语音" pos (0.5, 0.5)
+    click id ("history_voice_%d" % test_history_voice_index)
     assert eval preferences.get_mute("voice")
     pause until eval renpy.music.get_playing(channel="voice") is None
     assert eval renpy.music.get_playing(channel="voice") is None
@@ -352,10 +352,10 @@ testcase history_voice_replay:
     click "历史"
     pause until screen "history"
     move pos (0.5, 0.4)
-    move "重播语音" pos (0.5, 0.5)
+    move id ("history_voice_%d" % test_history_voice_index)
     pause 0.1
     $ print("History replay target:", renpy.get_physical_size(), preferences.get_mute("voice"), renpy.music.get_playing(channel="voice"))
-    click "重播语音" pos (0.5, 0.5)
+    click id ("history_voice_%d" % test_history_voice_index)
     pause until eval renpy.music.get_playing(channel="voice") == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
     assert eval renpy.music.get_playing(channel='voice') == 'audio/voice/heroine_s01_arrival_l005_v1.ogg'
     click id "game_return"
@@ -446,8 +446,8 @@ testcase extras_unlock_and_music:
     $ _test.extras_state = (affection, trust, truth_known, last_ending, list(visited_scenes))
     $ _test.extras_volume = preferences.get_volume("music")
     click id "menu_extras"
-    assert eval all(extras_gallery.Action(key) is not None for key, title, filename in extras_images)
-    assert eval extras_gallery.get_fraction(None) == "6/6"
+    assert eval all(extras_gallery.Action(key) is not None for key, title, filename in extras_images if key in ("station", "station_exit_covered", "station_exit_after_rain", "nearby_cafe", "unsent_letter", "cafe_photo"))
+    assert eval sum(extras_gallery.Action(key) is not None for key, title, filename in extras_images if key in ("station", "station_exit_covered", "station_exit_after_rain", "nearby_cafe", "unsent_letter", "cafe_photo")) == 6
     pause 0.3
     pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
     screenshot "native-extras-unlocked"
@@ -538,6 +538,35 @@ testcase extras_unlock_and_music:
     assert eval renpy.music.get_playing(channel="gallery_music") is None
     assert eval renpy.music.get_playing(channel="music") == 'audio/bgm/rain_theme.ogg'
     assert eval affection == 0 and trust == 0 and not truth_known
+
+testcase full_media_cast_and_entry_voice:
+    run MainMenu(confirm=False)
+    click id "menu_extras"
+    click id "extras_characters_tab"
+    assert screen "extras_characters_room"
+    click id "extras_person_player"
+    assert eval renpy.get_screen("extras_characters_room").scope["person"] == "player"
+    screenshot "native-player-cast"
+    click id "extras_expression_neutral"
+    assert eval renpy.get_screen("extras_characters_room").scope["expression"] == 'neutral'
+    click id "extras_expression_smile"
+    assert eval renpy.get_screen("extras_characters_room").scope["expression"] == 'smile'
+    click id "extras_expression_surprised"
+    assert eval renpy.get_screen("extras_characters_room").scope["expression"] == 'surprised'
+    click id "extras_expression_worried"
+    assert eval renpy.get_screen("extras_characters_room").scope["expression"] == 'worried'
+    click id "extras_expression_hurt"
+    assert eval renpy.get_screen("extras_characters_room").scope["expression"] == 'hurt'
+    click id "extras_expression_shy"
+    assert eval renpy.get_screen("extras_characters_room").scope["expression"] == 'shy'
+    click id "extras_person_heroine"
+    assert eval renpy.get_screen("extras_characters_room").scope["person"] == "heroine"
+    click id "game_return"
+    click id "menu_start"
+    advance until "书应该还在吧。"
+    assert eval renpy.music.get_playing(channel="voice") == 'audio/voice/full-20261021/rain-p00-entry-l005.ogg'
+    assert id "voice_replay"
+    screenshot "native-full-entry-voice"
 
 testcase route_01:
     pause until "序章 ： 雨夜"
@@ -1090,7 +1119,7 @@ testcase audio_normal_ending:
     click "把信里的意思和今天的打算说清楚"
     advance until screen "choice"
     click "今晚先各自回去，改天再联系"
-    advance until "道别以后，我站在车站外，看着最后几滴雨落进路边的积水。旧箱子靠着腿，信封还放在口袋里。"
+    advance until "她绕过路边那摊水，我留在出口等车。纸袋晃到拐角前，她抬了一下手，我也抬手。"
     assert eval renpy.showing('backgrounds/station_exit_after_rain.png')
     assert eval not renpy.showing("heroine")
     pause 0.2
@@ -1309,8 +1338,8 @@ testcase late_save_load_true:
     assert eval visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter', 's03_honest', 's03_archive', 's04_gate', 's04_open', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_repair', 's05_departure', 's05_shared_path']
     assert eval affection == 3 and trust == 4 and truth_known == True
     assert eval last_ending == ""
-    assert eval renpy.showing('backgrounds/station_exit_after_rain.png')
-    assert eval renpy.get_attributes('heroine') == ('normal',)
+    assert eval renpy.showing('cg/shared-umbrella.png')
+    assert eval not renpy.showing("heroine")
     assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/next_message_theme.ogg'
     assert eval renpy.music.get_playing(channel='ambient') == 'audio/sfx/rain_light_ambience.ogg'
     $ renpy.unlink_save("1-1")
@@ -1342,8 +1371,8 @@ testcase late_save_load_true:
     assert eval visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter', 's03_honest', 's03_archive', 's04_gate', 's04_open', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_repair', 's05_departure', 's05_shared_path']
     assert eval affection == 3 and trust == 4 and truth_known == True
     assert eval last_ending == ""
-    assert eval renpy.showing('backgrounds/station_exit_after_rain.png')
-    assert eval renpy.get_attributes('heroine') == ('normal',)
+    assert eval renpy.showing('cg/shared-umbrella.png')
+    assert eval not renpy.showing("heroine")
     assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/next_message_theme.ogg'
     assert eval renpy.music.get_playing(channel='ambient') == 'audio/sfx/rain_light_ambience.ogg'
     pause 0.2
@@ -1459,7 +1488,7 @@ testcase late_save_load_normal:
     assert eval visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter', 's03_honest', 's03_archive', 's04_gate', 's04_open', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_repair', 's05_departure', 's05_separate_path', 's08_normal']
     assert eval affection == 2 and trust == 3 and truth_known == True
     assert eval last_ending == ""
-    assert eval renpy.showing('backgrounds/station_exit_after_rain.png')
+    assert eval renpy.showing('cg/quiet-farewell.png')
     assert eval not renpy.showing("heroine")
     assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/next_message_theme.ogg'
     assert eval renpy.music.get_playing(channel='ambient') == 'audio/sfx/rain_light_ambience.ogg'
@@ -1492,7 +1521,7 @@ testcase late_save_load_normal:
     assert eval visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes', 's03_letter', 's03_honest', 's03_archive', 's04_gate', 's04_open', 's04_waiting', 's04_memory', 's04_boundary', 's04_revisit', 's04_repair', 's05_departure', 's05_separate_path', 's08_normal']
     assert eval affection == 2 and trust == 3 and truth_known == True
     assert eval last_ending == ""
-    assert eval renpy.showing('backgrounds/station_exit_after_rain.png')
+    assert eval renpy.showing('cg/quiet-farewell.png')
     assert eval not renpy.showing("heroine")
     assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/next_message_theme.ogg'
     assert eval renpy.music.get_playing(channel='ambient') == 'audio/sfx/rain_light_ambience.ogg'

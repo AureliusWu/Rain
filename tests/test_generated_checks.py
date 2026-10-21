@@ -18,7 +18,7 @@ class GeneratedCheckTests(unittest.TestCase):
                 shutil.copy2(ROOT / 'tools' / name, root / 'tools' / name)
             shutil.copytree(ROOT / 'game/python-packages', root / 'game/python-packages')
             (root / 'game/data').mkdir(parents=True)
-            for name in ['story.json', 'asset_manifest.json', 'voice_manifest.json']:
+            for name in ['story.json', 'asset_manifest.json', 'voice_manifest.json', 'full_voice_manifest.json']:
                 shutil.copy2(ROOT / 'game/data' / name, root / 'game/data' / name)
             command = [sys.executable, '-m', module]
             generated = subprocess.run(command, cwd=root, capture_output=True, text=True, timeout=10)

@@ -348,7 +348,7 @@ def render_tests(story):
 
     lines += ['testcase audio_normal_ending:'] + choose('q01_care') + choose('q02_honest') + choose('q04_revisit') + choose('q03_leave')
     if 'station_exit_after_rain' in assets:
-        lines += [at_line('s08_normal_l001'),
+        lines += [at_line('s08_normal_l002'),
                   f"    assert eval renpy.showing({assets['station_exit_after_rain']!r})",
                   '    assert eval not renpy.showing("heroine")',
                   '    pause 0.2', '    screenshot "bg-exit-after-rain"']
@@ -395,7 +395,7 @@ def render_tests(story):
     lines += save_restore('s05_departure_l001', 'departure', true_route, 3, 'station_exit_covered', 'normal',
                           'audio/bgm/next_message_theme.ogg', 'audio/sfx/rain_light_ambience.ogg')
     lines += choose('q03_walk')
-    lines += save_restore('s05_shared_path_l001', 'shared-path', true_route, 4, 'station_exit_after_rain', 'normal',
+    lines += save_restore('s05_shared_path_l001', 'shared-path', true_route, 4, 'shared_umbrella', None,
                           'audio/bgm/next_message_theme.ogg', 'audio/sfx/rain_light_ambience.ogg')
     lines += save_restore('s07_true_l001', 'cafe-before-rain-stop', true_route, 4, 'nearby_cafe', 'smile',
                           'audio/bgm/next_message_theme.ogg', 'audio/sfx/rain_light_ambience.ogg')
@@ -407,7 +407,7 @@ def render_tests(story):
     lines += ['testcase late_save_load_normal:']
     for identity in normal_route['choices']:
         lines += choose(identity)
-    lines += save_restore('s08_normal_l001', 'normal-ending', normal_route, 4, 'station_exit_after_rain', None,
+    lines += save_restore('s08_normal_l001', 'normal-ending', normal_route, 4, 'quiet_farewell', None,
                           'audio/bgm/next_message_theme.ogg', 'audio/sfx/rain_light_ambience.ogg')
     lines += ['    advance until screen "ending_card"', '    assert eval last_ending == "normal"', '']
 
@@ -456,12 +456,24 @@ def render_tests(story):
         '    $ print("Current replay target:", renpy.get_physical_size(), _last_voice_play, VoiceReplay().get_sensitive(), _last_say_what)',
         '    click "重听语音" pos (0.5, 0.5)',
     ]
+    full_voices = json.loads((ROOT/'game/data/full_voice_manifest.json').read_text())['clips']
+    voice_by_line = {v['line_id']: v['file'] for v in full_voices}
+    expected_history_voices = []
+    node = next(n for n in story['nodes'] if n['id'] == story['entry'])
+    while True:
+        for line in node['lines']:
+            if line['id'] == 's01_arrival_l006': break
+            if line['id'] in voice_by_line: expected_history_voices.append(voice_by_line[line['id']])
+        else:
+            node = next(n for n in story['nodes'] if n['id'] == node['next'])
+            continue
+        break
     history_replay_click = [
         '    move pos (0.5, 0.4)',
-        '    move "重播语音" pos (0.5, 0.5)',
+        '    move id ("history_voice_%d" % test_history_voice_index)',
         '    pause 0.1',
         '    $ print("History replay target:", renpy.get_physical_size(), preferences.get_mute("voice"), renpy.music.get_playing(channel="voice"))',
-        '    click "重播语音" pos (0.5, 0.5)',
+        '    click id ("history_voice_%d" % test_history_voice_index)',
     ]
     lines += ['testcase history_search_and_original_voice:', at_line('s01_arrival_l005'), '    advance',
               f'    $ _test.history_search_state = {replay_state}',
@@ -591,7 +603,7 @@ def render_tests(story):
               '    $ test_silent_history_index = len(_history_list) - 1',
               f'    $ _test.voice_replay_state = {replay_state}',
               '    click id "history_open"', '    assert screen "history"',
-              f'    assert eval [h.voice.filename for h in _history_list if h.voice and h.voice.filename] == [{voice_file!r}]',
+              f'    assert eval [h.voice.filename for h in _history_list if h.voice and h.voice.filename] == {expected_history_voices!r}',
               '    assert eval renpy.get_widget("history", "history_voice_%d" % test_silent_history_index) is None',
               *history_replay_click, playing('voice', voice_file),
               f'    assert eval {replay_state} == _test.voice_replay_state',
@@ -715,6 +727,21 @@ def render_tests(story):
               '    click id "game_return"',
               '    assert screen "choice"',
               '    screenshot "native-choice"', '']
+    full_media_tests = ['testcase full_media_cast_and_entry_voice:',
+        '    run MainMenu(confirm=False)', '    click id "menu_extras"',
+        '    click id "extras_characters_tab"', '    assert screen "extras_characters_room"',
+        '    click id "extras_person_player"',
+        '    assert eval renpy.get_screen("extras_characters_room").scope["person"] == "player"',
+        '    screenshot "native-player-cast"']
+    for expression in ('neutral', 'smile', 'surprised', 'worried', 'hurt', 'shy'):
+        full_media_tests += [f'    click id "extras_expression_{expression}"',
+            f'    assert eval renpy.get_screen("extras_characters_room").scope["expression"] == {expression!r}']
+    entry = next(v for v in full_voices if v['line_id'] == 'p00_entry_l005')
+    full_media_tests += ['    click id "extras_person_heroine"',
+        '    assert eval renpy.get_screen("extras_characters_room").scope["person"] == "heroine"',
+        '    click id "game_return"', '    click id "menu_start"', at_line('p00_entry_l005'),
+        f'    assert eval renpy.music.get_playing(channel="voice") == {entry["file"]!r}',
+        '    assert id "voice_replay"', '    screenshot "native-full-entry-voice"', '']
     first = lines.index('testcase route_01:')
     display = lines.index('testcase native_1080_and_scaled_window:')
     # Wall-time pauses alone can still capture a software-rendered transition.
@@ -732,7 +759,7 @@ def render_tests(story):
             replay_lines.append('    pause 0.3')
             replay_lines.append('    pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))')
         replay_lines.append(line)
-    return "\n".join(lines[:first] + display_lines + replay_lines + render_extras_tests(story) + lines[first:replay_start] + lines[replay_end:display])
+    return "\n".join(lines[:first] + display_lines + replay_lines + render_extras_tests(story) + full_media_tests + lines[first:replay_start] + lines[replay_end:display])
 
 
 def main():

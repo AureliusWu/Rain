@@ -72,10 +72,12 @@ class BookmarkTests(unittest.TestCase):
         self.assertEqual(bookmarks.bookmark_rows(saved, self.catalog, query='从未收藏XYZ'), [])
         self.assertEqual(json.dumps(saved), before)
     def test_player_catalog_is_generated_from_the_source_without_runtime_author_json(self):
-        generated=render_bookmarks(self.story,self.voices)
+        full=json.loads((ROOT/'game/data/full_voice_manifest.json').read_text())['clips']
+        generated=render_bookmarks(self.story,self.voices,full)
         self.assertEqual(generated,(ROOT/'game/script/bookmarks_generated.rpy').read_text())
         payload=next(line.split(' = ',1)[1] for line in generated.splitlines() if 'RAIN_READING_CATALOG =' in line)
-        self.assertEqual(ast.literal_eval(payload),self.catalog)
+        self.assertEqual(ast.literal_eval(payload),bookmarks.make_catalog(self.story,[*full,*self.voices]))
+        self.assertEqual(sum(bool(row['voice']) for row in ast.literal_eval(payload).values()),306)
         runtime=(ROOT/'game/bookmarks.rpy').read_text()
         self.assertNotIn('game/data',runtime);self.assertNotIn('renpy.file(',runtime)
 

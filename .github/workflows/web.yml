@@ -57,6 +57,7 @@ jobs:
       - name: Native authoring and shared material checks
         run: |
           python -m tools.validate
+          python tools/production/validate_runtime.py --require-complete --report reports/full-media.json
           node scripts/vn-contract.mjs game/data/story.json
           node --test scripts/vn-creative.test.mjs scripts/vn-materials.test.mjs
           node --test tests/pwa-progress.test.mjs tests/pwa-downloads.test.mjs

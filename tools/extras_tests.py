@@ -39,8 +39,8 @@ def render_extras_tests(story):
               '    $ _test.extras_state = (affection, trust, truth_known, last_ending, list(visited_scenes))',
               '    $ _test.extras_volume = preferences.get_volume("music")',
               '    click id "menu_extras"',
-              '    assert eval all(extras_gallery.Action(key) is not None for key, title, filename in extras_images)',
-              '    assert eval extras_gallery.get_fraction(None) == "6/6"',
+              '    assert eval all(extras_gallery.Action(key) is not None for key, title, filename in extras_images if key in ("station", "station_exit_covered", "station_exit_after_rain", "nearby_cafe", "unsent_letter", "cafe_photo"))',
+              '    assert eval sum(extras_gallery.Action(key) is not None for key, title, filename in extras_images if key in ("station", "station_exit_covered", "station_exit_after_rain", "nearby_cafe", "unsent_letter", "cafe_photo")) == 6',
               '    screenshot "native-extras-unlocked"',
               '    click id "extras_image_unsent_letter"', '    pause until screen "extras_image_viewer"',
               '    assert id "extras_image_return"', '    screenshot "native-extras-cg"',
@@ -108,7 +108,7 @@ def render_extras_tests(story):
     return output
 
 def extras_persistence_assertions(include_new=True):
-    return ['    assert eval all(extras_gallery.Action(key) is not None for key, title, filename in extras_images' + (')' if include_new else ' if key != "cafe_photo")'),
+    return ['    assert eval all(extras_gallery.Action(key) is not None for key, title, filename in extras_images if key in ("station", "station_exit_covered", "station_exit_after_rain", "nearby_cafe", "unsent_letter", "cafe_photo")' + (')' if include_new else ' and key != "cafe_photo")'),
             '    assert eval all(extras_music_room.is_unlocked(filename) for key, title, filename, duration in extras_music' + (')' if include_new else ' if key != "cafe_photo_theme")'),
             '    click id "menu_extras"', '    assert screen "extras_images_room"',
             '    screenshot "native-extras-persistent"',

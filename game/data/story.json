@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "version": "1.4.1",
+  "version": "1.5.0",
   "title": "雨停之前",
   "status": "v07_alpha_expansion_recovered_through_ch03",
   "entry": "p00_entry",
@@ -163,12 +163,15 @@
         {
           "id": "s01_arrival_l006",
           "speaker": "n",
-          "text": "有人从长椅旁站起来。蓝灰色的开衫，右边那枚银色发夹，还有说完话后轻轻抬起的眉。"
+          "text": "有人从长椅旁站起来。蓝灰色的开衫，右边那枚银色发夹，还有说完话后轻轻抬起的眉。",
+          "background": "reunion"
         },
         {
           "id": "s01_arrival_l007",
           "speaker": "p",
-          "text": "许澄？"
+          "text": "许澄？",
+          "background": "station",
+          "expression": "smile"
         },
         {
           "id": "s01_arrival_l008",
@@ -432,12 +435,15 @@
         {
           "id": "s02_reunion_l003",
           "speaker": "n",
-          "text": "她指了指椅子上的纸袋，袋口夹着一张褪色的照片。照片背后有一道很深的折痕。"
+          "text": "她指了指椅子上的纸袋，袋口夹着一张褪色的照片。照片背后有一道很深的折痕。",
+          "background": "old_photo"
         },
         {
           "id": "s02_reunion_l004",
           "speaker": "h",
-          "text": "车站清旧库房时找到了它。以前书店借给这里做过一次展览，一直没拿回来。"
+          "text": "车站清旧库房时找到了它。以前书店借给这里做过一次展览，一直没拿回来。",
+          "background": "station",
+          "expression": "normal"
         },
         {
           "id": "s02_reunion_l005",
@@ -2036,13 +2042,15 @@
         {
           "id": "s04_waiting_l010",
           "speaker": "n",
-          "text": "她说完抬起头。灯光落在她的银色发夹上，我的目光停了一下，才也笑了笑。"
+          "text": "她说完抬起头。灯光落在她的银色发夹上，我的目光停了一下，才也笑了笑。",
+          "background": "silver_clip"
         },
         {
           "id": "s04_waiting_l011",
           "speaker": "h",
           "text": "我后来换了工作，也搬了家。这几年，不是在这里等一班早就开走的车。",
-          "expression": "normal"
+          "expression": "normal",
+          "background": "station_exit_covered"
         },
         {
           "id": "s04_waiting_l012",
@@ -2770,12 +2778,15 @@
         {
           "id": "v07_s04_concrete_l009",
           "speaker": "n",
-          "text": "她指着书脊，让我认清了是哪一册。我把它移到最上面，没有再往这个约定里加别的条件。"
+          "text": "她指着书脊，让我认清了是哪一册。我把它移到最上面，没有再往这个约定里加别的条件。",
+          "background": "next_visit"
         },
         {
           "id": "s04_concrete_l009",
           "speaker": "p",
-          "text": "回去找找。有的话，拍给你看。"
+          "text": "回去找找。有的话，拍给你看。",
+          "background": "station_exit_after_rain",
+          "expression": "smile"
         },
         {
           "id": "s04_concrete_l010",
@@ -2944,13 +2955,15 @@
         {
           "id": "s05_shared_path_l001",
           "speaker": "n",
-          "text": "纸箱底角擦过椅背，响了一声。我检查胶带有没有贴牢，握稳左手的伞，许澄绕过那块松动的地砖。"
+          "text": "纸箱底角擦过椅背，响了一声。我检查胶带有没有贴牢，握稳左手的伞，许澄绕过那块松动的地砖。",
+          "background": "shared_umbrella"
         },
         {
           "id": "s05_shared_path_l002",
           "speaker": "h",
           "text": "别照着以前走。门口那级台阶拆了。",
-          "expression": "normal"
+          "expression": "normal",
+          "background": "station_exit_after_rain"
         },
         {
           "id": "s05_shared_path_l003",
@@ -3309,12 +3322,14 @@
         {
           "id": "s08_normal_l001",
           "speaker": "n",
-          "text": "道别以后，我站在车站外，看着最后几滴雨落进路边的积水。旧箱子靠着腿，信封还放在口袋里。"
+          "text": "道别以后，我站在车站外，看着最后几滴雨落进路边的积水。旧箱子靠着腿，信封还放在口袋里。",
+          "background": "quiet_farewell"
         },
         {
           "id": "s08_normal_l002",
           "speaker": "n",
-          "text": "她绕过路边那摊水，我留在出口等车。纸袋晃到拐角前，她抬了一下手，我也抬手。"
+          "text": "她绕过路边那摊水，我留在出口等车。纸袋晃到拐角前，她抬了一下手，我也抬手。",
+          "background": "station_exit_after_rain"
         },
         {
           "id": "s08_normal_l003",

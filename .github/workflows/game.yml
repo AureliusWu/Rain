@@ -69,6 +69,8 @@ jobs:
           Invoke-WebRequest -Uri "https://github.com/AureliusWu/Rain/releases/download/v1.1.0/BeforeTheRainStops-1.1.0-win.zip" -OutFile ".runtime/compat/BeforeTheRainStops-1.1.0-win.zip"
           python -m tools.build.seed_release_names --previous-zip .runtime/compat/BeforeTheRainStops-1.1.0-win.zip
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Verify all dialogue and newly prepared art
+        run: python tools/production/validate_runtime.py --require-complete --report reports/full-media.json
       - name: Ren'Py lint
         run: |
           & .\.runtime\renpy-8.5.3-sdk\lib\py3-windows-x86_64\python.exe .\.runtime\renpy-8.5.3-sdk\renpy.py . lint --error-code --all-problems

@@ -1,3 +1,7 @@
+## v1.5.0 新资源验收
+
+全部 306 条人物录音及新增十二张运行图须通过 `tools/production/validate_runtime.py --require-complete --decode`。原生计划包含玩家立绘六表情切换、首句新增配音、完整历史语音身份和新 CG 存读档；源码和独立 EXE 各 38 用例 / 509 断言 / 89 截图，均由实际报告核对。官方 WASM 与公开离线检查、真实 v1.1.0 旧档升级仍是发布门槛。计划数量不作为执行通过证明。
+
 ## 2026-10-21 · PWA 资源并发回归
 
 `node --test tests/pwa-progress.test.mjs tests/pwa-downloads.test.mjs` 覆盖两路并行上限、逐文件完整性、单调进度、失败取消及等待所有任务结束后删除候选缓存。全量成功前不得写完整标记，旧版和相邻 scope 保留。实际平台结果见 production/ENGINE-SYNC-20261021.json。

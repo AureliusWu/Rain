@@ -10,6 +10,12 @@ IMAGE_TITLES = (
     ('nearby_cafe', '街角咖啡馆'),
     ('unsent_letter', '未寄出的信'),
     ('cafe_photo', '把今天说清楚'),
+    ('reunion', '雨幕下的重逢'),
+    ('old_photo', '长椅上的旧照片'),
+    ('silver_clip', '银色发夹'),
+    ('next_visit', '下次的约定'),
+    ('shared_umbrella', '共伞的路'),
+    ('quiet_farewell', '安静的道别'),
 )
 MUSIC_TITLES = (
     ('rain_theme', '雨夜'),
