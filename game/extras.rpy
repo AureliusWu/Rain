@@ -31,7 +31,8 @@ screen extras_images_room():
             use extras_tabs("images")
             text "在故事中看过的画面，会在这里点亮。" size 27 color "#becdd7"
             text "已解锁 [extras_gallery.get_fraction(None)]" size 27 color "#9fdbe5"
-            grid 3 ((len(extras_images) + 2) // 3):
+            $ rows = (len(extras_images) + 2) // 3
+            grid 3 rows:
                 spacing 24
                 for identity, title, filename in extras_images:
                     vbox:
