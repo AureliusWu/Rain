@@ -14,51 +14,15 @@
   "medium": "spoken",
   "requestSha256": "540c7736dfe65d924be16812c4b421f6c0d4efe7a227f89ac93c4aeaeab17841",
   "attempt": 8,
-  "status": "needs_review",
+  "status": "accepted",
   "asr": {
-    "transcript": "好只想我提着散可以借我拿吗",
-    "cer": 0.230769,
+    "transcript": "好 纸箱我提着 伞可以借我拿吗",
+    "cer": 0.0,
     "polarityCountsMatch": true,
-    "passed": false,
-    "phoneticReview": {
-      "method": "exact_all_syllables_and_tones_pypinyin_0.53.0",
-      "expected": "好纸箱我提着伞可以借我拿吗",
-      "observed": "好只想我提着散可以借我拿吗",
-      "expectedSyllables": [
-        "hao3",
-        "zhi3",
-        "xiang1",
-        "wo3",
-        "ti2",
-        "zhe5",
-        "san3",
-        "ke3",
-        "yi3",
-        "jie4",
-        "wo3",
-        "na2",
-        "ma5"
-      ],
-      "observedSyllables": [
-        "hao3",
-        "zhi3",
-        "xiang3",
-        "wo3",
-        "ti2",
-        "zhe5",
-        "san4",
-        "ke3",
-        "yi3",
-        "jie4",
-        "wo3",
-        "na2",
-        "ma5"
-      ],
-      "sameLength": true,
-      "polarityCountsMatch": true,
-      "passed": false,
-      "humanListening": false
-    }
+    "passed": true,
+    "model": "Systran/faster-whisper-medium",
+    "revision": "08e178d48790749d25932bbc082711ddcfdfbc4f",
+    "audioSha256": "34dec79da4f96f636b53c17af5cb8a67dca475e857cefcc586bf6ee166f4497d"
   },
   "duration": 3.36,
   "wallSeconds": 15.855,
@@ -91,5 +55,52 @@
       "sha256": "34dec79da4f96f636b53c17af5cb8a67dca475e857cefcc586bf6ee166f4497d"
     }
   },
-  "recoveredFromRun": 39522082173
+  "recoveredFromRun": 39522082173,
+  "asrReviewHistory": [
+    {
+      "transcript": "好只想我提着散可以借我拿吗",
+      "cer": 0.230769,
+      "polarityCountsMatch": true,
+      "passed": false,
+      "phoneticReview": {
+        "method": "exact_all_syllables_and_tones_pypinyin_0.53.0",
+        "expected": "好纸箱我提着伞可以借我拿吗",
+        "observed": "好只想我提着散可以借我拿吗",
+        "expectedSyllables": [
+          "hao3",
+          "zhi3",
+          "xiang1",
+          "wo3",
+          "ti2",
+          "zhe5",
+          "san3",
+          "ke3",
+          "yi3",
+          "jie4",
+          "wo3",
+          "na2",
+          "ma5"
+        ],
+        "observedSyllables": [
+          "hao3",
+          "zhi3",
+          "xiang3",
+          "wo3",
+          "ti2",
+          "zhe5",
+          "san4",
+          "ke3",
+          "yi3",
+          "jie4",
+          "wo3",
+          "na2",
+          "ma5"
+        ],
+        "sameLength": true,
+        "polarityCountsMatch": true,
+        "passed": false,
+        "humanListening": false
+      }
+    }
+  ]
 }

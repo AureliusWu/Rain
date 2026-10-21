@@ -184,27 +184,30 @@
       "attempt": 8,
       "status": "needs_review",
       "asr": {
-        "transcript": "去尝",
+        "transcript": "虚诚",
         "cer": 1.0,
         "polarityCountsMatch": true,
         "passed": false,
         "phoneticReview": {
           "method": "exact_all_syllables_and_tones_pypinyin_0.53.0",
           "expected": "许澄",
-          "observed": "去尝",
+          "observed": "虚诚",
           "expectedSyllables": [
             "xu3",
             "cheng2"
           ],
           "observedSyllables": [
-            "qu4",
-            "chang2"
+            "xu1",
+            "cheng2"
           ],
           "sameLength": true,
           "polarityCountsMatch": true,
           "passed": false,
           "humanListening": false
-        }
+        },
+        "model": "Systran/faster-whisper-medium",
+        "revision": "08e178d48790749d25932bbc082711ddcfdfbc4f",
+        "audioSha256": "eb3ce03b03063fe6ce7ab36a8cf7362090167ffb4b78c750e07530d1d10362c0"
       },
       "duration": 0.8,
       "wallSeconds": 4.439,
@@ -237,7 +240,32 @@
           "sha256": "eb3ce03b03063fe6ce7ab36a8cf7362090167ffb4b78c750e07530d1d10362c0"
         }
       },
-      "recoveredFromRun": 39522082173
+      "recoveredFromRun": 39522082173,
+      "asrReviewHistory": [
+        {
+          "transcript": "去尝",
+          "cer": 1.0,
+          "polarityCountsMatch": true,
+          "passed": false,
+          "phoneticReview": {
+            "method": "exact_all_syllables_and_tones_pypinyin_0.53.0",
+            "expected": "许澄",
+            "observed": "去尝",
+            "expectedSyllables": [
+              "xu3",
+              "cheng2"
+            ],
+            "observedSyllables": [
+              "qu4",
+              "chang2"
+            ],
+            "sameLength": true,
+            "polarityCountsMatch": true,
+            "passed": false,
+            "humanListening": false
+          }
+        }
+      ]
     },
     {
       "id": "rain-s01-arrival-l008",
@@ -14619,53 +14647,15 @@
       "medium": "spoken",
       "requestSha256": "9ce321672beb8437836c7cb12d18e18aaa3113c99c9686fa78eae28b0c61e223",
       "attempt": 8,
-      "status": "needs_review",
+      "status": "accepted",
       "asr": {
-        "transcript": "两杆还能装书下次不用他党语了",
-        "cer": 0.357143,
+        "transcript": "晾干还能装书下次不用他挡雨了",
+        "cer": 0.071429,
         "polarityCountsMatch": true,
-        "passed": false,
-        "phoneticReview": {
-          "method": "exact_all_syllables_and_tones_pypinyin_0.53.0",
-          "expected": "晾干还能装书下次不用它挡雨了",
-          "observed": "两杆还能装书下次不用他党语了",
-          "expectedSyllables": [
-            "liang4",
-            "gan1",
-            "hai2",
-            "neng2",
-            "zhuang1",
-            "shu1",
-            "xia4",
-            "ci4",
-            "bu4",
-            "yong4",
-            "ta1",
-            "dang3",
-            "yu3",
-            "le5"
-          ],
-          "observedSyllables": [
-            "liang3",
-            "gan1",
-            "hai2",
-            "neng2",
-            "zhuang1",
-            "shu1",
-            "xia4",
-            "ci4",
-            "bu4",
-            "yong4",
-            "ta1",
-            "dang3",
-            "yu3",
-            "le5"
-          ],
-          "sameLength": true,
-          "polarityCountsMatch": true,
-          "passed": false,
-          "humanListening": false
-        }
+        "passed": true,
+        "model": "Systran/faster-whisper-medium",
+        "revision": "08e178d48790749d25932bbc082711ddcfdfbc4f",
+        "audioSha256": "255fed0b5eeceaf1d7ae012b06e821993070c861257d40b3ad1497d23ce16503"
       },
       "duration": 3.68,
       "wallSeconds": 16.565,
@@ -14698,7 +14688,56 @@
           "sha256": "255fed0b5eeceaf1d7ae012b06e821993070c861257d40b3ad1497d23ce16503"
         }
       },
-      "recoveredFromRun": 39522082173
+      "recoveredFromRun": 39522082173,
+      "asrReviewHistory": [
+        {
+          "transcript": "两杆还能装书下次不用他党语了",
+          "cer": 0.357143,
+          "polarityCountsMatch": true,
+          "passed": false,
+          "phoneticReview": {
+            "method": "exact_all_syllables_and_tones_pypinyin_0.53.0",
+            "expected": "晾干还能装书下次不用它挡雨了",
+            "observed": "两杆还能装书下次不用他党语了",
+            "expectedSyllables": [
+              "liang4",
+              "gan1",
+              "hai2",
+              "neng2",
+              "zhuang1",
+              "shu1",
+              "xia4",
+              "ci4",
+              "bu4",
+              "yong4",
+              "ta1",
+              "dang3",
+              "yu3",
+              "le5"
+            ],
+            "observedSyllables": [
+              "liang3",
+              "gan1",
+              "hai2",
+              "neng2",
+              "zhuang1",
+              "shu1",
+              "xia4",
+              "ci4",
+              "bu4",
+              "yong4",
+              "ta1",
+              "dang3",
+              "yu3",
+              "le5"
+            ],
+            "sameLength": true,
+            "polarityCountsMatch": true,
+            "passed": false,
+            "humanListening": false
+          }
+        }
+      ]
     },
     {
       "id": "rain-v07-s05-departure-l004",
@@ -14991,51 +15030,15 @@
       "medium": "spoken",
       "requestSha256": "540c7736dfe65d924be16812c4b421f6c0d4efe7a227f89ac93c4aeaeab17841",
       "attempt": 8,
-      "status": "needs_review",
+      "status": "accepted",
       "asr": {
-        "transcript": "好只想我提着散可以借我拿吗",
-        "cer": 0.230769,
+        "transcript": "好 纸箱我提着 伞可以借我拿吗",
+        "cer": 0.0,
         "polarityCountsMatch": true,
-        "passed": false,
-        "phoneticReview": {
-          "method": "exact_all_syllables_and_tones_pypinyin_0.53.0",
-          "expected": "好纸箱我提着伞可以借我拿吗",
-          "observed": "好只想我提着散可以借我拿吗",
-          "expectedSyllables": [
-            "hao3",
-            "zhi3",
-            "xiang1",
-            "wo3",
-            "ti2",
-            "zhe5",
-            "san3",
-            "ke3",
-            "yi3",
-            "jie4",
-            "wo3",
-            "na2",
-            "ma5"
-          ],
-          "observedSyllables": [
-            "hao3",
-            "zhi3",
-            "xiang3",
-            "wo3",
-            "ti2",
-            "zhe5",
-            "san4",
-            "ke3",
-            "yi3",
-            "jie4",
-            "wo3",
-            "na2",
-            "ma5"
-          ],
-          "sameLength": true,
-          "polarityCountsMatch": true,
-          "passed": false,
-          "humanListening": false
-        }
+        "passed": true,
+        "model": "Systran/faster-whisper-medium",
+        "revision": "08e178d48790749d25932bbc082711ddcfdfbc4f",
+        "audioSha256": "34dec79da4f96f636b53c17af5cb8a67dca475e857cefcc586bf6ee166f4497d"
       },
       "duration": 3.36,
       "wallSeconds": 15.855,
@@ -15068,7 +15071,54 @@
           "sha256": "34dec79da4f96f636b53c17af5cb8a67dca475e857cefcc586bf6ee166f4497d"
         }
       },
-      "recoveredFromRun": 39522082173
+      "recoveredFromRun": 39522082173,
+      "asrReviewHistory": [
+        {
+          "transcript": "好只想我提着散可以借我拿吗",
+          "cer": 0.230769,
+          "polarityCountsMatch": true,
+          "passed": false,
+          "phoneticReview": {
+            "method": "exact_all_syllables_and_tones_pypinyin_0.53.0",
+            "expected": "好纸箱我提着伞可以借我拿吗",
+            "observed": "好只想我提着散可以借我拿吗",
+            "expectedSyllables": [
+              "hao3",
+              "zhi3",
+              "xiang1",
+              "wo3",
+              "ti2",
+              "zhe5",
+              "san3",
+              "ke3",
+              "yi3",
+              "jie4",
+              "wo3",
+              "na2",
+              "ma5"
+            ],
+            "observedSyllables": [
+              "hao3",
+              "zhi3",
+              "xiang3",
+              "wo3",
+              "ti2",
+              "zhe5",
+              "san4",
+              "ke3",
+              "yi3",
+              "jie4",
+              "wo3",
+              "na2",
+              "ma5"
+            ],
+            "sameLength": true,
+            "polarityCountsMatch": true,
+            "passed": false,
+            "humanListening": false
+          }
+        }
+      ]
     },
     {
       "id": "rain-q03-walk-l002",
@@ -17000,5 +17050,43 @@
     }
   ],
   "semanticSha256": "43ef805dc1a881d5fc4736841c0ebee358707ee7db17982ece91fb23437104dd",
-  "sourceRun": 39522082173
+  "sourceRun": 39522082173,
+  "reviewModel": {
+    "id": "Systran/faster-whisper-medium",
+    "revision": "08e178d48790749d25932bbc082711ddcfdfbc4f",
+    "files": [
+      {
+        "path": ".gitattributes",
+        "sha256": "db7c0371f46f0840b8f25794c1e3321c9b5820a8cb6ba9694a46fc64b8fae5a6",
+        "bytes": 1477
+      },
+      {
+        "path": "README.md",
+        "sha256": "a30144a6232423e5e4e9e17952b5a543a506dc0cb9de02fd9d875d7ec40fef83",
+        "bytes": 2005
+      },
+      {
+        "path": "config.json",
+        "sha256": "3622a2ddc41ec0e0fd4e68c13c6830f03b90c38d89aaad184de02c8c642cf807",
+        "bytes": 2257
+      },
+      {
+        "path": "model.bin",
+        "sha256": "9b45e1009dcc4ab601eff815b61d80e60ce3fd8c74c1a14f4a282258286b51ae",
+        "bytes": 1527906378
+      },
+      {
+        "path": "tokenizer.json",
+        "sha256": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab",
+        "bytes": 2203239
+      },
+      {
+        "path": "vocabulary.txt",
+        "sha256": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913",
+        "bytes": 459861
+      }
+    ],
+    "networkPolicy": "network_syscalls_denied_and_telemetry_disabled"
+  },
+  "humanListening": false
 }

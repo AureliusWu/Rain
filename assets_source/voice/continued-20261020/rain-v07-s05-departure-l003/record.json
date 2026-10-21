@@ -13,53 +13,15 @@
   "medium": "spoken",
   "requestSha256": "9ce321672beb8437836c7cb12d18e18aaa3113c99c9686fa78eae28b0c61e223",
   "attempt": 8,
-  "status": "needs_review",
+  "status": "accepted",
   "asr": {
-    "transcript": "两杆还能装书下次不用他党语了",
-    "cer": 0.357143,
+    "transcript": "晾干还能装书下次不用他挡雨了",
+    "cer": 0.071429,
     "polarityCountsMatch": true,
-    "passed": false,
-    "phoneticReview": {
-      "method": "exact_all_syllables_and_tones_pypinyin_0.53.0",
-      "expected": "晾干还能装书下次不用它挡雨了",
-      "observed": "两杆还能装书下次不用他党语了",
-      "expectedSyllables": [
-        "liang4",
-        "gan1",
-        "hai2",
-        "neng2",
-        "zhuang1",
-        "shu1",
-        "xia4",
-        "ci4",
-        "bu4",
-        "yong4",
-        "ta1",
-        "dang3",
-        "yu3",
-        "le5"
-      ],
-      "observedSyllables": [
-        "liang3",
-        "gan1",
-        "hai2",
-        "neng2",
-        "zhuang1",
-        "shu1",
-        "xia4",
-        "ci4",
-        "bu4",
-        "yong4",
-        "ta1",
-        "dang3",
-        "yu3",
-        "le5"
-      ],
-      "sameLength": true,
-      "polarityCountsMatch": true,
-      "passed": false,
-      "humanListening": false
-    }
+    "passed": true,
+    "model": "Systran/faster-whisper-medium",
+    "revision": "08e178d48790749d25932bbc082711ddcfdfbc4f",
+    "audioSha256": "255fed0b5eeceaf1d7ae012b06e821993070c861257d40b3ad1497d23ce16503"
   },
   "duration": 3.68,
   "wallSeconds": 16.565,
@@ -92,5 +54,54 @@
       "sha256": "255fed0b5eeceaf1d7ae012b06e821993070c861257d40b3ad1497d23ce16503"
     }
   },
-  "recoveredFromRun": 39522082173
+  "recoveredFromRun": 39522082173,
+  "asrReviewHistory": [
+    {
+      "transcript": "两杆还能装书下次不用他党语了",
+      "cer": 0.357143,
+      "polarityCountsMatch": true,
+      "passed": false,
+      "phoneticReview": {
+        "method": "exact_all_syllables_and_tones_pypinyin_0.53.0",
+        "expected": "晾干还能装书下次不用它挡雨了",
+        "observed": "两杆还能装书下次不用他党语了",
+        "expectedSyllables": [
+          "liang4",
+          "gan1",
+          "hai2",
+          "neng2",
+          "zhuang1",
+          "shu1",
+          "xia4",
+          "ci4",
+          "bu4",
+          "yong4",
+          "ta1",
+          "dang3",
+          "yu3",
+          "le5"
+        ],
+        "observedSyllables": [
+          "liang3",
+          "gan1",
+          "hai2",
+          "neng2",
+          "zhuang1",
+          "shu1",
+          "xia4",
+          "ci4",
+          "bu4",
+          "yong4",
+          "ta1",
+          "dang3",
+          "yu3",
+          "le5"
+        ],
+        "sameLength": true,
+        "polarityCountsMatch": true,
+        "passed": false,
+        "humanListening": false
+      }
+    }
+  ]
 }

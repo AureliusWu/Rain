@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "project": "Rain",
+  "target": 306,
+  "accepted": 305,
+  "pendingCount": 1,
+  "pending": [
+    {
+      "id": "rain-s01-arrival-l007",
+      "text": "许澄？",
+      "status": "needs_review",
+      "asr": {
+        "transcript": "虚诚",
+        "cer": 1.0,
+        "polarityCountsMatch": true,
+        "passed": false,
+        "phoneticReview": {
+          "method": "exact_all_syllables_and_tones_pypinyin_0.53.0",
+          "expected": "许澄",
+          "observed": "虚诚",
+          "expectedSyllables": [
+            "xu3",
+            "cheng2"
+          ],
+          "observedSyllables": [
+            "xu1",
+            "cheng2"
+          ],
+          "sameLength": true,
+          "polarityCountsMatch": true,
+          "passed": false,
+          "humanListening": false
+        },
+        "model": "Systran/faster-whisper-medium",
+        "revision": "08e178d48790749d25932bbc082711ddcfdfbc4f",
+        "audioSha256": "eb3ce03b03063fe6ce7ab36a8cf7362090167ffb4b78c750e07530d1d10362c0"
+      }
+    }
+  ],
+  "semanticSha256": "43ef805dc1a881d5fc4736841c0ebee358707ee7db17982ece91fb23437104dd",
+  "archive": "assets_source/voice/continued-20261020",
+  "reviewModel": {
+    "id": "Systran/faster-whisper-medium",
+    "revision": "08e178d48790749d25932bbc082711ddcfdfbc4f"
+  },
+  "humanListening": false,
+  "runtimeIntegration": "pending",
+  "release": "not_published"
+}

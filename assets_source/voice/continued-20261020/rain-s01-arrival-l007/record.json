@@ -15,27 +15,30 @@
   "attempt": 8,
   "status": "needs_review",
   "asr": {
-    "transcript": "去尝",
+    "transcript": "虚诚",
     "cer": 1.0,
     "polarityCountsMatch": true,
     "passed": false,
     "phoneticReview": {
       "method": "exact_all_syllables_and_tones_pypinyin_0.53.0",
       "expected": "许澄",
-      "observed": "去尝",
+      "observed": "虚诚",
       "expectedSyllables": [
         "xu3",
         "cheng2"
       ],
       "observedSyllables": [
-        "qu4",
-        "chang2"
+        "xu1",
+        "cheng2"
       ],
       "sameLength": true,
       "polarityCountsMatch": true,
       "passed": false,
       "humanListening": false
-    }
+    },
+    "model": "Systran/faster-whisper-medium",
+    "revision": "08e178d48790749d25932bbc082711ddcfdfbc4f",
+    "audioSha256": "eb3ce03b03063fe6ce7ab36a8cf7362090167ffb4b78c750e07530d1d10362c0"
   },
   "duration": 0.8,
   "wallSeconds": 4.439,
@@ -68,5 +71,30 @@
       "sha256": "eb3ce03b03063fe6ce7ab36a8cf7362090167ffb4b78c750e07530d1d10362c0"
     }
   },
-  "recoveredFromRun": 39522082173
+  "recoveredFromRun": 39522082173,
+  "asrReviewHistory": [
+    {
+      "transcript": "去尝",
+      "cer": 1.0,
+      "polarityCountsMatch": true,
+      "passed": false,
+      "phoneticReview": {
+        "method": "exact_all_syllables_and_tones_pypinyin_0.53.0",
+        "expected": "许澄",
+        "observed": "去尝",
+        "expectedSyllables": [
+          "xu3",
+          "cheng2"
+        ],
+        "observedSyllables": [
+          "qu4",
+          "chang2"
+        ],
+        "sameLength": true,
+        "polarityCountsMatch": true,
+        "passed": false,
+        "humanListening": false
+      }
+    }
+  ]
 }
