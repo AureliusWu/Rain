@@ -12,44 +12,61 @@
   "textSha256": "36c6b49d4c48cc224f3b17086b60b7c5465e9381d37b43a22526357be371c5a3",
   "medium": "spoken",
   "requestSha256": "514aff9a33d192359d669a31ee71c318536d76fe39f4a76ed37c32588c85949b",
-  "attempt": 5,
+  "attempt": 8,
   "status": "needs_review",
   "asr": {
-    "transcript": "续成",
+    "transcript": "去尝",
     "cer": 1.0,
     "polarityCountsMatch": true,
-    "passed": false
+    "passed": false,
+    "phoneticReview": {
+      "method": "exact_all_syllables_and_tones_pypinyin_0.53.0",
+      "expected": "许澄",
+      "observed": "去尝",
+      "expectedSyllables": [
+        "xu3",
+        "cheng2"
+      ],
+      "observedSyllables": [
+        "qu4",
+        "chang2"
+      ],
+      "sameLength": true,
+      "polarityCountsMatch": true,
+      "passed": false,
+      "humanListening": false
+    }
   },
   "duration": 0.8,
-  "wallSeconds": 45.804,
+  "wallSeconds": 4.439,
   "loudness": {
-    "input_i": "-31.51",
-    "input_tp": "-14.63",
+    "input_i": "-26.34",
+    "input_tp": "-8.95",
     "input_lra": "0.00",
-    "input_thresh": "-41.51",
-    "output_i": "-19.99",
-    "output_tp": "-3.12",
+    "input_thresh": "-36.34",
+    "output_i": "-19.98",
+    "output_tp": "-2.61",
     "output_lra": "0.00",
-    "output_thresh": "-29.99",
+    "output_thresh": "-29.98",
     "normalization_type": "linear",
-    "target_offset": "-0.01"
+    "target_offset": "-0.02"
   },
   "files": {
     "raw": {
       "path": "rain-s01-arrival-l007/raw.wav",
       "bytes": 76880,
-      "sha256": "40eac82b2c824acdefee8b714f140ad6c745d4c6e324ce943d9a616ffc834e23"
+      "sha256": "408173d9dd22fa4d4c80b43663bc52d9940cbd305e2f51f34abb677f039528bd"
     },
     "master": {
       "path": "rain-s01-arrival-l007/master.wav",
       "bytes": 38478,
-      "sha256": "b096dda76e4aa487e9846917532110fd652add863b665894dcabc5aa273e3b6d"
+      "sha256": "23eb13306461484f54f26dc3d326f3936b308b3a716596c184915e8b5a081eea"
     },
     "runtime": {
       "path": "rain-s01-arrival-l007/runtime.ogg",
-      "bytes": 9326,
-      "sha256": "f181ba8b2e3679989ce1a4857a6a086a1684a6a28d2198551eb43e128b88fa3c"
+      "bytes": 9495,
+      "sha256": "eb3ce03b03063fe6ce7ab36a8cf7362090167ffb4b78c750e07530d1d10362c0"
     }
   },
-  "recoveredFromRun": 39436530718
+  "recoveredFromRun": 39522082173
 }

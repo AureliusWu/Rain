@@ -12,44 +12,85 @@
   "textSha256": "fceaa1e6b0fdbc4c517357f8167e5c419ec0de07eb0750ea449c491b3bdd871b",
   "medium": "spoken",
   "requestSha256": "9ce321672beb8437836c7cb12d18e18aaa3113c99c9686fa78eae28b0c61e223",
-  "attempt": 5,
+  "attempt": 8,
   "status": "needs_review",
   "asr": {
-    "transcript": "量杆还能装梳下次不用它当雨了",
-    "cer": 0.285714,
+    "transcript": "两杆还能装书下次不用他党语了",
+    "cer": 0.357143,
     "polarityCountsMatch": true,
-    "passed": false
+    "passed": false,
+    "phoneticReview": {
+      "method": "exact_all_syllables_and_tones_pypinyin_0.53.0",
+      "expected": "晾干还能装书下次不用它挡雨了",
+      "observed": "两杆还能装书下次不用他党语了",
+      "expectedSyllables": [
+        "liang4",
+        "gan1",
+        "hai2",
+        "neng2",
+        "zhuang1",
+        "shu1",
+        "xia4",
+        "ci4",
+        "bu4",
+        "yong4",
+        "ta1",
+        "dang3",
+        "yu3",
+        "le5"
+      ],
+      "observedSyllables": [
+        "liang3",
+        "gan1",
+        "hai2",
+        "neng2",
+        "zhuang1",
+        "shu1",
+        "xia4",
+        "ci4",
+        "bu4",
+        "yong4",
+        "ta1",
+        "dang3",
+        "yu3",
+        "le5"
+      ],
+      "sameLength": true,
+      "polarityCountsMatch": true,
+      "passed": false,
+      "humanListening": false
+    }
   },
-  "duration": 2.8,
-  "wallSeconds": 117.157,
+  "duration": 3.68,
+  "wallSeconds": 16.565,
   "loudness": {
-    "input_i": "-26.38",
-    "input_tp": "-7.64",
-    "input_lra": "0.00",
-    "input_thresh": "-36.38",
-    "output_i": "-20.75",
-    "output_tp": "-2.00",
+    "input_i": "-27.84",
+    "input_tp": "-9.61",
+    "input_lra": "1.90",
+    "input_thresh": "-38.00",
+    "output_i": "-19.73",
+    "output_tp": "-2.12",
     "output_lra": "0.00",
-    "output_thresh": "-30.75",
-    "normalization_type": "linear",
-    "target_offset": "0.75"
+    "output_thresh": "-30.29",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.27"
   },
   "files": {
     "raw": {
       "path": "rain-v07-s05-departure-l003/raw.wav",
-      "bytes": 268880,
-      "sha256": "49bf2fbabce83e759918959b039c93ecf89caa943797ed97b75abeeb3b2860a8"
+      "bytes": 353360,
+      "sha256": "8210f75d3a4c14e4bdd312ad90cf970d33aa30e2ee9faa438ae46992a3e2c1dc"
     },
     "master": {
       "path": "rain-v07-s05-departure-l003/master.wav",
-      "bytes": 134478,
-      "sha256": "99905d1802c3dcc4a56aa37a99c1913711d6744cec3136bc98d0a04dee2c43fa"
+      "bytes": 176718,
+      "sha256": "4b0e8ba66bfa6e50122c8ca2550dd1f5eb3933dfde561872406f67e54fe489ad"
     },
     "runtime": {
       "path": "rain-v07-s05-departure-l003/runtime.ogg",
-      "bytes": 24701,
-      "sha256": "33a1f9fecedd6490f85e47db9a37025a88e6722c1c6691190e6542702559c6de"
+      "bytes": 30474,
+      "sha256": "255fed0b5eeceaf1d7ae012b06e821993070c861257d40b3ad1497d23ce16503"
     }
   },
-  "recoveredFromRun": 39436530718
+  "recoveredFromRun": 39522082173
 }

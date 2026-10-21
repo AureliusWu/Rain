@@ -13,44 +13,83 @@
   "textSha256": "615be118d7a696aef84aa97be006f67167b819792b3f30a13891079b38adafc2",
   "medium": "spoken",
   "requestSha256": "540c7736dfe65d924be16812c4b421f6c0d4efe7a227f89ac93c4aeaeab17841",
-  "attempt": 5,
+  "attempt": 8,
   "status": "needs_review",
   "asr": {
-    "transcript": "好,只想我提着,散可以借我拿吗?",
+    "transcript": "好只想我提着散可以借我拿吗",
     "cer": 0.230769,
     "polarityCountsMatch": true,
-    "passed": false
+    "passed": false,
+    "phoneticReview": {
+      "method": "exact_all_syllables_and_tones_pypinyin_0.53.0",
+      "expected": "好纸箱我提着伞可以借我拿吗",
+      "observed": "好只想我提着散可以借我拿吗",
+      "expectedSyllables": [
+        "hao3",
+        "zhi3",
+        "xiang1",
+        "wo3",
+        "ti2",
+        "zhe5",
+        "san3",
+        "ke3",
+        "yi3",
+        "jie4",
+        "wo3",
+        "na2",
+        "ma5"
+      ],
+      "observedSyllables": [
+        "hao3",
+        "zhi3",
+        "xiang3",
+        "wo3",
+        "ti2",
+        "zhe5",
+        "san4",
+        "ke3",
+        "yi3",
+        "jie4",
+        "wo3",
+        "na2",
+        "ma5"
+      ],
+      "sameLength": true,
+      "polarityCountsMatch": true,
+      "passed": false,
+      "humanListening": false
+    }
   },
-  "duration": 3.68,
-  "wallSeconds": 209.075,
+  "duration": 3.36,
+  "wallSeconds": 15.855,
   "loudness": {
-    "input_i": "-25.06",
-    "input_tp": "-5.62",
+    "input_i": "-25.87",
+    "input_tp": "-8.77",
     "input_lra": "0.50",
-    "input_thresh": "-35.50",
-    "output_i": "-19.35",
-    "output_tp": "-2.00",
+    "input_thresh": "-36.02",
+    "output_i": "-19.87",
+    "output_tp": "-2.90",
     "output_lra": "0.00",
-    "output_thresh": "-30.05",
+    "output_thresh": "-30.01",
     "normalization_type": "dynamic",
-    "target_offset": "-0.65"
+    "target_offset": "-0.13"
   },
   "files": {
     "raw": {
       "path": "rain-q03-walk-l001/raw.wav",
-      "bytes": 353360,
-      "sha256": "63fd3ad22261f365f49c0ccb9630edab0e6c9383e85db4612105fc7990c60f04"
+      "bytes": 322640,
+      "sha256": "d0ecd61c7029388e2a680965c7ac62333100829abca48902eabca30b50368bbc"
     },
     "master": {
       "path": "rain-q03-walk-l001/master.wav",
-      "bytes": 176718,
-      "sha256": "308e05a69937ba6bc36c2a2941a5266805f5b3874424ad6f1f9fdd4cb77ab226"
+      "bytes": 161358,
+      "sha256": "f66bfba98c8c36791ab257c98c7f1e55498820bb31110fd35c900e0b04a9343a"
     },
     "runtime": {
       "path": "rain-q03-walk-l001/runtime.ogg",
-      "bytes": 31145,
-      "sha256": "950e21927da882fbd361935f08b61ec33d7c9cd4b77dd98219ddcf175410b8bc"
+      "bytes": 28443,
+      "sha256": "34dec79da4f96f636b53c17af5cb8a67dca475e857cefcc586bf6ee166f4497d"
     }
   },
-  "recoveredFromRun": 39436530718
+  "recoveredFromRun": 39522082173
 }

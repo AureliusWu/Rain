@@ -55,7 +55,7 @@
           "sha256": "3b3908d6df7c2e131c159157e66011448ea4bed617e3c539b9f7490ef37d4ed0"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-p00-entry-l011",
@@ -110,7 +110,7 @@
           "sha256": "19c94c5ad7cc5972fdb5fd8874000b78c259806e0a4fd248bd62f75779401c8a"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s01-arrival-l005",
@@ -165,7 +165,7 @@
           "sha256": "86e9373317e4a82831c2fc2b1f7e13bed922310f50c484b1777c32d276496e6d"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s01-arrival-l007",
@@ -181,46 +181,63 @@
       "textSha256": "36c6b49d4c48cc224f3b17086b60b7c5465e9381d37b43a22526357be371c5a3",
       "medium": "spoken",
       "requestSha256": "514aff9a33d192359d669a31ee71c318536d76fe39f4a76ed37c32588c85949b",
-      "attempt": 5,
+      "attempt": 8,
       "status": "needs_review",
       "asr": {
-        "transcript": "续成",
+        "transcript": "去尝",
         "cer": 1.0,
         "polarityCountsMatch": true,
-        "passed": false
+        "passed": false,
+        "phoneticReview": {
+          "method": "exact_all_syllables_and_tones_pypinyin_0.53.0",
+          "expected": "许澄",
+          "observed": "去尝",
+          "expectedSyllables": [
+            "xu3",
+            "cheng2"
+          ],
+          "observedSyllables": [
+            "qu4",
+            "chang2"
+          ],
+          "sameLength": true,
+          "polarityCountsMatch": true,
+          "passed": false,
+          "humanListening": false
+        }
       },
       "duration": 0.8,
-      "wallSeconds": 45.804,
+      "wallSeconds": 4.439,
       "loudness": {
-        "input_i": "-31.51",
-        "input_tp": "-14.63",
+        "input_i": "-26.34",
+        "input_tp": "-8.95",
         "input_lra": "0.00",
-        "input_thresh": "-41.51",
-        "output_i": "-19.99",
-        "output_tp": "-3.12",
+        "input_thresh": "-36.34",
+        "output_i": "-19.98",
+        "output_tp": "-2.61",
         "output_lra": "0.00",
-        "output_thresh": "-29.99",
+        "output_thresh": "-29.98",
         "normalization_type": "linear",
-        "target_offset": "-0.01"
+        "target_offset": "-0.02"
       },
       "files": {
         "raw": {
           "path": "rain-s01-arrival-l007/raw.wav",
           "bytes": 76880,
-          "sha256": "40eac82b2c824acdefee8b714f140ad6c745d4c6e324ce943d9a616ffc834e23"
+          "sha256": "408173d9dd22fa4d4c80b43663bc52d9940cbd305e2f51f34abb677f039528bd"
         },
         "master": {
           "path": "rain-s01-arrival-l007/master.wav",
           "bytes": 38478,
-          "sha256": "b096dda76e4aa487e9846917532110fd652add863b665894dcabc5aa273e3b6d"
+          "sha256": "23eb13306461484f54f26dc3d326f3936b308b3a716596c184915e8b5a081eea"
         },
         "runtime": {
           "path": "rain-s01-arrival-l007/runtime.ogg",
-          "bytes": 9326,
-          "sha256": "f181ba8b2e3679989ce1a4857a6a086a1684a6a28d2198551eb43e128b88fa3c"
+          "bytes": 9495,
+          "sha256": "eb3ce03b03063fe6ce7ab36a8cf7362090167ffb4b78c750e07530d1d10362c0"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s01-arrival-l008",
@@ -275,7 +292,7 @@
           "sha256": "e3ae7b15e5de7f464528aee7bf134311a6584ebed50790b263ca0dc09d218608"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s01-arrival-l010",
@@ -330,7 +347,7 @@
           "sha256": "39ac8414b3b37e81fc76ddf22a6eb1ee8ee3400c191e5a8a4dbaf92e14aa65a8"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s01-arrival-l011",
@@ -385,7 +402,7 @@
           "sha256": "f29a42625d9502b33e0674065c2db4626fd6b6ae5ce57888e873851a3c05a050"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s01-arrival-l014",
@@ -440,7 +457,7 @@
           "sha256": "b9ccf30ba42442032dc1af17c96f6f7bf9eaedb760eecbc8552c0c55f6fa10ef"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s01-arrival-l015",
@@ -495,7 +512,7 @@
           "sha256": "f33724f31b365b322f976bec61a4096becc9cec6d8007ce0aa99cda8ee7c3a21"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s01-arrival-l018",
@@ -550,7 +567,7 @@
           "sha256": "a2f1ed0854b773f75121e4630dc83b51cefc69c1f40afa553ffd4da7ac46a000"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s01-arrival-l019",
@@ -605,7 +622,7 @@
           "sha256": "f8de874ad0ba37c7f0e518034e66cb10665998c1faebfa3f9290a986e62f34aa"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s01-arrival-l022",
@@ -660,7 +677,7 @@
           "sha256": "40bd9a7f7efb4e9da074576bb4f1c05bfe6938512cea16eceab756b41099bb91"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s01-arrival-l023",
@@ -715,7 +732,7 @@
           "sha256": "65327221e3a01b406e481f107390b2842c42d086d12be98c7837a1cb269daad9"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s01-platform-l002",
@@ -770,7 +787,7 @@
           "sha256": "335da4a58cd91f7476113a278dcebcaa6ae248ee98379d1d22887538c5224434"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s01-platform-l003",
@@ -825,7 +842,7 @@
           "sha256": "01f851cef9c7588eedf08acd7e2378b65f33ce3072e217c9e7b3df64604db158"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s01-platform-l005",
@@ -880,7 +897,7 @@
           "sha256": "5bf0f30b3b7973fe3877ebc4c843f2b3775ba62b8104796e92d48f9fab9f4202"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s01-platform-l006",
@@ -935,7 +952,7 @@
           "sha256": "1f1b1ae3912292d193bc836ea8a64afd80b87e7938b79b5ee15552701c1a58f7"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s01-platform-l009",
@@ -990,7 +1007,7 @@
           "sha256": "2673852892717e1abfe753e6fc94534134d4bfbdf9408b9a64eaf4732077b0df"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s01-platform-l012",
@@ -1045,7 +1062,7 @@
           "sha256": "6ada45a134de59ec1402b482405fc2930245a47206b00b2b3cfdf589e166fa8c"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s01-platform-l013",
@@ -1100,7 +1117,7 @@
           "sha256": "4271ec95537fc4141d9ec33fa342b0934d91a2545106955fe2edb1c472d7fcc9"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s01-platform-l014",
@@ -1155,7 +1172,7 @@
           "sha256": "a38b9a10bb477385a1c3ea9ffc6449cf0b6bc8e0e6718cf8adabf113ac9e7e34"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s01-platform-l017",
@@ -1210,7 +1227,7 @@
           "sha256": "0262f9734448400bed3acbf3e220d6a8eb338d9afa60bd9fd7c29684e00f098a"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s01-platform-l018",
@@ -1265,7 +1282,7 @@
           "sha256": "ccdf289f9a6bd4a699da43cdc60ec924fdeae0f11a61dd87ab2141fcf66bb403"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s01-platform-l021",
@@ -1320,7 +1337,7 @@
           "sha256": "6595984dfd0dcee9407b083aa21e10ffb1d70f3dea6be80437b3a18554bb2973"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s01-platform-l023",
@@ -1375,7 +1392,7 @@
           "sha256": "ee8ed3ed529c38ebd6b8ad44813baeb52ee60dbdb246daa65fade5e319341844"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-reunion-l001",
@@ -1430,7 +1447,7 @@
           "sha256": "d69c8e4f0244f3edf7b9026fffcdda7de520d759a515f036c5f0c77b75ae9c67"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-reunion-l002",
@@ -1485,7 +1502,7 @@
           "sha256": "4a8ea8ad53b56521efaa0b0899c4adc954408e2c60ce69fb75921091f9580336"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-reunion-l004",
@@ -1540,7 +1557,7 @@
           "sha256": "6e068f6cd9b6e2a001a63e169d5190a09b60082093ac5bb81de831dc98d15ef6"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-reunion-l005",
@@ -1595,7 +1612,7 @@
           "sha256": "ad34fc89546968d36442f5d35d1afbaf228410b59e43f28edbeef4d9b57ad39a"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-reunion-l006",
@@ -1650,7 +1667,7 @@
           "sha256": "95f05faeb13b2d0812d1ba04453748c6eea1d9f0a7a9bde0146c3342a0a26af5"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-reunion-l007",
@@ -1705,7 +1722,7 @@
           "sha256": "9ee3b7ef45e9dbf08d4af22a704044cd2ae2a43cb339b8c4fa145440ce87d76a"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-reunion-l008",
@@ -1760,7 +1777,7 @@
           "sha256": "2c3aabb51c5a11d4c2715ce0838322a4b222192d0d4582ab132ba493b946ae70"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-reunion-l011",
@@ -1815,7 +1832,7 @@
           "sha256": "c3ad7d583127c764ea1e43e311a6250abf8f715865691c56feb8525efe0c4e97"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-reunion-l013",
@@ -1870,7 +1887,7 @@
           "sha256": "aee9fb1e72f238fdceef14c5ed1112a37c61440a9d0f0a68b53094cd5d0e0da3"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-reunion-l015",
@@ -1925,7 +1942,7 @@
           "sha256": "e30a258a5183dee909915ce2f517fd5a60ea8a2c90d7a65762c643dbcab98d9b"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-reunion-l016",
@@ -1980,7 +1997,7 @@
           "sha256": "01e6eed9835285829a85b81e1e760bdf60e6c89bf74356e2ba17d415b3ad86b6"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-reunion-l019",
@@ -2035,7 +2052,7 @@
           "sha256": "1290baf7a094ccfb8858aea9b0c49bdd656bc96a43449d04a2e8cdf72484ae6c"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-reunion-l020",
@@ -2090,7 +2107,7 @@
           "sha256": "cbc6e4bd025cdac10b53ea75455d8cd3fd65cfac34469356ba967ec1ec0235d6"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-reunion-l021",
@@ -2145,7 +2162,7 @@
           "sha256": "ad0089732166b7b4eeeba7b5487dbf7117798623dabd8e360a88cda0d67aff58"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-q01-care-l001",
@@ -2201,7 +2218,7 @@
           "sha256": "edbf88545a744dfc8f0b0a6b3caa73dc530c69a102143834cd756c948cc040e8"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-q01-care-l002",
@@ -2257,7 +2274,7 @@
           "sha256": "7d3250d872587e16298208dc7a1f74a90cc1350656c2f6fd37ba0d7d9c6cdc87"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-q01-business-l001",
@@ -2313,7 +2330,7 @@
           "sha256": "894f31f525e223f0aaa9f0cf697d9902741ef5cb3fc1481e7a9b96a6198b30c1"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-q01-business-l002",
@@ -2369,7 +2386,7 @@
           "sha256": "8d2234a201d4d1df1b768b72fc6f8bed6b6435927e27bf78c8090cdfa8176c99"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-care-l001",
@@ -2424,7 +2441,7 @@
           "sha256": "525a6be632b597ebab43a474f916b15de10b95e45aa9187019d120fed2910040"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-care-l002",
@@ -2479,7 +2496,7 @@
           "sha256": "b2a1f891b9d80f5a0c8bb3b61874b581a1e88756df828d93c1ad800f15c3cfa4"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-care-l003",
@@ -2534,7 +2551,7 @@
           "sha256": "b885d1943fb46da324bb87ba4813d8710ffdef9b4652983967083a173d4cd423"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-care-l004",
@@ -2589,7 +2606,7 @@
           "sha256": "468a78d6ceeee9a787cce5e84b8fb04ace848a9ff6b7fbe88d1302c197566a23"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-care-l006",
@@ -2644,7 +2661,7 @@
           "sha256": "cb0d37a31584e5a9ea087cf0663872e200ba552d6c0f7a5ba6436dce0db2d760"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-care-l007",
@@ -2699,7 +2716,7 @@
           "sha256": "43a591dbf731be5e4e69187f3a95629125cfe2da4989feccfc605188883b6cc8"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-care-l009",
@@ -2754,7 +2771,7 @@
           "sha256": "c988e2760851e98f66e89437a068a20b3df33be30d35f05d65a6575b7b946ca7"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-care-l010",
@@ -2809,7 +2826,7 @@
           "sha256": "b99150aaae092d07075206906b19053e2d58ce247e5d9c83d6afac2e410258f3"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-care-l012",
@@ -2864,7 +2881,7 @@
           "sha256": "8a1bb20fd894e8233fd551f015bcf5a972c57737a60438d83438e7c2420b92a2"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-care-l014",
@@ -2919,7 +2936,7 @@
           "sha256": "ec04a05fc8e22a09db57fa3e00f2694b33c7ccc28133700ad3463239d27ead72"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-care-l015",
@@ -2974,7 +2991,7 @@
           "sha256": "90a7fc3e8587c17cfd7354280fb6499cfe2bf7d58356d1bda4449ccf8d6df100"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-care-l017",
@@ -3029,7 +3046,7 @@
           "sha256": "d5bbc8a1bbf322b2853ce96be20097b2de2872dd3d65287110d6276ab86ac686"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-care-l018",
@@ -3084,7 +3101,7 @@
           "sha256": "23ea2c1c3cb3642fa73a49fa09e35a82eeb15966a1dfa3d9ea71ce7b7002c997"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-care-l019",
@@ -3139,7 +3156,7 @@
           "sha256": "a6cc44a48711ee91399ccd6cb2518cb64625868791be1ae23536e69af9db2f5a"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-care-l021",
@@ -3194,7 +3211,7 @@
           "sha256": "eedb9074abc390c280a5a89e27c4afbf3f805d018a66bf7fd335a121f10c53ff"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-care-l022",
@@ -3249,7 +3266,7 @@
           "sha256": "cd7bc55ba21d955f08b642670de0e8b05815c746238d32cd20ce0994fe612626"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-care-l025",
@@ -3304,7 +3321,7 @@
           "sha256": "eb24748e2c75277e3d5f1804d59d91f8b01d9ff0f31167b5f4f489d89012772a"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-business-l001",
@@ -3359,7 +3376,7 @@
           "sha256": "0c6583ad7c280ecc89d0a27838a2f733b60c87e92424c79d11bc71350afcb287"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-business-l002",
@@ -3414,7 +3431,7 @@
           "sha256": "d9cfc09d91551d7f55a1bb39bb6be552c54b481f0298bd8705c99fedadb7cab5"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-business-l004",
@@ -3469,7 +3486,7 @@
           "sha256": "002657474a822c9cd7cd24b177b7ce9c21ada37e27773e8acf1939ee7f230e30"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-business-l005",
@@ -3524,7 +3541,7 @@
           "sha256": "36e1117ca1318872482d414ef785630e5d720598a807ea75bce11ce71c669627"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-business-l007",
@@ -3579,7 +3596,7 @@
           "sha256": "05f019aaea12ad558ef1dc8045c1b8f22ae277a67d3049eaed53837c9eb6938b"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-business-l008",
@@ -3634,7 +3651,7 @@
           "sha256": "cceed918b3e70178345e62e5f8f440b0c805c2f147bdc01b76fe2c823220c309"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-business-l009",
@@ -3689,7 +3706,7 @@
           "sha256": "3ae91e4f6119358275cfc198e1b38e1fb1749a17bc8ead9e688fc5d43380e72d"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-business-l013",
@@ -3705,46 +3722,78 @@
       "textSha256": "f3ffb6a3e20e1960a2c3ec5517e7fbf7a78073c6c8e011eefe07d6dfb46c4531",
       "medium": "spoken",
       "requestSha256": "de85762d08b2407f8c693bdf4d507457ef6dbd5d6b761d78ec4128a82e576b17",
-      "attempt": 5,
-      "status": "needs_review",
+      "attempt": 6,
+      "status": "accepted",
       "asr": {
-        "transcript": "姓娘,贵号,建书就这些",
-        "cer": 0.444444,
+        "transcript": "姓名桂号箭术,就这些。",
+        "cer": 0.333333,
         "polarityCountsMatch": true,
-        "passed": false
+        "passed": true,
+        "phoneticReview": {
+          "method": "exact_all_syllables_and_tones_pypinyin_0.53.0",
+          "expected": "姓名柜号件数就这些",
+          "observed": "姓名桂号箭术就这些",
+          "expectedSyllables": [
+            "xing4",
+            "ming2",
+            "gui4",
+            "hao4",
+            "jian4",
+            "shu4",
+            "jiu4",
+            "zhe4",
+            "xie1"
+          ],
+          "observedSyllables": [
+            "xing4",
+            "ming2",
+            "gui4",
+            "hao4",
+            "jian4",
+            "shu4",
+            "jiu4",
+            "zhe4",
+            "xie1"
+          ],
+          "sameLength": true,
+          "polarityCountsMatch": true,
+          "passed": true,
+          "humanListening": false
+        },
+        "acceptance": "exact_toned_homophones"
       },
-      "duration": 3.36,
-      "wallSeconds": 189.512,
+      "duration": 4.16,
+      "wallSeconds": 18.051,
       "loudness": {
-        "input_i": "-24.45",
-        "input_tp": "-7.53",
-        "input_lra": "0.70",
-        "input_thresh": "-35.09",
-        "output_i": "-18.88",
+        "input_i": "-28.10",
+        "input_tp": "-11.35",
+        "input_lra": "0.90",
+        "input_thresh": "-38.87",
+        "output_i": "-18.44",
         "output_tp": "-2.00",
-        "output_lra": "0.00",
-        "output_thresh": "-29.65",
+        "output_lra": "0.60",
+        "output_thresh": "-29.22",
         "normalization_type": "dynamic",
-        "target_offset": "-1.12"
+        "target_offset": "-1.56"
       },
       "files": {
         "raw": {
           "path": "rain-s02-business-l013/raw.wav",
-          "bytes": 322640,
-          "sha256": "0aeedb62481dcb4918c48a2e3ef142c4c8edc8e71a979f9d7aa07dc46406f720"
+          "bytes": 399440,
+          "sha256": "803c42d4e088843b57c1477c7b4ba90cc9072e2a421c1713bebaa0bc390ee0ab"
         },
         "master": {
           "path": "rain-s02-business-l013/master.wav",
-          "bytes": 161358,
-          "sha256": "a1ddb16c5aa86f9e588a3260fc0ddafddc76500987939a4b8ca1bccdcbdcc40c"
+          "bytes": 199758,
+          "sha256": "274fb4c75daf8a34f26f2398153dec764552ee02a9291be1344b8c66024c2eea"
         },
         "runtime": {
           "path": "rain-s02-business-l013/runtime.ogg",
-          "bytes": 27110,
-          "sha256": "f292f38277efcbbc53a3800bac04f2ce8aada7b423de58a911428d9959a7a650"
+          "bytes": 32472,
+          "sha256": "d821834943b1c08698366c7a48ef9f8aa9288820bec8cf7955674025c72733d9"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-business-l014",
@@ -3799,7 +3848,7 @@
           "sha256": "f0a46979352baf13642af1cc099339ab7cf22519b133bf2b2920976ef53018d8"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-business-l017",
@@ -3854,7 +3903,7 @@
           "sha256": "444680bbdb34990e769b855d5274487300788b221d5cd27d56391247e6dcf7d3"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-business-l018",
@@ -3909,7 +3958,7 @@
           "sha256": "4551b63a86a4590be472fdec5cc4f0987de040ada51d2c5aa6f4c912bec275e8"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-business-l021",
@@ -3964,7 +4013,7 @@
           "sha256": "99ac3869abbde112ab554551805729d9cbf819bb5a1a19f637c36821baa5eac2"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-business-l022",
@@ -4019,7 +4068,7 @@
           "sha256": "12477be3d3f1f7048d49612f172b60d68eafcaf0c9265e66e76268880ab4271c"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-business-l025",
@@ -4074,7 +4123,7 @@
           "sha256": "b56c89de23a6c498225b6ab77826820835c09df169027549b1d3d8702b640b62"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-boxes-l003",
@@ -4129,7 +4178,7 @@
           "sha256": "71cca3613dbb8cce1c60512dcc2bd1a4bb638a70c24174410a97f28dd16f39f5"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-boxes-l004",
@@ -4184,7 +4233,7 @@
           "sha256": "b459c1d718f2d0140962b5c6878579ddf6abd7b6f40eea4e0cb8fbf226995ec2"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-boxes-l006",
@@ -4239,7 +4288,7 @@
           "sha256": "42055b8369a60a2bcf003b842138d3edafd3bfb4f5bf70add78f574545622979"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-boxes-l007",
@@ -4294,7 +4343,7 @@
           "sha256": "fc2797279d8572429a10f8b2e5d7f73ec49cab45deffcea79f71aa1991d89941"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-boxes-l009",
@@ -4349,7 +4398,7 @@
           "sha256": "ccbe941409985086d66c51325fe61bdefee9b915267387be84eb418c608e5248"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-boxes-l012",
@@ -4404,7 +4453,7 @@
           "sha256": "f7bc2744fcd327e464b23da0bc859ccabd8855fc1e5189e23e93e2cda9c33b02"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-boxes-l013",
@@ -4459,7 +4508,7 @@
           "sha256": "cc56de410abf1c2c47bf45f702bba871ce12ea86d43aec5c756a8030d339d72a"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-boxes-l014",
@@ -4514,7 +4563,7 @@
           "sha256": "69ce341d15c04ac796bc45d497db508c0ba9a497463085e169f50e949e32a310"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-boxes-l017",
@@ -4569,7 +4618,7 @@
           "sha256": "e38d7b4257ca846c4b5a80ad4c725bd8ea6577eef74a7b0a9113fc0a566453d2"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-boxes-l018",
@@ -4624,7 +4673,7 @@
           "sha256": "dc60b5039d7805403341d8e76c4160c1d4e084b5e3e293e819c66aa7bc5ba79b"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-boxes-l021",
@@ -4679,7 +4728,7 @@
           "sha256": "088aa9ad2ce3334ca7e1ec6e2237bc4c261762a1766e86a0bc9437b21d343310"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-boxes-l025",
@@ -4734,7 +4783,7 @@
           "sha256": "3ea2a228516f890477257be1f357b84ead0e2f70fb4e50a4b900efcdd5da58b4"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s02-boxes-l026",
@@ -4789,7 +4838,7 @@
           "sha256": "196b34fbf1e94e5c80603a9221122040b639b43956ea295024f3fe2ad3ac5031"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-letter-l001",
@@ -4844,7 +4893,7 @@
           "sha256": "334844a70c29ea2938b562e24d9740da836ea1588250489804041c6058d00149"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-letter-l003",
@@ -4899,7 +4948,7 @@
           "sha256": "f2c264e7f84347d37f9712f00a8a77a7d47a197b96b45072a8cc3ef169bb04c8"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-letter-l004",
@@ -4954,7 +5003,7 @@
           "sha256": "2cc89e24fc2d819f939fff8726c4378c36836f9bda33fbc249e79d145b298ca3"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-letter-l005",
@@ -5009,7 +5058,7 @@
           "sha256": "6ebca67fe1f5219a228547851e50603cb8f83c738d04ba922aecd98539d33973"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-letter-l009",
@@ -5064,7 +5113,7 @@
           "sha256": "0ec5b0f22b4079eb384a05b24dc54c9873d63685dadbe4f9ecfc510c87d7b997"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-letter-l011",
@@ -5119,7 +5168,7 @@
           "sha256": "84b6704211b97a857dd5d9001a4b527018b3474aaf6e530d1f3fc4526f2599ac"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-letter-l019",
@@ -5174,7 +5223,7 @@
           "sha256": "dca9dfb0aae61748178b361797ec8ca3da4cf45ce8c5113ec984139753a3eafc"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-letter-l021",
@@ -5229,7 +5278,7 @@
           "sha256": "828ef69a0833b05c53a8e06433b237f2441e420c341911f8b928324481341f6e"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-q02-honest-l001",
@@ -5285,7 +5334,7 @@
           "sha256": "f5e24d7988e4f0b81e2403c32d93fc63606831056ece943573cd550259ccf169"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-q02-honest-l002",
@@ -5341,7 +5390,7 @@
           "sha256": "297fdfd4e6bd5130f6241c3ee0ea9aaf779bc8a8050932441d559c1cdfbac160"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-q02-honest-l003",
@@ -5397,7 +5446,7 @@
           "sha256": "84af2326d9945a96a300a2751882369a45a7e5baab484cfb8c50def366664bb1"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-q02-honest-l004",
@@ -5453,7 +5502,7 @@
           "sha256": "b7721709270adbc809a6bfe13b996871082cc7249f29ebd7cf5bbf34860236ff"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-q02-honest-l005",
@@ -5509,7 +5558,7 @@
           "sha256": "340f02de0e1cbe6badfa006386828329b0a930b3e84345e815ea8076d480671f"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-q02-defer-l001",
@@ -5565,7 +5614,7 @@
           "sha256": "27b6bb2725c06fda03b90cb3c04c066903b12b55e73a688c08e60126ce5a5313"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-q02-defer-l002",
@@ -5621,7 +5670,7 @@
           "sha256": "daa9df6bbbe91379d1b7eee4a2802d265879d263ad8c63d6c426568c90ebed30"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-honest-l001",
@@ -5676,7 +5725,7 @@
           "sha256": "821c226c7f23b893fd54b4d525ddac9c98f737ef0649bc0420e08f8adabc0ea6"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-honest-l002",
@@ -5731,7 +5780,7 @@
           "sha256": "c9f48c4a8ee766e5b62dde3257ceda097862e43ef4694a72f97c1eb90d637206"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-honest-l004",
@@ -5786,7 +5835,7 @@
           "sha256": "688a102ed12dc7e3f2c5b36d8e73c48936a1035788346077de7a2fcda13162c7"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-honest-l005",
@@ -5841,7 +5890,7 @@
           "sha256": "2fc51e835e9608db8503eb187ad22e7f3b37215702e64b49199612cbceafd7d7"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-honest-l006",
@@ -5896,7 +5945,7 @@
           "sha256": "acc17b1f0dc88f0cea9f1fbf7e71e2bb0054606b7f48e10c073b5f1533c2a058"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-honest-l008",
@@ -5951,7 +6000,7 @@
           "sha256": "49a0b0ef593b3c3ecd66cc5793838558d53d2a3d5212e7d11d3bfb2300b4a76b"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-honest-l010",
@@ -6006,7 +6055,7 @@
           "sha256": "766169696279d12dc271300e184151d435cfda9ca0409150274beb1bafd1ff59"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-honest-l011",
@@ -6061,7 +6110,7 @@
           "sha256": "664962f24c68e038fe79eb14d542e0b3609b528a5e3b0587800cdf7d40c37b26"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-honest-l012",
@@ -6116,7 +6165,7 @@
           "sha256": "869f820ae07469ea9ec79accc26093d9fc358b9ac74a143a50ebb6c3286d37b2"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-honest-l013",
@@ -6171,7 +6220,7 @@
           "sha256": "4142f02d42c9d6f35ce46ac06f216169f70964a746770f23a1970b5eb58570bd"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-honest-l015",
@@ -6226,7 +6275,7 @@
           "sha256": "a086b9f64b0d54f3b8d5365af7980cb8a8c99a9c2188953519ebcb3b8113871b"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-honest-l016",
@@ -6281,7 +6330,7 @@
           "sha256": "f9355fd4b37900cb1e640cbdc5df0e50745dd77448ba29253648224b7674be7a"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-honest-l018",
@@ -6336,7 +6385,7 @@
           "sha256": "08012f640f27ddcab6c38c029118913184c44711d46cd26622964f2b59a130da"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-honest-l019",
@@ -6391,7 +6440,7 @@
           "sha256": "27b2bd3188980e2c7c72f03ab35345f517a84c3768605fca2470f0a446541b95"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-honest-l021",
@@ -6446,7 +6495,7 @@
           "sha256": "2596b55b1495bca75353103e8a03582489795e7b99d8e33fa8e3ae46f4cba30f"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-honest-l022",
@@ -6501,7 +6550,7 @@
           "sha256": "6a5bcdb66d7eaf9955002b430555df8cebe5f00c9cb4cb5131c4be587249b73d"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-honest-l025",
@@ -6556,7 +6605,7 @@
           "sha256": "8551f3cfd97427cd5d914ecf44430d9aa7a2b5a761e253a1d201bbd8dd3d479f"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-deferred-l002",
@@ -6611,7 +6660,7 @@
           "sha256": "c140cf7517aa6fc487d52a420644ecd73b21d0e77ca74659b34bf3daf5fe4061"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-deferred-l003",
@@ -6666,7 +6715,7 @@
           "sha256": "ece186ed9328f38799a2b3baeba28113dbe13bf606d752d3bf00854354d970bd"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-deferred-l005",
@@ -6721,7 +6770,7 @@
           "sha256": "68d6870167be38dd3657a5ee8180950230b7274b2bf3b5ec31e05a2128b212c0"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-deferred-l006",
@@ -6776,7 +6825,7 @@
           "sha256": "86b631e0586006b04d66b06e72f5f13421a0a2f0dc454d63e1500dced6a8bdc2"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-deferred-l007",
@@ -6831,7 +6880,7 @@
           "sha256": "9aba78fa6dd99475fe611d0b02f846d3f34a48fbb5b7cdb172a8ffb231fbdd5d"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-deferred-l009",
@@ -6886,7 +6935,7 @@
           "sha256": "1baf22ca7d6df49576bdae1f217ec1bfb7dc3f451b40e932d89298be1a7d6699"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-deferred-l012",
@@ -6941,7 +6990,7 @@
           "sha256": "45f964b8f1d872155dc5aad1104213ea0ddcac448138b0dfa3585f6833574bb5"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-deferred-l013",
@@ -6996,7 +7045,7 @@
           "sha256": "51c3dbc3ab6d191ac0b4b6626b43fddc93473849d8c70def0da588875771c32b"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-deferred-l014",
@@ -7051,7 +7100,7 @@
           "sha256": "3c542d32cf1009aec65253fb5e2a6a5bfc8261d40159ef5e40316ee175bf1a59"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-deferred-l017",
@@ -7106,7 +7155,7 @@
           "sha256": "51f05f05d462c2348b7f1eba845842e2d15ebebae40e5ea3b6362c78ac744779"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-deferred-l018",
@@ -7161,7 +7210,7 @@
           "sha256": "d3148d7b9d916d25587ae4c37c058cfbc975bc762a7820a4cbd6375eb607692b"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-deferred-l021",
@@ -7216,7 +7265,7 @@
           "sha256": "4afa9e8cfdc9b4b305508fa5e755d1cc5d1238962d648eca772edca56fc103f8"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-deferred-l022",
@@ -7271,7 +7320,7 @@
           "sha256": "78f261a0eed877c44cb508c6ff5d9d21db08d920f4977ead901fffb5a9c0fd22"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-deferred-l025",
@@ -7326,7 +7375,7 @@
           "sha256": "6724c25b82233bf3f13bf99e04bd24d1250cd9cb00d826eff7bb97a8144cdea8"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-archive-l002",
@@ -7381,7 +7430,7 @@
           "sha256": "532059d814a52a8127cea5095ee2b3d04025513e2b3de8d0d1e9829f2e691a52"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-archive-l003",
@@ -7436,7 +7485,7 @@
           "sha256": "fb290c9f1ddc3e5bd0696bf256b77eb751368e20752736d5c1b4c67a2cb0305e"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-archive-l004",
@@ -7491,7 +7540,7 @@
           "sha256": "3d4e00fae7c69f88a2cda88927401344097a07f1676bdb97f04a3f73e179b4e4"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-archive-l006",
@@ -7546,7 +7595,7 @@
           "sha256": "a8f5a79f5cf9558a6be473fb623803d588b660bd685f7d53c1c344162dbb0dd0"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-archive-l007",
@@ -7601,7 +7650,7 @@
           "sha256": "361320778f9f4e3ba24ad525df4aa6a397f2223796c6cd2d8ccb36fe8516a5a5"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-archive-l012",
@@ -7656,7 +7705,7 @@
           "sha256": "a57bc11644577cdadb9f9408fcd1c4c56ecb34ecd9fcb094bec68962b8c74062"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-archive-l013",
@@ -7711,7 +7760,7 @@
           "sha256": "3f3387a82bdc779171dffc9b2c15eaf676b6152fd68a91a0d40516c36250a0d0"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-archive-l015",
@@ -7766,7 +7815,7 @@
           "sha256": "7df1d31fdb1a60b0336577904d0e02b0533423f793743eb51c65efc4a9934131"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-archive-l016",
@@ -7821,7 +7870,7 @@
           "sha256": "79db2b8677264b0a83d9590d72101b4d61bb05a1c3e4c37b4f52aa639ad8a6ee"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-archive-l019",
@@ -7876,7 +7925,7 @@
           "sha256": "3856d17c4e0d2d762269ec3b18d229901c9e39ea5e86c878c6f015a3f5e5741f"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s03-archive-l020",
@@ -7931,7 +7980,7 @@
           "sha256": "dd66fa49d368ba2fbc07b63df4b24d701fea00ea010b1248e114626cf45ba5f7"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-open-l001",
@@ -7986,7 +8035,7 @@
           "sha256": "de09134494c645c4703569a6fc617f50ab835a4f44e97fe3a73e3f7f0bbd68c9"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-open-l002",
@@ -8041,7 +8090,7 @@
           "sha256": "98fa4d23eaa0f445d8b476baee5c3a843b26606bbe0a7d8d0b42f044240ec67c"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-open-l003",
@@ -8096,7 +8145,7 @@
           "sha256": "9fda6d4d98f5894c020f485b9199fe7ff1d9c4226000220acd82746bdd38ca9b"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-open-l005",
@@ -8151,7 +8200,7 @@
           "sha256": "d62432d5af7b670273d16fb1f9f8b12a2e8a01964f1852e8c572a0b5eb1ffe1c"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-open-l006",
@@ -8206,7 +8255,7 @@
           "sha256": "498d3531dd66f7a7be56854e09a3efd1b6bfbc9409322766aa6da1b93f58857f"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-open-l007",
@@ -8261,7 +8310,7 @@
           "sha256": "25c1cbdb7a577dc5a45d3d41a84e52492776c3ebdd60e0f4782418beda37857d"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-open-l008",
@@ -8316,7 +8365,7 @@
           "sha256": "190446bd7eeaf4040e6d4b4455db467f2181e9e96325c2c5e3e526e395dff60d"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-open-l011",
@@ -8371,7 +8420,7 @@
           "sha256": "96abf9eb2b0accee613306c33b57928d364bfb91b05fa9cdadc03d249a84bf7e"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-open-l012",
@@ -8426,7 +8475,7 @@
           "sha256": "340df1f1ffe054930e8ae566abfd063e3fb1eddacc4850eaa173c3b0eaec0f24"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-open-l014",
@@ -8481,7 +8530,7 @@
           "sha256": "b2f9f1dba33f729d1784b6be3033ac36ecae9d626938655245866e17453552e5"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-open-l015",
@@ -8536,7 +8585,7 @@
           "sha256": "a84e54754f8100f46da83a25b0a72937aa9352aa5a47b98de271958b431825f3"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-open-l016",
@@ -8591,7 +8640,7 @@
           "sha256": "15a84b1a995dc66387a5b38d7b7d42dfdd32e8f8fb1cf79ece627f7acd2fe945"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-open-l018",
@@ -8646,7 +8695,7 @@
           "sha256": "5f9dd12c269dbebd9636eeb8d4c05b9d362402146e1728b69a2d0da7004dcec5"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-open-l019",
@@ -8701,7 +8750,7 @@
           "sha256": "6b35209774ad2cabb1057ca66ef6dd772977d3978c693108bed93f7009b9f77d"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-open-l021",
@@ -8756,7 +8805,7 @@
           "sha256": "864ff1d7fcd7900851f7de6528d240bb1090498fb39176eab63f74127eea4b8f"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-reserved-l002",
@@ -8811,7 +8860,7 @@
           "sha256": "90205c9cb7c3072720c4d22beb3574aa21169c51f33d506ca2822e5dc5c0c91c"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-reserved-l003",
@@ -8866,7 +8915,7 @@
           "sha256": "eb5b3c9cedfdec0b95422d0e08407c0040900dcffe4e7f0e5f0103920ad1bcb0"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-reserved-l004",
@@ -8921,7 +8970,7 @@
           "sha256": "031a3be31b115fd49b863fa75cb9a28bb7c308675a415967117c77117ce6a071"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-reserved-l005",
@@ -8976,7 +9025,7 @@
           "sha256": "78364a4f81fc3ba79282fd2e90d43354abf57c75211bee1d82858e1446fd1a33"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-reserved-l007",
@@ -9031,7 +9080,7 @@
           "sha256": "ac6368701daa342e70747c4ffa40a874d45d7bcb1a6744262a1b579b7c4fbad0"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-reserved-l008",
@@ -9086,7 +9135,7 @@
           "sha256": "51204bf480ade4fa7fece2ef6db2a1ef4778a189f8df647350f22ec042a37f3a"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-reserved-l011",
@@ -9141,7 +9190,7 @@
           "sha256": "88924d7bf9b7b5d6c727daae123ebea544e183bb4a5d1552de619169225eea2f"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-reserved-l012",
@@ -9196,7 +9245,7 @@
           "sha256": "e3dc7c0a64eeba231df0d36494d70d847f612a2e11343744f02f5691a42c3c32"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-reserved-l014",
@@ -9251,7 +9300,7 @@
           "sha256": "cb99333945f411e1700a88613d53c0583bb708805369602cc05a0224703e1dfe"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-reserved-l015",
@@ -9306,7 +9355,7 @@
           "sha256": "55acc4c9b9123b20936622e4caf89c21d2cfd66602e7d1143714d345f63168d0"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-reserved-l017",
@@ -9361,7 +9410,7 @@
           "sha256": "45d585202b8af1b4fa3cfa065e9466a4a8ad55426338064baab634eeda63ead1"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-reserved-l018",
@@ -9416,7 +9465,7 @@
           "sha256": "e08f82d2075c4ce54c86a783cc11ce1ec04056d5ed6f5eee0f05e972cac2d1b8"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-reserved-l019",
@@ -9471,7 +9520,7 @@
           "sha256": "b1a120f0825c641fabdb9441bcb7f864380eef53b2336e64fc2f3b4e55b61f21"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-reserved-l021",
@@ -9526,7 +9575,7 @@
           "sha256": "5469e83c46e500ee6e4a407bba9579375e9a6d640b088eb107a8e5fb1879f781"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-waiting-l002",
@@ -9581,7 +9630,7 @@
           "sha256": "3f25e421e9c1199f0d8d921d8ad36bf727ca8eb54f5101d1ec79d93433587487"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-waiting-l003",
@@ -9636,7 +9685,7 @@
           "sha256": "06b0ff4625cf0e7abda955e476ce669bb65002194460e85d2f083cd9ab7c0c12"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-waiting-l004",
@@ -9691,7 +9740,7 @@
           "sha256": "daa2cff321686db1b6c436f74a915aff7c9a1863910944411cf245f6c7e95966"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-waiting-l006",
@@ -9746,7 +9795,7 @@
           "sha256": "ba4fd14bca906f87f7f70416682d17968af5e013cc0534be56861cd0f38c94a9"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-waiting-l007",
@@ -9801,7 +9850,7 @@
           "sha256": "0eb7c4738d60af110bfdf8a65bc23885fd6d62ba5774733d7ae542bef333f1cf"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-waiting-l008",
@@ -9856,7 +9905,7 @@
           "sha256": "77ab13ba6712031a6c75263d93f912b8586e401df2933d9e990abe596e15ed40"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-waiting-l009",
@@ -9911,7 +9960,7 @@
           "sha256": "d20a0fba64aade20149a063668dfcefa4d084aa04152d682cf58e73a81c9434a"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-waiting-l011",
@@ -9966,7 +10015,7 @@
           "sha256": "39f4de22fd0cbf76330f3e964053c47f5a83741452a1b6b099772f862f9d6863"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-waiting-l012",
@@ -10021,7 +10070,7 @@
           "sha256": "9374bb796d4daf4318e72543b39e6d39b3022cf47a9c87a04b9b74bc0d3bdfd3"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-waiting-l013",
@@ -10076,7 +10125,7 @@
           "sha256": "4ebbc4aa9ff6c741db9fa7b12000a9d54b7a278154c0bbb84f02bbb36087e5c5"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-waiting-l015",
@@ -10093,12 +10142,34 @@
       "medium": "spoken",
       "requestSha256": "866a8818ede1fb67b53ab2bd2a37f9c586a81795d3978d31e74b056a06c39e83",
       "attempt": 5,
-      "status": "needs_review",
+      "status": "accepted",
       "asr": {
         "transcript": "你说的对",
         "cer": 0.25,
         "polarityCountsMatch": true,
-        "passed": false
+        "passed": true,
+        "phoneticReview": {
+          "method": "exact_all_syllables_and_tones_pypinyin_0.53.0",
+          "expected": "你说得对",
+          "observed": "你说的对",
+          "expectedSyllables": [
+            "ni3",
+            "shuo1",
+            "de5",
+            "dui4"
+          ],
+          "observedSyllables": [
+            "ni3",
+            "shuo1",
+            "de5",
+            "dui4"
+          ],
+          "sameLength": true,
+          "polarityCountsMatch": true,
+          "passed": true,
+          "humanListening": false
+        },
+        "acceptance": "exact_toned_homophones"
       },
       "duration": 0.8,
       "wallSeconds": 45.899,
@@ -10131,7 +10202,7 @@
           "sha256": "e234b3d2dc76e7f10c97bee24c14ea15727d0583673cd4cfe391e9fbf5bc88c0"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-waiting-l016",
@@ -10186,7 +10257,7 @@
           "sha256": "709ce1090a2d30a7f4cec0940fd7c802cd6903f8bc425466975c5d29721be1e9"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-waiting-l017",
@@ -10241,7 +10312,7 @@
           "sha256": "23b0452b348d8edae7e6b5254824e781697b1eb4885afb204ac275b83624d649"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-waiting-l018",
@@ -10296,7 +10367,7 @@
           "sha256": "6e440d51085570869717fe049b2476b28f136c2d5d11b39ef8592d31b11b2dd9"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-waiting-l020",
@@ -10351,7 +10422,7 @@
           "sha256": "0c7c2c7f06e5fcab658b6bed75a8db518e684fc49537e4e3a8cffb0885b85949"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-waiting-l021",
@@ -10406,7 +10477,7 @@
           "sha256": "8a1b893e4851830a11f9692bb2ddfc74a1c5d8400d82e0dfbfc6f7a45460cbbe"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-waiting-l024",
@@ -10461,7 +10532,7 @@
           "sha256": "e782ec107489c797408b135b6c375cdc1e6c1128c23d6ea4e2ecffabba18b821"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-waiting-l025",
@@ -10516,7 +10587,7 @@
           "sha256": "27655250468ba0a8ae1f0e99949c0ebbd47c7a8d34612196b49c2f1ddf9cb04b"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-waiting-l026",
@@ -10571,7 +10642,7 @@
           "sha256": "2a75a6128c82fe213e5f6c48d7c37b070509a19bb1e95550ffc2b0c6aebcb82a"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-waiting-l028",
@@ -10626,7 +10697,7 @@
           "sha256": "ac8072aca2bbc8b0c9125dd07843935c8878201c7274e593136d0f725f09d3d3"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-waiting-l029",
@@ -10681,7 +10752,7 @@
           "sha256": "3963b9a5fd6f18c061a0ffdd9773033c311652e8789df1b75382b54bd2333330"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-waiting-l031",
@@ -10736,7 +10807,7 @@
           "sha256": "dbda40fc83d55bec73230c78807f09b061cef923a62a4bb2c08a22ac30c0f0af"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-waiting-l032",
@@ -10791,7 +10862,7 @@
           "sha256": "65e7e64baaed54c1ebac1af8a8a6bc41f733d65f4f9452e3a195f770cdd4d257"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-waiting-l033",
@@ -10846,7 +10917,7 @@
           "sha256": "e793fc1d17e88fdb296e16d9a9269599251bdeb6f2306b2f085d3d312c87cce5"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-waiting-l037",
@@ -10901,7 +10972,7 @@
           "sha256": "49cb5d6be298da6b51e0a87b5e370d78ce50f14730cc3d597d1404da5e1e29ba"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-waiting-l040",
@@ -10956,7 +11027,7 @@
           "sha256": "14fa1987cc3d91317d33333ca9ed4289a1073325be080563f5d52afd704b200d"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-waiting-l041",
@@ -11011,7 +11082,7 @@
           "sha256": "777ccb9f2adb09cbcc2c91a0f5e3358a4c79bdb5946c9d1b17cec7f6c4ff382d"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-memory-l001",
@@ -11066,7 +11137,7 @@
           "sha256": "b059b815ab0b1baf0c5c5dc619a494b1ba667c58432c3851ebd80d7a15d618b3"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-memory-l002",
@@ -11121,7 +11192,7 @@
           "sha256": "37f4b5e341989a62b19a19e8da042a99efd7fc665cdb5420d1f79083bd2f701d"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-memory-l004",
@@ -11176,7 +11247,7 @@
           "sha256": "20b0421c33b675555b8a35a0365229d9943df4c2b0849b00d2442ed643a0f366"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-memory-l005",
@@ -11231,7 +11302,7 @@
           "sha256": "f974d13796f1f9990caa318e97fb10767a3874e9ba07b544586d869a1d7bcd1c"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s04-memory-l002",
@@ -11286,7 +11357,7 @@
           "sha256": "01887760069e4e488ba367cd48817f2085e9bf2a76c36d5e4eb765ac82f1ee69"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s04-memory-l003",
@@ -11341,7 +11412,7 @@
           "sha256": "5cd90b39ccfbd632796b282cc57d095f4be4700db13525cd0474204d4519a841"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-memory-l007",
@@ -11396,7 +11467,7 @@
           "sha256": "b128c8668c467a21e88f49cb99c5197ee4243738f278841de33a9cb4da6c6d4a"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-memory-l008",
@@ -11451,7 +11522,7 @@
           "sha256": "ecdfb5f569b2ebceca97d6f4ee2183f151a12e748657b1b460f48c3024e92e7f"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-memory-l010",
@@ -11506,7 +11577,7 @@
           "sha256": "9cfbfbc0fc68631a9e14d3df0e6914b0f4685f4cae9d17e7cf2d71b23a31c684"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-memory-l011",
@@ -11561,7 +11632,7 @@
           "sha256": "ec94e6b4c3ac99952893961b612305ad73861233e053fb72d17436636c1faa57"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s04-memory-l006",
@@ -11616,7 +11687,7 @@
           "sha256": "aa6c151ca7ce8b60d26e594b868e2a125a726a41666994937a0a24e41e69e424"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s04-memory-l007",
@@ -11671,7 +11742,7 @@
           "sha256": "5a18457738ba39c7d41eb9b92e4a658a5852664e8ead2146c6c52ff5d605659c"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s04-boundary-l002",
@@ -11726,7 +11797,7 @@
           "sha256": "a46eaf553ddc4ba1262cdd4b44ff09775c2a418227985bf2da9ec9404ec08402"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-boundary-l001",
@@ -11781,7 +11852,7 @@
           "sha256": "82033d06a01314944c15d6648a11f19d24425d6f0054e8530f18f83a180e0557"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-boundary-l002",
@@ -11836,7 +11907,7 @@
           "sha256": "f7f460672ac602dd1a8c71d2d26dd19fbbf980b9013e9c78d5feb586baa7dc2a"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-boundary-l003",
@@ -11891,7 +11962,7 @@
           "sha256": "d5c590b5f7aff9ac811629400abbbb99a19f3809e6f2a9f34d1a2dfb0436f43f"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-boundary-l004",
@@ -11946,7 +12017,7 @@
           "sha256": "a3702ea4367101d07aa0f6f9be7a1cbfd3627c6db171aae5504370661da2b8f0"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s04-boundary-l003",
@@ -12001,7 +12072,7 @@
           "sha256": "41643a51662264013bd438c5c1e71c728869df764bd460ab529652411f5cc588"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s04-boundary-l004",
@@ -12056,7 +12127,7 @@
           "sha256": "252d1f774c1033b0e62a90e9d377887c739cb66ff32a950d31ba354c3222bf11"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s04-boundary-l006",
@@ -12111,7 +12182,7 @@
           "sha256": "15afb89878251ecfbd16de5827a0fa3a349b6c5947ed9b08c2edb3ab71b1b65b"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s04-boundary-l007",
@@ -12166,7 +12237,7 @@
           "sha256": "f34cad4bb5d4fae62d1c49047cc409476de40feecd6407264fe7baba185251f1"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-boundary-l006",
@@ -12221,7 +12292,7 @@
           "sha256": "80b07dbbf1c775f6b05097647f1cffa512bbf6286462676c29be17a931ce9e60"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-boundary-l007",
@@ -12276,7 +12347,7 @@
           "sha256": "b2845dd8773de9f92287c2ff52b996276c2c371de8f7db763004287fd4b2266a"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-boundary-l009",
@@ -12331,7 +12402,7 @@
           "sha256": "3462b0b5790cc7adaf70328ec6c448d83d8634e2439a09c13561de4fa3defa72"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-boundary-l010",
@@ -12386,7 +12457,7 @@
           "sha256": "c21ae9f66ab3382aafb7a25fb1236e661854db78a589687f221cad1022efd4e3"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-revisit-l002",
@@ -12441,7 +12512,7 @@
           "sha256": "6d695ccc0bc373c33d6eb4c9e47ad8c98eae70457bc2071f788ddaa1d832e560"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-revisit-l003",
@@ -12496,7 +12567,7 @@
           "sha256": "205aead8f10af642cf4fb8bc03efaff237f078f2ad67f708be0d9d720a13068a"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-revisit-l006",
@@ -12551,7 +12622,7 @@
           "sha256": "e937b761c7215a05223ef6397d1a1a8824e85e06a48c65ff49e527a2b98176ca"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-revisit-l007",
@@ -12606,7 +12677,7 @@
           "sha256": "9f20e28698c0518f29ab68c47d6b7d3c6372fcc6649552ab948624fd7dfb215d"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s04-revisit-l001",
@@ -12661,7 +12732,7 @@
           "sha256": "2da6c0c35d8cfcebafe1a84d389d043ee885528441c048f0d8420230f36f137e"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s04-revisit-l002",
@@ -12716,7 +12787,7 @@
           "sha256": "43d1c80435fa21242b91ecab0eb559dec86c9addda214dc408eab723e3aad9c7"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s04-revisit-l003",
@@ -12771,7 +12842,7 @@
           "sha256": "cd30e1cc622f2f86b0d872473d1ae255ec525f6bd353bcf311d5728db7957b3d"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s04-revisit-l004",
@@ -12826,7 +12897,7 @@
           "sha256": "7972eeb3c0b633a36a8970c88b295fdf374c6be38bb340c6167df25b078e155e"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-repair-l001",
@@ -12881,7 +12952,7 @@
           "sha256": "7039229dc9824dfd3d8b198fb370d48eb00f99a726043ad30bf62eece31e8d0e"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s04-repair-l001",
@@ -12936,7 +13007,7 @@
           "sha256": "647e6855ad39b8bf8447e2ad8ab3fef8ea43720682ac0a6d136dc5a200fd06a5"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s04-repair-l002",
@@ -12991,7 +13062,7 @@
           "sha256": "6c8d6439119f5d51df5287eeea02ea9d6cc675cdeceb71b8609de8964faa34b6"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s04-repair-l003",
@@ -13046,7 +13117,7 @@
           "sha256": "ecf77e45211773439896212889f1011ae0f199e73dd8956da0093e2ac8f8a998"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s04-repair-l004",
@@ -13101,7 +13172,7 @@
           "sha256": "32b4b3ebfaa40494cf7964b2fe2b38d9639e7d32c5e48a9193ee88eca9639c8c"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-repair-l003",
@@ -13156,7 +13227,7 @@
           "sha256": "e1d9982d539ecda07d107df4a1480dca5c2966b03eeb9402a38a4618afc8c130"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-repair-l004",
@@ -13211,7 +13282,7 @@
           "sha256": "874496a147fdb47cc221b532306a7fff4d01601ff2ac23d7eaf0c4d91a2496e7"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-repair-l005",
@@ -13266,7 +13337,7 @@
           "sha256": "bffc2e068ec6be574e23f5974eef34afeb9aaa738b35cb353e46879419da551f"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-repair-l006",
@@ -13321,7 +13392,7 @@
           "sha256": "b3b98d19b154facfd8da0498ecc1e819834aefcbadbeee7a137b7d46f1a019dc"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-repair-l007",
@@ -13376,7 +13447,7 @@
           "sha256": "4179affad02fa0526528a9616f11f0e7d8f6817d62e8fd0a2c3bb39e86c866e1"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-repair-l009",
@@ -13431,7 +13502,7 @@
           "sha256": "c49c8a3a3f977ac0ba29f22021b28e9533b942601dd951481e4883ab1373d894"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s04-repair-l007",
@@ -13486,7 +13557,7 @@
           "sha256": "d8cc32ee7c9b769f21ed3ade09876aab41d3431045db6c7a659fbc8278ba5db7"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s04-repair-l008",
@@ -13541,7 +13612,7 @@
           "sha256": "5461141d22249a34c741df820f8d84644ff28cf835efee38ac66814aa1674555"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-repair-l010",
@@ -13596,7 +13667,7 @@
           "sha256": "ef9c7d0998cc1799626f391ad58b4749720e259efccf8545d32ecc67b7f44c39"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-repair-l011",
@@ -13651,7 +13722,7 @@
           "sha256": "efb27259c34abcc7b9ceba17a892b7c639dccc05df1ed90cf2cbfcd95b09ba0d"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-concrete-l001",
@@ -13706,7 +13777,7 @@
           "sha256": "52ba5f62f4de20752451a24a56674c307f7ed55814287cd7e1878b5e526b82d6"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-concrete-l002",
@@ -13761,7 +13832,7 @@
           "sha256": "25c239c837acf99dbb31ffafc77e458f61b304a61d8c58e381c20e9e4f937a60"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-concrete-l003",
@@ -13816,7 +13887,7 @@
           "sha256": "87631e30f0fa231ce3bd3ab7948231217d7564c6611be074238e85811abd90cf"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s04-concrete-l001",
@@ -13871,7 +13942,7 @@
           "sha256": "26f341d5a28848d39fca117063da536539bbcbf6d60518b31c8a73d560811dd5"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s04-concrete-l002",
@@ -13926,7 +13997,7 @@
           "sha256": "11d8aabb360d8a49aef0a429cd11240a84186964fcf38e6a8c9f3570adce6f6d"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s04-concrete-l003",
@@ -13981,7 +14052,7 @@
           "sha256": "27abdc1283835cc13cb585184b5766a767d0d85502f2493205d6b546c815a16d"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-concrete-l005",
@@ -14036,7 +14107,7 @@
           "sha256": "68baf2fe719821243912ce943400206ae23e5669a7dfdb41088697364e89b6e8"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-concrete-l006",
@@ -14091,7 +14162,7 @@
           "sha256": "2a164b5d07aba5bcf15ad0f003d45e08d7d7297374fe54d37b5395644823d558"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-concrete-l007",
@@ -14146,7 +14217,7 @@
           "sha256": "7551cb27dbfc02d6f3043695ec58d4975aad7971e9a1b6183d9348ceea9b8cd7"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s04-concrete-l005",
@@ -14201,7 +14272,7 @@
           "sha256": "0abc1174b2ac8fa2e3af9887632208df18ecbf0d861f9b5d3a666f47dcb05e5f"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s04-concrete-l006",
@@ -14256,7 +14327,7 @@
           "sha256": "27c7b31fdbd1bf41f3fea46adea2f57b6452a6e0d4d56541367adea4426b643b"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s04-concrete-l007",
@@ -14311,7 +14382,7 @@
           "sha256": "a0267e429685cd15d8ee6bcb16d7640caa7c34f9ac885b6449bf2e516a6c367e"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s04-concrete-l008",
@@ -14366,7 +14437,7 @@
           "sha256": "3eac213a3791b3544b1ed76df5f6a8cfc6945d41c9ae10a29ac1b3f518bb658f"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-concrete-l009",
@@ -14421,7 +14492,7 @@
           "sha256": "399baad55938a4f53c9189c6a9ffbc155f440c9ba5ae0fd766a64914f88eb1ee"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s04-concrete-l010",
@@ -14476,7 +14547,7 @@
           "sha256": "9147ba16d57f1f91fb47e04ec2ddfb691be085e069a7ece5ac94102a8e7451aa"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s05-departure-l002",
@@ -14531,7 +14602,7 @@
           "sha256": "1538323749f4bae12bfdab154940305ad561b851eb1f6b1ed0f581462799420a"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s05-departure-l003",
@@ -14547,46 +14618,87 @@
       "textSha256": "fceaa1e6b0fdbc4c517357f8167e5c419ec0de07eb0750ea449c491b3bdd871b",
       "medium": "spoken",
       "requestSha256": "9ce321672beb8437836c7cb12d18e18aaa3113c99c9686fa78eae28b0c61e223",
-      "attempt": 5,
+      "attempt": 8,
       "status": "needs_review",
       "asr": {
-        "transcript": "量杆还能装梳下次不用它当雨了",
-        "cer": 0.285714,
+        "transcript": "两杆还能装书下次不用他党语了",
+        "cer": 0.357143,
         "polarityCountsMatch": true,
-        "passed": false
+        "passed": false,
+        "phoneticReview": {
+          "method": "exact_all_syllables_and_tones_pypinyin_0.53.0",
+          "expected": "晾干还能装书下次不用它挡雨了",
+          "observed": "两杆还能装书下次不用他党语了",
+          "expectedSyllables": [
+            "liang4",
+            "gan1",
+            "hai2",
+            "neng2",
+            "zhuang1",
+            "shu1",
+            "xia4",
+            "ci4",
+            "bu4",
+            "yong4",
+            "ta1",
+            "dang3",
+            "yu3",
+            "le5"
+          ],
+          "observedSyllables": [
+            "liang3",
+            "gan1",
+            "hai2",
+            "neng2",
+            "zhuang1",
+            "shu1",
+            "xia4",
+            "ci4",
+            "bu4",
+            "yong4",
+            "ta1",
+            "dang3",
+            "yu3",
+            "le5"
+          ],
+          "sameLength": true,
+          "polarityCountsMatch": true,
+          "passed": false,
+          "humanListening": false
+        }
       },
-      "duration": 2.8,
-      "wallSeconds": 117.157,
+      "duration": 3.68,
+      "wallSeconds": 16.565,
       "loudness": {
-        "input_i": "-26.38",
-        "input_tp": "-7.64",
-        "input_lra": "0.00",
-        "input_thresh": "-36.38",
-        "output_i": "-20.75",
-        "output_tp": "-2.00",
+        "input_i": "-27.84",
+        "input_tp": "-9.61",
+        "input_lra": "1.90",
+        "input_thresh": "-38.00",
+        "output_i": "-19.73",
+        "output_tp": "-2.12",
         "output_lra": "0.00",
-        "output_thresh": "-30.75",
-        "normalization_type": "linear",
-        "target_offset": "0.75"
+        "output_thresh": "-30.29",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.27"
       },
       "files": {
         "raw": {
           "path": "rain-v07-s05-departure-l003/raw.wav",
-          "bytes": 268880,
-          "sha256": "49bf2fbabce83e759918959b039c93ecf89caa943797ed97b75abeeb3b2860a8"
+          "bytes": 353360,
+          "sha256": "8210f75d3a4c14e4bdd312ad90cf970d33aa30e2ee9faa438ae46992a3e2c1dc"
         },
         "master": {
           "path": "rain-v07-s05-departure-l003/master.wav",
-          "bytes": 134478,
-          "sha256": "99905d1802c3dcc4a56aa37a99c1913711d6744cec3136bc98d0a04dee2c43fa"
+          "bytes": 176718,
+          "sha256": "4b0e8ba66bfa6e50122c8ca2550dd1f5eb3933dfde561872406f67e54fe489ad"
         },
         "runtime": {
           "path": "rain-v07-s05-departure-l003/runtime.ogg",
-          "bytes": 24701,
-          "sha256": "33a1f9fecedd6490f85e47db9a37025a88e6722c1c6691190e6542702559c6de"
+          "bytes": 30474,
+          "sha256": "255fed0b5eeceaf1d7ae012b06e821993070c861257d40b3ad1497d23ce16503"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s05-departure-l004",
@@ -14641,7 +14753,7 @@
           "sha256": "10a65015616627f9018a83ed501205eb09d53259f6ddd185fdc4569a3b34d29a"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s05-departure-l003",
@@ -14696,7 +14808,7 @@
           "sha256": "bedadae57f961e70676734268cd94aced1ef92e4f389f6f82ce9fc5827c19b2b"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s05-departure-l004",
@@ -14751,7 +14863,7 @@
           "sha256": "0255ec8a58ab897931d3d6cd81364b1c81ff904fb07ca6479352393fb69b110d"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s05-departure-l005",
@@ -14806,7 +14918,7 @@
           "sha256": "954dae730c39a2281312a1c15135158a84e7c88f9f83de9295b73b35cfacac5f"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s05-departure-l007",
@@ -14861,7 +14973,7 @@
           "sha256": "88ba1aea3e3d339afffd546df2b639d793361803df5a87b4a93745602b006c8c"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-q03-walk-l001",
@@ -14878,46 +14990,85 @@
       "textSha256": "615be118d7a696aef84aa97be006f67167b819792b3f30a13891079b38adafc2",
       "medium": "spoken",
       "requestSha256": "540c7736dfe65d924be16812c4b421f6c0d4efe7a227f89ac93c4aeaeab17841",
-      "attempt": 5,
+      "attempt": 8,
       "status": "needs_review",
       "asr": {
-        "transcript": "好,只想我提着,散可以借我拿吗?",
+        "transcript": "好只想我提着散可以借我拿吗",
         "cer": 0.230769,
         "polarityCountsMatch": true,
-        "passed": false
+        "passed": false,
+        "phoneticReview": {
+          "method": "exact_all_syllables_and_tones_pypinyin_0.53.0",
+          "expected": "好纸箱我提着伞可以借我拿吗",
+          "observed": "好只想我提着散可以借我拿吗",
+          "expectedSyllables": [
+            "hao3",
+            "zhi3",
+            "xiang1",
+            "wo3",
+            "ti2",
+            "zhe5",
+            "san3",
+            "ke3",
+            "yi3",
+            "jie4",
+            "wo3",
+            "na2",
+            "ma5"
+          ],
+          "observedSyllables": [
+            "hao3",
+            "zhi3",
+            "xiang3",
+            "wo3",
+            "ti2",
+            "zhe5",
+            "san4",
+            "ke3",
+            "yi3",
+            "jie4",
+            "wo3",
+            "na2",
+            "ma5"
+          ],
+          "sameLength": true,
+          "polarityCountsMatch": true,
+          "passed": false,
+          "humanListening": false
+        }
       },
-      "duration": 3.68,
-      "wallSeconds": 209.075,
+      "duration": 3.36,
+      "wallSeconds": 15.855,
       "loudness": {
-        "input_i": "-25.06",
-        "input_tp": "-5.62",
+        "input_i": "-25.87",
+        "input_tp": "-8.77",
         "input_lra": "0.50",
-        "input_thresh": "-35.50",
-        "output_i": "-19.35",
-        "output_tp": "-2.00",
+        "input_thresh": "-36.02",
+        "output_i": "-19.87",
+        "output_tp": "-2.90",
         "output_lra": "0.00",
-        "output_thresh": "-30.05",
+        "output_thresh": "-30.01",
         "normalization_type": "dynamic",
-        "target_offset": "-0.65"
+        "target_offset": "-0.13"
       },
       "files": {
         "raw": {
           "path": "rain-q03-walk-l001/raw.wav",
-          "bytes": 353360,
-          "sha256": "63fd3ad22261f365f49c0ccb9630edab0e6c9383e85db4612105fc7990c60f04"
+          "bytes": 322640,
+          "sha256": "d0ecd61c7029388e2a680965c7ac62333100829abca48902eabca30b50368bbc"
         },
         "master": {
           "path": "rain-q03-walk-l001/master.wav",
-          "bytes": 176718,
-          "sha256": "308e05a69937ba6bc36c2a2941a5266805f5b3874424ad6f1f9fdd4cb77ab226"
+          "bytes": 161358,
+          "sha256": "f66bfba98c8c36791ab257c98c7f1e55498820bb31110fd35c900e0b04a9343a"
         },
         "runtime": {
           "path": "rain-q03-walk-l001/runtime.ogg",
-          "bytes": 31145,
-          "sha256": "950e21927da882fbd361935f08b61ec33d7c9cd4b77dd98219ddcf175410b8bc"
+          "bytes": 28443,
+          "sha256": "34dec79da4f96f636b53c17af5cb8a67dca475e857cefcc586bf6ee166f4497d"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-q03-walk-l002",
@@ -14973,7 +15124,7 @@
           "sha256": "a1a084d41e232114289b79fa4960da61d492008b978d7345b1aeb6c709d34e4f"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-q03-leave-l001",
@@ -15029,7 +15180,7 @@
           "sha256": "bea19d2a12411e76cd311c2515d48cef0a1a4173945995daba2ee38aea2ab914"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-q03-leave-l002",
@@ -15085,7 +15236,7 @@
           "sha256": "702fccc173fae1202c354f219754eccf5eae45d4cb8ea599d124fedd0a221a87"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s05-shared-path-l002",
@@ -15140,7 +15291,7 @@
           "sha256": "aea35b64e65b14a8a9720a743a1b4b7b0413f2fc9985b465accfeab29f9b21ac"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s05-shared-path-l003",
@@ -15195,7 +15346,7 @@
           "sha256": "1ca00aa73834ae87ca489e89bd9a9827a2086b26ae46d1f24da066581dcb225f"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s05-shared-path-l005",
@@ -15250,7 +15401,7 @@
           "sha256": "7fbe8529ca040c55caf65a65739d5b7fcc7739992d6ee4adf7fa36187928d6c3"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s05-shared-path-l006",
@@ -15305,7 +15456,7 @@
           "sha256": "6e9bcfa2392ea72b06f86e901dd1f576bd833c7b1759e7bb0cff62b1a38a2897"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s05-shared-path-l002",
@@ -15360,7 +15511,7 @@
           "sha256": "523ddb67d5742946c68dbd9656b7c6c65a42374d0b95c9d9248cf2f65c2ae1ac"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s05-shared-path-l003",
@@ -15415,7 +15566,7 @@
           "sha256": "500fa806f7028ce72d3a41e05740df83dc8ac8cb68f566e39db1b011dd11d4b1"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s05-shared-path-l004",
@@ -15470,7 +15621,7 @@
           "sha256": "fd858b44678f37e3645642eae5a261863a7f4593da092342d707cecfeb661438"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s05-separate-path-l002",
@@ -15525,7 +15676,7 @@
           "sha256": "c61b4ec0a08a89b2cdee46fd3afe54422620deb31688e3dd1038d7916366d835"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s05-separate-path-l003",
@@ -15580,7 +15731,7 @@
           "sha256": "7799ef078d3773296a671bfc5f4e99cb76d01422751690ddbe06e06e919d6260"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s05-separate-path-l001",
@@ -15635,7 +15786,7 @@
           "sha256": "b5b26ec511d8505a5ecf8e3a218a7f3156baf3d3c6bd21ff35d24bd8d6760a91"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s05-separate-path-l002",
@@ -15690,7 +15841,7 @@
           "sha256": "5deb98e8a2c00b67635c9bd2ac83725e4bc81bd8783bbd1fdc6a3305cc9ca1c4"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s05-separate-path-l003",
@@ -15745,7 +15896,7 @@
           "sha256": "00da1419f08773461a57a8f9fa87baa3830e4c949058cc35f4371f0e76e127a0"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s05-separate-path-l005",
@@ -15800,7 +15951,7 @@
           "sha256": "254c216c9b011adc968c001f972dc51c4b21e3f096261f8a900518f4c8b58042"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s05-separate-path-l006",
@@ -15855,7 +16006,7 @@
           "sha256": "275eae3e3a527eb384a1cae134d6506cf49bb561b899286880567e46e711d0de"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s07-true-l002",
@@ -15910,7 +16061,7 @@
           "sha256": "1ac4bf0383fa690ac020b9639d5228250f74068deb5d316c4f5bcdd41fac4ea4"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s07-true-l003",
@@ -15965,7 +16116,7 @@
           "sha256": "5ee0ac32d321d1d8b23ce0c15136c0fd25fe8c25a011f07a64892ec87ffcd212"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s07-true-l004",
@@ -16020,7 +16171,7 @@
           "sha256": "f6c9c17a0119b8903810d905c3d4052616ec449c9ac3be8b20acce0c974ad386"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s07-true-l002",
@@ -16075,7 +16226,7 @@
           "sha256": "a1c6bca513dee40eef5132440fa83918a996adba9e6f55fa9517423e74b92812"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s07-true-l003",
@@ -16130,7 +16281,7 @@
           "sha256": "3f30eb0b94c9159ebe88b5daaee85367797b9a9f7e6479d8e2bb115251113296"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s07-true-l004",
@@ -16185,7 +16336,7 @@
           "sha256": "c37297134fab7ac6a8a65b2775b2291c8a06b1a2ba5b2c583496d4ef49e9a72c"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s07-true-l007",
@@ -16240,7 +16391,7 @@
           "sha256": "f802a703518e9c28f1ab18dcd518eff0effc6c33d64c4281bbc9386532497d99"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s07-true-l008",
@@ -16295,7 +16446,7 @@
           "sha256": "937fca1b637f35cf59a46dc6fc51b9f78edf13b63fa16c203ab13852dedb3862"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s07-true-l009",
@@ -16350,7 +16501,7 @@
           "sha256": "ee551f3b1b54511783bf48db22668bdf9e8daed909b8ae5231b36f60e00bc4c7"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s07-true-l010",
@@ -16405,7 +16556,7 @@
           "sha256": "dd23a3af278bf7a9aae599629c91283d25682f36aee3c77847f3cb1b603ddb20"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s07-true-l014",
@@ -16460,7 +16611,7 @@
           "sha256": "42b1327739fe3aa29505cca95d353dfe9d334f724e5856a9a517a8dc1e6f74cf"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s07-true-l015",
@@ -16515,7 +16666,7 @@
           "sha256": "f0c9c8a73f54f69556189d2b70bed952122d7e42207e59c3c0bd985441ab7338"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s07-true-l006",
@@ -16570,7 +16721,7 @@
           "sha256": "1b88ff6e34c0f07e820243a694b587a7a2a63e3d8dee0e6cb9198c4d4ba3e98f"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s07-true-l007",
@@ -16625,7 +16776,7 @@
           "sha256": "42397b9b79d6416f7bd3d06aadcbffd17dc6fbbba73282ae00f1566481eec567"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s07-true-l008",
@@ -16680,7 +16831,7 @@
           "sha256": "63bfff52c846d9343e811213739e9ed11073f305ca4c6a15dec46859eea845db"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-v07-s07-true-l009",
@@ -16735,7 +16886,7 @@
           "sha256": "598ca28693b23c96414a2a5003dc7eda428cd255716ffb487d4b953263602921"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s08-normal-l005",
@@ -16790,7 +16941,7 @@
           "sha256": "38bb92c0c9df895f5778a518e1267aeda5e657972c95a89dbe365c510e05a553"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     },
     {
       "id": "rain-s08-normal-l006",
@@ -16845,9 +16996,9 @@
           "sha256": "82464cc7eba5bb318c5fb02dbfb881ee48fb28195c2eba479bc3de1306ce7fee"
         }
       },
-      "recoveredFromRun": 39436530718
+      "recoveredFromRun": 39522082173
     }
   ],
   "semanticSha256": "43ef805dc1a881d5fc4736841c0ebee358707ee7db17982ece91fb23437104dd",
-  "sourceRun": 39436530718
+  "sourceRun": 39522082173
 }

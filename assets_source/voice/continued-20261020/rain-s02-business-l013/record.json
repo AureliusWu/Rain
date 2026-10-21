@@ -12,44 +12,76 @@
   "textSha256": "f3ffb6a3e20e1960a2c3ec5517e7fbf7a78073c6c8e011eefe07d6dfb46c4531",
   "medium": "spoken",
   "requestSha256": "de85762d08b2407f8c693bdf4d507457ef6dbd5d6b761d78ec4128a82e576b17",
-  "attempt": 5,
-  "status": "needs_review",
+  "attempt": 6,
+  "status": "accepted",
   "asr": {
-    "transcript": "姓娘,贵号,建书就这些",
-    "cer": 0.444444,
+    "transcript": "姓名桂号箭术,就这些。",
+    "cer": 0.333333,
     "polarityCountsMatch": true,
-    "passed": false
+    "passed": true,
+    "phoneticReview": {
+      "method": "exact_all_syllables_and_tones_pypinyin_0.53.0",
+      "expected": "姓名柜号件数就这些",
+      "observed": "姓名桂号箭术就这些",
+      "expectedSyllables": [
+        "xing4",
+        "ming2",
+        "gui4",
+        "hao4",
+        "jian4",
+        "shu4",
+        "jiu4",
+        "zhe4",
+        "xie1"
+      ],
+      "observedSyllables": [
+        "xing4",
+        "ming2",
+        "gui4",
+        "hao4",
+        "jian4",
+        "shu4",
+        "jiu4",
+        "zhe4",
+        "xie1"
+      ],
+      "sameLength": true,
+      "polarityCountsMatch": true,
+      "passed": true,
+      "humanListening": false
+    },
+    "acceptance": "exact_toned_homophones"
   },
-  "duration": 3.36,
-  "wallSeconds": 189.512,
+  "duration": 4.16,
+  "wallSeconds": 18.051,
   "loudness": {
-    "input_i": "-24.45",
-    "input_tp": "-7.53",
-    "input_lra": "0.70",
-    "input_thresh": "-35.09",
-    "output_i": "-18.88",
+    "input_i": "-28.10",
+    "input_tp": "-11.35",
+    "input_lra": "0.90",
+    "input_thresh": "-38.87",
+    "output_i": "-18.44",
     "output_tp": "-2.00",
-    "output_lra": "0.00",
-    "output_thresh": "-29.65",
+    "output_lra": "0.60",
+    "output_thresh": "-29.22",
     "normalization_type": "dynamic",
-    "target_offset": "-1.12"
+    "target_offset": "-1.56"
   },
   "files": {
     "raw": {
       "path": "rain-s02-business-l013/raw.wav",
-      "bytes": 322640,
-      "sha256": "0aeedb62481dcb4918c48a2e3ef142c4c8edc8e71a979f9d7aa07dc46406f720"
+      "bytes": 399440,
+      "sha256": "803c42d4e088843b57c1477c7b4ba90cc9072e2a421c1713bebaa0bc390ee0ab"
     },
     "master": {
       "path": "rain-s02-business-l013/master.wav",
-      "bytes": 161358,
-      "sha256": "a1ddb16c5aa86f9e588a3260fc0ddafddc76500987939a4b8ca1bccdcbdcc40c"
+      "bytes": 199758,
+      "sha256": "274fb4c75daf8a34f26f2398153dec764552ee02a9291be1344b8c66024c2eea"
     },
     "runtime": {
       "path": "rain-s02-business-l013/runtime.ogg",
-      "bytes": 27110,
-      "sha256": "f292f38277efcbbc53a3800bac04f2ce8aada7b423de58a911428d9959a7a650"
+      "bytes": 32472,
+      "sha256": "d821834943b1c08698366c7a48ef9f8aa9288820bec8cf7955674025c72733d9"
     }
   },
-  "recoveredFromRun": 39436530718
+  "recoveredFromRun": 39522082173
 }
