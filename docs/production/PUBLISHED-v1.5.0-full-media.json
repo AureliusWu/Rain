@@ -1,0 +1,149 @@
+{
+  "schema": 1,
+  "checkedAt": "2026-10-22T04:16:31.905635+00:00",
+  "project": "Rain",
+  "version": "1.5.0",
+  "status": "published_and_public_bytes_verified",
+  "runtime_commit": "e4856b5a5f44803e1c1b263534702f5d7d8c80dc",
+  "nativeRun": 39715827353,
+  "pwaRun": 39715827275,
+  "publicationRun": 39721240542,
+  "release": "https://github.com/AureliusWu/Rain/releases/tag/v1.5.0",
+  "assets": [
+    {
+      "id": 664641790,
+      "name": "BeforeTheRainStops-1.5.0-web.zip",
+      "bytes": 73585550,
+      "sha256": "57935cec415f480a7e4fd7d691e343a812ecafc890ebe9fd1abdf9d3026424a9",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.5.0/BeforeTheRainStops-1.5.0-web.zip",
+      "verified": true,
+      "zipCrc": true,
+      "zipFiles": 37
+    },
+    {
+      "id": 664641787,
+      "name": "BeforeTheRainStops-1.5.0-win.zip",
+      "bytes": 87139904,
+      "sha256": "c3112590db09f3b6e26a734d08819f7696c815ea65c8db32a9f84330a6c94c56",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.5.0/BeforeTheRainStops-1.5.0-win.zip",
+      "verified": true,
+      "zipCrc": true,
+      "zipFiles": 1937
+    },
+    {
+      "id": 664641785,
+      "name": "RELEASE_METADATA.json",
+      "bytes": 18322,
+      "sha256": "dcc4d1ee9dc1abd22c892a99baedfdee90aa66cc2bd25c2f4515d16ee614cfb5",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.5.0/RELEASE_METADATA.json",
+      "verified": true
+    },
+    {
+      "id": 664641786,
+      "name": "SHA256SUMS.txt",
+      "bytes": 286,
+      "sha256": "89f89d5d692d8498f4d26745247d06d71ecb36eabc9da3fd6575890e999ca7e8",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.5.0/SHA256SUMS.txt",
+      "verified": true
+    }
+  ],
+  "checksumEntries": 3,
+  "worker_sha256": "28a283102523cb6aeef8cac3d7f47f28f530d84bc20991f85674819ab8b86627",
+  "workerMatchesRelease": true,
+  "humanListening": false,
+  "humanVisualApproval": false,
+  "tag_commit": "e4856b5a5f44803e1c1b263534702f5d7d8c80dc",
+  "nativeSuites": {
+    "source": {
+      "cases": 38,
+      "assertions": 509,
+      "screenshots_checked": 89,
+      "failed": 0,
+      "skipped": 0,
+      "not_run": 0
+    },
+    "standalone": {
+      "cases": 38,
+      "assertions": 509,
+      "screenshots_checked": 89,
+      "failed": 0,
+      "skipped": 0,
+      "not_run": 0
+    },
+    "fresh_process": {
+      "cases": 1,
+      "assertions": 17,
+      "screenshots_checked": 3,
+      "failed": 0,
+      "skipped": 0,
+      "not_run": 0
+    },
+    "upgrade_writer": {
+      "cases": 1,
+      "assertions": 14,
+      "screenshots_checked": 3,
+      "failed": 0,
+      "skipped": 0,
+      "not_run": 0
+    },
+    "upgrade_reader": {
+      "cases": 2,
+      "assertions": 26,
+      "screenshots_checked": 4,
+      "failed": 0,
+      "skipped": 0,
+      "not_run": 0
+    }
+  },
+  "nativeScreenshotsAudited": 188,
+  "packageAssetsChecked": 388,
+  "fullDialogueBindings": 306,
+  "newRuntimeImages": 12,
+  "extras": {
+    "images": 12,
+    "music_tracks": 4,
+    "unlock_source": "native seen-image and seen-audio persistence",
+    "locked_content_hides_titles_and_images": true,
+    "story_state_unchanged_by_gallery": true,
+    "music_controls": "play/previous/next/pause/stop/real slider/real mute; stop on leave or Start",
+    "music_progress_and_current_title_status": "passed",
+    "fresh_process_and_previous_v110_seen_records": "passed"
+  },
+  "nativeReviewArtifact": {
+    "id": 12401266061,
+    "sha256": "e8e5eca9883bfb5e419d597a944b58b10f853ffee2bbb628fa1ab42eedd3bdad",
+    "sealedGroupsVerified": 16,
+    "jpegCopiesVerified": 43
+  },
+  "publicPwaAcceptance": {
+    "status": "passed",
+    "target": "https://aureliuswu.github.io/Rain/",
+    "version": "1.5.0",
+    "revision": "fbd12ba1c2aeecb65616e8fa",
+    "checks": [
+      "public native menu, exact platform version/revision and own worker scope",
+      "actual published history search, Chinese input and preserved read route",
+      "actual public Start and native Save slot 1",
+      "disconnected public reopen, native Load and preserved saved scene",
+      "published native history search while disconnected"
+    ],
+    "online_milliseconds": 7079,
+    "offline_milliseconds": 3798,
+    "offline_samples_milliseconds": [
+      5189,
+      3798,
+      3748
+    ],
+    "exact_tested_artifact": true,
+    "errors": [],
+    "human_physical_device": false
+  },
+  "human_pending": [
+    "ordinary_windows",
+    "display_dpi",
+    "listening",
+    "creative_and_freeze",
+    "reading_time"
+  ],
+  "publicationNotesBrowserEdit": "blocked_by_automatic_approval_review_usage_limit; repository release notes updated separately"
+}

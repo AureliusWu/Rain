@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "checkedAt": "2026-10-22T04:16:31.905635+00:00",
+  "project": "Rain",
+  "version": "1.5.0",
+  "status": "published_and_public_bytes_verified",
+  "runtime_commit": "e4856b5a5f44803e1c1b263534702f5d7d8c80dc",
+  "nativeRun": 39715827353,
+  "pwaRun": 39715827275,
+  "publicationRun": 39721240542,
+  "release": "https://github.com/AureliusWu/Rain/releases/tag/v1.5.0",
+  "assets": [
+    {
+      "id": 664641790,
+      "name": "BeforeTheRainStops-1.5.0-web.zip",
+      "bytes": 73585550,
+      "sha256": "57935cec415f480a7e4fd7d691e343a812ecafc890ebe9fd1abdf9d3026424a9",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.5.0/BeforeTheRainStops-1.5.0-web.zip",
+      "verified": true,
+      "zipCrc": true,
+      "zipFiles": 37
+    },
+    {
+      "id": 664641787,
+      "name": "BeforeTheRainStops-1.5.0-win.zip",
+      "bytes": 87139904,
+      "sha256": "c3112590db09f3b6e26a734d08819f7696c815ea65c8db32a9f84330a6c94c56",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.5.0/BeforeTheRainStops-1.5.0-win.zip",
+      "verified": true,
+      "zipCrc": true,
+      "zipFiles": 1937
+    },
+    {
+      "id": 664641785,
+      "name": "RELEASE_METADATA.json",
+      "bytes": 18322,
+      "sha256": "dcc4d1ee9dc1abd22c892a99baedfdee90aa66cc2bd25c2f4515d16ee614cfb5",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.5.0/RELEASE_METADATA.json",
+      "verified": true
+    },
+    {
+      "id": 664641786,
+      "name": "SHA256SUMS.txt",
+      "bytes": 286,
+      "sha256": "89f89d5d692d8498f4d26745247d06d71ecb36eabc9da3fd6575890e999ca7e8",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.5.0/SHA256SUMS.txt",
+      "verified": true
+    }
+  ],
+  "checksumEntries": 3,
+  "worker_sha256": "28a283102523cb6aeef8cac3d7f47f28f530d84bc20991f85674819ab8b86627",
+  "workerMatchesRelease": true,
+  "humanListening": false,
+  "humanVisualApproval": false
+}

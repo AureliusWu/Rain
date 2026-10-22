@@ -1,33 +1,37 @@
-> 2026-10-21：v1.4.1 引擎补丁通过本次 Windows、浏览器与公开离线验证；PWA 已更新，已验收桌面包见 CI 工件。详见[最终同步记录](docs/production/ENGINE-SYNC-20261021.md)。
-
-> 2026-10-19：**v1.3.1 已正式发布**，Windows、官方 WASM/PWA、真实旧档升级与公开原包核验通过。[下载](https://github.com/AureliusWu/Rain/releases/tag/v1.3.1) · [发布凭据](docs/production/PUBLISHED-v1.3.1.json)。
-
 # 雨停之前 / Before the Rain Stops
 
-**v1.3.1 正式版：Windows 离线 EXE + 同引擎官方 WebAssembly PWA。**
+**v1.5.0 全对白与完整角色素材正式版：Windows 离线 EXE + 同引擎官方 WebAssembly PWA。**
 
-[在线游玩](https://aureliuswu.github.io/Rain/) · [正式下载](https://github.com/AureliusWu/Rain/releases/tag/v1.3.1) · [Windows ZIP](https://github.com/AureliusWu/Rain/releases/download/v1.3.1/BeforeTheRainStops-1.3.1-win.zip) · [Web ZIP](https://github.com/AureliusWu/Rain/releases/download/v1.3.1/BeforeTheRainStops-1.3.1-web.zip) · [校验表](https://github.com/AureliusWu/Rain/releases/download/v1.3.1/SHA256SUMS.txt)
+[在线游玩](https://aureliuswu.github.io/Rain/) · [正式下载](https://github.com/AureliusWu/Rain/releases/tag/v1.5.0) · [Windows ZIP](https://github.com/AureliusWu/Rain/releases/download/v1.5.0/BeforeTheRainStops-1.5.0-win.zip) · [Web ZIP](https://github.com/AureliusWu/Rain/releases/download/v1.5.0/BeforeTheRainStops-1.5.0-web.zip) · [校验表](https://github.com/AureliusWu/Rain/releases/download/v1.5.0/SHA256SUMS.txt)
 
-雨夜旧车站，两位久未联系的旧友，和一封没有寄出的信。六章、24个叙事场景、四次选择、16条路线与Normal / True两个结局；沿用560个台词ID、17句离线录音及原有v1存档身份。
+雨夜旧车站，两位久未联系的旧友，和一封没有寄出的信。六章、24 个叙事场景、四次选择、16 条路线与 Normal / True 两个结局；560 个台词 ID 与原有 v1 存档身份保持。
 
-## v1.3.1 阅读与离线体验
+## v1.5.0 声音与画面
 
-- 收藏新增关键词、人物与章节交叉检索，支持数量、无结果提示和统一清除；网页输入保护每次独立面板会话。
-
-- 历史记录保留关键词、人物筛选，增加章节筛选和已读台词收藏。
-- 独立收藏列表可查看、删除及重听原录音；查阅和重听保持当前剧情位置。
-- 收藏按新增/删除时间合并，跨设备导入不会让删除的旧收藏重新出现；旧档没有收藏时正常初始化。
-- PWA按已核对的文件与字节显示完整下载进度，失败可重试。完整内容通过摘要校验后才能离线。
-- 新包下载完成后等待所有旧窗口关闭，保留阅读中的完整版本。
-- 五张画面、三首音乐沿真实阅读解锁；17句Qwen3-TTS / Serena关键录音随包提供，无运行时模型或语音服务。
+- 全分支 306 条人物对白绑定离线录音，包括选择回应；原 17 句录音保留原字节，旁白保留文字。
+- 当前台词、已读历史和收藏支持原录音重听；自动阅读等待当前语音，独立语音音量继续使用原生设置。
+- 新增玩家六表情的人物鉴赏与六幅按实际台词触发的事件 CG；玩家立绘用于鉴赏，正文保持原有第一人称表现。
+- 十二幅剧情画面与四首音乐沿实际阅读解锁；场景、CG、立绘、录音和许可随两个客户端提供。
+- 收藏可按关键词、人物与章节交叉检索；阅读、重听、删除和跨端导入保留真实剧情位置及删除记录。
+- PWA 逐文件校验长度与 SHA-256，完整下载成功后才显示离线就绪；更新等所有旧窗口关闭后接管。
 
 ## Windows 与 PWA
 
-完整解压Windows ZIP后双击BeforeTheRainStops.exe，无需Python、引擎或账号。左键/空格/Enter推进，右键/Esc开菜单，F切换全屏；阅读层提供回退、历史、自动、快进、存读档与设置。
+完整解压 Windows ZIP 后双击 BeforeTheRainStops.exe，无需 Python、引擎或账号。左键 / 空格 / Enter 推进，右键 / Esc 开菜单，F 切换全屏；阅读层提供回退、历史、自动、快进、存读档与设置。
 
-PWA首次保持联网，等待完整离线下载成功后再断网。左上角支持原生存档ZIP导入/导出；浏览器与Windows各自保存本机进度。原生存档目录继续使用AureliusWu-BeforeTheRainStops-v1。关闭或清理站点前可导出备份。
+PWA 首次保持联网，等待完整离线下载成功后再断网。左上角支持原生存档 ZIP 导入 / 导出；浏览器与 Windows 各自保存本机进度。原生存档目录继续使用 AureliusWu-BeforeTheRainStops-v1，清理站点前可导出备份。
 
-## v1.3.1 本版验收与发布
+## v1.5.0 验收与正式发布
+
+2026-10-22：[Windows 39715827353](https://github.com/AureliusWu/Rain/actions/runs/39715827353)、[官方 WASM / PWA 39715827275](https://github.com/AureliusWu/Rain/actions/runs/39715827275) 与 [同字节发行 39721240542](https://github.com/AureliusWu/Rain/actions/runs/39721240542) 均成功。运行 / tag 固定于 `e4856b5a5f44803e1c1b263534702f5d7d8c80dc`。
+
+Windows 源码与独立 EXE 各 38 用例、509 断言、89 张截图通过；新进程读档、真实 v1.1.0 旧档升级、188 张原始截图和 388 项包内资产审计通过。官方 WASM 的 16 项浏览器检查及公开原生存读档、中文历史检索和断网续读通过。
+
+四份公开下载、三条校验和、两个 ZIP 的 CRC 与当前线上 Worker 原字节再次回读通过。四作共存复验通过，共 1,248 条缓存及各自存档状态保留，页面错误为零。[发布凭据](docs/production/PUBLISHED-v1.5.0-full-media.json) · [独立下载回读](docs/production/PUBLIC-READBACK-v1.5.0-20261022.json) · [四作闭环](docs/production/FOUR-GAMES-CLOSURE-20261022.md)。
+
+真人试听、阅读计时、普通电脑 / 中文路径 / DPI、物理设备与最终创作定案继续按实际体验登记。六幅恢复 CG 缺失的原生成请求如实保留来源缺口，未补写虚构记录。较早版本的验收数据按下文日期保留。
+
+## v1.3.1 历史验收与发布
 
 [原生 Windows 39197411208](https://github.com/AureliusWu/Rain/actions/runs/39197411208)、[官方 WASM / PWA 39197411207](https://github.com/AureliusWu/Rain/actions/runs/39197411207)、[同字节正式发布 39202170966](https://github.com/AureliusWu/Rain/actions/runs/39202170966) 均成功。
 
@@ -60,6 +64,6 @@ Ren’Py 8.5.3、Python 3.12。game/data/story.json是剧情唯一来源；改�
 
 ## 来源与历史
 
-原素材、Prompt、台词、许可证和摘要保留于assets_source、prompts、game/data、CREDITS.md及licenses。17句当前录音由固定Qwen3-TTS模型离线生成，模型及推理依赖不进入玩家包。
+原素材、Prompt、台词、许可证和摘要保留于assets_source、prompts、game/data、CREDITS.md及licenses。306 条人物对白使用固定 Qwen3-TTS 模型的离线录音，原 17 句保留原字节；模型及推理依赖不进入玩家包。
 
-[本版说明](docs/RELEASE_NOTES_V131.md) · [v1.2.2历史发布](docs/production/PUBLISHED-v1.2.2.json) · [v1.1.1历史发布](docs/evidence/v111-publication.json) · [工作检查点](docs/WORK_CHECKPOINT.md)
+[本版说明](docs/RELEASE_NOTES_V150.md) · [v1.2.2历史发布](docs/production/PUBLISHED-v1.2.2.json) · [v1.1.1历史发布](docs/evidence/v111-publication.json) · [工作检查点](docs/WORK_CHECKPOINT.md)
