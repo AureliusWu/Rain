@@ -10,12 +10,33 @@ from tools.story_model import load_story
 from tools.build.verify_package import required_screenshots
 from tools.build.verify_upgrade import render_upgrade_writer, render_upgrade_reader
 
+PART_BYTES = 20 * 1024 * 1024
+MAX_PARTS = 48
+
 
 def digest(path):
     h=hashlib.sha256()
     with path.open('rb') as stream:
         for chunk in iter(lambda:stream.read(1024*1024),b''): h.update(chunk)
     return h.hexdigest()
+
+
+def split_bundle(archive, destination, *, part_bytes=PART_BYTES, max_parts=MAX_PARTS):
+    """Preserve bounded transfers and reject insufficient capacity before writing."""
+    if type(part_bytes) is not int or part_bytes <= 0 or type(max_parts) is not int or max_parts <= 0:
+        raise ValueError('Transfer bounds must be positive integers')
+    count = (archive.stat().st_size + part_bytes - 1) // part_bytes
+    if count > max_parts:
+        raise ValueError(f'Bundle needs {count} parts; workflow capacity is {max_parts}')
+    parts = []
+    with archive.open('rb') as stream:
+        while data := stream.read(part_bytes):
+            index = len(parts)
+            folder = destination / f'part{index:02d}'
+            folder.mkdir()
+            (folder / 'bundle.part').write_bytes(data)
+            parts.append({'index': index, 'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest()})
+    return parts
 
 
 def main():
@@ -48,14 +69,7 @@ def main():
     manifest={'schema_version':1,'candidate_commit':os.environ['GITHUB_SHA'],'version':version,
               'package_sha256':digest(package),'bundle_sha256':digest(archive),
               'bundle_bytes':archive.stat().st_size,'parts':[]}
-    with archive.open('rb') as stream:
-        index=0
-        while data:=stream.read(20*1024*1024):
-            folder=destination/f'part{index:02d}';folder.mkdir()
-            (folder/'bundle.part').write_bytes(data)
-            manifest['parts'].append({'index':index,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()})
-            index+=1
-    if len(manifest['parts'])>24: raise ValueError('Increase workflow transfer capacity before upload')
+    manifest['parts'] = split_bundle(archive, destination)
     for part in manifest['parts']:
         (destination/f"part{part['index']:02d}"/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
     print(f"Exact package/evidence transfer: {manifest['bundle_bytes']} bytes in {len(manifest['parts'])} parts")

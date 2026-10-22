@@ -340,6 +340,174 @@ jobs:
           name: release-transfer-${{ github.sha }}-23
           path: transfer/part23/
           if-no-files-found: error
+      - name: Upload exact transfer part 24
+        if: ${{ hashFiles('transfer/part24/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-24
+          path: transfer/part24/
+          if-no-files-found: error
+      - name: Upload exact transfer part 25
+        if: ${{ hashFiles('transfer/part25/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-25
+          path: transfer/part25/
+          if-no-files-found: error
+      - name: Upload exact transfer part 26
+        if: ${{ hashFiles('transfer/part26/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-26
+          path: transfer/part26/
+          if-no-files-found: error
+      - name: Upload exact transfer part 27
+        if: ${{ hashFiles('transfer/part27/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-27
+          path: transfer/part27/
+          if-no-files-found: error
+      - name: Upload exact transfer part 28
+        if: ${{ hashFiles('transfer/part28/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-28
+          path: transfer/part28/
+          if-no-files-found: error
+      - name: Upload exact transfer part 29
+        if: ${{ hashFiles('transfer/part29/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-29
+          path: transfer/part29/
+          if-no-files-found: error
+      - name: Upload exact transfer part 30
+        if: ${{ hashFiles('transfer/part30/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-30
+          path: transfer/part30/
+          if-no-files-found: error
+      - name: Upload exact transfer part 31
+        if: ${{ hashFiles('transfer/part31/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-31
+          path: transfer/part31/
+          if-no-files-found: error
+      - name: Upload exact transfer part 32
+        if: ${{ hashFiles('transfer/part32/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-32
+          path: transfer/part32/
+          if-no-files-found: error
+      - name: Upload exact transfer part 33
+        if: ${{ hashFiles('transfer/part33/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-33
+          path: transfer/part33/
+          if-no-files-found: error
+      - name: Upload exact transfer part 34
+        if: ${{ hashFiles('transfer/part34/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-34
+          path: transfer/part34/
+          if-no-files-found: error
+      - name: Upload exact transfer part 35
+        if: ${{ hashFiles('transfer/part35/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-35
+          path: transfer/part35/
+          if-no-files-found: error
+      - name: Upload exact transfer part 36
+        if: ${{ hashFiles('transfer/part36/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-36
+          path: transfer/part36/
+          if-no-files-found: error
+      - name: Upload exact transfer part 37
+        if: ${{ hashFiles('transfer/part37/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-37
+          path: transfer/part37/
+          if-no-files-found: error
+      - name: Upload exact transfer part 38
+        if: ${{ hashFiles('transfer/part38/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-38
+          path: transfer/part38/
+          if-no-files-found: error
+      - name: Upload exact transfer part 39
+        if: ${{ hashFiles('transfer/part39/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-39
+          path: transfer/part39/
+          if-no-files-found: error
+      - name: Upload exact transfer part 40
+        if: ${{ hashFiles('transfer/part40/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-40
+          path: transfer/part40/
+          if-no-files-found: error
+      - name: Upload exact transfer part 41
+        if: ${{ hashFiles('transfer/part41/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-41
+          path: transfer/part41/
+          if-no-files-found: error
+      - name: Upload exact transfer part 42
+        if: ${{ hashFiles('transfer/part42/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-42
+          path: transfer/part42/
+          if-no-files-found: error
+      - name: Upload exact transfer part 43
+        if: ${{ hashFiles('transfer/part43/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-43
+          path: transfer/part43/
+          if-no-files-found: error
+      - name: Upload exact transfer part 44
+        if: ${{ hashFiles('transfer/part44/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-44
+          path: transfer/part44/
+          if-no-files-found: error
+      - name: Upload exact transfer part 45
+        if: ${{ hashFiles('transfer/part45/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-45
+          path: transfer/part45/
+          if-no-files-found: error
+      - name: Upload exact transfer part 46
+        if: ${{ hashFiles('transfer/part46/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-46
+          path: transfer/part46/
+          if-no-files-found: error
+      - name: Upload exact transfer part 47
+        if: ${{ hashFiles('transfer/part47/bundle.part') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-transfer-${{ github.sha }}-47
+          path: transfer/part47/
+          if-no-files-found: error
   review:
     name: Export sealed evidence for direct review
     needs: windows
