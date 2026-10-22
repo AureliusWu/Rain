@@ -1609,7 +1609,7 @@ testcase auto_waits_for_voice:
     pause until eval len(_history_list) > test_history_length
     click id "auto_run"
     assert eval not preferences.afm_enable
-    assert eval renpy.music.get_playing(channel="voice") is None
+    assert eval renpy.music.get_playing(channel="voice") != 'audio/voice/heroine_s01_arrival_l005_v1.ogg' and renpy.music.get_playing(channel="voice") in (None, RAIN_READING_CATALOG[rain_line_id]["voice"])
     assert eval __import__("time").monotonic() - test_voice_started >= 2.890
     $ preferences.afm_time = 15.0
 

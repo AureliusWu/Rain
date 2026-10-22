@@ -658,9 +658,10 @@ def render_tests(story):
               '    screenshot "auto-voice-in-progress"',
               '    pause until eval len(_history_list) > test_history_length',
               '    click id "auto_run"', '    assert eval not preferences.afm_enable',
-              '    assert eval renpy.music.get_playing(channel="voice") is None',
-              # A fast AFM setting can legitimately advance multiple silent lines
-              # between runner frames. Check complete playback, not an exact line count.
+              f'    assert eval renpy.music.get_playing(channel="voice") != {voice_file!r} and renpy.music.get_playing(channel="voice") in (None, RAIN_READING_CATALOG[rain_line_id]["voice"])',
+              # Fast AFM can cross the intervening narration between runner frames.
+              # A newly voiced line may already be playing; it must match that
+              # line's exact recording, and the original must have finished.
               f'    assert eval __import__("time").monotonic() - test_voice_started >= {voice_duration - 0.15:.3f}',
               '    $ preferences.afm_time = 15.0', '']
 
