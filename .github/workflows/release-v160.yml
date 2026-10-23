@@ -1,0 +1,45 @@
+name: Publish exact verified v1.6.0 Windows and PWA
+on:
+  workflow_run:
+    workflows: ['Game validation', 'Native RenPy PWA and shared materials']
+    branches: [main]
+    types: [completed]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: rain-v160-publication
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.event_name == 'workflow_dispatch' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push' && github.event.workflow_run.head_repository.full_name == github.repository)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      actions: read
+    env:
+      TARGET_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TARGET_SHA }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-dev.txt
+      - name: Test current artifact publication contract
+        run: python -m unittest tests.test_publish_v160 tests.test_publish_v140
+      - name: Publish only the exact completed native and public PWA artifacts
+        run: python -m tools.publish_v160 --commit "$TARGET_SHA"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Rain-v160-publication-${{ github.run_id }}
+          path: |
+            reports/v160-publication.json
+            .runtime/publish-v160/release/RELEASE_METADATA.json
+            .runtime/publish-v160/release/SHA256SUMS.txt
+          if-no-files-found: warn

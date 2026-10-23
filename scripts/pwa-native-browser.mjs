@@ -22,7 +22,9 @@ export async function waitNative(page, expression) {
 export async function clickVirtual(page, x, y) {
     const box = await page.locator('#canvas').boundingBox();
     const scale = Math.min(box.width/1920, box.height/1080);
-    await page.mouse.click(box.x+(box.width-1920*scale)/2+x*scale, box.y+(box.height-1080*scale)/2+y*scale);
+    const target = [box.x+(box.width-1920*scale)/2+x*scale, box.y+(box.height-1080*scale)/2+y*scale];
+    if (await page.evaluate(() => navigator.maxTouchPoints > 0)) await page.touchscreen.tap(...target);
+    else await page.mouse.click(...target);
 }
 export async function clickId(page, screen, id) {
     await waitNative(page,`bool(renpy.get_displayable(${JSON.stringify(screen)},${JSON.stringify(id)}))`);
@@ -161,4 +163,29 @@ export async function verifyReadBookmarks(page, screenshotPath) {
     assert.equal(await get(page,`rain_is_bookmarked(${JSON.stringify(identity)})`),true);
     assert.deepEqual(await get(page,state),before);
     return identity;
+}
+
+// Open the real native help from both title and reading menus; observe only.
+export async function verifyPlayerHelp(page, screenshotPath) {
+    const atTitle = await get(page, 'bool(renpy.get_screen("main_menu"))');
+    const state = '[current_scene, current_chapter, affection, trust, truth_known, visited_scenes, len(_history_list), _last_say_what, rain_line_id]';
+    const before = atTitle ? null : await get(page, state);
+    if (!atTitle) {
+        const touch = await get(page, 'bool(renpy.get_displayable("quick_menu", "reading_menu"))');
+        await clickId(page, 'quick_menu', touch ? 'reading_menu' : 'preferences_open');
+    }
+    const screen = atTitle ? 'main_menu' : await get(page, 'next(name for name in ("preferences", "save", "load", "history") if renpy.get_screen(name))');
+    await clickId(page, screen, 'menu_help');
+    await waitNative(page, 'bool(renpy.get_displayable("help", "help_play_body"))');
+    await clickId(page, 'help', 'help_offline');
+    await waitNative(page, 'bool(renpy.get_displayable("help", "help_offline_body"))');
+    await page.waitForTimeout(500);
+    if (before) assert.deepEqual(await get(page, state), before);
+    if (screenshotPath) await page.screenshot({path:screenshotPath});
+    await clickId(page, 'help', 'help_play');
+    await waitNative(page, 'bool(renpy.get_displayable("help", "help_play_body"))');
+    await clickId(page, 'help', 'game_return');
+    await waitNative(page, atTitle ? 'bool(renpy.get_screen("main_menu"))' : 'bool(renpy.get_screen("say"))');
+    if (before) assert.deepEqual(await get(page, state), before);
+    return {title:atTitle, state_preserved:true};
 }

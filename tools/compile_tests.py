@@ -765,13 +765,13 @@ def render_tests(story):
     help_tests = ['testcase help_menu_pauses_and_restores:', at_line('p00_entry_l005'),
         '    $ help_reading_state = (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what, rain_line_id)',
         '    click id "preferences_open"', '    click id "menu_help"',
-        '    assert screen "help"', '    assert id "help_play_body"',
-        '    click id "help_offline"', '    assert id "help_offline_body"',
+        '    assert screen "help"', '    assert eval bool(renpy.get_displayable("help", "help_play_body"))',
+        '    click id "help_offline"', '    assert eval bool(renpy.get_displayable("help", "help_offline_body"))',
         '    pause 1.0',
         '    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what, rain_line_id) == help_reading_state',
         '    screenshot "native-help-offline"',
         '    click id "help_keyboard"', '    click id "help_play"',
-        '    assert id "help_play_body"', '    screenshot "native-help-play"',
+        '    assert eval bool(renpy.get_displayable("help", "help_play_body"))', '    screenshot "native-help-play"',
         '    click id "game_return"', '    assert screen "say"',
         '    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what, rain_line_id) == help_reading_state',
         '    advance until screen "choice"',
@@ -781,7 +781,7 @@ def render_tests(story):
         '    click id "game_return"', '    assert screen "choice"',
         '    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what, rain_line_id) == help_choice_state',
         '    run MainMenu(confirm=False)', '    click id "menu_help"',
-        '    assert id "help_play_body"', '    click id "game_return"',
+        '    assert eval bool(renpy.get_displayable("help", "help_play_body"))', '    click id "game_return"',
         '    assert screen "main_menu"', '']
     return "\n".join(lines[:first] + display_lines + replay_lines + render_extras_tests(story) + full_media_tests + help_tests + lines[first:replay_start] + lines[replay_end:display])
 

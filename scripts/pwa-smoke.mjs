@@ -4,7 +4,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
 import {createRequire} from 'node:module';
-import {get, waitNative, clickId, startNarrative, verifyReadHistorySearch, verifyReadBookmarks, visibleNarration} from './pwa-native-browser.mjs';
+import {get, waitNative, clickId, startNarrative, verifyReadHistorySearch, verifyReadBookmarks, verifyPlayerHelp, visibleNarration} from './pwa-native-browser.mjs';
 
 const require = createRequire(import.meta.url);
 const {chromium} = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
@@ -102,7 +102,10 @@ try {
     const manifestResult = await installability.send('Page.getAppManifest');
     assert.equal(manifestResult.errors.length, 0);
     checks.push('manifest parsed and app-scoped start URL; complete offline marker');
+    await verifyPlayerHelp(page, path.join(reports, 'desktop-title-help.png'));
     await startNarrative(page);
+    await verifyPlayerHelp(page, path.join(reports, 'desktop-reading-help.png'));
+    checks.push('desktop help opens from title and reading menus and preserves native reading state');
     await verifyReadHistorySearch(page, path.join(reports, 'desktop-history-search.png'));
     checks.push('actual native history search, Chinese input, empty/reset states and preserved read position');
     const bookmarked = await verifyReadBookmarks(page, path.join(reports, 'desktop-bookmarks.png'));
@@ -207,6 +210,19 @@ try {
     await nested.setOffline(true); await boot(nestedPage,'/nested/Rain/');
     checks.push('nested subpath fresh install and complete offline reopen');
     await nested.close();
+    const mobile = await browser.newContext({viewport:{width:412,height:915},isMobile:true,hasTouch:true,
+        userAgent:'Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Mobile Safari/537.36'});
+    const mobilePage = await mobile.newPage();
+    for (const size of [{width:412,height:915},{width:568,height:320},{width:844,height:390}]) {
+        await mobilePage.setViewportSize(size);
+        await boot(mobilePage,'/Rain/');
+        assert.equal(await get(mobilePage,'renpy.variant("touch")'),true);
+        await verifyPlayerHelp(mobilePage,path.join(reports,`touch-${size.width}x${size.height}-title-help.png`));
+        await startNarrative(mobilePage);
+        await verifyPlayerHelp(mobilePage,path.join(reports,`touch-${size.width}x${size.height}-reading-help.png`));
+    }
+    checks.push('touch help at 412x915, 568x320 and 844x390 opens from title and reading menus without advancing');
+    await mobile.close();
     const failed = await browser.newContext(); const failedPage = await failed.newPage();
     failFile = 'renpy.wasm';
     await failedPage.goto(origin + '/Rain/');

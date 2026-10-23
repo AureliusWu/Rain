@@ -138,6 +138,7 @@ def main():
     planned += [("standalone",n) for n in required_screenshots(plan) if n.startswith("cg-")]
     planned += [("fresh_process","native-extras-music-persistent"),("upgrade_reader","native-extras-music-persistent")]
     planned += [(scope,name) for scope in ("source","standalone") for name in ("native-player-cast","native-full-entry-voice")]
+    planned += [(scope,name) for scope in ("source","standalone") for name in ("native-help-play","native-help-offline")]
     planned=list(dict.fromkeys(planned))
     require(len(planned) >= len(prior) and all((scope,name) in {(x["scope"],x["name"]) for x in shots} for scope,name in planned),"Visual plan lacks current screenshots")
     items=[];media=[]

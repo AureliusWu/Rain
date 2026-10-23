@@ -4,17 +4,57 @@
   "project": "Rain",
   "targetVersion": "1.6.0",
   "baselineCommit": "e4f428072090d8a49c894b80d962bf07df6c1c4a",
-  "status": "planned",
+  "status": "implementation-complete-platform-validation-pending",
   "gates": {
-    "implementation": "pending",
-    "localValidation": "pending",
-    "windowsRuntime": "pending",
-    "pwaRuntime": "pending",
+    "implementation": "passed",
+    "localValidation": "passed",
+    "windowsRuntime": "pending-current-commit-ci",
+    "pwaRuntime": "pending-current-commit-ci",
     "publicRelease": "pending",
     "publicReadback": "pending",
     "fourGameCoexistence": "pending"
   },
   "humanReview": "pending-user-consolidated",
-  "evidence": [],
-  "blockers": []
+  "evidence": [
+    {
+      "commit": "115dac638edf57f4baf027ce99bd5b7594da5272",
+      "scope": "cross-device-help-and-native-regression-checkpoint",
+      "pythonTests": 246,
+      "nativeInteractionExecution": "not-run-locally"
+    },
+    {
+      "scope": "current-source-authoring-validation",
+      "command": "python -m tools.validate; python -m unittest discover -s tests -q",
+      "result": "passed",
+      "pythonTests": 252,
+      "note": "All validators passed; final full Python run also includes the new six v1.6.0 publication contract tests."
+    },
+    {
+      "scope": "shared-contract-materials-and-offline-units",
+      "result": "passed",
+      "nodeTests": 14,
+      "sharedFiles": 15,
+      "materials": 92
+    },
+    {
+      "scope": "platform-plans",
+      "nativeCases": 39,
+      "nativeAssertions": 521,
+      "nativeScreenshots": 91,
+      "pwaChecks": 18,
+      "execution": "pending-current-commit-ci"
+    },
+    {
+      "scope": "full-runtime-media",
+      "command": "python tools/production/validate_runtime.py --require-complete --decode",
+      "result": "passed",
+      "dialogue": 306,
+      "newRuntimeImages": 12,
+      "humanListening": false
+    }
+  ],
+  "blockers": [
+    "Current Rain checkout has no RenPy SDK or built WASM package. Native lint, source/EXE interaction, upgrade/restart and actual WASM/PWA interaction remain pending same-commit CI."
+  ],
+  "updated": "2026-10-23"
 }

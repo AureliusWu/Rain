@@ -12,7 +12,8 @@ concurrency:
   cancel-in-progress: false
 jobs:
   publish:
-    if: github.event_name == 'workflow_dispatch' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push' && github.event.workflow_run.head_repository.full_name == github.repository)
+    # Historical release: never run against a later successful candidate.
+    if: (github.event_name == 'workflow_dispatch' && github.sha == 'e4856b5a5f44803e1c1b263534702f5d7d8c80dc') || (github.event.workflow_run.head_sha == 'e4856b5a5f44803e1c1b263534702f5d7d8c80dc' && github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push' && github.event.workflow_run.head_repository.full_name == github.repository)
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:
