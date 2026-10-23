@@ -6,6 +6,8 @@
 
 [正式下载](https://github.com/AureliusWu/Rain/releases/tag/v1.6.0) · [在线 PWA](https://aureliuswu.github.io/Rain/) · [v1.6.0 发布凭据](production/PUBLISHED-v1.6.0.json) · [工程状态](production/RELEASE-READINESS-20261022.json)。本版 Windows 39913692426、PWA 39913692408 与发行 39919945671 的机器检查不代替以下真人体验。
 
+新增[素材逐句审阅与定位](production/quality-20261023/README.md)：完整仓库内打开 `docs/production/quality-20261023/media-review.html`，可按人物、场景、文字与优先项筛选，直接播放原录音、查看画面并填写备注。导出的 JSON 固定版本和素材摘要，可随统一回报一并提供；全部条目默认待审，自动检查不会填写真人通过。
+
 所有真人项保持 pending。实际测试前填写版本、commit 与下载 ZIP SHA-256；包或哈希变化时重新绑定。当前网页可能在本轮 CI 后更新，请以游戏“关于”与当前发行凭据核对版本。
 
 | 真人事项 | 操作与记录 | 状态 |
