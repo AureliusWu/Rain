@@ -337,10 +337,7 @@ screen navigation():
 
         textbutton _("About") id "menu_about" action ShowMenu("about")
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-
-            ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+        textbutton _("Help") id "menu_help" action ShowMenu("help")
 
         if renpy.variant("pc"):
 
@@ -1069,7 +1066,7 @@ screen help():
 
     tag menu
 
-    default device = "keyboard"
+    default device = "play"
 
     use game_menu(_("Help"), scroll="viewport"):
 
@@ -1079,19 +1076,51 @@ screen help():
             spacing 22
 
             hbox:
+                textbutton "游玩与保存" id "help_play" action SetScreenVariable("device", "play")
+                textbutton "离线与更新" id "help_offline" action SetScreenVariable("device", "offline")
 
-                textbutton _("Keyboard") action SetScreenVariable("device", "keyboard")
+            hbox:
+                textbutton _("Keyboard") id "help_keyboard" action SetScreenVariable("device", "keyboard")
                 textbutton _("Mouse") action SetScreenVariable("device", "mouse")
 
                 if GamepadExists():
                     textbutton _("Gamepad") action SetScreenVariable("device", "gamepad")
 
-            if device == "keyboard":
+            if device == "play":
+                use rain_play_help
+            elif device == "offline":
+                use rain_offline_help
+            elif device == "keyboard":
                 use keyboard_help
             elif device == "mouse":
                 use mouse_help
             elif device == "gamepad":
                 use gamepad_help
+
+
+screen rain_play_help():
+
+    text "阅读与触屏" size 36 color gui.accent_color
+    text "点击对白区域，或按空格 / Enter 继续。点击选项作出选择；快进会停在选择处。触屏下方的“回退 / 快进 / 自动 / 菜单”可控制阅读。" id "help_play_body"
+    text "点“菜单”，或按 Esc / 鼠标右键进入菜单，再进入帮助、历史、存档、读档或设置。阅读在菜单中暂停；点“返回”回到原来的台词或选项。"
+    text "按 H / 鼠标中键隐藏界面，再次点击或按 H 恢复。自动播放与快进可再次点同一按钮停止；设置中可调整文字速度、自动间隔和各类音量。"
+    text "保存与恢复" size 36 color gui.accent_color
+    text "在菜单点“保存”，选择页码和槽位；点“读取”选择已有槽位恢复。建议关键选择前手动保存。快存 / 快读可从桌面阅读栏使用。Windows 与浏览器各自保存，不会自动同步。"
+    text "Windows 沿用 v1 存档目录；完整解压新版到新的可写目录后运行，旧目录可保留作备份。浏览器左上角的 Ren’Py 菜单提供原生存档导出 / 导入，请在清理站点数据或更换设备前导出。"
+    text "回看与重听" size 36 color gui.accent_color
+    text "历史支持关键词 / 人物筛选、书签和已读语音重播；对白旁的“重听语音”重播当前录音。主菜单“鉴赏室”展示已经读到的画面与音乐。六章、四次关键选择、Normal / True 两结局均可重新开始游玩。"
+
+
+screen rain_offline_help():
+
+    text "Windows 离线" size 36 color gui.accent_color
+    text "完整解压整个游戏文件夹到可写目录，再双击 BeforeTheRainStops.exe；保留 game、lib、renpy 等目录。无需安装模型或开发工具，即可离线游玩。" id "help_offline_body"
+    text "浏览器 / PWA 离线" size 36 color gui.accent_color
+    text "首次联网打开游戏，等待右上角显示“完整内容已保存，可离线重开”后，再断网或关闭。未完成下载时请保持联网；下载失败可点“重试下载”。"
+    text "支持的浏览器可点“安装到设备”，也可用浏览器的安装 / 添加到主屏幕。离线内容与存档属于当前浏览器及设备；隐私模式、清理站点数据或系统回收空间可能移除它们。请先导出存档备份。"
+    text "安全更新" size 36 color gui.accent_color
+    text "新版在后台完整下载后等待启用。先手动保存并导出重要存档，再关闭此游戏所有网页与已安装窗口，重新打开；正在阅读的旧窗口继续使用原版本。不要在下载途中清理缓存。"
+    text "如果未出现离线就绪提示，请联网重新打开并等待完成。网页版与 Windows 均沿用 v1 存档身份；版本号可在“关于”页查看。"
 
 
 screen keyboard_help():

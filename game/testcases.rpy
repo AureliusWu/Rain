@@ -572,6 +572,40 @@ testcase full_media_cast_and_entry_voice:
     assert id "voice_replay"
     screenshot "native-full-entry-voice"
 
+testcase help_menu_pauses_and_restores:
+    advance until "书应该还在吧。"
+    $ help_reading_state = (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what, rain_line_id)
+    click id "preferences_open"
+    click id "menu_help"
+    assert screen "help"
+    assert id "help_play_body"
+    click id "help_offline"
+    assert id "help_offline_body"
+    pause 1.0
+    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what, rain_line_id) == help_reading_state
+    screenshot "native-help-offline"
+    click id "help_keyboard"
+    click id "help_play"
+    assert id "help_play_body"
+    screenshot "native-help-play"
+    click id "game_return"
+    assert screen "say"
+    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what, rain_line_id) == help_reading_state
+    advance until screen "choice"
+    $ help_choice_state = (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what, rain_line_id)
+    click id "preferences_open"
+    click id "menu_help"
+    assert screen "help"
+    pause 1.0
+    click id "game_return"
+    assert screen "choice"
+    assert eval (current_scene, current_chapter, affection, trust, truth_known, tuple(visited_scenes), len(_history_list), _last_say_what, rain_line_id) == help_choice_state
+    run MainMenu(confirm=False)
+    click id "menu_help"
+    assert id "help_play_body"
+    click id "game_return"
+    assert screen "main_menu"
+
 testcase route_01:
     pause until "序章 ： 雨夜"
     assert "序章 ： 雨夜"

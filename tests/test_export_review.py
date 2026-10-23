@@ -9,7 +9,7 @@ from tools.build.verify_voice_smoke import prefix_plan
 class ExportReviewCurrentPlanTests(unittest.TestCase):
     def setUp(self):
         self.plan=(Path(__file__).resolve().parents[1]/'game/testcases.rpy').read_text(encoding='utf-8')
-        self.summary=dict(cases=38,assertions=509,screenshots_checked=89,
+        self.summary=dict(cases=39,assertions=521,screenshots_checked=91,
             failed=0,xfailed=0,xpassed=0,skipped=0,not_run=0)
 
     def test_history_regression_is_part_of_the_full_and_prefix_totals(self):
