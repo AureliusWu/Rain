@@ -2,9 +2,9 @@
 
 依据用户指示：“你专心做好你能做的部分，所有需要真人操作的后续我会统一操作。”
 
-当前正式基线为 **v1.5.0**，运行 / tag `e4856b5a5f44803e1c1b263534702f5d7d8c80dc`。本轮准备 **v1.6.0**；未完成本轮平台验证前不将候选写成已发布。原有 17 句关键录音字节、306 条人物对白、16 条路线、Normal / True 两结局及 v1 存档身份保留。
+当前正式版本为 **v1.6.0**，运行 / tag `b820f868e4fe10a9d74d2a35769696a0b1550ef6`。Windows、官方 WASM / PWA、原包发行、四份公开下载回读与四作共存已通过；本清单的真人事项仍全部 pending。原有 17 句关键录音、306 条人物对白、16 路线、两结局及 v1 存档身份保持。
 
-[正式基线下载](https://github.com/AureliusWu/Rain/releases/tag/v1.5.0) · [在线 PWA](https://aureliuswu.github.io/Rain/) · [v1.5.0 发布凭据](production/PUBLISHED-v1.5.0-full-media.json) · [本轮工程状态](production/RELEASE-READINESS-20261022.json)。基线 Windows 39715827353、PWA 39715827275 及发布 39721240542 仅证明 v1.5.0，不能替代 v1.6.0 的实际平台证据。
+[正式下载](https://github.com/AureliusWu/Rain/releases/tag/v1.6.0) · [在线 PWA](https://aureliuswu.github.io/Rain/) · [v1.6.0 发布凭据](production/PUBLISHED-v1.6.0.json) · [工程状态](production/RELEASE-READINESS-20261022.json)。本版 Windows 39913692426、PWA 39913692408 与发行 39919945671 的机器检查不代替以下真人体验。
 
 所有真人项保持 pending。实际测试前填写版本、commit 与下载 ZIP SHA-256；包或哈希变化时重新绑定。当前网页可能在本轮 CI 后更新，请以游戏“关于”与当前发行凭据核对版本。
 

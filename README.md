@@ -1,12 +1,18 @@
 # 雨停之前 / Before the Rain Stops
 
-**v1.5.0 全对白与完整角色素材正式版：Windows 离线 EXE + 同引擎官方 WebAssembly PWA。**
+**v1.6.0 玩家帮助与完整发行验收正式版：Windows 离线 EXE + 同引擎官方 WebAssembly PWA。**
 
-[在线游玩](https://aureliuswu.github.io/Rain/) · [正式下载](https://github.com/AureliusWu/Rain/releases/tag/v1.5.0) · [Windows ZIP](https://github.com/AureliusWu/Rain/releases/download/v1.5.0/BeforeTheRainStops-1.5.0-win.zip) · [Web ZIP](https://github.com/AureliusWu/Rain/releases/download/v1.5.0/BeforeTheRainStops-1.5.0-web.zip) · [校验表](https://github.com/AureliusWu/Rain/releases/download/v1.5.0/SHA256SUMS.txt)
+[在线游玩](https://aureliuswu.github.io/Rain/) · [正式下载](https://github.com/AureliusWu/Rain/releases/tag/v1.6.0) · [Windows ZIP](https://github.com/AureliusWu/Rain/releases/download/v1.6.0/BeforeTheRainStops-1.6.0-win.zip) · [Web ZIP](https://github.com/AureliusWu/Rain/releases/download/v1.6.0/BeforeTheRainStops-1.6.0-web.zip) · [校验表](https://github.com/AureliusWu/Rain/releases/download/v1.6.0/SHA256SUMS.txt)
 
 雨夜旧车站，两位久未联系的旧友，和一封没有寄出的信。六章、24 个叙事场景、四次选择、16 条路线与 Normal / True 两个结局；560 个台词 ID 与原有 v1 存档身份保持。
 
-## v1.5.0 声音与画面
+## v1.6.0 玩家帮助与正式验收
+
+桌面、手机与 PWA 均可从主菜单或阅读菜单打开帮助，查看触屏 / 键鼠、保存与原生备份、回看重听、离线和更新说明。打开及返回沿用原生菜单，保留当前台词、历史和选择。
+
+Windows 39913692426、官方 WASM / PWA 39913692408、原包发行 39919945671 全部成功，运行 / tag 固定于 `b820f868e4fe10a9d74d2a35769696a0b1550ef6`。源码和独立 EXE 各 39 用例 / 521 断言 / 91 截图，真实 v1.1.0 旧档升级、新进程恢复及 18 项 WASM 检查通过。四份公开下载、两个 ZIP、当前 Worker 和四作共同断网复验通过；[发布凭据](docs/production/PUBLISHED-v1.6.0.json) · [下载回读](docs/production/PUBLIC-READBACK-v1.6.0-20261023.json) · [四作闭环](docs/production/FOUR-GAMES-CLOSURE-20261023.md)。真人体验项继续集中待验。
+
+## 当前声音与画面（v1.5.0 接入）
 
 - 全分支 306 条人物对白绑定离线录音，包括选择回应；原 17 句录音保留原字节，旁白保留文字。
 - 当前台词、已读历史和收藏支持原录音重听；自动阅读等待当前语音，独立语音音量继续使用原生设置。
@@ -21,7 +27,7 @@
 
 PWA 首次保持联网，等待完整离线下载成功后再断网。左上角支持原生存档 ZIP 导入 / 导出；浏览器与 Windows 各自保存本机进度。原生存档目录继续使用 AureliusWu-BeforeTheRainStops-v1，清理站点前可导出备份。
 
-## v1.5.0 验收与正式发布
+## v1.5.0 历史验收与正式发布
 
 2026-10-22：[Windows 39715827353](https://github.com/AureliusWu/Rain/actions/runs/39715827353)、[官方 WASM / PWA 39715827275](https://github.com/AureliusWu/Rain/actions/runs/39715827275) 与 [同字节发行 39721240542](https://github.com/AureliusWu/Rain/actions/runs/39721240542) 均成功。运行 / tag 固定于 `e4856b5a5f44803e1c1b263534702f5d7d8c80dc`。
 

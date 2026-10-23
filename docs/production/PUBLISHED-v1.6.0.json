@@ -1,0 +1,147 @@
+{
+  "schema": 1,
+  "project": "Rain",
+  "version": "1.6.0",
+  "status": "released-and-verified",
+  "checkedAt": "2026-10-23T15:07:34.468305+00:00",
+  "runtimeCommit": "b820f868e4fe10a9d74d2a35769696a0b1550ef6",
+  "tagCommit": "b820f868e4fe10a9d74d2a35769696a0b1550ef6",
+  "release": {
+    "id": 421571259,
+    "tag_name": "v1.6.0",
+    "html_url": "https://github.com/AureliusWu/Rain/releases/tag/v1.6.0",
+    "target_commitish": "main",
+    "draft": false,
+    "prerelease": false
+  },
+  "build": {
+    "url": "https://github.com/AureliusWu/Rain/actions/runs/39913692426",
+    "conclusion": "success"
+  },
+  "publication": {
+    "url": "https://github.com/AureliusWu/Rain/actions/runs/39919945671",
+    "conclusion": "success",
+    "mode": "draft-upload-verify-all-bytes-then-public",
+    "immutable": true
+  },
+  "pwa": {
+    "id": 39913692408,
+    "attempt": 1,
+    "conclusion": "success",
+    "headCommit": "b820f868e4fe10a9d74d2a35769696a0b1550ef6",
+    "verifiedRuntimeCommit": "b820f868e4fe10a9d74d2a35769696a0b1550ef6",
+    "verification": "Exact candidate platform workflow and actual public offline verification.",
+    "url": "https://github.com/AureliusWu/Rain/actions/runs/39913692408",
+    "screens": "Public native menu, save/load, history and offline; 18 official WASM checks also cover desktop and three touch viewports.",
+    "entrypoints": [
+      {
+        "project": "Rain",
+        "file": "index.html",
+        "status": "passed",
+        "bytes": 8069,
+        "sha256": "f60a039e6c477b15775ea2a46ee62342280ac95a9cf40fb3f4d0307c076456a7"
+      },
+      {
+        "project": "Rain",
+        "file": "service-worker.js",
+        "status": "passed",
+        "bytes": 9882,
+        "sha256": "8c0ec3df5e15b75e9c024508982090b8a87d1a6183eacc77cd9129c99a5622e4"
+      }
+    ],
+    "artifactId": 12484386863,
+    "artifactSha256": "307f3c11ea3e494b7f4f0c13f19bc049a7fd45814066fd985edd5440724315b9",
+    "proof": "PUBLISHED-v1.6.0-METADATA.json"
+  },
+  "validation": {
+    "pythonTests": 252,
+    "nodeTests": 14,
+    "nativeSource": {
+      "cases": 39,
+      "assertions": 521,
+      "screenshots": 91
+    },
+    "nativePackage": {
+      "cases": 39,
+      "assertions": 521,
+      "screenshots": 91
+    },
+    "pwaChecks": 18,
+    "dialogueBindings": 306
+  },
+  "publicReadback": {
+    "path": "PUBLIC-READBACK-v1.6.0-20261023.json",
+    "assets": 4,
+    "bytes": 160756000,
+    "allBytesAndChecksumsPassed": true
+  },
+  "fourGameCoexistence": {
+    "status": "passed",
+    "run": "https://github.com/AureliusWu/Circuit/actions/runs/39972929371",
+    "ciReport": "FOUR-GAMES-LIVE-CI-20261023.json",
+    "independentLocalReport": "FOUR-GAMES-LIVE-20261023.json",
+    "versions": {
+      "Rain": "1.6.0",
+      "Healing": "1.4.0",
+      "NetLove": "1.0.0",
+      "Circuit": "1.8.0"
+    },
+    "cachedFiles": 1248,
+    "pageErrors": []
+  },
+  "humanReview": {
+    "status": "pending-user-consolidated",
+    "checks": [
+      "full human listening",
+      "effective reading time",
+      "physical mobile installation",
+      "ordinary Windows / Chinese paths / DPI",
+      "final creative acceptance"
+    ],
+    "machineEvidenceDoesNotClaimHumanAcceptance": true
+  },
+  "history": [],
+  "nativeSuites": {
+    "source": {
+      "cases": 39,
+      "assertions": 521,
+      "failed": 0,
+      "skipped": 0,
+      "not_run": 0,
+      "screenshots_checked": 91
+    },
+    "standalone": {
+      "cases": 39,
+      "assertions": 521,
+      "failed": 0,
+      "skipped": 0,
+      "not_run": 0,
+      "screenshots_checked": 91
+    },
+    "fresh_process": {
+      "cases": 1,
+      "assertions": 17,
+      "failed": 0,
+      "skipped": 0,
+      "not_run": 0,
+      "screenshots_checked": 3
+    },
+    "upgrade_writer": {
+      "cases": 1,
+      "assertions": 14,
+      "failed": 0,
+      "skipped": 0,
+      "not_run": 0,
+      "screenshots_checked": 3
+    },
+    "upgrade_reader": {
+      "cases": 2,
+      "assertions": 26,
+      "failed": 0,
+      "skipped": 0,
+      "not_run": 0,
+      "screenshots_checked": 4
+    }
+  },
+  "nativeAndWasmMetadata": "PUBLISHED-v1.6.0-METADATA.json"
+}

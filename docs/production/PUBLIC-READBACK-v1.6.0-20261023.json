@@ -1,0 +1,89 @@
+{
+  "release": {
+    "id": 421571259,
+    "tag_name": "v1.6.0",
+    "html_url": "https://github.com/AureliusWu/Rain/releases/tag/v1.6.0",
+    "target_commitish": "main"
+  },
+  "checkedAt": "2026-10-23T14:39:46.272844+00:00",
+  "method": "Anonymous HTTPS download with standard certificate verification; actual full bytes, GitHub asset size and digest, ZIP CRC, and SHA256SUMS entries checked.",
+  "assets": [
+    {
+      "id": 668379454,
+      "name": "SHA256SUMS.txt",
+      "size": 286,
+      "digest": "sha256:f985a7fb0a5fbe543914551662485b5e0cc628fd98b97b9ce69e78ee885c6490",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.6.0/SHA256SUMS.txt",
+      "bytes": 286,
+      "sha256": "f985a7fb0a5fbe543914551662485b5e0cc628fd98b97b9ce69e78ee885c6490",
+      "status": "passed"
+    },
+    {
+      "id": 668379453,
+      "name": "RELEASE_METADATA.json",
+      "size": 18636,
+      "digest": "sha256:9843391402b98f47d6eec4ed64ec32b406b02de5764870b19cf1359a16416291",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.6.0/RELEASE_METADATA.json",
+      "bytes": 18636,
+      "sha256": "9843391402b98f47d6eec4ed64ec32b406b02de5764870b19cf1359a16416291",
+      "status": "passed"
+    },
+    {
+      "id": 668379455,
+      "name": "BeforeTheRainStops-1.6.0-web.zip",
+      "size": 73591309,
+      "digest": "sha256:f1e72bd3bbcb67b62adf084b7cf71f96aa65469e5e33f65d90c441011475d4e6",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.6.0/BeforeTheRainStops-1.6.0-web.zip",
+      "bytes": 73591309,
+      "sha256": "f1e72bd3bbcb67b62adf084b7cf71f96aa65469e5e33f65d90c441011475d4e6",
+      "status": "passed",
+      "zip": {
+        "crc": "passed",
+        "files": 37
+      },
+      "entrypoints": {
+        "index.html": "f60a039e6c477b15775ea2a46ee62342280ac95a9cf40fb3f4d0307c076456a7",
+        "service-worker.js": "8c0ec3df5e15b75e9c024508982090b8a87d1a6183eacc77cd9129c99a5622e4"
+      }
+    },
+    {
+      "id": 668379446,
+      "name": "BeforeTheRainStops-1.6.0-win.zip",
+      "size": 87145769,
+      "digest": "sha256:d403b9b4959845c5b13cffca80245bc9320b1794262c5831b1f130a17c4826ec",
+      "url": "https://github.com/AureliusWu/Rain/releases/download/v1.6.0/BeforeTheRainStops-1.6.0-win.zip",
+      "bytes": 87145769,
+      "sha256": "d403b9b4959845c5b13cffca80245bc9320b1794262c5831b1f130a17c4826ec",
+      "status": "passed",
+      "zip": {
+        "crc": "passed",
+        "files": 1792
+      }
+    }
+  ],
+  "checksumEntries": [
+    "BeforeTheRainStops-1.6.0-web.zip",
+    "BeforeTheRainStops-1.6.0-win.zip",
+    "RELEASE_METADATA.json"
+  ],
+  "status": "passed",
+  "runtimeCommit": "b820f868e4fe10a9d74d2a35769696a0b1550ef6",
+  "tagCommit": "b820f868e4fe10a9d74d2a35769696a0b1550ef6",
+  "tagIdentityMethod": "Local fresh git fetch of public main and tags; exact tag SHA compared to frozen tested runtime commit.",
+  "publicEntrypoints": [
+    {
+      "project": "Rain",
+      "file": "index.html",
+      "status": "passed",
+      "bytes": 8069,
+      "sha256": "f60a039e6c477b15775ea2a46ee62342280ac95a9cf40fb3f4d0307c076456a7"
+    },
+    {
+      "project": "Rain",
+      "file": "service-worker.js",
+      "status": "passed",
+      "bytes": 9882,
+      "sha256": "8c0ec3df5e15b75e9c024508982090b8a87d1a6183eacc77cd9129c99a5622e4"
+    }
+  ]
+}
