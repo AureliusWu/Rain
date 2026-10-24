@@ -13458,6 +13458,76 @@
         "pixel_sha256": "5e2f70b869859e5da323f91e8451ffd091b6c899540a2165cda6fb0b6f361664"
       },
       "approval_scope": "Agent integration review; original generation prompt unavailable"
+    },
+    {
+      "id": "rain_platform",
+      "type": "audio",
+      "audio_role": "bgm",
+      "file": "audio/bgm/rain-platform.ogg",
+      "source": "Original authored score and MIDI, rendered with GeneralUser GS 2.0.3; assets_source/music/original-20261024",
+      "license": "Original composition; GeneralUser GS instrument sample license; licenses/GeneralUser-GS-LICENSE.txt",
+      "version": 1,
+      "approved": true,
+      "approval_scope": "Technical integration; human listening and final creative approval pending",
+      "status": "candidate_user_review",
+      "sha256": "d54ec909b8141f7e67b8f295c8792e47a1bc2d3363ad7d9e421537f801c98893",
+      "source_file": "assets_source/music/original-20261024/rain_platform.flac",
+      "source_sha256": "401b4da26267611459110a71bfd5206040b5666d901ac31ffb87369eddf60bec",
+      "audio": {
+        "format": "OGG",
+        "subtype": "VORBIS",
+        "sample_rate": 48000,
+        "channels": 2,
+        "frames": 4726144,
+        "duration_seconds": 98.461333,
+        "peak": 0.388094,
+        "rms_dbfs": -23.244
+      },
+      "source_audio": {
+        "format": "FLAC",
+        "subtype": "PCM_16",
+        "sample_rate": 48000,
+        "channels": 2,
+        "frames": 4726144,
+        "duration_seconds": 98.461333,
+        "peak": 0.386871,
+        "rms_dbfs": -23.262
+      }
+    },
+    {
+      "id": "rain_letter",
+      "type": "audio",
+      "audio_role": "bgm",
+      "file": "audio/bgm/rain-letter.ogg",
+      "source": "Original authored score and MIDI, rendered with GeneralUser GS 2.0.3; assets_source/music/original-20261024",
+      "license": "Original composition; GeneralUser GS instrument sample license; licenses/GeneralUser-GS-LICENSE.txt",
+      "version": 1,
+      "approved": true,
+      "approval_scope": "Technical integration; human listening and final creative approval pending",
+      "status": "candidate_user_review",
+      "sha256": "4ddf79e35b116e2bc168a877d39fb44ad0c4e902a5c846e2a875ec6583a6160e",
+      "source_file": "assets_source/music/original-20261024/rain_letter.flac",
+      "source_sha256": "d6449b26d18c022778883e732a93f2fe36638b5c7913ddeaea6c24d954146d53",
+      "audio": {
+        "format": "OGG",
+        "subtype": "VORBIS",
+        "sample_rate": 48000,
+        "channels": 2,
+        "frames": 5120000,
+        "duration_seconds": 106.666667,
+        "peak": 0.439981,
+        "rms_dbfs": -23.223
+      },
+      "source_audio": {
+        "format": "FLAC",
+        "subtype": "PCM_16",
+        "sample_rate": 48000,
+        "channels": 2,
+        "frames": 5120000,
+        "duration_seconds": 106.666667,
+        "peak": 0.440002,
+        "rms_dbfs": -23.248
+      }
     }
   ]
 }

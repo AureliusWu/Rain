@@ -419,7 +419,7 @@ testcase extras_locked_no_spoilers:
     assert not id "extras_music_unspoken_theme"
     assert not id "extras_music_next_message_theme"
     assert eval renpy.music.get_playing(channel="gallery_music") is None
-    assert eval renpy.get_widget("extras_music_room_screen", "extras_music_progress")._tts_all(False) == "已解锁 %d/4" % sum(extras_music_room.is_unlocked(filename) for key, title, filename, duration in extras_music)
+    assert eval renpy.get_widget("extras_music_room_screen", "extras_music_progress")._tts_all(False) == "已解锁 %d/6" % sum(extras_music_room.is_unlocked(filename) for key, title, filename, duration in extras_music)
     assert eval renpy.get_widget("extras_music_room_screen", 'extras_music_status')._tts_all(False) == '已停止，请选择已解锁的音乐。' timeout 1.0
     pause 0.3
     pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
@@ -466,7 +466,7 @@ testcase extras_unlock_and_music:
     assert eval (affection, trust, truth_known, last_ending, list(visited_scenes)) == _test.extras_state
     click id "extras_music_tab"
     assert eval all(extras_music_room.is_unlocked(filename) for key, title, filename, duration in extras_music)
-    assert eval renpy.get_widget("extras_music_room_screen", 'extras_music_progress')._tts_all(False) == '已解锁 4/4' timeout 1.0
+    assert eval renpy.get_widget("extras_music_room_screen", 'extras_music_progress')._tts_all(False) == '已解锁 6/6' timeout 1.0
     assert eval renpy.get_widget("extras_music_room_screen", 'extras_music_status')._tts_all(False) == '已停止，请选择已解锁的音乐。' timeout 1.0
     click id "extras_music_rain_theme"
     pause until eval renpy.music.get_playing(channel="gallery_music") == 'audio/bgm/rain_theme.ogg'
@@ -513,7 +513,7 @@ testcase extras_unlock_and_music:
     pause 0.3
     pause until eval not any(renpy.get_ongoing_transition(layer) for layer in (None, "master", "screens"))
     screenshot "scaled-extras-music"
-    assert eval renpy.get_widget("extras_music_room_screen", 'extras_music_progress')._tts_all(False) == '已解锁 4/4' timeout 1.0
+    assert eval renpy.get_widget("extras_music_room_screen", 'extras_music_progress')._tts_all(False) == '已解锁 6/6' timeout 1.0
     assert eval renpy.get_widget("extras_music_room_screen", 'extras_music_status')._tts_all(False) == '播放中：下一条消息' timeout 1.0
     click id "extras_pause"
     assert eval renpy.music.get_pause(channel="gallery_music")
@@ -1104,6 +1104,16 @@ testcase key_voice_and_sound_cues:
     pause 0.1
     assert eval renpy.music.get_playing(channel='sound') == 'audio/sfx/message_ping.ogg'
 
+testcase original_instrumental_scene_cues:
+    advance until "她的纸袋贴着椅背，底下垫了一张报纸。雨飘进来时，她先扶住袋口，才看我一眼。"
+    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/rain-platform.ogg'
+    advance until screen "choice"
+    click "把干燥的位置让给她，问候近况"
+    advance until screen "choice"
+    click "告诉她：这封信是我写的"
+    advance until "你这次回来，原本只安排了取东西？"
+    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/rain-letter.ogg'
+
 testcase audio_true_ending:
     advance until screen "choice"
     click "把干燥的位置让给她，问候近况"
@@ -1180,7 +1190,7 @@ testcase late_save_load_true:
     advance until screen "choice"
     click "把干燥的位置让给她，问候近况"
     advance until "不在。所以我才想先问你。"
-    pause until eval renpy.music.get_playing(channel="music") == 'audio/bgm/rain_theme.ogg'
+    pause until eval renpy.music.get_playing(channel="music") == 'audio/bgm/rain-platform.ogg'
     pause until eval renpy.music.get_playing(channel="ambient") == 'audio/sfx/rain_ambience.ogg'
     assert eval current_scene == 's02_boxes' and current_chapter == 'ch01'
     assert eval visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes']
@@ -1188,7 +1198,7 @@ testcase late_save_load_true:
     assert eval last_ending == ""
     assert eval renpy.showing('backgrounds/station_rain.png')
     assert eval renpy.get_attributes('heroine') == ('normal',)
-    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/rain_theme.ogg'
+    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/rain-platform.ogg'
     assert eval renpy.music.get_playing(channel='ambient') == 'audio/sfx/rain_ambience.ogg'
     $ renpy.unlink_save("1-1")
     click id "save_open"
@@ -1213,7 +1223,7 @@ testcase late_save_load_true:
     if screen "confirm":
         click id "confirm_yes"
     pause until "不在。所以我才想先问你。"
-    pause until eval renpy.music.get_playing(channel="music") == 'audio/bgm/rain_theme.ogg'
+    pause until eval renpy.music.get_playing(channel="music") == 'audio/bgm/rain-platform.ogg'
     pause until eval renpy.music.get_playing(channel="ambient") == 'audio/sfx/rain_ambience.ogg'
     assert eval current_scene == 's02_boxes' and current_chapter == 'ch01'
     assert eval visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion', 's02_care', 's02_boxes']
@@ -1221,7 +1231,7 @@ testcase late_save_load_true:
     assert eval last_ending == ""
     assert eval renpy.showing('backgrounds/station_rain.png')
     assert eval renpy.get_attributes('heroine') == ('normal',)
-    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/rain_theme.ogg'
+    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/rain-platform.ogg'
     assert eval renpy.music.get_playing(channel='ambient') == 'audio/sfx/rain_ambience.ogg'
     pause 0.2
     screenshot "save-load-before-cg"
@@ -1610,7 +1620,7 @@ testcase restart_true_then_normal:
     advance until screen "choice"
     assert eval affection == 0 and trust == 0 and not truth_known and last_ending == ""
     assert eval visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion']
-    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/rain_theme.ogg'
+    assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/rain-platform.ogg'
     assert eval renpy.music.get_playing(channel='ambient') == 'audio/sfx/rain_ambience.ogg'
     advance until screen "choice"
     click "把干燥的位置让给她，问候近况"

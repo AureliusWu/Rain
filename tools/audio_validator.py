@@ -22,8 +22,8 @@ def validate_audio(root=ROOT, assets=None, story=None):
                 relative = 'game/' + asset['file'] if area == 'game' else asset.get(file_key)
                 file = project_file(root, relative, area)
                 actual = audio_metadata(file)
-                expected_format = ('OGG', 'VORBIS') if area == 'game' else ('WAV', 'PCM_16')
-                if (actual['format'], actual['subtype']) != expected_format:
+                expected_formats = {('OGG', 'VORBIS')} if area == 'game' else {('WAV', 'PCM_16'), ('FLAC', 'PCM_16'), ('FLAC', 'PCM_24')}
+                if (actual['format'], actual['subtype']) not in expected_formats:
                     errors.append(f'Audio format mismatch: {name}/{area}')
                 if not metadata_matches(actual, asset.get(metadata_key)):
                     errors.append(f'Audio metadata mismatch: {name}/{area}')

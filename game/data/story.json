@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "version": "1.6.0",
+  "version": "1.7.0",
   "title": "雨停之前",
   "status": "v07_alpha_expansion_recovered_through_ch03",
   "entry": "p00_entry",
@@ -415,7 +415,8 @@
       "draft_prompt": "prompts/script/v07/s01_platform_v1.md",
       "draft_prompt_sha256": "0cf8269516704a8283150586f4a3bf7ea0d5737156bdba81029e3ce2404f08d5",
       "review_status": "v07_restored_expansion_candidate",
-      "draft_prompt_id": "script_v07_s01_platform_v1"
+      "draft_prompt_id": "script_v07_s01_platform_v1",
+      "bgm": "rain_platform"
     },
     {
       "id": "s02_reunion",
@@ -1728,7 +1729,8 @@
         {
           "next": "s04_reserved"
         }
-      ]
+      ],
+      "bgm": "rain_letter"
     },
     {
       "id": "s04_open",

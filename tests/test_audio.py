@@ -48,10 +48,24 @@ class AudioTests(unittest.TestCase):
         self.assertEqual(self.check(), [])
         self.assertEqual(self.asset['audio']['frames'], 12000)
 
+    def test_lossless_24bit_flac_source_matches_the_ready_loop(self):
+        samples, rate = sf.read(self.source)
+        lossless = self.source.with_suffix('.flac')
+        sf.write(lossless, samples, rate, subtype='PCM_24')
+        self.asset.update(source_file='assets_source/audio/cue.flac',
+                          source_sha256=sha256(lossless.read_bytes()), source_audio=audio_metadata(lossless))
+        self.assertEqual(self.check(), [])
+
+    def test_lossy_source_is_rejected_even_when_its_metadata_matches(self):
+        self.asset.update(source_file='assets_source/audio/cue.ogg', source_audio=self.asset['audio'])
+        target = self.source.with_suffix('.ogg')
+        target.write_bytes(self.output.read_bytes())
+        self.assertTrue(any('Audio format mismatch' in error for error in self.check()))
+
     def test_current_project_audio_and_selected_voice_bindings(self):
         errors, measured = validate_audio()
         self.assertEqual(errors, [])
-        self.assertEqual(len(measured), 314)
+        self.assertEqual(len(measured), 316)
         voices = json.loads((ROOT / 'game/data/voice_manifest.json').read_text())['voices']
         self.assertEqual(len(voices), 17)
         bound = {line['voice'] for n in load_story()['nodes'] for line in scene_lines(n) if line.get('voice')}

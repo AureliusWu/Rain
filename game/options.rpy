@@ -1,5 +1,5 @@
 define config.name = _("雨停之前")
-define config.version = "1.6.0"
+define config.version = "1.7.0"
 define config.window_title = "雨停之前 · AI Galgame"
 define gui.show_name = True
 define gui.about = _("雨夜的旧车站，两位久未联系的旧友，和一封没有寄出的信。\n\n创作与工程：AureliusWu / AI 辅助\n图像：OpenAI 图像生成\n人物语音：Qwen3-TTS 1.7B；保留 Serena 关键录音\n音乐与音效：原创程序合成\n字体：Source Han Sans / SIL OFL 1.1\n\n完整短篇：六章、16 条路线、Normal / True 两结局、306 条人物对白配音。版本验收记录见发行说明；完整来源见随游戏附带的 CREDITS.md。")

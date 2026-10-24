@@ -1,0 +1,120 @@
+{
+  "schema": 1,
+  "project": "Rain",
+  "version": "1.7.0",
+  "date": "2026-10-24",
+  "stage": "runtime-integrated-candidate",
+  "humanListening": "pending",
+  "soundfont": {
+    "name": "GeneralUser GS 2.0.3",
+    "sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+    "license": "licenses/GeneralUser-GS-LICENSE.txt"
+  },
+  "tracks": [
+    {
+      "id": "rain-platform",
+      "title": "雨后的站台",
+      "vocals": false,
+      "bpm": 78,
+      "key": "D major",
+      "instruments": [
+        "原声钢琴",
+        "室内弦乐",
+        "大提琴",
+        "竖琴"
+      ],
+      "runtime": "game/audio/bgm/rain-platform.ogg",
+      "sha256": "d54ec909b8141f7e67b8f295c8792e47a1bc2d3363ad7d9e421537f801c98893",
+      "score": "assets_source/music/original-20261024/output/scores/01_Rain_platform.json",
+      "midi": "assets_source/music/original-20261024/output/scores/01_Rain_platform.mid",
+      "sampleRate": 48000,
+      "channels": 2,
+      "frames": 4726144,
+      "durationSeconds": 98.461333,
+      "loopEntireFile": true,
+      "quality": {
+        "path": "loops/01_Rain_platform_loop.ogg",
+        "bytes": 1454594,
+        "sha256": "d54ec909b8141f7e67b8f295c8792e47a1bc2d3363ad7d9e421537f801c98893",
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 4726144,
+        "seconds": 98.461333,
+        "finite": true,
+        "samplePeakDbfs": -8.2213,
+        "rmsDbfs": -23.2443,
+        "integratedLufs": -20.98,
+        "truePeakDbtp": -8.22,
+        "loudnessRangeLu": 3.7,
+        "loopBoundaryDelta": 8.419621735811234e-05,
+        "humanListening": "pending"
+      },
+      "humanListening": "pending",
+      "bindings": [
+        {
+          "node": "s01_platform",
+          "registry": "game/data/story.json"
+        }
+      ],
+      "losslessLoopSource": {
+        "path": "assets_source/music/original-20261024/rain_platform.flac",
+        "sha256": "401b4da26267611459110a71bfd5206040b5666d901ac31ffb87369eddf60bec",
+        "pcmBits": 16,
+        "note": "Native authoring loop reference, quantized to 16-bit PCM; runtime OGG and delivered 24-bit full masters are unchanged."
+      }
+    },
+    {
+      "id": "rain-letter",
+      "title": "留到天亮的信",
+      "vocals": false,
+      "bpm": 72,
+      "key": "F major",
+      "instruments": [
+        "柔和钢琴",
+        "竖琴",
+        "慢弦乐",
+        "大提琴",
+        "颤音琴"
+      ],
+      "runtime": "game/audio/bgm/rain-letter.ogg",
+      "sha256": "4ddf79e35b116e2bc168a877d39fb44ad0c4e902a5c846e2a875ec6583a6160e",
+      "score": "assets_source/music/original-20261024/output/scores/02_Rain_letter.json",
+      "midi": "assets_source/music/original-20261024/output/scores/02_Rain_letter.mid",
+      "sampleRate": 48000,
+      "channels": 2,
+      "frames": 5120000,
+      "durationSeconds": 106.666667,
+      "loopEntireFile": true,
+      "quality": {
+        "path": "loops/02_Rain_letter_loop.ogg",
+        "bytes": 1602601,
+        "sha256": "4ddf79e35b116e2bc168a877d39fb44ad0c4e902a5c846e2a875ec6583a6160e",
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 5120000,
+        "seconds": 106.666667,
+        "finite": true,
+        "samplePeakDbfs": -7.1313,
+        "rmsDbfs": -23.2232,
+        "integratedLufs": -20.98,
+        "truePeakDbtp": -7.12,
+        "loudnessRangeLu": 4.1,
+        "loopBoundaryDelta": 0.003424249589443207,
+        "humanListening": "pending"
+      },
+      "humanListening": "pending",
+      "bindings": [
+        {
+          "node": "s04_gate",
+          "registry": "game/data/story.json"
+        }
+      ],
+      "losslessLoopSource": {
+        "path": "assets_source/music/original-20261024/rain_letter.flac",
+        "sha256": "d6449b26d18c022778883e732a93f2fe36638b5c7913ddeaea6c24d954146d53",
+        "pcmBits": 16,
+        "note": "Native authoring loop reference, quantized to 16-bit PCM; runtime OGG and delivered 24-bit full masters are unchanged."
+      }
+    }
+  ]
+}

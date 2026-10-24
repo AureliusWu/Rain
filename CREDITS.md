@@ -23,3 +23,8 @@
 - v1.0 初始正文精修候选：40 处无配音正文精修，保留 560 个台词 ID、16 条路线和 17 句录音文字；12 份新版本场景请求保留原请求与逐句修改。图像、录音和许可沿用已登记资产，不改变来源或版权声明。
 
 - v1.0 语音升级：17 句关键台词（57.360 秒）全部改用免费开源 Qwen3-TTS-12Hz-1.7B-CustomVoice / Serena / Chinese。官方预设音色，无现实人物参考或克隆。模型和 qwen-tts 0.1.1 代码采用 Apache-2.0，见 licenses/Qwen3-TTS-Apache-2.0.txt；https://github.com/QwenLM/Qwen3-TTS ，https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice 。固定模型提交、逐句指令、源 WAV、响度处理和独立 ASR 记录保留；旧版录音归档，玩家包不含模型或生成依赖。自动文字和信号检查不代表真人试听。
+
+
+## 2026-10-24 原创纯音乐
+
+旋律、和声、配器与 MIDI 为项目创作。乐器音色使用 S. Christian Collins 的 GeneralUser GS 2.0.3，保留 GeneralUser-GS-LICENSE.txt；不含演唱或合唱音色。

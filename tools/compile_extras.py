@@ -22,6 +22,8 @@ MUSIC_TITLES = (
     ('unspoken_theme', '未说出口'),
     ('next_message_theme', '下一条消息'),
     ('cafe_photo_theme', '把今天说清楚'),
+    ('rain_platform', '雨后的站台'),
+    ('rain_letter', '留到天亮的信'),
 )
 
 def render_extras(story, assets):

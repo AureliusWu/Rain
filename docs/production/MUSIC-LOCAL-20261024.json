@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "project": "Rain",
+  "version": "1.7.0",
+  "date": "2026-10-24",
+  "status": "passed-local",
+  "baselineCommit": "95a28930189da5c5e15113159b54920d71b3013c",
+  "checks": {
+    "authoringPython": {
+      "passed": 260
+    },
+    "audio": {
+      "decodedRuntimeFiles": 316,
+      "errors": 0
+    },
+    "assets": {
+      "count": 390,
+      "errors": 0
+    },
+    "sharedAndPwaUnit": {
+      "passed": 14
+    },
+    "sharedManifest": {
+      "files": 15,
+      "entries": 92,
+      "filesInAssets": 230,
+      "missingSources": 0
+    }
+  },
+  "newTracks": [
+    {
+      "id": "rain-platform",
+      "runtime": "game/audio/bgm/rain-platform.ogg",
+      "sha256": "d54ec909b8141f7e67b8f295c8792e47a1bc2d3363ad7d9e421537f801c98893",
+      "durationSeconds": 98.461333
+    },
+    {
+      "id": "rain-letter",
+      "runtime": "game/audio/bgm/rain-letter.ogg",
+      "sha256": "4ddf79e35b116e2bc168a877d39fb44ad0c4e902a5c846e2a875ec6583a6160e",
+      "durationSeconds": 106.666667
+    }
+  ],
+  "pending": [
+    "current-version actual Windows package tests",
+    "current-version official WASM and public PWA",
+    "public release and file readback",
+    "human listening and physical device review"
+  ]
+}

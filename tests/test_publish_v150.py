@@ -32,7 +32,7 @@ class CurrentPublicationTests(unittest.TestCase):
             human_pending=publication.HUMAN_PENDING, unresolved_machine_issues=[],
             suites={scope: suite(plan) for scope, plan in plans.items()}, screenshots=shots, screenshots_count=len(shots),
             voice_smoke=dict(status='passed', iterations=[suite(prefix_plan(plans['source']))]*2),
-            extras=dict(images=12, music_tracks=4), upgrade=dict(status='passed', package_sha256=dict(current=publication.digest(cls.package))),
+            extras=dict(images=12, music_tracks=6), upgrade=dict(status='passed', package_sha256=dict(current=publication.digest(cls.package))),
             package=dict(file=cls.package.name, sha256=publication.digest(cls.package), size_in_bytes=cls.package.stat().st_size,
                          crc='passed', assets_checked=len(assets), test_scripts_in_original_zip=False))
 

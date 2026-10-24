@@ -309,6 +309,11 @@ def render_tests(story):
               playing('voice', recordings[dialogue['q02_honest_l002']['voice']]),
               at_line('s04_waiting_l019'), '    pause 0.1', playing('sound', 'audio/sfx/message_ping.ogg'), '']
 
+    lines += ['testcase original_instrumental_scene_cues:', at_line('s01_platform_l001'),
+              playing('music', 'audio/bgm/rain-platform.ogg')]
+    lines += choose('q01_care') + choose('q02_honest')
+    lines += [at_line('s04_open_l001'), playing('music', 'audio/bgm/rain-letter.ogg'), '']
+
     lines += ['testcase audio_true_ending:'] + choose('q01_care')
     lines += [at_line('s03_letter_l001'),
               '    pause until eval renpy.music.get_playing(channel="music") == "audio/bgm/unspoken_theme.ogg"',
@@ -385,7 +390,7 @@ def render_tests(story):
     true_route, normal_route = report['routes'][:2]
     lines += ['testcase late_save_load_true:'] + choose('q01_care')
     lines += save_restore('s02_boxes_l026', 'before-cg', true_route, 1, 'station', 'normal',
-                          'audio/bgm/rain_theme.ogg', 'audio/sfx/rain_ambience.ogg')
+                          'audio/bgm/rain-platform.ogg', 'audio/sfx/rain_ambience.ogg')
     lines += save_restore('s03_letter_l001', 'letter-cg', true_route, 1, 'unsent_letter', None,
                           'audio/bgm/unspoken_theme.ogg', 'audio/sfx/rain_ambience.ogg')
     lines += choose('q02_honest')
@@ -435,7 +440,7 @@ def render_tests(story):
               '    click id "menu_start"', '    advance until screen "choice"',
               '    assert eval affection == 0 and trust == 0 and not truth_known and last_ending == ""',
               f'    assert eval visited_scenes == {saved_path!r}',
-              playing('music', 'audio/bgm/rain_theme.ogg'),
+              playing('music', 'audio/bgm/rain-platform.ogg'),
               playing('ambient', 'audio/sfx/rain_ambience.ogg')]
     for identity in normal_route['choices']:
         lines += choose(identity)

@@ -69,7 +69,7 @@ screen extras_music_room_screen():
 
     use game_menu("音乐鉴赏"):
         vbox:
-            spacing 22
+            spacing 12
             use extras_tabs("music")
             hbox:
                 spacing 48
@@ -79,7 +79,7 @@ screen extras_music_room_screen():
             for identity, title, filename, duration in extras_music:
                 frame:
                     background "#153342dd"
-                    padding (24, 18)
+                    padding (24, 8)
                     xsize 1320
                     hbox:
                         spacing 30
