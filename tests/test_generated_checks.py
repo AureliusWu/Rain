@@ -7,9 +7,26 @@ import tempfile
 import unittest
 
 from tools.story_model import ROOT
+from tools.story_model import load_story
+from tools.compile_tests import render_tests
 
 
 class GeneratedCheckTests(unittest.TestCase):
+    def test_choice_save_expects_the_latest_authored_scene_music(self):
+        story = load_story()
+        next(n for n in story['nodes'] if n['id'] == 's01_platform')['bgm'] = 'unspoken_theme'
+        generated = render_tests(story)
+        save_test = generated.split('testcase save_load_and_restart:')[1].split('testcase ')[0]
+        self.assertIn("renpy.music.get_playing(channel=\"music\") == 'audio/bgm/unspoken_theme.ogg'", save_test)
+
+    def test_choice_save_expects_line_music_when_it_overrides_the_scene(self):
+        story = load_story()
+        node = next(n for n in story['nodes'] if n['id'] == 's01_platform')
+        node['lines'][-1]['bgm'] = 'next_message_theme'
+        generated = render_tests(story)
+        save_test = generated.split('testcase save_load_and_restart:')[1].split('testcase ')[0]
+        self.assertIn("renpy.music.get_playing(channel=\"music\") == 'audio/bgm/next_message_theme.ogg'", save_test)
+
     def check_stale(self, module, relative_path):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)

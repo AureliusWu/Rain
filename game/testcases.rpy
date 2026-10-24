@@ -987,7 +987,7 @@ testcase save_load_and_restart:
     assert eval (visited_scenes == ['p00_entry', 's01_arrival', 's01_platform', 's02_reunion'])
     assert eval (affection == 0 and trust == 0 and not truth_known)
     assert eval renpy.get_attributes("heroine") == ('normal',)
-    assert eval renpy.music.get_playing(channel="music") == "audio/bgm/rain_theme.ogg"
+    assert eval renpy.music.get_playing(channel="music") == 'audio/bgm/rain-platform.ogg'
     assert eval renpy.music.get_playing(channel="ambient") == "audio/sfx/rain_ambience.ogg"
     run MainMenu(confirm=False)
     click id "menu_start"
@@ -1106,12 +1106,14 @@ testcase key_voice_and_sound_cues:
 
 testcase original_instrumental_scene_cues:
     advance until "她的纸袋贴着椅背，底下垫了一张报纸。雨飘进来时，她先扶住袋口，才看我一眼。"
+    pause until eval renpy.music.get_playing(channel="music") == "audio/bgm/rain-platform.ogg"
     assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/rain-platform.ogg'
     advance until screen "choice"
     click "把干燥的位置让给她，问候近况"
     advance until screen "choice"
     click "告诉她：这封信是我写的"
     advance until "你这次回来，原本只安排了取东西？"
+    pause until eval renpy.music.get_playing(channel="music") == "audio/bgm/rain-letter.ogg"
     assert eval renpy.music.get_playing(channel='music') == 'audio/bgm/rain-letter.ogg'
 
 testcase audio_true_ending:

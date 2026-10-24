@@ -13,6 +13,12 @@ const reports = path.resolve('reports/pwa');
 const expectedVersion = (await fs.readFile('VERSION', 'utf8')).trim();
 const buildMetadata = JSON.parse(await fs.readFile('reports/web-build.json', 'utf8'));
 assert.equal(buildMetadata.version, expectedVersion);
+// v1.6.0 used 99,243,438 bytes; the two original OGG loops add 3,057,195.
+// Keep a bounded 105 MB delivery budget without reducing the music quality.
+const offlineByteBudget = 105_000_000;
+assert.ok(Number.isSafeInteger(buildMetadata.offline_bytes) && buildMetadata.offline_bytes > 0);
+assert.ok(buildMetadata.offline_bytes < offlineByteBudget,
+    `Offline payload ${buildMetadata.offline_bytes} exceeds ${offlineByteBudget} bytes`);
 await fs.mkdir(reports, {recursive:true});
 // Refuse a truncated or stale expanded build before asking the WASM engine to boot.
 const workerText = await fs.readFile(path.join(root, 'service-worker.js'), 'utf8');
@@ -245,10 +251,9 @@ try {
     await failed.close();
     assert.equal(errors.length,0);
     const offlineBytes = buildMetadata.offline_bytes;
-    assert.ok(offlineBytes < 100_000_000);
     assert.ok(samples.every(sample=>sample.milliseconds<120000));
     const report={status:'passed',engine:'RenPy 8.5.3 official WASM',version:expectedVersion,checks,samples,
-        first_baseline:true,budgets:{offline_bytes:100000000,boot_milliseconds:120000},offline_bytes:offlineBytes,
+        first_baseline:true,budgets:{offline_bytes:offlineByteBudget,boot_milliseconds:120000},offline_bytes:offlineBytes,
         screenshots,errors,requests_outside_application:requests.filter(request=>!request.startsWith('/Rain/')&&!request.startsWith('/nested/Rain/')&&!request.startsWith('/foreign-')),
         limits:['Physical device installation and human listening remain separate acceptance.','Smoke exercises beginning and native save export; all 16 full state routes are checked by native Windows suite.']};
     await fs.writeFile(path.join(reports,'acceptance.json'),JSON.stringify(report,null,2)+'\n');
