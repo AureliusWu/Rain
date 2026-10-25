@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-25",
+  "method": "current runtime bytes, complete SoundFile decode, finite samples, peak and loop boundary; no human listening claimed",
+  "tracks": [
+    {
+      "id": "rain-platform",
+      "runtime": "game/audio/bgm/rain-platform.ogg",
+      "sha256": "d54ec909b8141f7e67b8f295c8792e47a1bc2d3363ad7d9e421537f801c98893",
+      "frames": 4726144,
+      "sampleRate": 48000,
+      "channels": 2,
+      "seconds": 98.46133333333333,
+      "finite": true,
+      "samplePeakDbfs": -8.221261978149414,
+      "loopBoundaryDelta": 8.419668301939964e-05
+    },
+    {
+      "id": "rain-letter",
+      "runtime": "game/audio/bgm/rain-letter.ogg",
+      "sha256": "4ddf79e35b116e2bc168a877d39fb44ad0c4e902a5c846e2a875ec6583a6160e",
+      "frames": 5120000,
+      "sampleRate": 48000,
+      "channels": 2,
+      "seconds": 106.66666666666667,
+      "finite": true,
+      "samplePeakDbfs": -7.131324291229248,
+      "loopBoundaryDelta": 0.0034242458641529083
+    }
+  ]
+}
