@@ -1,0 +1,42 @@
+{
+  "project": "Rain",
+  "runtimeCommit": "1d412784ebea607d1cb9c6f613ddfc9f8a1fa937",
+  "catalogSha256": "9897689dbe31edae93166e707ad266bc39c40723748dc6347f5125dda037a278",
+  "checks": [
+    "desktop: initial full catalog stays pending",
+    "desktop: real local audio decode, play and stop on navigation",
+    "desktop: search, editable notes and isolated persistence",
+    "desktop: JSON export, exact-version import and rejected foreign IDs",
+    "desktop: status/priority filters, real image and no horizontal overflow",
+    "desktop: zero page errors; initial pending state restored",
+    "phone: initial full catalog stays pending",
+    "phone: real local audio decode, play and stop on navigation",
+    "phone: search, editable notes and isolated persistence",
+    "phone: JSON export, exact-version import and rejected foreign IDs",
+    "phone: status/priority filters, real image and no horizontal overflow",
+    "phone: zero page errors; initial pending state restored",
+    "file URL: standalone page loads local audio and artwork without a server"
+  ],
+  "screenshots": [
+    {
+      "path": "review-desktop.png",
+      "sha256": "37691f528e052c11c2ceef36f278b81d3c3994ac8c70fdde7baf627353fc44de",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "path": "review-phone.png",
+      "sha256": "871a8794ffddfc97d4174da042b0b8604e11831de1285732f7c0389beec99591",
+      "viewport": {
+        "width": 412,
+        "height": 915
+      }
+    }
+  ],
+  "browser": "153.0.8010.0",
+  "passed": 13,
+  "humanListening": false,
+  "physicalDevice": false
+}

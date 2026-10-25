@@ -1,0 +1,70 @@
+{
+  "schema": 1,
+  "date": "2026-10-22",
+  "project": "Rain",
+  "targetVersion": "1.6.0",
+  "baselineCommit": "e4f428072090d8a49c894b80d962bf07df6c1c4a",
+  "status": "released-and-verified",
+  "gates": {
+    "implementation": "passed",
+    "localValidation": "passed",
+    "windowsRuntime": "passed",
+    "pwaRuntime": "passed",
+    "publicRelease": "passed",
+    "publicReadback": "passed",
+    "fourGameCoexistence": "passed"
+  },
+  "humanReview": "pending-user-consolidated",
+  "evidence": [
+    {
+      "commit": "115dac638edf57f4baf027ce99bd5b7594da5272",
+      "scope": "cross-device-help-and-native-regression-checkpoint",
+      "pythonTests": 246,
+      "nativeInteractionExecution": "not-run-locally"
+    },
+    {
+      "scope": "current-source-authoring-validation",
+      "command": "python -m tools.validate; python -m unittest discover -s tests -q",
+      "result": "passed",
+      "pythonTests": 252,
+      "note": "All validators passed; final full Python run also includes the new six v1.6.0 publication contract tests."
+    },
+    {
+      "scope": "shared-contract-materials-and-offline-units",
+      "result": "passed",
+      "nodeTests": 14,
+      "sharedFiles": 15,
+      "materials": 92
+    },
+    {
+      "scope": "platform-plans",
+      "nativeCases": 39,
+      "nativeAssertions": 521,
+      "nativeScreenshots": 91,
+      "pwaChecks": 18,
+      "execution": "passed-current-commit-ci"
+    },
+    {
+      "scope": "full-runtime-media",
+      "command": "python tools/production/validate_runtime.py --require-complete --decode",
+      "result": "passed",
+      "dialogue": 306,
+      "newRuntimeImages": 12,
+      "humanListening": false
+    },
+    {
+      "kind": "final-release-closure",
+      "path": "docs/production/PUBLISHED-v1.6.0.json",
+      "runtimeCommit": "b820f868e4fe10a9d74d2a35769696a0b1550ef6",
+      "platforms": "actual Windows and public PWA",
+      "fourGamesCiRun": 39972929371
+    }
+  ],
+  "blockers": [],
+  "updated": "2026-10-23",
+  "runtimeCommit": "b820f868e4fe10a9d74d2a35769696a0b1550ef6",
+  "updatedAt": "2026-10-23T15:07:34.468305+00:00",
+  "resolvedBlockers": [
+    "Current Rain checkout has no RenPy SDK or built WASM package. Native lint, source/EXE interaction, upgrade/restart and actual WASM/PWA interaction remain pending same-commit CI."
+  ]
+}

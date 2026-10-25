@@ -10,7 +10,7 @@
   "publicPwaRun": 40090776449,
   "publicPwaConclusion": "success",
   "browserSummary": null,
-  "nativeSummary": null,
+  "nativeSummary": "本轮 262 项通过，作者验证 390 项资产、73 张含 GUI 图像和 316 个音频解码无错误。未变化的精确发行源码 / Windows EXE 各 40 用例、523 断言、91 张内部截图，18 项 WASM 检查与真实旧档升级已有冻结证据。本轮未冒充重新运行旧 Windows 全套。",
   "publicReadback": {
     "schema": 1,
     "checkedAt": 1792890067.8283656,
@@ -58,19 +58,137 @@
     "status": "passed"
   },
   "sameOrigin": {
-    "status": "passed",
-    "run": 40148998570,
-    "attempt": 2,
-    "expectedVersions": {
-      "Circuit": "1.9.0",
+    "schema": 1,
+    "checked_at": "2026-10-25T06:26:36.168286+00:00",
+    "expected_versions": {
+      "Circuit": "1.10.1",
       "NetLove": "1.1.1",
-      "Healing": "1.5.2",
+      "Healing": "1.5.4",
       "Rain": "1.7.0"
     },
-    "totalCachedFiles": 1257,
-    "pageErrors": []
+    "status": "passed",
+    "installs": [
+      {
+        "game": "Circuit",
+        "version": "1.10.1",
+        "worker": {
+          "scope": "https://aureliuswu.github.io/Circuit/",
+          "active": "https://aureliuswu.github.io/Circuit/sw.js",
+          "controller": "https://aureliuswu.github.io/Circuit/sw.js"
+        },
+        "own_cache_entries": {
+          "workbox-precache-v2-https://aureliuswu.github.io/Circuit/": 493
+        },
+        "prior_caches_preserved": true,
+        "prior_save_states_preserved": true
+      },
+      {
+        "game": "NetLove",
+        "version": "1.1.1",
+        "worker": {
+          "scope": "https://aureliuswu.github.io/NetLove/",
+          "active": "https://aureliuswu.github.io/NetLove/sw.js",
+          "controller": "https://aureliuswu.github.io/NetLove/sw.js"
+        },
+        "own_cache_entries": {
+          "netlove-v2:https%3A%2F%2Faureliuswu.github.io%2FNetLove%2F:aaf7b2e55977b0": 260
+        },
+        "prior_caches_preserved": true,
+        "prior_save_states_preserved": true
+      },
+      {
+        "game": "Healing",
+        "version": "1.5.4",
+        "worker": {
+          "scope": "https://aureliuswu.github.io/Healing/",
+          "active": "https://aureliuswu.github.io/Healing/sw.js",
+          "controller": "https://aureliuswu.github.io/Healing/sw.js"
+        },
+        "own_cache_entries": {
+          "moist-healing-v2:https%3A%2F%2Faureliuswu.github.io%2FHealing%2F:7854d1327e6175": 478
+        },
+        "prior_caches_preserved": true,
+        "prior_save_states_preserved": true
+      },
+      {
+        "game": "Rain",
+        "version": "1.7.0",
+        "worker": {
+          "scope": "https://aureliuswu.github.io/Rain/",
+          "active": "https://aureliuswu.github.io/Rain/service-worker.js",
+          "controller": "https://aureliuswu.github.io/Rain/service-worker.js"
+        },
+        "own_cache_entries": {
+          "rain-pwa:/Rain/:f83e74ac401a19dd622d9cd6": 37
+        },
+        "prior_caches_preserved": true,
+        "prior_save_states_preserved": true
+      }
+    ],
+    "offline": [
+      {
+        "game": "Circuit",
+        "version": "1.10.1",
+        "worker": {
+          "scope": "https://aureliuswu.github.io/Circuit/",
+          "active": "https://aureliuswu.github.io/Circuit/sw.js",
+          "controller": "https://aureliuswu.github.io/Circuit/sw.js"
+        },
+        "cache_inventory_preserved": true,
+        "react_save_states_preserved": true
+      },
+      {
+        "game": "NetLove",
+        "version": "1.1.1",
+        "worker": {
+          "scope": "https://aureliuswu.github.io/NetLove/",
+          "active": "https://aureliuswu.github.io/NetLove/sw.js",
+          "controller": "https://aureliuswu.github.io/NetLove/sw.js"
+        },
+        "cache_inventory_preserved": true,
+        "react_save_states_preserved": true
+      },
+      {
+        "game": "Healing",
+        "version": "1.5.4",
+        "worker": {
+          "scope": "https://aureliuswu.github.io/Healing/",
+          "active": "https://aureliuswu.github.io/Healing/sw.js",
+          "controller": "https://aureliuswu.github.io/Healing/sw.js"
+        },
+        "cache_inventory_preserved": true,
+        "react_save_states_preserved": true
+      },
+      {
+        "game": "Rain",
+        "version": "1.7.0",
+        "worker": {
+          "scope": "https://aureliuswu.github.io/Rain/",
+          "active": "https://aureliuswu.github.io/Rain/service-worker.js",
+          "controller": "https://aureliuswu.github.io/Rain/service-worker.js"
+        },
+        "cache_inventory_preserved": true,
+        "react_save_states_preserved": true
+      }
+    ],
+    "page_errors": [],
+    "scope": "Fresh Chromium profile; same-origin caches, real React autosaves and offline startup. Native Save/Load, Windows and physical devices are separate checks.",
+    "browser_version": "156.0.8078.4",
+    "cache_inventory_sha256": "a21a34ce8f8c69a8c130d3bdf96380fa2b795b5bc2b08d08f12c712e15949ccb",
+    "registrations": [
+      "https://aureliuswu.github.io/Circuit/",
+      "https://aureliuswu.github.io/Healing/",
+      "https://aureliuswu.github.io/NetLove/",
+      "https://aureliuswu.github.io/Rain/"
+    ],
+    "total_cached_files": 1268,
+    "verificationRun": 40169055016,
+    "runAttempt": 1
   },
   "finalWorkAccepted": false,
   "humanListeningClaimed": false,
-  "remaining": "P2：录音与音乐试听、完整逐句创作 / 演出审读、画面细节复核。P3：普通电脑 / DPI、实体设备和有效阅读计时。未发现新的 P0。"
+  "remaining": "P2：16 条既有 ASR 差异线索需结合原音确认；全篇录音演技、音乐 / 音效听感与演出节奏终审。P3：普通 Windows / DPI、实体设备和实际阅读计时。七处半身底边符合既有构图，不记成七张损坏图。",
+  "engineeringReleaseVerified": true,
+  "thisContinuation": "重新运行 262 项 Python 检查和作者验证，复核全部故事资源、原生编译及存档身份；结合正文逐场梳理重逢、合流和两个结局。本轮没有修改稳定运行代码或已录台词。最新四作同源测试另对公开 v1.7.0 实际安装、保存和断网重开。",
+  "completedGaps": "未发现新的启动、存档、路线或缺资源崩溃问题；纠正验收文档中跨项目归属及旧轮次统计的歧义。"
 }

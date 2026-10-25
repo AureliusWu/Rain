@@ -1,5 +1,7 @@
 # 雨停之前 / Before the Rain Stops
 
+**当前版本素材复核（2026-10-25）**：306处对白绑定、25图完整测量，客观错误0；审阅工具13项实际检查通过。[当前可试听目录](docs/production/quality-20261025/README.md)。全部素材仍保留独立人工审阅状态，历史记录不冒充新版意见。
+
 **当前发行 v1.7.0：Windows 离线 EXE + 同引擎官方 WebAssembly PWA。**
 
 [在线游玩](https://aureliuswu.github.io/Rain/) · [正式下载](https://github.com/AureliusWu/Rain/releases/tag/v1.7.0) · [Windows ZIP](https://github.com/AureliusWu/Rain/releases/download/v1.7.0/BeforeTheRainStops-1.7.0-win.zip) · [Web ZIP](https://github.com/AureliusWu/Rain/releases/download/v1.7.0/BeforeTheRainStops-1.7.0-web.zip) · [校验表](https://github.com/AureliusWu/Rain/releases/download/v1.7.0/SHA256SUMS.txt)
@@ -8,7 +10,7 @@
 
 ## v1.7.0 当前发行与本轮核验
 
-两首新增原创本地音乐已随 v1.7.0 发布；当前共六首运行曲。运行 / tag 固定于 `1d412784ebea607d1cb9c6f613ddfc9f8a1fa937`，源码与独立 EXE 各 40 用例 / 523 断言，18 项官方 WASM 检查通过。本轮重新下载四份公开附件并核对摘要 / ZIP CRC，四作 1,257 条缓存共同断网复验通过。
+两首新增原创本地音乐已随 v1.7.0 发布；当前共六首运行曲。运行 / tag 固定于 `1d412784ebea607d1cb9c6f613ddfc9f8a1fa937`，源码与独立 EXE 各 40 用例 / 523 断言，18 项官方 WASM 检查通过。本轮重新下载四份公开附件并核对摘要 / ZIP CRC，最新四作 1,268 条缓存共同断网复验通过。
 
 [按类型验收与剩余缺口](docs/production/ACCEPTANCE-20261025.md) · [本轮机器凭据](docs/production/VERIFIED-DELIVERY-20261025.json)。正式构建可交付；全量听感、创作审读与普通设备体验仍未最终验收。以下旧版记录保留其原日期。
 
