@@ -1,12 +1,18 @@
 # 雨停之前 / Before the Rain Stops
 
-**v1.6.0 玩家帮助与完整发行验收正式版：Windows 离线 EXE + 同引擎官方 WebAssembly PWA。**
+**当前发行 v1.7.0：Windows 离线 EXE + 同引擎官方 WebAssembly PWA。**
 
-[在线游玩](https://aureliuswu.github.io/Rain/) · [正式下载](https://github.com/AureliusWu/Rain/releases/tag/v1.6.0) · [Windows ZIP](https://github.com/AureliusWu/Rain/releases/download/v1.6.0/BeforeTheRainStops-1.6.0-win.zip) · [Web ZIP](https://github.com/AureliusWu/Rain/releases/download/v1.6.0/BeforeTheRainStops-1.6.0-web.zip) · [校验表](https://github.com/AureliusWu/Rain/releases/download/v1.6.0/SHA256SUMS.txt)
+[在线游玩](https://aureliuswu.github.io/Rain/) · [正式下载](https://github.com/AureliusWu/Rain/releases/tag/v1.7.0) · [Windows ZIP](https://github.com/AureliusWu/Rain/releases/download/v1.7.0/BeforeTheRainStops-1.7.0-win.zip) · [Web ZIP](https://github.com/AureliusWu/Rain/releases/download/v1.7.0/BeforeTheRainStops-1.7.0-web.zip) · [校验表](https://github.com/AureliusWu/Rain/releases/download/v1.7.0/SHA256SUMS.txt)
 
 雨夜旧车站，两位久未联系的旧友，和一封没有寄出的信。六章、24 个叙事场景、四次选择、16 条路线与 Normal / True 两个结局；560 个台词 ID 与原有 v1 存档身份保持。
 
-## v1.6.0 玩家帮助与正式验收
+## v1.7.0 当前发行与本轮核验
+
+两首新增原创本地音乐已随 v1.7.0 发布；当前共六首运行曲。运行 / tag 固定于 `1d412784ebea607d1cb9c6f613ddfc9f8a1fa937`，源码与独立 EXE 各 40 用例 / 523 断言，18 项官方 WASM 检查通过。本轮重新下载四份公开附件并核对摘要 / ZIP CRC，四作 1,257 条缓存共同断网复验通过。
+
+[按类型验收与剩余缺口](docs/production/ACCEPTANCE-20261025.md) · [本轮机器凭据](docs/production/VERIFIED-DELIVERY-20261025.json)。正式构建可交付；全量听感、创作审读与普通设备体验仍未最终验收。以下旧版记录保留其原日期。
+
+## v1.6.0 历史玩家帮助与正式验收
 
 桌面、手机与 PWA 均可从主菜单或阅读菜单打开帮助，查看触屏 / 键鼠、保存与原生备份、回看重听、离线和更新说明。打开及返回沿用原生菜单，保留当前台词、历史和选择。
 
@@ -14,12 +20,12 @@ Windows 39913692426、官方 WASM / PWA 39913692408、原包发行 39919945671 �
 
 **发布后素材审阅（2026-10-23）**：发布后素材质检：306 条对白、25 张美术全部完成摘要 / 解码与信号测量，客观错误为 0；23 项保留为人工优先审阅线索。逐句试听、画面查看、独立备注及版本绑定的 JSON 导入 / 导出已通过桌面、手机视口与本地文件检查。 [结果与审阅工具](docs/production/quality-20261023/README.md)。
 
-## 当前声音与画面（v1.5.0 接入）
+## 当前声音与画面（v1.5.0 起接入）
 
 - 全分支 306 条人物对白绑定离线录音，包括选择回应；原 17 句录音保留原字节，旁白保留文字。
 - 当前台词、已读历史和收藏支持原录音重听；自动阅读等待当前语音，独立语音音量继续使用原生设置。
 - 新增玩家六表情的人物鉴赏与六幅按实际台词触发的事件 CG；玩家立绘用于鉴赏，正文保持原有第一人称表现。
-- 十二幅剧情画面与四首音乐沿实际阅读解锁；场景、CG、立绘、录音和许可随两个客户端提供。
+- 十二幅剧情画面与六首音乐沿实际阅读解锁；场景、CG、立绘、录音和许可随两个客户端提供。
 - 收藏可按关键词、人物与章节交叉检索；阅读、重听、删除和跨端导入保留真实剧情位置及删除记录。
 - PWA 逐文件校验长度与 SHA-256，完整下载成功后才显示离线就绪；更新等所有旧窗口关闭后接管。
 

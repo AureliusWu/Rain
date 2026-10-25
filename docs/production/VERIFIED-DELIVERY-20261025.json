@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "date": "2026-10-25",
+  "project": "Rain",
+  "type": "恋爱视觉小说 / Galgame",
+  "version": "1.7.0",
+  "runtimeCommit": "1d412784ebea607d1cb9c6f613ddfc9f8a1fa937",
+  "buildRun": 40090776457,
+  "buildConclusion": "success",
+  "publicPwaRun": 40090776449,
+  "publicPwaConclusion": "success",
+  "browserSummary": null,
+  "nativeSummary": null,
+  "publicReadback": {
+    "schema": 1,
+    "checkedAt": 1792890067.8283656,
+    "repo": "Rain",
+    "version": "v1.7.0",
+    "runtimeCommit": "1d412784ebea607d1cb9c6f613ddfc9f8a1fa937",
+    "releaseUrl": "https://github.com/AureliusWu/Rain/releases/tag/v1.7.0",
+    "publicAssets": [
+      {
+        "name": "BeforeTheRainStops-1.7.0-web.zip",
+        "size": 76608767,
+        "sha256": "86c7b57443bb2053aaabb6f4053b46fcb66d27a952d32c9cbe78b3f2193544ae",
+        "githubDigestMatches": true,
+        "zipCrcPassed": true,
+        "files": 37,
+        "forbiddenDevelopmentFiles": []
+      },
+      {
+        "name": "BeforeTheRainStops-1.7.0-win.zip",
+        "size": 90162492,
+        "sha256": "24cd73534748da207c5f9eb18cdd73569f796708b9354c7e8c7a0397b713b423",
+        "githubDigestMatches": true,
+        "zipCrcPassed": true,
+        "files": 1795,
+        "forbiddenDevelopmentFiles": []
+      },
+      {
+        "name": "RELEASE_METADATA.json",
+        "size": 18639,
+        "sha256": "7f394aa8bb30f7554b613d166cb11e97994beee9e8e36cfbee47cccb200100eb",
+        "githubDigestMatches": true
+      },
+      {
+        "name": "SHA256SUMS.txt",
+        "size": 286,
+        "sha256": "5ebfeb4ba3c41d6a72f8eed3ef68102cde6f03fb61d1cdbe84edbc4a394f84ef",
+        "githubDigestMatches": true
+      }
+    ],
+    "checksumEntries": {
+      "BeforeTheRainStops-1.7.0-web.zip": true,
+      "BeforeTheRainStops-1.7.0-win.zip": true,
+      "RELEASE_METADATA.json": true
+    },
+    "status": "passed"
+  },
+  "sameOrigin": {
+    "status": "passed",
+    "run": 40148998570,
+    "attempt": 2,
+    "expectedVersions": {
+      "Circuit": "1.9.0",
+      "NetLove": "1.1.1",
+      "Healing": "1.5.2",
+      "Rain": "1.7.0"
+    },
+    "totalCachedFiles": 1257,
+    "pageErrors": []
+  },
+  "finalWorkAccepted": false,
+  "humanListeningClaimed": false,
+  "remaining": "P2：录音与音乐试听、完整逐句创作 / 演出审读、画面细节复核。P3：普通电脑 / DPI、实体设备和有效阅读计时。未发现新的 P0。"
+}
