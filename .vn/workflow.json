@@ -1,0 +1,59 @@
+{
+  "schema": "vn-workflow-profile-v1",
+  "workflowVersion": "1.0.0",
+  "repository": "AureliusWu/Rain",
+  "kind": "game",
+  "engine": "Ren’Py 8.5.3 / official Web WASM",
+  "releaseAuthority": "native-project-gates",
+  "sources": [
+    "game/data/story.json"
+  ],
+  "requiredPaths": [
+    "AGENTS.md",
+    "docs/production/VN-WORKFLOW-R1.md",
+    "docs/PROJECT.md",
+    "docs/production/PROJECT-ACCEPTANCE.md",
+    "tools/validate.py",
+    "tools/compile_story.py"
+  ],
+  "commands": [
+    {
+      "id": "authoring",
+      "argv": [
+        "python3",
+        "-m",
+        "tools.validate"
+      ]
+    },
+    {
+      "id": "graph",
+      "argv": [
+        "node",
+        "scripts/vn-contract.mjs",
+        "game/data/story.json"
+      ]
+    },
+    {
+      "id": "materials",
+      "argv": [
+        "node",
+        "scripts/vn-materials.mjs",
+        "verify"
+      ]
+    },
+    {
+      "id": "pwa",
+      "argv": [
+        "npm",
+        "run",
+        "test:pwa"
+      ]
+    }
+  ],
+  "workflows": [
+    ".github/workflows/game.yml",
+    ".github/workflows/web.yml"
+  ],
+  "identityNotes": "JSON 编译标准 Ren’Py DSL；状态路线与原生 save_directory/persistent 保持。",
+  "sharedManifest": "docs/production/REUSE-MANIFEST.json"
+}
