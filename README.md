@@ -1,5 +1,9 @@
 # 雨停之前 / Before the Rain Stops
 
+<!-- project-badges:start -->
+[![Version](https://img.shields.io/github/v/tag/AureliusWu/Rain?sort=semver&style=flat-square&label=version)](https://github.com/AureliusWu/Rain/tags) [![Build](https://github.com/AureliusWu/Rain/actions/workflows/release-v10.yml/badge.svg?branch=main)](https://github.com/AureliusWu/Rain/actions/workflows/release-v10.yml) [![Last commit](https://img.shields.io/github/last-commit/AureliusWu/Rain?style=flat-square)](https://github.com/AureliusWu/Rain/commits/main) [![License](https://img.shields.io/github/license/AureliusWu/Rain?style=flat-square)](LICENSE)
+<!-- project-badges:end -->
+
 **当前版本素材复核（2026-10-25）**：306处对白绑定、25图完整测量，客观错误0；审阅工具13项实际检查通过。[当前可试听目录](docs/production/quality-20261025/README.md)。全部素材仍保留独立人工审阅状态，历史记录不冒充新版意见。
 
 **当前发行 v1.7.0：Windows 离线 EXE + 同引擎官方 WebAssembly PWA。**
