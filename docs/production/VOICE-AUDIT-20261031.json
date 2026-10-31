@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "project": "Rain",
+  "sourceCommit": "e89f24bfbf68b335bd8f5037103c53d5287d8f47",
+  "currentSourceFiles": [
+    {
+      "path": "game/data/story.json",
+      "sha256": "b31768d93d2df436447a4fc4933dfbb78f0623e3d6aa83865ffe625a89751784"
+    }
+  ],
+  "semanticSha256": "43ef805dc1a881d5fc4736841c0ebee358707ee7db17982ece91fb23437104dd",
+  "retainedPlanSha256": "e7e6be5dd43da9df7a9104d5fe20e3d501a40344674b7a0ffcdd4bf0bfaa7357",
+  "target": 306,
+  "accepted": 306,
+  "decoded": true,
+  "seedAndMerge": "PASS",
+  "technicalStatus": "PASS",
+  "synthesized": 0,
+  "humanListening": false,
+  "runtimeInteraction": "NOT_RUN",
+  "release": "NOT_ASSESSED"
+}
