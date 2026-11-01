@@ -1,7 +1,7 @@
 # 雨停之前 / Before the Rain Stops
 
 <!-- project-badges:start -->
-[![Version](https://img.shields.io/github/v/tag/AureliusWu/Rain?sort=semver&style=flat-square&label=version)](https://github.com/AureliusWu/Rain/tags) [![Build](https://github.com/AureliusWu/Rain/actions/workflows/release-v10.yml/badge.svg?branch=main)](https://github.com/AureliusWu/Rain/actions/workflows/release-v10.yml) [![Last commit](https://img.shields.io/github/last-commit/AureliusWu/Rain?style=flat-square)](https://github.com/AureliusWu/Rain/commits/main) [![License](https://img.shields.io/github/license/AureliusWu/Rain?style=flat-square)](LICENSE)
+[![Version](https://img.shields.io/github/v/tag/AureliusWu/Rain?sort=semver&style=flat-square&label=version)](https://github.com/AureliusWu/Rain/tags) [![Build](https://github.com/AureliusWu/Rain/actions/workflows/game.yml/badge.svg?branch=main)](https://github.com/AureliusWu/Rain/actions/workflows/game.yml) [![Last commit](https://img.shields.io/github/last-commit/AureliusWu/Rain?style=flat-square)](https://github.com/AureliusWu/Rain/commits/main) [![License](https://img.shields.io/github/license/AureliusWu/Rain?style=flat-square)](LICENSE)
 <!-- project-badges:end -->
 
 当前正式版：`1.7.0`。Windows 离线版与 Web/PWA 使用同一剧情与存档身份。
