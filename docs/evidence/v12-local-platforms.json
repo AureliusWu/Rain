@@ -1,8 +1,9 @@
 {
   "schema_version": 1,
   "version": "1.2.0",
-  "recorded_utc": "2026-10-11T04:11:23.063596+00:00",
-  "status": "native_final_execution_pending",
+  "recorded_utc": "2026-10-11T04:26:35.328036+00:00",
+  "recorded_utc_scope": "Original local summary timestamp. Historical CI and public browser evidence were appended separately.",
+  "status": "local_zip_and_pwa_passed_with_source_warning",
   "engine": "RenPy 8.5.3.26051504 native and official WASM",
   "authoring": {
     "status": "passed",
@@ -108,7 +109,7 @@
       "version": "1.2.0",
       "web_zip_sha256": "e15b89f7b27aa0a546c0cd367ca6c89c65f24e08c58fcf2cc20b2b3697c86c13",
       "scope": "relative; supports /Rain/ and local test subpaths",
-      "browser_execution": "requires actual smoke test"
+      "browser_execution": "passed actual local browser smoke, including native narration/save/import/load"
     },
     "zip": {
       "name": "BeforeTheRainStops-1.2.0-web.zip",
@@ -116,28 +117,319 @@
       "sha256": "e15b89f7b27aa0a546c0cd367ca6c89c65f24e08c58fcf2cc20b2b3697c86c13",
       "scope": "local built candidate, distinct from later CI artifact bytes"
     },
-    "public_deployment": "pending exact CI artifact and real published browser smoke"
+    "public_deployment": {
+      "status": "passed",
+      "tested_production_commit": "36504476c7cde3fcc0a8052db3c8fa67962d5a39",
+      "workflow": {
+        "id": 38110847251,
+        "url": "https://github.com/AureliusWu/Rain/actions/runs/38110847251",
+        "conclusion": "success",
+        "jobs": [
+          {
+            "name": "web",
+            "conclusion": "success",
+            "startedAt": "2026-10-11T04:12:35Z",
+            "completedAt": "2026-10-11T04:15:43Z"
+          },
+          {
+            "name": "deploy",
+            "conclusion": "success",
+            "startedAt": "2026-10-11T04:15:47Z",
+            "completedAt": "2026-10-11T04:17:33Z"
+          }
+        ]
+      },
+      "revision": "ccea627ac1a018c57ea4abb5",
+      "offline_bytes": 73508979,
+      "zip": {
+        "bytes": 47885327,
+        "sha256": "379114c606157c51519ad6e998efd2340932b4a99c558c9e3a5aee62728166d5",
+        "matchesCiMetadata": true,
+        "crc": "PASS"
+      },
+      "ci_public": {
+        "status": "passed",
+        "target": "https://aureliuswu.github.io/Rain/",
+        "version": "1.2.0",
+        "revision": "ccea627ac1a018c57ea4abb5",
+        "checks": [
+          "public native menu, exact platform version/revision and own worker scope",
+          "actual public Start and native Save slot 1",
+          "disconnected public reopen, native Load and preserved saved scene"
+        ],
+        "online_milliseconds": 6098,
+        "offline_milliseconds": 3914,
+        "offline_samples_milliseconds": [
+          6124,
+          3914,
+          3746
+        ],
+        "exact_tested_artifact": true,
+        "errors": [],
+        "human_physical_device": false
+      },
+      "independent_public": {
+        "status": "passed",
+        "target": "https://aureliuswu.github.io/Rain/",
+        "version": "1.2.0",
+        "revision": "ccea627ac1a018c57ea4abb5",
+        "checks": [
+          "public native menu, exact platform version/revision and own worker scope",
+          "actual public Start and native Save slot 1",
+          "disconnected public reopen, native Load and preserved saved scene"
+        ],
+        "online_milliseconds": 20730,
+        "offline_milliseconds": 6177,
+        "offline_samples_milliseconds": [
+          6361,
+          6177,
+          6028
+        ],
+        "exact_tested_artifact": true,
+        "errors": [],
+        "human_physical_device": false
+      },
+      "scope": "Historical 2026-10-11 Linux CI artifact and matching public PWA Save, three offline reopens, and Load. Separate from local Windows-built Web bytes."
+    }
   },
   "windows_zip": {
     "name": "BeforeTheRainStops-1.2.0-win.zip",
     "bytes": 56383752,
     "sha256": "699f28b2ed7dee9996f661e12cc08ae82b9cec7d388d6876438e0c3bad75335a",
-    "scope": "local built candidate, distinct from later CI artifact bytes"
+    "scope": "local built candidate, distinct from later CI artifact bytes",
+    "static_audit": {
+      "status": "passed",
+      "sha256": "699f28b2ed7dee9996f661e12cc08ae82b9cec7d388d6876438e0c3bad75335a",
+      "bytes": 56383752,
+      "assets_checked": 85,
+      "entries": 1624,
+      "crc": "passed",
+      "no_author_files_or_test_injection": true,
+      "license_documents": [
+        "licenses/Kokoro-model-Apache-2.0.txt",
+        "licenses/SourceHanSans-OFL.txt",
+        "licenses/Qwen3-TTS-Apache-2.0.txt",
+        "licenses/RENPY.txt",
+        "LICENSE",
+        "CREDITS.md"
+      ],
+      "build_info": {
+        "info": {},
+        "time": 1791691142.281032,
+        "name": "雨停之前",
+        "version": "1.2.0"
+      }
+    }
   },
   "native_final": {
-    "status": "pending",
-    "source": "pending final conditional window harness",
-    "zip_exe": "pending final plan",
-    "cross_process": "pending",
-    "real_previous_saves": "pending exact v1.1.0 EXE writer/current reader",
-    "startup_3_before_3_after": "pending real v1.1.1 and v1.2.0 EXE processes",
+    "status": "zip_passed_source_single_run_warning",
+    "source": {
+      "status": "failed",
+      "expected_cases": 36,
+      "expected_assertions": 448,
+      "executed_cases": 36,
+      "passed_cases": 35,
+      "failed_cases": 1,
+      "executed_assertions": 443,
+      "passed_assertions": 442,
+      "failed_assertions": 1,
+      "skipped_cases": 0,
+      "not_run_cases": 0,
+      "test_seconds": 209.388,
+      "process": {
+        "timeout_seconds": 2400,
+        "elapsed_seconds": 211.155,
+        "timed_out": false,
+        "returncode": 1,
+        "scope": "native process only; required screenshots are checked separately"
+      },
+      "case": "restart_true_then_normal",
+      "line": "game/testcases.rpy:1422",
+      "failed_assertion": "renpy.music.get_playing(channel='music') == 'audio/bgm/rain_theme.ogg'",
+      "screenshots_accepted": false,
+      "stdout_sha256": "6abdfa0539e55ff778328b47468a7f4361e79dcb1c2089f9656d6a828d7c0ed2",
+      "scope": "Final frozen full source plan, independent staged project; failure preserved. Older reports/acceptance.json is not this run's PASS.",
+      "cause": "Unconfirmed timing hypothesis: ending has 2s fadeout, restart has 1s fadeout/fadein, mixer get_playing observes current real audio. Isolated follow-up did not reproduce the failure."
+    },
+    "zip_exe": {
+      "status": "passed",
+      "cases": 36,
+      "assertions": 448,
+      "failed": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "skipped": 0,
+      "not_run": 0,
+      "screenshots_checked": 82,
+      "native_1080": true,
+      "test_seconds": 225.591,
+      "process": {
+        "timeout_seconds": 2400,
+        "elapsed_seconds": 232.538,
+        "timed_out": false,
+        "returncode": 0,
+        "scope": "native process only; required screenshots are checked separately"
+      },
+      "stdout_sha256": "8ee8af0970ee77824a2683a74137d82fa7d4ca0cc511b031201db23b9fefc599",
+      "scope": "Real standalone EXE extracted from unchanged ZIP; tests injected only into isolated extraction"
+    },
+    "cross_process": {
+      "status": "passed",
+      "cases": 1,
+      "assertions": 16,
+      "failed": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "skipped": 0,
+      "not_run": 0,
+      "screenshots_checked": 3,
+      "native_1080": true,
+      "test_seconds": 6.045,
+      "process": {
+        "timeout_seconds": 120,
+        "elapsed_seconds": 9.64,
+        "timed_out": false,
+        "returncode": 0,
+        "scope": "native process only; required screenshots are checked separately"
+      },
+      "stdout_sha256": "de8a5e0b39db20c784aa811da2fce854baf74c8340d0eb750409b1e7c4e3d9ee"
+    },
+    "real_previous_saves": {
+      "status": "passed",
+      "previous_version": "1.1.0",
+      "current_version": "1.2.0",
+      "package_sha256": {
+        "previous": "a6ce022d23e5e88e3666d9806ca69a30077d52c56bf74820f4863f9ddc66fca0",
+        "current": "699f28b2ed7dee9996f661e12cc08ae82b9cec7d388d6876438e0c3bad75335a"
+      },
+      "writer": {
+        "cases": 1,
+        "assertions": 14,
+        "failed": 0,
+        "xfailed": 0,
+        "xpassed": 0,
+        "skipped": 0,
+        "not_run": 0,
+        "screenshots_checked": 3,
+        "native_1080": false
+      },
+      "reader": {
+        "cases": 2,
+        "assertions": 26,
+        "failed": 0,
+        "xfailed": 0,
+        "xpassed": 0,
+        "skipped": 0,
+        "not_run": 0,
+        "screenshots_checked": 4,
+        "native_1080": true
+      },
+      "original_packages_unmodified": true,
+      "human_listening": false,
+      "writer_test_seconds": 12.54,
+      "reader_test_seconds": 8.69,
+      "writer_process": {
+        "timeout_seconds": 300,
+        "elapsed_seconds": 21.263,
+        "timed_out": false,
+        "returncode": 0,
+        "scope": "native process only; required screenshots are checked separately"
+      },
+      "reader_process": {
+        "timeout_seconds": 300,
+        "elapsed_seconds": 16.881,
+        "timed_out": false,
+        "returncode": 0,
+        "scope": "native process only; required screenshots are checked separately"
+      },
+      "writer_stdout_sha256": "f251a2351246f428bf095f2f006638c4afc58eafb6d12e741ce4a30627722f29",
+      "reader_stdout_sha256": "b3e667bb892f8ba03e600fb0ce4e42b5e47fa758f152a390d8194fe2ddf2efea",
+      "scope": "Actual published 1.1.0 EXE writes representative voice/late-True saves and extras progress; current 1.2.0 EXE restores them"
+    },
+    "startup_3_before_3_after": {
+      "status": "passed",
+      "samples_per_package": 3,
+      "packages": [
+        {
+          "scope": "previous",
+          "zip": "BeforeTheRainStops-1.1.1-win.zip",
+          "sha256": "7f57b4f4d3f2cc4071d7e4d59ff6a2e3c7db0531b78477abae18804c47d6d35b",
+          "seconds": [
+            8.965,
+            11.054,
+            9.271
+          ],
+          "median_seconds": 9.271
+        },
+        {
+          "scope": "current",
+          "zip": "BeforeTheRainStops-1.2.0-win.zip",
+          "sha256": "699f28b2ed7dee9996f661e12cc08ae82b9cec7d388d6876438e0c3bad75335a",
+          "seconds": [
+            10.044,
+            9.543,
+            8.324
+          ],
+          "median_seconds": 9.543
+        }
+      ],
+      "median_ratio": 1.029,
+      "scope": "Separate Windows processes, main menu assertion, actual Start and first-scene assertion. Wall time includes test startup/exit; not pure first-frame latency.",
+      "hardware": "Same local Windows host; process-level DPI awareness; 1280x720 window; dummy audio",
+      "original_zips_unmodified": true,
+      "budget_seconds": 45,
+      "timing_warning": false
+    },
     "prefix": {
       "status": "passed",
       "cases": 6,
       "assertions": 103,
       "screenshots": 29,
       "iterations": 1,
-      "seconds": 48.492
+      "seconds": 48.492,
+      "plan_sha256": "2a0a6cda81b596edb58f39c52ec9340f5d74bc31f75e9f7214fd1437f4f717aa",
+      "scope": "One local iteration of final conditional window harness; distinct from CI's two iterations"
+    },
+    "restart_audio_diagnostic": {
+      "scope": "Diagnostic comparison, not complete acceptance",
+      "package_sha256": "699f28b2ed7dee9996f661e12cc08ae82b9cec7d388d6876438e0c3bad75335a",
+      "samples": [
+        {
+          "name": "original_unmodified_case",
+          "returncode": 0,
+          "process": {
+            "timeout_seconds": 100,
+            "elapsed_seconds": 26.781,
+            "timed_out": false,
+            "returncode": 0,
+            "scope": "native process only; required screenshots are checked separately"
+          },
+          "assertion_count_in_plan": 10,
+          "stdout_sha256": "7bebf6ab0e946c88e0db4b5b93ccf3db1dd1d060dcf4c0c0fc59ab74c1b0a5cf"
+        },
+        {
+          "name": "bounded_real_mixer_wait",
+          "returncode": 0,
+          "process": {
+            "timeout_seconds": 100,
+            "elapsed_seconds": 30.787,
+            "timed_out": false,
+            "returncode": 0,
+            "scope": "native process only; required screenshots are checked separately"
+          },
+          "assertion_count_in_plan": 10,
+          "stdout_sha256": "bdb081bb35c723b24adb25c6fde517163a837acfbe5848149ee47c4636acef0d"
+        }
+      ],
+      "original_zip_unmodified": true,
+      "original_case": "passed 1 case/10 assertions",
+      "bounded_wait_case": "passed 1 case/10 assertions with 3s timeout and unchanged real mixer assertions",
+      "bounded_wait_observed_seconds": 0.062,
+      "mixer_was_already_expected_before_wait": true,
+      "failure_reproduced": false,
+      "production_or_tracked_test_plan_changed": false,
+      "limit": "Focused diagnostic PASS does not overwrite the full source run failure or establish a verified root cause.",
+      "combined_log_sha256": "da13ef4a565e9d1616bb0598dbf990638de04301b18526e824f2362766e2e69d"
     }
   },
   "local_display": {
@@ -156,12 +448,27 @@
   "limits": [
     "PWA is a first local baseline, not a performance regression comparison.",
     "Raw offline payload about73.5MB and initial download cost retain WARN.",
-    "Windows uses dummy audio; human listening, reading timing, ordinary hardware/DPI, physical PWA installation and final creative approval remain pending."
+    "Windows uses dummy audio; human listening, reading timing, ordinary hardware/DPI, physical PWA installation and final creative approval remain pending.",
+    "Final local full source had one restart/music assertion failure; complete ZIP and isolated diagnostic PASS do not overwrite it. CI source evidence is recorded separately."
   ],
   "prior_harness_failures": [
     "Initial source full run with earlier optional window harness passed36/448/82, superseded by current final plan.",
     "First staged ZIP failed after28cases/247assertions due unexpected maximized resize; not a final PASS.",
     "Unconditional SetField local harness caused Start/resize interaction timing and was stopped after observed route failures; current helper avoids unnecessary restart and final prefix passes."
   ],
-  "public_release_status": "pending dual same-commit CI validation and engineering prerelease download back-read"
+  "public_release_status": "Historical v1.2.0 candidate: public PWA verification is recorded separately. This record does not establish a v1.2.0 Windows release download back-read.",
+  "tested_production_commit": "36504476c7cde3fcc0a8052db3c8fa67962d5a39",
+  "test_plan_sha256": "cf9662af8d995bdd6b8b67ac97c2315ec41628984338abca6c07624e317303ce",
+  "ci_source_step": {
+    "status": "success",
+    "run_id": 38110847446,
+    "tested_production_commit": "36504476c7cde3fcc0a8052db3c8fa67962d5a39",
+    "started_utc": "2026-10-11T04:19:33Z",
+    "completed_utc": "2026-10-11T04:46:29Z",
+    "raw_evidence": "Historical GitHub run and step metadata rechecked. Full CI artifact contents were not independently downloaded for this summary. The local source failure is separate.",
+    "step_name": "Run actual Windows interaction tests",
+    "run_url": "https://github.com/AureliusWu/Rain/actions/runs/38110847446",
+    "run_conclusion": "success"
+  },
+  "test_plan_sha256_scope": "CRLF Windows checkout bytes of game/testcases.rpy at tested_production_commit."
 }

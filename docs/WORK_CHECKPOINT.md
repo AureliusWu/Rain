@@ -52,7 +52,9 @@
 
 当前仓库为 `AureliusWu/Rain` / main。本轮用户明确要求三个项目全部 PWA + PC 桌面并完成后推送；Rain保持Ren'Py原生剧情、成年人物创作边界、既有素材与独立v1存档，新增官方WASM离线交付。平台适配与带许可素材均已归入共享接口，禁止自研VN运行时替代。
 
-从 [双平台说明](DUAL_PLATFORM_V12.md)、[本地验收](evidence/v12-local-platforms.json) 与 [新发行说明](RELEASE_V12.md) 接续。发布须绑定同一提交的Windows与Web成功CI产物，固定ZIP哈希及公开worker revision；工程预发行的实际公网与公开下载再回读记录。旧v1.1.1封存授权、标签和ZIP保持历史身份，不能把旧证据冒充新平台验收。真人五组与物理设备安装继续pending。
+当时的交付记录见 [双平台说明](DUAL_PLATFORM_V12.md)、[本地验收](evidence/v12-local-platforms.json) 与 [发行说明](RELEASE_V12.md)。发布须绑定同一提交的Windows与Web成功CI产物，固定ZIP哈希及公开worker revision；工程预发行的实际公网与公开下载再回读记录。旧v1.1.1封存授权、标签和ZIP保持历史身份，不能把旧证据冒充新平台验收。真人五组与物理设备安装继续pending。
+
+该断点之后取得了本机独立 ZIP、旧档升级与浏览器证据，源码整轮失败仍保留。见 [历史双平台验收](DUAL_PLATFORM_V12.md#本轮检查)。
 
 ---
 
